@@ -6,6 +6,40 @@ import pandas as pd
 import sys
 import json
 import os
+import time
+
+team_codes = {
+	"Arizona Diamondbacks": "ari",
+	"Atlanta Braves": "atl",
+	"Baltimore Orioles": "bal",
+	"Boston Red Sox": "bos",
+	"Chicago Cubs": "chn",
+	"Chicago White Sox": "cha",
+	"Cincinnati Reds": "cin",
+	"Cleveland Indians": "cle",
+	"Colorado Rockies": "col",
+	"Detroit Tigers": "det",
+	"Houston Astros": "hou",
+	"Kansas City Royals": "kca",
+	"Los Angeles Angels": "ana",
+	"Los Angeles Dodgers": "lan",
+	"Miami Marlins": "mia",
+	"Milwaukee Brewers": "mil",
+	"Minnesota Twins": "min",
+	"New York Mets": "nyn",
+	"New York Yankees": "nya",
+	"Oakland Athletics": "oak",
+	"Philadelphia Phillies": "phi",
+	"Pittsburgh Pirates": "pit",
+	"San Diego Padres": "sdn",
+	"San Francisco Giants": "sfn",
+	"Seattle Mariners": "sea",
+	"St. Louis Cardinals": "sln",
+	"Tampa Bay Rays": "tba",
+	"Texas Rangers": "tex",
+	"Toronto Blue Jays": "tor",
+	"Washington Nationals": "was",
+}
 
 def get_soup(url):
 	ua = UserAgent()
@@ -22,6 +56,27 @@ def get_soup(url):
 			sys.exit()
 	content = page.read()
 	return BeautifulSoup(content, "html5lib")
+
+def get_days_in_season(year):
+	opening_days = {2017:'2017-04-02'}
+	closing_days = {2017:'2017-10-01'}
+	months = ['04', '05', '06', '07', '08', '09', '10']
+	dates = {'04': list(range(31)[1:]), '05': list(range(32)[1:]), '06': list(range(31)[1:]),
+			 '07': list(range(32)[1:]), '08': list(range(32)[1:]), '09': list(range(31)[1:]),
+			 '10': list(range(32)[1:])}
+
+	all_season = []
+	for month in months:
+		for d in dates[month]:
+			day = str(d)
+			if len(day) == 1:
+				day = '0'+day
+			date = "{}-{}-{}".format(year,month,day)
+			if date < opening_days[year] or date > closing_days[year]:
+				continue
+			all_season.append(date)
+
+	return all_season
 
 def get_teams(year):
 	teams_url = "http://lookup-service-prod.mlb.com/json/named.team_all_season.bam?all_star_sw=%27N%27&sport_code=%27mlb%27&sort_order=%27name_asc%27&season=" + str(year)
@@ -118,6 +173,48 @@ def scrape_player_stats(year=2017):
 		#TODO figure out best DB storage method
 
 
+def scrape_games(year=2017):
+	season_days = get_days_in_season(2017)
+	season_games_dict = {}
+	for day in season_days:
+		url = "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date="+day+"&hydrate=linescore(matchup,runners)"
+		soup = json.loads(get_soup(url).find('body').contents[0], strict=False)
+		try:
+			games = soup['dates'][0]['games']
+		except:
+			print("continue", day, "all star break or no games")
+			continue
+		key_acc = []
+		for game in games:
+			game_obj = {}
+			if game['status']['detailedState'] == 'Postponed':
+				continue
+			if 'All-Stars' in game['teams']['away']['team']['name']:
+				print("all star game, continue")
+				continue
+			game_obj['gamePk'] = game['gamePk']
+			game_obj['date'] = day
+			game_obj['away_id'] = game['teams']['away']['team']['id']
+			game_obj['away_name'] = game['teams']['away']['team']['name']
+			game_obj['away_score'] = game['teams']['away']['score']
+			game_obj['home_id'] = game['teams']['home']['team']['id']
+			game_obj['home_name'] = game['teams']['home']['team']['name']
+			game_obj['home_score'] = game['teams']['home']['score']
+			key = day.replace('-','/')+team_codes[game_obj['away_name']]+'mlb-'+team_codes[game_obj['home_name']]+'mlb-1'
+			if key in key_acc:
+				print("DOUBLE HEADER", key)
+				key = day.replace('-','/')+team_codes[game_obj['away_name']]+'mlb-'+team_codes[game_obj['home_name']]+'mlb-2'
+			if key in key_acc:
+				print("TRIPLE HEADER", key)
+				key = day.replace('-','/')+team_codes[game_obj['away_name']]+'mlb-'+team_codes[game_obj['home_name']]+'mlb-3'
+			key_acc.append(key)
+			season_games_dict[key] = game_obj
+		print(key_acc)
+		time.sleep(2)
+
+	print(season_games_dict)
+
 if __name__ == '__main__':
 	year = 2017
-	scrape_player_stats(year=year)
+	#scrape_player_stats(year=year)
+	scrape_games(year=year)
