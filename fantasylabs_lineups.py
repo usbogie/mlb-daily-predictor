@@ -2,12 +2,12 @@ import pandas as pd
 import json
 import os
 import datetime
-import scraper_utils
+import collections
+from scraper_utils import get_soup, team_codes
 
-def scrape_lineups(date):
+def scrape_todays_lineups(date):
     url = "https://www.fantasylabs.com/api/lineuptracker/3/"+date
-    soup = json.loads(scraper_utils.get_soup(url).find('body').contents[0])
-    import collections
+    soup = json.loads(get_soup(url).find('body').contents[0])
     dol = collections.defaultdict(list)
     for d in soup:
         k = d["TeamName"]
@@ -24,12 +24,35 @@ def scrape_lineups(date):
             player_obj['slot'] = player['LineupOrder']
             player_obj['position'] = player['Position']
             team_lineup.append(player_obj)
+        team = team.replace('St','St.')
         lineups[team]=team_lineup
 
-    return lineups
+    url = "https://www.fantasylabs.com/api/sportevents/3/"+date
+    soup = json.loads(get_soup(url).find('body').contents[0])
+    games = []
+    key_acc = []
+    for game in soup:
+        game_obj = {}
+        if game['EventSummary'] == 'Postponed':
+            continue
+        game_obj['home'] = game['HomeTeam'].replace('St', 'St.')
+        game_obj['away'] = game['VisitorTeam'].replace('St', 'St.')
+        game_obj['date'] = date.replace('_','-')
+        game_obj['home_lineup_status'] = game['HomeLineupStatus']
+        game_obj['away_lineup_status'] = game['VisitorLineupStatus']
+        key = date.replace('_','/')+'/'+team_codes[game_obj['away']]+'mlb-'+team_codes[game_obj['home']]+'mlb-1'
+        if key in key_acc:
+            print("DOUBLE HEADER", key)
+            key = date.replace('_','/')+'/'+team_codes[game_obj['away']]+'mlb-'+team_codes[game_obj['home']]+'mlb-2'
+        game_obj['key'] = key
+        key_acc.append(key)
+        games.append(game_obj)
+        print(game_obj)
+
+    #return lineups
 
 if __name__ == '__main__':
     date = datetime.datetime.now().strftime("%m_%d_%Y")
-    lineups = scrape_lineups(date)
-    with open('data/todays_lineups.json', 'w') as outfile:
-        json.dump(lineups, outfile, sort_keys = True, indent = 4, ensure_ascii = False)
+    lineups = scrape_todays_lineups(date)
+    # with open('data/todays_lineups.json', 'w') as outfile:
+    #     json.dump(lineups, outfile, sort_keys = True, indent = 4, ensure_ascii = False)

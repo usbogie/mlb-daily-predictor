@@ -4,6 +4,39 @@ from datetime import datetime, timedelta, date
 import urllib.request as request
 import urllib.error as error
 
+team_codes = {
+	"Arizona Diamondbacks": "ari",
+	"Atlanta Braves": "atl",
+	"Baltimore Orioles": "bal",
+	"Boston Red Sox": "bos",
+	"Chicago Cubs": "chn",
+	"Chicago White Sox": "cha",
+	"Cincinnati Reds": "cin",
+	"Cleveland Indians": "cle",
+	"Colorado Rockies": "col",
+	"Detroit Tigers": "det",
+	"Houston Astros": "hou",
+	"Kansas City Royals": "kca",
+	"Los Angeles Angels": "ana",
+	"Los Angeles Dodgers": "lan",
+	"Miami Marlins": "mia",
+	"Milwaukee Brewers": "mil",
+	"Minnesota Twins": "min",
+	"New York Mets": "nyn",
+	"New York Yankees": "nya",
+	"Oakland Athletics": "oak",
+	"Philadelphia Phillies": "phi",
+	"Pittsburgh Pirates": "pit",
+	"San Diego Padres": "sdn",
+	"San Francisco Giants": "sfn",
+	"Seattle Mariners": "sea",
+	"St. Louis Cardinals": "sln",
+	"Tampa Bay Rays": "tba",
+	"Texas Rangers": "tex",
+	"Toronto Blue Jays": "tor",
+	"Washington Nationals": "was",
+}
+
 def get_soup(url):
 	ua = UserAgent()
 	try:
