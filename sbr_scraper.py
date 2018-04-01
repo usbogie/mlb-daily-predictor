@@ -51,7 +51,7 @@ def get_run_lines(rl_url, game_infos, day):
 		away = teams[0].a.text.split()[0].strip()
 		home = teams[1].a.text.split()[0].strip()
 		game_info = game_infos[(day,time,away,home)]
-		print(away, home)
+		print(away, '@', home)
 
 		open_lines = grid.find('div', {'class': 'el-div eventLine-opener'}).find_all('div', {'class': 'eventLine-book-value'})
 		try:
@@ -91,25 +91,32 @@ def get_totals(total_url, game_infos,day):
 		except:
 			pass
 
-def scrape_sbr(year=2017):
-	season_games = []
-	season_dates = scraper_utils.get_days_in_season(year)
+def scrape_sbr_day(day):
+	print(day)
 	base = "https://www.sportsbookreview.com/betting-odds/mlb-baseball/"
 	ml_ext = "?date="
 	rl_ext = "pointspread/?date="
 	total_ext = "totals/?date="
+	ml_url = base + ml_ext + day.replace('-','')
+	game_infos = get_money_lines(ml_url, day)
+	rl_url = base + rl_ext + day.replace('-','')
+	get_run_lines(rl_url, game_infos, day)
+	total_url = base + total_ext + day.replace('-','')
+	get_totals(total_url, game_infos, day)
+	return game_infos
+
+def scrape_sbr_year(year=2017):
+	season_games = []
+	season_dates = scraper_utils.get_days_in_season(year)
+
+	# ml == money line
+	# rl == run line (look it up)
 	for day in season_dates:
-		print(day)
-		ml_url = base + ml_ext + day.replace('-','')
-		game_infos = get_money_lines(ml_url, day)
-		rl_url = base + rl_ext + day.replace('-','')
-		get_run_lines(rl_url, game_infos, day)
-		total_url = base + total_ext + day.replace('-','')
-		get_totals(total_url, game_infos, day)
-
-
+		game_infos = scrape_sbr_day(day)
 		season_games += list(game_infos.values())
 
+	# This is horrible. I hope nobody ever sees this. Maybe need to cross-reference
+	# vegas_insider or something. Don't want to put in the work right now
 	for game in season_games:
 		if 'rl_away_open' in game:
 			continue
@@ -128,6 +135,6 @@ def scrape_sbr(year=2017):
 
 if __name__ == '__main__':
 	year = 2017
-	data = scrape_sbr(year)
+	data = scrape_sbr_year(year)
 	con = sqlite3.connect(os.path.join('data','lines.db3'))
 	data.to_sql("lines_{}".format(year), con, if_exists='replace', index=False)
