@@ -212,6 +212,10 @@ def scrape_games(year=2017):
 		print(key_acc)
 		time.sleep(2)
 
+<<<<<<< HEAD
+=======
+	#TODO store these games. Need to decide how
+>>>>>>> Add TODO to mlb_scraper
 	print(season_games_dict)
 
 if __name__ == '__main__':
