@@ -1,1 +1,2 @@
 class Batter(object):
+    stats = {}

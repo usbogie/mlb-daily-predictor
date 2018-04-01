@@ -49,21 +49,21 @@ class MonteCarlo(object):
             self.scoreboard.add_frame()
             self.play_frame()
 
-            if (len(self.scoreboard.frames) >= 18 and
-                len(self.scoreboard.frames)%2==0) and
+            if (len(self.scoreboard.frames) >= 18 and \
+                len(self.scoreboard.frames%2 == 0) and \
                 self.scoreboard.get_away_runs() != self.scoreboard.get_home_runs()):
                 # 9+ full innings completed, no tie, end game
                 self.game_completed = True
 
     def sim_games(self):
-        if len(self.away_lineup) < 9 or len(self.home_lineup) < 9 or
+        if len(self.away_lineup) < 9 or len(self.home_lineup) < 9 or \
             len(self.away_pitchers) == 0 or len(self.home_pitchers) == 0:
             #something wrong, exit
             return
 
         for i in range(this.number_of_sims):
             self.scoreboard = self.sim_one_game()
-            int total_runs = self.scoreboard.get_away_runs() + self.scoreboard.get_home_runs()
+            total_runs = self.scoreboard.get_away_runs() + self.scoreboard.get_home_runs()
             self.comb_histo[total_runs] = self.comb_histo[total_runs] + 1
             self.away_histo[self.scoreboard.get_away_runs()] = self.away_histo[self.scoreboard.get_away_runs()] + 1
             self.home_histo[self.scoreboard.get_home_runs()] = self.home_histo[self.scoreboard.get_home_runs()] + 1
@@ -96,8 +96,9 @@ class MonteCarlo(object):
             pitcher = self.away_pitchers[0]
 
         while state.outs < 3:
-            if not away_batting and len(self.scoreboard.frames) > 17 and
-                    self.scoreboard.get_away_runs() < self.scoreboard.get_home_runs():
+            if not away_batting and len(self.scoreboard.frames) > 17 and \
+                self.scoreboard.get_away_runs() < self.scoreboard.get_home_runs():
+                # if home team is up in the bottom of the ninth or beyond, end the game
                 self.game_completed = True
                 break
 
