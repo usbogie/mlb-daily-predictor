@@ -1,6 +1,7 @@
 from fake_useragent import UserAgent
 from bs4 import BeautifulSoup
 from datetime import datetime, timedelta, date
+from random import random
 import urllib.request as request
 import urllib.error as error
 

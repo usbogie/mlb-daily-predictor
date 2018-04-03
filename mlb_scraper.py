@@ -69,15 +69,13 @@ def get_team_logs(year, team_id):
 	team_pitcher_logs = []
 	team_batter_logs = []
 	for player in players:
+		time.sleep(.5)
 		if player['pos'] == 'P':
 			try:
 				pitcher_logs = get_pitcher_logs(year, player['player_id'])
 			except:
 				print("Something wrong with", player['name_display_first_last'])
-				if input("skip? (y/n) ") == 'n':
-					sys.exit()
-				else:
-					continue
+				continue
 			print(player['name_display_first_last'], "is a pitcher and had", len(pitcher_logs), "appearances in 2017")
 			team_pitcher_logs.append(pitcher_logs)
 		else:
@@ -85,17 +83,22 @@ def get_team_logs(year, team_id):
 				print(player['name_display_first_last'], "has no plate appearances")
 				continue
 
-			batter_logs = get_batter_logs(year, player['player_id'])
+			try:
+				batter_logs = get_batter_logs(year, player['player_id'])
+			except:
+				print("Something wrong with", player['name_display_first_last'])
+				continue
 			print(player['name_display_first_last'], "is a batter and had", len(batter_logs), "appearances in 2017")
 			team_batter_logs.append(batter_logs)
 
-	return (pd.DataFrame(team_pitcher_logs), pd.DataFrame(team_batter_logs))
+	return (pd.concat(team_pitcher_logs), pd.concat(team_batter_logs))
 
 def scrape_player_stats(year=2017):
 	teams = get_teams(year)
-	for team in teams:
+	pitchers_list, batters_list = [], []
+	for team in teams[:2]:
 		print(team['name'])
-		pitchers, batters = get_team_logs(year,team['id'])
+		pitchers_df, batters_df = get_team_logs(year,team['id'])
 		#TODO figure out best DB storage method
 
 def get_day_of_games(day):
@@ -105,7 +108,7 @@ def get_day_of_games(day):
 		games = soup['dates'][0]['games']
 	except:
 		print("continue", day, "all star break or no games")
-		continue
+		return []
 	key_acc = []
 	todays_games = []
 	for game in games:
@@ -140,8 +143,8 @@ def scrape_games(year=2017):
 		season_games += todays_games
 		time.sleep(1)
 	season_df = pd.DataFrame(season_games)
+	print(season_df)
 	#TODO store these games. Need to decide how
-	print(season_games)
 
 if __name__ == '__main__':
 	year = 2017

@@ -5,7 +5,7 @@ import datetime
 import collections
 from scraper_utils import get_soup, team_codes
 
-def scrape_todays_lineups(date):
+def scrape_day_lineups(date, today=False):
     url = "https://www.fantasylabs.com/api/lineuptracker/3/"+date
     soup = json.loads(get_soup(url).find('body').contents[0])
 
@@ -46,6 +46,9 @@ def scrape_todays_lineups(date):
         game_obj['home'] = game['HomeTeam'].replace('St', 'St.')
         game_obj['away'] = game['VisitorTeam'].replace('St', 'St.')
         game_obj['date'] = new_date
+        if today:
+            game_obj['home_lineup'] = lineups[game_obj['home']]
+            game_obj['away_lineup'] = lineups[game_obj['away']]
         game_obj['home_lineup_status'] = game['HomeLineupStatus']
         game_obj['away_lineup_status'] = game['VisitorLineupStatus']
 
@@ -60,10 +63,13 @@ def scrape_todays_lineups(date):
         games.append(game_obj)
         print(game_obj)
 
+    if today:
+        return games
     #return lineups
 
 if __name__ == '__main__':
     date = datetime.datetime.now().strftime("%m_%d_%Y")
-    lineups = scrape_todays_lineups(date)
+    games = scrape_day_lineups(date, today=True)
+    print(games)
     # with open('data/todays_lineups.json', 'w') as outfile:
     #     json.dump(lineups, outfile, sort_keys = True, indent = 4, ensure_ascii = False)
