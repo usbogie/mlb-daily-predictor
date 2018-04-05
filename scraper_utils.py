@@ -1,7 +1,9 @@
 from fake_useragent import UserAgent
 from bs4 import BeautifulSoup
 from datetime import datetime, timedelta, date
-from random import random
+from random import random, gauss
+import time
+import sys
 import urllib.request as request
 import urllib.error as error
 
@@ -43,20 +45,17 @@ def get_soup(url):
 	try:
 		page = request.urlopen(request.Request(url, headers = { 'User-Agent' : ua.random }))
 	except (ConnectionResetError, error.URLError, error.HTTPError) as e:
-		try:
-			wait_time = round(max(10, 12 + random.gauss(0,1)), 2)
-			time.sleep(wait_time)
-			print("First attempt for %s failed. Trying again." % (url))
-			page = request.urlopen(request.Request(url, headers = { 'User-Agent' : ua.random }))
-		except:
-			print(e)
-			sys.exit()
+		print(e)
+		wait_time = round(max(60, 12 + gauss(0,1)), 2)
+		time.sleep(wait_time)
+		print("First attempt for %s failed. Trying again." % (url))
+		page = request.urlopen(request.Request(url, headers = { 'User-Agent' : ua.random }))
 	content = page.read()
 	return BeautifulSoup(content, "html5lib")
 
 def get_days_in_season(year):
 	opening_days = {2017:'2017-04-02',2018:'2018-03-29'}
-	closing_days = {2017:'2017-10-01',2018:datetime.now().strftime("%Y-%m-%d")}
+	closing_days = {2017:'2017-10-01',2018:(datetime.now() - timedelta(1)).strftime('%Y-%m-%d')}
 	months = ['04', '05', '06', '07', '08', '09', '10']
 	dates = {'04': list(range(31)[1:]), '05': list(range(32)[1:]), '06': list(range(31)[1:]),
 			 '07': list(range(32)[1:]), '08': list(range(32)[1:]), '09': list(range(31)[1:]),
