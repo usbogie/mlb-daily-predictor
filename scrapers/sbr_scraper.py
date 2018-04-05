@@ -136,5 +136,5 @@ def scrape_sbr_year(year=2017):
 if __name__ == '__main__':
 	year = 2017
 	data = scrape_sbr_year(year)
-	con = sqlite3.connect(os.path.join('data','lines.db3'))
+	con = sqlite3.connect(os.path.join('..','data','lines.db3'))
 	data.to_sql("lines_{}".format(year), con, if_exists='replace', index=False)

@@ -96,9 +96,9 @@ def scrape_year_lineups(year=2017):
 
 
 if __name__ == '__main__':
-    season = 2017
-    df = scrape_year_lineups(year=season)
-    csv_path = 'data/lineups_{}.csv'.format(season)
+    year = 2017
+    df = scrape_year_lineups(year=year)
+    csv_path = os.path.join('..','data','lineups_{}.csv'.format(year))
     df.drop_duplicates().to_csv(csv_path)
     # games = scrape_day_lineups(date)
     # print(json.dumps(games, indent=4, sort_keys=True))
