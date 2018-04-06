@@ -4,6 +4,7 @@ import json
 import os
 import time
 from scraper_utils import team_codes, get_soup, get_days_in_season
+import sqlite3
 
 def get_teams(year):
 	teams_url = "http://lookup-service-prod.mlb.com/json/named.team_all_season.bam?all_star_sw=%27N%27&sport_code=%27mlb%27&sort_order=%27name_asc%27&season=" + str(year)
@@ -93,9 +94,18 @@ def get_team_logs(year, team_id):
 
 def scrape_player_stats(year=2017):
 	teams = get_teams(year)
-	for team in teams:
-		print(team['name'])
-		pitchers, batters = get_team_logs(year,team['id'])
+	team = teams[0]
+	# for team in teams:
+	# 	print(team['name'])
+	# 	pitchers, batters = get_team_logs(year,team['id'])
+	
+	# 	print(batters)
+	db = sqlite3.connect('pitchers.db')
+	pitchers, batters = get_team_logs(year,team['id'])
+	print(pitchers)
+	#pitchers.to_sql("pitchers",db, index = True, if_exists ='replace')
+	pitchers.to_csv("pitchers.csv")
+
 		#TODO figure out best DB storage method
 
 def get_day_of_games(day):
@@ -105,7 +115,7 @@ def get_day_of_games(day):
 		games = soup['dates'][0]['games']
 	except:
 		print("continue", day, "all star break or no games")
-		continue
+		#continue
 	key_acc = []
 	todays_games = []
 	for game in games:
@@ -146,4 +156,4 @@ def scrape_games(year=2017):
 if __name__ == '__main__':
 	year = 2017
 	scrape_player_stats(year=year)
-	scrape_games(year=year)
+	#scrape_games(year=year)
