@@ -1,4 +1,4 @@
-class ScoreBoard(object):
+class Scoreboard(object):
     frames = []
     away_hits = 0
     home_hits = 0

@@ -1,5 +1,8 @@
-from storage import Batter,Game,Pitcher,Scoreboard,State
+from storage.Scoreboard import Scoreboard
+from storage.Game import Game
+from storage.State import State
 import random
+import os
 
 class MonteCarlo(object):
     scoreboard = None
@@ -8,6 +11,7 @@ class MonteCarlo(object):
     home_lineup = []
     away_pitchers = []
     home_pitchers = []
+    league_avgs = {}
     game_completed = None
 
     home_batter = 0
@@ -21,19 +25,20 @@ class MonteCarlo(object):
     avg_away_total = 0.0
     avg_total = 0.0
 
-    histo_bins = 50;
+    histo_bins = 50
     home_histo = []
     away_histo = []
     comb_histo = []
     number_of_sims = 1
     num_innings = 9
 
-    def __init__(self, game, away_lineup, home_lineup, away_pitchers, home_pitchers):
+    def __init__(self, game, away_lineup, home_lineup, away_pitchers, home_pitchers, league_avgs):
         self.game = game
         self.away_lineup = away_lineup
         self.home_lineup = home_lineup
         self.away_pitchers = away_pitchers
         self.home_pitchers = home_pitchers
+        self.league_avgs = league_avgs
 
         self.home_histo = [0]*50
         self.away_histo = [0]*50
@@ -45,7 +50,7 @@ class MonteCarlo(object):
         self.home_batter = 0
         self.away_batter = 0
 
-        while not game_completed:
+        while not self.game_completed:
             self.scoreboard.add_frame()
             self.play_frame()
 
@@ -59,9 +64,12 @@ class MonteCarlo(object):
         if len(self.away_lineup) < 9 or len(self.home_lineup) < 9 or \
             len(self.away_pitchers) == 0 or len(self.home_pitchers) == 0:
             #something wrong, exit
+            print(len(self.away_lineup),len(self.home_lineup),len(self.away_pitchers),len(self.home_pitchers))
+            print([x['PA'] for x in self.home_lineup])
+            print("something wrong")
             return
 
-        for i in range(this.number_of_sims):
+        for i in range(self.number_of_sims):
             self.scoreboard = self.sim_one_game()
             total_runs = self.scoreboard.get_away_runs() + self.scoreboard.get_home_runs()
             self.comb_histo[total_runs] = self.comb_histo[total_runs] + 1
@@ -114,8 +122,19 @@ class MonteCarlo(object):
             self.home_batter = batting_num
 
     def sim_atbat(self, batter, pitcher, state):
-        draw = float(random.random())
         #TODO a lot. Need to develop a way to determine SO/NON-SO-OUT/walk/1b/2b/3b/hr/HPB(necessary?)
         #And then scale it all between [0,1). THEN, look at the estimator.py file and use That
         #to create baserunning logic. NOT HARD just a lot of work and attention to detail
         #http://www.insidethebook.com/ee/index.php/site/comments/the_odds_ratio_method/ for hitter/pitcher matchups
+
+        # possible outcomes: K,BB,HBP,1B,2B,3B,HR,Non-K-OUT
+
+        # if we're doing this random thing, lets do it right (rand [0,1))
+        rand = random.random()
+        print(rand)
+        outcome_dict = self.get_outcome_distribution(batter,pitcher)
+
+    def get_outcome_distribution(self, batter, pitcher):
+        #league averages stored in self.league_avgs
+        print(batter)
+        print(pitcher)

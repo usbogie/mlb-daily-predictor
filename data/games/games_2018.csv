@@ -1,0 +1,88 @@
+key,away_id,away_name,away_score,date,gamePk,home_id,home_name,home_score
+2018/03/29/chnmlb-miamlb-1,112,Chicago Cubs,8,2018-03-29,529407,146,Miami Marlins,4
+2018/03/29/slnmlb-nynmlb-1,138,St. Louis Cardinals,4,2018-03-29,529419,121,New York Mets,9
+2018/03/29/minmlb-balmlb-1,142,Minnesota Twins,2,2018-03-29,529414,110,Baltimore Orioles,3
+2018/03/29/houmlb-texmlb-1,117,Houston Astros,4,2018-03-29,529411,140,Texas Rangers,1
+2018/03/29/nyamlb-tormlb-1,147,New York Yankees,6,2018-03-29,529415,141,Toronto Blue Jays,1
+2018/03/29/bosmlb-tbamlb-1,111,Boston Red Sox,4,2018-03-29,529406,139,Tampa Bay Rays,6
+2018/03/29/anamlb-oakmlb-1,108,Los Angeles Angels,5,2018-03-29,529412,133,Oakland Athletics,6
+2018/03/29/milmlb-sdnmlb-1,158,Milwaukee Brewers,2,2018-03-29,529413,135,San Diego Padres,1
+2018/03/29/phimlb-atlmlb-1,143,Philadelphia Phillies,5,2018-03-29,529416,144,Atlanta Braves,8
+2018/03/29/chamlb-kcamlb-1,145,Chicago White Sox,14,2018-03-29,529408,118,Kansas City Royals,7
+2018/03/29/sfnmlb-lanmlb-1,137,San Francisco Giants,1,2018-03-29,529418,119,Los Angeles Dodgers,0
+2018/03/29/clemlb-seamlb-1,114,Cleveland Indians,1,2018-03-29,529409,136,Seattle Mariners,2
+2018/03/29/colmlb-arimlb-1,115,Colorado Rockies,2,2018-03-29,529410,109,Arizona Diamondbacks,8
+2018/03/30/pitmlb-detmlb-1,134,Pittsburgh Pirates,13,2018-03-30,529417,116,Detroit Tigers,10
+2018/03/30/wasmlb-cinmlb-1,120,Washington Nationals,2,2018-03-30,529420,113,Cincinnati Reds,0
+2018/03/30/nyamlb-tormlb-1,147,New York Yankees,4,2018-03-30,529427,141,Toronto Blue Jays,2
+2018/03/30/bosmlb-tbamlb-1,111,Boston Red Sox,1,2018-03-30,529421,139,Tampa Bay Rays,0
+2018/03/30/chnmlb-miamlb-1,112,Chicago Cubs,1,2018-03-30,529422,146,Miami Marlins,2
+2018/03/30/phimlb-atlmlb-1,143,Philadelphia Phillies,5,2018-03-30,529428,144,Atlanta Braves,4
+2018/03/30/houmlb-texmlb-1,117,Houston Astros,1,2018-03-30,529424,140,Texas Rangers,5
+2018/03/30/colmlb-arimlb-1,115,Colorado Rockies,8,2018-03-30,529423,109,Arizona Diamondbacks,9
+2018/03/30/anamlb-oakmlb-1,108,Los Angeles Angels,2,2018-03-30,529425,133,Oakland Athletics,1
+2018/03/30/milmlb-sdnmlb-1,158,Milwaukee Brewers,8,2018-03-30,529426,135,San Diego Padres,6
+2018/03/30/sfnmlb-lanmlb-1,137,San Francisco Giants,1,2018-03-30,529429,119,Los Angeles Dodgers,0
+2018/03/31/slnmlb-nynmlb-1,138,St. Louis Cardinals,2,2018-03-31,529443,121,New York Mets,6
+2018/03/31/wasmlb-cinmlb-1,120,Washington Nationals,13,2018-03-31,529444,113,Cincinnati Reds,7
+2018/03/31/houmlb-texmlb-1,117,Houston Astros,9,2018-03-31,529435,140,Texas Rangers,3
+2018/03/31/anamlb-oakmlb-1,108,Los Angeles Angels,8,2018-03-31,529436,133,Oakland Athletics,3
+2018/03/31/nyamlb-tormlb-1,147,New York Yankees,3,2018-03-31,529439,141,Toronto Blue Jays,5
+2018/03/31/clemlb-seamlb-1,114,Cleveland Indians,6,2018-03-31,529433,136,Seattle Mariners,5
+2018/03/31/bosmlb-tbamlb-1,111,Boston Red Sox,3,2018-03-31,529430,139,Tampa Bay Rays,2
+2018/03/31/minmlb-balmlb-1,142,Minnesota Twins,6,2018-03-31,529438,110,Baltimore Orioles,2
+2018/03/31/chnmlb-miamlb-1,112,Chicago Cubs,10,2018-03-31,529431,146,Miami Marlins,6
+2018/03/31/phimlb-atlmlb-1,143,Philadelphia Phillies,2,2018-03-31,529440,144,Atlanta Braves,15
+2018/03/31/chamlb-kcamlb-1,145,Chicago White Sox,4,2018-03-31,529432,118,Kansas City Royals,3
+2018/03/31/colmlb-arimlb-1,115,Colorado Rockies,2,2018-03-31,529434,109,Arizona Diamondbacks,1
+2018/03/31/milmlb-sdnmlb-1,158,Milwaukee Brewers,7,2018-03-31,529437,135,San Diego Padres,3
+2018/03/31/sfnmlb-lanmlb-1,137,San Francisco Giants,0,2018-03-31,529442,119,Los Angeles Dodgers,5
+2018/04/01/pitmlb-detmlb-1,134,Pittsburgh Pirates,1,2018-04-01,529453,116,Detroit Tigers,0
+2018/04/01/pitmlb-detmlb-2,134,Pittsburgh Pirates,8,2018-04-01,529441,116,Detroit Tigers,6
+2018/04/01/minmlb-balmlb-1,142,Minnesota Twins,7,2018-04-01,529451,110,Baltimore Orioles,0
+2018/04/01/nyamlb-tormlb-1,147,New York Yankees,4,2018-04-01,529452,141,Toronto Blue Jays,7
+2018/04/01/bosmlb-tbamlb-1,111,Boston Red Sox,2,2018-04-01,529445,139,Tampa Bay Rays,1
+2018/04/01/chnmlb-miamlb-1,112,Chicago Cubs,0,2018-04-01,529446,146,Miami Marlins,6
+2018/04/01/slnmlb-nynmlb-1,138,St. Louis Cardinals,5,2018-04-01,529455,121,New York Mets,1
+2018/04/01/houmlb-texmlb-1,117,Houston Astros,8,2018-04-01,529449,140,Texas Rangers,2
+2018/04/01/anamlb-oakmlb-1,108,Los Angeles Angels,7,2018-04-01,529450,133,Oakland Athletics,4
+2018/04/01/clemlb-seamlb-1,114,Cleveland Indians,4,2018-04-01,529448,136,Seattle Mariners,5
+2018/04/01/wasmlb-cinmlb-1,120,Washington Nationals,6,2018-04-01,529456,113,Cincinnati Reds,5
+2018/04/01/sfnmlb-lanmlb-1,137,San Francisco Giants,0,2018-04-01,529454,119,Los Angeles Dodgers,9
+2018/04/02/minmlb-pitmlb-1,142,Minnesota Twins,4,2018-04-02,529465,134,Pittsburgh Pirates,5
+2018/04/02/kcamlb-detmlb-1,118,Kansas City Royals,1,2018-04-02,529463,116,Detroit Tigers,6
+2018/04/02/slnmlb-milmlb-1,138,St. Louis Cardinals,8,2018-04-02,529467,158,Milwaukee Brewers,4
+2018/04/02/chnmlb-cinmlb-1,112,Chicago Cubs,0,2018-04-02,529459,113,Cincinnati Reds,1
+2018/04/02/chamlb-tormlb-1,145,Chicago White Sox,2,2018-04-02,529460,141,Toronto Blue Jays,4
+2018/04/02/balmlb-houmlb-1,110,Baltimore Orioles,1,2018-04-02,529457,117,Houston Astros,6
+2018/04/02/bosmlb-miamlb-1,111,Boston Red Sox,7,2018-04-02,529458,146,Miami Marlins,3
+2018/04/02/wasmlb-atlmlb-1,120,Washington Nationals,8,2018-04-02,529470,144,Atlanta Braves,1
+2018/04/02/lanmlb-arimlb-1,119,Los Angeles Dodgers,7,2018-04-02,529464,109,Arizona Diamondbacks,8
+2018/04/02/texmlb-oakmlb-1,140,Texas Rangers,1,2018-04-02,529469,133,Oakland Athletics,3
+2018/04/02/clemlb-anamlb-1,114,Cleveland Indians,6,2018-04-02,529461,108,Los Angeles Angels,0
+2018/04/02/colmlb-sdnmlb-1,115,Colorado Rockies,7,2018-04-02,529462,135,San Diego Padres,4
+2018/04/03/kcamlb-detmlb-1,118,Kansas City Royals,1,2018-04-03,529477,116,Detroit Tigers,0
+2018/04/03/tbamlb-nyamlb-1,139,Tampa Bay Rays,4,2018-04-03,529468,147,New York Yankees,11
+2018/04/03/seamlb-sfnmlb-1,136,Seattle Mariners,6,2018-04-03,529480,137,San Francisco Giants,4
+2018/04/03/bosmlb-miamlb-1,111,Boston Red Sox,4,2018-04-03,529472,146,Miami Marlins,2
+2018/04/03/chamlb-tormlb-1,145,Chicago White Sox,5,2018-04-03,529474,141,Toronto Blue Jays,14
+2018/04/03/phimlb-nynmlb-1,143,Philadelphia Phillies,0,2018-04-03,529479,121,New York Mets,2
+2018/04/03/wasmlb-atlmlb-1,120,Washington Nationals,6,2018-04-03,529483,144,Atlanta Braves,13
+2018/04/03/slnmlb-milmlb-1,138,St. Louis Cardinals,4,2018-04-03,529481,158,Milwaukee Brewers,5
+2018/04/03/balmlb-houmlb-1,110,Baltimore Orioles,6,2018-04-03,529471,117,Houston Astros,10
+2018/04/03/lanmlb-arimlb-1,119,Los Angeles Dodgers,1,2018-04-03,529478,109,Arizona Diamondbacks,6
+2018/04/03/texmlb-oakmlb-1,140,Texas Rangers,4,2018-04-03,529482,133,Oakland Athletics,1
+2018/04/03/clemlb-anamlb-1,114,Cleveland Indians,2,2018-04-03,529475,108,Los Angeles Angels,13
+2018/04/03/colmlb-sdnmlb-1,115,Colorado Rockies,4,2018-04-03,529476,135,San Diego Padres,8
+2018/04/04/wasmlb-atlmlb-1,120,Washington Nationals,1,2018-04-04,529496,144,Atlanta Braves,7
+2018/04/04/tbamlb-nyamlb-1,139,Tampa Bay Rays,2,2018-04-04,529494,147,New York Yankees,7
+2018/04/04/phimlb-nynmlb-1,143,Philadelphia Phillies,2,2018-04-04,529491,121,New York Mets,4
+2018/04/04/balmlb-houmlb-1,110,Baltimore Orioles,2,2018-04-04,529484,117,Houston Astros,3
+2018/04/04/lanmlb-arimlb-1,119,Los Angeles Dodgers,0,2018-04-04,529489,109,Arizona Diamondbacks,3
+2018/04/04/clemlb-anamlb-1,114,Cleveland Indians,2,2018-04-04,529486,108,Los Angeles Angels,3
+2018/04/04/minmlb-pitmlb-1,142,Minnesota Twins,7,2018-04-04,529490,134,Pittsburgh Pirates,3
+2018/04/04/chamlb-tormlb-1,145,Chicago White Sox,4,2018-04-04,529485,141,Toronto Blue Jays,3
+2018/04/04/seamlb-sfnmlb-1,136,Seattle Mariners,1,2018-04-04,529492,137,San Francisco Giants,10
+2018/04/04/slnmlb-milmlb-1,138,St. Louis Cardinals,6,2018-04-04,529493,158,Milwaukee Brewers,0
+2018/04/04/texmlb-oakmlb-1,140,Texas Rangers,2,2018-04-04,529495,133,Oakland Athletics,6
+2018/04/04/colmlb-sdnmlb-1,115,Colorado Rockies,5,2018-04-04,529487,135,San Diego Padres,2
