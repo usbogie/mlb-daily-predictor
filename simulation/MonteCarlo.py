@@ -1,4 +1,4 @@
-from storage import Batter,Game,Pitcher,Scoreboard,State
+from storage import Game,Scoreboard,State
 import random
 
 class MonteCarlo(object):
@@ -8,6 +8,7 @@ class MonteCarlo(object):
     home_lineup = []
     away_pitchers = []
     home_pitchers = []
+    league_avgs = {}
     game_completed = None
 
     home_batter = 0
@@ -21,19 +22,20 @@ class MonteCarlo(object):
     avg_away_total = 0.0
     avg_total = 0.0
 
-    histo_bins = 50;
+    histo_bins = 50
     home_histo = []
     away_histo = []
     comb_histo = []
     number_of_sims = 1
     num_innings = 9
 
-    def __init__(self, game, away_lineup, home_lineup, away_pitchers, home_pitchers):
+    def __init__(self, game, away_lineup, home_lineup, away_pitchers, home_pitchers, league_avgs):
         self.game = game
         self.away_lineup = away_lineup
         self.home_lineup = home_lineup
         self.away_pitchers = away_pitchers
         self.home_pitchers = home_pitchers
+        self.league_avgs = league_avgs
 
         self.home_histo = [0]*50
         self.away_histo = [0]*50
@@ -119,3 +121,5 @@ class MonteCarlo(object):
         #And then scale it all between [0,1). THEN, look at the estimator.py file and use That
         #to create baserunning logic. NOT HARD just a lot of work and attention to detail
         #http://www.insidethebook.com/ee/index.php/site/comments/the_odds_ratio_method/ for hitter/pitcher matchups
+
+        # possible outcomes: K,BB,HBP,1B,2B,3B,HR,Non-K-OUT

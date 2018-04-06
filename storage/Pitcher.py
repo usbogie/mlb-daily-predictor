@@ -1,2 +1,0 @@
-class Pitcher(object):
-    stats = {}
