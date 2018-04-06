@@ -35,12 +35,13 @@ def get_day_of_games(day):
 			print("DOUBLE HEADER", key)
 			key = day.replace('-','/')+'/'+team_codes[game_obj['away_name']]+'mlb-'+team_codes[game_obj['home_name']]+'mlb-2'
 		game_obj['key'] = key
+		print(key)
 		key_acc.append(key)
 		todays_games.append(game_obj)
 	return todays_games
 
 def scrape_games(year=2017):
-	season_days = get_days_in_season(2017)
+	season_days = get_days_in_season(year)
 	season_games = []
 	for day in season_days:
 		todays_games = get_day_of_games(day)
@@ -49,10 +50,9 @@ def scrape_games(year=2017):
 	season_df = pd.DataFrame(season_games).set_index('key')
 	print(season_df)
 	return season_df
-	#TODO store these games. Need to decide how
 
 if __name__ == '__main__':
-	year = 2017
+	year = 2018
 	df = scrape_games(year=year)
-	csv_path = os.path.join('..','data','games_{}.csv'.format(year))
+	csv_path = os.path.join('..','data','games','games_{}.csv'.format(year))
 	df.drop_duplicates().to_csv(csv_path)

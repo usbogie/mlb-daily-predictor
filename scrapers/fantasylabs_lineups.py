@@ -67,7 +67,7 @@ def scrape_day_lineups(day):
                 event = item
                 break
 
-        if event['EventSummary'] == 'Postponed':
+        if event['EventSummary'] == 'Postponed' or event['EventSummary'] == 'PPD':
             continue
 
         home['lineup_status'] = event['HomeLineupStatus'].split()[0]
@@ -94,13 +94,8 @@ def scrape_year_lineups(year=2017):
         lineups.extend(scrape_day_lineups(day))
     return pd.DataFrame(lineups).set_index(['key', 'name'])
 
-
 if __name__ == '__main__':
-    year = 2017
+    year = 2018
     df = scrape_year_lineups(year=year)
-    csv_path = os.path.join('..','data','lineups_{}.csv'.format(year))
+    csv_path = os.path.join('..','data','lineups','lineups_{}.csv'.format(year))
     df.drop_duplicates().to_csv(csv_path)
-    # games = scrape_day_lineups(date)
-    # print(json.dumps(games, indent=4, sort_keys=True))
-    # with open('data/todays_lineups.json', 'w') as outfile:
-    #     json.dump(lineups, outfile, sort_keys = True, indent = 4, ensure_ascii = False)

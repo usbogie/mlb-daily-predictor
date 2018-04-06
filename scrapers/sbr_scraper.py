@@ -54,6 +54,9 @@ def get_money_lines(ml_url, day):
 	game_infos = {}
 	ml_soup = get_soup(ml_url)
 	grids = ml_soup.findAll('div', {'class': 'event-holder holder-complete'})
+	grids += ml_soup.findAll('div', {'class': 'event-holder holder-scheduled'})
+	grids += ml_soup.findAll('div', {'class': 'event-holder holder-in-progress'})
+
 	key_acc = []
 	for grid in grids:
 		game_info = {}
@@ -86,6 +89,7 @@ def get_money_lines(ml_url, day):
 			key = day.replace('-','/')+'/'+team_codes[game_info['away']]+'mlb-'+team_codes[game_info['home']]+'mlb-2'
 		game_info['key'] = key
 		key_acc.append(key)
+		print(key)
 
 		game_infos[(day,game_info['time'],game_info['away'],game_info['home'])] = game_info
 	return game_infos
@@ -93,11 +97,12 @@ def get_money_lines(ml_url, day):
 def get_run_lines(rl_url, game_infos, day):
 	rl_soup = get_soup(rl_url)
 	grids = rl_soup.findAll('div', {'class': 'event-holder holder-complete'})
+	grids += rl_soup.findAll('div', {'class': 'event-holder holder-scheduled'})
+	grids += rl_soup.findAll('div', {'class': 'event-holder holder-in-progress'})
 	for grid in grids:
 		time = grid.find('div',{'class', 'el-div eventLine-time'}).text
 		away, home = get_names(grid)
 		game_info = game_infos[(day,time,away,home)]
-		print(away, '@', home)
 
 		open_lines = grid.find('div', {'class': 'el-div eventLine-opener'}).find_all('div', {'class': 'eventLine-book-value'})
 		try:
@@ -116,6 +121,8 @@ def get_run_lines(rl_url, game_infos, day):
 def get_totals(total_url, game_infos,day):
 	total_soup = get_soup(total_url)
 	grids = total_soup.findAll('div', {'class': 'event-holder holder-complete'})
+	grids += total_soup.findAll('div', {'class': 'event-holder holder-scheduled'})
+	grids += total_soup.findAll('div', {'class': 'event-holder holder-in-progress'})
 	for grid in grids:
 		time = grid.find('div',{'class', 'el-div eventLine-time'}).text
 		away, home = get_names(grid)
@@ -179,10 +186,10 @@ def scrape_sbr_year(year=2017):
 			game[key] = float(input(key+': '))
 		print(game)
 
-	return pd.DataFrame(season_games)
+	return pd.DataFrame(season_games).set_index('key')
 
 if __name__ == '__main__':
-	year = 2017
-	data = scrape_sbr_year(year)
-	con = sqlite3.connect(os.path.join('..','data','lines.db3'))
-	data.to_sql("lines_{}".format(year), con, if_exists='replace', index=False)
+	year = 2018
+	df = scrape_sbr_year(year)
+	csv_path = os.path.join('..','data','lines','lines_{}.csv'.format(year))
+	df.drop_duplicates().to_csv(csv_path)
