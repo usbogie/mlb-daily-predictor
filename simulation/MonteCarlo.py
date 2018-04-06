@@ -130,4 +130,7 @@ class MonteCarlo(object):
 
         # if we're doing this random thing, lets do it right (rand [0,1))
         rand = int.from_bytes(os.urandom(8), byteorder="big") / ((1 << 64) - 1))
-        outcome_dict = get_outcome_dist(batter,pitcher)
+        outcome_dict = get_outcome_distribution(batter,pitcher)
+
+    def get_outcome_distribution(self, batter, pitcher):
+        #league averages stored in self.league_avgs
