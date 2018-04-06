@@ -136,5 +136,21 @@ class MonteCarlo(object):
 
     def get_outcome_distribution(self, batter, pitcher):
         #league averages stored in self.league_avgs
-        print(batter)
-        print(pitcher)
+        outcomes = ["K","BB","HBP","1B","2B","3B","HR"]
+        bat_outcomes = {outcome: batter[outcome]/batter["PA"] for outcome in outcomes}
+        bat_outcomes["OutNonK"] = 1-sum(bat_outcomes.values())
+        p_outcomes = ["K","BB","HBP","1b","2b","3b","HR"]
+        pitch_outcomes = {outcome: pitcher[outcome]/pitcher["TBF"] for outcome in p_outcomes}
+        pitch_outcomes["1B"] = pitch_outcomes.pop("1b")
+        pitch_outcomes["2B"] = pitch_outcomes.pop("2b")
+        pitch_outcomes["3B"] = pitch_outcomes.pop("3b")
+        pitch_outcomes["OutNonK"] = 1-sum(pitch_outcomes.values())
+        league_outcomes = self.league_avgs
+        league_outcomes["OutNonK"] = 1-sum(league_outcomes.values())
+        league_outcomes["BB"] = league_outcomes.pop("NIBB")
+        outcomes.append("OutNonK")
+        denom = {outcome: bat_outcomes[outcome]*pitch_outcomes[outcome]/league_outcomes[outcome]
+         for outcome in outcomes}
+        normalizer = sum(denom.values())
+        outcome_dict = {k: v/normalizer for k, v in denom.items()}
+        return(outcome_dict)
