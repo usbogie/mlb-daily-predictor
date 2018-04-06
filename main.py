@@ -26,13 +26,14 @@ def get_batting_stats(lineup):
     steamer_batters = pd.read_csv(os.path.join('data','steamer','steamer_hitters_2018.csv'))
     for i in range(1,10):
         batter_name = lineup.iloc[0][str(i)]
+        print(batter_name)
         row = steamer_batters.loc[(steamer_batters['firstname'] == batter_name.split()[0]) & \
                                   (steamer_batters['lastname'] == batter_name.split()[1]) & \
                                   (steamer_batters['Team'] == team_codes[lineup.iloc[0]['name']].upper())].to_dict('list')
         if len(row['mlbamid']) == 0:
             print(batter_name, "is probably a pitcher, giving him average pitcher stats")
             lineup_stats.append(dict(avg_pitcher_stats))
-            break
+            continue
         ans = 'a'
         for key, val in row.items():
             if len(val) > 1 and ans != 'y':
@@ -65,7 +66,7 @@ def get_pitching_stats(lineup):
 
 def main():
     today = datetime.now().strftime('%Y-%m-%d')
-    averages = calc_averages()
+    league_avgs = calc_averages()
     games = pd.read_csv(os.path.join('data','lines','today.csv'))
     lineups = pd.read_csv(os.path.join('data','lineups','today.csv'))
     for index, game in games.iterrows():
@@ -77,8 +78,9 @@ def main():
         away_pitching = get_pitching_stats(away_lineup)
         home_pitching = get_pitching_stats(home_lineup)
 
-        mcGame = MonteCarlo(game_obj,away_lineup,home_lineup,away_pitching,home_pitching)
+        mcGame = MonteCarlo(game_obj,away_lineup_stats,home_lineup_stats,away_pitching,home_pitching,league_avgs)
         mcGame.sim_games()
+        break
 
 
 

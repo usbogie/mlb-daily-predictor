@@ -1,5 +1,7 @@
-from storage import Game,Scoreboard,State
-import random
+from storage.Scoreboard import Scoreboard
+from storage.Game import Game
+from storage.State import State
+import os
 
 class MonteCarlo(object):
     scoreboard = None
@@ -47,7 +49,7 @@ class MonteCarlo(object):
         self.home_batter = 0
         self.away_batter = 0
 
-        while not game_completed:
+        while not self.game_completed:
             self.scoreboard.add_frame()
             self.play_frame()
 
@@ -61,9 +63,12 @@ class MonteCarlo(object):
         if len(self.away_lineup) < 9 or len(self.home_lineup) < 9 or \
             len(self.away_pitchers) == 0 or len(self.home_pitchers) == 0:
             #something wrong, exit
+            print(len(self.away_lineup),len(self.home_lineup),len(self.away_pitchers),len(self.home_pitchers))
+            print([x['PA'] for x in self.home_lineup])
+            print("something wrong")
             return
 
-        for i in range(this.number_of_sims):
+        for i in range(self.number_of_sims):
             self.scoreboard = self.sim_one_game()
             total_runs = self.scoreboard.get_away_runs() + self.scoreboard.get_home_runs()
             self.comb_histo[total_runs] = self.comb_histo[total_runs] + 1
@@ -116,10 +121,13 @@ class MonteCarlo(object):
             self.home_batter = batting_num
 
     def sim_atbat(self, batter, pitcher, state):
-        draw = float(random.random())
         #TODO a lot. Need to develop a way to determine SO/NON-SO-OUT/walk/1b/2b/3b/hr/HPB(necessary?)
         #And then scale it all between [0,1). THEN, look at the estimator.py file and use That
         #to create baserunning logic. NOT HARD just a lot of work and attention to detail
         #http://www.insidethebook.com/ee/index.php/site/comments/the_odds_ratio_method/ for hitter/pitcher matchups
 
         # possible outcomes: K,BB,HBP,1B,2B,3B,HR,Non-K-OUT
+
+        # if we're doing this random thing, lets do it right (rand [0,1))
+        rand = int.from_bytes(os.urandom(8), byteorder="big") / ((1 << 64) - 1))
+        outcome_dict = get_outcome_dist(batter,pitcher)
