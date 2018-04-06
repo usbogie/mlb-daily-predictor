@@ -1,6 +1,7 @@
 from storage.Scoreboard import Scoreboard
 from storage.Game import Game
 from storage.State import State
+import random
 import os
 
 class MonteCarlo(object):
@@ -129,8 +130,11 @@ class MonteCarlo(object):
         # possible outcomes: K,BB,HBP,1B,2B,3B,HR,Non-K-OUT
 
         # if we're doing this random thing, lets do it right (rand [0,1))
-        rand = int.from_bytes(os.urandom(8), byteorder="big") / ((1 << 64) - 1))
-        outcome_dict = get_outcome_distribution(batter,pitcher)
+        rand = random.random()
+        print(rand)
+        outcome_dict = self.get_outcome_distribution(batter,pitcher)
 
     def get_outcome_distribution(self, batter, pitcher):
         #league averages stored in self.league_avgs
+        print(batter)
+        print(pitcher)
