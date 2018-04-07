@@ -2,7 +2,7 @@ from datetime import datetime
 from scrapers.scraper_utils import team_codes
 from storage.Game import Game
 from simulation.MonteCarlo import MonteCarlo
-from converters import winpct_to_moneyline, over_total_pct
+from converters import winpct_to_moneyline, over_total_pct, d_to_a
 import pandas as pd
 import os
 import sys
@@ -85,12 +85,14 @@ def main():
         home_pitching = get_pitching_stats(home_lineup)
 
         print("Simulating game:", game['date'],game['time'],game['away'],game['home'])
+        print("Away lineup is", away_lineup.iloc[0]['lineup_status'], "|| Home lineup is", home_lineup.iloc[0]['lineup_status'])
         mcGame = MonteCarlo(game_obj,away_lineup_stats,home_lineup_stats,away_pitching,home_pitching,league_avgs)
         mcGame.sim_games()
-        print('away_win_prob:', mcGame.away_win_prob, 'Implied line:', winpct_to_moneyline(mcGame.away_win_prob))
-        print('home_win_prob:', mcGame.home_win_prob, 'Implied line:', winpct_to_moneyline(mcGame.home_win_prob))
-        print('away_win_prob_adj:', mcGame.away_win_prob-.04, 'Implied line:', winpct_to_moneyline(mcGame.away_win_prob-.04))
-        print('home_win_prob_adj:', mcGame.home_win_prob+.04, 'Implied line:', winpct_to_moneyline(mcGame.home_win_prob+.04))
+        print("Vegas away money line:",d_to_a(game['ml_away_close']),"|| Vegas home money line",d_to_a(game['ml_home_close']))
+        print('away_win_prob:', round(mcGame.away_win_prob, 4), 'Implied line:', winpct_to_moneyline(mcGame.away_win_prob))
+        print('home_win_prob:', round(mcGame.home_win_prob, 4), 'Implied line:', winpct_to_moneyline(mcGame.home_win_prob))
+        print('away_win_prob_adj:', round(mcGame.away_win_prob-.04, 4), 'Implied line:', winpct_to_moneyline(mcGame.away_win_prob-.04))
+        print('home_win_prob_adj:', round(mcGame.home_win_prob+.04, 4), 'Implied line:', winpct_to_moneyline(mcGame.home_win_prob+.04))
         print('avg_away_total:', mcGame.avg_away_total)
         print('avg_home_total:', mcGame.avg_home_total)
         print('avg_total:', mcGame.avg_total)
