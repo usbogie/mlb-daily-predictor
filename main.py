@@ -30,22 +30,22 @@ def get_batting_stats(lineup):
         team_abbrv = team_codes[lineup.iloc[0]['name']].upper()
         if team_abbrv == 'ANA':
             team_abbrv = 'LAA'
-        row = steamer_batters.loc[(steamer_batters['firstname'] == batter_name.split()[0]) & \
-                                  (steamer_batters['lastname'] == batter_name.split()[1]) & \
-                                  (steamer_batters['Team'] == team_abbrv)].to_dict('list')
+        row = steamer_batters.loc[(steamer_batters['firstname'] == batter_name.split(' ',1)[0]) & \
+                                  (steamer_batters['lastname'] == batter_name.split(' ',1)[1])].to_dict('list')
         if len(row['mlbamid']) == 0:
             print(batter_name, "is probably a pitcher, giving him average pitcher stats")
             lineup_stats.append(dict(avg_pitcher_stats))
             continue
-        ans = 'a'
+        ans = None
         for key, val in row.items():
-            if len(val) > 1 and ans != 'y':
-                print("DUPLICATE something is wrong")
-                print(row)
-                ans = input("Would you like to select the first player y/n => ")
-                if ans == 'n':
-                    sys.exit()
-            row[key] = val[0]
+            if len(val) > 1:
+                if ans is None:
+                    print("DUPLICATE something is wrong")
+                    print(row)
+                    ans = input("Which player is actually playing? => ")
+                row[key] = val[int(ans)-1]
+            else:
+                row[key] = val[0]
         lineup_stats.append(row)
     return lineup_stats
 
@@ -56,12 +56,12 @@ def get_pitching_stats(lineup):
     team_abbrv = team_codes[lineup.iloc[0]['name']].upper()
     if team_abbrv == 'ANA':
         team_abbrv = 'LAA'
-    starting_pitcher = steamer_pitchers.loc[(steamer_pitchers['firstname'] == pitcher_name.split()[0]) & \
-                                  (steamer_pitchers['lastname'] == pitcher_name.split()[1]) & \
+    starting_pitcher = steamer_pitchers.loc[(steamer_pitchers['firstname'] == pitcher_name.split(' ',1)[0]) & \
+                                  (steamer_pitchers['lastname'] == pitcher_name.split(' ',1)[1]) & \
                                   (steamer_pitchers['DBTeamId'] == team_abbrv)].to_dict('list')
     relief_pitchers = steamer_pitchers.loc[(steamer_pitchers['relief_IP'] >= 10.0) & \
                                            ((steamer_pitchers['DBTeamId'] == team_abbrv))]
-
+    print(pitcher_name)
     for key, val in starting_pitcher.items():
         if len(val) > 1:
             print("DUPLICATE something is wrong")

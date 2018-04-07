@@ -97,3 +97,11 @@ key,away_id,away_name,away_score,date,gamePk,home_id,home_name,home_score
 2018/04/05/cinmlb-pitmlb-1,113,Cincinnati Reds,2,2018-04-05,529500,134,Pittsburgh Pirates,5
 2018/04/05/arimlb-slnmlb-1,109,Arizona Diamondbacks,3,2018-04-05,529497,138,St. Louis Cardinals,1
 2018/04/05/chnmlb-milmlb-1,112,Chicago Cubs,8,2018-04-05,529499,158,Milwaukee Brewers,0
+2018/04/06/atlmlb-colmlb-1,144,Atlanta Braves,8,2018-04-06,529508,115,Colorado Rockies,3
+2018/04/06/kcamlb-clemlb-1,118,Kansas City Royals,2,2018-04-06,529512,114,Cleveland Indians,3
+2018/04/06/balmlb-nyamlb-1,110,Baltimore Orioles,7,2018-04-06,529509,147,New York Yankees,3
+2018/04/06/cinmlb-pitmlb-1,113,Cincinnati Reds,3,2018-04-06,529511,134,Pittsburgh Pirates,14
+2018/04/06/tormlb-texmlb-1,141,Toronto Blue Jays,8,2018-04-06,529516,140,Texas Rangers,5
+2018/04/06/chnmlb-milmlb-1,112,Chicago Cubs,4,2018-04-06,529510,158,Milwaukee Brewers,5
+2018/04/06/sdnmlb-houmlb-1,135,San Diego Padres,4,2018-04-06,529515,117,Houston Astros,1
+2018/04/06/oakmlb-anamlb-1,133,Oakland Athletics,9,2018-04-06,529514,108,Los Angeles Angels,13

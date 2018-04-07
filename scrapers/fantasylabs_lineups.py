@@ -7,6 +7,12 @@ import datetime
 import random
 from scraper_utils import get_soup, team_codes, get_days_in_season
 
+def fix_name(name):
+    name = name.replace('Matthew Joyce','Matt Joyce').replace('Jackie Bradley', 'Jackie Bradley Jr.')
+    name = name.replace('Jacob Faria', 'Jake Faria').replace('Vincent Velasquez', 'Vince Velasquez')
+    name = name.replace('J.C. Ramirez', 'JC Ramirez').replace('Nicky Delmonico','Nick Delmonico')
+    return name
+
 def scrape_day_lineups(day):
     time.sleep(random.randint(4,6))
     new_date = datetime.datetime.strptime(day, '%Y-%m-%d').strftime('%m_%d_%Y')
@@ -34,8 +40,8 @@ def scrape_day_lineups(day):
         team1['name'] = team1_lineup[0]['TeamName'].replace('St', 'St.')
         team2['name'] = team2_lineup[0]['TeamName'].replace('St', 'St.')
         for i in range(10):
-            team1[str(i+1)] = team1_lineup[i]['PlayerName']
-            team2[str(i+1)] = team2_lineup[i]['PlayerName']
+            team1[str(i+1)] = fix_name(team1_lineup[i]['PlayerName'])
+            team2[str(i+1)] = fix_name(team2_lineup[i]['PlayerName'])
         soup = soup[20:]
         lineups.append((team1,team2))
 
