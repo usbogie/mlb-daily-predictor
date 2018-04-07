@@ -2,6 +2,7 @@ from datetime import datetime
 from scrapers.scraper_utils import team_codes
 from storage.Game import Game
 from simulation.MonteCarlo import MonteCarlo
+from converters import winpct_to_moneyline, over_total_pct
 import pandas as pd
 import os
 import sys
@@ -14,7 +15,7 @@ def calc_averages():
     avgs_dict['2B'] = steamer_batters['2B'].sum() / float(total_PA)
     avgs_dict['3B'] = steamer_batters['3B'].sum() / float(total_PA)
     avgs_dict['HR'] = steamer_batters['HR'].sum() / float(total_PA)
-    avgs_dict['NIBB'] = steamer_batters['NIBB'].sum() / float(total_PA)
+    avgs_dict['BB'] = steamer_batters['BB'].sum() / float(total_PA)
     avgs_dict['HBP'] = steamer_batters['HBP'].sum() / float(total_PA)
     avgs_dict['K'] = steamer_batters['K'].sum() / float(total_PA)
     return avgs_dict
@@ -22,14 +23,16 @@ def calc_averages():
 def get_batting_stats(lineup):
     lineup_stats = []
     avg_pitcher_stats = {'PA': 5277, '1B': 464, '2B': 79, '3B': 7, 'HR': 27,
-                         'NIBB': 162, 'HBP': 16, 'K': 2028}
+                         'BB': 162, 'HBP': 16, 'K': 2028}
     steamer_batters = pd.read_csv(os.path.join('data','steamer','steamer_hitters_2018.csv'))
     for i in range(1,10):
         batter_name = lineup.iloc[0][str(i)]
-        print(batter_name)
+        team_abbrv = team_codes[lineup.iloc[0]['name']].upper()
+        if team_abbrv == 'ANA':
+            team_abbrv = 'LAA'
         row = steamer_batters.loc[(steamer_batters['firstname'] == batter_name.split()[0]) & \
                                   (steamer_batters['lastname'] == batter_name.split()[1]) & \
-                                  (steamer_batters['Team'] == team_codes[lineup.iloc[0]['name']].upper())].to_dict('list')
+                                  (steamer_batters['Team'] == team_abbrv)].to_dict('list')
         if len(row['mlbamid']) == 0:
             print(batter_name, "is probably a pitcher, giving him average pitcher stats")
             lineup_stats.append(dict(avg_pitcher_stats))
@@ -50,11 +53,14 @@ def get_pitching_stats(lineup):
     lineup_stats = []
     steamer_pitchers = pd.read_csv(os.path.join('data','steamer','steamer_pitchers_2018.csv'))
     pitcher_name = lineup.iloc[0]['10']
+    team_abbrv = team_codes[lineup.iloc[0]['name']].upper()
+    if team_abbrv == 'ANA':
+        team_abbrv = 'LAA'
     starting_pitcher = steamer_pitchers.loc[(steamer_pitchers['firstname'] == pitcher_name.split()[0]) & \
                                   (steamer_pitchers['lastname'] == pitcher_name.split()[1]) & \
-                                  (steamer_pitchers['DBTeamId'] == team_codes[lineup.iloc[0]['name']].upper())].to_dict('list')
+                                  (steamer_pitchers['DBTeamId'] == team_abbrv)].to_dict('list')
     relief_pitchers = steamer_pitchers.loc[(steamer_pitchers['relief_IP'] >= 10.0) & \
-                                           ((steamer_pitchers['DBTeamId'] == team_codes[lineup.iloc[0]['name']].upper()))]
+                                           ((steamer_pitchers['DBTeamId'] == team_abbrv))]
 
     for key, val in starting_pitcher.items():
         if len(val) > 1:
@@ -78,12 +84,19 @@ def main():
         away_pitching = get_pitching_stats(away_lineup)
         home_pitching = get_pitching_stats(home_lineup)
 
+        print("Simulating game:", game['date'],game['time'],game['away'],game['home'])
         mcGame = MonteCarlo(game_obj,away_lineup_stats,home_lineup_stats,away_pitching,home_pitching,league_avgs)
         mcGame.sim_games()
-        break
-
-
-
+        print('away_win_prob:', mcGame.away_win_prob, 'Implied line:', winpct_to_moneyline(mcGame.away_win_prob))
+        print('home_win_prob:', mcGame.home_win_prob, 'Implied line:', winpct_to_moneyline(mcGame.home_win_prob))
+        print('away_win_prob_adj:', mcGame.away_win_prob-.04, 'Implied line:', winpct_to_moneyline(mcGame.away_win_prob-.04))
+        print('home_win_prob_adj:', mcGame.home_win_prob+.04, 'Implied line:', winpct_to_moneyline(mcGame.home_win_prob+.04))
+        print('avg_away_total:', mcGame.avg_away_total)
+        print('avg_home_total:', mcGame.avg_home_total)
+        print('avg_total:', mcGame.avg_total)
+        pct_over = over_total_pct(mcGame.comb_histo,game['total_close_line'])
+        print('Pct over:', pct_over, 'Implied line:', winpct_to_moneyline(pct_over))
+        print('\n')
 
 
 if __name__ == '__main__':

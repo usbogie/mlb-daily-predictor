@@ -4,6 +4,12 @@ class Scoreboard(object):
     home_hits = 0
     current_frame = -1
 
+    def __init__(self):
+        self.frames = []
+        self.away_hits = 0
+        self.home_hits = 0
+        self.current_frame = -1
+
     def add_frame(self):
         self.frames.append(0)
         self.current_frame += 1
