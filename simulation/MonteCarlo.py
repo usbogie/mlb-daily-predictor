@@ -29,6 +29,12 @@ class MonteCarlo(object):
     avg_away_total = 0.0
     avg_total = 0.0
 
+    home_rl_wins = 0
+    away_rl_wins = 0
+
+    scored_in_first = False
+    scores_in_first = 0
+
     histo_bins = 50
     home_histo = []
     away_histo = []
@@ -55,6 +61,7 @@ class MonteCarlo(object):
         self.away_batter = 0
         self.home_pitcher = 0
         self.away_pitcher = 0
+        self.scored_in_first = False
 
         while not self.game_completed:
             self.scoreboard.add_frame()
@@ -87,6 +94,11 @@ class MonteCarlo(object):
                 self.home_wins = self.home_wins + 1
             else:
                 self.away_wins = self.away_wins + 1
+
+            if self.scoreboard.get_home_runs() > self.scoreboard.get_away_runs() + 1:
+                self.home_rl_wins = self.home_rl_wins + 1
+            if self.scoreboard.get_home_runs() + 1 < self.scoreboard.get_away_runs():
+                self.away_rl_wins = self.away_rl_wins + 1
 
         self.home_win_prob = self.home_wins / float(self.number_of_sims)
         self.away_win_prob = self.away_wins / float(self.number_of_sims)
@@ -141,13 +153,13 @@ class MonteCarlo(object):
         #print(event)
         if event == '1B':
             if state.onThird:
-                self.scoreboard.inc_runs()
+                self.increment_runs()
                 state.onThird = False
             second_takes_extra = False
             if state.onSecond:
                 second_takes_extra = state.determine_extra_base(event, '2')
                 if second_takes_extra:
-                    self.scoreboard.inc_runs()
+                    self.increment_runs()
                 else:
                     state.onThird = True
                 state.onSecond = False
@@ -163,44 +175,44 @@ class MonteCarlo(object):
             state.onFirst = True
         if event == '2B':
             if state.onThird:
-                self.scoreboard.inc_runs()
+                self.increment_runs()
                 state.onThird = False
             if state.onSecond:
-                self.scoreboard.inc_runs()
+                self.increment_runs()
                 state.onSecond = False
             if state.onFirst:
                 first_takes_extra = state.determine_extra_base(event, '1')
                 if first_takes_extra:
-                    self.scoreboard.inc_runs()
+                    self.increment_runs()
                 else:
                     state.onThird = True
                 state.onFirst = False
             state.onSecond = True
         if event == '3B':
             if state.onThird:
-                self.scoreboard.inc_runs()
+                self.increment_runs()
                 state.onThird = False
             if state.onSecond:
-                self.scoreboard.inc_runs()
+                self.increment_runs()
                 state.onSecond = False
             if state.onFirst:
-                self.scoreboard.inc_runs()
+                self.increment_runs()
                 state.onFirst = False
             state.onThird = True
         if event == 'HR':
             if state.onThird:
-                self.scoreboard.inc_runs()
+                self.increment_runs()
             if state.onSecond:
-                self.scoreboard.inc_runs()
+                self.increment_runs()
             if state.onFirst:
-                self.scoreboard.inc_runs()
-            self.scoreboard.inc_runs()
+                self.increment_runs()
+            self.increment_runs()
             state.clear_bases()
         if event == 'K':
             state.outs = state.outs + 1
         if event == 'BB' or event == 'HBP':
             if state.onFirst and state.onSecond and state.onThird:
-                self.scoreboard.inc_runs()
+                self.increment_runs()
             elif state.onFirst and state.onSecond:
                 state.onThird = True
             elif state.onFirst:
@@ -210,7 +222,7 @@ class MonteCarlo(object):
             state.outs = state.outs + 1
             if state.onThird and state.outs < 3:
                 if state.determine_extra_base(event, '3'):
-                    self.scoreboard.inc_runs()
+                    self.increment_runs()
                     state.onThird = False
             if state.onSecond and state.outs < 3:
                 if not state.onThird and state.determine_extra_base(event, '2'):
@@ -222,6 +234,12 @@ class MonteCarlo(object):
                     state.onFirst = False
         #print(state.to_string())
         return state
+
+    def increment_runs(self):
+        if self.scoreboard.current_frame < 2 and not self.scored_in_first:
+            self.scored_in_first = True
+            self.scores_in_first = self.scores_in_first + 1
+        self.scoreboard.inc_runs()
 
     def get_outcome_distribution(self, batter, pitcher):
         #print(batter['lastname'], 'vs', pitcher['lastname'])
@@ -251,7 +269,10 @@ class MonteCarlo(object):
         if pitcher_num == 0:
             # determine if starter should be pulled
             pull_starter = False
-            avg_start_length = pitcher['start_IP'] / pitcher['GS']
+            try:
+                avg_start_length = pitcher['start_IP'] / pitcher['GS']
+            except:
+                avg_start_length = 4.5
             cur_inning = len(self.scoreboard.frames)//2 + 1
             rand = random.random()
             if not ((cur_inning == floor(avg_start_length)-1 and rand < .15) or \
