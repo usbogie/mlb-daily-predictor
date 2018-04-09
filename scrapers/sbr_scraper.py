@@ -68,18 +68,10 @@ def get_money_lines(ml_url, day):
 		except:
 			continue
 
-		open_lines = grid.find('div', {'class': 'el-div eventLine-opener'}).find_all('div', {'class': 'eventLine-book-value'})
+		lines = grid.findAll('div', {'class': 'el-div eventLine-book'})[1].find_all('div', {'class': 'eventLine-book-value'})
 		try:
-			game_info['ml_away_open'] = c_to_d(open_lines[0].text)
-			game_info['ml_home_open'] = c_to_d(open_lines[1].text)
-		except:
-			game_infos[(day,game_info['time'],game_info['away'],game_info['home'])] = game_info
-			continue
-
-		close_lines = grid.findAll('div', {'class': 'el-div eventLine-book'})[1].find_all('div', {'class': 'eventLine-book-value'})
-		try:
-			game_info['ml_away_close'] = c_to_d(close_lines[0].text)
-			game_info['ml_home_close'] = c_to_d(close_lines[1].text)
+			game_info['ml_away'] = c_to_d(lines[0].text)
+			game_info['ml_home'] = c_to_d(lines[1].text)
 		except:
 			continue
 
@@ -94,6 +86,23 @@ def get_money_lines(ml_url, day):
 		game_infos[(day,game_info['time'],game_info['away'],game_info['home'])] = game_info
 	return game_infos
 
+def get_f5_money_lines(ml_url, game_infos, day):
+	ml_soup = get_soup(ml_url)
+	grids = ml_soup.findAll('div', {'class': 'event-holder holder-complete'})
+	grids += ml_soup.findAll('div', {'class': 'event-holder holder-scheduled'})
+	grids += ml_soup.findAll('div', {'class': 'event-holder holder-in-progress'})
+	for grid in grids:
+		time = grid.find('div',{'class', 'el-div eventLine-time'}).text
+		away, home = get_names(grid)
+		game_info = game_infos[(day,time,away,home)]
+
+		lines = grid.findAll('div', {'class': 'el-div eventLine-book'})[1].find_all('div', {'class': 'eventLine-book-value'})
+		try:
+			game_info['ml_away_f5'] = c_to_d(lines[0].text)
+			game_info['ml_home_f5'] = c_to_d(lines[1].text)
+		except:
+			pass
+
 def get_run_lines(rl_url, game_infos, day):
 	rl_soup = get_soup(rl_url)
 	grids = rl_soup.findAll('div', {'class': 'event-holder holder-complete'})
@@ -104,17 +113,27 @@ def get_run_lines(rl_url, game_infos, day):
 		away, home = get_names(grid)
 		game_info = game_infos[(day,time,away,home)]
 
-		open_lines = grid.find('div', {'class': 'el-div eventLine-opener'}).find_all('div', {'class': 'eventLine-book-value'})
+		lines = grid.findAll('div', {'class': 'el-div eventLine-book'})[1].find_all('div', {'class': 'eventLine-book-value'})
 		try:
-			game_info['rl_away_open'] = c_to_d(open_lines[0].text.split()[1])
-			game_info['rl_home_open'] = c_to_d(open_lines[1].text.split()[1])
+			game_info['rl_away'] = c_to_d(lines[0].text.split()[1])
+			game_info['rl_home'] = c_to_d(lines[1].text.split()[1])
 		except:
 			pass
 
-		close_lines = grid.findAll('div', {'class': 'el-div eventLine-book'})[1].find_all('div', {'class': 'eventLine-book-value'})
+def get_f5_run_lines(rl_url, game_infos, day):
+	rl_soup = get_soup(rl_url)
+	grids = rl_soup.findAll('div', {'class': 'event-holder holder-complete'})
+	grids += rl_soup.findAll('div', {'class': 'event-holder holder-scheduled'})
+	grids += rl_soup.findAll('div', {'class': 'event-holder holder-in-progress'})
+	for grid in grids:
+		time = grid.find('div',{'class', 'el-div eventLine-time'}).text
+		away, home = get_names(grid)
+		game_info = game_infos[(day,time,away,home)]
+
+		lines = grid.findAll('div', {'class': 'el-div eventLine-book'})[1].find_all('div', {'class': 'eventLine-book-value'})
 		try:
-			game_info['rl_away_close'] = c_to_d(close_lines[0].text.split()[1])
-			game_info['rl_home_close'] = c_to_d(close_lines[1].text.split()[1])
+			game_info['rl_away_f5'] = c_to_d(lines[0].text.split()[1])
+			game_info['rl_home_f5'] = c_to_d(lines[1].text.split()[1])
 		except:
 			pass
 
@@ -128,17 +147,27 @@ def get_totals(total_url, game_infos,day):
 		away, home = get_names(grid)
 		game_info = game_infos[(day,time,away,home)]
 
-		open_totals = grid.find('div', {'class': 'el-div eventLine-opener'}).find_all('div', {'class': 'eventLine-book-value'})
+		lines = grid.findAll('div', {'class': 'el-div eventLine-book'})[1].find_all('div', {'class': 'eventLine-book-value'})
 		try:
-			game_info['total_open_line'] = float(open_totals[0].text.split()[0].replace("½",".5"))
-			game_info['total_open_odds'] = c_to_d(open_totals[0].text.split()[1])
+			game_info['total_line'] = float(lines[0].text.split()[0].replace("½",".5"))
+			game_info['total_odds'] = c_to_d(lines[0].text.split()[1])
 		except:
 			pass
 
-		close_lines = grid.findAll('div', {'class': 'el-div eventLine-book'})[1].find_all('div', {'class': 'eventLine-book-value'})
+def get_f5_totals(total_url, game_infos,day):
+	total_soup = get_soup(total_url)
+	grids = total_soup.findAll('div', {'class': 'event-holder holder-complete'})
+	grids += total_soup.findAll('div', {'class': 'event-holder holder-scheduled'})
+	grids += total_soup.findAll('div', {'class': 'event-holder holder-in-progress'})
+	for grid in grids:
+		time = grid.find('div',{'class', 'el-div eventLine-time'}).text
+		away, home = get_names(grid)
+		game_info = game_infos[(day,time,away,home)]
+
+		lines = grid.findAll('div', {'class': 'el-div eventLine-book'})[1].find_all('div', {'class': 'eventLine-book-value'})
 		try:
-			game_info['total_close_line'] = float(close_lines[0].text.split()[0].replace("½",".5"))
-			game_info['total_close_odds'] = c_to_d(close_lines[0].text.split()[1])
+			game_info['total_line_f5'] = float(lines[0].text.split()[0].replace("½",".5"))
+			game_info['total_odds_f5'] = c_to_d(lines[0].text.split()[1])
 		except:
 			pass
 
@@ -146,17 +175,28 @@ def scrape_sbr_day(day):
 	print(day)
 	base = "https://www.sportsbookreview.com/betting-odds/mlb-baseball/"
 	ml_ext = "?date="
+	ml_f5_ext = "1st-half/?date="
 	rl_ext = "pointspread/?date="
+	rl_f5_ext = "pointspread/1st-half/?date="
 	total_ext = "totals/?date="
+	total_f5_ext = "totals/1st-half/?date="
 	ml_url = base + ml_ext + day.replace('-','')
 	game_infos = get_money_lines(ml_url, day)
 	#handle all star game
 	if len(game_infos.keys()) == 0:
 		return game_infos
+	f5_ml_url = base + ml_f5_ext + day.replace('-','')
+	get_f5_money_lines(f5_ml_url, game_infos, day)
+
 	rl_url = base + rl_ext + day.replace('-','')
 	get_run_lines(rl_url, game_infos, day)
+	rl_f5_url = base + rl_f5_ext + day.replace('-','')
+	get_f5_run_lines(rl_f5_url, game_infos, day)
+
 	total_url = base + total_ext + day.replace('-','')
 	get_totals(total_url, game_infos, day)
+	total_f5_url = base + total_f5_ext + day.replace('-','')
+	get_f5_totals(total_f5_url, game_infos, day)
 	return game_infos
 
 def scrape_sbr_year(year=2017):
@@ -172,17 +212,16 @@ def scrape_sbr_year(year=2017):
 	# This is horrible. I hope nobody ever sees this. Maybe need to cross-reference
 	# vegas_insider or something. Don't want to put in the work right now
 	for game in season_games:
-		if 'rl_away_open' in game:
+		if 'rl_away' in game:
 			continue
 		print(game)
 		ans = input('entry all fucked up. You want to fill it in? (y/n) -> ')
 		if ans == 'n':
 			continue
-		for key in ['ml_away_open','ml_home_open','ml_away_close','ml_home_close',\
-					'rl_away_open','rl_home_open','rl_away_close','rl_home_close',\
-					'total_open_odds','total_close_odds']:
+		for key in ['ml_away','ml_home', 'rl_away',\
+					'rl_home','total_odds']:
 			game[key] = c_to_d(input(key+': '))
-		for key in ['total_open_line','total_close_line']:
+		for key in ['total_line']:
 			game[key] = float(input(key+': '))
 		print(game)
 

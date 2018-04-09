@@ -29,18 +29,28 @@ class MonteCarlo(object):
     avg_away_total = 0.0
     avg_total = 0.0
 
+    f5_home_wins = 0
+    f5_away_wins = 0
+    f5_ties = 0
+    f5_home_win_prob = 0.0
+    f5_away_win_prob = 0.0
+    f5_home_win_no_tie_prob = 0.0
+    f5_away_win_no_tie_prob = 0.0
+    f5_tie_prob = 0.0
+    f5_avg_total = 0.0
+
     home_rl_wins = 0
     away_rl_wins = 0
 
     scored_in_first = False
     scores_in_first = 0
 
-    histo_bins = 50
+
     home_histo = []
     away_histo = []
     comb_histo = []
+    f5_comb_histo = []
     number_of_sims = 10000
-    num_innings = 9
 
     def __init__(self, game, away_lineup, home_lineup, away_pitchers, home_pitchers, league_avgs):
         self.game = game
@@ -53,6 +63,8 @@ class MonteCarlo(object):
         self.home_histo = [0]*50
         self.away_histo = [0]*50
         self.comb_histo = [0]*50
+        self.f5_comb_histo = [0]*50
+
 
     def sim_one_game(self):
         self.scoreboard = Scoreboard()
@@ -66,6 +78,17 @@ class MonteCarlo(object):
         while not self.game_completed:
             self.scoreboard.add_frame()
             self.play_frame()
+
+            if len(self.scoreboard.frames) == 10:
+                #lock in f5 attrs
+                if self.scoreboard.get_home_runs() > self.scoreboard.get_away_runs():
+                    self.f5_home_wins = self.f5_home_wins + 1
+                elif self.scoreboard.get_home_runs() == self.scoreboard.get_away_runs():
+                    self.f5_ties = self.f5_ties + 1
+                else:
+                    self.f5_away_wins = self.f5_away_wins + 1
+                f5_total_runs = self.scoreboard.get_away_runs() + self.scoreboard.get_home_runs()
+                self.f5_comb_histo[f5_total_runs] = self.f5_comb_histo[f5_total_runs] + 1
 
             if (len(self.scoreboard.frames) >= 18 and \
                 len(self.scoreboard.frames)%2 == 0 and \
@@ -105,6 +128,14 @@ class MonteCarlo(object):
         self.avg_away_total = sum([self.away_histo[x]*x for x in range(50)])/float(self.number_of_sims)
         self.avg_home_total = sum([self.home_histo[x]*x for x in range(50)])/float(self.number_of_sims)
         self.avg_total = sum([self.comb_histo[x]*x for x in range(50)])/float(self.number_of_sims)
+
+        self.f5_home_win_prob = self.f5_home_wins / float(self.number_of_sims - self.f5_ties)
+        self.f5_away_win_prob = self.f5_away_wins / float(self.number_of_sims - self.f5_ties)
+        self.f5_home_win_no_tie_prob = self.f5_home_wins / float(self.number_of_sims)
+        self.f5_away_win_no_tie_prob = self.f5_away_wins / float(self.number_of_sims)
+        self.f5_tie_prob = self.f5_ties / float(self.number_of_sims)
+        self.f5_avg_total = sum([self.f5_comb_histo[x]*x for x in range(50)])/float(self.number_of_sims)
+
 
     def play_frame(self):
         state = State()
