@@ -2,7 +2,7 @@ import json
 import os
 import sqlite3
 import pandas as pd
-from scraper_utils import get_soup, team_codes, get_days_in_season
+from scrapers.scraper_utils import get_soup, team_codes, get_days_in_season
 
 team_abbrvs = {
   "ARI": "Arizona Diamondbacks",
@@ -68,11 +68,12 @@ def get_money_lines(ml_url, day):
 		except:
 			continue
 
-		lines = grid.findAll('div', {'class': 'el-div eventLine-book'})[1].find_all('div', {'class': 'eventLine-book-value'})
+		lines = grid.findAll('div', {'class': 'el-div eventLine-book'})[2].find_all('div', {'class': 'eventLine-book-value'})
 		try:
 			game_info['ml_away'] = c_to_d(lines[0].text)
 			game_info['ml_home'] = c_to_d(lines[1].text)
 		except:
+			print('Continuing on',(day,game_info['time'],game_info['away'],game_info['home']))
 			continue
 
 		key = day.replace('-','/')+'/'+team_codes[game_info['away']]+'mlb-'+team_codes[game_info['home']]+'mlb-1'
@@ -94,9 +95,12 @@ def get_f5_money_lines(ml_url, game_infos, day):
 	for grid in grids:
 		time = grid.find('div',{'class', 'el-div eventLine-time'}).text
 		away, home = get_names(grid)
-		game_info = game_infos[(day,time,away,home)]
+		try:
+			game_info = game_infos[(day,time,away,home)]
+		except:
+			continue
 
-		lines = grid.findAll('div', {'class': 'el-div eventLine-book'})[1].find_all('div', {'class': 'eventLine-book-value'})
+		lines = grid.findAll('div', {'class': 'el-div eventLine-book'})[2].find_all('div', {'class': 'eventLine-book-value'})
 		try:
 			game_info['ml_away_f5'] = c_to_d(lines[0].text)
 			game_info['ml_home_f5'] = c_to_d(lines[1].text)
@@ -111,9 +115,12 @@ def get_run_lines(rl_url, game_infos, day):
 	for grid in grids:
 		time = grid.find('div',{'class', 'el-div eventLine-time'}).text
 		away, home = get_names(grid)
-		game_info = game_infos[(day,time,away,home)]
+		try:
+			game_info = game_infos[(day,time,away,home)]
+		except:
+			continue
 
-		lines = grid.findAll('div', {'class': 'el-div eventLine-book'})[1].find_all('div', {'class': 'eventLine-book-value'})
+		lines = grid.findAll('div', {'class': 'el-div eventLine-book'})[2].find_all('div', {'class': 'eventLine-book-value'})
 		try:
 			game_info['rl_away'] = c_to_d(lines[0].text.split()[1])
 			game_info['rl_home'] = c_to_d(lines[1].text.split()[1])
@@ -128,9 +135,12 @@ def get_f5_run_lines(rl_url, game_infos, day):
 	for grid in grids:
 		time = grid.find('div',{'class', 'el-div eventLine-time'}).text
 		away, home = get_names(grid)
-		game_info = game_infos[(day,time,away,home)]
+		try:
+			game_info = game_infos[(day,time,away,home)]
+		except:
+			continue
 
-		lines = grid.findAll('div', {'class': 'el-div eventLine-book'})[1].find_all('div', {'class': 'eventLine-book-value'})
+		lines = grid.findAll('div', {'class': 'el-div eventLine-book'})[2].find_all('div', {'class': 'eventLine-book-value'})
 		try:
 			game_info['rl_away_f5'] = c_to_d(lines[0].text.split()[1])
 			game_info['rl_home_f5'] = c_to_d(lines[1].text.split()[1])
@@ -145,9 +155,12 @@ def get_totals(total_url, game_infos,day):
 	for grid in grids:
 		time = grid.find('div',{'class', 'el-div eventLine-time'}).text
 		away, home = get_names(grid)
-		game_info = game_infos[(day,time,away,home)]
+		try:
+			game_info = game_infos[(day,time,away,home)]
+		except:
+			continue
 
-		lines = grid.findAll('div', {'class': 'el-div eventLine-book'})[1].find_all('div', {'class': 'eventLine-book-value'})
+		lines = grid.findAll('div', {'class': 'el-div eventLine-book'})[2].find_all('div', {'class': 'eventLine-book-value'})
 		try:
 			game_info['total_line'] = float(lines[0].text.split()[0].replace("½",".5"))
 			game_info['total_odds'] = c_to_d(lines[0].text.split()[1])
@@ -162,9 +175,12 @@ def get_f5_totals(total_url, game_infos,day):
 	for grid in grids:
 		time = grid.find('div',{'class', 'el-div eventLine-time'}).text
 		away, home = get_names(grid)
-		game_info = game_infos[(day,time,away,home)]
+		try:
+			game_info = game_infos[(day,time,away,home)]
+		except:
+			continue
 
-		lines = grid.findAll('div', {'class': 'el-div eventLine-book'})[1].find_all('div', {'class': 'eventLine-book-value'})
+		lines = grid.findAll('div', {'class': 'el-div eventLine-book'})[2].find_all('div', {'class': 'eventLine-book-value'})
 		try:
 			game_info['total_line_f5'] = float(lines[0].text.split()[0].replace("½",".5"))
 			game_info['total_odds_f5'] = c_to_d(lines[0].text.split()[1])

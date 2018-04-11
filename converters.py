@@ -1,12 +1,12 @@
 
 
-def winpct_to_moneyline(winpct):
+def winpct_to_ml(winpct):
     if winpct >= .5:
         return (-100.0 * winpct)/(1-winpct)
     else:
         return (100.0 - 100.0 * winpct) / winpct
 
-def moneyline_to_winpct(ml):
+def ml_to_winpct(ml):
     if ml < 0:
         return ml/(ml-100)
     else:
@@ -18,7 +18,7 @@ def over_total_pct(histo, line):
     total = 0
     for i in range(start, len(histo)):
         total += histo[i]
-    return round(total/(10000.0-(histo[int(line)] if (line % 1.0 == 0) else 0)), 1)
+    return total/(10000.0-(histo[int(line)] if (line % 1.0 == 0) else 0))
 
 # decimal to american
 def d_to_a(odds):

@@ -5,13 +5,14 @@ import sys
 import time
 import datetime
 import random
-from scraper_utils import get_soup, team_codes, get_days_in_season
+from scrapers.scraper_utils import get_soup, team_codes, get_days_in_season
 
 def fix_name(name):
     name = name.replace('Matthew Joyce','Matt Joyce').replace('Jackie Bradley', 'Jackie Bradley Jr.')
     name = name.replace('Jacob Faria', 'Jake Faria').replace('Vincent Velasquez', 'Vince Velasquez')
     name = name.replace('J.C. Ramirez', 'JC Ramirez').replace('Nicky Delmonico','Nick Delmonico')
-    name = name.replace('Albert Almora', 'Albert Almora Jr.')
+    name = name.replace('Albert Almora', 'Albert Almora Jr.').replace('Jake Junis','Jakob Junis')
+    name = name.replace('Philip Gosselin', 'Phil Gosselin').replace('Michael Foltynewicz','Mike Foltynewicz')
     return name
 
 def scrape_day_lineups(day):

@@ -1,15 +1,16 @@
 key,away,date,home,ml_away,ml_away_f5,ml_home,ml_home_f5,rl_away,rl_away_f5,rl_home,rl_home_f5,time,total_line,total_line_f5,total_odds,total_odds_f5
-2018/04/08/tbamlb-bosmlb-1,Tampa Bay Rays,2018-04-08,Boston Red Sox,2.83,2.78,1.51,1.49,1.87,2.25,2.05,1.69,1:05p,8.0,4.5,1.95,2.0
-2018/04/08/balmlb-nyamlb-1,Baltimore Orioles,2018-04-08,New York Yankees,2.6,2.6,1.59,1.57,1.83,2.15,2.1,1.74,1:05p,8.5,5.0,1.91,1.87
-2018/04/08/kcamlb-clemlb-1,Kansas City Royals,2018-04-08,Cleveland Indians,2.95,3.0,1.47,1.43,2.0,2.25,1.91,1.69,1:10p,7.5,4.5,1.91,2.0
-2018/04/08/miamlb-phimlb-1,Miami Marlins,2018-04-08,Philadelphia Phillies,2.75,2.75,1.54,1.5,1.83,2.05,2.1,1.8,1:35p,8.0,4.5,1.95,2.05
-2018/04/08/cinmlb-pitmlb-1,Cincinnati Reds,2018-04-08,Pittsburgh Pirates,2.4,2.35,1.67,1.67,1.62,1.87,2.5,1.95,1:35p,7.5,4.0,1.91,1.8
-2018/04/08/sdnmlb-houmlb-1,San Diego Padres,2018-04-08,Houston Astros,3.45,3.2,1.38,1.4,2.2,2.4,1.77,1.62,2:10p,8.0,4.5,1.83,1.91
-2018/04/08/chnmlb-milmlb-1,Chicago Cubs,2018-04-08,Milwaukee Brewers,1.88,1.83,2.04,2.05,2.45,2.2,1.65,1.71,2:10p,8.5,4.5,1.95,1.91
-2018/04/08/detmlb-chamlb-1,Detroit Tigers,2018-04-08,Chicago White Sox,2.58,2.51,1.6,1.6,1.77,2.0,2.2,1.83,2:10p,8.0,4.5,1.97,2.0
-2018/04/08/arimlb-slnmlb-1,Arizona Diamondbacks,2018-04-08,St. Louis Cardinals,2.43,2.33,1.65,1.68,1.65,1.91,2.45,1.91,2:15p,7.5,4.0,2.0,2.0
-2018/04/08/tormlb-texmlb-1,Toronto Blue Jays,2018-04-08,Texas Rangers,1.88,1.91,2.03,1.95,2.45,2.25,1.65,1.69,3:05p,9.0,5.0,2.05,1.91
-2018/04/08/atlmlb-colmlb-1,Atlanta Braves,2018-04-08,Colorado Rockies,2.4,2.25,1.67,1.71,1.69,1.83,2.35,2.0,3:10p,11.0,6.0,2.1,2.05
-2018/04/08/lanmlb-sfnmlb-1,Los Angeles Dodgers,2018-04-08,San Francisco Giants,1.44,1.37,3.05,3.4,1.74,1.61,2.25,2.45,4:05p,8.0,4.0,1.95,1.95
-2018/04/08/oakmlb-anamlb-1,Oakland Athletics,2018-04-08,Los Angeles Angels,2.58,2.6,1.6,1.57,1.8,2.1,2.15,1.77,4:07p,9.0,5.0,1.97,1.95
-2018/04/08/nynmlb-wasmlb-1,New York Mets,2018-04-08,Washington Nationals,2.7,2.55,1.56,1.59,1.8,2.0,2.15,1.83,8:08p,8.0,4.5,1.94,2.0
+2018/04/10/tbamlb-chamlb-1,Tampa Bay Rays,2018-04-10,Chicago White Sox,1.91,1.79,2.0,2.06,2.44,2.15,1.61,1.74,2:10p,8.5,4.5,1.95,1.94
+2018/04/10/pitmlb-chnmlb-1,Pittsburgh Pirates,2018-04-10,Chicago Cubs,2.3,2.25,1.69,1.69,1.57,1.87,2.5,1.95,2:20p,9.0,5.0,1.89,1.91
+2018/04/10/detmlb-clemlb-1,Detroit Tigers,2018-04-10,Cleveland Indians,2.89,2.6,1.47,1.54,1.87,2.09,1.95,1.78,6:10p,8.5,4.5,2.0,1.83
+2018/04/10/tormlb-balmlb-1,Toronto Blue Jays,2018-04-10,Baltimore Orioles,1.74,1.71,2.22,2.2,2.2,1.91,1.71,1.91,7:05p,8.5,4.5,1.83,1.8
+2018/04/10/cinmlb-phimlb-1,Cincinnati Reds,2018-04-10,Philadelphia Phillies,2.75,2.7,1.51,1.49,1.8,2.2,2.05,1.71,7:05p,7.5,4.0,1.87,1.83
+2018/04/10/atlmlb-wasmlb-1,Atlanta Braves,2018-04-10,Washington Nationals,3.13,3.15,1.42,1.38,1.91,2.35,1.91,1.62,7:05p,7.0,4.0,1.83,2.1
+2018/04/10/nynmlb-miamlb-1,New York Mets,2018-04-10,Miami Marlins,1.52,1.49,2.74,2.7,1.87,1.73,1.95,2.18,7:10p,8.0,4.0,2.05,1.95
+2018/04/10/nyamlb-bosmlb-1,New York Yankees,2018-04-10,Boston Red Sox,2.19,2.2,1.76,1.71,1.54,1.85,2.6,1.97,7:10p,7.0,3.5,2.1,1.91
+2018/04/10/anamlb-texmlb-1,Los Angeles Angels,2018-04-10,Texas Rangers,1.7,1.69,2.29,2.25,2.05,1.86,1.8,1.96,8:05p,10.0,5.5,1.91,1.8
+2018/04/10/houmlb-minmlb-1,Houston Astros,2018-04-10,Minnesota Twins,1.63,1.62,2.42,2.35,1.95,1.8,1.87,2.05,8:10p,8.0,4.5,1.81,1.91
+2018/04/10/milmlb-slnmlb-1,Milwaukee Brewers,2018-04-10,St. Louis Cardinals,2.47,2.5,1.61,1.57,1.67,2.05,2.3,1.8,8:15p,7.5,4.0,1.82,2.05
+2018/04/10/seamlb-kcamlb-1,Seattle Mariners,2018-04-10,Kansas City Royals,1.95,1.91,1.95,1.91,2.51,2.3,1.57,1.67,8:15p,8.5,4.5,1.91,1.83
+2018/04/10/sdnmlb-colmlb-1,San Diego Padres,2018-04-10,Colorado Rockies,2.37,2.35,1.66,1.62,1.71,1.95,2.2,1.87,8:40p,10.5,6.0,1.91,2.1
+2018/04/10/oakmlb-lanmlb-1,Oakland Athletics,2018-04-10,Los Angeles Dodgers,2.09,1.95,1.84,1.87,1.51,1.71,2.66,2.2,10:10p,8.5,4.5,1.95,1.91
+2018/04/10/arimlb-sfnmlb-1,Arizona Diamondbacks,2018-04-10,San Francisco Giants,1.91,1.8,2.0,2.05,2.48,2.15,1.59,1.74,10:15p,7.5,4.0,1.95,1.91
