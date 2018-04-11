@@ -3,33 +3,11 @@ from scrapers.scraper_utils import team_codes
 from storage.Game import Game
 from simulation.MonteCarlo import MonteCarlo
 from converters import winpct_to_ml, over_total_pct, d_to_a, ml_to_winpct
-from scrapers import update
+#from scrapers.update import update_all
+import gsheets_upload
 import pandas as pd
 import sys
 import os
-
-
-import httplib2
-
-from apiclient import discovery
-from oauth2client import client
-from oauth2client import tools
-from oauth2client.file import Storage
-
-try:
-    import argparse
-    flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
-except ImportError:
-    flags = None
-
-def upload_to_gsheets(data):
-    lineups = pd.read_csv(os.path.join('data','lineups','today.csv'))
-    print(lineups)
-    spreadsheet = ''
-    # or spreadsheet file id
-    # spreadsheet = '1cIOgi90...'
-
-    wks_name = 'New Sheet'
 
 def calc_averages():
     avgs_dict = dict()
@@ -106,8 +84,6 @@ def main():
     lineups = pd.read_csv(os.path.join('data','lineups','today.csv'))
     game_outputs = []
     for index, game in games.iterrows():
-        away_output = dict(team=game['away'])
-        home_output = dict(team=game['home'])
         game_obj = Game(game['date'],game['time'],game['away'],game['home'])
         away_lineup = lineups.loc[(lineups['key'] == game['key']) & \
                                   (game['away'] == lineups['name'])]
@@ -116,6 +92,10 @@ def main():
         if away_lineup.empty or home_lineup.empty:
             continue
 
+        away_output = dict(team=game['away'],
+                           lineup=away_lineup.iloc[0]['lineup_status'])
+        home_output = dict(team=game['home'],
+                           lineup=home_lineup.iloc[0]['lineup_status'])
         away_lineup_stats = get_batting_stats(away_lineup)
         home_lineup_stats = get_batting_stats(home_lineup)
         away_pitching = get_pitching_stats(away_lineup)
@@ -130,10 +110,11 @@ def main():
 
         print("Vegas away ML:",round(d_to_a(game['ml_away']),2),
               "|| Vegas home ML:",round(d_to_a(game['ml_home']),2))
-        away_output['ml'], home_output['ml'] = game['ml_away'], game['ml_home']
+        away_output['ml'] = round(d_to_a(game['ml_away']),0)
+        home_output['ml'] = round(d_to_a(game['ml_home']),0)
 
-        away_output['ml_proj'] = winpct_to_ml(mcGame.away_win_prob - .04)
-        home_output['ml_proj'] = winpct_to_ml(mcGame.home_win_prob + .04)
+        away_output['ml_proj'] = round(winpct_to_ml(mcGame.away_win_prob-.04),0)
+        home_output['ml_proj'] = round(winpct_to_ml(mcGame.home_win_prob+.04),0)
         print('Projected away win pct:',
               round((mcGame.away_win_prob - .04) * 100.0, 2),
               'Implied line:', away_output['ml_proj'])
@@ -141,16 +122,18 @@ def main():
               round((mcGame.home_win_prob + .04) * 100.0, 2),
               'Implied line:', home_output['ml_proj'])
 
-        away_output['ml_value'] = 100.0 * (mcGame.away_win_prob - .04 - \
-                                   ml_to_winpct(d_to_a(game['ml_away'])))
-        home_output['ml_value'] = 100.0 * (mcGame.home_win_prob + .04 - \
-                                   ml_to_winpct(d_to_a(game['ml_home'])))
+        away_output['ml_value'] = round(100.0 * (mcGame.away_win_prob - .04 - \
+                                   ml_to_winpct(d_to_a(game['ml_away']))), 2)
+        home_output['ml_value'] = round(100.0 * (mcGame.home_win_prob + .04 - \
+                                   ml_to_winpct(d_to_a(game['ml_home']))), 2)
         print('Away moneyline value:', round(away_output['ml_value'], 2), '%')
         print('Home moneyline value:', round(home_output['ml_value'], 2), '%')
 
         print("Vegas away RL:",round(d_to_a(game['rl_away']),2),
             "|| Vegas home RL:",round(d_to_a(game['rl_home']),2))
-        away_output['rl'], home_output['rl'] = game['rl_away'], game['rl_home']
+        away_output['rl'] = round(d_to_a(game['rl_away']),2)
+        home_output['rl'] = round(d_to_a(game['rl_home']),2)
+
 
         if d_to_a(game['ml_away']) < d_to_a(game['ml_home']):
             away_sign = '-'
@@ -159,9 +142,9 @@ def main():
             away_sign = '+'
             away_rl_win_pct = 1-(mcGame.home_rl_wins/mcGame.number_of_sims)-.04
 
-        away_output['rl_proj'] = winpct_to_ml(away_rl_win_pct)
-        away_output['rl_value'] = (away_rl_win_pct - \
-                            ml_to_winpct(d_to_a(game['rl_away']))) * 100
+        away_output['rl_proj'] = round(winpct_to_ml(away_rl_win_pct),0)
+        away_output['rl_value'] = round((away_rl_win_pct - \
+                            ml_to_winpct(d_to_a(game['rl_away']))) * 100, 2)
 
         if d_to_a(game['ml_away']) >= d_to_a(game['ml_home']):
             home_sign = '-'
@@ -170,9 +153,9 @@ def main():
             home_sign = '+'
             home_rl_win_pct = 1-(mcGame.away_rl_wins/mcGame.number_of_sims)+.04
 
-        home_output['rl_proj'] = winpct_to_ml(home_rl_win_pct)
-        home_output['rl_value'] = (home_rl_win_pct - \
-                            ml_to_winpct(d_to_a(game['rl_home']))) * 100
+        home_output['rl_proj'] = round(winpct_to_ml(home_rl_win_pct),0)
+        home_output['rl_value'] = round((home_rl_win_pct - \
+                            ml_to_winpct(d_to_a(game['rl_home']))) * 100, 2)
         print('Projected away '+away_sign+'1.5 win pct:', round(away_rl_win_pct * 100, 2),
               'Implied line:', round(away_output['rl_proj'], 1))
         print('Projected home '+home_sign+'1.5 win pct:', round(home_rl_win_pct * 100, 2),
@@ -185,22 +168,22 @@ def main():
         home_output['total'] = d_to_a(game['total_odds'])
 
         over_prob = over_total_pct(mcGame.comb_histo, game['total_line'])
-        away_output['total_proj'] = mcGame.avg_total
-        home_output['total_proj'] = over_prob * 100.0
+        away_output['total_proj'] = round(mcGame.avg_total, 2)
+        home_output['total_proj'] = round(over_prob * 100.0, 1)
 
-        away_output['total_value'] = (over_prob - ml_to_winpct(d_to_a(game['total_odds']))) * 100
+        away_output['total_value'] = round((over_prob - ml_to_winpct(d_to_a(game['total_odds']))) * 100, 2)
         home_output['total_value'] = '--'
-        print('Over probability:', round(away_output['total_proj'], 2),
-              'Implied line:', round(winpct_to_ml(over_prob), 1))
+        print('Over probability:', round(home_output['total_proj'], 2),
+              'Implied line:', round(winpct_to_ml(over_prob), 0))
         print('Over value:', round(away_output['total_value'], 2), '%')
 
         print("Vegas away F5 ML:",round(d_to_a(game['ml_away_f5']),2),
               "|| Vegas home F5 ML:",round(d_to_a(game['ml_home_f5']),2))
-        away_output['ml_f5'] = game['ml_away_f5']
-        home_output['ml_f5'] = game['ml_home_f5']
+        away_output['ml_f5'] = round(d_to_a(game['ml_away_f5']),0)
+        home_output['ml_f5'] = round(d_to_a(game['ml_home_f5']),0)
 
-        away_output['ml_proj_f5'] = winpct_to_ml(mcGame.f5_away_win_prob - .04)
-        home_output['ml_proj_f5'] = winpct_to_ml(mcGame.f5_home_win_prob + .04)
+        away_output['ml_proj_f5'] = round(winpct_to_ml(mcGame.f5_away_win_prob - .04), 0)
+        home_output['ml_proj_f5'] = round(winpct_to_ml(mcGame.f5_home_win_prob + .04), 0)
         print('Projected away f5 win pct:',
               round((mcGame.f5_away_win_prob - 0.04) * 100.0, 2),
               'Implied line:', round(away_output['ml_proj_f5'],1))
@@ -208,19 +191,19 @@ def main():
               round((mcGame.f5_home_win_prob + 0.04) * 100.0, 2),
               'Implied line:', round(home_output['ml_proj_f5'],1))
 
-        away_output['ml_value_f5'] = (mcGame.f5_away_win_prob - 0.04 - \
-                                ml_to_winpct(d_to_a(game['ml_away_f5']))) * 100
-        home_output['ml_value_f5'] = (mcGame.f5_home_win_prob + 0.04 - \
-                                ml_to_winpct(d_to_a(game['ml_home_f5']))) * 100
-        print('Away f5 ML value:', round(away_output['ml_value_f5'],2), '%')
-        print('Home f5 ML value:', round(home_output['ml_value_f5'],2), '%')
+        away_output['ml_value_f5'] = round((mcGame.f5_away_win_prob - 0.04 - \
+                                ml_to_winpct(d_to_a(game['ml_away_f5']))) * 100, 2)
+        home_output['ml_value_f5'] = round((mcGame.f5_home_win_prob + 0.04 - \
+                                ml_to_winpct(d_to_a(game['ml_home_f5']))) * 100, 2)
+        print('Away f5 ML value:', away_output['ml_value_f5'], '%')
+        print('Home f5 ML value:', home_output['ml_value_f5'], '%')
 
         if game['rl_away_f5'] != game['rl_away_f5']:
             continue
         print("Vegas away F5 RL:",round(d_to_a(game['rl_away_f5']),2),
               "|| Vegas home F5 RL:",round(d_to_a(game['rl_home_f5']),2))
-        away_output['rl_f5'] = game['rl_away_f5']
-        home_output['rl_f5'] = game['rl_home_f5']
+        away_output['rl_f5'] = round(d_to_a(game['rl_away_f5']),0)
+        home_output['rl_f5'] = round(d_to_a(game['rl_home_f5']),0)
 
         if d_to_a(game['ml_away_f5']) < d_to_a(game['ml_home_f5']):
             away_sign = '-'
@@ -229,9 +212,9 @@ def main():
             away_sign = '+'
             away_win_pct = 1 - mcGame.f5_home_win_no_tie_prob - 0.04
 
-        away_output['rl_proj_f5'] = winpct_to_ml(away_win_pct)
-        away_output['rl_value_f5'] = (away_win_pct - ml_to_winpct(
-                                        d_to_a(game['rl_away_f5']))) * 100
+        away_output['rl_proj_f5'] = round(winpct_to_ml(away_win_pct), 0)
+        away_output['rl_value_f5'] = round((away_win_pct - ml_to_winpct(
+                                        d_to_a(game['rl_away_f5']))) * 100, 2)
 
         if d_to_a(game['ml_away_f5']) >= d_to_a(game['ml_home_f5']):
             home_sign = '-'
@@ -240,45 +223,45 @@ def main():
             home_sign = '+'
             home_win_pct = 1 - mcGame.f5_away_win_no_tie_prob + 0.04
 
-        home_output['rl_proj_f5'] = winpct_to_ml(home_win_pct)
-        home_output['rl_value_f5'] = (home_win_pct - ml_to_winpct(
-                                        d_to_a(game['rl_home_f5']))) * 100
+        home_output['rl_proj_f5'] = round(winpct_to_ml(home_win_pct), 0)
+        home_output['rl_value_f5'] = round((home_win_pct - ml_to_winpct(
+                                        d_to_a(game['rl_home_f5']))) * 100, 2)
         print('Projected away f5 '+away_sign+'0.5 win pct:',
               round(away_win_pct * 100.0, 2),
-              'Implied line:', round(away_output['rl_proj_f5'], 1))
+              'Implied line:', away_output['rl_proj_f5'])
         print('Projected home f5 '+home_sign+'0.5 win pct:',
               round(home_win_pct * 100.0, 2),
-              'Implied line:', round(home_output['rl_proj_f5'], 1))
-        print('Away f5 RL value:', round(away_output['rl_value_f5'], 2), '%')
-        print('Home f5 RL value:', round(home_output['rl_value_f5'], 2), '%')
+              'Implied line:', home_output['rl_proj_f5'])
+        print('Away f5 RL value:', away_output['rl_value_f5'], '%')
+        print('Home f5 RL value:', home_output['rl_value_f5'], '%')
 
         print('Vegas F5 total/line:',
               game['total_line_f5'], d_to_a(game['total_odds_f5']))
         away_output['total_f5'] = game['total_line_f5']
-        home_output['total_f5'] = d_to_a(game['total_odds_f5'])
+        home_output['total_f5'] = round(d_to_a(game['total_odds_f5']),0)
 
         f5_over_prob = over_total_pct(mcGame.f5_comb_histo,game['total_line_f5'])
-        away_output['total_proj_f5'] = mcGame.avg_total
-        home_output['total_proj_f5'] = f5_over_prob * 100.0
+        away_output['total_proj_f5'] = round(mcGame.avg_total,2)
+        home_output['total_proj_f5'] = round(f5_over_prob * 100.0,2)
 
-        away_output['total_value_f5'] = (f5_over_prob - \
-                            ml_to_winpct(d_to_a(game['total_odds_f5']))) * 100
+        away_output['total_value_f5'] = round((f5_over_prob - \
+                            ml_to_winpct(d_to_a(game['total_odds_f5']))) * 100, 2)
         home_output['total_value'] = '--'
         print('F5 over probability:', round(f5_over_prob * 100.0, 2),
               'Implied line:', round(winpct_to_ml(f5_over_prob), 1))
-        print('F5 over value:', round(away_output['total_value_f5'], 2), '%')
+        print('F5 over value:', away_output['total_value_f5'], '%')
 
-        away_output['sc_in_first']= mcGame.scores_in_first/mcGame.number_of_sims
-        home_output['sc_in_first']= winpct_to_ml(away_output['sc_in_first'])
+        away_output['sc_in_first']= round(mcGame.scores_in_first/mcGame.number_of_sims*100, 1)
+        home_output['sc_in_first']= round(winpct_to_ml(away_output['sc_in_first']),0)
 
-        print('Score in first pct:', round(away_output['sc_in_first']*100, 2),
+        print('Score in first pct:', away_output['sc_in_first'],
               'Implied line:', home_output['sc_in_first'])
 
         print('\n')
-        # print(away_output)
-        # print(home_output)
+        game_outputs.append((game['time'], away_output, home_output))
+    gsheets_upload.update_spreadsheet(game_outputs)
 
 
 if __name__ == '__main__':
-    update.update_all()
+    #update_all()
     main()
