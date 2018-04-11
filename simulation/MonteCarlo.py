@@ -39,12 +39,13 @@ class MonteCarlo(object):
     f5_tie_prob = 0.0
     f5_avg_total = 0.0
 
-    home_rl_wins = 0
-    away_rl_wins = 0
+    home_rl_fav_wins = 0
+    away_rl_fav_wins = 0
+    home_rl_dog_wins = 0
+    away_rl_dog_wins = 0
 
     scored_in_first = False
     scores_in_first = 0
-
 
     home_histo = []
     away_histo = []
@@ -119,9 +120,13 @@ class MonteCarlo(object):
                 self.away_wins = self.away_wins + 1
 
             if self.scoreboard.get_home_runs() > self.scoreboard.get_away_runs() + 1:
-                self.home_rl_wins = self.home_rl_wins + 1
+                self.home_rl_fav_wins = self.home_rl_fav_wins + 1
+            else:
+                self.away_rl_dog_wins = self.away_rl_dog_wins + 1
             if self.scoreboard.get_home_runs() + 1 < self.scoreboard.get_away_runs():
-                self.away_rl_wins = self.away_rl_wins + 1
+                self.away_rl_fav_wins = self.away_rl_fav_wins + 1
+            else:
+                self.home_rl_dog_wins = self.home_rl_dog_wins + 1
 
         self.home_win_prob = self.home_wins / float(self.number_of_sims)
         self.away_win_prob = self.away_wins / float(self.number_of_sims)

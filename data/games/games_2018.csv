@@ -146,3 +146,18 @@ key,away_id,away_name,away_score,date,gamePk,home_id,home_name,home_score
 2018/04/09/seamlb-kcamlb-1,136,Seattle Mariners,0,2018-04-09,529557,118,Kansas City Royals,10
 2018/04/09/sdnmlb-colmlb-1,135,San Diego Padres,7,2018-04-09,529556,115,Colorado Rockies,6
 2018/04/09/arimlb-sfnmlb-1,109,Arizona Diamondbacks,2,2018-04-09,529547,137,San Francisco Giants,1
+2018/04/10/tbamlb-chamlb-1,139,Tampa Bay Rays,6,2018-04-10,529572,145,Chicago White Sox,5
+2018/04/10/pitmlb-chnmlb-1,134,Pittsburgh Pirates,8,2018-04-10,529555,112,Chicago Cubs,5
+2018/04/10/detmlb-clemlb-1,116,Detroit Tigers,1,2018-04-10,529563,114,Cleveland Indians,2
+2018/04/10/atlmlb-wasmlb-1,144,Atlanta Braves,1,2018-04-10,529561,120,Washington Nationals,4
+2018/04/10/cinmlb-phimlb-1,113,Cincinnati Reds,1,2018-04-10,529562,143,Philadelphia Phillies,6
+2018/04/10/tormlb-balmlb-1,141,Toronto Blue Jays,2,2018-04-10,529573,110,Baltimore Orioles,1
+2018/04/10/nynmlb-miamlb-1,121,New York Mets,8,2018-04-10,529567,146,Miami Marlins,6
+2018/04/10/nyamlb-bosmlb-1,147,New York Yankees,1,2018-04-10,529568,111,Boston Red Sox,14
+2018/04/10/anamlb-texmlb-1,108,Los Angeles Angels,11,2018-04-10,529565,140,Texas Rangers,1
+2018/04/10/houmlb-minmlb-1,117,Houston Astros,1,2018-04-10,529564,142,Minnesota Twins,4
+2018/04/10/milmlb-slnmlb-1,158,Milwaukee Brewers,3,2018-04-10,529566,138,St. Louis Cardinals,5
+2018/04/10/seamlb-kcamlb-1,136,Seattle Mariners,8,2018-04-10,529571,118,Kansas City Royals,3
+2018/04/10/sdnmlb-colmlb-1,135,San Diego Padres,5,2018-04-10,529570,115,Colorado Rockies,2
+2018/04/10/oakmlb-lanmlb-1,133,Oakland Athletics,0,2018-04-10,529569,119,Los Angeles Dodgers,4
+2018/04/10/arimlb-sfnmlb-1,109,Arizona Diamondbacks,4,2018-04-10,529560,137,San Francisco Giants,5
