@@ -41,5 +41,3 @@ def update_all():
     update_games()
     update_lineups()
     update_lines()
-
-update_all()

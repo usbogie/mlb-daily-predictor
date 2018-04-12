@@ -161,3 +161,18 @@ key,away_id,away_name,away_score,date,gamePk,home_id,home_name,home_score
 2018/04/10/sdnmlb-colmlb-1,135,San Diego Padres,5,2018-04-10,529570,115,Colorado Rockies,2
 2018/04/10/oakmlb-lanmlb-1,133,Oakland Athletics,0,2018-04-10,529569,119,Los Angeles Dodgers,4
 2018/04/10/arimlb-sfnmlb-1,109,Arizona Diamondbacks,4,2018-04-10,529560,137,San Francisco Giants,5
+2018/04/11/atlmlb-wasmlb-1,144,Atlanta Braves,5,2018-04-11,529575,120,Washington Nationals,3
+2018/04/11/houmlb-minmlb-1,117,Houston Astros,8,2018-04-11,529578,142,Minnesota Twins,9
+2018/04/11/milmlb-slnmlb-1,158,Milwaukee Brewers,3,2018-04-11,529580,138,St. Louis Cardinals,2
+2018/04/11/tbamlb-chamlb-1,139,Tampa Bay Rays,1,2018-04-11,529587,145,Chicago White Sox,2
+2018/04/11/seamlb-kcamlb-1,136,Seattle Mariners,4,2018-04-11,529586,118,Kansas City Royals,2
+2018/04/11/sdnmlb-colmlb-1,135,San Diego Padres,4,2018-04-11,529585,115,Colorado Rockies,6
+2018/04/11/arimlb-sfnmlb-1,109,Arizona Diamondbacks,7,2018-04-11,529574,137,San Francisco Giants,3
+2018/04/11/detmlb-clemlb-1,116,Detroit Tigers,1,2018-04-11,529577,114,Cleveland Indians,5
+2018/04/11/cinmlb-phimlb-1,113,Cincinnati Reds,3,2018-04-11,529576,143,Philadelphia Phillies,4
+2018/04/11/tormlb-balmlb-1,141,Toronto Blue Jays,3,2018-04-11,529588,110,Baltimore Orioles,5
+2018/04/11/nynmlb-miamlb-1,121,New York Mets,4,2018-04-11,529581,146,Miami Marlins,1
+2018/04/11/nyamlb-bosmlb-1,147,New York Yankees,10,2018-04-11,529582,111,Boston Red Sox,7
+2018/04/11/anamlb-texmlb-1,108,Los Angeles Angels,7,2018-04-11,529579,140,Texas Rangers,2
+2018/04/11/pitmlb-chnmlb-1,134,Pittsburgh Pirates,5,2018-04-11,529584,112,Chicago Cubs,13
+2018/04/11/oakmlb-lanmlb-1,133,Oakland Athletics,16,2018-04-11,529583,119,Los Angeles Dodgers,6

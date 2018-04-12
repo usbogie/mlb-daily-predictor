@@ -15,6 +15,7 @@ class MonteCarlo(object):
     home_pitchers = []
     league_avgs = {}
     game_completed = None
+    park_factors = {}
 
     home_batter = 0
     away_batter = 0
@@ -53,13 +54,14 @@ class MonteCarlo(object):
     f5_comb_histo = []
     number_of_sims = 10000
 
-    def __init__(self, game, away_lineup, home_lineup, away_pitchers, home_pitchers, league_avgs):
+    def __init__(self, game, away_lineup, home_lineup, away_pitchers, home_pitchers, league_avgs, park_factors):
         self.game = game
         self.away_lineup = away_lineup
         self.home_lineup = home_lineup
         self.away_pitchers = away_pitchers
         self.home_pitchers = home_pitchers
         self.league_avgs = league_avgs
+        self.park_factors = park_factors
 
         self.home_histo = [0]*50
         self.away_histo = [0]*50
@@ -279,8 +281,14 @@ class MonteCarlo(object):
 
     def get_outcome_distribution(self, batter, pitcher):
         #print(batter['lastname'], 'vs', pitcher['lastname'])
-        outcomes = ["K","BB","HBP","1B","2B","3B","HR"]
-        bat_outcomes = {outcome: batter[outcome]/batter["PA"] for outcome in outcomes}
+        park_factors = self.park_factors[0]
+        #print(park_factors)
+        outcomes_w_factor = ["BB","1B","2B","3B","HR"]
+        outcomes_wo_factor = ["K","HBP"]
+        outcomes = outcomes_w_factor +outcomes_wo_factor
+        bat_outcomes_w_factor = {outcome: batter[outcome]*(park_factors[outcome]/100)/batter["PA"] for outcome in outcomes_w_factor}
+        bat_outcomes_wo_factor = {outcome: batter[outcome]/batter["PA"] for outcome in outcomes_wo_factor}
+        bat_outcomes = {**bat_outcomes_w_factor,**bat_outcomes_wo_factor}
         bat_outcomes["OutNonK"] = 1-sum(bat_outcomes.values())
         p_outcomes = ["K","BB","HBP","1b","2b","3b","HR"]
         pitch_outcomes = {outcome: pitcher[outcome]/pitcher["TBF"] for outcome in p_outcomes}

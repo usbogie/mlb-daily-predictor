@@ -82,6 +82,7 @@ def main():
     league_avgs = calc_averages()
     games = pd.read_csv(os.path.join('data','lines','today.csv'))
     lineups = pd.read_csv(os.path.join('data','lineups','today.csv'))
+    park_factors = pd.read_csv(os.path.join('data','park_factors','park_factors.csv'))
     game_outputs = []
     for index, game in games.iterrows():
         game_obj = Game(game['date'],game['time'],game['away'],game['home'])
@@ -100,12 +101,13 @@ def main():
         home_lineup_stats = get_batting_stats(home_lineup)
         away_pitching = get_pitching_stats(away_lineup)
         home_pitching = get_pitching_stats(home_lineup)
+        pf = park_factors.loc[park_factors["Team"]==game["home"]].to_dict(orient='records')
 
         print("Simulating game:",today,game['time'],game['away'],game['home'])
         print("Away lineup is", away_lineup.iloc[0]['lineup_status'],
               "|| Home lineup is", home_lineup.iloc[0]['lineup_status'])
         mcGame = MonteCarlo(game_obj,away_lineup_stats,home_lineup_stats,
-                            away_pitching,home_pitching,league_avgs)
+                            away_pitching,home_pitching,league_avgs, pf)
         mcGame.sim_games()
 
         print("Vegas away ML:",round(d_to_a(game['ml_away']),0),
@@ -182,18 +184,18 @@ def main():
         away_output['ml_f5'] = round(d_to_a(game['ml_away_f5']),0)
         home_output['ml_f5'] = round(d_to_a(game['ml_home_f5']),0)
 
-        away_output['ml_proj_f5'] = round(winpct_to_ml(1-(mcGame.f5_home_win_prob * 1.025)), 0)
-        home_output['ml_proj_f5'] = round(winpct_to_ml(mcGame.f5_home_win_prob * 1.025), 0)
+        away_output['ml_proj_f5'] = round(winpct_to_ml(1-(mcGame.f5_home_win_prob * 1.04)), 0)
+        home_output['ml_proj_f5'] = round(winpct_to_ml(mcGame.f5_home_win_prob * 1.04), 0)
         print('Projected away f5 win pct:',
-              round((1 - mcGame.f5_home_win_prob * 1.025) * 100.0, 2),
+              round((1 - mcGame.f5_home_win_prob * 1.04) * 100.0, 2),
               'Implied line:', round(away_output['ml_proj_f5'],1))
         print('Projected home f5 win pct:',
-              round(mcGame.f5_home_win_prob * 1.025 * 100.0, 2),
+              round(mcGame.f5_home_win_prob * 1.04 * 100.0, 2),
               'Implied line:', round(home_output['ml_proj_f5'],1))
 
-        away_output['ml_value_f5'] = round((1 - (mcGame.f5_home_win_prob * 1.025) - \
+        away_output['ml_value_f5'] = round((1 - (mcGame.f5_home_win_prob * 1.04) - \
                                 ml_to_winpct(d_to_a(game['ml_away_f5']))) * 100, 2)
-        home_output['ml_value_f5'] = round(((mcGame.f5_home_win_prob * 1.025) - \
+        home_output['ml_value_f5'] = round(((mcGame.f5_home_win_prob * 1.04) - \
                                 ml_to_winpct(d_to_a(game['ml_home_f5']))) * 100, 2)
         print('Away f5 ML value:', away_output['ml_value_f5'], '%')
         print('Home f5 ML value:', home_output['ml_value_f5'], '%')
@@ -207,10 +209,10 @@ def main():
 
         if d_to_a(game['ml_away_f5']) < d_to_a(game['ml_home_f5']):
             away_sign = '-'
-            away_win_pct = 1 - (mcGame.f5_home_win_no_tie_prob + mcGame.f5_tie_prob) * 1.025
+            away_win_pct = 1 - (mcGame.f5_home_win_no_tie_prob + mcGame.f5_tie_prob) * 1.04
         else:
             away_sign = '+'
-            away_win_pct = 1 - mcGame.f5_home_win_no_tie_prob * 1.025
+            away_win_pct = 1 - mcGame.f5_home_win_no_tie_prob * 1.04
 
         away_output['rl_proj_f5'] = round(winpct_to_ml(away_win_pct), 0)
         away_output['rl_value_f5'] = round((away_win_pct - ml_to_winpct(
@@ -218,10 +220,10 @@ def main():
 
         if d_to_a(game['ml_away_f5']) >= d_to_a(game['ml_home_f5']):
             home_sign = '-'
-            home_win_pct = mcGame.f5_home_win_no_tie_prob * 1.025
+            home_win_pct = mcGame.f5_home_win_no_tie_prob * 1.04
         else:
             home_sign = '+'
-            home_win_pct = (mcGame.f5_home_win_no_tie_prob + mcGame.f5_tie_prob) * 1.025
+            home_win_pct = (mcGame.f5_home_win_no_tie_prob + mcGame.f5_tie_prob) * 1.04
 
         home_output['rl_proj_f5'] = round(winpct_to_ml(home_win_pct), 0)
         home_output['rl_value_f5'] = round((home_win_pct - ml_to_winpct(
@@ -263,5 +265,5 @@ def main():
 
 
 if __name__ == '__main__':
-    #update_all()
+    update_all()
     main()

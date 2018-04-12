@@ -1,16 +1,9 @@
 key,away,date,home,ml_away,ml_away_f5,ml_home,ml_home_f5,rl_away,rl_away_f5,rl_home,rl_home_f5,time,total_line,total_line_f5,total_odds,total_odds_f5
-2018/04/11/atlmlb-wasmlb-1,Atlanta Braves,2018-04-11,Washington Nationals,2.12,2.0,1.81,1.83,1.5,1.75,2.69,2.14,1:05p,9.0,5.0,1.95,1.8
-2018/04/11/houmlb-minmlb-1,Houston Astros,2018-04-11,Minnesota Twins,1.62,1.61,2.44,2.4,1.95,1.87,1.87,1.95,1:10p,8.0,4.5,1.95,2.05
-2018/04/11/milmlb-slnmlb-1,Milwaukee Brewers,2018-04-11,St. Louis Cardinals,2.27,2.3,1.71,1.67,1.61,1.87,2.44,1.95,1:15p,9.5,5.5,1.93,1.95
-2018/04/11/tbamlb-chamlb-1,Tampa Bay Rays,2018-04-11,Chicago White Sox,1.8,1.71,2.14,2.2,2.3,1.95,1.67,1.87,2:10p,9.0,4.5,2.01,1.77
-2018/04/11/seamlb-kcamlb-1,Seattle Mariners,2018-04-11,Kansas City Royals,1.71,1.69,2.26,2.25,2.15,1.95,1.74,1.87,2:15p,8.5,4.5,1.83,1.91
-2018/04/11/sdnmlb-colmlb-1,San Diego Padres,2018-04-11,Colorado Rockies,2.44,2.35,1.62,1.62,1.71,1.99,2.2,1.84,3:10p,11.5,6.5,1.87,2.0
-2018/04/11/cinmlb-phimlb-1,Cincinnati Reds,2018-04-11,Philadelphia Phillies,2.01,1.95,1.9,1.87,1.45,1.69,2.84,2.25,7:05p,7.5,4.0,1.87,1.9
-2018/04/11/tormlb-balmlb-1,Toronto Blue Jays,2018-04-11,Baltimore Orioles,2.2,2.15,1.75,1.74,1.56,1.8,2.55,2.05,7:05p,8.5,4.5,1.98,1.84
-2018/04/11/nyamlb-bosmlb-1,New York Yankees,2018-04-11,Boston Red Sox,1.92,1.87,1.99,1.95,2.44,2.25,1.61,1.69,7:10p,8.0,4.5,1.84,1.9
-2018/04/11/nynmlb-miamlb-1,New York Mets,2018-04-11,Miami Marlins,1.74,1.74,2.23,2.15,2.21,2.05,1.71,1.8,7:10p,8.5,4.5,1.91,1.88
-2018/04/11/anamlb-texmlb-1,Los Angeles Angels,2018-04-11,Texas Rangers,1.87,1.83,2.05,2.01,2.35,2.17,1.65,1.73,8:05p,11.0,6.5,1.9,1.91
-2018/04/11/pitmlb-chnmlb-1,Pittsburgh Pirates,2018-04-11,Chicago Cubs,2.62,2.55,1.56,1.56,1.71,2.03,2.2,1.81,8:05p,8.5,4.5,1.91,1.88
-2018/04/11/oakmlb-lanmlb-1,Oakland Athletics,2018-04-11,Los Angeles Dodgers,2.57,2.6,1.57,1.53,1.71,2.15,2.2,1.74,10:10p,7.5,4.0,1.91,1.87
-2018/04/11/arimlb-sfnmlb-1,Arizona Diamondbacks,2018-04-11,San Francisco Giants,1.9,1.83,2.01,2.0,2.48,2.2,1.59,1.71,3:45p,7.5,4.0,1.99,2.02
-2018/04/11/detmlb-clemlb-1,Detroit Tigers,2018-04-11,Cleveland Indians,3.64,3.5,1.33,1.33,2.14,2.53,1.75,1.56,6:10p,8.0,4.5,1.84,1.95
+2018/04/12/detmlb-clemlb-1,Detroit Tigers,2018-04-12,Cleveland Indians,2.7,2.7,1.53,1.49,1.84,2.2,1.99,1.71,6:10p,8.5,4.5,1.99,1.99
+2018/04/12/slnmlb-cinmlb-1,St. Louis Cardinals,2018-04-12,Cincinnati Reds,1.7,1.67,2.29,2.3,2.0,1.95,1.85,1.87,6:40p,9.0,5.0,1.83,1.84
+2018/04/12/colmlb-wasmlb-1,Colorado Rockies,2018-04-12,Washington Nationals,2.7,2.7,1.53,1.5,1.83,2.2,2.0,1.71,7:05p,9.0,5.0,1.87,1.87
+2018/04/12/nyamlb-bosmlb-1,New York Yankees,2018-04-12,Boston Red Sox,1.92,1.91,1.99,1.91,2.44,1.67,1.61,2.3,7:10p,9.0,5.0,1.8,1.9
+2018/04/12/chamlb-minmlb-1,Chicago White Sox,2018-04-12,Minnesota Twins,2.82,2.75,1.49,1.47,1.9,2.3,1.92,1.67,8:10p,9.0,5.0,1.99,2.0
+2018/04/12/anamlb-kcamlb-1,Los Angeles Angels,2018-04-12,Kansas City Royals,1.75,1.74,2.21,2.15,2.2,2.05,1.71,1.8,8:15p,9.5,5.0,1.95,1.84
+2018/04/12/sfnmlb-sdnmlb-1,San Francisco Giants,2018-04-12,San Diego Padres,1.68,1.69,2.33,2.25,2.13,1.95,1.75,1.87,10:10p,8.0,4.5,1.87,1.98
+2018/04/12/pitmlb-chnmlb-1,Pittsburgh Pirates,2018-04-12,Chicago Cubs,2.62,2.62,1.56,1.53,1.8,2.1,2.05,1.77,2:20p,8.5,4.5,1.91,1.87
