@@ -1,9 +1,9 @@
-key,away,date,home,ml_away,ml_away_f5,ml_home,ml_home_f5,rl_away,rl_away_f5,rl_home,rl_home_f5,time,total_line,total_line_f5,total_odds,total_odds_f5
-2018/04/12/detmlb-clemlb-1,Detroit Tigers,2018-04-12,Cleveland Indians,2.7,2.7,1.53,1.49,1.84,2.2,1.99,1.71,6:10p,8.5,4.5,1.99,1.99
-2018/04/12/slnmlb-cinmlb-1,St. Louis Cardinals,2018-04-12,Cincinnati Reds,1.7,1.67,2.29,2.3,2.0,1.95,1.85,1.87,6:40p,9.0,5.0,1.83,1.84
-2018/04/12/colmlb-wasmlb-1,Colorado Rockies,2018-04-12,Washington Nationals,2.7,2.7,1.53,1.5,1.83,2.2,2.0,1.71,7:05p,9.0,5.0,1.87,1.87
-2018/04/12/nyamlb-bosmlb-1,New York Yankees,2018-04-12,Boston Red Sox,1.92,1.91,1.99,1.91,2.44,1.67,1.61,2.3,7:10p,9.0,5.0,1.8,1.9
-2018/04/12/chamlb-minmlb-1,Chicago White Sox,2018-04-12,Minnesota Twins,2.82,2.75,1.49,1.47,1.9,2.3,1.92,1.67,8:10p,9.0,5.0,1.99,2.0
-2018/04/12/anamlb-kcamlb-1,Los Angeles Angels,2018-04-12,Kansas City Royals,1.75,1.74,2.21,2.15,2.2,2.05,1.71,1.8,8:15p,9.5,5.0,1.95,1.84
-2018/04/12/sfnmlb-sdnmlb-1,San Francisco Giants,2018-04-12,San Diego Padres,1.68,1.69,2.33,2.25,2.13,1.95,1.75,1.87,10:10p,8.0,4.5,1.87,1.98
-2018/04/12/pitmlb-chnmlb-1,Pittsburgh Pirates,2018-04-12,Chicago Cubs,2.62,2.62,1.56,1.53,1.8,2.1,2.05,1.77,2:20p,8.5,4.5,1.91,1.87
+key,away,date,home,ml_away,ml_away_f5,ml_home,ml_home_f5,over_odds,over_odds_f5,rl_away,rl_away_f5,rl_home,rl_home_f5,time,total_line,total_line_f5,under_odds,under_odds_f5
+2018/04/12/pitmlb-chnmlb-1,Pittsburgh Pirates,2018-04-12,Chicago Cubs,2.62,2.62,1.56,1.53,1.91,1.87,1.8,2.1,2.05,1.77,2:20p,8.5,4.5,1.91,1.95
+2018/04/12/detmlb-clemlb-1,Detroit Tigers,2018-04-12,Cleveland Indians,3.01,2.6,1.44,1.53,1.88,1.84,1.91,2.1,1.91,1.77,6:10p,8.5,4.5,1.93,1.99
+2018/04/12/slnmlb-cinmlb-1,St. Louis Cardinals,2018-04-12,Cincinnati Reds,1.66,1.62,2.36,2.35,1.95,1.88,2.05,1.91,1.8,1.91,6:40p,9.5,5.0,1.87,1.94
+2018/04/12/colmlb-wasmlb-1,Colorado Rockies,2018-04-12,Washington Nationals,2.7,2.7,1.53,1.5,1.84,1.91,1.76,2.2,2.1,1.71,7:05p,9.0,5.0,1.99,1.91
+2018/04/12/nyamlb-bosmlb-1,New York Yankees,2018-04-12,Boston Red Sox,1.88,1.8,2.04,2.05,1.83,1.85,2.4,2.2,1.62,1.71,7:10p,9.0,5.0,2.0,1.97
+2018/04/12/chamlb-minmlb-1,Chicago White Sox,2018-04-12,Minnesota Twins,3.18,3.05,1.41,1.41,1.83,1.88,1.95,2.47,1.87,1.58,8:10p,8.5,4.5,2.0,1.94
+2018/04/12/anamlb-kcamlb-1,Los Angeles Angels,2018-04-12,Kansas City Royals,1.66,1.67,2.37,2.3,1.92,1.91,2.0,1.95,1.83,1.87,8:15p,10.0,5.5,1.9,1.91
+2018/04/12/sfnmlb-sdnmlb-1,San Francisco Giants,2018-04-12,San Diego Padres,1.71,1.71,2.26,2.21,1.99,2.05,2.12,1.99,1.76,1.84,10:10p,8.5,4.5,1.84,1.8

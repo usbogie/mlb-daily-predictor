@@ -163,7 +163,8 @@ def get_totals(total_url, game_infos,day):
 		lines = grid.findAll('div', {'class': 'el-div eventLine-book'})[2].find_all('div', {'class': 'eventLine-book-value'})
 		try:
 			game_info['total_line'] = float(lines[0].text.split()[0].replace("½",".5"))
-			game_info['total_odds'] = c_to_d(lines[0].text.split()[1])
+			game_info['over_odds'] = c_to_d(lines[0].text.split()[1])
+			game_info['under_odds'] = c_to_d(lines[1].text.split()[1])
 		except:
 			pass
 
@@ -183,7 +184,8 @@ def get_f5_totals(total_url, game_infos,day):
 		lines = grid.findAll('div', {'class': 'el-div eventLine-book'})[2].find_all('div', {'class': 'eventLine-book-value'})
 		try:
 			game_info['total_line_f5'] = float(lines[0].text.split()[0].replace("½",".5"))
-			game_info['total_odds_f5'] = c_to_d(lines[0].text.split()[1])
+			game_info['over_odds_f5'] = c_to_d(lines[0].text.split()[1])
+			game_info['under_odds_f5'] = c_to_d(lines[1].text.split()[1])
 		except:
 			pass
 
