@@ -23,32 +23,32 @@ class State(object):
                 else:
                     return False
             if base == '2':
-                if (self.outs == 0 and rand < 0.3) or \
-                    (self.outs == 1 and rand < 0.5) or \
+                if (self.outs == 0 and rand < 0.5) or \
+                    (self.outs == 1 and rand < 0.65) or \
                     (self.outs == 2 and rand < 0.75):
                     return True
                 else:
                     return False
         elif event == '2B':
-            if (self.outs == 0 and rand < 0.15) or \
-                (self.outs == 1 and rand < 0.25) or \
-                (self.outs == 2 and rand < 0.50):
+            if (self.outs == 0 and rand < 0.40) or \
+                (self.outs == 1 and rand < 0.50) or \
+                (self.outs == 2 and rand < 0.60):
                 return True
             else:
                 return False
         elif event == 'OutNonK':
             if base == '1':
-                if self.outs < 3 and rand < 0.05:
+                if self.outs < 3 and rand < 0.25:
                     return True
                 else:
                     return False
             if base == '2':
-                if self.outs < 3 and rand < 0.2:
+                if self.outs < 3 and rand < 0.50:
                     return True
                 else:
                     return False
             if base == '3':
-                if self.outs < 3 and rand < 0.5:
+                if self.outs < 3 and rand < 0.75:
                     return True
                 else:
                     return False
