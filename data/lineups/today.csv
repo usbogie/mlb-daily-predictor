@@ -1,17 +1,25 @@
 key,1,10,2,3,4,5,6,7,8,9,date,lineup_status,name
-2018/04/12/chamlb-minmlb-1,Yoan Moncada,Lucas Giolito,Avisail Garcia,Jose Abreu,Matt Davidson,Nick Delmonico,Yolmer Sanchez,Tim Anderson,Omar Narvaez,Adam Engel,2018-04-12,Confirmed,Chicago White Sox
-2018/04/12/chamlb-minmlb-1,Brian Dozier,Jose Berrios,Joe Mauer,Miguel Sano,Eddie Rosario,Logan Morrison,Eduardo Escobar,Max Kepler,Byron Buxton,Jason Castro,2018-04-12,Confirmed,Minnesota Twins
-2018/04/12/detmlb-clemlb-1,Leonys Martin,Michael Fulmer,Jeimer Candelario,Miguel Cabrera,Nick Castellanos,Victor Martinez,John Hicks,JaCoby Jones,Jose Iglesias,Dixon Machado,2018-04-12,Confirmed,Detroit Tigers
-2018/04/12/detmlb-clemlb-1,Francisco Lindor,Trevor Bauer,Jason Kipnis,Jose Ramirez,Michael Brantley,Edwin Encarnacion,Yonder Alonso,Roberto Perez,Tyler Naquin,Bradley Zimmer,2018-04-12,Confirmed,Cleveland Indians
-2018/04/12/colmlb-wasmlb-1,DJ LeMahieu,Chad Bettis,Chris Iannetta,Nolan Arenado,Trevor Story,Ian Desmond,Carlos Gonzalez,Pat Valaika,Gerardo Parra,Chad Bettis,2018-04-12,Confirmed,Colorado Rockies
-2018/04/12/colmlb-wasmlb-1,Trea Turner,Gio Gonzalez,Anthony Rendon,Bryce Harper,Ryan Zimmerman,Matt Adams,Howie Kendrick,Matt Wieters,Gio Gonzalez,Michael Taylor,2018-04-12,Confirmed,Washington Nationals
-2018/04/12/anamlb-kcamlb-1,Ian Kinsler,Nick Tropeano,Mike Trout,Justin Upton,Albert Pujols,Kole Calhoun,Andrelton Simmons,Luis Valbuena,Shohei Ohtani,Martin Maldonado,2018-04-12,Confirmed,Los Angeles Angels
-2018/04/12/anamlb-kcamlb-1,Jon Jay,Ian Kennedy,Jorge Soler,Mike Moustakas,Lucas Duda,Whit Merrifield,Abraham Almonte,Ryan Goins,Alcides Escobar,Drew Butera,2018-04-12,Confirmed,Kansas City Royals
-2018/04/12/nyamlb-bosmlb-1,Brett Gardner,Sonny Gray,Aaron Judge,Giancarlo Stanton,Didi Gregorius,Gary Sanchez,Aaron Hicks,Neil Walker,Tyler Wade,Ronald Torreyes,2018-04-12,Confirmed,New York Yankees
-2018/04/12/nyamlb-bosmlb-1,Mookie Betts,Rick Porcello,Andrew Benintendi,Hanley Ramirez,J.D. Martinez,Rafael Devers,Eduardo Nunez,Jackie Bradley Jr.,Sandy Leon,Brock Holt,2018-04-12,Confirmed,Boston Red Sox
-2018/04/12/sfnmlb-sdnmlb-1,Joe Panik,Chris Stratton,Brandon Belt,Andrew McCutchen,Buster Posey,Evan Longoria,Brandon Crawford,Hunter Pence,Gregor Blanco,Chris Stratton,2018-04-12,Confirmed,San Francisco Giants
-2018/04/12/sfnmlb-sdnmlb-1,Franchy Cordero,Bryan Mitchell,Jose Pirela,Eric Hosmer,Christian Villanueva,Cory Spangenberg,Freddy Galvis,Carlos Asuaje,Austin Hedges,Bryan Mitchell,2018-04-12,Confirmed,San Diego Padres
-2018/04/12/pitmlb-chnmlb-1,Adam Frazier,Trevor Williams,Gregory Polanco,Starling Marte,Josh Bell,Corey Dickerson,Francisco Cervelli,Colin Moran,Jordy Mercer,Trevor Williams,2018-04-12,Confirmed,Pittsburgh Pirates
-2018/04/12/pitmlb-chnmlb-1,Ian Happ,Kyle Hendricks,Kris Bryant,Ben Zobrist,Kyle Schwarber,Addison Russell,Victor Caratini,Javier Baez,Jason Heyward,Kyle Hendricks,2018-04-12,Confirmed,Chicago Cubs
-2018/04/12/slnmlb-cinmlb-1,Dexter Fowler,Michael Wacha,Tommy Pham,Matt Carpenter,Marcell Ozuna,Jose Martinez,Yadier Molina,Paul DeJong,Kolten Wong,Michael Wacha,2018-04-12,Confirmed,St. Louis Cardinals
-2018/04/12/slnmlb-cinmlb-1,Billy Hamilton,Sal Romano,Jose Peraza,Jesse Winker,Adam Duvall,Scooter Gennett,Phillip Ervin,Tucker Barnhart,Alex Blandino,Sal Romano,2018-04-12,Confirmed,Cincinnati Reds
+2018/04/14/oakmlb-seamlb-1,Marcus Semien,Kendall Graveman,Mark Canha,Jed Lowrie,Khris Davis,Matt Chapman,Matt Olson,Jonathan Lucroy,Stephen Piscotty,Trayce Thompson,2018-04-14,Confirmed,Oakland Athletics
+2018/04/14/oakmlb-seamlb-1,Dee Gordon,Marco Gonzales,Jean Segura,Robinson Cano,Nelson Cruz,Kyle Seager,Mitch Haniger,Dan Vogelbach,Ichiro Suzuki,David Freitas,2018-04-14,Confirmed,Seattle Mariners
+2018/04/14/balmlb-bosmlb-1,Trey Mancini,Alex Cobb,Pedro Alvarez,Manny Machado,Adam Jones,Chris Davis,Tim Beckham,Chance Sisco,Danny Valencia,Anthony Santander,2018-04-14,Confirmed,Baltimore Orioles
+2018/04/14/balmlb-bosmlb-1,Mookie Betts,Hector Velazquez,Andrew Benintendi,Hanley Ramirez,J.D. Martinez,Rafael Devers,Jackie Bradley Jr.,Sandy Leon,Brock Holt,Tzu-Wei Lin,2018-04-14,Confirmed,Boston Red Sox
+2018/04/14/atlmlb-chnmlb-1,Ozzie Albies,Sean Newcomb,Dansby Swanson,Freddie Freeman,Kurt Suzuki,Nick Markakis,Lane Adams,Charlie Culberson,Peter Bourjos,Sean Newcomb,2018-04-14,Confirmed,Atlanta Braves
+2018/04/14/atlmlb-chnmlb-1,Ian Happ,Jose Quintana,Albert Almora Jr.,Kris Bryant,Willson Contreras,Ben Zobrist,Javier Baez,Addison Russell,Jason Heyward,Jose Quintana,2018-04-14,Confirmed,Chicago Cubs
+2018/04/14/arimlb-lanmlb-1,David Peralta,Taijuan Walker,Ketel Marte,Paul Goldschmidt,A.J. Pollock,Chris Owings,Nick Ahmed,Alex Avila,Deven Marrero,Taijuan Walker,2018-04-14,Confirmed,Arizona Diamondbacks
+2018/04/14/arimlb-lanmlb-1,Chris Taylor,Rich Hill,Corey Seager,Yasmani Grandal,Cody Bellinger,Yasiel Puig,Joc Pederson,Logan Forsythe,Chase Utley,Rich Hill,2018-04-14,Confirmed,Los Angeles Dodgers
+2018/04/14/colmlb-wasmlb-1,DJ LeMahieu,Jon Gray,Gerardo Parra,Charlie Blackmon,Carlos Gonzalez,Ian Desmond,Trevor Story,Ryan McMahon,Tony Wolters,Jon Gray,2018-04-14,Confirmed,Colorado Rockies
+2018/04/14/colmlb-wasmlb-1,Trea Turner,Max Scherzer,Wilmer Difo,Bryce Harper,Matt Adams,Matt Wieters,Michael Taylor,Moises Sierra,Matt Reynolds,Max Scherzer,2018-04-14,Confirmed,Washington Nationals
+2018/04/14/anamlb-kcamlb-1,Zack Cozart,Garrett Richards,Mike Trout,Justin Upton,Albert Pujols,Kole Calhoun,Andrelton Simmons,Luis Valbuena,Jefry Marte,Rene Rivera,2018-04-14,Confirmed,Los Angeles Angels
+2018/04/14/anamlb-kcamlb-1,Jon Jay,Jakob Junis,Whit Merrifield,Mike Moustakas,Lucas Duda,Jorge Soler,Paulo Orlando,Ryan Goins,Alcides Escobar,Drew Butera,2018-04-14,Confirmed,Kansas City Royals
+2018/04/14/milmlb-nynmlb-1,Lorenzo Cain,Chase Anderson,Eric Thames,Ryan Braun,Travis Shaw,Domingo Santana,Eric Sogard,Jonathan Villar,Jett Bandy,Chase Anderson,2018-04-14,Confirmed,Milwaukee Brewers
+2018/04/14/milmlb-nynmlb-1,Michael Conforto,Matt Harvey,Asdrubal Cabrera,Yoenis Cespedes,Jay Bruce,Adrian Gonzalez,Todd Frazier,Amed Rosario,Jose Lobaton,Matt Harvey,2018-04-14,Confirmed,New York Mets
+2018/04/14/phimlb-tbamlb-1,Cesar Hernandez,Jake Arrieta,Carlos Santana,Odubel Herrera,Rhys Hoskins,Nick Williams,Scott Kingery,Maikel Franco,Jorge Alfaro,J.P. Crawford,2018-04-14,Confirmed,Philadelphia Phillies
+2018/04/14/phimlb-tbamlb-1,Mallex Smith,Chris Archer,Carlos Gomez,Kevin Kiermaier,C.J. Cron,Joey Wendle,Matt Duffy,Wilson Ramos,Adeiny Hechavarria,John Field,2018-04-14,Confirmed,Tampa Bay Rays
+2018/04/14/sfnmlb-sdnmlb-1,Austin Jackson,Derek Holland,Joe Panik,Andrew McCutchen,Buster Posey,Nick Hundley,Evan Longoria,Gorkys Hernandez,Brandon Crawford,Derek Holland,2018-04-14,Confirmed,San Francisco Giants
+2018/04/14/sfnmlb-sdnmlb-1,Jose Pirela,Clayton Richard,Freddy Galvis,Hunter Renfroe,Christian Villanueva,Chase Headley,Cory Spangenberg,Matt Szczur,A.J. Ellis,Clayton Richard,2018-04-14,Confirmed,San Diego Padres
+2018/04/14/pitmlb-miamlb-1,Josh Harrison,Jameson Taillon,Gregory Polanco,Starling Marte,Josh Bell,Corey Dickerson,Francisco Cervelli,Colin Moran,Jordy Mercer,Jameson Taillon,2018-04-14,Confirmed,Pittsburgh Pirates
+2018/04/14/pitmlb-miamlb-1,Derek Dietrich,Trevor Richards,Miguel Rojas,Starlin Castro,Justin Bour,Brian Anderson,J.B. Shuck,Lewis Brinson,Bryan Holaday,Trevor Richards,2018-04-14,Confirmed,Miami Marlins
+2018/04/14/texmlb-houmlb-1,Shin-Soo Choo,Mike Minor,Jurickson Profar,Joey Gallo,Adrian Beltre,Ronald Guzman,Ryan Rua,Juan Centeno,Isiah Kiner-Falefa,Drew Robinson,2018-04-14,Confirmed,Texas Rangers
+2018/04/14/texmlb-houmlb-1,George Springer,Charlie Morton,Alex Bregman,Jose Altuve,Carlos Correa,Yulieski Gurriel,Josh Reddick,Marwin Gonzalez,Evan Gattis,Max Stassi,2018-04-14,Confirmed,Houston Astros
+2018/04/14/slnmlb-cinmlb-1,Tommy Pham,Miles Mikolas,Paul DeJong,Jose Martinez,Marcell Ozuna,Yadier Molina,Harrison Bader,Yairo Munoz,Greg Garcia,Miles Mikolas,2018-04-14,Confirmed,St. Louis Cardinals
+2018/04/14/slnmlb-cinmlb-1,Billy Hamilton,Brandon Finnegan,Jose Peraza,Joey Votto,Scooter Gennett,Adam Duvall,Tucker Barnhart,Phillip Ervin,Cliff Pennington,Brandon Finnegan,2018-04-14,Confirmed,Cincinnati Reds

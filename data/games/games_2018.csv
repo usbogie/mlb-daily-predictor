@@ -176,3 +176,27 @@ key,away_id,away_name,away_score,date,gamePk,home_id,home_name,home_score
 2018/04/11/anamlb-texmlb-1,108,Los Angeles Angels,7,2018-04-11,529579,140,Texas Rangers,2
 2018/04/11/pitmlb-chnmlb-1,134,Pittsburgh Pirates,5,2018-04-11,529584,112,Chicago Cubs,13
 2018/04/11/oakmlb-lanmlb-1,133,Oakland Athletics,16,2018-04-11,529583,119,Los Angeles Dodgers,6
+2018/04/12/pitmlb-chnmlb-1,134,Pittsburgh Pirates,6,2018-04-12,529594,112,Chicago Cubs,1
+2018/04/12/detmlb-clemlb-1,116,Detroit Tigers,3,2018-04-12,529591,114,Cleveland Indians,9
+2018/04/12/slnmlb-cinmlb-1,138,St. Louis Cardinals,13,2018-04-12,529596,113,Cincinnati Reds,4
+2018/04/12/colmlb-wasmlb-1,115,Colorado Rockies,5,2018-04-12,529590,120,Washington Nationals,1
+2018/04/12/nyamlb-bosmlb-1,147,New York Yankees,3,2018-04-12,529593,111,Boston Red Sox,6
+2018/04/12/chamlb-minmlb-1,145,Chicago White Sox,0,2018-04-12,529589,142,Minnesota Twins,4
+2018/04/12/anamlb-kcamlb-1,108,Los Angeles Angels,7,2018-04-12,529592,118,Kansas City Royals,1
+2018/04/12/sfnmlb-sdnmlb-1,137,San Francisco Giants,7,2018-04-12,529595,135,San Diego Padres,0
+2018/04/13/atlmlb-chnmlb-1,144,Atlanta Braves,4,2018-04-13,529598,112,Chicago Cubs,0
+2018/04/13/slnmlb-cinmlb-1,138,St. Louis Cardinals,5,2018-04-13,529609,113,Cincinnati Reds,3
+2018/04/13/colmlb-wasmlb-1,115,Colorado Rockies,2,2018-04-13,529601,120,Washington Nationals,1
+2018/04/13/balmlb-bosmlb-1,110,Baltimore Orioles,3,2018-04-13,529599,111,Boston Red Sox,7
+2018/04/13/milmlb-nynmlb-1,158,Milwaukee Brewers,5,2018-04-13,529603,121,New York Mets,6
+2018/04/13/nyamlb-detmlb-1,147,New York Yankees,8,2018-04-13,529604,116,Detroit Tigers,6
+2018/04/13/phimlb-tbamlb-1,143,Philadelphia Phillies,2,2018-04-13,529606,139,Tampa Bay Rays,1
+2018/04/13/pitmlb-miamlb-1,134,Pittsburgh Pirates,2,2018-04-13,529607,146,Miami Marlins,7
+2018/04/13/tormlb-clemlb-1,141,Toronto Blue Jays,8,2018-04-13,529611,114,Cleveland Indians,4
+2018/04/13/texmlb-houmlb-1,140,Texas Rangers,2,2018-04-13,529610,117,Houston Astros,3
+2018/04/13/anamlb-kcamlb-1,108,Los Angeles Angels,5,2018-04-13,529602,118,Kansas City Royals,4
+2018/04/13/arimlb-lanmlb-1,109,Arizona Diamondbacks,7,2018-04-13,529597,119,Los Angeles Dodgers,2
+2018/04/13/oakmlb-seamlb-1,133,Oakland Athletics,3,2018-04-13,529605,136,Seattle Mariners,5
+2018/04/13/sfnmlb-sdnmlb-1,137,San Francisco Giants,1,2018-04-13,529608,135,San Diego Padres,5
+2018/04/13/arimlb-lanmlb-1,109,Arizona Diamondbacks,8,2018-04-13,529597,119,Los Angeles Dodgers,7
+2018/04/13/oakmlb-seamlb-1,133,Oakland Athletics,4,2018-04-13,529605,136,Seattle Mariners,7
