@@ -283,10 +283,12 @@ class MonteCarlo(object):
         #print(batter['lastname'], 'vs', pitcher['lastname'])
         park_factors = self.park_factors[0]
         #print(park_factors)
-        outcomes_w_factor = ["BB","1B","2B","3B","HR"]
-        outcomes_wo_factor = ["K","HBP"]
+        pitcher_hand = pitcher['Throws']
+        batter_hand = batter['bats'] if batter['bats'] != 'B' else ('R' if pitcher_hand == 'L' else 'L')
+        outcomes_w_factor = ["1B","2B","3B","HR"]
+        outcomes_wo_factor = ["K","HBP","BB"]
         outcomes = outcomes_w_factor +outcomes_wo_factor
-        bat_outcomes_w_factor = {outcome: batter[outcome]*(park_factors[outcome]/100)/batter["PA"] for outcome in outcomes_w_factor}
+        bat_outcomes_w_factor = {outcome: batter[outcome]*(park_factors[outcome+batter_hand]/100)/batter["PA"] for outcome in outcomes_w_factor}
         bat_outcomes_wo_factor = {outcome: batter[outcome]/batter["PA"] for outcome in outcomes_wo_factor}
         bat_outcomes = {**bat_outcomes_w_factor,**bat_outcomes_wo_factor}
         bat_outcomes["OutNonK"] = 1-sum(bat_outcomes.values())

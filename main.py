@@ -26,7 +26,7 @@ def calc_averages():
 def get_batting_stats(lineup):
     lineup_stats = []
     avg_pitcher_stats = {'PA': 5277, '1B': 464, '2B': 79, '3B': 7, 'HR': 27,
-                         'BB': 162, 'HBP': 16, 'K': 2028}
+                         'BB': 162, 'HBP': 16, 'K': 2028, 'bats': 'B'}
     steamer_batters = pd.read_csv(os.path.join('data','steamer',
                                                'steamer_hitters_2018.csv'))
     for i in range(1,10):
@@ -82,7 +82,8 @@ def main():
     league_avgs = calc_averages()
     games = pd.read_csv(os.path.join('data','lines','today.csv'))
     lineups = pd.read_csv(os.path.join('data','lineups','today.csv'))
-    park_factors = pd.read_csv(os.path.join('data','park_factors','park_factors.csv'))
+    park_factors = pd.read_csv(os.path.join('data','park_factors',
+                                            'park_factors_handedness.csv'))
     game_outputs = []
     for index, game in games.iterrows():
         game_obj = Game(game['date'],game['time'],game['away'],game['home'])
@@ -299,9 +300,9 @@ def main():
 
         print('\n')
         game_outputs.append((game['time'], away_output, home_output))
-    gsheets_upload.update_spreadsheet(game_outputs)
+    # gsheets_upload.update_spreadsheet(game_outputs)
 
 
 if __name__ == '__main__':
-    update_all()
+    # update_all()
     main()
