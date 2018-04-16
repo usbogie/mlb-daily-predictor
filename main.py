@@ -25,32 +25,39 @@ def calc_averages():
 
 def get_batting_stats(lineup):
     lineup_stats = []
-    avg_pitcher_stats = {'PA': 5277, '1B': 464, '2B': 79, '3B': 7, 'HR': 27,
-                         'BB': 162, 'HBP': 16, 'K': 2028, 'bats': 'B'}
+    avg_pitcher_stats = {'vL': {'PA': 5277, '1B': 464, '2B': 79, '3B': 7, 'HR': 27,
+                                'BB': 162, 'HBP': 16, 'K': 2028, 'bats': 'B'},
+                         'vR': {'PA': 5277, '1B': 464, '2B': 79, '3B': 7, 'HR': 27,
+                                'BB': 162, 'HBP': 16, 'K': 2028, 'bats': 'B'}}
     steamer_batters = pd.read_csv(os.path.join('data','steamer',
-                                               'steamer_hitters_2018.csv'))
+                                               'steamer_hitters_2018_split.csv'))
     for i in range(1,10):
         batter_name = lineup.iloc[0][str(i)]
 
-        row = steamer_batters.loc[
+        rows = steamer_batters.loc[
                 (steamer_batters['firstname'] == batter_name.split(' ',1)[0]) \
                 & (steamer_batters['lastname'] == batter_name.split(' ',1)[1])
-            ].to_dict('list')
-        if len(row['mlbamid']) == 0:
+            ]
+        ids = rows['steamerid'].unique().tolist()
+        if len(ids) == 0:
             print(batter_name, "is probably a pitcher, given avg pitcher stats")
             lineup_stats.append(dict(avg_pitcher_stats))
             continue
         ans = None
-        for key, val in row.items():
-            if len(val) > 1:
-                if ans is None:
-                    print("DUPLICATE something is wrong")
-                    print(row)
-                    ans = input("Which player is actually playing? => ")
-                row[key] = val[int(ans)-1]
-            else:
-                row[key] = val[0]
-        lineup_stats.append(row)
+        if len(ids) > 1:
+            if ans is None:
+                print("DUPLICATE something is wrong")
+                print(rows[:len(rows)//3])
+                ans = input("Which player is actually playing? => ")
+            ix = int(ans)
+            rows = rows.iloc[ix-1::len(ids), :]
+            vL = rows[rows['split'] == 'vL'].squeeze().to_dict()
+            vR = rows[rows['split'] == 'vR'].squeeze().to_dict()
+            lineup_stats.append(dict(vL = vL, vR = vR))
+        else:
+            vL = rows[rows['split'] == 'vL'].squeeze().to_dict()
+            vR = rows[rows['split'] == 'vR'].squeeze().to_dict()
+            lineup_stats.append(dict(vL = vL, vR = vR))
     return lineup_stats
 
 def get_pitching_stats(lineup):
@@ -199,26 +206,27 @@ def main():
             away_output['total_value'] = "NA"
             home_output['total_value'] = "NA"
 
-        print("Vegas away F5 ML:",round(d_to_a(game['ml_away_f5']),0),
-              "|| Vegas home F5 ML:",round(d_to_a(game['ml_home_f5']),0))
-        away_output['ml_f5'] = round(d_to_a(game['ml_away_f5']),0)
-        home_output['ml_f5'] = round(d_to_a(game['ml_home_f5']),0)
+        if game['ml_away_f5'] == game['ml_away_f5']:
+            print("Vegas away F5 ML:",round(d_to_a(game['ml_away_f5']),0),
+                  "|| Vegas home F5 ML:",round(d_to_a(game['ml_home_f5']),0))
+            away_output['ml_f5'] = round(d_to_a(game['ml_away_f5']),0)
+            home_output['ml_f5'] = round(d_to_a(game['ml_home_f5']),0)
 
-        away_output['ml_proj_f5'] = round(winpct_to_ml(1-(mcGame.f5_home_win_prob * 1.08)), 0)
-        home_output['ml_proj_f5'] = round(winpct_to_ml(mcGame.f5_home_win_prob * 1.08), 0)
-        print('Projected away f5 win pct:',
-              round((1 - mcGame.f5_home_win_prob * 1.08) * 100.0, 2),
-              'Implied line:', round(away_output['ml_proj_f5'],1))
-        print('Projected home f5 win pct:',
-              round(mcGame.f5_home_win_prob * 1.08 * 100.0, 2),
-              'Implied line:', round(home_output['ml_proj_f5'],1))
+            away_output['ml_proj_f5'] = round(winpct_to_ml(1-(mcGame.f5_home_win_prob * 1.08)), 0)
+            home_output['ml_proj_f5'] = round(winpct_to_ml(mcGame.f5_home_win_prob * 1.08), 0)
+            print('Projected away f5 win pct:',
+                  round((1 - mcGame.f5_home_win_prob * 1.08) * 100.0, 2),
+                  'Implied line:', round(away_output['ml_proj_f5'],1))
+            print('Projected home f5 win pct:',
+                  round(mcGame.f5_home_win_prob * 1.08 * 100.0, 2),
+                  'Implied line:', round(home_output['ml_proj_f5'],1))
 
-        away_output['ml_value_f5'] = round((1 - (mcGame.f5_home_win_prob * 1.08) - \
-                                ml_to_winpct(d_to_a(game['ml_away_f5']))) * 100, 2)
-        home_output['ml_value_f5'] = round(((mcGame.f5_home_win_prob * 1.08) - \
-                                ml_to_winpct(d_to_a(game['ml_home_f5']))) * 100, 2)
-        print('Away f5 ML value:', away_output['ml_value_f5'], '%')
-        print('Home f5 ML value:', home_output['ml_value_f5'], '%')
+            away_output['ml_value_f5'] = round((1 - (mcGame.f5_home_win_prob * 1.08) - \
+                                    ml_to_winpct(d_to_a(game['ml_away_f5']))) * 100, 2)
+            home_output['ml_value_f5'] = round(((mcGame.f5_home_win_prob * 1.08) - \
+                                    ml_to_winpct(d_to_a(game['ml_home_f5']))) * 100, 2)
+            print('Away f5 ML value:', away_output['ml_value_f5'], '%')
+            print('Home f5 ML value:', home_output['ml_value_f5'], '%')
 
         if game['rl_away_f5'] == game['rl_away_f5']:
             print("Vegas away F5 RL:",round(d_to_a(game['rl_away_f5']),0),
@@ -300,7 +308,7 @@ def main():
 
         print('\n')
         game_outputs.append((game['time'], away_output, home_output))
-    # gsheets_upload.update_spreadsheet(game_outputs)
+    gsheets_upload.update_spreadsheet(game_outputs)
 
 
 if __name__ == '__main__':

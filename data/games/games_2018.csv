@@ -200,3 +200,15 @@ key,away_id,away_name,away_score,date,gamePk,home_id,home_name,home_score
 2018/04/13/sfnmlb-sdnmlb-1,137,San Francisco Giants,1,2018-04-13,529608,135,San Diego Padres,5
 2018/04/13/arimlb-lanmlb-1,109,Arizona Diamondbacks,8,2018-04-13,529597,119,Los Angeles Dodgers,7
 2018/04/13/oakmlb-seamlb-1,133,Oakland Athletics,4,2018-04-13,529605,136,Seattle Mariners,7
+2018/04/14/balmlb-bosmlb-1,110,Baltimore Orioles,3,2018-04-14,529614,111,Boston Red Sox,10
+2018/04/14/colmlb-wasmlb-1,115,Colorado Rockies,2,2018-04-14,529616,120,Washington Nationals,6
+2018/04/14/slnmlb-cinmlb-1,138,St. Louis Cardinals,6,2018-04-14,529624,113,Cincinnati Reds,1
+2018/04/14/atlmlb-chnmlb-1,144,Atlanta Braves,10,2018-04-14,529613,112,Chicago Cubs,14
+2018/04/14/texmlb-houmlb-1,140,Texas Rangers,6,2018-04-14,529625,117,Houston Astros,5
+2018/04/14/phimlb-tbamlb-1,143,Philadelphia Phillies,9,2018-04-14,529621,139,Tampa Bay Rays,4
+2018/04/14/milmlb-nynmlb-1,158,Milwaukee Brewers,5,2018-04-14,529618,121,New York Mets,1
+2018/04/14/pitmlb-miamlb-1,134,Pittsburgh Pirates,1,2018-04-14,529622,146,Miami Marlins,0
+2018/04/14/anamlb-kcamlb-1,108,Los Angeles Angels,5,2018-04-14,529617,118,Kansas City Royals,3
+2018/04/14/sfnmlb-sdnmlb-1,137,San Francisco Giants,4,2018-04-14,529623,135,San Diego Padres,5
+2018/04/14/arimlb-lanmlb-1,109,Arizona Diamondbacks,9,2018-04-14,529612,119,Los Angeles Dodgers,1
+2018/04/14/oakmlb-seamlb-1,133,Oakland Athletics,8,2018-04-14,529620,136,Seattle Mariners,10

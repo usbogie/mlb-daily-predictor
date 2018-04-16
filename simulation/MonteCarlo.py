@@ -280,16 +280,16 @@ class MonteCarlo(object):
         self.scoreboard.inc_runs()
 
     def get_outcome_distribution(self, batter, pitcher):
-        #print(batter['lastname'], 'vs', pitcher['lastname'])
         park_factors = self.park_factors[0]
-        #print(park_factors)
         pitcher_hand = pitcher['Throws']
-        batter_hand = batter['bats'] if batter['bats'] != 'B' else ('R' if pitcher_hand == 'L' else 'L')
+        batter_split = batter['v'+pitcher_hand]
+        batter_hand = batter_split['bats']
+        batter_hand = batter_hand if batter_hand != 'B' else ('R' if pitcher_hand == 'L' else 'L')
         outcomes_w_factor = ["1B","2B","3B","HR"]
         outcomes_wo_factor = ["K","HBP","BB"]
         outcomes = outcomes_w_factor +outcomes_wo_factor
-        bat_outcomes_w_factor = {outcome: batter[outcome]*(park_factors[outcome+batter_hand]/100)/batter["PA"] for outcome in outcomes_w_factor}
-        bat_outcomes_wo_factor = {outcome: batter[outcome]/batter["PA"] for outcome in outcomes_wo_factor}
+        bat_outcomes_w_factor = {outcome: batter_split[outcome]*(park_factors[outcome+batter_hand]/100)/batter_split["PA"] for outcome in outcomes_w_factor}
+        bat_outcomes_wo_factor = {outcome: batter_split[outcome]/batter_split["PA"] for outcome in outcomes_wo_factor}
         bat_outcomes = {**bat_outcomes_w_factor,**bat_outcomes_wo_factor}
         bat_outcomes["OutNonK"] = 1-sum(bat_outcomes.values())
         p_outcomes = ["K","BB","HBP","1b","2b","3b","HR"]
