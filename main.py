@@ -227,6 +227,14 @@ def main():
                                     ml_to_winpct(d_to_a(game['ml_home_f5']))) * 100, 2)
             print('Away f5 ML value:', away_output['ml_value_f5'], '%')
             print('Home f5 ML value:', home_output['ml_value_f5'], '%')
+        else:
+            away_output['ml_f5'] = "NA"
+            home_output['ml_f5'] = "NA"
+            away_output['ml_proj_f5'] = "NA"
+            home_output['ml_proj_f5'] = "NA"
+            away_output['ml_value_f5'] = "NA"
+            home_output['ml_value_f5'] = "NA"
+
 
         if game['rl_away_f5'] == game['rl_away_f5']:
             print("Vegas away F5 RL:",round(d_to_a(game['rl_away_f5']),0),
@@ -312,5 +320,5 @@ def main():
 
 
 if __name__ == '__main__':
-    # update_all()
+    update_all()
     main()
