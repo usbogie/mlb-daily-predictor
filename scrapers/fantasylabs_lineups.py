@@ -1,10 +1,10 @@
 import pandas as pd
 import json
 import os
-import sys
 import time
 import datetime
 import random
+from operator import itemgetter
 from scrapers.scraper_utils import get_soup, team_codes, get_days_in_season
 
 def fix_name(name):
@@ -17,90 +17,68 @@ def fix_name(name):
     return name
 
 def scrape_day_lineups(day):
+    print(day)
     time.sleep(random.randint(4,6))
     new_date = datetime.datetime.strptime(day, '%Y-%m-%d').strftime('%m_%d_%Y')
-    url = "https://www.fantasylabs.com/api/lineuptracker/3/"+new_date
-    soup = json.loads(get_soup(url).find('body').contents[0])
 
-    lineups = []
-    something_messed_up = False
-    while len(soup) > 0:
-        team1 = dict(date = day)
-        team2 = dict(date = day)
-        if soup[0]['TeamName'] != soup[9]['TeamName']:
-            print("not enough entries for", soup[0]['TeamName'])
-            missing_player, spot = input("Enter missing player and lineup spot -> ").split(', ')
-            soup.insert(int(spot)-1,dict(PlayerName = missing_player))
-            something_messed_up = True
-        if len(soup) < 20 or soup[10]['TeamName'] != soup[19]['TeamName']:
-            print(soup)
-            print("not enough entries for", soup[10]['TeamName'])
-            missing_player, spot = input("Enter missing player and lineup spot -> ").split(', ')
-            soup.insert(10+int(spot)-1,dict(PlayerName = missing_player))
-            something_messed_up = True
-        team1_lineup = soup[:10]
-        team2_lineup = soup[10:20]
-        team1['name'] = team1_lineup[0]['TeamName'].replace('St', 'St.')
-        team2['name'] = team2_lineup[0]['TeamName'].replace('St', 'St.')
-        for i in range(10):
-            team1[str(i+1)] = fix_name(team1_lineup[i]['PlayerName'])
-            team2[str(i+1)] = fix_name(team2_lineup[i]['PlayerName'])
-        soup = soup[20:]
-        lineups.append((team1,team2))
-
-    time.sleep(random.randint(1,3))
     url = "https://www.fantasylabs.com/api/sportevents/3/"+new_date
     events = json.loads(get_soup(url).find('body').contents[0])
-    for event in events:
-        event['used'] = False
-    key_acc = []
-    day_lineups = []
-    for team1, team2 in lineups:
-        event = {}
-        home = away = None
-        for item in events:
-            if item['used']:
-                continue
-            if item['HomeTeam'].replace('St', 'St.') == team1['name'] and \
-                    item['VisitorTeam'].replace('St', 'St.') == team2['name']:
-                home = team1
-                away = team2
-                item['used'] = True
-                event = item
-                break
-            elif item['HomeTeam'].replace('St', 'St.') == team2['name'] and \
-                    item['VisitorTeam'].replace('St', 'St.') == team1['name']:
-                away = team1
-                home = team2
-                item['used'] = True
-                event = item
-                break
 
-        if event['EventSummary'] == 'Postponed' or event['EventSummary'] == 'PPD':
+    url = "https://www.fantasylabs.com/api/lineuptracker/3/"+new_date
+    players = json.loads(get_soup(url).find('body').contents[0])
+
+    events = sorted(events, key=itemgetter('EventDateTime'))
+    lineups = []
+    key_acc = []
+    for ev in events:
+        if ev['EventSummary'] == 'Postponed' or ev['EventSummary'] == 'PPD':
             continue
 
-        home['lineup_status'] = event['HomeLineupStatus'].split()[0]
-        away['lineup_status'] = event['VisitorLineupStatus'].split()[0]
+        lineup_away = dict(date = day,
+                           name = ev['VisitorTeam'].replace('St', 'St.'),
+                           lineup_status = ev['VisitorLineupStatus'].split()[0])
 
-        key = day.replace('-','/')+'/'+team_codes[away['name']]+'mlb-'+team_codes[home['name']]+'mlb-1'
+        lineup_home = dict(date = day,
+                           name = ev['HomeTeam'].replace('St', 'St.'),
+                           lineup_status = ev['HomeLineupStatus'].split()[0])
+
+        def locate(lineup, player):
+            return (str(ev['EventId']) in player['Key'] and
+                    lineup['name'] == player['TeamName'].replace('St', 'St.'))
+
+        away_players = list(filter(lambda p: locate(lineup_away, p), players))
+        home_players = list(filter(lambda p: locate(lineup_home, p), players))
+        if len(away_players) < 10 or len(home_players) < 10:
+            print('Bad lineup {} vs {}, continue'.format(lineup_away['name'],
+                                                         lineup_home['name']))
+
+        for player in away_players:
+            lineup_away[player['LineupOrder']] = fix_name(player['PlayerName'])
+        for player in home_players:
+            lineup_home[player['LineupOrder']] = fix_name(player['PlayerName'])
+
+        key = '{}/{}mlb-{}mlb-1'.format(day.replace('-','/'),
+                                        team_codes[lineup_away['name']],
+                                        team_codes[lineup_home['name']])
+
         if key in key_acc:
             print("DOUBLE HEADER", key)
-            key = day.replace('-','/')+'/'+team_codes[away['name']]+'mlb-'+team_codes[home['name']]+'mlb-2'
-        home['key'] = key
-        away['key'] = key
+            key = key[:-1] + '2'
+
+        lineup_away['key'] = key
+        lineup_home['key'] = key
         print(key)
         key_acc.append(key)
-        if something_messed_up:
-            print(away)
-            print(home)
-        day_lineups.extend([away,home])
-    return day_lineups
+        lineups.extend([lineup_away,lineup_home])
+    return lineups
 
 def scrape_year_lineups(year=2017):
     season = get_days_in_season(year)
     lineups = []
     for day in season:
-        lineups.extend(scrape_day_lineups(day))
+        day_lineups = scrape_day_lineups(day)
+        day_lineups[:] = [d for d in day_lineups if d['lineup_status'] != 'Projected']
+        lineups.extend(day_lineups)
     return pd.DataFrame(lineups).set_index(['key', 'name'])
 
 if __name__ == '__main__':
