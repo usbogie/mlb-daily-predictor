@@ -47,6 +47,8 @@ class MonteCarlo(object):
 
     scored_in_first = False
     scores_in_first = 0
+    away_strikeouts = 0
+    home_strikeouts = 0
 
     home_histo = []
     away_histo = []
@@ -247,6 +249,10 @@ class MonteCarlo(object):
             self.increment_runs()
             state.clear_bases()
         if event == 'K':
+            if pitcher == self.away_pitchers[0]:
+                self.away_strikeouts = self.away_strikeouts + 1
+            elif pitcher == self.home_pitchers[0]:
+                self.home_strikeouts = self.home_strikeouts + 1
             state.outs = state.outs + 1
         if event == 'BB' or event == 'HBP':
             if state.onFirst and state.onSecond and state.onThird:

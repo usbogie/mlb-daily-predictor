@@ -70,8 +70,8 @@ def get_pitching_stats(lineup):
         team_abbrv = 'LAA'
     starting_pitcher = steamer_pitchers.loc[
         (steamer_pitchers['firstname'] == pitcher_name.split(' ',1)[0]) & \
-        (steamer_pitchers['lastname'] == pitcher_name.split(' ',1)[1]) & \
-        (steamer_pitchers['DBTeamId'] == team_abbrv)].to_dict('list')
+        (steamer_pitchers['lastname'] == pitcher_name.split(' ',1)[1])
+        ].to_dict('list')
     relief_pitchers = steamer_pitchers.loc[
         (steamer_pitchers['relief_IP'] >= 10.0) &
         ((steamer_pitchers['DBTeamId'] == team_abbrv))]
@@ -107,8 +107,12 @@ def main():
                            lineup=home_lineup.iloc[0]['lineup_status'])
         away_lineup_stats = get_batting_stats(away_lineup)
         home_lineup_stats = get_batting_stats(home_lineup)
-        away_pitching = get_pitching_stats(away_lineup)
-        home_pitching = get_pitching_stats(home_lineup)
+        try:
+            away_pitching = get_pitching_stats(away_lineup)
+            home_pitching = get_pitching_stats(home_lineup)
+        except:
+            print("Pitcher matching problem. Next")
+            continue
         pf = park_factors.loc[park_factors["Team"]==game["home"]].to_dict(orient='records')
 
         print("Simulating game:",today,game['time'],game['away'],game['home'])
@@ -313,6 +317,9 @@ def main():
 
         print('Score in first pct:', away_output['sc_in_first'],
               'Implied line:', home_output['sc_in_first'])
+
+        print('Away starter strikeouts:', round(mcGame.away_strikeouts/mcGame.number_of_sims, 2))
+        print('Home starter strikeouts:', round(mcGame.home_strikeouts/mcGame.number_of_sims, 2))
 
         print('\n')
         game_outputs.append((game['time'], away_output, home_output))

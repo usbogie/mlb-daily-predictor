@@ -1,14 +1,15 @@
 key,away,date,home,ml_away,ml_away_f5,ml_home,ml_home_f5,over_odds,over_odds_f5,rl_away,rl_away_f5,rl_home,rl_home_f5,time,total_line,total_line_f5,under_odds,under_odds_f5
-2018/04/18/colmlb-pitmlb-1,Colorado Rockies,2018-04-18,Pittsburgh Pirates,2.11,2.05,1.82,1.8,1.84,1.77,1.5,1.74,2.7,2.15,12:35p,7.5,4.0,1.99,2.1
-2018/04/18/balmlb-detmlb-1,Baltimore Orioles,2018-04-18,Detroit Tigers,1.79,1.8,2.14,2.05,2.01,1.91,2.29,2.15,1.67,1.74,1:10p,8.5,4.5,1.82,1.91
-2018/04/18/texmlb-tbamlb-1,Texas Rangers,2018-04-18,Tampa Bay Rays,1.77,1.8,2.18,2.05,1.99,1.8,2.35,2.15,1.65,1.74,1:10p,8.0,4.0,1.84,2.05
-2018/04/18/cinmlb-milmlb-1,Cincinnati Reds,2018-04-18,Milwaukee Brewers,2.18,2.2,1.76,1.71,1.85,1.87,1.56,1.83,2.53,2.0,1:40p,9.0,5.0,1.98,1.95
-2018/04/18/chamlb-oakmlb-1,Chicago White Sox,2018-04-18,Oakland Athletics,2.82,3.0,1.49,1.42,1.89,1.91,1.99,2.4,1.84,1.61,3:35p,9.0,5.0,1.93,1.91
-2018/04/18/kcamlb-tormlb-1,Kansas City Royals,2018-04-18,Toronto Blue Jays,2.75,2.6,1.51,1.53,1.87,2.1,1.83,2.09,2.0,1.78,4:07p,8.0,4.5,1.95,1.77
-2018/04/18/wasmlb-nynmlb-1,Washington Nationals,2018-04-18,New York Mets,1.99,1.91,1.92,1.91,1.87,1.8,1.47,2.3,2.8,1.67,7:10p,8.0,4.0,1.95,2.05
-2018/04/18/clemlb-minmlb-1,Cleveland Indians,2018-04-18,Minnesota Twins,1.88,1.87,2.04,1.95,1.97,2.05,2.43,2.25,1.61,1.69,7:10p,7.5,4.0,1.86,1.8
-2018/04/18/phimlb-atlmlb-1,Philadelphia Phillies,2018-04-18,Atlanta Braves,2.06,1.91,1.86,1.91,1.87,1.87,1.49,1.69,2.72,2.25,7:35p,8.5,4.5,1.95,1.95
-2018/04/18/sfnmlb-arimlb-1,San Francisco Giants,2018-04-18,Arizona Diamondbacks,2.41,2.3,1.64,1.67,1.91,2.0,1.62,1.91,2.41,1.91,9:40p,8.0,4.5,1.91,1.83
-2018/04/18/bosmlb-anamlb-1,Boston Red Sox,2018-04-18,Los Angeles Angels,2.06,2.05,1.86,1.8,1.87,1.83,1.48,1.74,2.76,2.15,10:07p,8.0,4.0,1.95,2.0
-2018/04/18/lanmlb-sdnmlb-1,Los Angeles Dodgers,2018-04-18,San Diego Padres,1.59,1.59,2.53,2.45,1.85,2.2,1.91,1.83,1.91,2.0,10:10p,7.0,4.0,1.97,1.71
-2018/04/18/houmlb-seamlb-1,Houston Astros,2018-04-18,Seattle Mariners,1.57,1.56,2.58,2.55,1.93,1.99,1.84,1.8,1.99,2.05,10:10p,7.5,4.0,1.89,1.84
+2018/04/24/seamlb-chamlb-1,Seattle Mariners,2018-04-24,Chicago White Sox,1.8,1.74,2.14,2.15,1.99,2.1,2.2,2.05,1.71,1.8,5:10p,9.5,5.5,1.84,1.77
+2018/04/24/chnmlb-clemlb-1,Chicago Cubs,2018-04-24,Cleveland Indians,2.24,2.15,1.73,1.74,1.95,1.8,1.59,1.86,2.48,1.96,6:10p,9.0,5.0,1.87,2.05
+2018/04/24/minmlb-nyamlb-1,Minnesota Twins,2018-04-24,New York Yankees,2.39,2.0,1.65,1.83,1.91,2.05,1.69,1.71,2.25,2.2,6:35p,8.5,4.5,1.91,1.8
+2018/04/24/atlmlb-cinmlb-1,Atlanta Braves,2018-04-24,Cincinnati Reds,1.92,1.87,1.99,1.95,1.95,2.0,2.48,2.25,1.59,1.69,6:40p,8.5,4.5,1.87,1.83
+2018/04/24/detmlb-pitmlb-1,Detroit Tigers,2018-04-24,Pittsburgh Pirates,2.62,2.45,1.56,1.59,2.0,2.05,1.74,2.0,2.15,1.83,7:05p,8.0,4.5,1.83,1.8
+2018/04/24/arimlb-phimlb-1,Arizona Diamondbacks,2018-04-24,Philadelphia Phillies,1.91,1.91,2.0,1.91,1.97,2.05,1.44,1.62,2.88,2.35,7:05p,7.5,4.0,1.85,1.8
+2018/04/24/bosmlb-tormlb-1,Boston Red Sox,2018-04-24,Toronto Blue Jays,2.05,1.95,1.87,1.87,1.91,1.91,1.5,1.72,2.7,2.19,7:07p,8.5,4.5,1.91,1.91
+2018/04/24/oakmlb-texmlb-1,Oakland Athletics,2018-04-24,Texas Rangers,2.1,2.05,1.83,1.8,1.83,1.87,1.56,1.76,2.55,2.12,8:05p,10.0,5.5,2.0,1.95
+2018/04/24/anamlb-houmlb-1,Los Angeles Angels,2018-04-24,Houston Astros,2.25,2.1,1.72,1.77,2.0,1.91,1.62,1.77,2.4,2.1,8:10p,8.0,4.0,1.83,1.91
+2018/04/24/milmlb-kcamlb-1,Milwaukee Brewers,2018-04-24,Kansas City Royals,1.77,1.8,2.17,2.05,1.87,1.95,2.2,2.15,1.71,1.74,8:15p,9.0,5.0,1.95,1.87
+2018/04/24/nynmlb-slnmlb-1,New York Mets,2018-04-24,St. Louis Cardinals,2.67,2.6,1.54,1.53,1.84,2.15,1.71,2.1,2.2,1.77,8:15p,8.0,4.5,1.99,1.74
+2018/04/24/sdnmlb-colmlb-1,San Diego Padres,2018-04-24,Colorado Rockies,2.34,2.35,1.67,1.62,1.87,1.87,1.74,1.95,2.15,1.87,8:40p,10.0,5.5,1.95,1.95
+2018/04/24/miamlb-lanmlb-1,Miami Marlins,2018-04-24,Los Angeles Dodgers,3.34,3.35,1.38,1.35,1.95,1.87,2.05,2.4,1.8,1.61,10:10p,7.5,4.0,1.87,1.95
+2018/04/24/wasmlb-sfnmlb-1,Washington Nationals,2018-04-24,San Francisco Giants,1.92,1.87,1.99,1.95,1.83,2.0,2.44,2.25,1.61,1.69,10:15p,8.0,4.5,2.0,1.83
