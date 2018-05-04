@@ -37,11 +37,17 @@ def update_lines():
     today_lines = pd.DataFrame(list(sbr_scraper.scrape_sbr_day(today).values())).set_index('key')
     today_lines.to_csv(os.path.join('data','lines','today.csv'))
 
-def get_rosters():
-    roster_scraper.get_todays_rosters()
+def get_relievers():
+    pitchers = roster_scraper.get_todays_relievers()
+    import json
+    with open(os.path.join('data','relievers.json'), 'w') as outfile:
+        json.dump(pitchers, outfile)
+
 
 def update_all():
-    update_games()
-    update_lineups()
-    update_lines()
-    #get_rosters()
+    # update_games()
+    # update_lineups()
+    # update_lines()
+    get_relievers()
+    import sys
+    sys.exit()
