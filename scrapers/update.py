@@ -1,11 +1,11 @@
-from scrapers import mlb_scraper,fantasylabs_lineups, sbr_scraper
+from scrapers import mlb_scraper,fantasylabs_lineups, sbr_scraper, roster_scraper
 from datetime import datetime, timedelta
 import pandas as pd
 import os
 
 year = 2018
 yesterday = (datetime.now() - timedelta(1)).strftime('%Y-%m-%d')
-today = (datetime.now() + timedelta(0)).strftime('%Y-%m-%d')
+today = (datetime.now() + timedelta(1)).strftime('%Y-%m-%d')
 
 def update_games():
     print("getting games")
@@ -37,7 +37,11 @@ def update_lines():
     today_lines = pd.DataFrame(list(sbr_scraper.scrape_sbr_day(today).values())).set_index('key')
     today_lines.to_csv(os.path.join('data','lines','today.csv'))
 
+def get_rosters():
+    roster_scraper.get_todays_rosters()
+
 def update_all():
     update_games()
     update_lineups()
     update_lines()
+    #get_rosters()

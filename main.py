@@ -210,7 +210,7 @@ def main():
             away_output['total_value'] = "NA"
             home_output['total_value'] = "NA"
 
-        if game['ml_away_f5'] == game['ml_away_f5']:
+        if 'ml_away_f5' in game and game['ml_away_f5'] == game['ml_away_f5']:
             print("Vegas away F5 ML:",round(d_to_a(game['ml_away_f5']),0),
                   "|| Vegas home F5 ML:",round(d_to_a(game['ml_home_f5']),0))
             away_output['ml_f5'] = round(d_to_a(game['ml_away_f5']),0)
@@ -240,7 +240,7 @@ def main():
             home_output['ml_value_f5'] = "NA"
 
 
-        if game['rl_away_f5'] == game['rl_away_f5']:
+        if 'rl_away_f5' in game and game['rl_away_f5'] == game['rl_away_f5']:
             print("Vegas away F5 RL:",round(d_to_a(game['rl_away_f5']),0),
                   "|| Vegas home F5 RL:",round(d_to_a(game['rl_home_f5']),0))
             away_output['rl_f5'] = round(d_to_a(game['rl_away_f5']),0)
@@ -283,7 +283,7 @@ def main():
             away_output['rl_value_f5'] = "NA"
             home_output['rl_value_f5'] = "NA"
 
-        if game['total_line_f5'] == game['total_line_f5']:
+        if 'total_line_f5' in game and game['total_line_f5'] == game['total_line_f5'] and game['total_line_f5'] < 100:
             print('Vegas F5 over total:',
                   game['total_line_f5'], round(d_to_a(game['over_odds_f5']),0))
             away_output['total_f5'] = str(game['total_line_f5'])+" "+str(round(d_to_a(game['over_odds_f5']),0))
