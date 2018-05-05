@@ -6,6 +6,7 @@ from converters import winpct_to_ml, over_total_pct, d_to_a, ml_to_winpct
 from scrapers.update import update_all
 import gsheets_upload
 import pandas as pd
+import json
 import sys
 import os
 
@@ -72,6 +73,10 @@ def get_pitching_stats(lineup):
         (steamer_pitchers['firstname'] == pitcher_name.split(' ',1)[0]) & \
         (steamer_pitchers['lastname'] == pitcher_name.split(' ',1)[1])
         ].to_dict('list')
+
+    with open(os.path.join('data','relievers.json')) as f:
+        relievers = json.load(f)
+    print(relievers[lineup.iloc[0]['name']])
     relief_pitchers = steamer_pitchers.loc[
         (steamer_pitchers['relief_IP'] >= 10.0) &
         ((steamer_pitchers['DBTeamId'] == team_abbrv))]
@@ -327,5 +332,10 @@ def main():
 
 
 if __name__ == '__main__':
-    update_all()
+    # if you `python3 main.py get_relievers`, program will update relievers, otherwise as normal
+    get_relievers = False
+    if len(sys.argv) > 1:
+        print(sys.argv[1])
+        get_relievers = sys.argv[1] == 'get_relievers'
+    update_all(get_relievers)
     main()

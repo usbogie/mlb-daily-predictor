@@ -5,7 +5,7 @@ import os
 
 year = 2018
 yesterday = (datetime.now() - timedelta(1)).strftime('%Y-%m-%d')
-today = (datetime.now() + timedelta(1)).strftime('%Y-%m-%d')
+today = (datetime.now() + timedelta(0)).strftime('%Y-%m-%d')
 
 def update_games():
     print("getting games")
@@ -42,12 +42,12 @@ def get_relievers():
     import json
     with open(os.path.join('data','relievers.json'), 'w') as outfile:
         json.dump(pitchers, outfile)
+    print("Relievers saved")
 
-
-def update_all():
-    # update_games()
-    # update_lineups()
-    # update_lines()
-    get_relievers()
-    import sys
-    sys.exit()
+def update_all(get_relievers):
+    update_games()
+    update_lineups()
+    update_lines()
+    
+    if (get_relievers):
+        get_relievers()

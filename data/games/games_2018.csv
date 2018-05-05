@@ -444,3 +444,29 @@ key,away_id,away_name,away_score,date,gamePk,home_id,home_name,home_score
 2018/05/02/lanmlb-arimlb-1,119,Los Angeles Dodgers,2,2018-05-02,529861,109,Arizona Diamondbacks,1
 2018/05/02/balmlb-anamlb-1,110,Baltimore Orioles,7,2018-05-02,529857,108,Los Angeles Angels,10
 2018/05/02/oakmlb-seamlb-1,133,Oakland Athletics,3,2018-05-02,529864,136,Seattle Mariners,2
+2018/05/03/tormlb-clemlb-1,141,Toronto Blue Jays,13,2018-05-03,529626,114,Cleveland Indians,11
+2018/05/03/tormlb-clemlb-2,141,Toronto Blue Jays,4,2018-05-03,529641,114,Cleveland Indians,13
+2018/05/03/pitmlb-wasmlb-1,134,Pittsburgh Pirates,1,2018-05-03,529879,120,Washington Nationals,3
+2018/05/03/atlmlb-nynmlb-1,144,Atlanta Braves,11,2018-05-03,529871,121,New York Mets,0
+2018/05/03/nyamlb-houmlb-1,147,New York Yankees,6,2018-05-03,529877,117,Houston Astros,5
+2018/05/03/detmlb-kcamlb-1,116,Detroit Tigers,6,2018-05-03,529874,118,Kansas City Royals,10
+2018/05/03/lanmlb-arimlb-1,119,Los Angeles Dodgers,5,2018-05-03,529875,109,Arizona Diamondbacks,2
+2018/05/03/bosmlb-texmlb-1,111,Boston Red Sox,5,2018-05-03,529873,140,Texas Rangers,11
+2018/05/03/minmlb-chamlb-1,142,Minnesota Twins,5,2018-05-03,529876,145,Chicago White Sox,6
+2018/05/03/balmlb-anamlb-1,110,Baltimore Orioles,3,2018-05-03,529872,108,Los Angeles Angels,12
+2018/05/03/oakmlb-seamlb-1,133,Oakland Athletics,1,2018-05-03,529878,136,Seattle Mariners,4
+2018/05/04/clemlb-nyamlb-1,114,Cleveland Indians,6,2018-05-04,529883,147,New York Yankees,7
+2018/05/04/phimlb-wasmlb-1,143,Philadelphia Phillies,3,2018-05-04,529891,120,Washington Nationals,7
+2018/05/04/colmlb-nynmlb-1,115,Colorado Rockies,8,2018-05-04,529884,121,New York Mets,7
+2018/05/04/miamlb-cinmlb-1,146,Miami Marlins,1,2018-05-04,529889,113,Cincinnati Reds,4
+2018/05/04/tormlb-tbamlb-1,141,Toronto Blue Jays,2,2018-05-04,529894,139,Tampa Bay Rays,6
+2018/05/04/sfnmlb-atlmlb-1,137,San Francisco Giants,9,2018-05-04,529893,144,Atlanta Braves,4
+2018/05/04/bosmlb-texmlb-1,111,Boston Red Sox,5,2018-05-04,529881,140,Texas Rangers,1
+2018/05/04/minmlb-chamlb-1,142,Minnesota Twins,6,2018-05-04,529890,145,Chicago White Sox,4
+2018/05/04/pitmlb-milmlb-1,134,Pittsburgh Pirates,6,2018-05-04,529892,158,Milwaukee Brewers,4
+2018/05/04/chnmlb-slnmlb-1,112,Chicago Cubs,2,2018-05-04,529882,138,St. Louis Cardinals,3
+2018/05/04/detmlb-kcamlb-1,116,Detroit Tigers,2,2018-05-04,529885,118,Kansas City Royals,4
+2018/05/04/lanmlb-sdnmlb-1,119,Los Angeles Dodgers,4,2018-05-04,529888,135,San Diego Padres,0
+2018/05/04/houmlb-arimlb-1,117,Houston Astros,8,2018-05-04,529886,109,Arizona Diamondbacks,0
+2018/05/04/balmlb-oakmlb-1,110,Baltimore Orioles,4,2018-05-04,529880,133,Oakland Athletics,6
+2018/05/04/anamlb-seamlb-1,108,Los Angeles Angels,5,2018-05-04,529887,136,Seattle Mariners,0

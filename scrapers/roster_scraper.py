@@ -7,14 +7,42 @@ import random
 from operator import itemgetter
 from scrapers.scraper_utils import get_soup, team_codes
 
-def get_team_roster(team):
+def replace_names(name):
+    name = name.replace('C.J. Edwards', 'Carl Edwards Jr.')
+    name = name.replace('Seung-Hwan Oh', 'Seung Hwan Oh').replace('Seung hwan Oh', 'Seung Hwan Oh')
+    return name
+
+def get_usage_breakdown():
+    soup = get_soup('http://dailybaseballdata.com/cgi-bin/bullpen.pl?lookback=7')
+    table = soup.find('table', {'cellspacing': 2})
+    trs = [tr for tr in table.findAll('tr', {'id': None}) if not tr.has_attr('bgcolor')]
+    indices = []
+    for ix, tr in enumerate(trs):
+        if len(tr.findAll('td')) < 2:
+            indices.append(ix)
+    indices.append(len(trs))
+    team_pitchers = {}
+    for ix, index in enumerate(indices[:-1]):
+        pitchers = trs[index:indices[ix+1]][:]
+        team = pitchers[0].findAll('td')[0].text.replace(u'\xa0', u'').strip().split('   ')[0]
+        pitchers = pitchers[1:]
+        total_ip = sum([float(tr.findAll('td')[2].text.replace('.1','.33').replace('.2','.67')) for tr in pitchers])
+        pitchers_share = {}
+        for pitcher in pitchers:
+            player = replace_names(pitcher.findAll('td')[0].text.replace(u'\xa0', u'').strip())
+            pitchers_share[player] = float(pitcher.findAll('td')[2].text.replace('.1','.33').replace('.2','.67'))/total_ip
+
+        team_pitchers[team] = pitchers_share
+    return team_pitchers
+
+def get_current_relievers(team):
     print(team)
     soup = get_soup('https://www.rosterresource.com/mlb-{}'.format(team))
     new_soup = get_soup(soup.find('iframe')['src'].replace('/pubhtml', '/pubhtml/sheet'))
     trs = new_soup.find('tbody').findAll('tr')
     started_bullpen = False
     counter = 0
-    pitchers = []
+    pitchers = {}
     for ix, tr in enumerate(trs):
         tds = tr.findAll('td')
         for td in tds:
@@ -26,16 +54,27 @@ def get_team_roster(team):
                 continue
             if len(tds[2].text.strip()) == 0:
                 break
-            pitcher = {}
-            pitcher['role'] = tds[2].text
-            pitcher['name'] = tds[5].text
-            pitchers.append(pitcher)
+            pitchers[replace_names(tds[5].text)] = tds[2].text
     return pitchers
 
 def get_todays_relievers():
     team_pitchers = {}
     for team in team_codes.keys():
-        ext = team.lower().replace(' ','-')
-        pitchers = get_team_roster(ext)
-        team_pitchers[team] = pitchers
+        team_pitchers[team] = get_current_relievers(team.lower().replace(' ','-'))
+    usages = get_usage_breakdown()
+    print(team_pitchers)
+    print(usages)
+    for team, pitchers in team_pitchers.items():
+        print(team)
+        for pitcher, role in pitchers.items():
+            print(pitcher)
+            if pitcher not in usages[team] or usages[team][pitcher] == 0:
+                print("No usage for", pitcher,"might be a recent callup?")
+                print(usages[team])
+                team_pitchers[team][pitcher] = (role, 1/(len(usages[team]) + 1))
+            else:
+                team_pitchers[team][pitcher] = (role, usages[team][pitcher])
+        new_sum = sum(n for _,n in team_pitchers[team].values())
+        for pitcher, (role, usage) in team_pitchers[team].items():
+            team_pitchers[team][pitcher] = (role, usage/new_sum)
     return team_pitchers
