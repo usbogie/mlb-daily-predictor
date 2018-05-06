@@ -470,3 +470,18 @@ key,away_id,away_name,away_score,date,gamePk,home_id,home_name,home_score
 2018/05/04/houmlb-arimlb-1,117,Houston Astros,8,2018-05-04,529886,109,Arizona Diamondbacks,0
 2018/05/04/balmlb-oakmlb-1,110,Baltimore Orioles,4,2018-05-04,529880,133,Oakland Athletics,6
 2018/05/04/anamlb-seamlb-1,108,Los Angeles Angels,5,2018-05-04,529887,136,Seattle Mariners,0
+2018/05/05/clemlb-nyamlb-1,114,Cleveland Indians,2,2018-05-05,529898,147,New York Yankees,5
+2018/05/05/chnmlb-slnmlb-1,112,Chicago Cubs,6,2018-05-05,529897,138,St. Louis Cardinals,8
+2018/05/05/phimlb-wasmlb-1,143,Philadelphia Phillies,3,2018-05-05,529907,120,Washington Nationals,1
+2018/05/05/detmlb-kcamlb-1,116,Detroit Tigers,3,2018-05-05,529900,118,Kansas City Royals,2
+2018/05/05/tormlb-tbamlb-1,141,Toronto Blue Jays,3,2018-05-05,529910,139,Tampa Bay Rays,5
+2018/05/05/colmlb-nynmlb-1,115,Colorado Rockies,2,2018-05-05,529899,121,New York Mets,0
+2018/05/05/lanmlb-sdnmlb-1,119,Los Angeles Dodgers,4,2018-05-05,529903,135,San Diego Padres,7
+2018/05/05/miamlb-cinmlb-1,146,Miami Marlins,6,2018-05-05,529904,113,Cincinnati Reds,0
+2018/05/05/minmlb-chamlb-1,142,Minnesota Twins,8,2018-05-05,529905,145,Chicago White Sox,4
+2018/05/05/pitmlb-milmlb-1,134,Pittsburgh Pirates,3,2018-05-05,529908,158,Milwaukee Brewers,5
+2018/05/05/sfnmlb-atlmlb-1,137,San Francisco Giants,11,2018-05-05,529909,144,Atlanta Braves,2
+2018/05/05/bosmlb-texmlb-1,111,Boston Red Sox,6,2018-05-05,529896,140,Texas Rangers,5
+2018/05/05/houmlb-arimlb-1,117,Houston Astros,3,2018-05-05,529901,109,Arizona Diamondbacks,4
+2018/05/05/balmlb-oakmlb-1,110,Baltimore Orioles,0,2018-05-05,529895,133,Oakland Athletics,2
+2018/05/05/anamlb-seamlb-1,108,Los Angeles Angels,8,2018-05-05,529902,136,Seattle Mariners,9

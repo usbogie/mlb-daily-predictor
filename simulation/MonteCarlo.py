@@ -288,7 +288,12 @@ class MonteCarlo(object):
     def get_outcome_distribution(self, batter, pitcher):
         park_factors = self.park_factors[0]
         pitcher_hand = pitcher['Throws']
-        batter_split = batter['v'+pitcher_hand]
+        try:
+            batter_split = batter['v'+pitcher_hand]
+        except:
+            print(pitcher_hand)
+            print(pitcher)
+            sys.exit()
         batter_hand = batter_split['bats']
         batter_hand = batter_hand if batter_hand != 'B' else ('R' if pitcher_hand == 'L' else 'L')
         outcomes_w_factor = ["1B","2B","3B","HR"]
@@ -321,9 +326,9 @@ class MonteCarlo(object):
         if pitcher_num == 0:
             # determine if starter should be pulled
             pull_starter = False
-            try:
+            if not pitcher['GS'] == 0.0:
                 avg_start_length = pitcher['start_IP'] / pitcher['GS']
-            except:
+            else:
                 avg_start_length = 4.5
             cur_inning = len(self.scoreboard.frames)//2 + 1
             rand = random.random()
@@ -347,23 +352,15 @@ class MonteCarlo(object):
                 ((home and home_margin < 5 and home_margin > -1) or \
                 (not home and home_margin > -5)):
             #print("Closer situation")
-            team_closers = [x for x in pitchers if x['SV'] > 1.0]
-            total = sum([x['SV'] for x in team_closers])
-            rand = random.random()
-            for i in range(len(team_closers)):
-                if rand < sum([x['SV'] for x in team_closers[:i+1]])/total:
-                    #print(team_closers[i]['lastname'], 'is the closer')
-                    return team_closers[i]
-                # print(team_closers[i]['lastname'], 'is not the closer')
+            #print(team_closers[i]['lastname'], 'is the closer')
+            return pitchers[-1][0]
 
-        #randomly select reliever based on IP
-        total_relief_innings = sum([x['relief_IP'] for x in pitchers])
-        relief_pitchers = [x for x in pitchers if x['relief_IP'] > 0]
+        #randomly select reliever based on usage
+        relief_pitchers = [x for x in pitchers[1:-1]]
         rand = random.random()
         for i in range(0,len(relief_pitchers)):
-            if rand < sum([x['relief_IP'] for x in relief_pitchers[:i+1]])/total_relief_innings:
-                #print(relief_pitchers[i]['lastname'], 'is the new reliever')
-                return relief_pitchers[i]
-            # print(relief_pitchers[i]['lastname'], 'is not the new reliever')
-        print("SHOULD NEVER GET HERE")
-        sys.exit()
+            if rand < sum([x[1] for x in relief_pitchers[:i+1]]):
+                # print(relief_pitchers[i][0]['fullname'], 'is the new reliever')
+                return relief_pitchers[i][0]
+        # print(relief_pitchers[i][0]['fullname'], 'is the new reliever')
+        return random.choice(relief_pitchers)[0]

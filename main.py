@@ -6,9 +6,12 @@ from converters import winpct_to_ml, over_total_pct, d_to_a, ml_to_winpct
 from scrapers.update import update_all
 import gsheets_upload
 import pandas as pd
+import random
 import json
 import sys
 import os
+import argparse
+
 
 def calc_averages():
     avgs_dict = dict()
@@ -32,13 +35,12 @@ def get_batting_stats(lineup):
                                 'BB': 162, 'HBP': 16, 'K': 2028, 'bats': 'B'}}
     steamer_batters = pd.read_csv(os.path.join('data','steamer',
                                                'steamer_hitters_2018_split.csv'))
+
+    steamer_batters['fullname'] = steamer_batters[['firstname', 'lastname']].apply(lambda x: ' '.join(x), axis=1)
     for i in range(1,10):
         batter_name = lineup.iloc[0][str(i)]
 
-        rows = steamer_batters.loc[
-                (steamer_batters['firstname'] == batter_name.split(' ',1)[0]) \
-                & (steamer_batters['lastname'] == batter_name.split(' ',1)[1])
-            ]
+        rows = steamer_batters.loc[(steamer_batters['fullname'] == batter_name)]
         ids = rows['steamerid'].unique().tolist()
         if len(ids) == 0:
             print(batter_name, "is probably a pitcher, given avg pitcher stats")
@@ -62,32 +64,44 @@ def get_batting_stats(lineup):
     return lineup_stats
 
 def get_pitching_stats(lineup):
-    lineup_stats = []
     steamer_pitchers = pd.read_csv(os.path.join('data','steamer',
                                                 'steamer_pitchers_2018.csv'))
-    pitcher_name = lineup.iloc[0]['10']
-    team_abbrv = team_codes[lineup.iloc[0]['name']].upper()
-    if team_abbrv == 'ANA':
-        team_abbrv = 'LAA'
-    starting_pitcher = steamer_pitchers.loc[
-        (steamer_pitchers['firstname'] == pitcher_name.split(' ',1)[0]) & \
-        (steamer_pitchers['lastname'] == pitcher_name.split(' ',1)[1])
-        ].to_dict('list')
 
+    steamer_pitchers['fullname'] = steamer_pitchers[['firstname', 'lastname']].apply(lambda x: ' '.join(x), axis=1)
+    starter_name = lineup.iloc[0]['10']
+    print(starter_name)
+    starting_pitcher = steamer_pitchers.loc[(steamer_pitchers['fullname'] == starter_name)]
+    ids = starting_pitcher['steamerid'].unique().tolist()
+    if len(ids) > 1:
+        print("DUPLICATE something is wrong")
+        print(rows)
+        ans = input("Which player is actually playing? => ")
+        ix = int(ans)
+        starting_pitcher = starting_pitcher.iloc[[ix-1]]
+    pitchers = [starting_pitcher.squeeze().to_dict()]
     with open(os.path.join('data','relievers.json')) as f:
         relievers = json.load(f)
-    print(relievers[lineup.iloc[0]['name']])
-    relief_pitchers = steamer_pitchers.loc[
-        (steamer_pitchers['relief_IP'] >= 10.0) &
-        ((steamer_pitchers['DBTeamId'] == team_abbrv))]
-    print(pitcher_name)
-    for key, val in starting_pitcher.items():
-        if len(val) > 1:
+    closers = []
+    relievers = relievers[lineup.iloc[0]['name']]
+    for name, info in relievers.items():
+        reliever = steamer_pitchers.loc[(steamer_pitchers['fullname'] == name)]
+        ids = reliever['steamerid'].unique().tolist()
+        if len(ids) == 0:
+            print('No pitcher matched', name)
+            continue
+        if len(ids) > 1:
             print("DUPLICATE something is wrong")
-            sys.exit()
-        starting_pitcher[key] = val[0]
-
-    return [starting_pitcher] + list(relief_pitchers.T.to_dict().values())
+            print(reliever)
+            ans = input("Which player is actually playing? => ")
+            ix = int(ans)
+            reliever = reliever.iloc[[ix-1]]
+        if 'CL' not in info:
+            pitchers.append((reliever.squeeze().to_dict(), info[1]))
+        else:
+            closers.append((reliever.squeeze().to_dict(), info[1]))
+    random.shuffle(closers)
+    pitchers.extend(closers)
+    return pitchers
 
 def main():
     today = datetime.now().strftime('%Y-%m-%d')
@@ -112,12 +126,8 @@ def main():
                            lineup=home_lineup.iloc[0]['lineup_status'])
         away_lineup_stats = get_batting_stats(away_lineup)
         home_lineup_stats = get_batting_stats(home_lineup)
-        try:
-            away_pitching = get_pitching_stats(away_lineup)
-            home_pitching = get_pitching_stats(home_lineup)
-        except:
-            print("Pitcher matching problem. Next")
-            continue
+        away_pitching = get_pitching_stats(away_lineup)
+        home_pitching = get_pitching_stats(home_lineup)
         pf = park_factors.loc[park_factors["Team"]==game["home"]].to_dict(orient='records')
 
         print("Simulating game:",today,game['time'],game['away'],game['home'])
@@ -332,10 +342,10 @@ def main():
 
 
 if __name__ == '__main__':
-    # if you `python3 main.py get_relievers`, program will update relievers, otherwise as normal
-    get_relievers = False
+    # if you `python3 main.py gr`, program will update relievers, otherwise as normal
+    gr = False
     if len(sys.argv) > 1:
         print(sys.argv[1])
-        get_relievers = sys.argv[1] == 'get_relievers'
-    update_all(get_relievers)
+        gr = sys.argv[1] == 'gr'
+    update_all(gr)
     main()

@@ -10,6 +10,10 @@ from scrapers.scraper_utils import get_soup, team_codes
 def replace_names(name):
     name = name.replace('C.J. Edwards', 'Carl Edwards Jr.')
     name = name.replace('Seung-Hwan Oh', 'Seung Hwan Oh').replace('Seung hwan Oh', 'Seung Hwan Oh')
+    name = name.replace('Dan Winkler', 'Daniel Winkler').replace('Felipe Vazquez','Felipe Rivero')
+    name = name.replace('Mike Wright Jr.','Mike Wright').replace('Danny Coulombe', 'Daniel Coulombe')
+    name = name.replace('Chasen Bradford','Chase Bradford').replace('Jorge De La Rosa','Jorge de la Rosa')
+    name = name.replace('Sam Tuivailala','Samuel Tuivailala')
     return name
 
 def get_usage_breakdown():
@@ -62,12 +66,8 @@ def get_todays_relievers():
     for team in team_codes.keys():
         team_pitchers[team] = get_current_relievers(team.lower().replace(' ','-'))
     usages = get_usage_breakdown()
-    print(team_pitchers)
-    print(usages)
     for team, pitchers in team_pitchers.items():
-        print(team)
         for pitcher, role in pitchers.items():
-            print(pitcher)
             if pitcher not in usages[team] or usages[team][pitcher] == 0:
                 print("No usage for", pitcher,"might be a recent callup?")
                 print(usages[team])

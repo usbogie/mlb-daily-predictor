@@ -42,12 +42,11 @@ def get_relievers():
     import json
     with open(os.path.join('data','relievers.json'), 'w') as outfile:
         json.dump(pitchers, outfile)
-    print("Relievers saved")
+    print("RELIEVERS SAVED\n\n")
 
-def update_all(get_relievers):
+def update_all(gr):
     update_games()
     update_lineups()
     update_lines()
-    
-    if (get_relievers):
+    if (gr):
         get_relievers()
