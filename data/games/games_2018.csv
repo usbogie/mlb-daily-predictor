@@ -485,3 +485,25 @@ key,away_id,away_name,away_score,date,gamePk,home_id,home_name,home_score
 2018/05/05/houmlb-arimlb-1,117,Houston Astros,3,2018-05-05,529901,109,Arizona Diamondbacks,4
 2018/05/05/balmlb-oakmlb-1,110,Baltimore Orioles,0,2018-05-05,529895,133,Oakland Athletics,2
 2018/05/05/anamlb-seamlb-1,108,Los Angeles Angels,8,2018-05-05,529902,136,Seattle Mariners,9
+2018/05/06/clemlb-nyamlb-1,114,Cleveland Indians,4,2018-05-06,529914,147,New York Yankees,7
+2018/05/06/colmlb-nynmlb-1,115,Colorado Rockies,3,2018-05-06,529915,121,New York Mets,2
+2018/05/06/tormlb-tbamlb-1,141,Toronto Blue Jays,2,2018-05-06,529925,139,Tampa Bay Rays,1
+2018/05/06/phimlb-wasmlb-1,143,Philadelphia Phillies,4,2018-05-06,529922,120,Washington Nationals,5
+2018/05/06/sfnmlb-atlmlb-1,137,San Francisco Giants,4,2018-05-06,529924,144,Atlanta Braves,3
+2018/05/06/minmlb-chamlb-1,142,Minnesota Twins,5,2018-05-06,529921,145,Chicago White Sox,3
+2018/05/06/pitmlb-milmlb-1,134,Pittsburgh Pirates,9,2018-05-06,529923,158,Milwaukee Brewers,0
+2018/05/06/detmlb-kcamlb-1,116,Detroit Tigers,2,2018-05-06,529916,118,Kansas City Royals,4
+2018/05/06/bosmlb-texmlb-1,111,Boston Red Sox,6,2018-05-06,529912,140,Texas Rangers,1
+2018/05/06/balmlb-oakmlb-1,110,Baltimore Orioles,1,2018-05-06,529911,133,Oakland Athletics,2
+2018/05/06/houmlb-arimlb-1,117,Houston Astros,1,2018-05-06,529917,109,Arizona Diamondbacks,3
+2018/05/06/anamlb-seamlb-1,108,Los Angeles Angels,8,2018-05-06,529918,136,Seattle Mariners,2
+2018/05/06/lanmlb-sdnmlb-1,119,Los Angeles Dodgers,0,2018-05-06,529919,135,San Diego Padres,3
+2018/05/06/miamlb-cinmlb-1,146,Miami Marlins,8,2018-05-06,529920,113,Cincinnati Reds,5
+2018/05/06/chnmlb-slnmlb-1,112,Chicago Cubs,3,2018-05-06,529913,138,St. Louis Cardinals,4
+2018/05/07/sfnmlb-phimlb-1,137,San Francisco Giants,0,2018-05-07,529931,143,Philadelphia Phillies,11
+2018/05/07/nynmlb-cinmlb-1,121,New York Mets,7,2018-05-07,529930,113,Cincinnati Reds,6
+2018/05/07/detmlb-texmlb-1,116,Detroit Tigers,6,2018-05-07,529926,140,Texas Rangers,7
+2018/05/07/miamlb-chnmlb-1,146,Miami Marlins,2,2018-05-07,529928,112,Chicago Cubs,14
+2018/05/07/minmlb-slnmlb-1,142,Minnesota Twins,6,2018-05-07,529929,138,St. Louis Cardinals,0
+2018/05/07/houmlb-oakmlb-1,117,Houston Astros,16,2018-05-07,529927,133,Oakland Athletics,2
+2018/05/07/wasmlb-sdnmlb-1,120,Washington Nationals,8,2018-05-07,529932,135,San Diego Padres,5

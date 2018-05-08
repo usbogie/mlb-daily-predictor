@@ -57,11 +57,11 @@ def update_spreadsheet(data):
     resultClear = service.spreadsheets().values().clear(
         spreadsheetId=spreadsheet_Id, range=rangeAll, body=body).execute()
     rangeName = 'A2:U'
-    headers = ['Lineup status','ML','Projected ML','ML value %','RL',
-               'Projected RL', 'RL value %','Total/odds','Avg total/Over %',
+    headers = ['Lineup status','ML','Projected ML','ML value %','Kelly BR Risk',
+               'RL', 'Projected RL', 'RL value %','Total/odds',
                'Over/under value %','F5 ML','F5 projected ML','F5 ML value %',
                'F5 RL','F5 Projected RL','F5 RL value %','F5 Total',
-               'F5 avg total/Over %','F5 over value','Score in 1st yes/no']
+               'F5 over value','Score in 1st yes/no']
     all_rows = []
     for game in data:
         values_space = [""]*21

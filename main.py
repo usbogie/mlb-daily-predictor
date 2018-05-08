@@ -2,7 +2,7 @@ from datetime import datetime
 from scrapers.scraper_utils import team_codes
 from storage.Game import Game
 from simulation.MonteCarlo import MonteCarlo
-from converters import winpct_to_ml, over_total_pct, d_to_a, ml_to_winpct
+from converters import winpct_to_ml, over_total_pct, d_to_a, ml_to_winpct, third_kelly_calculator
 from scrapers.update import update_all
 import gsheets_upload
 import pandas as pd
@@ -74,7 +74,7 @@ def get_pitching_stats(lineup):
     ids = starting_pitcher['steamerid'].unique().tolist()
     if len(ids) > 1:
         print("DUPLICATE something is wrong")
-        print(rows)
+        print(starting_pitcher)
         ans = input("Which player is actually playing? => ")
         ix = int(ans)
         starting_pitcher = starting_pitcher.iloc[[ix-1]]
@@ -104,6 +104,7 @@ def get_pitching_stats(lineup):
     return pitchers
 
 def main():
+    bankroll = 1000
     today = datetime.now().strftime('%Y-%m-%d')
     league_avgs = calc_averages()
     games = pd.read_csv(os.path.join('data','lines','today.csv'))
@@ -157,15 +158,25 @@ def main():
                                    ml_to_winpct(d_to_a(game['ml_home']))), 2)
         print('Away moneyline value:', round(away_output['ml_value'], 2), '%')
         print('Home moneyline value:', round(home_output['ml_value'], 2), '%')
+        kelly_away = third_kelly_calculator(game['ml_away'], 1-(mcGame.home_win_prob*1.08))
+        kelly_home = third_kelly_calculator(game['ml_home'], mcGame.home_win_prob*1.08)
+        away_output['kelly_risk'] = '${}'.format(round(bankroll*kelly_away/100.0,0))
+        home_output['kelly_risk'] = '${}'.format(round(bankroll*kelly_home/100.0,0))
+        print('Kelly br%: away {} ${}'.format(round(kelly_away,1),round(bankroll*kelly_away/100.0,0)))
+        print('Kelly br%: home {} ${}'.format(round(kelly_home,1),round(bankroll*kelly_home/100.0,0)))
 
-        if game['rl_away'] == game['rl_away']:
+        if 'rl_away' in game and game['rl_away'] == game['rl_away']:
             print("Vegas away RL:",round(d_to_a(game['rl_away']),0),
                 "|| Vegas home RL:",round(d_to_a(game['rl_home']),0))
             away_output['rl'] = round(d_to_a(game['rl_away']),0)
             home_output['rl'] = round(d_to_a(game['rl_home']),0)
 
+            if d_to_a(game['ml_away']) < -100 and d_to_a(game['ml_home']) < -100:
+                rl_fav = 'away' if d_to_a(game['rl_home']) < 100 else 'home'
+            else:
+                rl_fav = 'away' if d_to_a(game['ml_away']) < d_to_a(game['ml_home']) else 'home'
 
-            if d_to_a(game['ml_away']) < d_to_a(game['ml_home']):
+            if rl_fav == 'away':
                 away_sign = '-'
                 away_rl_win_pct = 1-(mcGame.home_rl_dog_wins/mcGame.number_of_sims * 1.08)
             else:
@@ -176,7 +187,7 @@ def main():
             away_output['rl_value'] = round((away_rl_win_pct - \
                                 ml_to_winpct(d_to_a(game['rl_away']))) * 100, 2)
 
-            if d_to_a(game['ml_away']) >= d_to_a(game['ml_home']):
+            if rl_fav == 'home':
                 home_sign = '-'
                 home_rl_win_pct = mcGame.home_rl_fav_wins/mcGame.number_of_sims * 1.08
             else:
@@ -200,14 +211,14 @@ def main():
             away_output['rl_value'] = "NA"
             home_output['rl_value'] = "NA"
 
-        if game['total_line'] == game['total_line']:
+        if 'total_line' in game and game['total_line'] == game['total_line']:
             print('Vegas over:',game['total_line'],round(d_to_a(game['over_odds']),0))
             away_output['total'] = str(game['total_line'])+" "+str(round(d_to_a(game['over_odds']),0))
             home_output['total'] = str(game['total_line'])+" "+str(round(d_to_a(game['under_odds']),0))
 
             over_prob = over_total_pct(mcGame.comb_histo, game['total_line'])
-            away_output['total_proj'] = round(mcGame.avg_total, 2)
-            home_output['total_proj'] = str(round(over_prob * 100.0, 1))+'%'
+            # away_output['total_proj'] = round(mcGame.avg_total, 2)
+            # home_output['total_proj'] = str(round(over_prob * 100.0, 1))+'%'
 
             away_output['total_value'] = round((over_prob - ml_to_winpct(d_to_a(game['over_odds']))) * 100, 2)
             home_output['total_value'] = round((1 - over_prob - ml_to_winpct(d_to_a(game['under_odds']))) * 100, 2)
@@ -220,12 +231,12 @@ def main():
         else:
             away_output['total'] = "NA"
             home_output['total'] = "NA"
-            away_output['total_proj'] = "NA"
-            home_output['total_proj'] = "NA"
+            # away_output['total_proj'] = "NA"
+            # home_output['total_proj'] = "NA"
             away_output['total_value'] = "NA"
             home_output['total_value'] = "NA"
 
-        if 'ml_away_f5' in game and game['ml_away_f5'] == game['ml_away_f5']:
+        if 'ml_away_f5' in game and 'ml_away_f5' in game and game['ml_away_f5'] == game['ml_away_f5']:
             print("Vegas away F5 ML:",round(d_to_a(game['ml_away_f5']),0),
                   "|| Vegas home F5 ML:",round(d_to_a(game['ml_home_f5']),0))
             away_output['ml_f5'] = round(d_to_a(game['ml_away_f5']),0)
@@ -305,8 +316,8 @@ def main():
             home_output['total_f5'] = str(game['total_line_f5'])+" "+str(round(d_to_a(game['under_odds_f5']),0))
 
             f5_over_prob = over_total_pct(mcGame.f5_comb_histo,game['total_line_f5'])
-            away_output['total_proj_f5'] = round(mcGame.f5_avg_total,2)
-            home_output['total_proj_f5'] = str(round(f5_over_prob * 100.0, 1))+'%'
+            # away_output['total_proj_f5'] = round(mcGame.f5_avg_total,2)
+            # home_output['total_proj_f5'] = str(round(f5_over_prob * 100.0, 1))+'%'
 
             away_output['total_value_f5'] = round((f5_over_prob - \
                                 ml_to_winpct(d_to_a(game['over_odds_f5']))) * 100, 2)
@@ -321,8 +332,8 @@ def main():
         else:
             away_output['total_f5'] = "NA"
             home_output['total_f5'] = "NA"
-            away_output['total_proj_f5'] = "NA"
-            home_output['total_proj_f5'] = "NA"
+            # away_output['total_proj_f5'] = "NA"
+            # home_output['total_proj_f5'] = "NA"
             away_output['total_value_f5'] = "NA"
             home_output['total_value_f5'] = "NA"
 
