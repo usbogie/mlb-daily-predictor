@@ -39,7 +39,7 @@ def get_batting_stats(lineup):
 
     steamer_batters['fullname'] = steamer_batters[['firstname', 'lastname']].apply(lambda x: ' '.join(x), axis=1)
     for i in range(1,10):
-        batter_name = lineup.iloc[0][str(i)]
+        batter_name = lineup.iloc[0]['{}_name'.format(str(i))]
 
         rows = steamer_batters.loc[(steamer_batters['fullname'] == batter_name)]
         ids = rows['steamerid'].unique().tolist()
