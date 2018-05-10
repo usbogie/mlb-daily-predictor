@@ -69,7 +69,7 @@ def get_pitching_stats(lineup):
                                                 'steamer_pitchers_2018.csv'))
 
     steamer_pitchers['fullname'] = steamer_pitchers[['firstname', 'lastname']].apply(lambda x: ' '.join(x), axis=1)
-    starter_name = lineup.iloc[0]['10']
+    starter_name = lineup.iloc[0]['10_name']
     print(starter_name)
     starting_pitcher = steamer_pitchers.loc[(steamer_pitchers['fullname'] == starter_name)]
     ids = starting_pitcher['steamerid'].unique().tolist()
@@ -359,5 +359,5 @@ if __name__ == '__main__':
     if len(sys.argv) > 1:
         print(sys.argv[1])
         gr = sys.argv[1] == 'gr'
-    #update_all(gr)
+    update_all(gr)
     main()
