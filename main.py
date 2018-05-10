@@ -2,7 +2,8 @@ from datetime import datetime
 from scrapers.scraper_utils import team_codes
 from storage.Game import Game
 from simulation.MonteCarlo import MonteCarlo
-from converters import winpct_to_ml, over_total_pct, d_to_a, ml_to_winpct, third_kelly_calculator
+from utils.converters import winpct_to_ml, over_total_pct, d_to_a, ml_to_winpct, third_kelly_calculator
+from utils.matchups import generate_matchups
 from scrapers.update import update_all
 import gsheets_upload
 import pandas as pd
@@ -30,9 +31,9 @@ def calc_averages():
 def get_batting_stats(lineup):
     lineup_stats = []
     avg_pitcher_stats = {'vL': {'PA': 5277, '1B': 464, '2B': 79, '3B': 7, 'HR': 27,
-                                'BB': 162, 'HBP': 16, 'K': 2028, 'bats': 'B'},
+                                'BB': 162, 'HBP': 16, 'K': 2028, 'bats': 'B', 'mlbamid': 'pitcher'},
                          'vR': {'PA': 5277, '1B': 464, '2B': 79, '3B': 7, 'HR': 27,
-                                'BB': 162, 'HBP': 16, 'K': 2028, 'bats': 'B'}}
+                                'BB': 162, 'HBP': 16, 'K': 2028, 'bats': 'B', 'mlbamid': 'pitcher'}}
     steamer_batters = pd.read_csv(os.path.join('data','steamer',
                                                'steamer_hitters_2018_split.csv'))
 
@@ -78,7 +79,7 @@ def get_pitching_stats(lineup):
         ans = input("Which player is actually playing? => ")
         ix = int(ans)
         starting_pitcher = starting_pitcher.iloc[[ix-1]]
-    pitchers = [starting_pitcher.squeeze().to_dict()]
+    pitchers = [(starting_pitcher.squeeze().to_dict(), 'SP')]
     with open(os.path.join('data','relievers.json')) as f:
         relievers = json.load(f)
     closers = []
@@ -134,8 +135,8 @@ def main():
         print("Simulating game:",today,game['time'],game['away'],game['home'])
         print("Away lineup is", away_lineup.iloc[0]['lineup_status'],
               "|| Home lineup is", home_lineup.iloc[0]['lineup_status'])
-        mcGame = MonteCarlo(game_obj,away_lineup_stats,home_lineup_stats,
-                            away_pitching,home_pitching,league_avgs, pf)
+        all_matchups = generate_matchups(pf, home_pitching, away_pitching, home_lineup_stats, away_lineup_stats, league_avgs)
+        mcGame = MonteCarlo(game_obj,away_lineup_stats,home_lineup_stats,away_pitching,home_pitching, all_matchups)
         mcGame.sim_games()
 
         print("Vegas away ML:",round(d_to_a(game['ml_away']),0),
@@ -358,5 +359,5 @@ if __name__ == '__main__':
     if len(sys.argv) > 1:
         print(sys.argv[1])
         gr = sys.argv[1] == 'gr'
-    update_all(gr)
+    #update_all(gr)
     main()

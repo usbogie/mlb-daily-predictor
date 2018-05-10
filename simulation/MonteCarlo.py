@@ -13,9 +13,8 @@ class MonteCarlo(object):
     home_lineup = []
     away_pitchers = []
     home_pitchers = []
-    league_avgs = {}
+    matchups = {}
     game_completed = None
-    park_factors = {}
 
     home_batter = 0
     away_batter = 0
@@ -56,14 +55,13 @@ class MonteCarlo(object):
     f5_comb_histo = []
     number_of_sims = 10000
 
-    def __init__(self, game, away_lineup, home_lineup, away_pitchers, home_pitchers, league_avgs, park_factors):
+    def __init__(self, game, away_lineup, home_lineup, away_pitchers, home_pitchers, matchups):
         self.game = game
         self.away_lineup = away_lineup
         self.home_lineup = home_lineup
         self.away_pitchers = away_pitchers
         self.home_pitchers = home_pitchers
-        self.league_avgs = league_avgs
-        self.park_factors = park_factors
+        self.matchups = matchups
 
         self.home_histo = [0]*50
         self.away_histo = [0]*50
@@ -182,9 +180,10 @@ class MonteCarlo(object):
 
     def sim_atbat(self, batter, pitcher, state):
         # possible outcomes: K,BB,HBP,1B,2B,3B,HR,OutNonK
-        rand = random.random()
-        outcome_dict = self.get_outcome_distribution(batter,pitcher)
+
+        outcome_dict = self.matchups[(pitcher['mlbamid'],batter['vL']['mlbamid'])]
         event = None
+        rand = random.random()
         for i in range(len(list(outcome_dict))):
             if rand < sum(list(outcome_dict.values())[:i+1]):
                 event = list(outcome_dict.keys())[i]
@@ -285,44 +284,11 @@ class MonteCarlo(object):
             self.scores_in_first = self.scores_in_first + 1
         self.scoreboard.inc_runs()
 
-    def get_outcome_distribution(self, batter, pitcher):
-        park_factors = self.park_factors[0]
-        pitcher_hand = pitcher['Throws']
-        try:
-            batter_split = batter['v'+pitcher_hand]
-        except:
-            print(pitcher_hand)
-            print(pitcher)
-            sys.exit()
-        batter_hand = batter_split['bats']
-        batter_hand = batter_hand if batter_hand != 'B' else ('R' if pitcher_hand == 'L' else 'L')
-        outcomes_w_factor = ["1B","2B","3B","HR"]
-        outcomes_wo_factor = ["K","HBP","BB"]
-        outcomes = outcomes_w_factor +outcomes_wo_factor
-        bat_outcomes_w_factor = {outcome: batter_split[outcome]*(park_factors[outcome+batter_hand]/100)/batter_split["PA"] for outcome in outcomes_w_factor}
-        bat_outcomes_wo_factor = {outcome: batter_split[outcome]/batter_split["PA"] for outcome in outcomes_wo_factor}
-        bat_outcomes = {**bat_outcomes_w_factor,**bat_outcomes_wo_factor}
-        bat_outcomes["OutNonK"] = 1-sum(bat_outcomes.values())
-        p_outcomes = ["K","BB","HBP","1b","2b","3b","HR"]
-        pitch_outcomes = {outcome: pitcher[outcome]/pitcher["TBF"] for outcome in p_outcomes}
-        pitch_outcomes["1B"] = pitch_outcomes.pop("1b")
-        pitch_outcomes["2B"] = pitch_outcomes.pop("2b")
-        pitch_outcomes["3B"] = pitch_outcomes.pop("3b")
-        pitch_outcomes["OutNonK"] = 1-sum(pitch_outcomes.values())
-        league_outcomes = dict(self.league_avgs)
-        league_outcomes["OutNonK"] = 1-sum(league_outcomes.values())
-        outcomes.append("OutNonK")
-        denom = {outcome: bat_outcomes[outcome]*pitch_outcomes[outcome]/league_outcomes[outcome]
-                 for outcome in outcomes}
-        normalizer = sum(denom.values())
-        outcome_dict = {k: v/normalizer for k, v in denom.items()}
-        return outcome_dict
-
     def determine_pitcher(self, home):
         #print(self.scoreboard.get_away_runs(),'to',self.scoreboard.get_home_runs(), 'frame', len(self.scoreboard.frames))
         pitchers = self.home_pitchers if home else self.away_pitchers
         pitcher_num = self.home_pitcher if home else self.away_pitcher
-        pitcher = pitchers[pitcher_num]
+        pitcher = pitchers[pitcher_num][0]
         if pitcher_num == 0:
             # determine if starter should be pulled
             pull_starter = False

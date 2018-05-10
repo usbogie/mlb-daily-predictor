@@ -507,3 +507,18 @@ key,away_id,away_name,away_score,date,gamePk,home_id,home_name,home_score
 2018/05/07/minmlb-slnmlb-1,142,Minnesota Twins,6,2018-05-07,529929,138,St. Louis Cardinals,0
 2018/05/07/houmlb-oakmlb-1,117,Houston Astros,16,2018-05-07,529927,133,Oakland Athletics,2
 2018/05/07/wasmlb-sdnmlb-1,120,Washington Nationals,8,2018-05-07,529932,135,San Diego Padres,5
+2018/05/08/minmlb-slnmlb-1,142,Minnesota Twins,7,2018-05-08,529942,138,St. Louis Cardinals,1
+2018/05/08/bosmlb-nyamlb-1,111,Boston Red Sox,2,2018-05-08,529935,147,New York Yankees,3
+2018/05/08/kcamlb-balmlb-1,118,Kansas City Royals,15,2018-05-08,529939,110,Baltimore Orioles,7
+2018/05/08/sfnmlb-phimlb-1,137,San Francisco Giants,2,2018-05-08,529945,143,Philadelphia Phillies,4
+2018/05/08/seamlb-tormlb-1,136,Seattle Mariners,5,2018-05-08,529946,141,Toronto Blue Jays,0
+2018/05/08/atlmlb-tbamlb-1,144,Atlanta Braves,1,2018-05-08,529934,139,Tampa Bay Rays,0
+2018/05/08/nynmlb-cinmlb-1,121,New York Mets,2,2018-05-08,529943,113,Cincinnati Reds,7
+2018/05/08/clemlb-milmlb-1,114,Cleveland Indians,2,2018-05-08,529936,158,Milwaukee Brewers,3
+2018/05/08/detmlb-texmlb-1,116,Detroit Tigers,7,2018-05-08,529937,140,Texas Rangers,4
+2018/05/08/miamlb-chnmlb-1,146,Miami Marlins,3,2018-05-08,529941,112,Chicago Cubs,4
+2018/05/08/pitmlb-chamlb-1,134,Pittsburgh Pirates,10,2018-05-08,529944,145,Chicago White Sox,6
+2018/05/08/anamlb-colmlb-1,108,Los Angeles Angels,2,2018-05-08,529940,115,Colorado Rockies,4
+2018/05/08/houmlb-oakmlb-1,117,Houston Astros,4,2018-05-08,529938,133,Oakland Athletics,2
+2018/05/08/arimlb-lanmlb-1,109,Arizona Diamondbacks,8,2018-05-08,529933,119,Los Angeles Dodgers,5
+2018/05/08/wasmlb-sdnmlb-1,120,Washington Nationals,4,2018-05-08,529947,135,San Diego Padres,0
