@@ -16,11 +16,13 @@ def get_outcome_distribution(park_factors, league_avgs, batter, pitcher):
     park_factors = park_factors[0]
     pitcher_hand = pitcher['Throws']
     try:
-        batter_split = batter['v'+pitcher_hand]
+        if pitcher_hand == 'B':
+            batter_split = batter['vR'] if batter['vR']['bats'] == 'R' else batter['vL']
+        else:
+            batter_split = batter['v'+pitcher_hand]
     except:
-        print(pitcher_hand)
+        print(pitcher)
         print(batter)
-        sys.exit()
     batter_hand = batter_split['bats']
     batter_hand = batter_hand if batter_hand != 'B' else ('R' if pitcher_hand == 'L' else 'L')
     outcomes_w_factor = ["1B","2B","3B","HR"]

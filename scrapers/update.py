@@ -45,8 +45,8 @@ def get_relievers():
     print("RELIEVERS SAVED\n\n")
 
 def update_all(gr):
+    if (gr):
+        get_relievers()
     update_games()
     update_lineups()
     update_lines()
-    if (gr):
-        get_relievers()

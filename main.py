@@ -135,7 +135,10 @@ def main():
         print("Simulating game:",today,game['time'],game['away'],game['home'])
         print("Away lineup is", away_lineup.iloc[0]['lineup_status'],
               "|| Home lineup is", home_lineup.iloc[0]['lineup_status'])
-        all_matchups = generate_matchups(pf, home_pitching, away_pitching, home_lineup_stats, away_lineup_stats, league_avgs)
+        try:
+            all_matchups = generate_matchups(pf, home_pitching, away_pitching, home_lineup_stats, away_lineup_stats, league_avgs)
+        except:
+            continue
         mcGame = MonteCarlo(game_obj,away_lineup_stats,home_lineup_stats,away_pitching,home_pitching, all_matchups)
         mcGame.sim_games()
 
