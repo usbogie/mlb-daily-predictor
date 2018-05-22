@@ -47,25 +47,21 @@ def get_batting_stats(lineup):
             print(batter_name, "is probably a pitcher, given avg pitcher stats")
             lineup_stats.append(dict(avg_pitcher_stats))
             continue
-        ans = None
         if len(ids) > 1:
-            if ans is None:
-                print("DUPLICATE something is wrong")
-                print(rows[:len(rows)//3])
-                ans = input("Which player is actually playing? => ")
+            print("DUPLICATE something is wrong")
+            print(rows[:len(rows)//3])
+            ans = input("Which player is actually playing? => ")
             ix = int(ans)
             rows = rows.iloc[ix-1::len(ids), :]
-            vL = rows[rows['split'] == 'vL'].squeeze().to_dict()
-            vR = rows[rows['split'] == 'vR'].squeeze().to_dict()
-            lineup_stats.append(dict(vL = vL, vR = vR))
-        else:
-            vL = rows[rows['split'] == 'vL'].squeeze().to_dict()
-            vR = rows[rows['split'] == 'vR'].squeeze().to_dict()
-            lineup_stats.append(dict(vL = vL, vR = vR))
+        vL = rows[rows['split'] == 'vL'].squeeze().to_dict()
+        vR = rows[rows['split'] == 'vR'].squeeze().to_dict()
+        lineup_stats.append(dict(vL = vL, vR = vR))
     return lineup_stats
 
 def get_pitching_stats(lineup):
     steamer_pitchers = pd.read_csv(os.path.join('data','steamer',
+                                            'steamer_pitchers_2018_split.csv'))
+    steamer_starters = pd.read_csv(os.path.join('data','steamer',
                                                 'steamer_pitchers_2018.csv'))
 
     steamer_pitchers['fullname'] = steamer_pitchers[['firstname', 'lastname']].apply(lambda x: ' '.join(x), axis=1)
@@ -75,11 +71,23 @@ def get_pitching_stats(lineup):
     ids = starting_pitcher['steamerid'].unique().tolist()
     if len(ids) > 1:
         print("DUPLICATE something is wrong")
-        print(starting_pitcher)
+        print(starting_pitcher[:len(starting_pitcher)//12])
         ans = input("Which player is actually playing? => ")
         ix = int(ans)
-        starting_pitcher = starting_pitcher.iloc[[ix-1]]
-    pitchers = [(starting_pitcher.squeeze().to_dict(), 'SP')]
+        starting_pitcher = starting_pitcher.iloc[ix-1::len(ids), :]
+    pitchers = [{'vL': starting_pitcher[
+                    (starting_pitcher['pn'] == 1) &
+                    (starting_pitcher['role'] == 'SP') &
+                    (starting_pitcher['split'] == 'vL')
+                ].squeeze().to_dict(),
+                'vR': starting_pitcher[
+                    (starting_pitcher['pn'] == 1) &
+                    (starting_pitcher['role'] == 'SP') &
+                    (starting_pitcher['split'] == 'vR')
+                ].squeeze().to_dict(),
+                'usage': 'SP'}]
+    pitchers[0]['vL']['GS'] = steamer_starters[steamer_starters['mlbamid'] == pitchers[0]['vL']['mlbamid']].iloc[0]['GS']
+    pitchers[0]['vL']['start_IP'] = steamer_starters[steamer_starters['mlbamid'] == pitchers[0]['vL']['mlbamid']].iloc[0]['start_IP']
     with open(os.path.join('data','relievers.json')) as f:
         relievers = json.load(f)
     closers = []
@@ -92,14 +100,25 @@ def get_pitching_stats(lineup):
             continue
         if len(ids) > 1:
             print("DUPLICATE something is wrong")
-            print(reliever)
+            print(reliever[:len(starting_pitcher)//12])
             ans = input("Which player is actually playing? => ")
             ix = int(ans)
-            reliever = reliever.iloc[[ix-1]]
+            reliever = reliever.iloc[ix-1::len(ids), :]
+        pitcher = {'vL': reliever[
+                        (reliever['pn'] == 1) &
+                        (reliever['role'] == 'RP') &
+                        (reliever['split'] == 'vL')
+                    ].squeeze().to_dict(),
+                    'vR': reliever[
+                        (reliever['pn'] == 1) &
+                        (reliever['role'] == 'RP') &
+                        (reliever['split'] == 'vR')
+                    ].squeeze().to_dict(),
+                    'usage': info[1]}
         if 'CL' not in info:
-            pitchers.append((reliever.squeeze().to_dict(), info[1]))
+            pitchers.append(pitcher)
         else:
-            closers.append((reliever.squeeze().to_dict(), info[1]))
+            closers.append(pitcher)
     random.shuffle(closers)
     pitchers.extend(closers)
     return pitchers
@@ -133,12 +152,9 @@ def main():
         pf = park_factors.loc[park_factors["Team"]==game["home"]].to_dict(orient='records')
 
         print("Simulating game:",today,game['time'],game['away'],game['home'])
+        all_matchups = generate_matchups(pf, home_pitching, away_pitching, home_lineup_stats, away_lineup_stats, league_avgs)
         print("Away lineup is", away_lineup.iloc[0]['lineup_status'],
               "|| Home lineup is", home_lineup.iloc[0]['lineup_status'])
-        try:
-            all_matchups = generate_matchups(pf, home_pitching, away_pitching, home_lineup_stats, away_lineup_stats, league_avgs)
-        except:
-            continue
         mcGame = MonteCarlo(game_obj,away_lineup_stats,home_lineup_stats,away_pitching,home_pitching, all_matchups)
         mcGame.sim_games()
 

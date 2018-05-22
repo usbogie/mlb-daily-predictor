@@ -14,6 +14,7 @@ def replace_names(name):
     name = name.replace('Mike Wright Jr.','Mike Wright').replace('Danny Coulombe', 'Daniel Coulombe')
     name = name.replace('Chasen Bradford','Chase Bradford').replace('Jorge De La Rosa','Jorge de la Rosa')
     name = name.replace('Sam Tuivailala','Samuel Tuivailala').replace('Felix Peña', 'Felix Pena')
+    name = name.replace('Lucas Sims', 'Luke Sims')
     return name
 
 def get_usage_breakdown():
@@ -47,6 +48,7 @@ def get_current_relievers(team):
     started_bullpen = False
     counter = 0
     pitchers = {}
+    last_role = None
     for ix, tr in enumerate(trs):
         tds = tr.findAll('td')
         for td in tds:
@@ -58,7 +60,13 @@ def get_current_relievers(team):
                 continue
             if len(tds[2].text.strip()) == 0:
                 break
-            pitchers[replace_names(tds[5].text)] = tds[2].text
+            if last_role is None or last_role != 'RP':
+                last_role = tds[2].text
+
+            if tds[5].text == 'R' or tds[5].text == 'L':
+                pitchers[replace_names(tds[4].text)] = last_role
+            else:
+                pitchers[replace_names(tds[5].text)] = tds[2].text
     return pitchers
 
 def get_todays_relievers():
@@ -70,11 +78,11 @@ def get_todays_relievers():
         for pitcher, role in pitchers.items():
             if pitcher not in usages[team] or usages[team][pitcher] == 0:
                 print("No usage for", pitcher,"might be a recent callup?")
-                print(usages[team])
                 team_pitchers[team][pitcher] = (role, 1/(len(usages[team]) + 1))
             else:
                 team_pitchers[team][pitcher] = (role, usages[team][pitcher])
         new_sum = sum(n for _,n in team_pitchers[team].values())
         for pitcher, (role, usage) in team_pitchers[team].items():
             team_pitchers[team][pitcher] = (role, usage/new_sum)
+        print(team_pitchers[team])
     return team_pitchers

@@ -181,7 +181,7 @@ class MonteCarlo(object):
     def sim_atbat(self, batter, pitcher, state):
         # possible outcomes: K,BB,HBP,1B,2B,3B,HR,OutNonK
 
-        outcome_dict = self.matchups[(pitcher['mlbamid'],batter['vL']['mlbamid'])]
+        outcome_dict = self.matchups[(pitcher['vL']['mlbamid'],batter['vL']['mlbamid'])]
         event = None
         rand = random.random()
         for i in range(len(list(outcome_dict))):
@@ -288,12 +288,12 @@ class MonteCarlo(object):
         #print(self.scoreboard.get_away_runs(),'to',self.scoreboard.get_home_runs(), 'frame', len(self.scoreboard.frames))
         pitchers = self.home_pitchers if home else self.away_pitchers
         pitcher_num = self.home_pitcher if home else self.away_pitcher
-        pitcher = pitchers[pitcher_num][0]
+        pitcher = pitchers[pitcher_num]
         if pitcher_num == 0:
             # determine if starter should be pulled
             pull_starter = False
-            if not pitcher['GS'] == 0.0:
-                avg_start_length = pitcher['start_IP'] / pitcher['GS']
+            if not pitcher['vL']['GS'] == 0.0:
+                avg_start_length = pitcher['vL']['start_IP'] / pitcher['vL']['GS']
             else:
                 avg_start_length = 4.5
             cur_inning = len(self.scoreboard.frames)//2 + 1
@@ -319,14 +319,14 @@ class MonteCarlo(object):
                 (not home and home_margin > -5)):
             #print("Closer situation")
             #print(team_closers[i]['lastname'], 'is the closer')
-            return pitchers[-1][0]
+            return pitchers[-1]
 
         #randomly select reliever based on usage
         relief_pitchers = [x for x in pitchers[1:-1]]
         rand = random.random()
         for i in range(0,len(relief_pitchers)):
-            if rand < sum([x[1] for x in relief_pitchers[:i+1]]):
-                # print(relief_pitchers[i][0]['fullname'], 'is the new reliever')
-                return relief_pitchers[i][0]
-        # print(relief_pitchers[i][0]['fullname'], 'is the new reliever')
-        return random.choice(relief_pitchers)[0]
+            if rand < sum([x['usage'] for x in relief_pitchers[:i+1]]):
+                # print(relief_pitchers[i]['fullname'], 'is the new reliever')
+                return relief_pitchers[i]
+        # print(relief_pitchers[i]['fullname'], 'is the new reliever')
+        return random.choice(relief_pitchers)
