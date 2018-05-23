@@ -5,7 +5,7 @@ import os
 
 year = 2018
 yesterday = (datetime.now() - timedelta(1)).strftime('%Y-%m-%d')
-today = (datetime.now() + timedelta(1)).strftime('%Y-%m-%d')
+today = (datetime.now() + timedelta(0)).strftime('%Y-%m-%d')
 
 def update_games():
     print("getting games")

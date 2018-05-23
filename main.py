@@ -100,7 +100,7 @@ def get_pitching_stats(lineup):
             continue
         if len(ids) > 1:
             print("DUPLICATE something is wrong")
-            print(reliever[:len(starting_pitcher)//12])
+            print(reliever[:len(reliever)//12])
             ans = input("Which player is actually playing? => ")
             ix = int(ans)
             reliever = reliever.iloc[ix-1::len(ids), :]
