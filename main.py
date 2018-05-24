@@ -13,6 +13,16 @@ import sys
 import os
 import argparse
 
+steamer_batters = pd.read_csv(os.path.join('data','steamer', 'steamer_hitters_2018_split.csv'))
+steamer_batters['fullname'] = steamer_batters[['firstname', 'lastname']].apply(lambda x: ' '.join(x), axis=1)
+
+steamer_pitchers = pd.read_csv(os.path.join('data','steamer','steamer_pitchers_2018_split.csv'))
+steamer_pitchers['fullname'] = steamer_pitchers[['firstname', 'lastname']].apply(lambda x: ' '.join(x), axis=1)
+steamer_starters = pd.read_csv(os.path.join('data','steamer','steamer_pitchers_2018.csv'))
+
+with open(os.path.join('data','lineups','flabs_to_mlb_ids.json')) as f:
+    fantasylabs_to_mlb = json.load(f)
+print(fantasylabs_to_mlb)
 
 def calc_averages():
     avgs_dict = dict()
@@ -34,10 +44,7 @@ def get_batting_stats(lineup):
                                 'BB': 162, 'HBP': 16, 'K': 2028, 'bats': 'B', 'mlbamid': 'pitcher'},
                          'vR': {'PA': 5277, '1B': 464, '2B': 79, '3B': 7, 'HR': 27,
                                 'BB': 162, 'HBP': 16, 'K': 2028, 'bats': 'B', 'mlbamid': 'pitcher'}}
-    steamer_batters = pd.read_csv(os.path.join('data','steamer',
-                                               'steamer_hitters_2018_split.csv'))
 
-    steamer_batters['fullname'] = steamer_batters[['firstname', 'lastname']].apply(lambda x: ' '.join(x), axis=1)
     for i in range(1,10):
         batter_name = lineup.iloc[0]['{}_name'.format(str(i))]
 
@@ -59,12 +66,6 @@ def get_batting_stats(lineup):
     return lineup_stats
 
 def get_pitching_stats(lineup):
-    steamer_pitchers = pd.read_csv(os.path.join('data','steamer',
-                                            'steamer_pitchers_2018_split.csv'))
-    steamer_starters = pd.read_csv(os.path.join('data','steamer',
-                                                'steamer_pitchers_2018.csv'))
-
-    steamer_pitchers['fullname'] = steamer_pitchers[['firstname', 'lastname']].apply(lambda x: ' '.join(x), axis=1)
     starter_name = lineup.iloc[0]['10_name']
     print(starter_name)
     starting_pitcher = steamer_pitchers.loc[(steamer_pitchers['fullname'] == starter_name)]
@@ -88,6 +89,7 @@ def get_pitching_stats(lineup):
                 'usage': 'SP'}]
     pitchers[0]['vL']['GS'] = steamer_starters[steamer_starters['mlbamid'] == pitchers[0]['vL']['mlbamid']].iloc[0]['GS']
     pitchers[0]['vL']['start_IP'] = steamer_starters[steamer_starters['mlbamid'] == pitchers[0]['vL']['mlbamid']].iloc[0]['start_IP']
+
     with open(os.path.join('data','relievers.json')) as f:
         relievers = json.load(f)
     closers = []
