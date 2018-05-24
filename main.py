@@ -22,7 +22,6 @@ steamer_starters = pd.read_csv(os.path.join('data','steamer','steamer_pitchers_2
 
 with open(os.path.join('data','lineups','flabs_to_mlb_ids.json')) as f:
     fantasylabs_to_mlb = json.load(f)
-print(fantasylabs_to_mlb)
 
 def calc_averages():
     avgs_dict = dict()
@@ -46,20 +45,29 @@ def get_batting_stats(lineup):
                                 'BB': 162, 'HBP': 16, 'K': 2028, 'bats': 'B', 'mlbamid': 'pitcher'}}
 
     for i in range(1,10):
+        rows = None
         batter_name = lineup.iloc[0]['{}_name'.format(str(i))]
-
-        rows = steamer_batters.loc[(steamer_batters['fullname'] == batter_name)]
-        ids = rows['steamerid'].unique().tolist()
-        if len(ids) == 0:
-            print(batter_name, "is probably a pitcher, given avg pitcher stats")
-            lineup_stats.append(dict(avg_pitcher_stats))
-            continue
-        if len(ids) > 1:
-            print("DUPLICATE something is wrong")
-            print(rows[:len(rows)//3])
-            ans = input("Which player is actually playing? => ")
-            ix = int(ans)
-            rows = rows.iloc[ix-1::len(ids), :]
+        batter_fantasylabs_id = str(lineup.iloc[0]['{}_id'.format(str(i))])
+        if batter_fantasylabs_id in fantasylabs_to_mlb and batter_fantasylabs_id != str(lineup.iloc[0]['10_id']):
+            if batter_name != fantasylabs_to_mlb[batter_fantasylabs_id][0]:
+                print("Something is wrong with player matching!!", fantasylabs_to_mlb[batter_fantasylabs_id])
+            rows = steamer_batters.loc[(steamer_batters['mlbamid'] == int(fantasylabs_to_mlb[batter_fantasylabs_id][1]))]
+        else:
+            rows = steamer_batters.loc[(steamer_batters['fullname'] == batter_name)]
+            ids = rows['steamerid'].unique().tolist()
+            if len(ids) == 0:
+                print(batter_name, "is probably a pitcher, given avg pitcher stats")
+                lineup_stats.append(dict(avg_pitcher_stats))
+                continue
+            if len(ids) > 1:
+                print("DUPLICATE something is wrong")
+                print(rows[:len(rows)//3])
+                ans = input("Which player is actually playing? => ")
+                ix = int(ans)
+                rows = rows.iloc[ix-1::len(ids), :]
+            print("NEW PLAYER! Matching", batter_name, "to", rows['fullname'].iloc[0])
+            fantasylabs_to_mlb[batter_fantasylabs_id] = (rows['fullname'].iloc[0], str(rows['mlbamid'].iloc[0]))
+            print('Matched', batter_fantasylabs_id, "to", rows['mlbamid'].iloc[0])
         vL = rows[rows['split'] == 'vL'].squeeze().to_dict()
         vR = rows[rows['split'] == 'vR'].squeeze().to_dict()
         lineup_stats.append(dict(vL = vL, vR = vR))
@@ -67,15 +75,25 @@ def get_batting_stats(lineup):
 
 def get_pitching_stats(lineup):
     starter_name = lineup.iloc[0]['10_name']
+    starter_fantasylabs_id = str(lineup.iloc[0]['10_id'])
     print(starter_name)
-    starting_pitcher = steamer_pitchers.loc[(steamer_pitchers['fullname'] == starter_name)]
-    ids = starting_pitcher['steamerid'].unique().tolist()
-    if len(ids) > 1:
-        print("DUPLICATE something is wrong")
-        print(starting_pitcher[:len(starting_pitcher)//12])
-        ans = input("Which player is actually playing? => ")
-        ix = int(ans)
-        starting_pitcher = starting_pitcher.iloc[ix-1::len(ids), :]
+    starting_pitcher = None
+    if starter_fantasylabs_id in fantasylabs_to_mlb:
+        if starter_name != fantasylabs_to_mlb[starter_fantasylabs_id][0]:
+            print("Something is wrong with player matching!!", fantasylabs_to_mlb[starter_fantasylabs_id])
+        starting_pitcher = steamer_pitchers.loc[(steamer_pitchers['mlbamid'] == int(fantasylabs_to_mlb[starter_fantasylabs_id][1]))]
+    else:
+        starting_pitcher = steamer_pitchers.loc[(steamer_pitchers['fullname'] == starter_name)]
+        ids = starting_pitcher['steamerid'].unique().tolist()
+        if len(ids) > 1:
+            print("DUPLICATE something is wrong")
+            print(starting_pitcher[:len(starting_pitcher)//12])
+            ans = input("Which player is actually playing? => ")
+            ix = int(ans)
+            starting_pitcher = starting_pitcher.iloc[ix-1::len(ids), :]
+        print("NEW PLAYER! Matching", starter_name, "to", starting_pitcher['fullname'].iloc[0])
+        fantasylabs_to_mlb[starter_fantasylabs_id] = (starting_pitcher['fullname'].iloc[0], str(starting_pitcher['mlbamid'].iloc[0]))
+        print('Matched', starter_fantasylabs_id, "to", starting_pitcher['mlbamid'].iloc[0])
     pitchers = [{'vL': starting_pitcher[
                     (starting_pitcher['pn'] == 1) &
                     (starting_pitcher['role'] == 'SP') &
@@ -135,6 +153,7 @@ def main():
                                             'park_factors_handedness.csv'))
     game_outputs = []
     for index, game in games.iterrows():
+        print()
         game_obj = Game(game['date'],game['time'],game['away'],game['home'])
         away_lineup = lineups.loc[(lineups['key'] == game['key']) & \
                                   (game['away'] == lineups['name'])]
@@ -372,6 +391,10 @@ def main():
         print('\n')
         game_outputs.append((game['time'], away_output, home_output))
     gsheets_upload.update_spreadsheet(game_outputs)
+
+    with open(os.path.join('data','lineups','flabs_to_mlb_ids.json'), 'r+') as f:
+        f.truncate()
+        json.dump(fantasylabs_to_mlb, f)
 
 
 if __name__ == '__main__':

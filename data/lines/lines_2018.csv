@@ -677,3 +677,18 @@ key,away,date,home,ml_away,ml_away_f5,ml_home,ml_home_f5,over_odds,over_odds_f5,
 2018/05/22/kcamlb-slnmlb-1,Kansas City Royals,2018-05-22,St. Louis Cardinals,2.73,2.7,1.52,1.5,1.87,1.83,1.8,2.15,2.05,1.74,8:15p,8.5,4.5,1.95,2.0
 2018/05/22/seamlb-oakmlb-1,Seattle Mariners,2018-05-22,Oakland Athletics,2.26,2.2,1.71,1.71,1.84,1.91,1.59,1.83,2.48,2.0,10:05p,8.0,4.5,1.99,1.91
 2018/05/22/colmlb-lanmlb-1,Colorado Rockies,2018-05-22,Los Angeles Dodgers,2.31,2.25,1.69,1.69,1.91,1.84,1.57,1.87,2.51,1.95,10:10p,8.5,4.5,1.91,1.99
+2018/05/23/detmlb-minmlb-1,Detroit Tigers,2018-05-23,Minnesota Twins,2.39,2.3,1.65,1.67,1.96,1.99,1.62,1.91,2.4,1.91,1:10p,8.5,4.5,1.86,1.84
+2018/05/23/arimlb-milmlb-1,Arizona Diamondbacks,2018-05-23,Milwaukee Brewers,2.01,1.95,1.9,1.87,1.91,1.99,1.47,1.69,2.77,2.25,1:10p,8.0,4.5,1.91,1.84
+2018/05/23/kcamlb-slnmlb-1,Kansas City Royals,2018-05-23,St. Louis Cardinals,2.42,2.3,1.63,1.67,1.85,1.87,1.62,1.91,2.4,1.91,1:15p,8.0,4.0,1.98,1.95
+2018/05/23/sfnmlb-houmlb-1,San Francisco Giants,2018-05-23,Houston Astros,3.77,3.35,1.32,1.35,1.86,1.74,2.23,2.55,1.7,1.56,2:10p,8.0,4.0,1.96,2.15
+2018/05/23/sdnmlb-wasmlb-1,San Diego Padres,2018-05-23,Washington Nationals,2.31,2.25,1.69,1.69,1.84,1.84,1.59,1.83,2.48,2.0,4:05p,8.5,4.5,1.99,1.99
+2018/05/23/nyamlb-texmlb-1,New York Yankees,2018-05-23,Texas Rangers,1.49,1.47,2.84,2.75,2.0,1.83,1.75,1.66,2.13,2.28,7:05p,9.5,5.0,1.83,2.0
+2018/05/23/atlmlb-phimlb-1,Atlanta Braves,2018-05-23,Philadelphia Phillies,2.08,1.99,1.85,1.84,1.74,1.85,1.49,1.79,2.72,2.09,7:05p,8.5,4.5,2.12,1.97
+2018/05/23/anamlb-tormlb-1,Los Angeles Angels,2018-05-23,Toronto Blue Jays,1.8,1.71,2.14,2.2,1.99,1.91,2.21,2.0,1.71,1.83,7:07p,9.5,5.0,1.84,1.91
+2018/05/23/pitmlb-cinmlb-1,Pittsburgh Pirates,2018-05-23,Cincinnati Reds,1.87,1.77,2.05,2.1,1.86,1.87,2.35,2.1,1.65,1.77,7:10p,9.5,5.5,1.96,1.95
+2018/05/23/miamlb-nynmlb-1,Miami Marlins,2018-05-23,New York Mets,3.13,3.3,1.42,1.36,2.0,2.05,1.95,2.4,1.87,1.61,7:10p,7.5,4.0,1.83,1.8
+2018/05/23/bosmlb-tbamlb-1,Boston Red Sox,2018-05-23,Tampa Bay Rays,1.71,1.67,2.26,2.29,1.85,1.98,2.15,1.95,1.74,1.87,7:10p,7.5,4.0,1.97,1.84
+2018/05/23/clemlb-chnmlb-1,Cleveland Indians,2018-05-23,Chicago Cubs,2.56,2.5,1.58,1.57,1.87,2.05,1.71,2.0,2.2,1.83,8:05p,8.5,5.0,1.95,1.8
+2018/05/23/balmlb-chamlb-1,Baltimore Orioles,2018-05-23,Chicago White Sox,1.84,1.83,2.09,2.0,1.8,1.8,2.31,2.2,1.66,1.71,8:10p,9.0,5.0,2.05,2.05
+2018/05/23/seamlb-oakmlb-1,Seattle Mariners,2018-05-23,Oakland Athletics,2.02,1.99,1.89,1.84,1.95,1.84,1.48,1.69,2.76,2.25,10:05p,8.5,4.5,1.87,1.99
+2018/05/23/colmlb-lanmlb-1,Colorado Rockies,2018-05-23,Los Angeles Dodgers,2.64,2.6,1.55,1.53,1.91,1.96,1.71,2.05,2.2,1.8,10:10p,7.5,4.0,1.91,1.86
