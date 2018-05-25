@@ -4,6 +4,7 @@ from storage.Game import Game
 from simulation.MonteCarlo import MonteCarlo
 from utils.converters import winpct_to_ml, over_total_pct, d_to_a, ml_to_winpct, third_kelly_calculator
 from utils.matchups import generate_matchups
+from utils.relievers import determine_reliever_2018
 from scrapers.update import update_all
 import gsheets_upload
 import pandas as pd
@@ -21,7 +22,7 @@ steamer_pitchers['fullname'] = steamer_pitchers[['firstname', 'lastname']].apply
 steamer_starters = pd.read_csv(os.path.join('data','steamer','steamer_pitchers_2018.csv'))
 
 with open(os.path.join('data','relievers.json')) as f:
-    relievers = json.load(f)
+    all_relievers = json.load(f)
 
 with open(os.path.join('data','lineups','flabs_to_mlb_ids.json')) as f:
     fantasylabs_to_mlb = json.load(f)
@@ -112,7 +113,7 @@ def get_pitching_stats(lineup):
     pitchers[0]['vL']['start_IP'] = steamer_starters[steamer_starters['mlbamid'] == pitchers[0]['vL']['mlbamid']].iloc[0]['start_IP']
 
     closers = []
-    relievers = relievers[lineup.iloc[0]['name']]
+    relievers = all_relievers[lineup.iloc[0]['name']]
     for name, info in relievers.items():
         reliever = steamer_pitchers.loc[(steamer_pitchers['fullname'] == name)]
         ids = reliever['steamerid'].unique().tolist()
@@ -120,11 +121,16 @@ def get_pitching_stats(lineup):
             print('No pitcher matched', name)
             continue
         if len(ids) > 1:
-            print("DUPLICATE something is wrong")
-            print(reliever[:len(reliever)//12])
-            ans = input("Which player is actually playing? => ")
-            ix = int(ans)
-            reliever = reliever.iloc[ix-1::len(ids), :]
+            reliever_id = determine_reliever_2018(name, lineup.iloc[0]['name'])
+            if not reliever_id:
+                print("DUPLICATE something is wrong")
+                print(reliever[:len(reliever)//12])
+                ans = input("Which player is actually playing? => ")
+                ix = int(ans)
+                reliever = reliever.iloc[ix-1::len(ids), :]
+            else:
+                reliever = steamer_pitchers.loc[(steamer_pitchers['mlbamid'] == reliever_id)]
+
         pitcher = {'vL': reliever[
                         (reliever['pn'] == 1) &
                         (reliever['role'] == 'RP') &
