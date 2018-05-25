@@ -20,6 +20,9 @@ steamer_pitchers = pd.read_csv(os.path.join('data','steamer','steamer_pitchers_2
 steamer_pitchers['fullname'] = steamer_pitchers[['firstname', 'lastname']].apply(lambda x: ' '.join(x), axis=1)
 steamer_starters = pd.read_csv(os.path.join('data','steamer','steamer_pitchers_2018.csv'))
 
+with open(os.path.join('data','relievers.json')) as f:
+    relievers = json.load(f)
+
 with open(os.path.join('data','lineups','flabs_to_mlb_ids.json')) as f:
     fantasylabs_to_mlb = json.load(f)
 
@@ -108,8 +111,6 @@ def get_pitching_stats(lineup):
     pitchers[0]['vL']['GS'] = steamer_starters[steamer_starters['mlbamid'] == pitchers[0]['vL']['mlbamid']].iloc[0]['GS']
     pitchers[0]['vL']['start_IP'] = steamer_starters[steamer_starters['mlbamid'] == pitchers[0]['vL']['mlbamid']].iloc[0]['start_IP']
 
-    with open(os.path.join('data','relievers.json')) as f:
-        relievers = json.load(f)
     closers = []
     relievers = relievers[lineup.iloc[0]['name']]
     for name, info in relievers.items():
