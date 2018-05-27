@@ -17,7 +17,7 @@ def get_day_of_games(day):
 	todays_games = []
 	for game in games:
 		game_obj = {}
-		if game['status']['detailedState'] == 'Postponed':
+		if game['status']['detailedState'] == 'Postponed' or game['status']['detailedState'] == 'Suspended':
 			continue
 		if 'All-Stars' in game['teams']['away']['team']['name']:
 			print("all star game, continue")
@@ -25,15 +25,15 @@ def get_day_of_games(day):
 		game_obj['gamePk'] = game['gamePk']
 		game_obj['date'] = day
 		game_obj['away_id'] = game['teams']['away']['team']['id']
-		game_obj['away_name'] = game['teams']['away']['team']['name']
+		game_obj['away'] = game['teams']['away']['team']['name']
 		game_obj['away_score'] = game['teams']['away']['score']
 		game_obj['home_id'] = game['teams']['home']['team']['id']
-		game_obj['home_name'] = game['teams']['home']['team']['name']
+		game_obj['home'] = game['teams']['home']['team']['name']
 		game_obj['home_score'] = game['teams']['home']['score']
-		key = day.replace('-','/')+'/'+team_codes[game_obj['away_name']]+'mlb-'+team_codes[game_obj['home_name']]+'mlb-1'
+		key = day.replace('-','/')+'/'+team_codes[game_obj['away']]+'mlb-'+team_codes[game_obj['home']]+'mlb-1'
 		if key in key_acc:
 			print("DOUBLE HEADER", key)
-			key = day.replace('-','/')+'/'+team_codes[game_obj['away_name']]+'mlb-'+team_codes[game_obj['home_name']]+'mlb-2'
+			key = day.replace('-','/')+'/'+team_codes[game_obj['away']]+'mlb-'+team_codes[game_obj['home']]+'mlb-2'
 		game_obj['key'] = key
 		print(key)
 		key_acc.append(key)
@@ -52,7 +52,7 @@ def scrape_games(year=2017):
 	return season_df
 
 if __name__ == '__main__':
-	year = 2018
+	year = 2017
 	df = scrape_games(year=year)
 	csv_path = os.path.join('..','data','games','games_{}.csv'.format(year))
 	df.drop_duplicates().to_csv(csv_path)

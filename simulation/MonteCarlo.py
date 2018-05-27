@@ -69,7 +69,7 @@ class MonteCarlo(object):
         self.f5_comb_histo = [0]*50
 
 
-    def sim_one_game(self):
+    def sim_one_game(self,test):
         self.scoreboard = Scoreboard()
         self.game_completed = False
         self.home_batter = 0
@@ -80,7 +80,7 @@ class MonteCarlo(object):
 
         while not self.game_completed:
             self.scoreboard.add_frame()
-            self.play_frame()
+            self.play_frame(test)
 
             if len(self.scoreboard.frames) == 10:
                 #lock in f5 attrs
@@ -100,7 +100,7 @@ class MonteCarlo(object):
                 #print('Final score:', self.scoreboard.get_away_runs(), 'to', self.scoreboard.get_home_runs())
                 self.game_completed = True
 
-    def sim_games(self):
+    def sim_games(self,test=False):
         if len(self.away_lineup) < 9 or len(self.home_lineup) < 9 or \
             len(self.away_pitchers) == 0 or len(self.home_pitchers) == 0:
             #something wrong, exit
@@ -110,7 +110,7 @@ class MonteCarlo(object):
             return
 
         for i in range(self.number_of_sims):
-            self.sim_one_game()
+            self.sim_one_game(test)
             total_runs = self.scoreboard.get_away_runs() + self.scoreboard.get_home_runs()
             self.comb_histo[total_runs] = self.comb_histo[total_runs] + 1
             self.away_histo[self.scoreboard.get_away_runs()] = self.away_histo[self.scoreboard.get_away_runs()] + 1
@@ -144,7 +144,7 @@ class MonteCarlo(object):
         self.f5_avg_total = sum([self.f5_comb_histo[x]*x for x in range(50)])/float(self.number_of_sims)
 
 
-    def play_frame(self):
+    def play_frame(self,test):
         state = State()
         batting_order = []
         batting_num = 0
@@ -154,11 +154,11 @@ class MonteCarlo(object):
         if away_batting:
             batting_num = self.away_batter
             batting_order = self.away_lineup
-            pitcher = self.determine_pitcher(True)
+            pitcher = self.determine_pitcher(True,test)
         else:
             batting_num = self.home_batter
             batting_order = self.home_lineup
-            pitcher = self.determine_pitcher(False)
+            pitcher = self.determine_pitcher(False,test)
 
         while state.outs < 3:
             if not away_batting and len(self.scoreboard.frames) > 17 and \
@@ -284,7 +284,7 @@ class MonteCarlo(object):
             self.scores_in_first = self.scores_in_first + 1
         self.scoreboard.inc_runs()
 
-    def determine_pitcher(self, home):
+    def determine_pitcher(self, home, test):
         #print(self.scoreboard.get_away_runs(),'to',self.scoreboard.get_home_runs(), 'frame', len(self.scoreboard.frames))
         pitchers = self.home_pitchers if home else self.away_pitchers
         pitcher_num = self.home_pitcher if home else self.away_pitcher
@@ -319,7 +319,11 @@ class MonteCarlo(object):
                 (not home and home_margin > -5)):
             #print("Closer situation")
             #print(team_closers[i]['lastname'], 'is the closer')
-            return pitchers[-1]
+            if not test:
+                return pitchers[-1]
+            else:
+                r = random.randint(1,len(pitchers)-1)
+                return pitchers[r]
 
         #randomly select reliever based on usage
         relief_pitchers = [x for x in pitchers[1:-1]]

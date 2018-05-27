@@ -1,8 +1,8 @@
 from datetime import datetime
-from scrapers.scraper_utils import team_codes
+from scrapers.scraper_utils import team_codes, get_days_in_season
 from storage.Game import Game
 from simulation.MonteCarlo import MonteCarlo
-from utils.converters import winpct_to_ml, over_total_pct, d_to_a, ml_to_winpct, third_kelly_calculator
+from utils.converters import winpct_to_ml, over_total_pct, d_to_a, ml_to_winpct, third_kelly_calculator, amount_won
 from utils.matchups import generate_matchups
 from utils.relievers import determine_reliever_2018
 from scrapers.update import update_all
@@ -20,6 +20,8 @@ steamer_batters['fullname'] = steamer_batters[['firstname', 'lastname']].apply(l
 steamer_pitchers = pd.read_csv(os.path.join('data','steamer','steamer_pitchers_2018_split.csv'))
 steamer_pitchers['fullname'] = steamer_pitchers[['firstname', 'lastname']].apply(lambda x: ' '.join(x), axis=1)
 steamer_starters = pd.read_csv(os.path.join('data','steamer','steamer_pitchers_2018.csv'))
+
+bullpens = pd.read_csv(os.path.join('data','lineups','bullpens_2018.csv'))
 
 with open(os.path.join('data','relievers.json')) as f:
     all_relievers = json.load(f)
@@ -59,7 +61,7 @@ def get_batting_stats(lineup):
         else:
             rows = steamer_batters.loc[(steamer_batters['fullname'] == batter_name)]
             ids = rows['steamerid'].unique().tolist()
-            if len(ids) == 0:
+            if len(ids) == 0 or batter_fantasylabs_id == str(lineup.iloc[0]['10_id']):
                 print(batter_name, "is probably a pitcher, given avg pitcher stats")
                 lineup_stats.append(dict(avg_pitcher_stats))
                 continue
@@ -77,7 +79,7 @@ def get_batting_stats(lineup):
         lineup_stats.append(dict(vL = vL, vR = vR))
     return lineup_stats
 
-def get_pitching_stats(lineup):
+def get_pitching_stats(lineup, test=False):
     starter_name = lineup.iloc[0]['10_name']
     starter_fantasylabs_id = str(lineup.iloc[0]['10_id'])
     print(starter_name)
@@ -112,42 +114,73 @@ def get_pitching_stats(lineup):
     pitchers[0]['vL']['GS'] = steamer_starters[steamer_starters['mlbamid'] == pitchers[0]['vL']['mlbamid']].iloc[0]['GS']
     pitchers[0]['vL']['start_IP'] = steamer_starters[steamer_starters['mlbamid'] == pitchers[0]['vL']['mlbamid']].iloc[0]['start_IP']
 
-    closers = []
-    relievers = all_relievers[lineup.iloc[0]['name']]
-    for name, info in relievers.items():
-        reliever = steamer_pitchers.loc[(steamer_pitchers['fullname'] == name)]
-        ids = reliever['steamerid'].unique().tolist()
-        if len(ids) == 0:
-            print('No pitcher matched', name)
-            continue
-        if len(ids) > 1:
-            reliever_id = determine_reliever_2018(name, lineup.iloc[0]['name'])
-            if not reliever_id:
-                print("DUPLICATE something is wrong")
-                print(reliever[:len(reliever)//12])
-                ans = input("Which player is actually playing? => ")
-                ix = int(ans)
-                reliever = reliever.iloc[ix-1::len(ids), :]
-            else:
-                reliever = steamer_pitchers.loc[(steamer_pitchers['mlbamid'] == reliever_id)]
+    if not test:
+        closers = []
+        relievers = all_relievers[lineup.iloc[0]['name']]
+        for name, info in relievers.items():
+            reliever = steamer_pitchers.loc[(steamer_pitchers['fullname'] == name)]
+            ids = reliever['steamerid'].unique().tolist()
+            if len(ids) == 0:
+                print('No pitcher matched', name)
+                continue
+            if len(ids) > 1:
+                reliever_id = determine_reliever_2018(name, lineup.iloc[0]['name'])
+                if not reliever_id:
+                    print("DUPLICATE something is wrong")
+                    print(reliever[:len(reliever)//12])
+                    ans = input("Which player is actually playing? => ")
+                    ix = int(ans)
+                    reliever = reliever.iloc[ix-1::len(ids), :]
+                else:
+                    reliever = steamer_pitchers.loc[(steamer_pitchers['mlbamid'] == reliever_id)]
 
-        pitcher = {'vL': reliever[
-                        (reliever['pn'] == 1) &
-                        (reliever['role'] == 'RP') &
-                        (reliever['split'] == 'vL')
-                    ].squeeze().to_dict(),
-                    'vR': reliever[
-                        (reliever['pn'] == 1) &
-                        (reliever['role'] == 'RP') &
-                        (reliever['split'] == 'vR')
-                    ].squeeze().to_dict(),
-                    'usage': info[1]}
-        if 'CL' not in info:
-            pitchers.append(pitcher)
+            pitcher = {'vL': reliever[
+                            (reliever['pn'] == 1) &
+                            (reliever['role'] == 'RP') &
+                            (reliever['split'] == 'vL')
+                        ].squeeze().to_dict(),
+                        'vR': reliever[
+                            (reliever['pn'] == 1) &
+                            (reliever['role'] == 'RP') &
+                            (reliever['split'] == 'vR')
+                        ].squeeze().to_dict(),
+                        'usage': info[1]}
+            if 'CL' not in info:
+                pitchers.append(pitcher)
+            else:
+                closers.append(pitcher)
+        random.shuffle(closers)
+        pitchers.extend(closers)
+    else:
+        game = bullpens[bullpens['key'] == lineup.iloc[0]['key']]
+        if game.iloc[0]['away'] == lineup.iloc[0]['name']:
+            all_pitchers = [game.iloc[0][col] for col in game if col.startswith('bp_away')]
         else:
-            closers.append(pitcher)
-    random.shuffle(closers)
-    pitchers.extend(closers)
+            all_pitchers = [game.iloc[0][col] for col in game if col.startswith('bp_home')]
+        all_pitchers = [int(pitcher) for pitcher in all_pitchers if str(pitcher) != 'nan']
+        # remove starter
+        all_pitchers.remove(int(fantasylabs_to_mlb[starter_fantasylabs_id][1]))
+        bp_df = steamer_starters[steamer_starters['mlbamid'].isin(all_pitchers)].sort_values(by=['start_IP'],ascending=False)
+        relievers_list = bp_df.iloc[4:]['mlbamid'].tolist()
+        dist = 1/len(relievers_list)
+        relief = []
+        for reliever in relievers_list:
+            stats = {'vL': steamer_pitchers[
+                        (steamer_pitchers['mlbamid'] == reliever) &
+                        (steamer_pitchers['pn'] == 1) &
+                        (steamer_pitchers['role'] == 'RP') &
+                        (steamer_pitchers['split'] == 'vL')
+                     ].squeeze().to_dict(),
+                     'vR': steamer_pitchers[
+                        (steamer_pitchers['mlbamid'] == reliever) &
+                        (steamer_pitchers['pn'] == 1) &
+                        (steamer_pitchers['role'] == 'RP') &
+                        (steamer_pitchers['split'] == 'vR')
+                     ].squeeze().to_dict(),
+                     'usage': dist}
+            relief.append(stats)
+        random.shuffle(relief)
+        pitchers.extend(relief)
     return pitchers
 
 def main():
@@ -160,7 +193,7 @@ def main():
                                             'park_factors_handedness.csv'))
     game_outputs = []
     for index, game in games.iterrows():
-        print()
+        print('\n')
         game_obj = Game(game['date'],game['time'],game['away'],game['home'])
         away_lineup = lineups.loc[(lineups['key'] == game['key']) & \
                                   (game['away'] == lineups['name'])]
@@ -200,10 +233,8 @@ def main():
               round((mcGame.home_win_prob * 1.08) * 100.0, 2),
               'Implied line:', home_output['ml_proj'])
 
-        away_output['ml_value'] = round(100.0 * (1-(mcGame.home_win_prob*1.08) - \
-                                   ml_to_winpct(d_to_a(game['ml_away']))), 2)
-        home_output['ml_value'] = round(100.0 * (mcGame.home_win_prob*1.08 - \
-                                   ml_to_winpct(d_to_a(game['ml_home']))), 2)
+        away_output['ml_value'] = round(100.0 * (1-(mcGame.home_win_prob*1.08) - ml_to_winpct(d_to_a(game['ml_away']))), 2)
+        home_output['ml_value'] = round(100.0 * (mcGame.home_win_prob*1.08 - ml_to_winpct(d_to_a(game['ml_home']))), 2)
         print('Away moneyline value:', round(away_output['ml_value'], 2), '%')
         print('Home moneyline value:', round(home_output['ml_value'], 2), '%')
         kelly_away = third_kelly_calculator(game['ml_away'], 1-(mcGame.home_win_prob*1.08))
@@ -313,7 +344,6 @@ def main():
             away_output['ml_value_f5'] = "NA"
             home_output['ml_value_f5'] = "NA"
 
-
         if 'rl_away_f5' in game and game['rl_away_f5'] == game['rl_away_f5']:
             print("Vegas away F5 RL:",round(d_to_a(game['rl_away_f5']),0),
                   "|| Vegas home F5 RL:",round(d_to_a(game['rl_home_f5']),0))
@@ -385,7 +415,6 @@ def main():
             away_output['total_value_f5'] = "NA"
             home_output['total_value_f5'] = "NA"
 
-
         away_output['sc_in_first']= round(mcGame.scores_in_first/mcGame.number_of_sims*100, 1)
         home_output['sc_in_first']= round(winpct_to_ml(mcGame.scores_in_first/mcGame.number_of_sims),0)
 
@@ -395,9 +424,122 @@ def main():
         print('Away starter strikeouts:', round(mcGame.away_strikeouts/mcGame.number_of_sims, 2))
         print('Home starter strikeouts:', round(mcGame.home_strikeouts/mcGame.number_of_sims, 2))
 
-        print('\n')
         game_outputs.append((game['time'], away_output, home_output))
     gsheets_upload.update_spreadsheet(game_outputs)
+
+    with open(os.path.join('data','lineups','flabs_to_mlb_ids.json'), 'r+') as f:
+        f.truncate()
+        json.dump(fantasylabs_to_mlb, f)
+
+def test_year(year):
+    bankroll = 1000
+    days = get_days_in_season(year)
+    games = pd.read_csv(os.path.join('data','games','games_2018.csv'))
+    lines = pd.read_csv(os.path.join('data','lines','lines_2018.csv'))
+    lineups = pd.read_csv(os.path.join('data','lineups','lineups_2018.csv'))
+    park_factors = pd.read_csv(os.path.join('data','park_factors','park_factors_handedness.csv'))
+    league_avgs = calc_averages()
+
+    all_results = []
+    all_net = []
+    acc = 0
+    for day in days[:-2]:
+        slate = games.loc[games['date'] == day]
+        day_results = []
+        for index, game in slate.iterrows():
+            game_obj = Game(game['date'],'12:05p',game['away'],game['home'])
+            away_lineup = lineups.loc[(lineups['key'] == game['key']) & \
+                                      (game['away'] == lineups['name'])]
+            home_lineup = lineups.loc[(lineups['key'] == game['key']) & \
+                                      (game['home'] == lineups['name'])]
+            game_odds = lines.loc[lines['key'] == game['key']]
+            if away_lineup.empty or home_lineup.empty:
+                continue
+
+            away_lineup_stats = get_batting_stats(away_lineup)
+            home_lineup_stats = get_batting_stats(home_lineup)
+            away_pitching = get_pitching_stats(away_lineup,test=True)
+            home_pitching = get_pitching_stats(home_lineup,test=True)
+            pf = park_factors.loc[park_factors["Team"]==game["home"]].to_dict(orient='records')
+
+            print("Simulating game:",day,game['away'],'vs',game['home'])
+            all_matchups = generate_matchups(pf, home_pitching, away_pitching, home_lineup_stats, away_lineup_stats, league_avgs)
+            mcGame = MonteCarlo(game_obj,away_lineup_stats,home_lineup_stats,away_pitching,home_pitching,all_matchups)
+            mcGame.sim_games(test=True)
+
+            away_win_pct = 1-(mcGame.home_win_prob*1.08)
+            home_win_pct = mcGame.home_win_prob*1.08
+
+            result = dict(
+                away = game['away'],
+                home = game['home'],
+                away_ml = round(d_to_a(game_odds.iloc[0]['ml_away']),0),
+                home_ml = round(d_to_a(game_odds.iloc[0]['ml_home']),0),
+                away_ml_proj = round(winpct_to_ml(away_win_pct),0),
+                home_ml_proj = round(winpct_to_ml(home_win_pct),0)
+            )
+
+            kelly_away = third_kelly_calculator(game_odds.iloc[0]['ml_away'], away_win_pct)
+            kelly_home = third_kelly_calculator(game_odds.iloc[0]['ml_home'], home_win_pct)
+
+            if kelly_away > 0:
+                result['bet_on'] = result['away']
+                result['bet_against'] = result['home']
+                result['k_risk'] = round(bankroll*kelly_away/100.0,0)
+                result['value'] = round(100.0 * (away_win_pct - ml_to_winpct(result['away_ml'])), 2)
+            elif kelly_home > 0:
+                result['bet_on'] = result['home']
+                result['bet_against'] = result['away']
+                result['k_risk'] = round(bankroll*kelly_home/100.0,0)
+                result['value'] = round(100.0 * (home_win_pct - ml_to_winpct(result['home_ml'])), 2)
+            else:
+                result['bet_on'] = 'no bet'
+                result['bet_against'] = 'no bet'
+                result['k_risk'] = 0
+                result['value'] = 0
+
+            result['net'] = 0
+            if game['away_score'] > game['home_score']:
+                if result['bet_on'] == result['away']:
+                    result['net'] = amount_won(result['k_risk'], game_odds.iloc[0]['ml_away'])
+                elif result['bet_on'] == result['home']:
+                    result['net'] = result['k_risk'] * -1
+            if game['home_score'] > game['away_score']:
+                if result['bet_on'] == result['home']:
+                    result['net'] = amount_won(result['k_risk'], game_odds.iloc[0]['ml_home'])
+                elif result['bet_on'] == result['away']:
+                    result['net'] = result['k_risk'] * -1
+
+
+            day_results.append(result)
+            print(result['bet_on'], result['k_risk'], result['net'])
+        day_risk = 0
+        day_net = 0
+        for result in day_results:
+            day_risk = day_risk + result['k_risk']
+            day_net = day_net + result['net']
+        acc = acc + day_net
+        print(day,'-- total risk:',day_risk,'-- total net:',day_net,'-- acc:',acc)
+        day_summary = dict()
+        day_summary['date'] = day
+        day_summary['risk'] = day_risk
+        day_summary['net'] = day_net
+        day_summary['acc'] = acc
+        all_results.extend(day_results)
+        all_net.append(day_summary)
+
+    import matplotlib.pyplot as plt
+    plt.bar(range(len(all_net)), [day['acc'] for day in all_net])
+    plt.xticks(range(len(all_net)), tuple([day['date'] for day in all_net]))
+    plt.show()
+
+    with open(os.path.join('data','results','results_2018.json'), 'r+') as f:
+        f.truncate()
+        json.dump(all_results, f)
+
+    with open(os.path.join('data','results','profits_2018.json'), 'r+') as f:
+        f.truncate()
+        json.dump(all_results, f)
 
     with open(os.path.join('data','lineups','flabs_to_mlb_ids.json'), 'r+') as f:
         f.truncate()
@@ -407,8 +549,13 @@ def main():
 if __name__ == '__main__':
     # if you `python3 main.py gr`, program will update relievers, otherwise as normal
     gr = False
+    test = False
     if len(sys.argv) > 1:
         print(sys.argv[1])
         gr = sys.argv[1] == 'gr'
-    update_all(gr)
-    main()
+        test = sys.argv[1] == 'test'
+    if test:
+        test_year(2018)
+    else:
+        update_all(gr)
+        main()

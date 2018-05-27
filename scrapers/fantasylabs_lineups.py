@@ -5,7 +5,7 @@ import time
 import datetime
 import random
 from operator import itemgetter
-from scrapers.scraper_utils import get_soup, team_codes, get_days_in_season
+from scraper_utils import get_soup, team_codes, get_days_in_season
 
 def fix_name(name):
     name = name.replace('Matthew Joyce','Matt Joyce').replace('Jackie Bradley', 'Jackie Bradley Jr.')
@@ -15,7 +15,8 @@ def fix_name(name):
     name = name.replace('Philip Gosselin', 'Phil Gosselin').replace('Michael Foltynewicz','Mike Foltynewicz')
     name = name.replace('Mpho\' Ngoepe', 'Gift Ngoepe').replace('Lucas Sims','Luke Sims')
     name = name.replace('Rafael Lopez', 'Raffy Lopez').replace('Dwight Smith Jr.', 'Dwight Smith')
-    name = name.replace('Steve Baron', 'Steven Baron')
+    name = name.replace('Steve Baron', 'Steven Baron').replace('Greg Bird', 'Gregory Bird')
+    name = name.replace('Matthew Strahm', 'Matt Strahm')
     return name
 
 def scrape_day_lineups(day):
@@ -86,7 +87,7 @@ def scrape_year_lineups(year=2017):
     return pd.DataFrame(lineups).set_index(['key', 'name'])
 
 if __name__ == '__main__':
-    year = 2018
+    year = 2017
     df = scrape_year_lineups(year=year)
     csv_path = os.path.join('..','data','lineups','lineups_{}.csv'.format(year))
     df.drop_duplicates().to_csv(csv_path)

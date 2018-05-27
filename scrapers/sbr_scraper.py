@@ -235,17 +235,18 @@ def scrape_sbr_year(year=2017):
 		ans = input('entry all fucked up. You want to fill it in? (y/n) -> ')
 		if ans == 'n':
 			continue
-		for key in ['ml_away','ml_home', 'rl_away',\
-					'rl_home','total_odds']:
+		for key in ['ml_away','ml_home','ml_away_f5','ml_home_f5', 'rl_away',\
+					'rl_home','rl_away_f5','rl_home_f5','over_odds','under_odds',\
+                    'over_odds_f5','under_odds_f5']:
 			game[key] = c_to_d(input(key+': '))
-		for key in ['total_line']:
+		for key in ['total_line','total_line_f5']:
 			game[key] = float(input(key+': '))
 		print(game)
 
 	return pd.DataFrame(season_games).set_index('key')
 
 if __name__ == '__main__':
-	year = 2018
+	year = 2017
 	df = scrape_sbr_year(year)
 	csv_path = os.path.join('..','data','lines','lines_{}.csv'.format(year))
 	df.drop_duplicates().to_csv(csv_path)

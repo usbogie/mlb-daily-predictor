@@ -15,6 +15,14 @@ def update_games():
     updated_games_df = pd.concat([games_df,yesterday_games]).set_index('key')
     updated_games_df.drop_duplicates().to_csv(mlb_path)
 
+def update_games():
+    print("getting bullpens")
+    bullpens_path = os.path.join('data','lineups','games_{}.csv'.format(year))
+    bullpens_df = pd.read_csv(bullpens_path)
+    yesterday_bullpens = pd.DataFrame(mlb_scraper.get_day_of_games(yesterday))
+    updated_bullpens_df = pd.concat([bullpens_df,yesterday_bullpens]).set_index('key')
+    updated_bullpens_df.drop_duplicates().to_csv(bullpens_path)
+
 def update_lineups():
     print("getting lineups")
     lineups_path = os.path.join('data','lineups','lineups_{}.csv'.format(year))
