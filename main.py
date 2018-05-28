@@ -31,8 +31,7 @@ with open(os.path.join('data','lineups','flabs_to_mlb_ids.json')) as f:
 
 def calc_averages():
     avgs_dict = dict()
-    steamer_batters = pd.read_csv(os.path.join('data','steamer',
-                                               'steamer_hitters_2018.csv'))
+    steamer_batters = pd.read_csv(os.path.join('data','steamer','steamer_hitters_2018.csv'))
     total_PA = steamer_batters['PA'].sum()
     avgs_dict['1B'] = steamer_batters['1B'].sum() / float(total_PA)
     avgs_dict['2B'] = steamer_batters['2B'].sum() / float(total_PA)
@@ -74,8 +73,8 @@ def get_batting_stats(lineup):
             print("NEW PLAYER! Matching", batter_name, "to", rows['fullname'].iloc[0])
             fantasylabs_to_mlb[batter_fantasylabs_id] = (rows['fullname'].iloc[0], str(rows['mlbamid'].iloc[0]))
             print('Matched', batter_fantasylabs_id, "to", rows['mlbamid'].iloc[0])
-        vL = rows[rows['split'] == 'vL'].squeeze().to_dict()
-        vR = rows[rows['split'] == 'vR'].squeeze().to_dict()
+        vL = rows[(rows['split'] == 'vL') & (rows['pn'] == 1)].squeeze().to_dict()
+        vR = rows[(rows['split'] == 'vR') & (rows['pn'] == 1)].squeeze().to_dict()
         lineup_stats.append(dict(vL = vL, vR = vR))
     return lineup_stats
 

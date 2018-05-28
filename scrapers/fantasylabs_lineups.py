@@ -5,7 +5,7 @@ import time
 import datetime
 import random
 from operator import itemgetter
-from scraper_utils import get_soup, team_codes, get_days_in_season
+from scrapers.scraper_utils import get_soup, team_codes, get_days_in_season
 
 def fix_name(name):
     name = name.replace('Matthew Joyce','Matt Joyce').replace('Jackie Bradley', 'Jackie Bradley Jr.')

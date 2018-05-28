@@ -17,7 +17,7 @@ def update_games():
 
 def update_games():
     print("getting bullpens")
-    bullpens_path = os.path.join('data','lineups','games_{}.csv'.format(year))
+    bullpens_path = os.path.join('data','lineups','bullpens_{}.csv'.format(year))
     bullpens_df = pd.read_csv(bullpens_path)
     yesterday_bullpens = pd.DataFrame(mlb_scraper.get_day_of_games(yesterday))
     updated_bullpens_df = pd.concat([bullpens_df,yesterday_bullpens]).set_index('key')
