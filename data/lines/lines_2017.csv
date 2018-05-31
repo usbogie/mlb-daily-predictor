@@ -822,7 +822,7 @@ key,away,date,home,ml_away,ml_away_f5,ml_home,ml_home_f5,over_odds,over_odds_f5,
 2017/06/03/arimlb-miamlb-1,Arizona Diamondbacks,2017-06-03,Miami Marlins,2.26,2.2,1.71,1.71,1.93,1.91,1.57,1.77,2.51,2.1,4:10p,8.5,4.5,1.89,1.91
 2017/06/03/lanmlb-milmlb-1,Los Angeles Dodgers,2017-06-03,Milwaukee Brewers,1.62,1.62,2.45,2.35,1.87,1.91,1.99,1.87,1.84,1.95,4:10p,9.0,5.0,1.95,1.91
 2017/06/03/chamlb-detmlb-1,Chicago White Sox,2017-06-03,Detroit Tigers,2.19,2.23,1.76,1.69,1.93,1.83,1.59,1.77,2.48,2.1,4:10p,10.0,5.5,1.9,2.0
-2017/06/03/houmlb-texmlb-1,Houston Astros,2017-06-03,Texas Rangers,3.15,1.56,1.38,2.55,2.05,1.83,1.87,1.8,1.95,2.05,7:15p,9.5,5.0,1.8,2.0
+2017/06/03/houmlb-texmlb-1,Houston Astros,2017-06-03,Texas Rangers,1.62,1.56,2.51,2.55,2.05,1.83,1.87,1.8,1.95,2.05,7:15p,9.5,5.0,1.8,2.0
 2017/06/03/pitmlb-nynmlb-1,Pittsburgh Pirates,2017-06-03,New York Mets,2.28,2.29,1.7,1.67,1.84,1.92,1.59,1.87,2.48,1.95,7:15p,9.0,5.0,2.0,1.91
 2017/06/03/bosmlb-balmlb-1,Boston Red Sox,2017-06-03,Baltimore Orioles,1.79,1.84,2.14,1.99,1.93,1.91,2.25,2.22,1.69,1.71,7:15p,8.5,4.5,1.88,1.91
 2017/06/03/minmlb-anamlb-1,Minnesota Twins,2017-06-03,Los Angeles Angels,1.94,1.8,1.96,2.06,2.0,2.1,2.44,2.11,1.61,1.76,10:07p,8.0,4.5,1.83,1.77
@@ -836,7 +836,7 @@ key,away,date,home,ml_away,ml_away_f5,ml_home,ml_home_f5,over_odds,over_odds_f5,
 2017/06/04/bosmlb-balmlb-1,Boston Red Sox,2017-06-04,Baltimore Orioles,1.53,1.44,2.69,2.86,1.91,2.0,1.84,1.68,1.99,2.25,1:35p,9.0,5.0,1.91,1.83
 2017/06/04/lanmlb-milmlb-1,Los Angeles Dodgers,2017-06-04,Milwaukee Brewers,1.69,1.69,2.3,2.25,1.91,1.83,2.15,1.95,1.74,1.87,2:10p,9.5,5.0,1.91,2.0
 2017/06/04/clemlb-kcamlb-1,Cleveland Indians,2017-06-04,Kansas City Royals,1.71,1.71,2.26,2.2,2.0,2.05,2.15,2.05,1.74,1.8,2:15p,9.0,5.0,1.83,1.8
-2017/06/04/houmlb-texmlb-1,Houston Astros,2017-06-04,Texas Rangers,3.5,1.67,1.33,2.3,1.91,1.87,2.1,1.95,1.77,1.87,3:05p,10.5,6.0,1.91,1.95
+2017/06/04/houmlb-texmlb-1,Houston Astros,2017-06-04,Texas Rangers,1.709,1.67,2.30,2.3,1.91,1.87,2.1,1.95,1.77,1.87,3:05p,10.5,6.0,1.91,1.95
 2017/06/04/minmlb-anamlb-1,Minnesota Twins,2017-06-04,Los Angeles Angels,1.74,1.62,2.22,2.36,1.83,1.91,2.2,1.88,1.71,1.93,3:37p,8.0,4.5,2.0,1.91
 2017/06/04/wasmlb-oakmlb-1,Washington Nationals,2017-06-04,Oakland Athletics,1.95,1.83,1.95,2.0,1.83,2.08,2.48,2.2,1.59,1.71,4:05p,9.0,5.0,2.0,1.78
 2017/06/04/tbamlb-seamlb-1,Tampa Bay Rays,2017-06-04,Seattle Mariners,2.18,2.15,1.76,1.74,1.87,2.0,1.54,1.8,2.6,2.05,4:10p,8.5,4.5,1.95,1.83

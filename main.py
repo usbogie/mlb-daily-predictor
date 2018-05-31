@@ -14,14 +14,27 @@ import sys
 import os
 import argparse
 
-steamer_batters = pd.read_csv(os.path.join('data','steamer', 'steamer_hitters_2018_split.csv'))
+starters_to_ignore = {2017: ['Cesar Valdez', 'Jeremy Guthrie', 'Christian Bergman',
+    'Hector Velazquez','Sam Gaviglio','Eric Skoglund','Austin Bibens-Dirkx','Tyler Pill','Mike Bolsinger',
+    'Dinelson Lamet','Mike Pelfrey','Randall Delgado','Vance Worley','David Holmberg','Dayan Diaz',
+    'Paolo Espino','Sean Newcomb','Nik Turley','Marco Gonzales','Daniel Gossett','Francis Martes',
+    'Adam Wilk','Andrew Moore','Luis Castillo','Mark Leiter','Felix Jorge','Luke Farrell',
+    'Chris O\'Grady','Caleb Smith','Kyle Lloyd','Erick Fedde','Troy Scribner','Nick Tepesch',
+    'Chris Rowley','Chad Bettis','Andrew Albers','Aaron Slegers','T.J. McFarland','Tim Melville',
+    'Tyler Mahle','Dillon Peters','Jack Flaherty','Onelki Garcia','Chad Bell','Artie Lewicki',
+    'Luiz Gohara','Gabriel Ynoa','Myles Jaye','Jen-Ho Tseng','Aaron Wilkerson','Deck McGuire',
+    'Chris Volstad','Jacob Turner','Ryan Weber','Lisalverto Bonilla','Jacob Turner']}
+
+year = 2018
+
+steamer_batters = pd.read_csv(os.path.join('data','steamer', 'steamer_hitters_{}_split.csv'.format(year)))
 steamer_batters['fullname'] = steamer_batters[['firstname', 'lastname']].apply(lambda x: ' '.join(x), axis=1)
 
-steamer_pitchers = pd.read_csv(os.path.join('data','steamer','steamer_pitchers_2018_split.csv'))
+steamer_pitchers = pd.read_csv(os.path.join('data','steamer','steamer_pitchers_{}_split.csv'.format(year)))
 steamer_pitchers['fullname'] = steamer_pitchers[['firstname', 'lastname']].apply(lambda x: ' '.join(x), axis=1)
-steamer_starters = pd.read_csv(os.path.join('data','steamer','steamer_pitchers_2018.csv'))
+steamer_starters = pd.read_csv(os.path.join('data','steamer','steamer_pitchers_{}.csv'.format(year)))
 
-bullpens = pd.read_csv(os.path.join('data','lineups','bullpens_2018.csv'))
+bullpens = pd.read_csv(os.path.join('data','lineups','bullpens_{}.csv'.format(year)))
 
 with open(os.path.join('data','relievers.json')) as f:
     all_relievers = json.load(f)
@@ -31,7 +44,7 @@ with open(os.path.join('data','lineups','flabs_to_mlb_ids.json')) as f:
 
 def calc_averages():
     avgs_dict = dict()
-    steamer_batters = pd.read_csv(os.path.join('data','steamer','steamer_hitters_2018.csv'))
+    steamer_batters = pd.read_csv(os.path.join('data','steamer','steamer_hitters_{}.csv'.format(year)))
     total_PA = steamer_batters['PA'].sum()
     avgs_dict['1B'] = steamer_batters['1B'].sum() / float(total_PA)
     avgs_dict['2B'] = steamer_batters['2B'].sum() / float(total_PA)
@@ -40,6 +53,7 @@ def calc_averages():
     avgs_dict['BB'] = steamer_batters['BB'].sum() / float(total_PA)
     avgs_dict['HBP'] = steamer_batters['HBP'].sum() / float(total_PA)
     avgs_dict['K'] = steamer_batters['K'].sum() / float(total_PA)
+    avgs_dict['PA'] = total_PA
     return avgs_dict
 
 def get_batting_stats(lineup):
@@ -52,24 +66,47 @@ def get_batting_stats(lineup):
     for i in range(1,10):
         rows = None
         batter_name = lineup.iloc[0]['{}_name'.format(str(i))]
-        batter_fantasylabs_id = str(lineup.iloc[0]['{}_id'.format(str(i))])
-        if batter_fantasylabs_id in fantasylabs_to_mlb and batter_fantasylabs_id != str(lineup.iloc[0]['10_id']):
+        batter_fantasylabs_id = str(int(lineup.iloc[0]['{}_id'.format(str(i))]))
+        if batter_fantasylabs_id in fantasylabs_to_mlb and int(batter_fantasylabs_id) != int(lineup.iloc[0]['10_id']):
             if batter_name != fantasylabs_to_mlb[batter_fantasylabs_id][0]:
                 print("Something is wrong with player matching!!", fantasylabs_to_mlb[batter_fantasylabs_id])
+            elif steamer_batters.loc[(steamer_batters['mlbamid'] == int(fantasylabs_to_mlb[batter_fantasylabs_id][1]))].empty:
+                print('Couldnt find {}. Giving average batter stats'.format(batter_name))
+                avg_stats = calc_averages()
+                avg_stats['bats'] = 'B'
+                avg_stats['mlbamid'] = 'avg_batter'
+                for key in ["1B","2B","3B","HR","K","HBP","BB"]:
+                    avg_stats[key] = avg_stats[key]*avg_stats['PA']
+                print(avg_stats)
+                lineup_stats.append({'vL': avg_stats,'vR': avg_stats})
+                continue
             rows = steamer_batters.loc[(steamer_batters['mlbamid'] == int(fantasylabs_to_mlb[batter_fantasylabs_id][1]))]
         else:
             rows = steamer_batters.loc[(steamer_batters['fullname'] == batter_name)]
             ids = rows['steamerid'].unique().tolist()
-            if len(ids) == 0 or batter_fantasylabs_id == str(lineup.iloc[0]['10_id']):
-                print(batter_name, "is probably a pitcher, given avg pitcher stats")
-                lineup_stats.append(dict(avg_pitcher_stats))
+            if len(ids) == 0 or int(batter_fantasylabs_id) == int(lineup.iloc[0]['10_id']):
+                if int(batter_fantasylabs_id) != int(lineup.iloc[0]['10_id']):
+                    print('Couldnt find {}. Giving average batter stats'.format(batter_name))
+                    avg_stats = calc_averages()
+                    avg_stats['bats'] = 'B'
+                    avg_stats['mlbamid'] = 'avg_batter'
+                    for key in ["1B","2B","3B","HR","K","HBP","BB"]:
+                        avg_stats[key] = avg_stats[key]*avg_stats['PA']
+                    print(avg_stats)
+                    lineup_stats.append({'vL': avg_stats,'vR': avg_stats})
+                else:
+                    print(batter_name, "is probably a pitcher, given avg pitcher stats")
+                    lineup_stats.append(dict(avg_pitcher_stats))
                 continue
             if len(ids) > 1:
                 print("DUPLICATE something is wrong")
-                print(rows[:len(rows)//3])
+                print(rows)
                 ans = input("Which player is actually playing? => ")
                 ix = int(ans)
-                rows = rows.iloc[ix-1::len(ids), :]
+                id = rows.iloc[i-1]['mlbamid']
+                print(id)
+                rows = rows[rows['mlbamid'] == id]
+                print(rows)
             print("NEW PLAYER! Matching", batter_name, "to", rows['fullname'].iloc[0])
             fantasylabs_to_mlb[batter_fantasylabs_id] = (rows['fullname'].iloc[0], str(rows['mlbamid'].iloc[0]))
             print('Matched', batter_fantasylabs_id, "to", rows['mlbamid'].iloc[0])
@@ -80,7 +117,7 @@ def get_batting_stats(lineup):
 
 def get_pitching_stats(lineup, test=False):
     starter_name = lineup.iloc[0]['10_name']
-    starter_fantasylabs_id = str(lineup.iloc[0]['10_id'])
+    starter_fantasylabs_id = str(int(lineup.iloc[0]['10_id']))
     print(starter_name)
     starting_pitcher = None
     if starter_fantasylabs_id in fantasylabs_to_mlb:
@@ -96,17 +133,23 @@ def get_pitching_stats(lineup, test=False):
             ans = input("Which player is actually playing? => ")
             ix = int(ans)
             starting_pitcher = starting_pitcher.iloc[ix-1::len(ids), :]
-        print("NEW PLAYER! Matching", starter_name, "to", starting_pitcher['fullname'].iloc[0])
+        try:
+            print("NEW PLAYER! Matching", starter_name, "to", starting_pitcher['fullname'].iloc[0])
+        except:
+            return False
         fantasylabs_to_mlb[starter_fantasylabs_id] = (starting_pitcher['fullname'].iloc[0], str(starting_pitcher['mlbamid'].iloc[0]))
         print('Matched', starter_fantasylabs_id, "to", starting_pitcher['mlbamid'].iloc[0])
+    role = 'SP'
+    if len(starting_pitcher['mlbamid'].tolist()) < 12 and starting_pitcher['role'].tolist()[0] == 'RP':
+        role = 'RP'
     pitchers = [{'vL': starting_pitcher[
                     (starting_pitcher['pn'] == 1) &
-                    (starting_pitcher['role'] == 'SP') &
+                    (starting_pitcher['role'] == role) &
                     (starting_pitcher['split'] == 'vL')
                 ].squeeze().to_dict(),
                 'vR': starting_pitcher[
                     (starting_pitcher['pn'] == 1) &
-                    (starting_pitcher['role'] == 'SP') &
+                    (starting_pitcher['role'] == role) &
                     (starting_pitcher['split'] == 'vR')
                 ].squeeze().to_dict(),
                 'usage': 'SP'}]
@@ -164,16 +207,21 @@ def get_pitching_stats(lineup, test=False):
         dist = 1/len(relievers_list)
         relief = []
         for reliever in relievers_list:
+            if len(steamer_pitchers[steamer_pitchers['mlbamid'] == reliever]['mlbamid'].tolist()) == 0:
+                continue
+            role = 'RP'
+            if len(steamer_pitchers[steamer_pitchers['mlbamid'] == reliever]['mlbamid'].tolist()) < 12 and steamer_pitchers[steamer_pitchers['mlbamid'] == reliever]['role'].tolist()[0] == 'SP':
+                role = 'SP'
             stats = {'vL': steamer_pitchers[
                         (steamer_pitchers['mlbamid'] == reliever) &
                         (steamer_pitchers['pn'] == 1) &
-                        (steamer_pitchers['role'] == 'RP') &
+                        (steamer_pitchers['role'] == role) &
                         (steamer_pitchers['split'] == 'vL')
                      ].squeeze().to_dict(),
                      'vR': steamer_pitchers[
                         (steamer_pitchers['mlbamid'] == reliever) &
                         (steamer_pitchers['pn'] == 1) &
-                        (steamer_pitchers['role'] == 'RP') &
+                        (steamer_pitchers['role'] == role) &
                         (steamer_pitchers['split'] == 'vR')
                      ].squeeze().to_dict(),
                      'usage': dist}
@@ -186,6 +234,7 @@ def main():
     bankroll = 1000
     today = datetime.now().strftime('%Y-%m-%d')
     league_avgs = calc_averages()
+    league_avgs.pop('PA')
     games = pd.read_csv(os.path.join('data','lines','today.csv'))
     lineups = pd.read_csv(os.path.join('data','lineups','today.csv'))
     park_factors = pd.read_csv(os.path.join('data','park_factors',
@@ -433,16 +482,17 @@ def main():
 def test_year(year):
     bankroll = 1000
     days = get_days_in_season(year)
-    games = pd.read_csv(os.path.join('data','games','games_2018.csv'))
-    lines = pd.read_csv(os.path.join('data','lines','lines_2018.csv'))
-    lineups = pd.read_csv(os.path.join('data','lineups','lineups_2018.csv'))
+    games = pd.read_csv(os.path.join('data','games','games_{}.csv'.format(year)))
+    lines = pd.read_csv(os.path.join('data','lines','lines_{}.csv'.format(year)))
+    lineups = pd.read_csv(os.path.join('data','lineups','lineups_{}.csv'.format(year)))
     park_factors = pd.read_csv(os.path.join('data','park_factors','park_factors_handedness.csv'))
     league_avgs = calc_averages()
+    league_avgs.pop('PA')
 
     all_results = []
     all_net = []
     acc = 0
-    for day in days[:-2]:
+    for day in days:
         slate = games.loc[games['date'] == day]
         day_results = []
         for index, game in slate.iterrows():
@@ -453,12 +503,24 @@ def test_year(year):
                                       (game['home'] == lineups['name'])]
             game_odds = lines.loc[lines['key'] == game['key']]
             if away_lineup.empty or home_lineup.empty:
+                print(away_lineup)
+                print(home_lineup)
+                print("empty lineup. continue")
+                continue
+
+            if away_lineup.iloc[0]['10_name'] in starters_to_ignore[year] or home_lineup.iloc[0]['10_name'] in starters_to_ignore[year]:
+                print('Starter {} has no projections. Continue'.format(away_lineup.iloc[0]['10_name']))
+                print('Starter {} has no projections. Continue\n'.format(home_lineup.iloc[0]['10_name']))
                 continue
 
             away_lineup_stats = get_batting_stats(away_lineup)
             home_lineup_stats = get_batting_stats(home_lineup)
             away_pitching = get_pitching_stats(away_lineup,test=True)
             home_pitching = get_pitching_stats(home_lineup,test=True)
+            if not away_pitching or not home_pitching:
+                print("SOMETHING WRONG MAYBE CHECK IT OUT")
+                ans = input('HELLO is this OKAY to continue?')
+                continue
             pf = park_factors.loc[park_factors["Team"]==game["home"]].to_dict(orient='records')
 
             print("Simulating game:",day,game['away'],'vs',game['home'])
@@ -468,7 +530,9 @@ def test_year(year):
 
             away_win_pct = 1-(mcGame.home_win_prob*1.08)
             home_win_pct = mcGame.home_win_prob*1.08
-
+            if game_odds.empty:
+                print('home/away odds mismatch. continue\n')
+                continue
             result = dict(
                 away = game['away'],
                 home = game['home'],
@@ -484,16 +548,22 @@ def test_year(year):
             if kelly_away > 0:
                 result['bet_on'] = result['away']
                 result['bet_against'] = result['home']
+                result['bet_on_pitcher'] = away_lineup.iloc[0]['10_name']
+                result['bet_against_pitcher'] = home_lineup.iloc[0]['10_name']
                 result['k_risk'] = round(bankroll*kelly_away/100.0,0)
                 result['value'] = round(100.0 * (away_win_pct - ml_to_winpct(result['away_ml'])), 2)
             elif kelly_home > 0:
                 result['bet_on'] = result['home']
                 result['bet_against'] = result['away']
+                result['bet_on_pitcher'] = home_lineup.iloc[0]['10_name']
+                result['bet_against_pitcher'] = away_lineup.iloc[0]['10_name']
                 result['k_risk'] = round(bankroll*kelly_home/100.0,0)
                 result['value'] = round(100.0 * (home_win_pct - ml_to_winpct(result['home_ml'])), 2)
             else:
                 result['bet_on'] = 'no bet'
                 result['bet_against'] = 'no bet'
+                result['bet_on_pitcher'] = 'no bet'
+                result['bet_against_pitcher'] = 'no bet'
                 result['k_risk'] = 0
                 result['value'] = 0
 
@@ -532,11 +602,11 @@ def test_year(year):
     plt.xticks(range(len(all_net)), tuple([day['date'] for day in all_net]))
     plt.show()
 
-    with open(os.path.join('data','results','results_2018.json'), 'r+') as f:
+    with open(os.path.join('data','results','results_{}.json'.format(year)), 'r+') as f:
         f.truncate()
         json.dump(all_results, f)
 
-    with open(os.path.join('data','results','profits_2018.json'), 'r+') as f:
+    with open(os.path.join('data','results','profits_{}.json'.format(year)), 'r+') as f:
         f.truncate()
         json.dump(all_results, f)
 
@@ -554,7 +624,7 @@ if __name__ == '__main__':
         gr = sys.argv[1] == 'gr'
         test = sys.argv[1] == 'test'
     if test:
-        test_year(2018)
+        test_year(2017)
     else:
         update_all(gr)
         main()

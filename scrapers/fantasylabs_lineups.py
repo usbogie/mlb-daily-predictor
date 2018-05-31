@@ -16,7 +16,7 @@ def fix_name(name):
     name = name.replace('Mpho\' Ngoepe', 'Gift Ngoepe').replace('Lucas Sims','Luke Sims')
     name = name.replace('Rafael Lopez', 'Raffy Lopez').replace('Dwight Smith Jr.', 'Dwight Smith')
     name = name.replace('Steve Baron', 'Steven Baron').replace('Greg Bird', 'Gregory Bird')
-    name = name.replace('Matthew Strahm', 'Matt Strahm')
+    name = name.replace('Matthew Strahm', 'Matt Strahm').replace('Dan Robertson', 'Daniel Robertson')
     return name
 
 def scrape_day_lineups(day):
@@ -52,8 +52,7 @@ def scrape_day_lineups(day):
         away_players = list(filter(lambda p: locate(lineup_away, p), players))
         home_players = list(filter(lambda p: locate(lineup_home, p), players))
         if len(away_players) < 10 or len(home_players) < 10:
-            print('Bad lineup {} vs {}, continue'.format(lineup_away['name'],
-                                                         lineup_home['name']))
+            print('Bad lineup {} vs {}'.format(lineup_away['name'],lineup_home['name']))
 
         for player in away_players:
             lineup_away['{}_name'.format(player['LineupOrder'])] = fix_name(player['PlayerName'])
@@ -82,7 +81,6 @@ def scrape_year_lineups(year=2017):
     lineups = []
     for day in season:
         day_lineups = scrape_day_lineups(day)
-        day_lineups[:] = [d for d in day_lineups if d['lineup_status'] != 'Projected']
         lineups.extend(day_lineups)
     return pd.DataFrame(lineups).set_index(['key', 'name'])
 
