@@ -237,8 +237,7 @@ def main():
     league_avgs.pop('PA')
     games = pd.read_csv(os.path.join('data','lines','today.csv'))
     lineups = pd.read_csv(os.path.join('data','lineups','today.csv'))
-    park_factors = pd.read_csv(os.path.join('data','park_factors',
-                                            'park_factors_handedness.csv'))
+    park_factors = pd.read_csv(os.path.join('data','park_factors_handedness.csv'))
     game_outputs = []
     for index, game in games.iterrows():
         print('\n')
