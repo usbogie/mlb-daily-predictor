@@ -3,7 +3,7 @@ import sys
 import json
 import os
 import time
-from scraper_utils import team_codes, get_soup, get_days_in_season
+from scrapers.scraper_utils import team_codes, get_soup, get_days_in_season
 
 def get_day_of_games(day):
 	url = "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date="+day+"&hydrate=linescore(matchup,runners)"

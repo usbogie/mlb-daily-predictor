@@ -85,7 +85,7 @@ def scrape_year_lineups(year=2017):
     return pd.DataFrame(lineups).set_index(['key', 'name'])
 
 if __name__ == '__main__':
-    year = 2017
+    year = 2018
     df = scrape_year_lineups(year=year)
     csv_path = os.path.join('..','data','lineups','lineups_{}.csv'.format(year))
     df.drop_duplicates().to_csv(csv_path)

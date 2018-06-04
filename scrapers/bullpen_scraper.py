@@ -1,4 +1,4 @@
-from scraper_utils import get_soup, team_codes, get_days_in_season
+from scrapers.scraper_utils import get_soup, team_codes, get_days_in_season
 from multiprocessing import Pool
 import pandas as pd
 import json
@@ -19,6 +19,8 @@ def parse(game):
     for ix, arm in enumerate(bp_home):
         match['bp_home_' + str(ix)] = arm
     match['key'] = soup['gameData']['game']['id']
+    match['date'] = soup['gameData']['datetime']['originalDate']
+
     return match
 
 def scrape_day_bullpens(day):
@@ -44,7 +46,7 @@ def scrape_bullpens(year=2017):
     return pd.DataFrame(lineups).set_index(['key'])
 
 if __name__ == '__main__':
-    year = 2017
+    year = 2018
     df = scrape_bullpens(year=year)
     csv_path = os.path.join('..','data','lineups','bullpens_{}.csv'.format(year))
     df.drop_duplicates().to_csv(csv_path)

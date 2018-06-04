@@ -246,7 +246,7 @@ def scrape_sbr_year(year=2017):
 	return pd.DataFrame(season_games).set_index('key')
 
 if __name__ == '__main__':
-	year = 2017
+	year = 2018
 	df = scrape_sbr_year(year)
 	csv_path = os.path.join('..','data','lines','lines_{}.csv'.format(year))
 	df.drop_duplicates().to_csv(csv_path)
