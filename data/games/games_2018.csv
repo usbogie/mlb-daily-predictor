@@ -863,3 +863,22 @@ key,away,away_id,away_score,date,gamePk,home,home_id,home_score
 2018/06/02/phimlb-sfnmlb-1,Philadelphia Phillies,143,0,2018-06-02,530279,San Francisco Giants,137,2
 2018/06/02/miamlb-arimlb-1,Miami Marlins,146,2,2018-06-02,530275,Arizona Diamondbacks,109,6
 2018/06/02/tbamlb-seamlb-1,Tampa Bay Rays,139,1,2018-06-02,530281,Seattle Mariners,136,3
+2018/06/03/chnmlb-nynmlb-1,Chicago Cubs,112,2,2018-06-03,530286,New York Mets,121,0
+2018/06/03/tormlb-detmlb-1,Toronto Blue Jays,141,8,2018-06-03,530298,Detroit Tigers,116,4
+2018/06/03/wasmlb-atlmlb-1,Washington Nationals,120,2,2018-06-03,530299,Atlanta Braves,144,4
+2018/06/03/clemlb-minmlb-1,Cleveland Indians,114,5,2018-06-03,530288,Minnesota Twins,142,7
+2018/06/03/milmlb-chamlb-1,Milwaukee Brewers,158,1,2018-06-03,530291,Chicago White Sox,145,6
+2018/06/03/oakmlb-kcamlb-1,Oakland Athletics,133,5,2018-06-03,530293,Kansas City Royals,118,1
+2018/06/03/pitmlb-slnmlb-1,Pittsburgh Pirates,134,0,2018-06-03,530295,St. Louis Cardinals,138,5
+2018/06/03/lanmlb-colmlb-1,Los Angeles Dodgers,119,10,2018-06-03,530289,Colorado Rockies,115,7
+2018/06/03/phimlb-sfnmlb-1,Philadelphia Phillies,143,1,2018-06-03,530294,San Francisco Giants,137,6
+2018/06/03/texmlb-anamlb-1,Texas Rangers,140,1,2018-06-03,530297,Los Angeles Angels,108,3
+2018/06/03/miamlb-arimlb-1,Miami Marlins,146,1,2018-06-03,530290,Arizona Diamondbacks,109,6
+2018/06/03/tbamlb-seamlb-1,Tampa Bay Rays,139,1,2018-06-03,530296,Seattle Mariners,136,2
+2018/06/03/cinmlb-sdnmlb-1,Cincinnati Reds,113,3,2018-06-03,530287,San Diego Padres,135,6
+2018/06/03/bosmlb-houmlb-1,Boston Red Sox,111,9,2018-06-03,530285,Houston Astros,117,3
+2018/06/04/nyamlb-detmlb-1,New York Yankees,147,7,2018-06-04,529619,Detroit Tigers,116,4
+2018/06/04/nyamlb-detmlb-2,New York Yankees,147,2,2018-06-04,529634,Detroit Tigers,116,4
+2018/06/04/kcamlb-anamlb-1,Kansas City Royals,118,6,2018-06-04,530302,Los Angeles Angels,108,9
+2018/06/04/arimlb-sfnmlb-1,Arizona Diamondbacks,109,3,2018-06-04,530300,San Francisco Giants,137,10
+2018/06/04/atlmlb-sdnmlb-1,Atlanta Braves,144,4,2018-06-04,530301,San Diego Padres,135,11

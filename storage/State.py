@@ -16,7 +16,7 @@ class State(object):
     def determine_extra_base(self, event, base):
         import random
         rand = random.random()
-        if event == '1B':
+        if event == 'single':
             if base == '1':
                 if rand < 0.27:
                     return True
@@ -29,7 +29,7 @@ class State(object):
                     return True
                 else:
                     return False
-        elif event == '2B':
+        elif event == 'double':
             if (self.outs == 0 and rand < 0.40) or \
                 (self.outs == 1 and rand < 0.50) or \
                 (self.outs == 2 and rand < 0.60):

@@ -17,8 +17,8 @@ def get_dates(df):
 
     days = []
     for i in range(delta.days + 1):
-        days.append((d1 + datetime.timedelta(i)).strftime('%Y-%m-%d'))
-    return days + [yesterday]
+        days.append((start + timedelta(i)).strftime('%Y-%m-%d'))
+    return days
 
 def update_games():
     print("getting games")
@@ -66,7 +66,7 @@ def update_lines():
     days = get_dates(lines_df)
     lines = []
     for day in days:
-        lines.extend(list(sbr_scraper.scrape_sbr_day(yesterday).values()))
+        lines.extend(list(sbr_scraper.scrape_sbr_day(day).values()))
     past_lines = pd.DataFrame(lines)
     updated_lines_df = pd.concat([lines_df,past_lines]).set_index('key')
     updated_lines_df.drop_duplicates().to_csv(lines_path)

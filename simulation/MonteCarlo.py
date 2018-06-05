@@ -180,8 +180,7 @@ class MonteCarlo(object):
 
     def sim_atbat(self, batter, pitcher, state):
         # possible outcomes: K,BB,HBP,1B,2B,3B,HR,OutNonK
-
-        outcome_dict = self.matchups[(pitcher['vL']['mlbamid'],batter['vL']['mlbamid'])]
+        outcome_dict = self.matchups[(pitcher['vL']['mlb_id'],batter['vL']['mlb_id'])]
         event = None
         rand = random.random()
         for i in range(len(list(outcome_dict))):
@@ -190,7 +189,7 @@ class MonteCarlo(object):
                 break
 
         #print(event)
-        if event == '1B':
+        if event == 'single':
             if state.onThird:
                 self.increment_runs()
                 state.onThird = False
@@ -212,7 +211,7 @@ class MonteCarlo(object):
                     state.onSecond = True
                 state.onFirst = False
             state.onFirst = True
-        if event == '2B':
+        if event == 'double':
             if state.onThird:
                 self.increment_runs()
                 state.onThird = False
@@ -227,7 +226,7 @@ class MonteCarlo(object):
                     state.onThird = True
                 state.onFirst = False
             state.onSecond = True
-        if event == '3B':
+        if event == 'triple':
             if state.onThird:
                 self.increment_runs()
                 state.onThird = False
@@ -238,7 +237,7 @@ class MonteCarlo(object):
                 self.increment_runs()
                 state.onFirst = False
             state.onThird = True
-        if event == 'HR':
+        if event == 'hr':
             if state.onThird:
                 self.increment_runs()
             if state.onSecond:
@@ -247,13 +246,13 @@ class MonteCarlo(object):
                 self.increment_runs()
             self.increment_runs()
             state.clear_bases()
-        if event == 'K':
+        if event == 'k':
             if pitcher == self.away_pitchers[0]:
                 self.away_strikeouts = self.away_strikeouts + 1
             elif pitcher == self.home_pitchers[0]:
                 self.home_strikeouts = self.home_strikeouts + 1
             state.outs = state.outs + 1
-        if event == 'BB' or event == 'HBP':
+        if event == 'bb' or event == 'hpb':
             if state.onFirst and state.onSecond and state.onThird:
                 self.increment_runs()
             elif state.onFirst and state.onSecond:

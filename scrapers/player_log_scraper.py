@@ -30,8 +30,8 @@ def get_pitcher_logs(year, player_id):
 	soup = json.loads(get_soup(player_log_url).find('body').contents[0], strict=False)
 	pitcher_logs = soup['sport_pitching_game_log_composed']['sport_pitching_game_log']['queryResults']['row']
 	ex_keys = ['game_type','game_nbr','game_day','opponent','opponent_short',
-			   'sport_id','sport','avg','opp_score','team_score','game_date',
-			   'team','obp','np','team_result','whip','tbf','cg','gs','irs',
+			   'sport_id','sport','avg','opp_score','team_score',
+			   'team','obp','np','team_result','whip','cg','irs',
 			   'era','g','w','l','s','sho','sv','ir','go_ao']
 	#pitchers with one outing have a single dict of logs, instead of a list
 	if type(pitcher_logs) is dict:
@@ -42,6 +42,8 @@ def get_pitcher_logs(year, player_id):
 		new_log = {}
 		for key, val in log.items():
 			if key not in ex_keys:
+				if key == 'game_date':
+					val = val.split('T')[0]
 				new_log[key] = val
 		saved_logs.append(new_log)
 	return pd.DataFrame(saved_logs)
@@ -54,7 +56,7 @@ def get_batter_logs(year, player_id):
 	batter_logs = soup['sport_hitting_game_log_composed']['sport_hitting_game_log']['queryResults']['row']
 	ex_keys = ['game_type','game_nbr','lob','game_day','opponent',
 			   'opponent_short','sport_id','slg','avg','opp_score','go_ao',
-			   'team_score','ops','game_date','sport','team','obp','team_result']
+			   'team_score','ops','sport','team','obp','team_result']
 	#pitchers with one outing have a single dict of logs, instead of a list
 	if type(batter_logs) is dict:
 		batter_logs = [batter_logs]
@@ -63,6 +65,8 @@ def get_batter_logs(year, player_id):
 		new_log = {}
 		for key, val in log.items():
 			if key not in ex_keys:
+				if key == 'game_date':
+					val = val.split('T')[0]
 				new_log[key] = val
 		saved_logs.append(new_log)
 	return pd.DataFrame(saved_logs)
@@ -116,7 +120,7 @@ def scrape_player_stats(year=2017):
 
 
 if __name__ == '__main__':
-	year = 2017
+	year = 2018
 	pitcher_df, batter_df = scrape_player_stats(year=year)
 	csv_path_pitchers = os.path.join('..','data','player_logs','pitchers_{}.csv'.format(year))
 	pitcher_df.drop_duplicates().to_csv(csv_path_pitchers)
