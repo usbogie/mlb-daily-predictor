@@ -9,6 +9,7 @@ today = (datetime.now() + timedelta(0)).strftime('%Y-%m-%d')
 
 def get_dates(df):
     last_scraped = max(df['date'].tolist())
+    print(last_scraped)
     if last_scraped == yesterday:
         return [yesterday]
     start = datetime.strptime(last_scraped, '%Y-%m-%d')
@@ -37,6 +38,7 @@ def update_bullpens():
     bullpens_path = os.path.join('data','lineups','bullpens_{}.csv'.format(year))
     bullpens_df = pd.read_csv(bullpens_path)
     days = get_dates(bullpens_df)
+    print(days)
     bullpens = []
     for day in days:
         bullpens.extend(bullpen_scraper.scrape_day_bullpens(day))
@@ -85,6 +87,6 @@ def update_all(gr):
     if (gr):
         get_relievers()
     update_games()
-    # update_bullpens()
+    update_bullpens()
     update_lineups()
     update_lines()

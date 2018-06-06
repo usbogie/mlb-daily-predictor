@@ -13,7 +13,7 @@ class MonteCarlo(object):
     home_lineup = []
     away_pitchers = []
     home_pitchers = []
-    matchups = {}
+    matchups = []
     game_completed = None
 
     home_batter = 0
@@ -180,15 +180,43 @@ class MonteCarlo(object):
 
     def sim_atbat(self, batter, pitcher, state):
         # possible outcomes: K,BB,HBP,1B,2B,3B,HR,OutNonK
-        outcome_dict = self.matchups[(pitcher['vL']['mlb_id'],batter['vL']['mlb_id'])]
+        outcomes = self.matchups[(pitcher['vL']['mlb_id'],batter['vL']['mlb_id'])]
         event = None
         rand = random.random()
-        for i in range(len(list(outcome_dict))):
-            if rand < sum(list(outcome_dict.values())[:i+1]):
-                event = list(outcome_dict.keys())[i]
+        for (key, val) in outcomes:
+            if rand < val:
+                event = key
                 break
 
         #print(event)
+        if event == 'OutNonK':
+            state.outs = state.outs + 1
+            if state.onThird and state.outs < 3:
+                if state.determine_extra_base(event, '3'):
+                    self.increment_runs()
+                    state.onThird = False
+            if state.onSecond and state.outs < 3:
+                if not state.onThird and state.determine_extra_base(event, '2'):
+                    state.onThird = True
+                    state.onSecond = False
+            if state.onFirst and state.outs < 3:
+                if not state.onSecond and state.determine_extra_base(event, '1'):
+                    state.onSecond = True
+                    state.onFirst = False
+        if event == 'k':
+            if pitcher == self.away_pitchers[0]:
+                self.away_strikeouts = self.away_strikeouts + 1
+            elif pitcher == self.home_pitchers[0]:
+                self.home_strikeouts = self.home_strikeouts + 1
+            state.outs = state.outs + 1
+        if event == 'bb' or event == 'hpb':
+            if state.onFirst and state.onSecond and state.onThird:
+                self.increment_runs()
+            elif state.onFirst and state.onSecond:
+                state.onThird = True
+            elif state.onFirst:
+                state.onSecond = True
+            state.onFirst = True
         if event == 'single':
             if state.onThird:
                 self.increment_runs()
@@ -226,6 +254,15 @@ class MonteCarlo(object):
                     state.onThird = True
                 state.onFirst = False
             state.onSecond = True
+        if event == 'hr':
+            if state.onThird:
+                self.increment_runs()
+            if state.onSecond:
+                self.increment_runs()
+            if state.onFirst:
+                self.increment_runs()
+            self.increment_runs()
+            state.clear_bases()
         if event == 'triple':
             if state.onThird:
                 self.increment_runs()
@@ -237,43 +274,6 @@ class MonteCarlo(object):
                 self.increment_runs()
                 state.onFirst = False
             state.onThird = True
-        if event == 'hr':
-            if state.onThird:
-                self.increment_runs()
-            if state.onSecond:
-                self.increment_runs()
-            if state.onFirst:
-                self.increment_runs()
-            self.increment_runs()
-            state.clear_bases()
-        if event == 'k':
-            if pitcher == self.away_pitchers[0]:
-                self.away_strikeouts = self.away_strikeouts + 1
-            elif pitcher == self.home_pitchers[0]:
-                self.home_strikeouts = self.home_strikeouts + 1
-            state.outs = state.outs + 1
-        if event == 'bb' or event == 'hpb':
-            if state.onFirst and state.onSecond and state.onThird:
-                self.increment_runs()
-            elif state.onFirst and state.onSecond:
-                state.onThird = True
-            elif state.onFirst:
-                state.onSecond = True
-            state.onFirst = True
-        if event == 'OutNonK':
-            state.outs = state.outs + 1
-            if state.onThird and state.outs < 3:
-                if state.determine_extra_base(event, '3'):
-                    self.increment_runs()
-                    state.onThird = False
-            if state.onSecond and state.outs < 3:
-                if not state.onThird and state.determine_extra_base(event, '2'):
-                    state.onThird = True
-                    state.onSecond = False
-            if state.onFirst and state.outs < 3:
-                if not state.onSecond and state.determine_extra_base(event, '1'):
-                    state.onSecond = True
-                    state.onFirst = False
         #print(state.to_string())
         return state
 

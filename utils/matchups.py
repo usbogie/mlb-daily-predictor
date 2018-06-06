@@ -48,4 +48,9 @@ def get_outcome_distribution(park_factors, league_avgs, batter, pitcher):
     denom = {outcome: bat_outcomes[outcome]*pitch_outcomes[outcome]/league_outcomes[outcome] for outcome in outcomes}
     normalizer = sum(denom.values())
     outcome_dict = {k: v/normalizer for k, v in denom.items()}
-    return outcome_dict
+    acc = 0
+    ret = []
+    for key, val in outcome_dict.items():
+        acc = acc + val
+        ret.append((key, acc))
+    return ret
