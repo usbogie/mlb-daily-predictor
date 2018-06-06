@@ -12,9 +12,8 @@ def replace_names(name):
     name = name.replace('Seung-Hwan Oh', 'Seung Hwan Oh').replace('Seung hwan Oh', 'Seung Hwan Oh')
     name = name.replace('Dan Winkler', 'Daniel Winkler').replace('Felipe Vazquez','Felipe Rivero')
     name = name.replace('Mike Wright Jr.','Mike Wright').replace('Danny Coulombe', 'Daniel Coulombe')
-    name = name.replace('Chasen Bradford','Chase Bradford').replace('Jorge De La Rosa','Jorge de la Rosa')
-    name = name.replace('Sam Tuivailala','Samuel Tuivailala').replace('Felix Peña', 'Felix Pena')
-    name = name.replace('Lucas Sims', 'Luke Sims')
+    name = name.replace('Jorge De La Rosa','Jorge de la Rosa').replace('Felix Peña', 'Felix Pena')
+    name = name.replace('Lucas Sims', 'Luke Sims').replace('Mark Leiter Jr.','Mark Leiterx')
     return name
 
 def get_usage_breakdown():

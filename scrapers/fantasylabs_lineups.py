@@ -16,7 +16,7 @@ def fix_name(name):
     name = name.replace('Mpho\' Ngoepe', 'Gift Ngoepe').replace('Lucas Sims','Luke Sims')
     name = name.replace('Rafael Lopez', 'Raffy Lopez').replace('Dwight Smith Jr.', 'Dwight Smith')
     name = name.replace('Steve Baron', 'Steven Baron').replace('Greg Bird', 'Gregory Bird')
-    name = name.replace('Matthew Strahm', 'Matt Strahm').replace('Dan Robertson', 'Daniel Robertson')
+    name = name.replace('Dan Robertson', 'Daniel Robertson')
     return name
 
 def scrape_day_lineups(day):

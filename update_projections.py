@@ -7,16 +7,14 @@ import os
 
 year = 2018
 
-# steamer_batters = pd.read_csv(os.path.join('data','steamer', 'steamer_hitters_{}.csv'.format(year)))
-# steamer_pitchers = pd.read_csv(os.path.join('data','steamer', 'steamer_pitchers_{}.csv'.format(year)))
-# steamer_batters_split = pd.read_csv(os.path.join('data','steamer', 'steamer_hitters_{}_split.csv'.format(year)))
-# steamer_pitchers_split = pd.read_csv(os.path.join('data','steamer', 'steamer_pitchers_{}_split.csv'.format(year)))
-#
-# hitter_logs = pd.read_csv(os.path.join('data','player_logs','batters_{}.csv'.format(year)))
-# pitcher_logs = pd.read_csv(os.path.join('data','player_logs','pitchers_{}.csv'.format(year)))
-#
-# games = pd.read_csv(os.path.join('data','games','games_{}.csv'.format(year)))
-# park_factors = pd.read_csv(os.path.join('data','park_factors_general.csv'))
+steamer_batters = pd.read_csv(os.path.join('data','steamer', 'steamer_hitters_{}_split.csv'.format(year)))
+steamer_pitchers = pd.read_csv(os.path.join('data','steamer', 'steamer_pitchers_{}_split.csv'.format(year)))
+
+hitter_logs = pd.read_csv(os.path.join('data','player_logs','batters_{}.csv'.format(year)))
+pitcher_logs = pd.read_csv(os.path.join('data','player_logs','pitchers_{}.csv'.format(year)))
+
+games = pd.read_csv(os.path.join('data','games','games_{}.csv'.format(year)))
+park_factors = pd.read_csv(os.path.join('data','park_factors_general.csv'))
 
 def batter_dict(batter_id, projections):
     batter_projections = projections.loc[projections['mlbamid'] == batter_id].to_dict('records')[0]
@@ -37,7 +35,8 @@ def batter_dict(batter_id, projections):
 def update_batter_projections(batter_id):
     batter_logs = hitter_logs.loc[hitter_logs['player_id'] == batter_id]
     print(batter_logs['player'].tolist()[0])
-    projections_accumulator = batter_dict(batter_id, steamer_batters)
+    batter_projections = steamer_batters.loc[(steamer_batters['pn'] == 1) & (steamer_batters['split'] == 'overall')]
+    projections_accumulator = batter_dict(batter_id, batter_projections)
     baseline = dict(projections_accumulator)
     all_projections = []
 
@@ -61,8 +60,8 @@ def update_batter_projections(batter_id):
         projections_accumulator['double'] = ((projections_accumulator['double'] * (p_const - pa)) + stat_line['d'] / (pf['2B'] / 100)) / p_const
         projections_accumulator['single'] = ((projections_accumulator['single'] * (p_const - pa)) + (stat_line['h'] - stat_line['hr'] - stat_line['t'] - stat_line['d']) / (pf['1B'] / 100)) / p_const
 
-    vL_base = batter_dict(batter_id, steamer_batters_split[(steamer_batters_split['split'] == 'vL') & (steamer_batters_split['pn'] == 1)])
-    vR_base = batter_dict(batter_id, steamer_batters_split[(steamer_batters_split['split'] == 'vR') & (steamer_batters_split['pn'] == 1)])
+    vL_base = batter_dict(batter_id, steamer_batters[(steamer_batters['split'] == 'vL') & (steamer_batters['pn'] == 1)])
+    vR_base = batter_dict(batter_id, steamer_batters[(steamer_batters['split'] == 'vR') & (steamer_batters['pn'] == 1)])
     acc = []
     keys = ['k','bb','hbp','hr','triple','double','single']
     for ros_proj in all_projections:
@@ -107,26 +106,15 @@ def pitcher_dict(projections):
 def update_pitcher_projections(pitcher_id):
     p_logs = pitcher_logs.loc[pitcher_logs['player_id'] == pitcher_id]
     print(p_logs['player_id'].tolist()[0])
-    pitcher_projections = steamer_pitchers.loc[steamer_pitchers['mlbamid'] == pitcher_id].to_dict('records')[0]
-    projections_accumulator = dict(
-        k = pitcher_projections['K'] / pitcher_projections['TBF'],
-        bb = pitcher_projections['BB'] / pitcher_projections['TBF'],
-        hbp = pitcher_projections['HBP'] / pitcher_projections['TBF'],
-        hr = pitcher_projections['HR'] / pitcher_projections['TBF'],
-        triple = pitcher_projections['3b'] / pitcher_projections['TBF'],
-        double = pitcher_projections['2b'] / pitcher_projections['TBF'],
-        single = pitcher_projections['1b'] / pitcher_projections['TBF'],
-        mlb_id = pitcher_id,
-        date = get_days_in_season(year)[0],
-    )
+    pitcher_projections = steamer_pitchers.loc[steamer_pitchers['mlbamid'] == pitcher_id]
+    projections_accumulator = pitcher_dict(pitcher_projections)
     baseline = dict(projections_accumulator)
     all_projections = []
-
     #hackery as pitcher logs do not individually log non-hr hits
-
-    s_ratio = pitcher_projections['1b'] / (pitcher_projections['H'] - pitcher_projections['HR'])
-    d_ratio = pitcher_projections['2b'] / (pitcher_projections['H'] - pitcher_projections['HR'])
-    t_ratio = pitcher_projections['3b'] / (pitcher_projections['H'] - pitcher_projections['HR'])
+    all_hits = baseline['single'] + baseline['double'] + baseline['triple'] + baseline['hr']
+    s_ratio = baseline['single'] / all_hits
+    d_ratio = baseline['double'] / all_hits
+    t_ratio = baseline['triple'] / all_hits
 
     p_const = 900
     for ix, stat_line in p_logs.iterrows():
@@ -148,8 +136,8 @@ def update_pitcher_projections(pitcher_id):
         projections_accumulator['double'] = ((projections_accumulator['double'] * (p_const - tbf)) + ((stat_line['h'] - stat_line['hr']) * d_ratio) / (pf['2B'] / 100)) / p_const
         projections_accumulator['single'] = ((projections_accumulator['single'] * (p_const - tbf)) + ((stat_line['h'] - stat_line['hr']) * s_ratio) / (pf['1B'] / 100)) / p_const
 
-    vL_projections = steamer_pitchers_split[steamer_pitchers_split['split'] == 'vL']
-    vR_projections = steamer_pitchers_split[steamer_pitchers_split['split'] == 'vR']
+    vL_projections = steamer_pitchers[steamer_pitchers['split'] == 'vL']
+    vR_projections = steamer_pitchers[steamer_pitchers['split'] == 'vR']
     vL_base = pitcher_dict(vL_projections)
     vR_base = pitcher_dict(vR_projections)
     acc = []
@@ -169,10 +157,11 @@ def update_pitcher_projections(pitcher_id):
 
 if __name__ == '__main__':
     player_ids = list(set(pitcher_logs['player_id'].tolist()))
-    steamer_ids = list(set(steamer_pitchers_split['mlbamid'].tolist()))
+    steamer_ids = list(set(steamer_pitchers['mlbamid'].tolist()))
     all_pitchers = []
     for ix, player_id in enumerate(player_ids):
-        print(ix,'/',len(player_ids))
+        if ix%25 ==0:
+            print(ix,'/',len(player_ids))
         if player_id not in steamer_ids:
             print('No splits for pitcher', player_id, 'will continue')
             continue

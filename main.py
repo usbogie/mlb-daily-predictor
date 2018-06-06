@@ -245,17 +245,29 @@ def get_pitching_stats(lineup, date, test=False):
         dist = 1/len(relievers_list)
         relief = []
         for reliever in relievers_list:
-            if len(steamer_pitchers[steamer_pitchers['mlbamid'] == reliever]['mlbamid'].tolist()) == 0:
-                continue
-            role = 'RP'
-            if len(steamer_pitchers[steamer_pitchers['mlbamid'] == reliever]['mlbamid'].tolist()) < 12 and steamer_pitchers[steamer_pitchers['mlbamid'] == reliever]['role'].tolist()[0] == 'SP':
-                role = 'SP'
-            stats = {'vL': steamer_pitchers[(steamer_pitchers['mlbamid'] == reliever) & (steamer_pitchers['pn'] == 1) &
-                        (steamer_pitchers['role'] == role) & (steamer_pitchers['split'] == 'vL')].squeeze().to_dict(),
-                     'vR': steamer_pitchers[(steamer_pitchers['mlbamid'] == reliever) & (steamer_pitchers['pn'] == 1) &
-                        (steamer_pitchers['role'] == role) & (steamer_pitchers['split'] == 'vR')].squeeze().to_dict(),
-                     'usage': dist}
-            relief.append(stats)
+            reliever_projections = pitcher_projections[pitcher_projections['mlb_id'] == reliever]
+            if reliever_projections.empty:
+                relief_pitcher = steamer_pitchers[steamer_pitchers['mlbamid'] == reliever]
+                if relief_pitcher.empty:
+                    print(name, 'pitcher not in steamer')
+                    continue
+                vL = pitcher_dict(relief_pitcher[relief_pitcher['split'] == 'vL'])
+                vR = pitcher_dict(relief_pitcher[relief_pitcher['split'] == 'vR'])
+            else:
+                dates = reliever_projections['date'].tolist()
+                target = date if date in dates else max(dates)
+                relief_pitcher = reliever_projections[reliever_projections['date'] == target].to_dict('records')
+                if len(relief_pitcher) > 1 and relief_pitcher[0]['mlb_id'] == relief_pitcher[1]['mlb_id']:
+                    relief_pitcher = relief_pitcher[1]
+                else:
+                    relief_pitcher = relief_pitcher[0]
+
+                vL = dict(throws = relief_pitcher['throws'], mlb_id = relief_pitcher['mlb_id'], date = relief_pitcher['date'])
+                vR = dict(throws = relief_pitcher['throws'], mlb_id = relief_pitcher['mlb_id'], date = relief_pitcher['date'])
+                for key in keys:
+                    vL[key] = relief_pitcher['vL_'+key]
+                    vR[key] = relief_pitcher['vR_'+key]
+            relief.append(dict(vL = vL, vR = vR, usage = dist))
         random.shuffle(relief)
         pitchers.extend(relief)
     return pitchers
@@ -508,7 +520,7 @@ def test_year(year):
     lineups = pd.read_csv(os.path.join('data','lineups','lineups_{}.csv'.format(year)))
     park_factors = pd.read_csv(os.path.join('data','park_factors_handedness.csv'))
     league_avgs = calc_averages()
-    league_avgs.pop('PA')
+    league_avgs.pop('pa')
 
     all_results = []
     all_net = []
@@ -518,24 +530,19 @@ def test_year(year):
         day_results = []
         for index, game in slate.iterrows():
             game_obj = Game(game['date'],'12:05p',game['away'],game['home'])
-            away_lineup = lineups[(lineups['key'] == game['key']) & (game['away'] == lineups['name'])]
-            home_lineup = lineups[(lineups['key'] == game['key']) & (game['home'] == lineups['name'])]
+            away_lineup = lineups[(lineups['key'] == game['key']) & (game['away'] == lineups['name'])].to_dict('records')[0]
+            home_lineup = lineups[(lineups['key'] == game['key']) & (game['home'] == lineups['name'])].to_dict('records')[0]
             game_odds = lines[lines['key'] == game['key']]
-            if away_lineup.empty or home_lineup.empty:
-                print(away_lineup)
-                print(home_lineup)
-                print("empty lineup. continue")
-                continue
 
-            if away_lineup.iloc[0]['10_name'] in starters_to_ignore[year] or home_lineup.iloc[0]['10_name'] in starters_to_ignore[year]:
-                print('Starter {} has no projections. Continue'.format(away_lineup.iloc[0]['10_name']))
-                print('Starter {} has no projections. Continue\n'.format(home_lineup.iloc[0]['10_name']))
+            if away_lineup['10_name'] in starters_to_ignore[year] or home_lineup['10_name'] in starters_to_ignore[year]:
+                print('Starter {} has no projections. Continue'.format(away_lineup['10_name']))
+                print('Starter {} has no projections. Continue\n'.format(home_lineup['10_name']))
                 continue
 
             away_lineup_stats = get_batting_stats(away_lineup, game['date'])
             home_lineup_stats = get_batting_stats(home_lineup, game['date'])
-            away_pitching = get_pitching_stats(away_lineup,test=True)
-            home_pitching = get_pitching_stats(home_lineup,test=True)
+            away_pitching = get_pitching_stats(away_lineup, game['date'], test=True)
+            home_pitching = get_pitching_stats(home_lineup, game['date'], test=True)
             if not away_pitching or not home_pitching:
                 print("SOMETHING WRONG MAYBE CHECK IT OUT")
                 ans = input('HELLO is this OKAY to continue?')
@@ -567,15 +574,15 @@ def test_year(year):
             if kelly_away > 0:
                 result['bet_on'] = result['away']
                 result['bet_against'] = result['home']
-                result['bet_on_pitcher'] = away_lineup.iloc[0]['10_name']
-                result['bet_against_pitcher'] = home_lineup.iloc[0]['10_name']
+                result['bet_on_pitcher'] = away_lineup['10_name']
+                result['bet_against_pitcher'] = home_lineup['10_name']
                 result['k_risk'] = round(bankroll*kelly_away/100.0,0)
                 result['value'] = round(100.0 * (away_win_pct - ml_to_winpct(result['away_ml'])), 2)
             elif kelly_home > 0:
                 result['bet_on'] = result['home']
                 result['bet_against'] = result['away']
-                result['bet_on_pitcher'] = home_lineup.iloc[0]['10_name']
-                result['bet_against_pitcher'] = away_lineup.iloc[0]['10_name']
+                result['bet_on_pitcher'] = home_lineup['10_name']
+                result['bet_against_pitcher'] = away_lineup['10_name']
                 result['k_risk'] = round(bankroll*kelly_home/100.0,0)
                 result['value'] = round(100.0 * (home_win_pct - ml_to_winpct(result['home_ml'])), 2)
             else:
@@ -644,5 +651,5 @@ if __name__ == '__main__':
         print('testing')
         test_year(2018)
     else:
-        #update_all(gr)
+        update_all(gr)
         main()
