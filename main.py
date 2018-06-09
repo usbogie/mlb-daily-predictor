@@ -624,8 +624,16 @@ def test_year(year):
         all_net.append(day_summary)
 
     import matplotlib.pyplot as plt
+
     plt.bar(range(len(all_net)), [day['acc'] for day in all_net])
-    plt.xticks(range(len(all_net)), tuple([day['date'] for day in all_net]))
+    ticks = []
+    for day in all_net:
+        date = day['date']
+        if int(date.split('-')[2]) % 5 == 0:
+            ticks.append(date[5:])
+        else:
+            ticks.append('')
+    plt.xticks(range(len(all_net)), tuple(ticks))
     plt.show()
 
     with open(os.path.join('data','results','results_{}.json'.format(year)), 'r+') as f:
@@ -634,7 +642,7 @@ def test_year(year):
 
     with open(os.path.join('data','results','profits_{}.json'.format(year)), 'r+') as f:
         f.truncate()
-        json.dump(all_results, f)
+        json.dump(all_net, f)
 
     manifest.set_index('mlb_id').to_csv(os.path.join('data','master.csv'))
 

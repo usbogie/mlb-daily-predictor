@@ -8,12 +8,13 @@ from operator import itemgetter
 from scrapers.scraper_utils import get_soup, team_codes
 
 def replace_names(name):
-    name = name.replace('C.J. Edwards', 'Carl Edwards Jr.')
+    name = name.replace('C.J. Edwards', 'Carl Edwards Jr.').replace('Xavier Cedeño','Xavier Cedeno')
     name = name.replace('Seung-Hwan Oh', 'Seung Hwan Oh').replace('Seung hwan Oh', 'Seung Hwan Oh')
     name = name.replace('Dan Winkler', 'Daniel Winkler').replace('Felipe Vazquez','Felipe Rivero')
     name = name.replace('Mike Wright Jr.','Mike Wright').replace('Danny Coulombe', 'Daniel Coulombe')
     name = name.replace('Jorge De La Rosa','Jorge de la Rosa').replace('Felix Peña', 'Felix Pena')
     name = name.replace('Lucas Sims', 'Luke Sims').replace('Mark Leiter Jr.','Mark Leiter')
+    name = name.replace('Matt Strahm', 'Matthew Strahm')
     return name
 
 def get_usage_breakdown():

@@ -900,3 +900,44 @@ key,away,away_id,away_score,date,gamePk,home,home_id,home_score
 2018/06/05/arimlb-sfnmlb-1,Arizona Diamondbacks,109,2,2018-06-05,530303,San Francisco Giants,137,1
 2018/06/05/atlmlb-sdnmlb-1,Atlanta Braves,144,14,2018-06-05,530304,San Diego Padres,135,1
 2018/06/05/arimlb-sfnmlb-1,Arizona Diamondbacks,109,3,2018-06-05,530303,San Francisco Giants,137,2
+2018/06/06/tbamlb-wasmlb-1,Tampa Bay Rays,139,2,2018-06-06,530332,Washington Nationals,120,11
+2018/06/06/balmlb-nynmlb-1,Baltimore Orioles,110,1,2018-06-06,530320,New York Mets,121,0
+2018/06/06/milmlb-clemlb-1,Milwaukee Brewers,158,1,2018-06-06,530327,Cleveland Indians,114,3
+2018/06/06/atlmlb-sdnmlb-1,Atlanta Braves,144,1,2018-06-06,530319,San Diego Padres,135,3
+2018/06/06/arimlb-sfnmlb-1,Arizona Diamondbacks,109,4,2018-06-06,530318,San Francisco Giants,137,5
+2018/06/06/lanmlb-pitmlb-1,Los Angeles Dodgers,119,9,2018-06-06,530325,Pittsburgh Pirates,134,11
+2018/06/06/nyamlb-tormlb-1,New York Yankees,147,3,2018-06-06,530328,Toronto Blue Jays,141,0
+2018/06/06/colmlb-cinmlb-1,Colorado Rockies,115,6,2018-06-06,530322,Cincinnati Reds,113,3
+2018/06/06/detmlb-bosmlb-1,Detroit Tigers,116,1,2018-06-06,530323,Boston Red Sox,111,7
+2018/06/06/oakmlb-texmlb-1,Oakland Athletics,133,2,2018-06-06,530329,Texas Rangers,140,8
+2018/06/06/phimlb-chnmlb-1,Philadelphia Phillies,143,5,2018-06-06,530330,Chicago Cubs,112,7
+2018/06/06/chamlb-minmlb-1,Chicago White Sox,145,5,2018-06-06,530321,Minnesota Twins,142,2
+2018/06/06/seamlb-houmlb-1,Seattle Mariners,136,5,2018-06-06,530331,Houston Astros,117,7
+2018/06/06/miamlb-slnmlb-1,Miami Marlins,146,11,2018-06-06,530326,St. Louis Cardinals,138,3
+2018/06/06/kcamlb-anamlb-1,Kansas City Royals,118,1,2018-06-06,530324,Los Angeles Angels,108,3
+2018/06/06/kcamlb-anamlb-1,Kansas City Royals,118,3,2018-06-06,530324,Los Angeles Angels,108,4
+2018/06/07/colmlb-cinmlb-1,Colorado Rockies,115,5,2018-06-07,530335,Cincinnati Reds,113,7
+2018/06/07/lanmlb-pitmlb-1,Los Angeles Dodgers,119,8,2018-06-07,530339,Pittsburgh Pirates,134,7
+2018/06/07/chamlb-minmlb-1,Chicago White Sox,145,2,2018-06-07,530334,Minnesota Twins,142,7
+2018/06/07/miamlb-slnmlb-1,Miami Marlins,146,1,2018-06-07,530340,St. Louis Cardinals,138,4
+2018/06/07/phimlb-chnmlb-1,Philadelphia Phillies,143,3,2018-06-07,530341,Chicago Cubs,112,4
+2018/06/07/balmlb-tormlb-1,Baltimore Orioles,110,4,2018-06-07,530333,Toronto Blue Jays,141,5
+2018/06/07/detmlb-bosmlb-1,Detroit Tigers,116,7,2018-06-07,530336,Boston Red Sox,111,2
+2018/06/07/seamlb-tbamlb-1,Seattle Mariners,136,5,2018-06-07,530342,Tampa Bay Rays,139,4
+2018/06/07/houmlb-texmlb-1,Houston Astros,117,5,2018-06-07,530337,Texas Rangers,140,2
+2018/06/07/kcamlb-oakmlb-1,Kansas City Royals,118,1,2018-06-07,530338,Oakland Athletics,133,4
+2018/06/08/pitmlb-chnmlb-1,Pittsburgh Pirates,134,1,2018-06-08,530353,Chicago Cubs,112,3
+2018/06/08/milmlb-phimlb-1,Milwaukee Brewers,158,12,2018-06-08,530351,Philadelphia Phillies,143,4
+2018/06/08/sfnmlb-wasmlb-1,San Francisco Giants,137,9,2018-06-08,530355,Washington Nationals,120,5
+2018/06/08/balmlb-tormlb-1,Baltimore Orioles,110,1,2018-06-08,530345,Toronto Blue Jays,141,5
+2018/06/08/chamlb-bosmlb-1,Chicago White Sox,145,1,2018-06-08,530346,Boston Red Sox,111,0
+2018/06/08/clemlb-detmlb-1,Cleveland Indians,114,4,2018-06-08,530347,Detroit Tigers,116,1
+2018/06/08/sdnmlb-miamlb-1,San Diego Padres,135,0,2018-06-08,530354,Miami Marlins,146,4
+2018/06/08/nyamlb-nynmlb-1,New York Yankees,147,4,2018-06-08,530352,New York Mets,121,1
+2018/06/08/seamlb-tbamlb-1,Seattle Mariners,136,4,2018-06-08,530356,Tampa Bay Rays,139,3
+2018/06/08/slnmlb-cinmlb-1,St. Louis Cardinals,138,7,2018-06-08,530357,Cincinnati Reds,113,6
+2018/06/08/houmlb-texmlb-1,Houston Astros,117,7,2018-06-08,530348,Texas Rangers,140,3
+2018/06/08/anamlb-minmlb-1,Los Angeles Angels,108,4,2018-06-08,530350,Minnesota Twins,142,2
+2018/06/08/arimlb-colmlb-1,Arizona Diamondbacks,109,9,2018-06-08,530343,Colorado Rockies,115,4
+2018/06/08/kcamlb-oakmlb-1,Kansas City Royals,118,2,2018-06-08,530349,Oakland Athletics,133,7
+2018/06/08/atlmlb-lanmlb-1,Atlanta Braves,144,3,2018-06-08,530344,Los Angeles Dodgers,119,7
