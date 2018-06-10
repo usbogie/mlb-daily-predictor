@@ -33,8 +33,7 @@ def scrape_day_bullpens(day):
     except:
         print("continue", day, "all star break or no games")
         return []
-    with Pool(10) as p:
-        data = p.map(parse, games)
+    data = [parse(g) for g in games]
     return data
 
 def scrape_bullpens(year=2017):

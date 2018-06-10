@@ -25,7 +25,7 @@ starters_to_ignore = {2017: ['Cesar Valdez', 'Jeremy Guthrie', 'Christian Bergma
     'Tyler Mahle','Dillon Peters','Jack Flaherty','Onelki Garcia','Chad Bell','Artie Lewicki',
     'Luiz Gohara','Gabriel Ynoa','Myles Jaye','Jen-Ho Tseng','Aaron Wilkerson','Deck McGuire',
     'Chris Volstad','Jacob Turner','Ryan Weber','Lisalverto Bonilla','Jacob Turner'],
-                      2018: []}
+                      2018: ['Jonny Venters']}
 
 year = 2018
 
@@ -85,9 +85,11 @@ def get_batting_stats(lineup, date):
                     print("DUPLICATE something is wrong\n",players)
                     ix = int(input("Which player is actually playing? => "))
                     players = players.iloc[ix-1]
-                print("NEW PLAYER! Matching", batter_name, "to", players['mlb_name'].iloc[0])
-                manifest.at[manifest.index[manifest['mlb_id'] == players['mlb_id'].iloc[0]],'fantasy_labs'] = batter_fantasylabs_id
-                print('Matched', batter_fantasylabs_id, "to", players['mlb_id'].iloc[0])
+                else:
+                    players = players.iloc[0]
+                print("NEW PLAYER! Matching", batter_name, "to", players['mlb_name'])
+                manifest.at[manifest.index[manifest['mlb_id'] == players['mlb_id']],'fantasy_labs'] = batter_fantasylabs_id
+                print('Matched', batter_fantasylabs_id, "to", players['mlb_id'])
             else:
                 print('Couldnt find {}. Giving average batter stats'.format(batter_name))
                 avg_stats = calc_averages()
@@ -191,14 +193,14 @@ def get_pitching_stats(lineup, date, test=False):
         for name, info in relievers.items():
             reliever = manifest[(manifest['mlb_name'] == name)]
             ids = reliever['mlb_id'].unique().tolist()
-            if len(ids) > 0:
-                reliever_id = ids[0]
-            elif len(ids) > 1:
+            if len(ids) > 1:
                 reliever_id = determine_reliever_2018(name, lineup['name'])
                 if not reliever_id:
                     print("DUPLICATE something is wrong\n",reliever)
                     ix = int(input("Which player is actually playing? => "))
                     reliever_id = reliever.iloc[ix-1]['mlb_id']
+            elif len(ids) > 0:
+                reliever_id = ids[0]
             else:
                 print('No pitcher matched', name)
                 continue
@@ -214,11 +216,12 @@ def get_pitching_stats(lineup, date, test=False):
                 dates = reliever_projections['date'].tolist()
                 target = date if date in dates else max(dates)
                 relief_pitcher = reliever_projections[reliever_projections['date'] == target].to_dict('records')
-                if len(relief_pitcher) != 1:
+                if len(relief_pitcher) == 2 and relief_pitcher[0]['mlb_id'] == relief_pitcher[1]['mlb_id']:
+                    relief_pitcher = relief_pitcher[1]
+                elif len(relief_pitcher) > 1:
                     print("Something wrong")
                 else:
                     relief_pitcher = relief_pitcher[0]
-
                 vL = dict(throws = relief_pitcher['throws'], mlb_id = relief_pitcher['mlb_id'], date = relief_pitcher['date'])
                 vR = dict(throws = relief_pitcher['throws'], mlb_id = relief_pitcher['mlb_id'], date = relief_pitcher['date'])
                 for key in keys:
@@ -249,7 +252,7 @@ def get_pitching_stats(lineup, date, test=False):
             if reliever_projections.empty:
                 relief_pitcher = steamer_pitchers[steamer_pitchers['mlbamid'] == reliever]
                 if relief_pitcher.empty:
-                    print(name, 'pitcher not in steamer')
+                    print(reliever, 'pitcher not in steamer')
                     continue
                 vL = pitcher_dict(relief_pitcher[relief_pitcher['split'] == 'vL'])
                 vR = pitcher_dict(relief_pitcher[relief_pitcher['split'] == 'vR'])
@@ -568,8 +571,11 @@ def test_year(year):
                 home_ml_proj = round(winpct_to_ml(home_win_pct),0)
             )
 
-            kelly_away = third_kelly_calculator(game_odds.iloc[0]['ml_away'], away_win_pct)
-            kelly_home = third_kelly_calculator(game_odds.iloc[0]['ml_home'], home_win_pct)
+            value_away = round(100.0 * (away_win_pct - ml_to_winpct(result['away_ml'])), 2)
+            value_home = round(100.0 * (home_win_pct - ml_to_winpct(result['home_ml'])), 2)
+
+            kelly_away = third_kelly_calculator(game_odds.iloc[0]['ml_away'], away_win_pct) if value_away >= 2.0 else 0
+            kelly_home = third_kelly_calculator(game_odds.iloc[0]['ml_home'], home_win_pct) if value_home >= 2.0 else 0
 
             if kelly_away > 0:
                 result['bet_on'] = result['away']
@@ -657,7 +663,7 @@ if __name__ == '__main__':
         test = sys.argv[1] == 'test'
     if test:
         print('testing')
-        test_year(2018)
+        test_year(year)
     else:
         update_all(gr)
         main()

@@ -460,7 +460,7 @@ mlb_id,Unnamed: 0,fantasy_labs,mlb_name
 444489,458,5936,Manny Pina
 501255,459,0,Rafael Ynoa
 501986,460,0,Cedric Hunter
-502029,461,0,Chris Marrero
+502029,461,4891,Chris Marrero
 547379,462,5867,Roberto Perez
 502034,463,0,Emmanuel Burriss
 434636,464,0,Angel Pagan
@@ -578,7 +578,7 @@ mlb_id,Unnamed: 0,fantasy_labs,mlb_name
 543305,576,3773,Aaron Hicks
 502100,577,6020,Alex Presley
 502117,578,5499,Kristopher Negron
-502151,579,0,Chad Huffman
+502151,579,3925,Chad Huffman
 543063,580,2328,Brandon Crawford
 500208,581,6894,Yangervis Solarte
 518692,582,3039,Freddie Freeman
@@ -640,7 +640,7 @@ mlb_id,Unnamed: 0,fantasy_labs,mlb_name
 456422,638,0,Michael Bourn
 134181,639,1378,Adrian Beltre
 543590,640,5542,Kirk Nieuwenhuis
-451192,641,0,Jim Adduci
+451192,641,954,Jim Adduci
 474568,642,5197,Jordy Mercer
 435064,643,7875,Bobby Wilson
 446481,644,6352,Sean Rodriguez
@@ -673,7 +673,7 @@ mlb_id,Unnamed: 0,fantasy_labs,mlb_name
 518953,671,0,David Lough
 527049,672,8077,Cesar Puello
 571602,673,2450,Matt Davidson
-489138,674,0,Tyler Moore
+489138,674,5347,Tyler Moore
 518577,675,0,Collin Cowgill
 471865,676,3264,Carlos Gonzalez
 518653,677,0,Jake Elmore
@@ -8851,4 +8851,4 @@ mlb_id,Unnamed: 0,fantasy_labs,mlb_name
 671068,8849,0,Christian Stolo
 669143,8850,0,Patrick Duester
 673633,8851,0,Yoshihisa Hirano
-673633,8852,0,Yoshihisa Hirano
+518700,8852,3053,Eric Fryer

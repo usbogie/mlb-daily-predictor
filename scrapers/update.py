@@ -85,6 +85,6 @@ def update_all(gr):
     if (gr):
         get_relievers()
     update_games()
-    #update_bullpens()
+    update_bullpens()
     update_lineups()
     update_lines()

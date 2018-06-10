@@ -120,7 +120,7 @@ def scrape_player_stats(year=2017):
 
 
 if __name__ == '__main__':
-	year = 2018
+	year = 2017
 	pitcher_df, batter_df = scrape_player_stats(year=year)
 	csv_path_pitchers = os.path.join('..','data','player_logs','pitchers_{}.csv'.format(year))
 	pitcher_df.drop_duplicates().to_csv(csv_path_pitchers)

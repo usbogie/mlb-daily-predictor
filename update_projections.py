@@ -5,7 +5,7 @@ import json
 import sys
 import os
 
-year = 2018
+year = 2017
 
 steamer_batters = pd.read_csv(os.path.join('data','steamer', 'steamer_hitters_{}_split.csv'.format(year)))
 steamer_pitchers = pd.read_csv(os.path.join('data','steamer', 'steamer_pitchers_{}_split.csv'.format(year)))
@@ -17,7 +17,8 @@ games = pd.read_csv(os.path.join('data','games','games_{}.csv'.format(year)))
 park_factors = pd.read_csv(os.path.join('data','park_factors_general.csv'))
 
 def batter_dict(batter_id, projections):
-    batter_projections = projections.loc[projections['mlbamid'] == batter_id].to_dict('records')[0]
+    batter_projections = projections.loc[projections['mlbamid'] == batter_id].to_dict('records')
+    batter_projections = batter_projections[0]
     projections_accumulator = dict(
         k = batter_projections['K'] / batter_projections['PA'],
         bb = batter_projections['BB'] / batter_projections['PA'],
@@ -78,16 +79,25 @@ def update_batter_projections(batter_id):
 def pitcher_dict(projections):
     starter = projections[
         (projections['pn'] == 1) &
-        (projections['role'] == 'SP')].to_dict('records')[0]
+        (projections['role'] == 'SP')].to_dict('records')
     reliever = projections[
         (projections['pn'] == 1) &
-        (projections['role'] == 'RP')].to_dict('records')[0]
-    if not bool(reliever):
-        base = starter
-    elif not bool(starter):
-        base = reliever
+        (projections['role'] == 'RP')].to_dict('records')
+
+    keys = ['HBP/PA','SO/PA','BB/PA','1B/PA','2B/PA','3B/PA','HR/PA']
+    if len(reliever) == 0:
+        starter = starter[0]
+        base = dict(throws = starter['Throws'], mlb_id = starter['mlbamid'], date = get_days_in_season(year)[0])
+        for key in keys:
+            base[key] = starter[key]
+    elif len(starter) == 0:
+        reliever = reliever[0]
+        base = dict(throws = reliever['Throws'], mlb_id = reliever['mlbamid'], date = get_days_in_season(year)[0])
+        for key in keys:
+            base[key] = reliever[key]
     else:
-        keys = ['HBP/PA','SO/PA','BB/PA','1B/PA','2B/PA','3B/PA','HR/PA']
+        starter = starter[0]
+        reliever = reliever[0]
         pct_starter = 0 if starter['TBF'] == 0 else (starter['TBF'] + reliever['TBF']) / starter['TBF']
         base = dict(throws = starter['Throws'], mlb_id = starter['mlbamid'], date = get_days_in_season(year)[0])
         for key in keys:
@@ -136,8 +146,8 @@ def update_pitcher_projections(pitcher_id):
         projections_accumulator['double'] = ((projections_accumulator['double'] * (p_const - tbf)) + ((stat_line['h'] - stat_line['hr']) * d_ratio) / (pf['2B'] / 100)) / p_const
         projections_accumulator['single'] = ((projections_accumulator['single'] * (p_const - tbf)) + ((stat_line['h'] - stat_line['hr']) * s_ratio) / (pf['1B'] / 100)) / p_const
 
-    vL_projections = steamer_pitchers[steamer_pitchers['split'] == 'vL']
-    vR_projections = steamer_pitchers[steamer_pitchers['split'] == 'vR']
+    vL_projections = pitcher_projections[pitcher_projections['split'] == 'vL']
+    vR_projections = pitcher_projections[pitcher_projections['split'] == 'vR']
     vL_base = pitcher_dict(vL_projections)
     vR_base = pitcher_dict(vR_projections)
     acc = []
@@ -165,13 +175,18 @@ if __name__ == '__main__':
         if player_id not in steamer_ids:
             print('No splits for pitcher', player_id, 'will continue')
             continue
-        all_pitchers.append(update_pitcher_projections(player_id))
+        proj = update_pitcher_projections(player_id)
+        all_pitchers.append(proj)
     df = pd.concat(all_pitchers).set_index(['mlb_id','date'])
     df.to_csv(os.path.join('data','projections','pitchers_{}.csv'.format(year)))
 
     player_ids = list(set(hitter_logs['player_id'].tolist()))
+    steamer_ids = list(set(steamer_batters['mlbamid'].tolist()))
     all_hitters = []
     for player_id in player_ids:
+        if player_id not in steamer_ids:
+            print('No splits for batter', player_id, 'will continue')
+            continue
         all_hitters.append(update_batter_projections(player_id))
     df = pd.concat(all_hitters).set_index(['mlb_id','date'])
     df.to_csv(os.path.join('data','projections','hitters_{}.csv'.format(year)))
