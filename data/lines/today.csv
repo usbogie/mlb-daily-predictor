@@ -1,15 +1,16 @@
 key,away,date,home,ml_away,ml_away_f5,ml_home,ml_home_f5,over_odds,over_odds_f5,rl_away,rl_away_f5,rl_home,rl_home_f5,time,total_line,total_line_f5,under_odds,under_odds_f5
-2018/06/10/chamlb-bosmlb-1,Chicago White Sox,2018-06-10,Boston Red Sox,2.96,2.76,1.45,1.46,2.05,1.83,1.91,2.28,1.91,1.68,1:05p,9.5,5.0,1.8,2.01
-2018/06/10/balmlb-tormlb-1,Baltimore Orioles,2018-06-10,Toronto Blue Jays,2.16,2.1,1.78,1.77,1.84,1.84,1.56,1.75,2.55,2.14,1:07p,9.0,5.0,1.99,1.99
-2018/06/10/sdnmlb-miamlb-1,San Diego Padres,2018-06-10,Miami Marlins,2.06,1.95,1.86,1.87,1.8,2.05,1.47,1.67,2.8,2.3,1:10p,7.0,4.0,2.05,1.8
-2018/06/10/clemlb-detmlb-1,Cleveland Indians,2018-06-10,Detroit Tigers,1.39,1.36,3.25,3.31,1.87,2.0,1.65,1.53,2.35,2.6,1:10p,8.0,4.5,1.95,1.83
-2018/06/10/seamlb-tbamlb-1,Seattle Mariners,2018-06-10,Tampa Bay Rays,1.61,1.6,2.49,2.46,1.91,1.91,2.05,1.9,1.8,1.92,1:10p,7.0,3.5,1.91,1.91
-2018/06/10/slnmlb-cinmlb-1,St. Louis Cardinals,2018-06-10,Cincinnati Reds,1.84,1.75,2.09,2.13,1.91,1.91,2.32,2.08,1.65,1.78,1:10p,9.5,5.0,1.91,1.91
-2018/06/10/milmlb-phimlb-1,Milwaukee Brewers,2018-06-10,Philadelphia Phillies,1.9,1.91,2.01,1.91,1.87,2.08,2.43,2.3,1.61,1.67,1:35p,8.0,4.0,1.95,1.78
-2018/06/10/anamlb-minmlb-1,Los Angeles Angels,2018-06-10,Minnesota Twins,2.09,1.99,1.84,1.84,1.83,1.87,1.5,1.71,2.7,2.2,2:10p,9.0,5.0,2.0,1.95
-2018/06/10/houmlb-texmlb-1,Houston Astros,2018-06-10,Texas Rangers,1.47,1.48,2.92,2.75,2.0,1.87,1.71,1.71,2.2,2.2,3:05p,11.0,6.0,1.83,1.95
-2018/06/10/arimlb-colmlb-1,Arizona Diamondbacks,2018-06-10,Colorado Rockies,2.34,2.4,1.67,1.62,1.83,1.87,1.69,1.95,2.25,1.87,3:10p,11.5,6.5,2.0,1.95
-2018/06/10/sfnmlb-wasmlb-1,San Francisco Giants,2018-06-10,Washington Nationals,3.68,3.67,1.33,1.31,1.95,2.0,2.3,2.69,1.67,1.5,4:05p,7.5,4.0,1.87,1.83
-2018/06/10/kcamlb-oakmlb-1,Kansas City Royals,2018-06-10,Oakland Athletics,2.56,2.54,1.58,1.57,1.95,1.87,1.71,1.98,2.2,1.85,4:05p,8.5,4.5,1.87,1.95
-2018/06/10/atlmlb-lanmlb-1,Atlanta Braves,2018-06-10,Los Angeles Dodgers,2.53,2.5,1.58,1.59,1.87,1.87,1.65,1.93,2.35,1.88,4:10p,7.0,3.5,1.95,1.95
-2018/06/10/nyamlb-nynmlb-1,New York Yankees,2018-06-10,New York Mets,1.42,1.41,3.13,3.02,1.83,1.86,1.67,,2.3,,8:05p,7.0,3.5,2.0,1.96
+2018/06/12/colmlb-phimlb-1,Colorado Rockies,2018-06-12,Philadelphia Phillies,2.3,2.25,1.69,1.69,1.95,1.91,1.56,1.91,2.55,1.91,7:05p,7.0,3.5,1.87,1.91
+2018/06/12/bosmlb-balmlb-1,Boston Red Sox,2018-06-12,Baltimore Orioles,1.6,1.67,2.49,2.3,2.0,1.83,1.91,1.91,1.91,1.91,7:05p,9.5,5.0,1.83,2.0
+2018/06/12/wasmlb-nyamlb-1,Washington Nationals,2018-06-12,New York Yankees,2.4,2.3,1.65,1.67,1.91,1.8,1.67,1.91,2.3,1.91,7:05p,9.0,5.0,1.91,2.05
+2018/06/12/tormlb-tbamlb-1,Toronto Blue Jays,2018-06-12,Tampa Bay Rays,2.03,2.05,1.88,1.8,1.88,2.0,1.48,1.74,2.76,2.15,7:10p,8.0,4.5,1.93,1.83
+2018/06/12/minmlb-detmlb-1,Minnesota Twins,2018-06-12,Detroit Tigers,1.95,2.0,1.95,1.83,1.91,1.91,1.47,1.71,2.8,2.2,7:10p,9.0,5.0,1.91,1.91
+2018/06/12/sfnmlb-miamlb-1,San Francisco Giants,2018-06-12,Miami Marlins,1.85,1.83,2.08,2.0,2.05,1.95,2.36,2.15,1.64,1.74,7:10p,8.5,4.5,1.8,1.87
+2018/06/12/nynmlb-atlmlb-1,New York Mets,2018-06-12,Atlanta Braves,2.4,2.4,1.65,1.61,2.05,2.05,1.65,1.91,2.35,1.91,7:35p,8.5,4.5,1.8,1.8
+2018/06/12/clemlb-chamlb-1,Cleveland Indians,2018-06-12,Chicago White Sox,1.72,1.67,2.25,2.3,1.88,1.95,2.15,1.91,1.74,1.91,8:10p,9.5,5.5,1.93,1.87
+2018/06/12/chnmlb-milmlb-1,Chicago Cubs,2018-06-12,Milwaukee Brewers,2.06,2.0,1.86,1.83,1.99,1.95,1.49,1.71,2.72,2.2,8:10p,9.5,5.5,1.84,1.87
+2018/06/12/cinmlb-kcamlb-1,Cincinnati Reds,2018-06-12,Kansas City Royals,1.95,1.91,1.95,1.91,1.84,1.91,1.47,1.67,2.8,2.3,8:15p,9.5,5.5,1.99,1.91
+2018/06/12/sdnmlb-slnmlb-1,San Diego Padres,2018-06-12,St. Louis Cardinals,2.66,2.55,1.54,1.56,1.91,2.0,1.78,2.0,2.08,1.83,8:15p,8.5,4.5,1.91,1.83
+2018/06/12/pitmlb-arimlb-1,Pittsburgh Pirates,2018-06-12,Arizona Diamondbacks,2.28,2.2,1.7,1.71,1.83,1.77,1.61,1.83,2.44,2.0,9:40p,8.5,4.5,2.0,2.1
+2018/06/12/houmlb-oakmlb-1,Houston Astros,2018-06-12,Oakland Athletics,1.7,1.69,2.28,2.25,1.95,1.91,2.18,1.95,1.72,1.87,10:05p,8.5,4.5,1.87,1.91
+2018/06/12/anamlb-seamlb-1,Los Angeles Angels,2018-06-12,Seattle Mariners,2.05,1.95,1.87,1.87,1.91,1.87,1.5,1.69,2.7,2.25,10:10p,8.5,4.5,1.91,1.95
+2018/06/12/texmlb-lanmlb-1,Texas Rangers,2018-06-12,Los Angeles Dodgers,2.6,2.6,1.56,1.53,1.95,1.91,1.71,2.1,2.2,1.77,10:10p,8.5,4.5,1.87,1.91

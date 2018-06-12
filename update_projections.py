@@ -5,7 +5,7 @@ import json
 import sys
 import os
 
-year = 2017
+year = 2018
 
 steamer_batters = pd.read_csv(os.path.join('data','steamer', 'steamer_hitters_{}_split.csv'.format(year)))
 steamer_pitchers = pd.read_csv(os.path.join('data','steamer', 'steamer_pitchers_{}_split.csv'.format(year)))
@@ -41,7 +41,7 @@ def update_batter_projections(batter_id):
     baseline = dict(projections_accumulator)
     all_projections = []
 
-    p_const = 650
+    p_const = 400
     for ix, stat_line in batter_logs.iterrows():
         try:
             home_team = games.loc[games['key'] == stat_line['game_id']].iloc[0]['home']
@@ -126,7 +126,7 @@ def update_pitcher_projections(pitcher_id):
     d_ratio = baseline['double'] / all_hits
     t_ratio = baseline['triple'] / all_hits
 
-    p_const = 900
+    p_const = 750
     for ix, stat_line in p_logs.iterrows():
         try:
             home_team = games.loc[games['key'] == stat_line['game_id']].iloc[0]['home']

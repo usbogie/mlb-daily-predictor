@@ -48,7 +48,6 @@ manifest = pd.read_csv(os.path.join('data','master.csv'))
 
 def calc_averages():
     avgs_dict = dict()
-    steamer_batters = pd.read_csv(os.path.join('data','steamer','steamer_hitters_{}.csv'.format(year)))
     total_PA = float(steamer_batters['PA'].sum())
     avgs_dict['single'] = steamer_batters['1B'].sum() / total_PA
     avgs_dict['double'] = steamer_batters['2B'].sum() / total_PA
@@ -507,9 +506,6 @@ def main():
         print('Score in first pct:', away_output['sc_in_first'],
               'Implied line:', home_output['sc_in_first'])
 
-        print('Away starter strikeouts:', round(mcGame.away_strikeouts/mcGame.number_of_sims, 2))
-        print('Home starter strikeouts:', round(mcGame.home_strikeouts/mcGame.number_of_sims, 2))
-
         game_outputs.append((game['time'], away_output, home_output))
     gsheets_upload.update_spreadsheet(game_outputs)
 
@@ -528,6 +524,7 @@ def test_year(year):
     all_results = []
     all_net = []
     acc = 0
+    risk_acc = 0
     for day in days:
         slate = games[games['date'] == day]
         day_results = []
@@ -555,7 +552,11 @@ def test_year(year):
             print("Simulating game:",day,game['away'],'vs',game['home'])
             all_matchups = generate_matchups(pf, home_pitching, away_pitching, home_lineup_stats, away_lineup_stats, league_avgs)
             mcGame = MonteCarlo(game_obj,away_lineup_stats,home_lineup_stats,away_pitching,home_pitching,all_matchups)
-            mcGame.sim_games(test=True)
+            try:
+                mcGame.sim_games(test=True)
+            except:
+                print("Issue, attempting SIM again")
+                mcGame.sim_games(test=True)
 
             away_win_pct = 1-(mcGame.home_win_prob*1.08)
             home_win_pct = mcGame.home_win_prob*1.08
@@ -619,8 +620,10 @@ def test_year(year):
         for result in day_results:
             day_risk = day_risk + result['k_risk']
             day_net = day_net + result['net']
+        risk_acc = risk_acc + day_risk
         acc = acc + day_net
         print(day,'-- total risk:',day_risk,'-- total net:',day_net,'-- acc:',acc)
+        print('ROI to date', acc/risk_acc*100)
         day_summary = dict()
         day_summary['date'] = day
         day_summary['risk'] = day_risk
@@ -628,6 +631,11 @@ def test_year(year):
         day_summary['acc'] = acc
         all_results.extend(day_results)
         all_net.append(day_summary)
+
+    total_risk = sum([g['k_risk'] for g in all_results])
+    total_win = sum([g['net'] for g in all_results])
+
+    print('ROI is', total_win/total_risk*100.0)
 
     import matplotlib.pyplot as plt
 

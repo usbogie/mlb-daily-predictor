@@ -46,8 +46,6 @@ class MonteCarlo(object):
 
     scored_in_first = False
     scores_in_first = 0
-    away_strikeouts = 0
-    home_strikeouts = 0
 
     home_histo = []
     away_histo = []
@@ -63,10 +61,10 @@ class MonteCarlo(object):
         self.home_pitchers = home_pitchers
         self.matchups = matchups
 
-        self.home_histo = [0]*50
-        self.away_histo = [0]*50
-        self.comb_histo = [0]*50
-        self.f5_comb_histo = [0]*50
+        self.home_histo = [0]*75
+        self.away_histo = [0]*75
+        self.comb_histo = [0]*75
+        self.f5_comb_histo = [0]*75
 
 
     def sim_one_game(self,test):
@@ -191,30 +189,27 @@ class MonteCarlo(object):
         #print(event)
         if event == 'OutNonK':
             state.outs = state.outs + 1
-            if state.onThird and state.outs < 3:
-                if state.determine_extra_base(event, '3'):
-                    self.increment_runs()
-                    state.onThird = False
-            if state.onSecond and state.outs < 3:
-                if not state.onThird and state.determine_extra_base(event, '2'):
-                    state.onThird = True
-                    state.onSecond = False
-            if state.onFirst and state.outs < 3:
-                if not state.onSecond and state.determine_extra_base(event, '1'):
-                    state.onSecond = True
-                    state.onFirst = False
+            if state.outs < 3:
+                if state.onThird:
+                    if state.determine_extra_base(event, '3'):
+                        self.increment_runs()
+                        state.onThird = False
+                if state.onSecond:
+                    if not state.onThird and state.determine_extra_base(event, '2'):
+                        state.onThird = True
+                        state.onSecond = False
+                if state.onFirst:
+                    if not state.onSecond and state.determine_extra_base(event, '1'):
+                        state.onSecond = True
+                        state.onFirst = False
         if event == 'k':
-            if pitcher == self.away_pitchers[0]:
-                self.away_strikeouts = self.away_strikeouts + 1
-            elif pitcher == self.home_pitchers[0]:
-                self.home_strikeouts = self.home_strikeouts + 1
             state.outs = state.outs + 1
         if event == 'bb' or event == 'hpb':
-            if state.onFirst and state.onSecond and state.onThird:
-                self.increment_runs()
-            elif state.onFirst and state.onSecond:
-                state.onThird = True
-            elif state.onFirst:
+            if state.onFirst:
+                if state.onSecond:
+                    if state.onThird:
+                        self.increment_runs()
+                    state.onThird = True
                 state.onSecond = True
             state.onFirst = True
         if event == 'single':
@@ -327,7 +322,7 @@ class MonteCarlo(object):
         #randomly select reliever based on usage
         relief_pitchers = [x for x in pitchers[1:-1]]
         rand = random.random()
-        for i in range(0,len(relief_pitchers)):
+        for i in range(len(relief_pitchers)):
             if rand < sum([x['usage'] for x in relief_pitchers[:i+1]]):
                 # print(relief_pitchers[i]['fullname'], 'is the new reliever')
                 return relief_pitchers[i]
