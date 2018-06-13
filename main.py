@@ -144,10 +144,13 @@ def get_pitching_stats(lineup, date, test=False):
     if starter_fantasylabs_id not in manifest['fantasy_labs'].tolist():
         players = manifest[(manifest['mlb_name'] == starter_name)]
         ids = players['mlb_id'].unique().tolist()
+        print(players)
         if len(ids) > 1:
             print("DUPLICATE something is wrong\n",players)
             ix = int(input("Which player is actually playing? => "))
             players = players.iloc[ix-1]
+        else:
+            players = players.iloc[0]
         players = players.to_dict('records')[0]
         try:
             print("NEW PLAYER! Matching", starter_name, "to", players['mlb_name'])

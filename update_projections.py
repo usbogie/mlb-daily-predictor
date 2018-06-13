@@ -41,7 +41,7 @@ def update_batter_projections(batter_id):
     baseline = dict(projections_accumulator)
     all_projections = []
 
-    p_const = 400
+    p_const = 500
     for ix, stat_line in batter_logs.iterrows():
         try:
             home_team = games.loc[games['key'] == stat_line['game_id']].iloc[0]['home']
@@ -56,10 +56,10 @@ def update_batter_projections(batter_id):
         projections_accumulator['k'] = ((projections_accumulator['k'] * (p_const - pa)) + stat_line['so']) / p_const
         projections_accumulator['bb'] = ((projections_accumulator['bb'] * (p_const - pa)) + stat_line['bb']) / p_const
         projections_accumulator['hbp'] = ((projections_accumulator['hbp'] * (p_const - pa)) + stat_line['hbp']) / p_const
-        projections_accumulator['hr'] = ((projections_accumulator['hr'] * (p_const - pa)) + stat_line['hr'] / (pf['HR'] / 100)) / p_const
-        projections_accumulator['triple'] = ((projections_accumulator['triple'] * (p_const - pa)) + stat_line['t'] / (pf['3B'] / 100)) / p_const
-        projections_accumulator['double'] = ((projections_accumulator['double'] * (p_const - pa)) + stat_line['d'] / (pf['2B'] / 100)) / p_const
-        projections_accumulator['single'] = ((projections_accumulator['single'] * (p_const - pa)) + (stat_line['h'] - stat_line['hr'] - stat_line['t'] - stat_line['d']) / (pf['1B'] / 100)) / p_const
+        projections_accumulator['hr'] = ((projections_accumulator['hr'] * (3*p_const - pa)) + stat_line['hr'] / (pf['HR'] / 100)) / (3*p_const)
+        projections_accumulator['triple'] = ((projections_accumulator['triple'] * (3*p_const - pa)) + stat_line['t'] / (pf['3B'] / 100)) / (3*p_const)
+        projections_accumulator['double'] = ((projections_accumulator['double'] * (3*p_const - pa)) + stat_line['d'] / (pf['2B'] / 100)) / (3*p_const)
+        projections_accumulator['single'] = ((projections_accumulator['single'] * (3*p_const - pa)) + (stat_line['h'] - stat_line['hr'] - stat_line['t'] - stat_line['d']) / (pf['1B'] / 100)) / (3*p_const)
 
     vL_base = batter_dict(batter_id, steamer_batters[(steamer_batters['split'] == 'vL') & (steamer_batters['pn'] == 1)])
     vR_base = batter_dict(batter_id, steamer_batters[(steamer_batters['split'] == 'vR') & (steamer_batters['pn'] == 1)])
@@ -126,7 +126,7 @@ def update_pitcher_projections(pitcher_id):
     d_ratio = baseline['double'] / all_hits
     t_ratio = baseline['triple'] / all_hits
 
-    p_const = 750
+    p_const = 600
     for ix, stat_line in p_logs.iterrows():
         try:
             home_team = games.loc[games['key'] == stat_line['game_id']].iloc[0]['home']
@@ -141,10 +141,10 @@ def update_pitcher_projections(pitcher_id):
         projections_accumulator['k'] = ((projections_accumulator['k'] * (p_const - tbf)) + stat_line['so']) / p_const
         projections_accumulator['bb'] = ((projections_accumulator['bb'] * (p_const - tbf)) + stat_line['bb']) / p_const
         projections_accumulator['hbp'] = ((projections_accumulator['hbp'] * (p_const - tbf)) + stat_line['hb']) / p_const
-        projections_accumulator['hr'] = ((projections_accumulator['hr'] * (p_const - tbf)) + stat_line['hr'] / (pf['HR'] / 100)) / p_const
-        projections_accumulator['triple'] = ((projections_accumulator['triple'] * (p_const - tbf)) + ((stat_line['h'] - stat_line['hr']) * t_ratio) / (pf['3B'] / 100)) / p_const
-        projections_accumulator['double'] = ((projections_accumulator['double'] * (p_const - tbf)) + ((stat_line['h'] - stat_line['hr']) * d_ratio) / (pf['2B'] / 100)) / p_const
-        projections_accumulator['single'] = ((projections_accumulator['single'] * (p_const - tbf)) + ((stat_line['h'] - stat_line['hr']) * s_ratio) / (pf['1B'] / 100)) / p_const
+        projections_accumulator['hr'] = ((projections_accumulator['hr'] * (3*p_const - tbf)) + stat_line['hr'] / (pf['HR'] / 100)) / (3*p_const)
+        projections_accumulator['triple'] = ((projections_accumulator['triple'] * (3*p_const - tbf)) + ((stat_line['h'] - stat_line['hr']) * t_ratio) / (pf['3B'] / 100)) / (3*p_const)
+        projections_accumulator['double'] = ((projections_accumulator['double'] * (3*p_const - tbf)) + ((stat_line['h'] - stat_line['hr']) * d_ratio) / (pf['2B'] / 100)) / (3*p_const)
+        projections_accumulator['single'] = ((projections_accumulator['single'] * (3*p_const - tbf)) + ((stat_line['h'] - stat_line['hr']) * s_ratio) / (pf['1B'] / 100)) / (3*p_const)
 
     vL_projections = pitcher_projections[pitcher_projections['split'] == 'vL']
     vR_projections = pitcher_projections[pitcher_projections['split'] == 'vR']
