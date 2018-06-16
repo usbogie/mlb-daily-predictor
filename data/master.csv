@@ -2503,7 +2503,7 @@ mlb_id,Unnamed: 0,fantasy_labs,mlb_name
 596107,2501,0,Eric Filia
 656494,2502,0,Taylor Gushue
 663435,2503,0,Bradley Strong
-624431,2504,0,Jose Trevino
+624431,2504,39825,Jose Trevino
 657803,2505,0,T.J. White
 649379,2506,0,Elias Arias
 650362,2507,0,Alejandro Salazar
@@ -5223,7 +5223,7 @@ mlb_id,Unnamed: 0,fantasy_labs,mlb_name
 572728,5221,0,Michael Brady
 516769,5222,0,Jenrry Mejia
 542953,5223,0,Buddy Boshers
-543424,5224,0,John Lamb
+543424,5224,8060,John Lamb
 543144,5225,0,Danny Farquhar
 542924,5226,0,Jeff Beliveau
 543409,5227,0,Michael Kohn

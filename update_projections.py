@@ -17,7 +17,7 @@ games = pd.read_csv(os.path.join('data','games','games_{}.csv'.format(year)))
 park_factors = pd.read_csv(os.path.join('data','park_factors_general.csv'))
 
 def batter_dict(batter_id, projections):
-    batter_projections = projections.loc[projections['mlbamid'] == batter_id].to_dict('records')
+    batter_projections = projections[(projections['mlbamid'] == batter_id) & (projections['pn'] == 1)].to_dict('records')
     batter_projections = batter_projections[0]
     projections_accumulator = dict(
         k = batter_projections['K'] / batter_projections['PA'],
@@ -34,9 +34,9 @@ def batter_dict(batter_id, projections):
     return projections_accumulator
 
 def update_batter_projections(batter_id):
-    batter_logs = hitter_logs.loc[hitter_logs['player_id'] == batter_id]
+    batter_logs = hitter_logs[hitter_logs['player_id'] == batter_id]
     print(batter_logs['player'].tolist()[0])
-    batter_projections = steamer_batters.loc[(steamer_batters['pn'] == 1) & (steamer_batters['split'] == 'overall')]
+    batter_projections = steamer_batters[steamer_batters['split'] == 'overall']
     projections_accumulator = batter_dict(batter_id, batter_projections)
     baseline = dict(projections_accumulator)
     all_projections = []
@@ -76,11 +76,13 @@ def update_batter_projections(batter_id):
         acc.append(combined)
     return pd.DataFrame(acc)
 
-def pitcher_dict(projections):
+def pitcher_dict(id, projections):
     starter = projections[
+        (projections['mlbamid'] == id) &
         (projections['pn'] == 1) &
         (projections['role'] == 'SP')].to_dict('records')
     reliever = projections[
+        (projections['mlbamid'] == id) &
         (projections['pn'] == 1) &
         (projections['role'] == 'RP')].to_dict('records')
 
@@ -114,10 +116,9 @@ def pitcher_dict(projections):
 
 
 def update_pitcher_projections(pitcher_id):
-    p_logs = pitcher_logs.loc[pitcher_logs['player_id'] == pitcher_id]
+    p_logs = pitcher_logs[pitcher_logs['player_id'] == pitcher_id]
     print(p_logs['player_id'].tolist()[0])
-    pitcher_projections = steamer_pitchers.loc[steamer_pitchers['mlbamid'] == pitcher_id]
-    projections_accumulator = pitcher_dict(pitcher_projections)
+    projections_accumulator = pitcher_dict(pitcher_id, steamer_pitchers)
     baseline = dict(projections_accumulator)
     all_projections = []
     #hackery as pitcher logs do not individually log non-hr hits
@@ -146,8 +147,8 @@ def update_pitcher_projections(pitcher_id):
         projections_accumulator['double'] = ((projections_accumulator['double'] * (4*p_const - tbf)) + ((stat_line['h'] - stat_line['hr']) * d_ratio) / (pf['2B'] / 100)) / (4*p_const)
         projections_accumulator['single'] = ((projections_accumulator['single'] * (4*p_const - tbf)) + ((stat_line['h'] - stat_line['hr']) * s_ratio) / (pf['1B'] / 100)) / (4*p_const)
 
-    vL_projections = pitcher_projections[pitcher_projections['split'] == 'vL']
-    vR_projections = pitcher_projections[pitcher_projections['split'] == 'vR']
+    vL_projections = steamer_pitchers[steamer_pitchers['split'] == 'vL']
+    vR_projections = steamer_pitchers[steamer_pitchers['split'] == 'vR']
     vL_base = pitcher_dict(vL_projections)
     vR_base = pitcher_dict(vR_projections)
     acc = []

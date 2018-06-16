@@ -3,8 +3,8 @@ from scrapers.scraper_utils import team_codes, get_days_in_season
 from storage.Game import Game
 from simulation.MonteCarlo import MonteCarlo
 from utils.converters import winpct_to_ml, over_total_pct, d_to_a, ml_to_winpct, third_kelly_calculator, amount_won
-from utils.matchups import generate_matchups
-from utils.relievers import determine_reliever_2018
+from lineups.lineups import get_batting_stats, get_pitching_stats
+from lineups.matchups import generate_matchups
 from scrapers.update import update_all
 from update_projections import batter_dict, pitcher_dict
 import gsheets_upload
@@ -14,18 +14,6 @@ import json
 import sys
 import os
 import argparse
-
-starters_to_ignore = {2017: ['Cesar Valdez', 'Jeremy Guthrie', 'Christian Bergman',
-    'Hector Velazquez','Sam Gaviglio','Eric Skoglund','Austin Bibens-Dirkx','Tyler Pill','Mike Bolsinger',
-    'Dinelson Lamet','Mike Pelfrey','Randall Delgado','Vance Worley','David Holmberg','Dayan Diaz',
-    'Paolo Espino','Sean Newcomb','Nik Turley','Marco Gonzales','Daniel Gossett','Francis Martes',
-    'Adam Wilk','Andrew Moore','Luis Castillo','Mark Leiter','Felix Jorge','Luke Farrell',
-    'Chris O\'Grady','Caleb Smith','Kyle Lloyd','Erick Fedde','Troy Scribner','Nick Tepesch',
-    'Chris Rowley','Chad Bettis','Andrew Albers','Aaron Slegers','T.J. McFarland','Tim Melville',
-    'Tyler Mahle','Dillon Peters','Jack Flaherty','Onelki Garcia','Chad Bell','Artie Lewicki',
-    'Luiz Gohara','Gabriel Ynoa','Myles Jaye','Jen-Ho Tseng','Aaron Wilkerson','Deck McGuire',
-    'Chris Volstad','Jacob Turner','Ryan Weber','Lisalverto Bonilla','Jacob Turner'],
-                      2018: ['Jonny Venters']}
 
 year = 2018
 
@@ -40,248 +28,14 @@ steamer_pitchers['fullname'] = steamer_pitchers[['firstname', 'lastname']].apply
 steamer_starters = pd.read_csv(os.path.join('data','steamer','steamer_pitchers_{}.csv'.format(year)))
 
 bullpens = pd.read_csv(os.path.join('data','lineups','bullpens_{}.csv'.format(year)))
+manifest = pd.read_csv(os.path.join('data','master.csv'))
 
 with open(os.path.join('data','relievers.json')) as f:
     all_relievers = json.load(f)
 
-manifest = pd.read_csv(os.path.join('data','master.csv'))
-
-def calc_averages():
-    avgs_dict = dict()
-    total_PA = float(steamer_batters['PA'].sum())
-    avgs_dict['single'] = steamer_batters['1B'].sum() / total_PA
-    avgs_dict['double'] = steamer_batters['2B'].sum() / total_PA
-    avgs_dict['triple'] = steamer_batters['3B'].sum() / total_PA
-    avgs_dict['hr'] = steamer_batters['HR'].sum() / total_PA
-    avgs_dict['bb'] = steamer_batters['BB'].sum() / total_PA
-    avgs_dict['hbp'] = steamer_batters['HBP'].sum() / total_PA
-    avgs_dict['k'] = steamer_batters['K'].sum() / total_PA
-    avgs_dict['pa'] = total_PA
-    return avgs_dict
-
-def get_batting_stats(lineup, date):
-    lineup_stats = []
-    keys = ['single','double','triple','hr','k','hbp','bb']
-    avg_pitcher_stats = {'vL': {'pa': 5277, 'single': 0.0879, 'double': 0.015, 'triple': 0.0013, 'hr': 0.0051,
-                                'bb': 0.0307, 'hbp': 0.003, 'k': 0.3843, 'bats': 'B', 'mlb_id': 'pitcher'},
-                         'vR': {'pa': 5277, 'single': 0.0879, 'double': 0.015, 'triple': 0.0013, 'hr': 0.0051,
-                                'bb': 0.0307, 'hbp': 0.003, 'k': 0.3843, 'bats': 'B', 'mlb_id': 'pitcher'}}
-
-    for i in range(1,10):
-        batter_name = lineup['{}_name'.format(str(i))]
-        batter_fantasylabs_id = int(lineup['{}_id'.format(str(i))])
-        pitcher_fantasylabs_id = int(lineup['10_id'])
-        if batter_fantasylabs_id == pitcher_fantasylabs_id:
-            print(batter_name, "is probably a pitcher, given avg pitcher stats")
-            lineup_stats.append(dict(avg_pitcher_stats))
-            continue
-
-        if batter_fantasylabs_id not in manifest['fantasy_labs'].tolist():
-            players = manifest[(manifest['mlb_name'] == batter_name)]
-            ids = players['mlb_id'].unique().tolist()
-            if len(ids) > 0:
-                if len(ids) > 1:
-                    print("DUPLICATE something is wrong\n",players)
-                    ix = int(input("Which player is actually playing? => "))
-                    players = players.iloc[ix-1]
-                else:
-                    players = players.iloc[0]
-                print("NEW PLAYER! Matching", batter_name, "to", players['mlb_name'])
-                manifest.at[manifest.index[manifest['mlb_id'] == players['mlb_id']],'fantasy_labs'] = batter_fantasylabs_id
-                print('Matched', batter_fantasylabs_id, "to", players['mlb_id'])
-            else:
-                print('Couldnt find {}. Giving average batter stats'.format(batter_name))
-                avg_stats = calc_averages()
-                avg_stats['bats'] = 'B'
-                avg_stats['mlb_id'] = 'avg_batter'
-                for key in keys:
-                    avg_stats[key] = avg_stats[key]*avg_stats['pa']
-                lineup_stats.append({'vL': avg_stats,'vR': avg_stats})
-                continue
-
-        player_id = manifest[manifest['fantasy_labs'] == batter_fantasylabs_id].iloc[0]['mlb_id']
-        if batter_projections[batter_projections['mlb_id'] == player_id].empty:
-            # batter that doesn't have game logs yet. give steamer projections
-            rows = steamer_batters[steamer_batters['mlbamid'] == player_id]
-            if rows.empty:
-                # batter not in steamers either
-                print('Couldn\'t find {}. Giving average batter stats'.format(batter_name))
-                avg_stats = calc_averages()
-                avg_stats['bats'] = 'B'
-                avg_stats['mlb_id'] = 'avg_batter'
-                for key in keys:
-                    avg_stats[key] = avg_stats[key] * avg_stats['pa']
-                lineup_stats.append({'vL': avg_stats,'vR': avg_stats})
-                continue
-            vL = batter_dict(player_id, rows[(rows['split'] == 'vL') & (rows['pn'] == 1)])
-            vR = batter_dict(player_id, rows[(rows['split'] == 'vR') & (rows['pn'] == 1)])
-            lineup_stats.append(dict(vL = vL, vR = vR))
-        else:
-            rows = batter_projections[batter_projections['mlb_id'] == player_id]
-            dates = rows['date'].tolist()
-            target = date if date in dates else max(dates)
-            rows = rows[rows['date'] == target].to_dict('records')
-            if len(rows) == 2 and rows[0]['mlb_id'] == rows[1]['mlb_id']:
-                rows = rows[1]
-            elif len(rows) > 1:
-                print("Something wrong")
-            else:
-                rows = rows[0]
-
-            vL = { key: rows['vL_'+key] for key in keys }
-            vR = { key: rows['vL_'+key] for key in keys }
-            vL['bats'], vR['bats'] = rows['bats'], rows['bats']
-            vL['mlb_id'], vR['mlb_id'] = rows['mlb_id'], rows['mlb_id']
-            lineup_stats.append(dict(vL = vL, vR = vR))
-    return lineup_stats
-
-def get_pitching_stats(lineup, date, test=False):
-    keys = ['single','double','triple','hr','k','hbp','bb']
-    starter_name = lineup['10_name']
-    starter_fantasylabs_id = int(lineup['10_id'])
-    print(starter_name)
-
-    if starter_fantasylabs_id not in manifest['fantasy_labs'].tolist():
-        players = manifest[(manifest['mlb_name'] == starter_name)]
-        ids = players['mlb_id'].unique().tolist()
-        print(players)
-        if len(ids) > 1:
-            print("DUPLICATE something is wrong\n",players)
-            ix = int(input("Which player is actually playing? => "))
-            players = players.iloc[ix-1]
-        else:
-            players = players.iloc[0]
-        players = players.to_dict('records')[0]
-        try:
-            print("NEW PLAYER! Matching", starter_name, "to", players['mlb_name'])
-        except:
-            return False
-        manifest.at[manifest.index[manifest['mlb_id'] == players['mlb_id']],'fantasy_labs'] = starter_fantasylabs_id
-        print('Matched', starter_fantasylabs_id, "to", players['mlb_id'])
-
-    p_manifest = manifest[manifest['fantasy_labs'] == starter_fantasylabs_id]
-    starting_pitcher = pitcher_projections[pitcher_projections['mlb_id'] == p_manifest.iloc[0]['mlb_id']]
-    if starting_pitcher.empty:
-        starting_pitcher = steamer_pitchers[steamer_pitchers['mlbamid'] == p_manifest.iloc[0]['mlb_id']]
-        if starting_pitcher.empty:
-            # batter not in steamers either
-            print('pitcher not in steamer')
-            sys.exit()
-
-        vL = pitcher_dict(starting_pitcher[starting_pitcher['split'] == 'vL'])
-        vR = pitcher_dict(starting_pitcher[starting_pitcher['split'] == 'vR'])
-        pitchers = [dict(vL = vL, vR = vR)]
-    else:
-        dates = starting_pitcher['date'].tolist()
-        target = date if date in dates else max(dates)
-        starting_pitcher = starting_pitcher[starting_pitcher['date'] == target].to_dict('records')
-        if len(starting_pitcher) != 1:
-            print("Something wrong")
-        else:
-            starting_pitcher = starting_pitcher[0]
-
-        vL = dict(throws = starting_pitcher['throws'], mlb_id = starting_pitcher['mlb_id'], date = starting_pitcher['date'])
-        vR = dict(throws = starting_pitcher['throws'], mlb_id = starting_pitcher['mlb_id'], date = starting_pitcher['date'])
-        for key in keys:
-            vL[key] = starting_pitcher['vL_'+key]
-            vR[key] = starting_pitcher['vR_'+key]
-        pitchers = [{'vL': vL, 'vR': vR, 'usage': 'SP'}]
-    pitchers[0]['vL']['GS'] = steamer_starters[steamer_starters['mlbamid'] == pitchers[0]['vL']['mlb_id']].iloc[0]['GS']
-    pitchers[0]['vL']['start_IP'] = steamer_starters[steamer_starters['mlbamid'] == pitchers[0]['vL']['mlb_id']].iloc[0]['start_IP']
-
-    if not test:
-        closers = []
-        relievers = all_relievers[lineup['name']]
-        for name, info in relievers.items():
-            reliever = manifest[(manifest['mlb_name'] == name)]
-            ids = reliever['mlb_id'].unique().tolist()
-            if len(ids) > 1:
-                reliever_id = determine_reliever_2018(name, lineup['name'])
-                if not reliever_id:
-                    print("DUPLICATE something is wrong\n",reliever)
-                    ix = int(input("Which player is actually playing? => "))
-                    reliever_id = reliever.iloc[ix-1]['mlb_id']
-            elif len(ids) > 0:
-                reliever_id = ids[0]
-            else:
-                print('No pitcher matched', name)
-                continue
-            reliever_projections = pitcher_projections[pitcher_projections['mlb_id'] == reliever_id]
-            if reliever_projections.empty:
-                relief_pitcher = steamer_pitchers[steamer_pitchers['mlbamid'] == reliever_id]
-                if relief_pitcher.empty:
-                    print(name, 'pitcher not in steamer')
-                    continue
-                vL = pitcher_dict(relief_pitcher[relief_pitcher['split'] == 'vL'])
-                vR = pitcher_dict(relief_pitcher[relief_pitcher['split'] == 'vR'])
-            else:
-                dates = reliever_projections['date'].tolist()
-                target = date if date in dates else max(dates)
-                relief_pitcher = reliever_projections[reliever_projections['date'] == target].to_dict('records')
-                if len(relief_pitcher) == 2 and relief_pitcher[0]['mlb_id'] == relief_pitcher[1]['mlb_id']:
-                    relief_pitcher = relief_pitcher[1]
-                elif len(relief_pitcher) > 1:
-                    print("Something wrong")
-                else:
-                    relief_pitcher = relief_pitcher[0]
-                vL = dict(throws = relief_pitcher['throws'], mlb_id = relief_pitcher['mlb_id'], date = relief_pitcher['date'])
-                vR = dict(throws = relief_pitcher['throws'], mlb_id = relief_pitcher['mlb_id'], date = relief_pitcher['date'])
-                for key in keys:
-                    vL[key] = relief_pitcher['vL_'+key]
-                    vR[key] = relief_pitcher['vR_'+key]
-            reliever = dict(vL = vL, vR = vR, usage = info[1])
-            if 'CL' not in info:
-                pitchers.append(reliever)
-            else:
-                closers.append(reliever)
-        random.shuffle(closers)
-        pitchers.extend(closers)
-    else:
-        game = bullpens[bullpens['key'] == lineup['key']]
-        if game.iloc[0]['away'] == lineup['name']:
-            all_pitchers = [game.iloc[0][col] for col in game if col.startswith('bp_away')]
-        else:
-            all_pitchers = [game.iloc[0][col] for col in game if col.startswith('bp_home')]
-        all_pitchers = [int(pitcher) for pitcher in all_pitchers if str(pitcher) != 'nan']
-        # remove starter
-        all_pitchers.remove(manifest[manifest['fantasy_labs'] == starter_fantasylabs_id].iloc[0]['mlb_id'])
-        bp_df = steamer_starters[steamer_starters['mlbamid'].isin(all_pitchers)].sort_values(by=['start_IP'],ascending=False)
-        relievers_list = bp_df.iloc[4:]['mlbamid'].tolist()
-        dist = 1/len(relievers_list)
-        relief = []
-        for reliever in relievers_list:
-            reliever_projections = pitcher_projections[pitcher_projections['mlb_id'] == reliever]
-            if reliever_projections.empty:
-                relief_pitcher = steamer_pitchers[steamer_pitchers['mlbamid'] == reliever]
-                if relief_pitcher.empty:
-                    print(reliever, 'pitcher not in steamer')
-                    continue
-                vL = pitcher_dict(relief_pitcher[relief_pitcher['split'] == 'vL'])
-                vR = pitcher_dict(relief_pitcher[relief_pitcher['split'] == 'vR'])
-            else:
-                dates = reliever_projections['date'].tolist()
-                target = date if date in dates else max(dates)
-                relief_pitcher = reliever_projections[reliever_projections['date'] == target].to_dict('records')
-                if len(relief_pitcher) > 1 and relief_pitcher[0]['mlb_id'] == relief_pitcher[1]['mlb_id']:
-                    relief_pitcher = relief_pitcher[1]
-                else:
-                    relief_pitcher = relief_pitcher[0]
-
-                vL = dict(throws = relief_pitcher['throws'], mlb_id = relief_pitcher['mlb_id'], date = relief_pitcher['date'])
-                vR = dict(throws = relief_pitcher['throws'], mlb_id = relief_pitcher['mlb_id'], date = relief_pitcher['date'])
-                for key in keys:
-                    vL[key] = relief_pitcher['vL_'+key]
-                    vR[key] = relief_pitcher['vR_'+key]
-            relief.append(dict(vL = vL, vR = vR, usage = dist))
-        random.shuffle(relief)
-        pitchers.extend(relief)
-    return pitchers
-
 def main():
     bankroll = 1000
     today = datetime.now().strftime('%Y-%m-%d')
-    league_avgs = calc_averages()
-    league_avgs.pop('pa')
     games = pd.read_csv(os.path.join('data','lines','today.csv'))
     lineups = pd.read_csv(os.path.join('data','lineups','today.csv'))
     park_factors = pd.read_csv(os.path.join('data','park_factors_handedness.csv'))
@@ -295,14 +49,16 @@ def main():
 
         away_output = dict(team=game['away'], lineup=away_lineup['lineup_status'])
         home_output = dict(team=game['home'], lineup=home_lineup['lineup_status'])
-        away_lineup_stats = get_batting_stats(away_lineup, game['date'])
-        home_lineup_stats = get_batting_stats(home_lineup, game['date'])
-        away_pitching = get_pitching_stats(away_lineup, game['date'])
-        home_pitching = get_pitching_stats(home_lineup, game['date'])
+        away_lineup_stats = get_batting_stats(manifest, batter_projections, steamer_batters, away_lineup, game['date'])
+        home_lineup_stats = get_batting_stats(manifest, batter_projections, steamer_batters, home_lineup, game['date'])
+        away_pitching = get_pitching_stats(manifest, pitcher_projections, all_relievers, steamer_pitchers, steamer_starters, away_lineup, game['date'], test=False)
+        home_pitching = get_pitching_stats(manifest, pitcher_projections, all_relievers, steamer_pitchers, steamer_starters, home_lineup, game['date'], test=False)
+        if not away_pitching or not home_pitching:
+            print("SOMETHING WRONG MAYBE CHECK IT OUT")
+            continue
         pf = park_factors[park_factors["Team"]==game["home"]].to_dict(orient='records')
 
-
-        all_matchups = generate_matchups(pf, home_pitching, away_pitching, home_lineup_stats, away_lineup_stats, league_avgs)
+        all_matchups = generate_matchups(pf,steamer_batters, home_pitching, away_pitching, home_lineup_stats, away_lineup_stats)
         print("Away lineup is", away_lineup['lineup_status'],"|| Home lineup is", home_lineup['lineup_status'])
         mcGame = MonteCarlo(game_obj,away_lineup_stats,home_lineup_stats,away_pitching,home_pitching, all_matchups)
         mcGame.sim_games()
@@ -521,8 +277,6 @@ def test_year(year):
     lines = pd.read_csv(os.path.join('data','lines','lines_{}.csv'.format(year)))
     lineups = pd.read_csv(os.path.join('data','lineups','lineups_{}.csv'.format(year)))
     park_factors = pd.read_csv(os.path.join('data','park_factors_handedness.csv'))
-    league_avgs = calc_averages()
-    league_avgs.pop('pa')
 
     all_results = []
     all_net = []
@@ -553,7 +307,7 @@ def test_year(year):
             pf = park_factors[park_factors["Team"]==game["home"]].to_dict(orient='records')
 
             print("Simulating game:",day,game['away'],'vs',game['home'])
-            all_matchups = generate_matchups(pf, home_pitching, away_pitching, home_lineup_stats, away_lineup_stats, league_avgs)
+            all_matchups = generate_matchups(pf, home_pitching, away_pitching, home_lineup_stats, away_lineup_stats)
             mcGame = MonteCarlo(game_obj,away_lineup_stats,home_lineup_stats,away_pitching,home_pitching,all_matchups)
             try:
                 mcGame.sim_games(test=True)
