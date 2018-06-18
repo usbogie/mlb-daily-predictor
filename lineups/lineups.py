@@ -32,6 +32,12 @@ def determine_reliever_2018(name, team):
         return 621242
     elif name == 'Diego Castillo' and team == 'Tampa Bay Rays':
         return 650895
+    elif name == 'Austin Davis' and team == 'Philadelphia Phillies':
+        return 656354
+    elif name == 'Richard Rodriguez' and team == 'Pittsburgh Pirates':
+        return 593144
+    elif name == 'Ricardo Rodriguez' and team == 'Texas Rangers':
+        return 600965
     return False
 
 def player_not_in_fantasy_labs(name, id, manifest):
@@ -63,7 +69,7 @@ def get_stats(date, id, projections, steamer, player_dict, arg):
     if player.empty:
         player = steamer[steamer['mlbamid'] == id]
         if player.empty:
-            print('player not in steamer')
+            print(id, 'player not in steamer')
             sys.exit()
 
         vL = player_dict(id, player[player['split'] == 'vL'])
