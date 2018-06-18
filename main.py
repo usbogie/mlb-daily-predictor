@@ -53,7 +53,7 @@ def main():
         home_lineup_stats = get_batting_stats(manifest, batter_projections, steamer_batters, home_lineup, game['date'])
         away_pitching = get_pitching_stats(manifest, pitcher_projections, all_relievers, steamer_pitchers, steamer_starters, away_lineup, game['date'], test=False)
         home_pitching = get_pitching_stats(manifest, pitcher_projections, all_relievers, steamer_pitchers, steamer_starters, home_lineup, game['date'], test=False)
-        if not away_pitching or not home_pitching:
+        if not away_pitching or not home_pitching or not away_lineup_stats or not home_lineup_stats:
             print("SOMETHING WRONG MAYBE CHECK IT OUT")
             continue
         pf = park_factors[park_factors["Team"]==game["home"]].to_dict(orient='records')

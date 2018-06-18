@@ -56,6 +56,7 @@ def player_not_in_fantasy_labs(name, id, manifest):
         print('Matched', id, "to", players['mlb_id'])
     else:
         print('Couldnt find {}. Giving average batter stats'.format(name))
+        return False
 
 def get_stats(date, id, projections, steamer, player_dict, arg):
     player = projections[projections['mlb_id'] == id]
@@ -99,6 +100,7 @@ def get_batting_stats(manifest, batter_projections, steamer_batters, lineup, dat
 
         if player_not_in_fantasy_labs(batter_name, batter_fantasylabs_id, manifest) == False:
             return False
+
 
         player_id = manifest[manifest['fantasy_labs'] == batter_fantasylabs_id].iloc[0]['mlb_id']
         stats = get_stats(date, player_id, batter_projections, steamer_batters, batter_dict, 'bats')

@@ -149,8 +149,8 @@ def update_pitcher_projections(pitcher_id):
 
     vL_projections = steamer_pitchers[steamer_pitchers['split'] == 'vL']
     vR_projections = steamer_pitchers[steamer_pitchers['split'] == 'vR']
-    vL_base = pitcher_dict(vL_projections)
-    vR_base = pitcher_dict(vR_projections)
+    vL_base = pitcher_dict(pitcher_id, vL_projections)
+    vR_base = pitcher_dict(pitcher_id, vR_projections)
     acc = []
     keys = ['k','bb','hbp','hr','triple','double','single']
     throws = vR_base['throws']
