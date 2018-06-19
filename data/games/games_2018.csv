@@ -1062,7 +1062,6 @@ key,away,away_id,away_score,date,gamePk,home,home_id,home_score
 2018/06/17/sfnmlb-lanmlb-1,San Francisco Giants,137,4,2018-06-17,530477,Los Angeles Dodgers,119,1
 2018/06/17/chnmlb-slnmlb-1,Chicago Cubs,112,0,2018-06-17,530466,St. Louis Cardinals,138,5
 2018/06/18/nyamlb-wasmlb-1,New York Yankees,147,4,2018-06-18,530046,Washington Nationals,120,2
-2018/06/18/nyamlb-wasmlb-2,New York Yankees,147,3,2018-06-18,530032,Washington Nationals,120,5
 2018/06/18/milmlb-pitmlb-1,Milwaukee Brewers,158,0,2018-06-18,530484,Pittsburgh Pirates,134,1
 2018/06/18/slnmlb-phimlb-1,St. Louis Cardinals,138,5,2018-06-18,530486,Philadelphia Phillies,143,6
 2018/06/18/chamlb-clemlb-1,Chicago White Sox,145,2,2018-06-18,530481,Cleveland Indians,114,6
@@ -1071,3 +1070,4 @@ key,away,away_id,away_score,date,gamePk,home,home_id,home_score
 2018/06/18/nynmlb-colmlb-1,New York Mets,121,12,2018-06-18,530485,Colorado Rockies,115,2
 2018/06/18/arimlb-anamlb-1,Arizona Diamondbacks,109,7,2018-06-18,530480,Los Angeles Angels,108,4
 2018/06/18/miamlb-sfnmlb-1,Miami Marlins,146,5,2018-06-18,530483,San Francisco Giants,137,4
+2018/06/18/nyamlb-wasmlb-2,New York Yankees,147,3,2018-06-18,530032,Washington Nationals,120,5

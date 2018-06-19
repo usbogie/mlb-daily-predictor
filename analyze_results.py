@@ -29,14 +29,15 @@ def bet_against_pitcher(results):
     plt.show()
 
 def value_strati(results):
-    values = [[2,5],[5,8],[8,11],[11,13],[13,25],]
+    values = [[2,4],[4,6],[6,7],[7,8],[8,9],[9,10],[12,13],[13,20]]
     ticks = []
     amounts = []
     for value in values:
         ticks.append('{}-{}'.format(value[0],value[1]))
-        total_risk = sum([x['k_risk'] for x in results if x['value'] >= value[0] and x['value'] < value[1]])
-        total_net = sum([x['net'] for x in results if x['value'] >= value[0] and x['value'] < value[1]])
-        amounts.append(total_net/total_risk*100.0)
+        total_risk = sum([x['k_risk'] for x in results if x['side_value'] >= value[0] and x['side_value'] < value[1]])
+        total_net = sum([x['net'] for x in results if x['side_value'] >= value[0] and x['side_value'] < value[1]])
+        amount = 0 if total_risk == 0 else total_net/total_risk*100.0
+        amounts.append(amount)
     index = np.arange(len(ticks))
     plt.bar(index, amounts)
     plt.xticks(index, tuple(ticks), rotation = 'vertical')

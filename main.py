@@ -157,6 +157,8 @@ def main():
                   'Implied line:', round(winpct_to_ml(1-over_prob), 0))
             print('Over value:', away_output['total_value'], '%')
             print('Under value:', home_output['total_value'], '%')
+            print('Over risk:', round(third_kelly_calculator(game['over_odds'], over_prob) * 5,1))
+            print('Under risk:', round(third_kelly_calculator(game['under_odds'], 1-over_prob) * 5,1))
         else:
             away_output['total'] = "NA"
             home_output['total'] = "NA"
@@ -308,8 +310,12 @@ def test_year(year):
         day_results = []
         for index, game in slate.iterrows():
             game_obj = Game(game['date'],'12:05p',game['away'],game['home'])
-            away_lineup = lineups[(lineups['key'] == game['key']) & (game['away'] == lineups['name'])].to_dict('records')[0]
-            home_lineup = lineups[(lineups['key'] == game['key']) & (game['home'] == lineups['name'])].to_dict('records')[0]
+            try:
+                away_lineup = lineups[(lineups['key'] == game['key']) & (game['away'] == lineups['name'])].to_dict('records')[0]
+                home_lineup = lineups[(lineups['key'] == game['key']) & (game['home'] == lineups['name'])].to_dict('records')[0]
+            except:
+                print('mismatch of game/lineup keys for', game['key'], 'continuing')
+                continue
             game_odds = lines[lines['key'] == game['key']]
 
             if away_lineup['10_name'] in starters_to_ignore[year] or home_lineup['10_name'] in starters_to_ignore[year]:
@@ -418,6 +424,7 @@ def test_year(year):
                 else:
                     result['t_net'] = 0
                 result['t_bet_on'] = 'Over'
+                result['t_value'] = over_value
             elif under_value > 3:
                 result['t_risk'] = round(third_kelly_calculator(game_odds.iloc[0]['under_odds'], 1-over_pct) * 10,1)
                 if game['away_score'] + game['home_score'] < game_odds.iloc[0]['total_line']:
@@ -427,11 +434,14 @@ def test_year(year):
                 else:
                     result['t_net'] = 0
                 result['t_bet_on'] = 'Under'
+                result['t_value'] = under_value
             else:
                 result['t_risk'] = 0
                 result['t_net'] = 0
+                result['t_value'] = 0
                 result['t_bet_on'] = 'no bet'
             day_results.append(result)
+            result['line'] = int(result['line'])
             print("Money Line:", result['bet_on'], result['line'], result['k_risk'], result['net'])
             print("Total:", result['t_bet_on'], result['total'], 'Final:', game['away_score'] + game['home_score'], result['t_risk'], result['t_net'])
         day_risk = 0
@@ -448,7 +458,8 @@ def test_year(year):
         acc = acc + day_net
         t_acc = t_acc + t_day_net
         print(day,'-- total risk:',day_risk,'-- total net:',day_net,'-- acc:',acc)
-        print('ROI to date', acc/risk_acc*100)
+        roi = 0 if risk_acc == 0 else acc/risk_acc*100
+        print('ROI to date', roi)
         print(day,'-- total t_risk:',t_day_risk,'-- total t_net:',t_day_net,'-- t_acc:',t_acc)
         print('ROI to date', t_acc/t_risk_acc*100)
         day_summary = dict()
