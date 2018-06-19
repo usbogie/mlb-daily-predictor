@@ -1,17 +1,6 @@
 import random
+from datetime import datetime
 from update_projections import batter_dict, pitcher_dict
-
-starters_to_ignore = {2017: ['Cesar Valdez', 'Jeremy Guthrie', 'Christian Bergman',
-    'Hector Velazquez','Sam Gaviglio','Eric Skoglund','Austin Bibens-Dirkx','Tyler Pill','Mike Bolsinger',
-    'Dinelson Lamet','Mike Pelfrey','Randall Delgado','Vance Worley','David Holmberg','Dayan Diaz',
-    'Paolo Espino','Sean Newcomb','Nik Turley','Marco Gonzales','Daniel Gossett','Francis Martes',
-    'Adam Wilk','Andrew Moore','Luis Castillo','Mark Leiter','Felix Jorge','Luke Farrell',
-    'Chris O\'Grady','Caleb Smith','Kyle Lloyd','Erick Fedde','Troy Scribner','Nick Tepesch',
-    'Chris Rowley','Chad Bettis','Andrew Albers','Aaron Slegers','T.J. McFarland','Tim Melville',
-    'Tyler Mahle','Dillon Peters','Jack Flaherty','Onelki Garcia','Chad Bell','Artie Lewicki',
-    'Luiz Gohara','Gabriel Ynoa','Myles Jaye','Jen-Ho Tseng','Aaron Wilkerson','Deck McGuire',
-    'Chris Volstad','Jacob Turner','Ryan Weber','Lisalverto Bonilla','Jacob Turner'],
-                      2018: ['Jonny Venters']}
 
 keys = ['single','double','triple','hr','k','hbp','bb']
 avg_pitcher_stats = {'vL': {'pa': 5277, 'single': 0.0879, 'double': 0.015, 'triple': 0.0013, 'hr': 0.0051,
@@ -64,6 +53,9 @@ def player_not_in_fantasy_labs(name, id, manifest):
         print('Couldnt find {}. Giving average batter stats'.format(name))
         return False
 
+def nearest(items, pivot):
+    return min(items, key=lambda x: abs(x - pivot))
+
 def get_stats(date, id, projections, steamer, player_dict, arg):
     player = projections[projections['mlb_id'] == id]
     if player.empty:
@@ -77,7 +69,11 @@ def get_stats(date, id, projections, steamer, player_dict, arg):
         return dict(vL = vL, vR = vR)
     else:
         dates = player['date'].tolist()
-        target = date if date in dates else max(dates)
+        if date not in dates:
+            target = nearest([datetime.strptime(d, '%Y-%m-%d') for d in dates], datetime.strptime(date, '%Y-%m-%d'))
+            target = target.strftime('%Y-%m-%d')
+        else:
+            target = date
         player = player[player['date'] == target].to_dict('records')
         if len(player) == 2 and player[0]['mlb_id'] == player[1]['mlb_id']:
             player = player[1]
@@ -86,8 +82,10 @@ def get_stats(date, id, projections, steamer, player_dict, arg):
         else:
             player = player[0]
 
+        #if 'throws' not in player.keys():
+            #print(player)
         vL = { key: player['vL_'+key] for key in keys }
-        vR = { key: player['vL_'+key] for key in keys }
+        vR = { key: player['vR_'+key] for key in keys }
         vL[arg], vR[arg] = player[arg], player[arg]
         vL['mlb_id'], vR['mlb_id'] = player['mlb_id'], player['mlb_id']
         return dict(vL = vL, vR = vR)
@@ -100,20 +98,18 @@ def get_batting_stats(manifest, batter_projections, steamer_batters, lineup, dat
         batter_fantasylabs_id = int(lineup['{}_id'.format(str(i))])
         pitcher_fantasylabs_id = int(lineup['10_id'])
         if batter_fantasylabs_id == pitcher_fantasylabs_id:
-            print(batter_name, "is probably a pitcher, given avg pitcher stats")
             lineup_stats.append(dict(avg_pitcher_stats))
             continue
 
         if player_not_in_fantasy_labs(batter_name, batter_fantasylabs_id, manifest) == False:
             return False
 
-
         player_id = manifest[manifest['fantasy_labs'] == batter_fantasylabs_id].iloc[0]['mlb_id']
         stats = get_stats(date, player_id, batter_projections, steamer_batters, batter_dict, 'bats')
         lineup_stats.append(stats)
     return lineup_stats
 
-def get_pitching_stats(manifest, pitcher_projections, all_relievers, steamer_pitchers, steamer_starters, lineup, date, test=False):
+def get_pitching_stats(manifest, pitcher_projections, all_relievers, steamer_pitchers, steamer_starters, lineup, date, test=False, bullpens=None):
     starter_name = lineup['10_name']
     starter_fantasylabs_id = int(lineup['10_id'])
     print(starter_name)
@@ -160,7 +156,7 @@ def get_pitching_stats(manifest, pitcher_projections, all_relievers, steamer_pit
             all_pitchers = [game.iloc[0][col] for col in game if col.startswith('bp_home')]
         all_pitchers = [int(pitcher) for pitcher in all_pitchers if str(pitcher) != 'nan']
         # remove starter
-        all_pitchers.remove(starter_fantasylabs_id)
+        all_pitchers.remove(pitcher_id)
         bp_df = steamer_starters[steamer_starters['mlbamid'].isin(all_pitchers)].sort_values(by=['start_IP'],ascending=False)
         relievers_list = bp_df.iloc[4:]['mlbamid'].tolist()
         dist = 1/len(relievers_list)

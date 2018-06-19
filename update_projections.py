@@ -41,7 +41,7 @@ def update_batter_projections(batter_id):
     baseline = dict(projections_accumulator)
     all_projections = []
 
-    p_const = 500
+    p_const = 400
     for ix, stat_line in batter_logs.iterrows():
         try:
             home_team = games.loc[games['key'] == stat_line['game_id']].iloc[0]['home']
@@ -61,8 +61,8 @@ def update_batter_projections(batter_id):
         projections_accumulator['double'] = ((projections_accumulator['double'] * (3*p_const - pa)) + stat_line['d'] / (pf['2B'] / 100)) / (3*p_const)
         projections_accumulator['single'] = ((projections_accumulator['single'] * (3*p_const - pa)) + (stat_line['h'] - stat_line['hr'] - stat_line['t'] - stat_line['d']) / (pf['1B'] / 100)) / (3*p_const)
 
-    vL_base = batter_dict(batter_id, steamer_batters[(steamer_batters['split'] == 'vL') & (steamer_batters['pn'] == 1)])
-    vR_base = batter_dict(batter_id, steamer_batters[(steamer_batters['split'] == 'vR') & (steamer_batters['pn'] == 1)])
+    vL_base = batter_dict(batter_id, steamer_batters[steamer_batters['split'] == 'vL'])
+    vR_base = batter_dict(batter_id, steamer_batters[steamer_batters['split'] == 'vR'])
     acc = []
     keys = ['k','bb','hbp','hr','triple','double','single']
     for ros_proj in all_projections:
@@ -76,13 +76,13 @@ def update_batter_projections(batter_id):
         acc.append(combined)
     return pd.DataFrame(acc)
 
-def pitcher_dict(id, projections):
+def pitcher_dict(pitcher_id, projections):
     starter = projections[
-        (projections['mlbamid'] == id) &
+        (projections['mlbamid'] == pitcher_id) &
         (projections['pn'] == 1) &
         (projections['role'] == 'SP')].to_dict('records')
     reliever = projections[
-        (projections['mlbamid'] == id) &
+        (projections['mlbamid'] == pitcher_id) &
         (projections['pn'] == 1) &
         (projections['role'] == 'RP')].to_dict('records')
 

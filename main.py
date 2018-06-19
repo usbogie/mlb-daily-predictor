@@ -17,24 +17,30 @@ import argparse
 
 year = 2018
 
-batter_projections = pd.read_csv(os.path.join('data','projections','hitters_{}.csv'.format(year)))
-pitcher_projections = pd.read_csv(os.path.join('data','projections','pitchers_{}.csv'.format(year)))
-
-steamer_batters = pd.read_csv(os.path.join('data','steamer', 'steamer_hitters_{}_split.csv'.format(year)))
-steamer_batters['fullname'] = steamer_batters[['firstname', 'lastname']].apply(lambda x: ' '.join(x), axis=1)
-
-steamer_pitchers = pd.read_csv(os.path.join('data','steamer','steamer_pitchers_{}_split.csv'.format(year)))
-steamer_pitchers['fullname'] = steamer_pitchers[['firstname', 'lastname']].apply(lambda x: ' '.join(x), axis=1)
-steamer_starters = pd.read_csv(os.path.join('data','steamer','steamer_pitchers_{}.csv'.format(year)))
-
-bullpens = pd.read_csv(os.path.join('data','lineups','bullpens_{}.csv'.format(year)))
-manifest = pd.read_csv(os.path.join('data','master.csv'))
-
-with open(os.path.join('data','relievers.json')) as f:
-    all_relievers = json.load(f)
+starters_to_ignore = {2017: ['Cesar Valdez', 'Jeremy Guthrie', 'Christian Bergman',
+    'Hector Velazquez','Sam Gaviglio','Eric Skoglund','Austin Bibens-Dirkx','Tyler Pill','Mike Bolsinger',
+    'Dinelson Lamet','Mike Pelfrey','Randall Delgado','Vance Worley','David Holmberg','Dayan Diaz',
+    'Paolo Espino','Sean Newcomb','Nik Turley','Marco Gonzales','Daniel Gossett','Francis Martes',
+    'Adam Wilk','Andrew Moore','Luis Castillo','Mark Leiter','Felix Jorge','Luke Farrell',
+    'Chris O\'Grady','Caleb Smith','Kyle Lloyd','Erick Fedde','Troy Scribner','Nick Tepesch',
+    'Chris Rowley','Chad Bettis','Andrew Albers','Aaron Slegers','T.J. McFarland','Tim Melville',
+    'Tyler Mahle','Dillon Peters','Jack Flaherty','Onelki Garcia','Chad Bell','Artie Lewicki',
+    'Luiz Gohara','Gabriel Ynoa','Myles Jaye','Jen-Ho Tseng','Aaron Wilkerson','Deck McGuire',
+    'Chris Volstad','Jacob Turner','Ryan Weber','Lisalverto Bonilla','Jacob Turner'],
+                      2018: ['Jonny Venters']}
 
 def main():
     bankroll = 1000
+    manifest = pd.read_csv(os.path.join('data','master.csv'))
+    with open(os.path.join('data','relievers.json')) as f:
+        all_relievers = json.load(f)
+    batter_projections = pd.read_csv(os.path.join('data','projections','hitters_{}.csv'.format(year)))
+    pitcher_projections = pd.read_csv(os.path.join('data','projections','pitchers_{}.csv'.format(year)))
+    steamer_batters = pd.read_csv(os.path.join('data','steamer', 'steamer_hitters_{}_split.csv'.format(year)))
+    steamer_batters['fullname'] = steamer_batters[['firstname', 'lastname']].apply(lambda x: ' '.join(x), axis=1)
+    steamer_pitchers = pd.read_csv(os.path.join('data','steamer','steamer_pitchers_{}_split.csv'.format(year)))
+    steamer_pitchers['fullname'] = steamer_pitchers[['firstname', 'lastname']].apply(lambda x: ' '.join(x), axis=1)
+    steamer_starters = pd.read_csv(os.path.join('data','steamer','steamer_pitchers_{}.csv'.format(year)))
     today = datetime.now().strftime('%Y-%m-%d')
     games = pd.read_csv(os.path.join('data','lines','today.csv'))
     lineups = pd.read_csv(os.path.join('data','lineups','today.csv'))
@@ -268,20 +274,35 @@ def main():
         game_outputs.append((game['time'], away_output, home_output))
     gsheets_upload.update_spreadsheet(game_outputs)
 
-    manifest.set_index('mlb_id').to_csv(os.path.join('data','master.csv'))
+    manifest = manifest.loc[:, ~manifest.columns.str.contains('^Unnamed')]
+    manifest.to_csv(os.path.join('data','master.csv'), index=False)
 
 def test_year(year):
+    all_relievers = []
     bankroll = 1000
     days = get_days_in_season(year)
     games = pd.read_csv(os.path.join('data','games','games_{}.csv'.format(year)))
     lines = pd.read_csv(os.path.join('data','lines','lines_{}.csv'.format(year)))
     lineups = pd.read_csv(os.path.join('data','lineups','lineups_{}.csv'.format(year)))
     park_factors = pd.read_csv(os.path.join('data','park_factors_handedness.csv'))
+    manifest = pd.read_csv(os.path.join('data','master.csv'))
+    batter_projections = pd.read_csv(os.path.join('data','projections','hitters_{}.csv'.format(year)))
+    pitcher_projections = pd.read_csv(os.path.join('data','projections','pitchers_{}.csv'.format(year)))
+    steamer_batters = pd.read_csv(os.path.join('data','steamer', 'steamer_hitters_{}_split.csv'.format(year)))
+    steamer_batters['fullname'] = steamer_batters[['firstname', 'lastname']].apply(lambda x: ' '.join(x), axis=1)
+    steamer_pitchers = pd.read_csv(os.path.join('data','steamer','steamer_pitchers_{}_split.csv'.format(year)))
+    steamer_pitchers['fullname'] = steamer_pitchers[['firstname', 'lastname']].apply(lambda x: ' '.join(x), axis=1)
+    steamer_starters = pd.read_csv(os.path.join('data','steamer','steamer_pitchers_{}.csv'.format(year)))
+    bullpens = pd.read_csv(os.path.join('data','lineups','bullpens_{}.csv'.format(year)))
 
     all_results = []
     all_net = []
+    t_all_results = []
+    t_all_net = []
     acc = 0
     risk_acc = 0
+    t_acc = 0
+    t_risk_acc = 0
     for day in days:
         slate = games[games['date'] == day]
         day_results = []
@@ -296,18 +317,17 @@ def test_year(year):
                 print('Starter {} has no projections. Continue\n'.format(home_lineup['10_name']))
                 continue
 
-            away_lineup_stats = get_batting_stats(away_lineup, game['date'])
-            home_lineup_stats = get_batting_stats(home_lineup, game['date'])
-            away_pitching = get_pitching_stats(away_lineup, game['date'], test=True)
-            home_pitching = get_pitching_stats(home_lineup, game['date'], test=True)
-            if not away_pitching or not home_pitching:
+            away_lineup_stats = get_batting_stats(manifest, batter_projections, steamer_batters, away_lineup, game['date'])
+            home_lineup_stats = get_batting_stats(manifest, batter_projections, steamer_batters, home_lineup, game['date'])
+            away_pitching = get_pitching_stats(manifest, pitcher_projections, all_relievers, steamer_pitchers, steamer_starters, away_lineup, game['date'], test=True, bullpens=bullpens)
+            home_pitching = get_pitching_stats(manifest, pitcher_projections, all_relievers, steamer_pitchers, steamer_starters, home_lineup, game['date'], test=True, bullpens=bullpens)
+            if not away_pitching or not home_pitching or not away_lineup_stats or not home_lineup_stats:
                 print("SOMETHING WRONG MAYBE CHECK IT OUT")
-                ans = input('HELLO is this OKAY to continue?')
                 continue
             pf = park_factors[park_factors["Team"]==game["home"]].to_dict(orient='records')
 
             print("Simulating game:",day,game['away'],'vs',game['home'])
-            all_matchups = generate_matchups(pf, home_pitching, away_pitching, home_lineup_stats, away_lineup_stats)
+            all_matchups = generate_matchups(pf,steamer_batters, home_pitching, away_pitching, home_lineup_stats, away_lineup_stats)
             mcGame = MonteCarlo(game_obj,away_lineup_stats,home_lineup_stats,away_pitching,home_pitching,all_matchups)
             try:
                 mcGame.sim_games(test=True)
@@ -317,6 +337,13 @@ def test_year(year):
 
             away_win_pct = 1-(mcGame.home_win_prob*1.08)
             home_win_pct = mcGame.home_win_prob*1.08
+
+            try:
+                over_pct = over_total_pct(mcGame.comb_histo, game_odds.iloc[0]['total_line'])
+            except:
+                print('odds messed up, continue')
+                continue
+
             if game_odds.empty:
                 print('home/away odds mismatch. continue\n')
                 continue
@@ -326,7 +353,12 @@ def test_year(year):
                 away_ml = round(d_to_a(game_odds.iloc[0]['ml_away']),0),
                 home_ml = round(d_to_a(game_odds.iloc[0]['ml_home']),0),
                 away_ml_proj = round(winpct_to_ml(away_win_pct),0),
-                home_ml_proj = round(winpct_to_ml(home_win_pct),0)
+                home_ml_proj = round(winpct_to_ml(home_win_pct),0),
+                over_odds = round(d_to_a(game_odds.iloc[0]['over_odds']),0),
+                under_odds = round(d_to_a(game_odds.iloc[0]['under_odds']),0),
+                over_proj = round(winpct_to_ml(away_win_pct),0),
+                under_proj = round(winpct_to_ml(home_win_pct),0),
+                total = game_odds.iloc[0]['total_line'],
             )
 
             value_away = round(100.0 * (away_win_pct - ml_to_winpct(result['away_ml'])), 2)
@@ -341,51 +373,92 @@ def test_year(year):
                 result['bet_on_pitcher'] = away_lineup['10_name']
                 result['bet_against_pitcher'] = home_lineup['10_name']
                 result['k_risk'] = round(bankroll*kelly_away/100.0,0)
-                result['value'] = round(100.0 * (away_win_pct - ml_to_winpct(result['away_ml'])), 2)
+                result['side_value'] = round(100.0 * (away_win_pct - ml_to_winpct(result['away_ml'])), 2)
             elif kelly_home > 0:
                 result['bet_on'] = result['home']
                 result['bet_against'] = result['away']
                 result['bet_on_pitcher'] = home_lineup['10_name']
                 result['bet_against_pitcher'] = away_lineup['10_name']
                 result['k_risk'] = round(bankroll*kelly_home/100.0,0)
-                result['value'] = round(100.0 * (home_win_pct - ml_to_winpct(result['home_ml'])), 2)
+                result['side_value'] = round(100.0 * (home_win_pct - ml_to_winpct(result['home_ml'])), 2)
             else:
                 result['bet_on'] = 'no bet'
                 result['bet_against'] = 'no bet'
                 result['bet_on_pitcher'] = 'no bet'
                 result['bet_against_pitcher'] = 'no bet'
                 result['k_risk'] = 0
-                result['value'] = 0
+                result['side_value'] = 0
+                result['line'] = 0
 
             result['net'] = 0
             if game['away_score'] > game['home_score']:
                 if result['bet_on'] == result['away']:
                     result['net'] = amount_won(result['k_risk'], game_odds.iloc[0]['ml_away'])
+                    result['line'] = d_to_a(game_odds.iloc[0]['ml_away'])
                 elif result['bet_on'] == result['home']:
                     result['net'] = result['k_risk'] * -1
+                    result['line'] = d_to_a(game_odds.iloc[0]['ml_home'])
             if game['home_score'] > game['away_score']:
                 if result['bet_on'] == result['home']:
                     result['net'] = amount_won(result['k_risk'], game_odds.iloc[0]['ml_home'])
+                    result['line'] = d_to_a(game_odds.iloc[0]['ml_home'])
                 elif result['bet_on'] == result['away']:
                     result['net'] = result['k_risk'] * -1
+                    result['line'] = d_to_a(game_odds.iloc[0]['ml_away'])
 
+            over_value = (over_pct - ml_to_winpct(d_to_a(game_odds.iloc[0]['over_odds']))) * 100
+            under_value = (1 - over_pct - ml_to_winpct(d_to_a(game_odds.iloc[0]['under_odds']))) * 100
 
+            if over_value > 3:
+                result['t_risk'] = round(third_kelly_calculator(game_odds.iloc[0]['over_odds'], over_pct) * 10,1)
+                if game['away_score'] + game['home_score'] > game_odds.iloc[0]['total_line']:
+                    result['t_net'] = round(amount_won(result['t_risk'], game_odds.iloc[0]['over_odds']),1)
+                elif game['away_score'] + game['home_score'] < game_odds.iloc[0]['total_line']:
+                    result['t_net'] = -1 * result['t_risk']
+                else:
+                    result['t_net'] = 0
+                result['t_bet_on'] = 'Over'
+            elif under_value > 3:
+                result['t_risk'] = round(third_kelly_calculator(game_odds.iloc[0]['under_odds'], 1-over_pct) * 10,1)
+                if game['away_score'] + game['home_score'] < game_odds.iloc[0]['total_line']:
+                    result['t_net'] = round(amount_won(result['t_risk'], game_odds.iloc[0]['under_odds']),1)
+                elif game['away_score'] + game['home_score'] > game_odds.iloc[0]['total_line']:
+                    result['t_net'] = -1 * result['t_risk']
+                else:
+                    result['t_net'] = 0
+                result['t_bet_on'] = 'Under'
+            else:
+                result['t_risk'] = 0
+                result['t_net'] = 0
+                result['t_bet_on'] = 'no bet'
             day_results.append(result)
-            print(result['bet_on'], result['k_risk'], result['net'])
+            print("Money Line:", result['bet_on'], result['line'], result['k_risk'], result['net'])
+            print("Total:", result['t_bet_on'], result['total'], 'Final:', game['away_score'] + game['home_score'], result['t_risk'], result['t_net'])
         day_risk = 0
         day_net = 0
+        t_day_risk = 0
+        t_day_net = 0
         for result in day_results:
             day_risk = day_risk + result['k_risk']
             day_net = day_net + result['net']
+            t_day_risk = t_day_risk + result['t_risk']
+            t_day_net = t_day_net + result['t_net']
         risk_acc = risk_acc + day_risk
+        t_risk_acc = t_risk_acc + t_day_risk
         acc = acc + day_net
+        t_acc = t_acc + t_day_net
         print(day,'-- total risk:',day_risk,'-- total net:',day_net,'-- acc:',acc)
         print('ROI to date', acc/risk_acc*100)
+        print(day,'-- total t_risk:',t_day_risk,'-- total t_net:',t_day_net,'-- t_acc:',t_acc)
+        print('ROI to date', t_acc/t_risk_acc*100)
         day_summary = dict()
         day_summary['date'] = day
         day_summary['risk'] = day_risk
         day_summary['net'] = day_net
         day_summary['acc'] = acc
+        day_summary['t_risk'] = t_day_risk
+        day_summary['t_net'] = t_day_net
+        day_summary['t_acc'] = t_acc
         all_results.extend(day_results)
         all_net.append(day_summary)
 
@@ -415,7 +488,8 @@ def test_year(year):
         f.truncate()
         json.dump(all_net, f)
 
-    manifest.set_index('mlb_id').to_csv(os.path.join('data','master.csv'))
+    manifest = manifest.loc[:, ~manifest.columns.str.contains('^Unnamed')]
+    manifest.to_csv(os.path.join('data','master.csv'), index=False)
 
 
 if __name__ == '__main__':
