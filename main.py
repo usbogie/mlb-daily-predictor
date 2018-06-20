@@ -305,7 +305,7 @@ def test_year(year):
     risk_acc = 0
     t_acc = 0
     t_risk_acc = 0
-    for day in days:
+    for day in days[:-1]:
         slate = games[games['date'] == day]
         day_results = []
         for index, game in slate.iterrows():
@@ -370,8 +370,8 @@ def test_year(year):
             value_away = round(100.0 * (away_win_pct - ml_to_winpct(result['away_ml'])), 2)
             value_home = round(100.0 * (home_win_pct - ml_to_winpct(result['home_ml'])), 2)
 
-            kelly_away = third_kelly_calculator(game_odds.iloc[0]['ml_away'], away_win_pct) if value_away >= 2.0 else 0
-            kelly_home = third_kelly_calculator(game_odds.iloc[0]['ml_home'], home_win_pct) if value_home >= 2.0 else 0
+            kelly_away = third_kelly_calculator(game_odds.iloc[0]['ml_away'], away_win_pct) if value_away >= 2 else 0
+            kelly_home = third_kelly_calculator(game_odds.iloc[0]['ml_home'], home_win_pct) if value_home >= 2 else 0
 
             if kelly_away > 0:
                 result['bet_on'] = result['away']
@@ -461,6 +461,7 @@ def test_year(year):
         roi = 0 if risk_acc == 0 else acc/risk_acc*100
         print('ROI to date', roi)
         print(day,'-- total t_risk:',t_day_risk,'-- total t_net:',t_day_net,'-- t_acc:',t_acc)
+        roi = 0 if t_risk_acc == 0 else t_acc/t_risk_acc*100
         print('ROI to date', t_acc/t_risk_acc*100)
         day_summary = dict()
         day_summary['date'] = day

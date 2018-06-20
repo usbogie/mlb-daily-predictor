@@ -62,7 +62,7 @@ def get_stats(date, id, projections, steamer, player_dict, arg):
         player = steamer[steamer['mlbamid'] == id]
         if player.empty:
             print(id, 'player not in steamer')
-            sys.exit()
+            return False
 
         vL = player_dict(id, player[player['split'] == 'vL'])
         vR = player_dict(id, player[player['split'] == 'vR'])
@@ -106,6 +106,8 @@ def get_batting_stats(manifest, batter_projections, steamer_batters, lineup, dat
 
         player_id = manifest[manifest['fantasy_labs'] == batter_fantasylabs_id].iloc[0]['mlb_id']
         stats = get_stats(date, player_id, batter_projections, steamer_batters, batter_dict, 'bats')
+        if not stats:
+            return False
         lineup_stats.append(stats)
     return lineup_stats
 
@@ -163,6 +165,8 @@ def get_pitching_stats(manifest, pitcher_projections, all_relievers, steamer_pit
         relief = []
         for reliever in relievers_list:
             reliever = get_stats(date, reliever, pitcher_projections, steamer_pitchers, pitcher_dict, 'throws')
+            if not reliever:
+                continue
             reliever['usage'] = dist
             relief.append(reliever)
         random.shuffle(relief)
