@@ -1090,3 +1090,25 @@ key,away,away_id,away_score,date,gamePk,home,home_id,home_score
 2018/06/19/nynmlb-colmlb-1,New York Mets,121,8,2018-06-19,530498,Colorado Rockies,115,10
 2018/06/19/arimlb-anamlb-1,Arizona Diamondbacks,109,4,2018-06-19,530489,Los Angeles Angels,108,5
 2018/06/19/oakmlb-sdnmlb-1,Oakland Athletics,133,4,2018-06-19,530499,San Diego Padres,135,2
+2018/06/20/detmlb-cinmlb-1,Detroit Tigers,116,3,2018-06-20,530508,Cincinnati Reds,113,5
+2018/06/20/atlmlb-tormlb-1,Atlanta Braves,144,4,2018-06-20,530504,Toronto Blue Jays,141,5
+2018/06/20/slnmlb-phimlb-1,St. Louis Cardinals,138,3,2018-06-20,530515,Philadelphia Phillies,143,4
+2018/06/20/chamlb-clemlb-1,Chicago White Sox,145,0,2018-06-20,530507,Cleveland Indians,114,12
+2018/06/20/lanmlb-chnmlb-1,Los Angeles Dodgers,119,0,2018-06-20,530509,Chicago Cubs,112,4
+2018/06/20/oakmlb-sdnmlb-1,Oakland Athletics,133,12,2018-06-20,530513,San Diego Padres,135,4
+2018/06/20/miamlb-sfnmlb-1,Miami Marlins,146,5,2018-06-20,530510,San Francisco Giants,137,6
+2018/06/20/balmlb-wasmlb-1,Baltimore Orioles,110,3,2018-06-20,530505,Washington Nationals,120,0
+2018/06/20/seamlb-nyamlb-1,Seattle Mariners,136,5,2018-06-20,530514,New York Yankees,147,7
+2018/06/20/bosmlb-minmlb-1,Boston Red Sox,111,1,2018-06-20,530506,Minnesota Twins,142,4
+2018/06/20/tbamlb-houmlb-1,Tampa Bay Rays,139,1,2018-06-20,530516,Houston Astros,117,5
+2018/06/20/texmlb-kcamlb-1,Texas Rangers,140,3,2018-06-20,530517,Kansas City Royals,118,2
+2018/06/20/nynmlb-colmlb-1,New York Mets,121,8,2018-06-20,530512,Colorado Rockies,115,10
+2018/06/21/seamlb-nyamlb-1,Seattle Mariners,136,3,2018-06-21,530525,New York Yankees,147,4
+2018/06/21/bosmlb-minmlb-1,Boston Red Sox,111,9,2018-06-21,530520,Minnesota Twins,142,2
+2018/06/21/nynmlb-colmlb-1,New York Mets,121,4,2018-06-21,530522,Colorado Rockies,115,6
+2018/06/21/arimlb-pitmlb-1,Arizona Diamondbacks,109,9,2018-06-21,530518,Pittsburgh Pirates,134,3
+2018/06/21/balmlb-wasmlb-1,Baltimore Orioles,110,2,2018-06-21,530519,Washington Nationals,120,4
+2018/06/21/chnmlb-cinmlb-1,Chicago Cubs,112,2,2018-06-21,530521,Cincinnati Reds,113,6
+2018/06/21/slnmlb-milmlb-1,St. Louis Cardinals,138,3,2018-06-21,530526,Milwaukee Brewers,158,11
+2018/06/21/tormlb-anamlb-1,Toronto Blue Jays,141,5,2018-06-21,530527,Los Angeles Angels,108,8
+2018/06/21/sdnmlb-sfnmlb-1,San Diego Padres,135,0,2018-06-21,530524,San Francisco Giants,137,3

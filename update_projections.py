@@ -41,7 +41,7 @@ def update_batter_projections(batter_id):
     baseline = dict(projections_accumulator)
     all_projections = []
 
-    p_const = 300
+    p_const = 650
     for ix, stat_line in batter_logs.iterrows():
         try:
             home_team = games.loc[games['key'] == stat_line['game_id']].iloc[0]['home']
