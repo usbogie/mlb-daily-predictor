@@ -55,6 +55,7 @@ def get_money_lines(ml_url, day):
 	ml_soup = get_soup(ml_url)
 	grids = ml_soup.findAll('div', {'class': 'event-holder holder-complete'})
 	grids += ml_soup.findAll('div', {'class': 'event-holder holder-in-progress'})
+	grids += ml_soup.findAll('div', {'class': 'event-holder holder-delayed'})
 	grids += ml_soup.findAll('div', {'class': 'event-holder holder-scheduled'})
 	key_acc = []
 	for grid in grids:
@@ -90,6 +91,7 @@ def get_f5_money_lines(ml_url, game_infos, day):
 	ml_soup = get_soup(ml_url)
 	grids = ml_soup.findAll('div', {'class': 'event-holder holder-complete'})
 	grids += ml_soup.findAll('div', {'class': 'event-holder holder-in-progress'})
+	grids += ml_soup.findAll('div', {'class': 'event-holder holder-delayed'})
 	grids += ml_soup.findAll('div', {'class': 'event-holder holder-scheduled'})
 	for grid in grids:
 		time = grid.find('div',{'class', 'el-div eventLine-time'}).text
@@ -110,6 +112,7 @@ def get_run_lines(rl_url, game_infos, day):
 	rl_soup = get_soup(rl_url)
 	grids = rl_soup.findAll('div', {'class': 'event-holder holder-complete'})
 	grids += rl_soup.findAll('div', {'class': 'event-holder holder-in-progress'})
+	grids += rl_soup.findAll('div', {'class': 'event-holder holder-delayed'})
 	grids += rl_soup.findAll('div', {'class': 'event-holder holder-scheduled'})
 	for grid in grids:
 		time = grid.find('div',{'class', 'el-div eventLine-time'}).text
@@ -130,6 +133,7 @@ def get_f5_run_lines(rl_url, game_infos, day):
 	rl_soup = get_soup(rl_url)
 	grids = rl_soup.findAll('div', {'class': 'event-holder holder-complete'})
 	grids += rl_soup.findAll('div', {'class': 'event-holder holder-in-progress'})
+	grids += rl_soup.findAll('div', {'class': 'event-holder holder-delayed'})
 	grids += rl_soup.findAll('div', {'class': 'event-holder holder-scheduled'})
 	for grid in grids:
 		time = grid.find('div',{'class', 'el-div eventLine-time'}).text
@@ -150,6 +154,7 @@ def get_totals(total_url, game_infos,day):
 	total_soup = get_soup(total_url)
 	grids = total_soup.findAll('div', {'class': 'event-holder holder-complete'})
 	grids += total_soup.findAll('div', {'class': 'event-holder holder-in-progress'})
+	grids += total_soup.findAll('div', {'class': 'event-holder holder-delayed'})
 	grids += total_soup.findAll('div', {'class': 'event-holder holder-scheduled'})
 	for grid in grids:
 		time = grid.find('div',{'class', 'el-div eventLine-time'}).text
@@ -171,6 +176,7 @@ def get_f5_totals(total_url, game_infos,day):
 	total_soup = get_soup(total_url)
 	grids = total_soup.findAll('div', {'class': 'event-holder holder-complete'})
 	grids += total_soup.findAll('div', {'class': 'event-holder holder-in-progress'})
+	grids += total_soup.findAll('div', {'class': 'event-holder holder-delayed'})
 	grids += total_soup.findAll('div', {'class': 'event-holder holder-scheduled'})
 	for grid in grids:
 		time = grid.find('div',{'class', 'el-div eventLine-time'}).text
@@ -237,7 +243,7 @@ def scrape_sbr_year(year=2017):
 			continue
 		for key in ['ml_away','ml_home','ml_away_f5','ml_home_f5', 'rl_away',\
 					'rl_home','rl_away_f5','rl_home_f5','over_odds','under_odds',\
-                    'over_odds_f5','under_odds_f5']:
+					'over_odds_f5','under_odds_f5']:
 			game[key] = c_to_d(input(key+': '))
 		for key in ['total_line','total_line_f5']:
 			game[key] = float(input(key+': '))

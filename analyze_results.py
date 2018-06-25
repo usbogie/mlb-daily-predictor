@@ -26,7 +26,7 @@ def bet_against_pitcher(results):
     plt.title('Amount bet on each team')
     plt.show()
 
-def value_strati(results):
+def value_side_strati(results):
     values = [[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],[10,11],[11,12],[12,13],[13,20]]
     ticks = []
     amounts = []
@@ -46,7 +46,28 @@ def value_strati(results):
     plt.title('Values')
     plt.show()
 
+def value_total_strati(results):
+    values = [[9,10],[10,11],[11,12],[12,13],[13,24],[14,15],[16,17],[17,18],[18,40]]
+    ticks = []
+    amounts = []
+    for value in values:
+        ticks.append('{}-{}'.format(value[0],value[1]))
+        print('{}-{}'.format(value[0],value[1]),
+                len([x for x in results if x['t_value'] >= value[0] and x['t_value'] < value[1] and x['t_net'] > 0]),'-',
+                len([x for x in results if x['t_value'] >= value[0] and x['t_value'] < value[1] and x['t_net'] < 0]))
+        total_risk = sum([x['t_risk'] for x in results if x['t_value'] >= value[0]])
+        total_net = sum([x['t_net'] for x in results if x['t_value'] >= value[0]])
+        amount = 0 if total_risk == 0 else total_net/total_risk*100.0
+        amounts.append(amount)
+    index = np.arange(len(ticks))
+    plt.bar(index, amounts)
+    plt.xticks(index, tuple(ticks), rotation = 'vertical')
+    plt.ylabel('Net')
+    plt.title('Values')
+    plt.show()
+
+
 with open ('data/results/results_2018.json', 'r') as f:
     results = json.load(f)
 
-value_strati(results)
+value_side_strati(results)

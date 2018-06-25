@@ -157,8 +157,8 @@ def main():
                   'Implied line:', round(winpct_to_ml(1-over_prob), 0))
             print('Over value:', away_output['total_value'], '%')
             print('Under value:', home_output['total_value'], '%')
-            print('Over risk:', round(third_kelly_calculator(game['over_odds'], over_prob) * 5,1))
-            print('Under risk:', round(third_kelly_calculator(game['under_odds'], 1-over_prob) * 5,1))
+            print('Over risk:', int(third_kelly_calculator(game['over_odds'], over_prob) * 5))
+            print('Under risk:', int(third_kelly_calculator(game['under_odds'], 1-over_prob) * 5))
         else:
             away_output['total'] = "NA"
             home_output['total'] = "NA"
@@ -316,12 +316,18 @@ def test_year(year):
             except:
                 print('mismatch of game/lineup keys for', game['key'], 'continuing')
                 continue
-            game_odds = lines[lines['key'] == game['key']]
 
             if away_lineup['10_name'] in starters_to_ignore[year] or home_lineup['10_name'] in starters_to_ignore[year]:
                 print('Starter {} has no projections. Continue'.format(away_lineup['10_name']))
                 print('Starter {} has no projections. Continue\n'.format(home_lineup['10_name']))
                 continue
+
+            try:
+                game_odds = lines[lines['key'] == game['key']].to_dict('records')[0]
+            except:
+                print('something wrong with game odds')
+                continue
+
 
             away_lineup_stats = get_batting_stats(manifest, batter_projections, steamer_batters, away_lineup, game['date'])
             home_lineup_stats = get_batting_stats(manifest, batter_projections, steamer_batters, home_lineup, game['date'])
@@ -345,33 +351,30 @@ def test_year(year):
             home_win_pct = mcGame.home_win_prob*1.08
 
             try:
-                over_pct = over_total_pct(mcGame.comb_histo, game_odds.iloc[0]['total_line'])
+                over_pct = over_total_pct(mcGame.comb_histo, game_odds['total_line'])
             except:
                 print('odds messed up, continue')
                 continue
 
-            if game_odds.empty:
-                print('home/away odds mismatch. continue\n')
-                continue
             result = dict(
                 away = game['away'],
                 home = game['home'],
-                away_ml = round(d_to_a(game_odds.iloc[0]['ml_away']),0),
-                home_ml = round(d_to_a(game_odds.iloc[0]['ml_home']),0),
+                away_ml = round(d_to_a(game_odds['ml_away']),0),
+                home_ml = round(d_to_a(game_odds['ml_home']),0),
                 away_ml_proj = round(winpct_to_ml(away_win_pct),0),
                 home_ml_proj = round(winpct_to_ml(home_win_pct),0),
-                over_odds = round(d_to_a(game_odds.iloc[0]['over_odds']),0),
-                under_odds = round(d_to_a(game_odds.iloc[0]['under_odds']),0),
+                over_odds = round(d_to_a(game_odds['over_odds']),0),
+                under_odds = round(d_to_a(game_odds['under_odds']),0),
                 over_proj = round(winpct_to_ml(away_win_pct),0),
                 under_proj = round(winpct_to_ml(home_win_pct),0),
-                total = game_odds.iloc[0]['total_line'],
+                total = game_odds['total_line'],
             )
 
             value_away = round(100.0 * (away_win_pct - ml_to_winpct(result['away_ml'])), 2)
             value_home = round(100.0 * (home_win_pct - ml_to_winpct(result['home_ml'])), 2)
 
-            kelly_away = third_kelly_calculator(game_odds.iloc[0]['ml_away'], away_win_pct) if value_away >= 2 else 0
-            kelly_home = third_kelly_calculator(game_odds.iloc[0]['ml_home'], home_win_pct) if value_home >= 2 else 0
+            kelly_away = third_kelly_calculator(game_odds['ml_away'], away_win_pct) if value_away >= 0 else 0
+            kelly_home = third_kelly_calculator(game_odds['ml_home'], home_win_pct) if value_home >= 0 else 0
 
             if kelly_away > 0:
                 result['bet_on'] = result['away']
@@ -399,37 +402,37 @@ def test_year(year):
             result['net'] = 0
             if game['away_score'] > game['home_score']:
                 if result['bet_on'] == result['away']:
-                    result['net'] = amount_won(result['k_risk'], game_odds.iloc[0]['ml_away'])
-                    result['line'] = d_to_a(game_odds.iloc[0]['ml_away'])
+                    result['net'] = amount_won(result['k_risk'], game_odds['ml_away'])
+                    result['line'] = d_to_a(game_odds['ml_away'])
                 elif result['bet_on'] == result['home']:
                     result['net'] = result['k_risk'] * -1
-                    result['line'] = d_to_a(game_odds.iloc[0]['ml_home'])
+                    result['line'] = d_to_a(game_odds['ml_home'])
             if game['home_score'] > game['away_score']:
                 if result['bet_on'] == result['home']:
-                    result['net'] = amount_won(result['k_risk'], game_odds.iloc[0]['ml_home'])
-                    result['line'] = d_to_a(game_odds.iloc[0]['ml_home'])
+                    result['net'] = amount_won(result['k_risk'], game_odds['ml_home'])
+                    result['line'] = d_to_a(game_odds['ml_home'])
                 elif result['bet_on'] == result['away']:
                     result['net'] = result['k_risk'] * -1
-                    result['line'] = d_to_a(game_odds.iloc[0]['ml_away'])
+                    result['line'] = d_to_a(game_odds['ml_away'])
 
-            over_value = (over_pct - ml_to_winpct(d_to_a(game_odds.iloc[0]['over_odds']))) * 100
-            under_value = (1 - over_pct - ml_to_winpct(d_to_a(game_odds.iloc[0]['under_odds']))) * 100
+            over_value = (over_pct - ml_to_winpct(d_to_a(game_odds['over_odds']))) * 100
+            under_value = (1 - over_pct - ml_to_winpct(d_to_a(game_odds['under_odds']))) * 100
 
-            if over_value > 3:
-                result['t_risk'] = round(third_kelly_calculator(game_odds.iloc[0]['over_odds'], over_pct) * 10,1)
-                if game['away_score'] + game['home_score'] > game_odds.iloc[0]['total_line']:
-                    result['t_net'] = round(amount_won(result['t_risk'], game_odds.iloc[0]['over_odds']),1)
-                elif game['away_score'] + game['home_score'] < game_odds.iloc[0]['total_line']:
+            if over_value > 10 and game['home'] != 'Colorado Rockies':
+                result['t_risk'] = int(third_kelly_calculator(game_odds['over_odds'], over_pct) * 5)
+                if game['away_score'] + game['home_score'] > game_odds['total_line']:
+                    result['t_net'] = int(amount_won(result['t_risk'], game_odds['over_odds']))
+                elif game['away_score'] + game['home_score'] < game_odds['total_line']:
                     result['t_net'] = -1 * result['t_risk']
                 else:
                     result['t_net'] = 0
                 result['t_bet_on'] = 'Over'
                 result['t_value'] = over_value
-            elif under_value > 3:
-                result['t_risk'] = round(third_kelly_calculator(game_odds.iloc[0]['under_odds'], 1-over_pct) * 10,1)
-                if game['away_score'] + game['home_score'] < game_odds.iloc[0]['total_line']:
-                    result['t_net'] = round(amount_won(result['t_risk'], game_odds.iloc[0]['under_odds']),1)
-                elif game['away_score'] + game['home_score'] > game_odds.iloc[0]['total_line']:
+            elif under_value > 10 and game['home'] != 'Colorado Rockies':
+                result['t_risk'] = int(third_kelly_calculator(game_odds['under_odds'], 1-over_pct) * 5)
+                if game['away_score'] + game['home_score'] < game_odds['total_line']:
+                    result['t_net'] = int(amount_won(result['t_risk'], game_odds['under_odds']))
+                elif game['away_score'] + game['home_score'] > game_odds['total_line']:
                     result['t_net'] = -1 * result['t_risk']
                 else:
                     result['t_net'] = 0
@@ -462,7 +465,7 @@ def test_year(year):
         print('ROI to date', roi)
         print(day,'-- total t_risk:',t_day_risk,'-- total t_net:',t_day_net,'-- t_acc:',t_acc)
         roi = 0 if t_risk_acc == 0 else t_acc/t_risk_acc*100
-        print('ROI to date', t_acc/t_risk_acc*100)
+        print('ROI to date', roi)
         day_summary = dict()
         day_summary['date'] = day
         day_summary['risk'] = day_risk
