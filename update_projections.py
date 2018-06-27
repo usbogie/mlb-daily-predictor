@@ -56,7 +56,7 @@ def update_batter_projections(batter_id):
         projections_accumulator['k'] = ((projections_accumulator['k'] * (p_const - pa)) + stat_line['so']) / p_const
         projections_accumulator['bb'] = ((projections_accumulator['bb'] * (p_const - pa)) + stat_line['bb']) / p_const
         projections_accumulator['hbp'] = ((projections_accumulator['hbp'] * (p_const - pa)) + stat_line['hbp']) / p_const
-        projections_accumulator['hr'] = ((projections_accumulator['hr'] * (1.5*p_const - pa)) + stat_line['hr'] / (pf['HR'] / 100)) / (1.5*p_const)
+        projections_accumulator['hr'] = ((projections_accumulator['hr'] * (p_const - pa)) + stat_line['hr'] / (pf['HR'] / 100)) / p_const
         projections_accumulator['triple'] = ((projections_accumulator['triple'] * (2*p_const - pa)) + stat_line['t'] / (pf['3B'] / 100)) / (2*p_const)
         projections_accumulator['double'] = ((projections_accumulator['double'] * (2*p_const - pa)) + stat_line['d'] / (pf['2B'] / 100)) / (2*p_const)
         projections_accumulator['single'] = ((projections_accumulator['single'] * (2*p_const - pa)) + (stat_line['h'] - stat_line['hr'] - stat_line['t'] - stat_line['d']) / (pf['1B'] / 100)) / (2*p_const)
@@ -142,7 +142,7 @@ def update_pitcher_projections(pitcher_id):
         projections_accumulator['k'] = ((projections_accumulator['k'] * (p_const - tbf)) + stat_line['so']) / p_const
         projections_accumulator['bb'] = ((projections_accumulator['bb'] * (p_const - tbf)) + stat_line['bb']) / p_const
         projections_accumulator['hbp'] = ((projections_accumulator['hbp'] * (p_const - tbf)) + stat_line['hb']) / p_const
-        projections_accumulator['hr'] = ((projections_accumulator['hr'] * (2*p_const - tbf)) + stat_line['hr'] / (pf['HR'] / 100)) / (2*p_const)
+        projections_accumulator['hr'] = ((projections_accumulator['hr'] * (p_const - tbf)) + stat_line['hr'] / (pf['HR'] / 100)) / p_const
         projections_accumulator['triple'] = ((projections_accumulator['triple'] * (3*p_const - tbf)) + ((stat_line['h'] - stat_line['hr']) * t_ratio) / (pf['3B'] / 100)) / (3*p_const)
         projections_accumulator['double'] = ((projections_accumulator['double'] * (3*p_const - tbf)) + ((stat_line['h'] - stat_line['hr']) * d_ratio) / (pf['2B'] / 100)) / (3*p_const)
         projections_accumulator['single'] = ((projections_accumulator['single'] * (3*p_const - tbf)) + ((stat_line['h'] - stat_line['hr']) * s_ratio) / (pf['1B'] / 100)) / (3*p_const)

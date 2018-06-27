@@ -1170,3 +1170,18 @@ key,away,away_id,away_score,date,gamePk,home,home_id,home_score
 2018/06/25/tormlb-houmlb-1,Toronto Blue Jays,141,6,2018-06-25,530582,Houston Astros,117,3
 2018/06/25/clemlb-slnmlb-1,Cleveland Indians,114,0,2018-06-25,530576,St. Louis Cardinals,138,4
 2018/06/25/chnmlb-lanmlb-1,Chicago Cubs,112,1,2018-06-25,530574,Los Angeles Dodgers,119,2
+2018/06/26/wasmlb-tbamlb-1,Washington Nationals,120,0,2018-06-26,530598,Tampa Bay Rays,139,1
+2018/06/26/nyamlb-phimlb-1,New York Yankees,147,6,2018-06-26,530592,Philadelphia Phillies,143,0
+2018/06/26/seamlb-balmlb-1,Seattle Mariners,136,3,2018-06-26,530596,Baltimore Orioles,110,2
+2018/06/26/arimlb-miamlb-1,Arizona Diamondbacks,109,5,2018-06-26,530584,Miami Marlins,146,3
+2018/06/26/anamlb-bosmlb-1,Los Angeles Angels,108,1,2018-06-26,530590,Boston Red Sox,111,9
+2018/06/26/oakmlb-detmlb-1,Oakland Athletics,133,9,2018-06-26,530593,Detroit Tigers,116,7
+2018/06/26/pitmlb-nynmlb-1,Pittsburgh Pirates,134,3,2018-06-26,530594,New York Mets,121,4
+2018/06/26/cinmlb-atlmlb-1,Cincinnati Reds,113,5,2018-06-26,530586,Atlanta Braves,144,3
+2018/06/26/sdnmlb-texmlb-1,San Diego Padres,135,3,2018-06-26,530595,Texas Rangers,140,2
+2018/06/26/kcamlb-milmlb-1,Kansas City Royals,118,1,2018-06-26,530589,Milwaukee Brewers,158,5
+2018/06/26/minmlb-chamlb-1,Minnesota Twins,142,4,2018-06-26,530591,Chicago White Sox,145,8
+2018/06/26/tormlb-houmlb-1,Toronto Blue Jays,141,0,2018-06-26,530597,Houston Astros,117,7
+2018/06/26/clemlb-slnmlb-1,Cleveland Indians,114,2,2018-06-26,530587,St. Louis Cardinals,138,11
+2018/06/26/chnmlb-lanmlb-1,Chicago Cubs,112,9,2018-06-26,530585,Los Angeles Dodgers,119,4
+2018/06/26/colmlb-sfnmlb-1,Colorado Rockies,115,2,2018-06-26,530588,San Francisco Giants,137,3
