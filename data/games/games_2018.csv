@@ -1199,3 +1199,28 @@ key,away,away_id,away_score,date,gamePk,home,home_id,home_score
 2018/06/27/clemlb-slnmlb-1,Cleveland Indians,114,5,2018-06-27,530602,St. Louis Cardinals,138,1
 2018/06/27/chnmlb-lanmlb-1,Chicago Cubs,112,5,2018-06-27,530600,Los Angeles Dodgers,119,7
 2018/06/27/colmlb-sfnmlb-1,Colorado Rockies,115,0,2018-06-27,530603,San Francisco Giants,137,1
+2018/06/28/arimlb-miamlb-1,Arizona Diamondbacks,109,4,2018-06-28,530613,Miami Marlins,146,0
+2018/06/28/oakmlb-detmlb-1,Oakland Athletics,133,4,2018-06-28,530620,Detroit Tigers,116,2
+2018/06/28/minmlb-chamlb-1,Minnesota Twins,142,2,2018-06-28,530619,Chicago White Sox,145,1
+2018/06/28/seamlb-balmlb-1,Seattle Mariners,136,4,2018-06-28,530621,Baltimore Orioles,110,2
+2018/06/28/chnmlb-lanmlb-1,Chicago Cubs,112,11,2018-06-28,530614,Los Angeles Dodgers,119,5
+2018/06/28/colmlb-sfnmlb-1,Colorado Rockies,115,9,2018-06-28,530615,San Francisco Giants,137,8
+2018/06/28/wasmlb-phimlb-1,Washington Nationals,120,3,2018-06-28,530622,Philadelphia Phillies,143,4
+2018/06/28/houmlb-tbamlb-1,Houston Astros,117,1,2018-06-28,530616,Tampa Bay Rays,139,0
+2018/06/28/anamlb-bosmlb-1,Los Angeles Angels,108,2,2018-06-28,530617,Boston Red Sox,111,4
+2018/06/28/milmlb-cinmlb-1,Milwaukee Brewers,158,6,2018-06-28,530618,Cincinnati Reds,113,4
+2018/06/29/minmlb-chnmlb-1,Minnesota Twins,142,6,2018-06-29,530633,Chicago Cubs,112,10
+2018/06/29/anamlb-balmlb-1,Los Angeles Angels,108,7,2018-06-29,530631,Baltimore Orioles,110,1
+2018/06/29/wasmlb-phimlb-1,Washington Nationals,120,17,2018-06-29,530637,Philadelphia Phillies,143,7
+2018/06/29/bosmlb-nyamlb-1,Boston Red Sox,111,1,2018-06-29,530624,New York Yankees,147,8
+2018/06/29/detmlb-tormlb-1,Detroit Tigers,116,2,2018-06-29,530628,Toronto Blue Jays,141,3
+2018/06/29/houmlb-tbamlb-1,Houston Astros,117,2,2018-06-29,530629,Tampa Bay Rays,139,3
+2018/06/29/milmlb-cinmlb-1,Milwaukee Brewers,158,8,2018-06-29,530632,Cincinnati Reds,113,2
+2018/06/29/nynmlb-miamlb-1,New York Mets,121,2,2018-06-29,530634,Miami Marlins,146,8
+2018/06/29/chamlb-texmlb-1,Chicago White Sox,145,3,2018-06-29,530625,Texas Rangers,140,11
+2018/06/29/atlmlb-slnmlb-1,Atlanta Braves,144,5,2018-06-29,530623,St. Louis Cardinals,138,1
+2018/06/29/sfnmlb-arimlb-1,San Francisco Giants,137,2,2018-06-29,530636,Arizona Diamondbacks,109,1
+2018/06/29/clemlb-oakmlb-1,Cleveland Indians,114,1,2018-06-29,530626,Oakland Athletics,133,3
+2018/06/29/colmlb-lanmlb-1,Colorado Rockies,115,3,2018-06-29,530627,Los Angeles Dodgers,119,1
+2018/06/29/kcamlb-seamlb-1,Kansas City Royals,118,1,2018-06-29,530630,Seattle Mariners,136,4
+2018/06/29/pitmlb-sdnmlb-1,Pittsburgh Pirates,134,6,2018-06-29,530635,San Diego Padres,135,3
