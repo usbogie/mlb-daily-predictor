@@ -37,7 +37,7 @@ def value_side_strati(results):
                 len([x for x in results if x['side_value'] >= value[0] and x['side_value'] < value[1] and x['net'] < 0]))
         total_risk = sum([x['k_risk'] for x in results if x['side_value'] >= value[0]])
         total_net = sum([x['net'] for x in results if x['side_value'] >= value[0]])
-        amount = 0 if total_risk == 0 else total_net/total_risk*100.0
+        amount = 0 if total_risk == 0 else total_net/total_risk*100
         amounts.append(amount)
     index = np.arange(len(ticks))
     plt.bar(index, amounts)
@@ -57,7 +57,7 @@ def value_total_strati(results):
                 len([x for x in results if x['t_value'] >= value[0] and x['t_value'] < value[1] and x['t_net'] < 0]))
         total_risk = sum([x['t_risk'] for x in results if x['t_value'] >= value[0]])
         total_net = sum([x['t_net'] for x in results if x['t_value'] >= value[0]])
-        amount = 0 if total_risk == 0 else total_net/total_risk*100.0
+        amount = 0 if total_risk == 0 else total_net/total_risk*100
         amounts.append(amount)
     index = np.arange(len(ticks))
     plt.bar(index, amounts)

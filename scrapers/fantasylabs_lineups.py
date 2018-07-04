@@ -55,6 +55,7 @@ def scrape_day_lineups(day):
         home_players = list(filter(lambda p: locate(lineup_home, p), players))
         if len(away_players) < 10 or len(home_players) < 10:
             print('Bad lineup {} vs {}'.format(lineup_away['name'],lineup_home['name']))
+            continue
 
         for player in away_players:
             lineup_away['{}_name'.format(player['LineupOrder'])] = fix_name(player['PlayerName'])

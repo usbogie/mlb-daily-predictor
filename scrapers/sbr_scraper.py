@@ -40,9 +40,9 @@ team_abbrvs = {
 #convert american to decimal odds
 def c_to_d(odds):
 	if '+' in odds:
-		return round(float(odds[1:])/100.0 + 1, 2)
+		return round(float(odds[1:]) / 100 + 1, 2)
 	else:
-		return round(100.0/float(odds[1:]) + 1, 2)
+		return round(100 / float(odds[1:]) + 1, 2)
 
 def get_names(grid):
 	teams = grid.find('div', {'class': 'el-div eventLine-team'}).find_all('div', {'class': 'eventLine-value'})
