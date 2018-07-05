@@ -81,11 +81,11 @@ def main():
 
         value = lambda pct, odds: round(100 * pct - ml_to_winpct(odds),1)
 
-        away_output['ml_proj'] = winpct_to_ml(results['away_win_prob'])
+        away_output['ml_proj'] = winpct_to_ml(1 - results['home_win_prob'])
         home_output['ml_proj'] = winpct_to_ml(results['home_win_prob'])
-        away_output['ml_value'] = value(results['away_win_prob'], game['ml_away'])
+        away_output['ml_value'] = value(1 - results['home_win_prob'], game['ml_away'])
         home_output['ml_value'] = value(results['home_win_prob'], game['ml_home'])
-        kelly_away = third_kelly_calculator(game['ml_away'], results['away_win_prob'])
+        kelly_away = third_kelly_calculator(game['ml_away'], 1 - results['home_win_prob'])
         kelly_home = third_kelly_calculator(game['ml_home'], results['home_win_prob'])
         away_output['kelly_risk'] = '${}'.format(round(bankroll*kelly_away/100,0))
         home_output['kelly_risk'] = '${}'.format(round(bankroll*kelly_home/100,0))
@@ -105,10 +105,10 @@ def main():
                 rl_fav = 'away' if game['ml_away'] < game['ml_home'] else 'home'
 
             if rl_fav == 'away':
-                away_rl_win_pct = results['away_fav_rl_prob']
+                away_rl_win_pct = 1 - results['home_dog_rl_prob']
                 home_rl_win_pct = results['home_dog_rl_prob']
             else:
-                away_rl_win_pct = results['away_dog_rl_prob']
+                away_rl_win_pct = 1 - results['home_fav_rl_prob']
                 home_rl_win_pct = results['home_fav_rl_prob']
 
             away_output['rl_proj'] = winpct_to_ml(away_rl_win_pct)
@@ -142,9 +142,9 @@ def main():
             away_output['ml_f5'] = d_to_a(game['ml_away_f5'])
             home_output['ml_f5'] = d_to_a(game['ml_home_f5'])
 
-            away_output['ml_proj_f5'] = winpct_to_ml(results['f5_away_win_prob'])
+            away_output['ml_proj_f5'] = winpct_to_ml(1 - results['f5_home_win_prob'])
             home_output['ml_proj_f5'] = winpct_to_ml(results['f5_home_win_prob'])
-            away_output['ml_value_f5'] = value(results['f5_away_win_prob'], game['ml_away_f5'])
+            away_output['ml_value_f5'] = value(1 - results['f5_home_win_prob'], game['ml_away_f5'])
             home_output['ml_value_f5'] = value(results['f5_home_win_prob'], game['ml_home_f5'])
             print('Implied away F5 money line:', away_output['ml_proj_f5'], 'Value:', away_output['ml_value_f5'], '%')
             print('Implied home F5 money line:', home_output['ml_proj_f5'], 'Value:', home_output['ml_value_f5'], '%')
@@ -164,10 +164,10 @@ def main():
                 rl_fav = 'away' if game['ml_away_f5'] < game['ml_home_f5'] else 'home'
 
             if rl_fav == 'away':
-                f5_away_rl_win_pct = results['f5_away_fav_win_prob']
+                f5_away_rl_win_pct = 1 - results['f5_home_dog_win_prob']
                 f5_home_rl_win_pct = results['f5_home_dog_win_prob']
             else:
-                f5_away_rl_win_pct = results['f5_away_dog_win_prob']
+                f5_away_rl_win_pct = 1 - results['f5_home_fav_win_prob']
                 f5_home_rl_win_pct = results['f5_home_fav_win_prob']
 
             away_output['rl_proj_f5'] = winpct_to_ml(f5_away_rl_win_pct)

@@ -54,18 +54,13 @@ class MonteCarlo(object):
     def sim_results(self):
         return dict(
             home_win_prob = self.home_wins / self.number_of_sims * 1.08,
-            away_win_prob = self.away_wins / self.number_of_sims / 1.08,
             home_dog_rl_prob = self.home_rl_dog_wins / self.number_of_sims * 1.08,
-            away_dog_rl_prob = self.away_rl_dog_wins / self.number_of_sims / 1.08,
             home_fav_rl_prob = self.home_rl_fav_wins / self.number_of_sims * 1.08,
-            away_fav_rl_prob = self.away_rl_fav_wins / self.number_of_sims / 1.08,
 
             f5_home_win_prob = self.f5_home_wins / (self.number_of_sims - self.f5_ties) * 1.08,
             f5_away_win_prob = self.f5_away_wins / (self.number_of_sims - self.f5_ties) / 1.08,
             f5_home_fav_win_prob = self.f5_home_wins / self.number_of_sims * 1.08,
-            f5_away_fav_win_prob = self.f5_away_wins / self.number_of_sims / 1.08,
             f5_home_dog_win_prob = (self.f5_home_wins + self.f5_ties) / self.number_of_sims * 1.08,
-            f5_away_dog_win_prob = (self.f5_away_wins + self.f5_ties) / self.number_of_sims / 1.08,
 
             score_in_first = self.scores_in_first / self.number_of_sims,
         )
