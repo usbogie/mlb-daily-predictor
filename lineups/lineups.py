@@ -27,6 +27,10 @@ def determine_reliever_2018(name, team):
         return 593144
     elif name == 'Ricardo Rodriguez' and team == 'Texas Rangers':
         return 600965
+    elif name == 'Cody Reed' and team == 'Cincinnati Reds':
+        return 642003
+    elif name == 'Luis Santos' and team == 'Toronto Blue Jays':
+        return 608601
     return False
 
 def player_not_in_fantasy_labs(name, id, manifest):
