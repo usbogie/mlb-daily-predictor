@@ -1,5 +1,5 @@
 def amount_won(risk, odds):
-    return risk * (odds-1)
+    return int(risk * (odds-1))
 
 def winpct_to_ml(winpct):
     if winpct >= .5:

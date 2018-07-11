@@ -156,7 +156,7 @@ def get_pitching_stats(manifest, pitcher_projections, all_relievers, steamer_pit
         pitchers.extend(closers)
     else:
         game = bullpens[bullpens['key'] == lineup['key']].to_dict('records')[0]
-        home_away = 'bp_away' if game['away'] == lineup['name'] else 'bp_away'
+        home_away = 'bp_away' if game['away'] == lineup['name'] else 'bp_home'
         all_pitchers = [game[col] for col in game if col.startswith(home_away)]
         all_pitchers = [int(pitcher) for pitcher in all_pitchers if str(pitcher) != 'nan']
         # remove starter
@@ -164,7 +164,6 @@ def get_pitching_stats(manifest, pitcher_projections, all_relievers, steamer_pit
         bp_df = steamer_starters[steamer_starters['mlbamid'].isin(all_pitchers)].sort_values(by=['start_IP'],ascending=False)
         relievers_list = bp_df.iloc[4:]['mlbamid'].tolist()
         dist = 1/len(relievers_list)
-        relief = []
         for reliever in relievers_list:
             reliever = get_stats(date, reliever, pitcher_projections, steamer_pitchers, pitcher_dict, 'throws')
             if not reliever:

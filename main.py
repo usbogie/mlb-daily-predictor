@@ -4,7 +4,7 @@ from storage.Game import Game
 from simulation.MonteCarlo import MonteCarlo
 from utils.converters import winpct_to_ml, over_total_pct, d_to_a, ml_to_winpct, third_kelly_calculator, amount_won
 from lineups.lineups import get_batting_stats, get_pitching_stats
-from lineups.matchups import generate_matchups
+from lineups.matchups import generate_matchups, calc_averages
 from scrapers.update import update_all
 from update_projections import batter_dict, pitcher_dict
 import gsheets_upload
@@ -46,6 +46,7 @@ def main():
     lineups = pd.read_csv(os.path.join('data','lineups','today.csv'))
     park_factors = pd.read_csv(os.path.join('data','park_factors_handedness.csv'))
     game_outputs = []
+    league_avgs = calc_averages(steamer_batters)
     for index, game in games.iterrows():
         print('\n')
         game_obj = Game(game['date'],game['time'],game['away'],game['home'])
@@ -68,7 +69,7 @@ def main():
             continue
         pf = park_factors[park_factors['Team']==game['home']].to_dict(orient='records')
 
-        all_matchups = generate_matchups(pf,steamer_batters, home_pitching, away_pitching, home_lineup_stats, away_lineup_stats)
+        all_matchups = generate_matchups(pf,steamer_batters, home_pitching, away_pitching, home_lineup_stats, away_lineup_stats, league_avgs)
         print('Away lineup is', away_lineup['lineup_status'],'|| Home lineup is', home_lineup['lineup_status'])
         mcGame = MonteCarlo(game_obj,away_lineup_stats,home_lineup_stats,away_pitching,home_pitching, all_matchups)
         mcGame.sim_games()
@@ -224,6 +225,7 @@ def test_year(year):
     steamer_pitchers['fullname'] = steamer_pitchers[['firstname', 'lastname']].apply(lambda x: ' '.join(x), axis=1)
     steamer_starters = pd.read_csv(os.path.join('data','steamer','steamer_pitchers_{}.csv'.format(year)))
     bullpens = pd.read_csv(os.path.join('data','lineups','bullpens_{}.csv'.format(year)))
+    league_avgs = calc_averages(steamer_batters)
 
     all_results = []
     all_net = []
@@ -256,7 +258,6 @@ def test_year(year):
                 print('something wrong with game odds')
                 continue
 
-
             away_lineup_stats = get_batting_stats(manifest, batter_projections, steamer_batters, away_lineup, game['date'])
             home_lineup_stats = get_batting_stats(manifest, batter_projections, steamer_batters, home_lineup, game['date'])
             away_pitching = get_pitching_stats(manifest, pitcher_projections, all_relievers, steamer_pitchers, steamer_starters, away_lineup, game['date'], test=True, bullpens=bullpens)
@@ -267,7 +268,7 @@ def test_year(year):
             pf = park_factors[park_factors['Team']==game['home']].to_dict(orient='records')
 
             print('Simulating game:',day,game['away'],'vs',game['home'])
-            all_matchups = generate_matchups(pf,steamer_batters, home_pitching, away_pitching, home_lineup_stats, away_lineup_stats)
+            all_matchups = generate_matchups(pf,steamer_batters, home_pitching, away_pitching, home_lineup_stats, away_lineup_stats, league_avgs)
             mcGame = MonteCarlo(game_obj,away_lineup_stats,home_lineup_stats,away_pitching,home_pitching,all_matchups)
             try:
                 mcGame.sim_games(test=True)
@@ -275,8 +276,8 @@ def test_year(year):
                 print('Issue, attempting SIM again')
                 mcGame.sim_games(test=True)
 
-            away_win_pct = 1-(mcGame.home_win_prob*1.08)
-            home_win_pct = mcGame.home_win_prob*1.08
+            mcGameResults = mcGame.sim_results()
+            value = lambda pct, odds: round(100 * pct - ml_to_winpct(odds),1)
 
             try:
                 over_pct = over_total_pct(mcGame.comb_histo, game_odds['total_line'])
@@ -289,35 +290,35 @@ def test_year(year):
                 home = game['home'],
                 away_ml = d_to_a(game_odds['ml_away']),
                 home_ml = d_to_a(game_odds['ml_home']),
-                away_ml_proj = round(winpct_to_ml(away_win_pct),0),
-                home_ml_proj = round(winpct_to_ml(home_win_pct),0),
+                away_ml_proj = winpct_to_ml(1 - mcGameResults['home_win_prob']),
+                home_ml_proj = winpct_to_ml(mcGameResults['home_win_prob']),
                 over_odds = d_to_a(game_odds['over_odds']),
                 under_odds = d_to_a(game_odds['under_odds']),
-                over_proj = round(winpct_to_ml(away_win_pct),0),
-                under_proj = round(winpct_to_ml(home_win_pct),0),
+                over_proj = winpct_to_ml(over_pct),
+                under_proj = winpct_to_ml(1 - over_pct),
                 total = game_odds['total_line'],
             )
 
-            value_away = round(100 * (away_win_pct - ml_to_winpct(result['away_ml'])), 2)
-            value_home = round(100 * (home_win_pct - ml_to_winpct(result['home_ml'])), 2)
+            value_away = value(1 - mcGameResults['home_win_prob'], game_odds['ml_away'])
+            value_home = value(mcGameResults['home_win_prob'], game_odds['ml_home'])
 
-            kelly_away = third_kelly_calculator(game_odds['ml_away'], away_win_pct) if value_away >= 0 else 0
-            kelly_home = third_kelly_calculator(game_odds['ml_home'], home_win_pct) if value_home >= 0 else 0
+            kelly_away = third_kelly_calculator(game_odds['ml_away'], 1 - mcGameResults['home_win_prob']) if value_away >= 0 else 0
+            kelly_home = third_kelly_calculator(game_odds['ml_home'], mcGameResults['home_win_prob']) if value_home >= 0 else 0
 
             if kelly_away > 0:
                 result['bet_on'] = result['away']
                 result['bet_against'] = result['home']
                 result['bet_on_pitcher'] = away_lineup['10_name']
                 result['bet_against_pitcher'] = home_lineup['10_name']
-                result['k_risk'] = round(bankroll*kelly_away/100,0)
-                result['side_value'] = round(100 * (away_win_pct - ml_to_winpct(result['away_ml'])), 2)
+                result['k_risk'] = int(bankroll*kelly_away/100)
+                result['side_value'] = value_away
             elif kelly_home > 0:
                 result['bet_on'] = result['home']
                 result['bet_against'] = result['away']
                 result['bet_on_pitcher'] = home_lineup['10_name']
                 result['bet_against_pitcher'] = away_lineup['10_name']
-                result['k_risk'] = round(bankroll*kelly_home/100,0)
-                result['side_value'] = round(100 * (home_win_pct - ml_to_winpct(result['home_ml'])), 2)
+                result['k_risk'] = int(bankroll*kelly_home/100)
+                result['side_value'] = value_home
             else:
                 result['bet_on'] = 'no bet'
                 result['bet_against'] = 'no bet'
@@ -335,7 +336,7 @@ def test_year(year):
                 elif result['bet_on'] == result['home']:
                     result['net'] = result['k_risk'] * -1
                     result['line'] = d_to_a(game_odds['ml_home'])
-            if game['home_score'] > game['away_score']:
+            elif game['home_score'] > game['away_score']:
                 if result['bet_on'] == result['home']:
                     result['net'] = amount_won(result['k_risk'], game_odds['ml_home'])
                     result['line'] = d_to_a(game_odds['ml_home'])
@@ -343,10 +344,10 @@ def test_year(year):
                     result['net'] = result['k_risk'] * -1
                     result['line'] = d_to_a(game_odds['ml_away'])
 
-            over_value = (over_pct - ml_to_winpct(game_odds['over_odds'])) * 100
-            under_value = (1 - over_pct - ml_to_winpct(game_odds['under_odds'])) * 100
+            over_value = value(over_pct, game_odds['over_odds'])
+            under_value = value(1 - over_pct, game_odds['under_odds'])
 
-            if over_value > 10 and game['home'] != 'Colorado Rockies':
+            if over_value > 0 and game['home'] != 'Colorado Rockies':
                 result['t_risk'] = int(third_kelly_calculator(game_odds['over_odds'], over_pct) * 5)
                 if game['away_score'] + game['home_score'] > game_odds['total_line']:
                     result['t_net'] = int(amount_won(result['t_risk'], game_odds['over_odds']))
@@ -356,7 +357,7 @@ def test_year(year):
                     result['t_net'] = 0
                 result['t_bet_on'] = 'Over'
                 result['t_value'] = over_value
-            elif under_value > 10 and game['home'] != 'Colorado Rockies':
+            elif under_value > 0 and game['home'] != 'Colorado Rockies':
                 result['t_risk'] = int(third_kelly_calculator(game_odds['under_odds'], 1-over_pct) * 5)
                 if game['away_score'] + game['home_score'] < game_odds['total_line']:
                     result['t_net'] = int(amount_won(result['t_risk'], game_odds['under_odds']))

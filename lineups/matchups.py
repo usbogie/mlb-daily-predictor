@@ -26,9 +26,8 @@ def calc_averages(steamer_batters):
         bR_v_pR = bR_v_pR,
     )
 
-def generate_matchups(park_factors, steamer_batters, home_pitchers, away_pitchers, home_batters, away_batters):
+def generate_matchups(park_factors, steamer_batters, home_pitchers, away_pitchers, home_batters, away_batters, league_avgs):
     matchups = dict()
-    league_avgs = calc_averages(steamer_batters)
     for batter in away_batters:
         for pitcher in home_pitchers:
             outcome_dict = get_outcome_distribution(park_factors, league_avgs, batter, pitcher)

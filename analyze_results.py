@@ -38,7 +38,7 @@ def value_side_strati(results):
         total_risk = sum([x['k_risk'] for x in results if x['side_value'] >= value[0]])
         total_net = sum([x['net'] for x in results if x['side_value'] >= value[0]])
         amount = 0 if total_risk == 0 else total_net/total_risk*100
-        amounts.append(amount)
+        amounts.append(total_risk)
     index = np.arange(len(ticks))
     plt.bar(index, amounts)
     plt.xticks(index, tuple(ticks), rotation = 'vertical')
