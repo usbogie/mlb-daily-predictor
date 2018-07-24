@@ -8,7 +8,7 @@ from operator import itemgetter
 from scrapers.scraper_utils import get_soup, team_codes
 
 def replace_names(name):
-    name = name.replace('C.J. Edwards', 'Carl Edwards Jr.').replace('Xavier Cedeño','Xavier Cedeno')
+    name = name.replace('C.J. Edwards', 'Carl Edwards Jr.').replace('ñ','n')
     name = name.replace('Seung-Hwan Oh', 'Seung Hwan Oh').replace('Seung hwan Oh', 'Seung Hwan Oh')
     name = name.replace('Dan Winkler', 'Daniel Winkler').replace('Felipe Vazquez','Felipe Rivero')
     name = name.replace('Mike Wright Jr.','Mike Wright').replace('Danny Coulombe', 'Daniel Coulombe')
@@ -66,7 +66,7 @@ def get_current_relievers(team):
             if tds[5].text == 'R' or tds[5].text == 'L':
                 pitchers[replace_names(tds[4].text)] = last_role
             else:
-                pitchers[replace_names(tds[5].text)] = tds[2].text
+                pitchers[replace_names(tds[5].text.strip())] = tds[2].text
     return pitchers
 
 def get_todays_relievers():

@@ -50,13 +50,17 @@ def get_names(grid):
 	home = team_abbrvs[teams[1].a.text.split()[0].strip()]
 	return (away, home)
 
+def get_grids(soup):
+	grids = soup.findAll('div', {'class': 'event-holder holder-complete'})
+	grids += soup.findAll('div', {'class': 'event-holder holder-in-progress'})
+	grids += soup.findAll('div', {'class': 'event-holder holder-delayed'})
+	grids += soup.findAll('div', {'class': 'event-holder holder-scheduled'})
+	return grids
+
 def get_money_lines(ml_url, day):
 	game_infos = {}
 	ml_soup = get_soup(ml_url)
-	grids = ml_soup.findAll('div', {'class': 'event-holder holder-complete'})
-	grids += ml_soup.findAll('div', {'class': 'event-holder holder-in-progress'})
-	grids += ml_soup.findAll('div', {'class': 'event-holder holder-delayed'})
-	grids += ml_soup.findAll('div', {'class': 'event-holder holder-scheduled'})
+	grids = get_grids(ml_soup)
 	key_acc = []
 	for grid in grids:
 		game_info = {}
@@ -89,10 +93,7 @@ def get_money_lines(ml_url, day):
 
 def get_f5_money_lines(ml_url, game_infos, day):
 	ml_soup = get_soup(ml_url)
-	grids = ml_soup.findAll('div', {'class': 'event-holder holder-complete'})
-	grids += ml_soup.findAll('div', {'class': 'event-holder holder-in-progress'})
-	grids += ml_soup.findAll('div', {'class': 'event-holder holder-delayed'})
-	grids += ml_soup.findAll('div', {'class': 'event-holder holder-scheduled'})
+	grids = get_grids(ml_soup)
 	for grid in grids:
 		time = grid.find('div',{'class', 'el-div eventLine-time'}).text
 		away, home = get_names(grid)
@@ -110,10 +111,7 @@ def get_f5_money_lines(ml_url, game_infos, day):
 
 def get_run_lines(rl_url, game_infos, day):
 	rl_soup = get_soup(rl_url)
-	grids = rl_soup.findAll('div', {'class': 'event-holder holder-complete'})
-	grids += rl_soup.findAll('div', {'class': 'event-holder holder-in-progress'})
-	grids += rl_soup.findAll('div', {'class': 'event-holder holder-delayed'})
-	grids += rl_soup.findAll('div', {'class': 'event-holder holder-scheduled'})
+	grids = get_grids(rl_soup)
 	for grid in grids:
 		time = grid.find('div',{'class', 'el-div eventLine-time'}).text
 		away, home = get_names(grid)
@@ -131,10 +129,7 @@ def get_run_lines(rl_url, game_infos, day):
 
 def get_f5_run_lines(rl_url, game_infos, day):
 	rl_soup = get_soup(rl_url)
-	grids = rl_soup.findAll('div', {'class': 'event-holder holder-complete'})
-	grids += rl_soup.findAll('div', {'class': 'event-holder holder-in-progress'})
-	grids += rl_soup.findAll('div', {'class': 'event-holder holder-delayed'})
-	grids += rl_soup.findAll('div', {'class': 'event-holder holder-scheduled'})
+	grids = get_grids(rl_soup)
 	for grid in grids:
 		time = grid.find('div',{'class', 'el-div eventLine-time'}).text
 		away, home = get_names(grid)
@@ -152,10 +147,7 @@ def get_f5_run_lines(rl_url, game_infos, day):
 
 def get_totals(total_url, game_infos,day):
 	total_soup = get_soup(total_url)
-	grids = total_soup.findAll('div', {'class': 'event-holder holder-complete'})
-	grids += total_soup.findAll('div', {'class': 'event-holder holder-in-progress'})
-	grids += total_soup.findAll('div', {'class': 'event-holder holder-delayed'})
-	grids += total_soup.findAll('div', {'class': 'event-holder holder-scheduled'})
+	grids = get_grids(total_soup)
 	for grid in grids:
 		time = grid.find('div',{'class', 'el-div eventLine-time'}).text
 		away, home = get_names(grid)
@@ -174,10 +166,7 @@ def get_totals(total_url, game_infos,day):
 
 def get_f5_totals(total_url, game_infos,day):
 	total_soup = get_soup(total_url)
-	grids = total_soup.findAll('div', {'class': 'event-holder holder-complete'})
-	grids += total_soup.findAll('div', {'class': 'event-holder holder-in-progress'})
-	grids += total_soup.findAll('div', {'class': 'event-holder holder-delayed'})
-	grids += total_soup.findAll('div', {'class': 'event-holder holder-scheduled'})
+	grids = get_grids(total_soup)
 	for grid in grids:
 		time = grid.find('div',{'class', 'el-div eventLine-time'}).text
 		away, home = get_names(grid)
@@ -196,7 +185,7 @@ def get_f5_totals(total_url, game_infos,day):
 
 def scrape_sbr_day(day):
 	print(day)
-	base = "https://www.sportsbookreview.com/betting-odds/mlb-baseball/"
+	base = "https://classic.sportsbookreview.com/betting-odds/mlb-baseball/"
 	ml_ext = "?date="
 	ml_f5_ext = "1st-half/?date="
 	rl_ext = "pointspread/?date="

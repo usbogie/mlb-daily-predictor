@@ -27,7 +27,7 @@ def update_games():
     days = get_dates(games_df)
     games = []
     for day in days:
-        games.extend(mlb_scraper.get_day_of_games(yesterday))
+        games.extend(mlb_scraper.get_day_of_games(day))
     past_games = pd.DataFrame(games)
     updated_games_df = pd.concat([games_df,past_games]).set_index('key')
     updated_games_df.drop_duplicates().to_csv(mlb_path)
@@ -56,8 +56,12 @@ def update_lineups():
     updated_lineups_df = pd.concat([lineups_df,past_lineups]).set_index('key')
     updated_lineups_df.drop_duplicates().to_csv(lineups_path)
 
-    today_lineups = pd.DataFrame(fantasylabs_lineups.scrape_day_lineups(today)).set_index('key')
-    today_lineups.to_csv(os.path.join('data','lineups','today.csv'))
+    today_lineups = fantasylabs_lineups.scrape_day_lineups(today)
+    if len(today_lineups) == 0:
+        pd.DataFrame().to_csv(os.path.join('data','lineups','today.csv'))
+    else:
+        today_lineups_df = pd.DataFrame(today_lineups).set_index('key')
+        today_lineups_df.to_csv(os.path.join('data','lineups','today.csv'))
 
 def update_lines():
     print("getting lines")
@@ -71,8 +75,12 @@ def update_lines():
     updated_lines_df = pd.concat([lines_df,past_lines]).set_index('key')
     updated_lines_df.drop_duplicates().to_csv(lines_path)
 
-    today_lines = pd.DataFrame(list(sbr_scraper.scrape_sbr_day(today).values())).set_index('key')
-    today_lines.to_csv(os.path.join('data','lines','today.csv'))
+    today_lines = list(sbr_scraper.scrape_sbr_day(today).values())
+    if len(today_lines) == 0:
+        pd.DataFrame().to_csv(os.path.join('data','lines','today.csv'))
+    else:
+        today_lines_df = pd.DataFrame(today_lines).set_index('key')
+        today_lines_df.to_csv(os.path.join('data','lines','today.csv'))
 
 def get_relievers():
     pitchers = roster_scraper.get_todays_relievers()
