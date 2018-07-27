@@ -47,8 +47,8 @@ def get_soup(url):
 	except (ConnectionResetError, error.URLError, error.HTTPError) as e:
 		print(e)
 		wait_time = round(max(60, 12 + gauss(0,1)), 2)
-		time.sleep(wait_time)
 		print("First attempt for %s failed. Trying again." % (url))
+		time.sleep(wait_time)
 		page = request.urlopen(request.Request(url, headers = { 'User-Agent' : ua.random }))
 	content = page.read()
 	return BeautifulSoup(content, "html5lib")

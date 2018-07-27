@@ -1,4 +1,4 @@
-Season,Team,Basic,1B,2B,3B,HR,SO,BB,GB,FB,LD,IFFB,FIP
+Season,Team,Basic,single,double,triple,hr,SO,BB,GB,FB,LD,IFFB,FIP
 2017,Los Angeles Angels,97,100,96,88,98,102,97,101,100,98,100,98
 2017,Baltimore Orioles,101,101,96,87,106,98,100,101,102,100,100,103
 2017,Boston Red Sox,104,103,112,103,95,99,99,102,97,103,101,98

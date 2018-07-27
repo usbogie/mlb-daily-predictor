@@ -8,7 +8,7 @@ from operator import itemgetter
 from scrapers.scraper_utils import get_soup, team_codes
 
 def replace_names(name):
-    name = name.replace('C.J. Edwards', 'Carl Edwards Jr.').replace('ñ','n')
+    name = name.replace('C.J. Edwards', 'Carl Edwards Jr.').replace('ñ','n').replace('Ã±','n')
     name = name.replace('Seung-Hwan Oh', 'Seung Hwan Oh').replace('Seung hwan Oh', 'Seung Hwan Oh')
     name = name.replace('Dan Winkler', 'Daniel Winkler').replace('Felipe Vazquez','Felipe Rivero')
     name = name.replace('Mike Wright Jr.','Mike Wright').replace('Danny Coulombe', 'Daniel Coulombe')

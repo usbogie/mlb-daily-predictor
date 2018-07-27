@@ -7,15 +7,6 @@ import os
 
 year = 2018
 
-steamer_batters = pd.read_csv(os.path.join('data','steamer', 'steamer_hitters_{}_split.csv'.format(year)))
-steamer_pitchers = pd.read_csv(os.path.join('data','steamer', 'steamer_pitchers_{}_split.csv'.format(year)))
-
-hitter_logs = pd.read_csv(os.path.join('data','player_logs','batters_{}.csv'.format(year)))
-pitcher_logs = pd.read_csv(os.path.join('data','player_logs','pitchers_{}.csv'.format(year)))
-
-games = pd.read_csv(os.path.join('data','games','games_{}.csv'.format(year)))
-park_factors = pd.read_csv(os.path.join('data','park_factors_general.csv'))
-
 def batter_dict(batter_id, projections):
     batter_projections = projections[(projections['mlbamid'] == batter_id) & (projections['pn'] == 1)].to_dict('records')
     batter_projections = batter_projections[0]
@@ -33,7 +24,9 @@ def batter_dict(batter_id, projections):
     )
     return projections_accumulator
 
-def update_batter_projections(batter_id):
+def update_batter_projections(batter_id, hitter_logs, steamer_batters):
+    park_factors = pd.read_csv(os.path.join('data','park_factors_general.csv'))
+    games = pd.read_csv(os.path.join('data','games','games_{}.csv'.format(year)))
     batter_logs = hitter_logs[hitter_logs['player_id'] == batter_id]
     print(batter_logs['player'].tolist()[0])
     batter_projections = steamer_batters[steamer_batters['split'] == 'overall']
@@ -44,7 +37,7 @@ def update_batter_projections(batter_id):
     p_const = 650
     for ix, stat_line in batter_logs.iterrows():
         try:
-            home_team = games.loc[games['key'] == stat_line['game_id']].iloc[0]['home']
+            home_team = games[games['key'] == stat_line['game_id']].iloc[0]['home']
         except:
             print('Game',stat_line['game_id'],'doesn\'t exist. Continuing')
             continue
@@ -56,10 +49,10 @@ def update_batter_projections(batter_id):
         projections_accumulator['k'] = ((projections_accumulator['k'] * (p_const - pa)) + stat_line['so']) / p_const
         projections_accumulator['bb'] = ((projections_accumulator['bb'] * (p_const - pa)) + stat_line['bb']) / p_const
         projections_accumulator['hbp'] = ((projections_accumulator['hbp'] * (p_const - pa)) + stat_line['hbp']) / p_const
-        projections_accumulator['hr'] = ((projections_accumulator['hr'] * (1.5*p_const - pa)) + stat_line['hr']) / (1.5*p_const)
-        projections_accumulator['triple'] = ((projections_accumulator['triple'] * (2*p_const - pa)) + stat_line['t']) / (2*p_const)
-        projections_accumulator['double'] = ((projections_accumulator['double'] * (2*p_const - pa)) + stat_line['d']) / (2*p_const)
-        projections_accumulator['single'] = ((projections_accumulator['single'] * (2*p_const - pa)) + (stat_line['h'] - stat_line['hr'] - stat_line['t'] - stat_line['d'])) / (2*p_const)
+        projections_accumulator['hr'] = ((projections_accumulator['hr'] * (1.5*p_const - pa)) + stat_line['hr'] / (pf['hr'] / 100)) / (1.5*p_const)
+        projections_accumulator['triple'] = ((projections_accumulator['triple'] * (2*p_const - pa)) + stat_line['t'] / (pf['triple'] / 100)) / (2*p_const)
+        projections_accumulator['double'] = ((projections_accumulator['double'] * (2*p_const - pa)) + stat_line['d'] / (pf['double'] / 100)) / (2*p_const)
+        projections_accumulator['single'] = ((projections_accumulator['single'] * (2*p_const - pa)) + (stat_line['h'] - stat_line['hr'] - stat_line['t'] - stat_line['d']) / (pf['single'] / 100)) / (2*p_const)
 
     vL_base = batter_dict(batter_id, steamer_batters[steamer_batters['split'] == 'vL'])
     vR_base = batter_dict(batter_id, steamer_batters[steamer_batters['split'] == 'vR'])
@@ -115,7 +108,9 @@ def pitcher_dict(pitcher_id, projections):
     return base
 
 
-def update_pitcher_projections(pitcher_id):
+def update_pitcher_projections(pitcher_id, pitcher_logs, steamer_pitchers):
+    park_factors = pd.read_csv(os.path.join('data','park_factors_general.csv'))
+    games = pd.read_csv(os.path.join('data','games','games_{}.csv'.format(year)))
     p_logs = pitcher_logs[pitcher_logs['player_id'] == pitcher_id]
     print(p_logs['player_id'].tolist()[0])
     projections_accumulator = pitcher_dict(pitcher_id, steamer_pitchers)
@@ -130,7 +125,7 @@ def update_pitcher_projections(pitcher_id):
     p_const = 800
     for ix, stat_line in p_logs.iterrows():
         try:
-            home_team = games.loc[games['key'] == stat_line['game_id']].iloc[0]['home']
+            home_team = games[games['key'] == stat_line['game_id']].iloc[0]['home']
         except:
             print('Game',stat_line['game_id'],'doesn\'t exist. Continuing')
             continue
@@ -142,10 +137,10 @@ def update_pitcher_projections(pitcher_id):
         projections_accumulator['k'] = ((projections_accumulator['k'] * (p_const - tbf)) + stat_line['so']) / p_const
         projections_accumulator['bb'] = ((projections_accumulator['bb'] * (p_const - tbf)) + stat_line['bb']) / p_const
         projections_accumulator['hbp'] = ((projections_accumulator['hbp'] * (p_const - tbf)) + stat_line['hb']) / p_const
-        projections_accumulator['hr'] = ((projections_accumulator['hr'] * (2*p_const - tbf)) + stat_line['hr']) / (2*p_const)
-        projections_accumulator['triple'] = ((projections_accumulator['triple'] * (3*p_const - tbf)) + ((stat_line['h'] - stat_line['hr']) * t_ratio)) / (3*p_const)
-        projections_accumulator['double'] = ((projections_accumulator['double'] * (3*p_const - tbf)) + ((stat_line['h'] - stat_line['hr']) * d_ratio)) / (3*p_const)
-        projections_accumulator['single'] = ((projections_accumulator['single'] * (3*p_const - tbf)) + ((stat_line['h'] - stat_line['hr']) * s_ratio)) / (3*p_const)
+        projections_accumulator['hr'] = ((projections_accumulator['hr'] * (2*p_const - tbf)) + stat_line['hr'] / (pf['hr'] / 100)) / (2*p_const)
+        projections_accumulator['triple'] = ((projections_accumulator['triple'] * (3*p_const - tbf)) + ((stat_line['h'] - stat_line['hr']) * t_ratio) / (pf['triple'] / 100)) / (3*p_const)
+        projections_accumulator['double'] = ((projections_accumulator['double'] * (3*p_const - tbf)) + ((stat_line['h'] - stat_line['hr']) * d_ratio) / (pf['double'] / 100)) / (3*p_const)
+        projections_accumulator['single'] = ((projections_accumulator['single'] * (3*p_const - tbf)) + ((stat_line['h'] - stat_line['hr']) * s_ratio) / (pf['single'] / 100)) / (3*p_const)
 
     vL_projections = steamer_pitchers[steamer_pitchers['split'] == 'vL']
     vR_projections = steamer_pitchers[steamer_pitchers['split'] == 'vR']
@@ -167,6 +162,8 @@ def update_pitcher_projections(pitcher_id):
     return pd.DataFrame(acc)
 
 if __name__ == '__main__':
+    pitcher_logs = pd.read_csv(os.path.join('data','player_logs','pitchers_{}.csv'.format(year)))
+    steamer_pitchers = pd.read_csv(os.path.join('data','steamer', 'steamer_pitchers_{}_split.csv'.format(year)))
     player_ids = list(set(pitcher_logs['player_id'].tolist()))
     steamer_ids = list(set(steamer_pitchers['mlbamid'].tolist()))
     all_pitchers = []
@@ -176,11 +173,13 @@ if __name__ == '__main__':
         if player_id not in steamer_ids:
             print('No splits for pitcher', player_id, 'will continue')
             continue
-        proj = update_pitcher_projections(player_id)
+        proj = update_pitcher_projections(player_id, pitcher_logs, steamer_pitchers)
         all_pitchers.append(proj)
     df = pd.concat(all_pitchers).set_index(['mlb_id','date'])
     df.to_csv(os.path.join('data','projections','pitchers_{}.csv'.format(year)))
 
+    hitter_logs = pd.read_csv(os.path.join('data','player_logs','batters_{}.csv'.format(year)))
+    steamer_batters = pd.read_csv(os.path.join('data','steamer', 'steamer_hitters_{}_split.csv'.format(year)))
     player_ids = list(set(hitter_logs['player_id'].tolist()))
     steamer_ids = list(set(steamer_batters['mlbamid'].tolist()))
     all_hitters = []
@@ -188,6 +187,6 @@ if __name__ == '__main__':
         if player_id not in steamer_ids:
             print('No splits for batter', player_id, 'will continue')
             continue
-        all_hitters.append(update_batter_projections(player_id))
+        all_hitters.append(update_batter_projections(player_id, hitter_logs, steamer_batters))
     df = pd.concat(all_hitters).set_index(['mlb_id','date'])
     df.to_csv(os.path.join('data','projections','hitters_{}.csv'.format(year)))

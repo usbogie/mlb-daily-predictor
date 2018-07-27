@@ -29,7 +29,7 @@ def update_games():
     for day in days:
         games.extend(mlb_scraper.get_day_of_games(day))
     past_games = pd.DataFrame(games)
-    updated_games_df = pd.concat([games_df,past_games]).set_index('key')
+    updated_games_df = pd.concat([games_df,past_games], sort=False).set_index('key')
     updated_games_df.drop_duplicates().to_csv(mlb_path)
 
 def update_bullpens():
@@ -41,7 +41,7 @@ def update_bullpens():
     for day in days:
         bullpens.extend(bullpen_scraper.scrape_day_bullpens(day))
     past_bullpens = pd.DataFrame(bullpens)
-    updated_bullpens_df = pd.concat([bullpens_df,past_bullpens]).set_index('key')
+    updated_bullpens_df = pd.concat([bullpens_df,past_bullpens], sort=False).set_index('key')
     updated_bullpens_df.drop_duplicates().to_csv(bullpens_path)
 
 def update_lineups():
@@ -53,7 +53,7 @@ def update_lineups():
     for day in days:
         lineups.extend(fantasylabs_lineups.scrape_day_lineups(day))
     past_lineups = pd.DataFrame(lineups)
-    updated_lineups_df = pd.concat([lineups_df,past_lineups]).set_index('key')
+    updated_lineups_df = pd.concat([lineups_df,past_lineups], sort=False).set_index('key')
     updated_lineups_df.drop_duplicates().to_csv(lineups_path)
 
     today_lineups = fantasylabs_lineups.scrape_day_lineups(today)
@@ -72,7 +72,7 @@ def update_lines():
     for day in days:
         lines.extend(list(sbr_scraper.scrape_sbr_day(day).values()))
     past_lines = pd.DataFrame(lines)
-    updated_lines_df = pd.concat([lines_df,past_lines]).set_index('key')
+    updated_lines_df = pd.concat([lines_df,past_lines], sort=False).set_index('key')
     updated_lines_df.drop_duplicates().to_csv(lines_path)
 
     today_lines = list(sbr_scraper.scrape_sbr_day(today).values())
