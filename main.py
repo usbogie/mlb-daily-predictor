@@ -235,7 +235,7 @@ def test_year(year):
     risk_acc = 0
     t_acc = 0
     t_risk_acc = 0
-    for day in days[:-1]:
+    for day in days:
         slate = games[games['date'] == day]
         day_results = []
         for index, game in slate.iterrows():

@@ -38,7 +38,7 @@ def value_side_strati(results):
         total_risk = sum([x['k_risk'] for x in results if x['side_value'] >= value[0]])
         total_net = sum([x['net'] for x in results if x['side_value'] >= value[0]])
         amount = 0 if total_risk == 0 else total_net/total_risk*100
-        amounts.append(total_risk)
+        amounts.append(amount)
     index = np.arange(len(ticks))
     plt.bar(index, amounts)
     plt.xticks(index, tuple(ticks), rotation = 'vertical')
@@ -47,7 +47,7 @@ def value_side_strati(results):
     plt.show()
 
 def value_total_strati(results):
-    values = [[9,10],[10,11],[11,12],[12,13],[13,24],[14,15],[16,17],[17,18],[18,40]]
+    values = [[5,6],[6,7],[7,8],[8,9],[9,10],[10,11],[11,12],[12,13],[13,14],[14,15],[16,17],[17,18],[18,40]]
     ticks = []
     amounts = []
     for value in values:
@@ -55,8 +55,8 @@ def value_total_strati(results):
         print('{}-{}'.format(value[0],value[1]),
                 len([x for x in results if x['t_value'] >= value[0] and x['t_value'] < value[1] and x['t_net'] > 0]),'-',
                 len([x for x in results if x['t_value'] >= value[0] and x['t_value'] < value[1] and x['t_net'] < 0]))
-        total_risk = sum([x['t_risk'] for x in results if x['t_value'] >= value[0]])
-        total_net = sum([x['t_net'] for x in results if x['t_value'] >= value[0]])
+        total_risk = sum([x['t_risk'] for x in results if x['t_value'] >= value[0] and x['t_value'] < value[1]])
+        total_net = sum([x['t_net'] for x in results if x['t_value'] >= value[0] and x['t_value'] < value[1]])
         amount = 0 if total_risk == 0 else total_net/total_risk*100
         amounts.append(amount)
     index = np.arange(len(ticks))
@@ -70,4 +70,4 @@ def value_total_strati(results):
 with open ('data/results/results_2018.json', 'r') as f:
     results = json.load(f)
 
-value_side_strati(results)
+value_total_strati(results)

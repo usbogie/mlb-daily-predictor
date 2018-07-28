@@ -1502,7 +1502,6 @@ key,away,away_id,away_score,date,gamePk,home,home_id,home_score
 2018/07/23/detmlb-kcamlb-1,Detroit Tigers,116,5,2018-07-23,530907,Kansas City Royals,118,4
 2018/07/23/chamlb-anamlb-1,Chicago White Sox,145,5,2018-07-23,530906,Los Angeles Angels,108,3
 2018/07/24/atlmlb-miamlb-1,Atlanta Braves,144,3,2018-07-24,530917,Miami Marlins,146,9
-2018/07/24/lanmlb-phimlb-1,Los Angeles Dodgers,119,4,2018-07-24,530922,Philadelphia Phillies,143,4
 2018/07/24/bosmlb-balmlb-1,Boston Red Sox,111,6,2018-07-24,530918,Baltimore Orioles,110,7
 2018/07/24/minmlb-tormlb-1,Minnesota Twins,142,5,2018-07-24,530923,Toronto Blue Jays,141,0
 2018/07/24/nyamlb-tbamlb-1,New York Yankees,147,4,2018-07-24,530924,Tampa Bay Rays,139,0
@@ -1513,9 +1512,6 @@ key,away,away_id,away_score,date,gamePk,home,home_id,home_score
 2018/07/24/oakmlb-texmlb-1,Oakland Athletics,133,13,2018-07-24,530925,Texas Rangers,140,10
 2018/07/24/wasmlb-milmlb-1,Washington Nationals,120,4,2018-07-24,530930,Milwaukee Brewers,158,5
 2018/07/24/detmlb-kcamlb-1,Detroit Tigers,116,4,2018-07-24,530920,Kansas City Royals,118,5
-2018/07/24/houmlb-colmlb-1,Houston Astros,117,2,2018-07-24,530921,Colorado Rockies,115,2
-2018/07/24/sfnmlb-seamlb-1,San Francisco Giants,137,3,2018-07-24,530928,Seattle Mariners,136,3
-2018/07/24/houmlb-colmlb-1,Houston Astros,117,7,2018-07-24,530921,Colorado Rockies,115,2
 2018/07/24/lanmlb-phimlb-1,Los Angeles Dodgers,119,4,2018-07-24,530922,Philadelphia Phillies,143,7
 2018/07/24/houmlb-colmlb-1,Houston Astros,117,8,2018-07-24,530921,Colorado Rockies,115,2
 2018/07/24/chamlb-anamlb-1,Chicago White Sox,145,4,2018-07-24,530919,Los Angeles Angels,108,2
@@ -1543,5 +1539,4 @@ key,away,away_id,away_score,date,gamePk,home,home_id,home_score
 2018/07/26/wasmlb-miamlb-1,Washington Nationals,120,10,2018-07-26,530955,Miami Marlins,146,3
 2018/07/26/lanmlb-atlmlb-1,Los Angeles Dodgers,119,8,2018-07-26,530948,Atlanta Braves,144,2
 2018/07/26/oakmlb-texmlb-1,Oakland Athletics,133,7,2018-07-26,530952,Texas Rangers,140,6
-2018/07/26/milmlb-sfnmlb-1,Milwaukee Brewers,158,2,2018-07-26,530949,San Francisco Giants,137,2
 2018/07/26/milmlb-sfnmlb-1,Milwaukee Brewers,158,7,2018-07-26,530949,San Francisco Giants,137,5
