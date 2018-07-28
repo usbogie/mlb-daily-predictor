@@ -1,4 +1,5 @@
 import random
+import math
 from datetime import datetime
 from update_projections import batter_dict, pitcher_dict
 
@@ -6,7 +7,8 @@ keys = ['single','double','triple','hr','k','hbp','bb']
 avg_pitcher_stats = {'vL': {'pa': 5277, 'single': 0.0879, 'double': 0.015, 'triple': 0.0013, 'hr': 0.0051,
                             'bb': 0.0307, 'hbp': 0.003, 'k': 0.3843, 'bats': 'B', 'mlb_id': 'pitcher'},
                      'vR': {'pa': 5277, 'single': 0.0879, 'double': 0.015, 'triple': 0.0013, 'hr': 0.0051,
-                            'bb': 0.0307, 'hbp': 0.003, 'k': 0.3843, 'bats': 'B', 'mlb_id': 'pitcher'}}
+                            'bb': 0.0307, 'hbp': 0.003, 'k': 0.3843, 'bats': 'B', 'mlb_id': 'pitcher'},
+                     'pos': 'SP'}
 
 def determine_reliever_2018(name, team):
     if name == 'Ryan Cook' and team == 'Seattle Mariners':
@@ -110,6 +112,7 @@ def get_batting_stats(manifest, batter_projections, steamer_batters, lineup, dat
 
         player_id = manifest[manifest['fantasy_labs'] == batter_fantasylabs_id].iloc[0]['mlb_id']
         stats = get_stats(date, player_id, batter_projections, steamer_batters, batter_dict, 'bats')
+        stats['pos'] = lineup['{}_pos'.format(str(i))]
         if not stats:
             return False
         lineup_stats.append(stats)
@@ -125,9 +128,10 @@ def get_pitching_stats(manifest, pitcher_projections, all_relievers, steamer_pit
     pitcher_id = manifest[manifest['fantasy_labs'] == starter_fantasylabs_id].iloc[0]['mlb_id']
     starting_pitcher = get_stats(date, pitcher_id, pitcher_projections, steamer_pitchers, pitcher_dict, 'throws')
     starting_pitcher['usage'] = 'SP'
+    starting_pitcher['pos'] = 'SP'
+    starting_pitcher['GS'] = steamer_starters[steamer_starters['mlbamid'] == pitcher_id].iloc[0]['GS']
+    starting_pitcher['start_IP'] = steamer_starters[steamer_starters['mlbamid'] == pitcher_id].iloc[0]['start_IP']
     pitchers = [starting_pitcher]
-    pitchers[0]['vL']['GS'] = steamer_starters[steamer_starters['mlbamid'] == pitchers[0]['vL']['mlb_id']].iloc[0]['GS']
-    pitchers[0]['vL']['start_IP'] = steamer_starters[steamer_starters['mlbamid'] == pitchers[0]['vL']['mlb_id']].iloc[0]['start_IP']
 
     if not test:
         closers = []
@@ -171,3 +175,34 @@ def get_pitching_stats(manifest, pitcher_projections, all_relievers, steamer_pit
             reliever['usage'] = dist
             pitchers.append(reliever)
     return pitchers
+
+def get_team_defense(lineup, fielders):
+    acc = 0
+    i = 0
+    catchers = [p for p in lineup if p['pos'] == 'C']
+    if len(catchers) != 1:
+        ratio_high = 0
+        most_likely_catcher = None
+        for c in catchers:
+            catcher = fielders[fielders['mlbamid'] == c['vL']['mlb_id']].to_dict('records')[0]
+            catcher_ratio = catcher['gC'] / math.ceil(catcher['G'])
+            if catcher_ratio >= ratio_high:
+                ratio_high = catcher_ratio
+                most_likely_catcher = c['vL']['mlb_id']
+    else:
+        most_likely_catcher = catchers[0]['vL']['mlb_id']
+
+    for player in lineup:
+        pos = player['pos']
+        id = player['vL']['mlb_id']
+        if pos == 'SP' or (pos == 'C' and id == most_likely_catcher):
+            continue
+        i = i + 1
+        fielder = fielders[fielders['mlbamid'] == id].to_dict('records')[0]
+        uzr = fielder['UZR']
+        acc = acc + uzr
+    if i < 7:
+        print('Something wrong, not enough fielders')
+        sys.exit()
+    print('acc',(acc / 500) + 1)
+    return (acc / 500) + 1

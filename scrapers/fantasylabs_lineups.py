@@ -60,9 +60,11 @@ def scrape_day_lineups(day):
         for player in away_players:
             lineup_away['{}_name'.format(player['LineupOrder'])] = fix_name(player['PlayerName'])
             lineup_away['{}_id'.format(player['LineupOrder'])] = int(player['PlayerId'])
+            lineup_away['{}_pos'.format(player['LineupOrder'])] = player['Position']
         for player in home_players:
             lineup_home['{}_name'.format(player['LineupOrder'])] = fix_name(player['PlayerName'])
             lineup_home['{}_id'.format(player['LineupOrder'])] = int(player['PlayerId'])
+            lineup_home['{}_pos'.format(player['LineupOrder'])] = player['Position']
 
         key = '{}/{}mlb-{}mlb-1'.format(day.replace('-','/'),
                                         team_codes[lineup_away['name']],

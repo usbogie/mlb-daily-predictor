@@ -26,20 +26,20 @@ def calc_averages(steamer_batters):
         bR_v_pR = bR_v_pR,
     )
 
-def generate_matchups(park_factors, steamer_batters, home_pitchers, away_pitchers, home_batters, away_batters, league_avgs):
+def generate_matchups(park_factors, steamer_batters, home_pitchers, away_pitchers, home_batters, away_batters, home_defense, away_defense, league_avgs):
     matchups = dict()
     for batter in away_batters:
         for pitcher in home_pitchers:
-            outcome_dict = get_outcome_distribution(park_factors, league_avgs, batter, pitcher)
+            outcome_dict = get_outcome_distribution(park_factors, league_avgs, batter, pitcher, home_defense)
             matchups[(pitcher['vL']['mlb_id'],batter['vL']['mlb_id'])] = outcome_dict
     for batter in home_batters:
         for pitcher in away_pitchers:
-            outcome_dict = get_outcome_distribution(park_factors, league_avgs, batter, pitcher)
+            outcome_dict = get_outcome_distribution(park_factors, league_avgs, batter, pitcher, away_defense)
             matchups[(pitcher['vL']['mlb_id'],batter['vL']['mlb_id'])] = outcome_dict
 
     return matchups
 
-def get_outcome_distribution(park_factors, league_avgs, batter, pitcher):
+def get_outcome_distribution(park_factors, league_avgs, batter, pitcher, defense):
     park_factors = park_factors[0]
     pitcher_hand = pitcher['vL']['throws']
     batter_hand = batter['vR']['bats']
@@ -53,20 +53,21 @@ def get_outcome_distribution(park_factors, league_avgs, batter, pitcher):
 
     split_avgs = league_avgs['b{}_v_p{}'.format(batter_hand,pitcher_hand)]
 
-    outcomes_w_factor = ["single","double","triple","hr"]
+    outcomes_w_factor_w_defense = ["single","double","triple"]
+    outcomes_w_factor = ["hr"]
     outcomes_wo_factor = ["k","hbp","bb"]
-    outcomes = outcomes_w_factor + outcomes_wo_factor
+    outcomes = outcomes_w_factor + outcomes_wo_factor + outcomes_w_factor_w_defense
     bat_outcomes = {outcome: batter_split[outcome] for outcome in outcomes}
     bat_outcomes["OutNonK"] = 1-sum(bat_outcomes.values())
-    p_outcomes = ["single","double","triple","hr","k","hbp","bb"]
-    pitch_outcomes = {outcome: pitcher_split[outcome] for outcome in p_outcomes}
+    pitch_outcomes = {outcome: pitcher_split[outcome] for outcome in outcomes}
     pitch_outcomes["OutNonK"] = 1-sum(pitch_outcomes.values())
     league_outcomes = dict(split_avgs)
     league_outcomes["OutNonK"] = 1-sum(league_outcomes.values())
     outcomes.append("OutNonK")
+    comb_outcomes_w_factor_w_defense = {outcome: (bat_outcomes[outcome]*pitch_outcomes[outcome]/league_outcomes[outcome])*(park_factors[outcome+batter_hand]/100)/defense for outcome in outcomes_w_factor_w_defense}
     comb_outcomes_w_factor = {outcome: (bat_outcomes[outcome]*pitch_outcomes[outcome]/league_outcomes[outcome])*(park_factors[outcome+batter_hand]/100) for outcome in outcomes_w_factor}
     comb_outcomes_wo_factor = {outcome: bat_outcomes[outcome]*pitch_outcomes[outcome]/league_outcomes[outcome] for outcome in outcomes_wo_factor}
-    denom = {**comb_outcomes_w_factor,**comb_outcomes_wo_factor}
+    denom = {**comb_outcomes_w_factor,**comb_outcomes_wo_factor,**comb_outcomes_w_factor_w_defense}
     denom["OutNonK"] = 1-sum(denom.values())
     normalizer = sum(denom.values())
     outcome_dict = {k: v/normalizer for k, v in denom.items()}
