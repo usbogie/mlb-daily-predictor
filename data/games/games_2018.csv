@@ -313,8 +313,8 @@ key,away,away_id,away_score,date,gamePk,home,home_id,home_score
 2018/04/22/sdnmlb-arimlb-1,San Diego Padres,135,2,2018-04-22,529731,Arizona Diamondbacks,109,4
 2018/04/22/wasmlb-lanmlb-1,Washington Nationals,120,3,2018-04-22,529735,Los Angeles Dodgers,119,4
 2018/04/23/atlmlb-cinmlb-1,Atlanta Braves,144,4,2018-04-23,529736,Cincinnati Reds,113,10
-2018/04/23/clemlb-balmlb-1,Cleveland Indians,114,2,2018-04-23,529737,Baltimore Orioles,110,1
 2018/04/23/minmlb-nyamlb-1,Minnesota Twins,142,1,2018-04-23,529740,New York Yankees,147,14
+2018/04/23/clemlb-balmlb-1,Cleveland Indians,114,2,2018-04-23,529737,Baltimore Orioles,110,1
 2018/04/23/oakmlb-texmlb-1,Oakland Athletics,133,9,2018-04-23,529741,Texas Rangers,140,4
 2018/04/23/anamlb-houmlb-1,Los Angeles Angels,108,2,2018-04-23,529738,Houston Astros,117,0
 2018/04/23/seamlb-chamlb-1,Seattle Mariners,136,4,2018-04-23,529743,Chicago White Sox,145,10
@@ -751,8 +751,8 @@ key,away,away_id,away_score,date,gamePk,home,home_id,home_score
 2018/05/26/atlmlb-bosmlb-1,Atlanta Braves,144,6,2018-05-26,530170,Boston Red Sox,111,8
 2018/05/26/arimlb-oakmlb-1,Arizona Diamondbacks,109,0,2018-05-26,530169,Oakland Athletics,133,3
 2018/05/26/kcamlb-texmlb-1,Kansas City Royals,118,3,2018-05-26,530175,Texas Rangers,140,4
-2018/05/26/slnmlb-pitmlb-1,St. Louis Cardinals,138,4,2018-05-26,530181,Pittsburgh Pirates,134,1
 2018/05/26/tormlb-phimlb-1,Toronto Blue Jays,141,1,2018-05-26,530182,Philadelphia Phillies,143,2
+2018/05/26/slnmlb-pitmlb-1,St. Louis Cardinals,138,4,2018-05-26,530181,Pittsburgh Pirates,134,1
 2018/05/26/balmlb-tbamlb-1,Baltimore Orioles,110,1,2018-05-26,530171,Tampa Bay Rays,139,5
 2018/05/26/chamlb-detmlb-1,Chicago White Sox,145,8,2018-05-26,530172,Detroit Tigers,116,4
 2018/05/26/nynmlb-milmlb-1,New York Mets,121,6,2018-05-26,530178,Milwaukee Brewers,158,17
@@ -1058,8 +1058,8 @@ key,away,away_id,away_score,date,gamePk,home,home_id,home_score
 2018/06/17/colmlb-texmlb-1,Colorado Rockies,115,12,2018-06-17,530468,Texas Rangers,140,13
 2018/06/17/anamlb-oakmlb-1,Los Angeles Angels,108,5,2018-06-17,530471,Oakland Athletics,133,6
 2018/06/17/bosmlb-seamlb-1,Boston Red Sox,111,9,2018-06-17,530465,Seattle Mariners,136,3
-2018/06/17/nynmlb-arimlb-1,New York Mets,121,5,2018-06-17,530474,Arizona Diamondbacks,109,3
 2018/06/17/sfnmlb-lanmlb-1,San Francisco Giants,137,4,2018-06-17,530477,Los Angeles Dodgers,119,1
+2018/06/17/nynmlb-arimlb-1,New York Mets,121,5,2018-06-17,530474,Arizona Diamondbacks,109,3
 2018/06/17/chnmlb-slnmlb-1,Chicago Cubs,112,0,2018-06-17,530466,St. Louis Cardinals,138,5
 2018/06/18/nyamlb-wasmlb-1,New York Yankees,147,4,2018-06-18,530046,Washington Nationals,120,2
 2018/06/18/nyamlb-wasmlb-2,New York Yankees,147,3,2018-06-18,530032,Washington Nationals,120,5
@@ -1078,8 +1078,8 @@ key,away,away_id,away_score,date,gamePk,home,home_id,home_score
 2018/06/19/seamlb-nyamlb-1,Seattle Mariners,136,2,2018-06-19,530500,New York Yankees,147,7
 2018/06/19/slnmlb-phimlb-1,St. Louis Cardinals,138,7,2018-06-19,530501,Philadelphia Phillies,143,6
 2018/06/19/atlmlb-tormlb-1,Atlanta Braves,144,11,2018-06-19,530490,Toronto Blue Jays,141,4
-2018/06/19/chamlb-clemlb-1,Chicago White Sox,145,3,2018-06-19,530493,Cleveland Indians,114,6
 2018/06/19/detmlb-cinmlb-1,Detroit Tigers,116,5,2018-06-19,530494,Cincinnati Reds,113,9
+2018/06/19/chamlb-clemlb-1,Chicago White Sox,145,3,2018-06-19,530493,Cleveland Indians,114,6
 2018/06/19/bosmlb-minmlb-1,Boston Red Sox,111,2,2018-06-19,530492,Minnesota Twins,142,6
 2018/06/19/tbamlb-houmlb-1,Tampa Bay Rays,139,2,2018-06-19,530502,Houston Astros,117,1
 2018/06/19/texmlb-kcamlb-1,Texas Rangers,140,4,2018-06-19,530503,Kansas City Royals,118,1
@@ -1129,8 +1129,8 @@ key,away,away_id,away_score,date,gamePk,home,home_id,home_score
 2018/06/23/texmlb-minmlb-1,Texas Rangers,140,9,2018-06-23,530556,Minnesota Twins,142,6
 2018/06/23/miamlb-colmlb-1,Miami Marlins,146,6,2018-06-23,530549,Colorado Rockies,115,2
 2018/06/23/arimlb-pitmlb-1,Arizona Diamondbacks,109,7,2018-06-23,530543,Pittsburgh Pirates,134,2
-2018/06/23/phimlb-wasmlb-1,Philadelphia Phillies,143,5,2018-06-23,530552,Washington Nationals,120,3
 2018/06/23/sdnmlb-sfnmlb-1,San Diego Padres,135,3,2018-06-23,530553,San Francisco Giants,137,5
+2018/06/23/phimlb-wasmlb-1,Philadelphia Phillies,143,5,2018-06-23,530552,Washington Nationals,120,3
 2018/06/23/balmlb-atlmlb-1,Baltimore Orioles,110,7,2018-06-23,530544,Atlanta Braves,144,5
 2018/06/23/chnmlb-cinmlb-1,Chicago Cubs,112,2,2018-06-23,530545,Cincinnati Reds,113,11
 2018/06/23/nyamlb-tbamlb-1,New York Yankees,147,0,2018-06-23,530550,Tampa Bay Rays,139,4
@@ -1211,8 +1211,8 @@ key,away,away_id,away_score,date,gamePk,home,home_id,home_score
 2018/06/29/wasmlb-phimlb-1,Washington Nationals,120,17,2018-06-29,530637,Philadelphia Phillies,143,7
 2018/06/29/bosmlb-nyamlb-1,Boston Red Sox,111,1,2018-06-29,530624,New York Yankees,147,8
 2018/06/29/detmlb-tormlb-1,Detroit Tigers,116,2,2018-06-29,530628,Toronto Blue Jays,141,3
-2018/06/29/houmlb-tbamlb-1,Houston Astros,117,2,2018-06-29,530629,Tampa Bay Rays,139,3
 2018/06/29/milmlb-cinmlb-1,Milwaukee Brewers,158,8,2018-06-29,530632,Cincinnati Reds,113,2
+2018/06/29/houmlb-tbamlb-1,Houston Astros,117,2,2018-06-29,530629,Tampa Bay Rays,139,3
 2018/06/29/nynmlb-miamlb-1,New York Mets,121,2,2018-06-29,530634,Miami Marlins,146,8
 2018/06/29/chamlb-texmlb-1,Chicago White Sox,145,3,2018-06-29,530625,Texas Rangers,140,11
 2018/06/29/atlmlb-slnmlb-1,Atlanta Braves,144,5,2018-06-29,530623,St. Louis Cardinals,138,1
@@ -1234,8 +1234,8 @@ key,away,away_id,away_score,date,gamePk,home,home_id,home_score
 2018/06/30/colmlb-lanmlb-1,Colorado Rockies,115,3,2018-06-30,530642,Los Angeles Dodgers,119,1
 2018/06/30/chamlb-texmlb-1,Chicago White Sox,145,4,2018-06-30,530640,Texas Rangers,140,13
 2018/06/30/kcamlb-seamlb-1,Kansas City Royals,118,4,2018-06-30,530645,Seattle Mariners,136,6
-2018/06/30/pitmlb-sdnmlb-1,Pittsburgh Pirates,134,3,2018-06-30,530650,San Diego Padres,135,4
 2018/06/30/sfnmlb-arimlb-1,San Francisco Giants,137,7,2018-06-30,530651,Arizona Diamondbacks,109,0
+2018/06/30/pitmlb-sdnmlb-1,Pittsburgh Pirates,134,3,2018-06-30,530650,San Diego Padres,135,4
 2018/07/01/anamlb-balmlb-1,Los Angeles Angels,108,2,2018-07-01,530661,Baltimore Orioles,110,8
 2018/07/01/detmlb-tormlb-1,Detroit Tigers,116,9,2018-07-01,530658,Toronto Blue Jays,141,1
 2018/07/01/houmlb-tbamlb-1,Houston Astros,117,2,2018-07-01,530659,Tampa Bay Rays,139,3
@@ -1503,6 +1503,7 @@ key,away,away_id,away_score,date,gamePk,home,home_id,home_score
 2018/07/23/chamlb-anamlb-1,Chicago White Sox,145,5,2018-07-23,530906,Los Angeles Angels,108,3
 2018/07/24/atlmlb-miamlb-1,Atlanta Braves,144,3,2018-07-24,530917,Miami Marlins,146,9
 2018/07/24/bosmlb-balmlb-1,Boston Red Sox,111,6,2018-07-24,530918,Baltimore Orioles,110,7
+2018/07/24/lanmlb-phimlb-1,Los Angeles Dodgers,119,4,2018-07-24,530922,Philadelphia Phillies,143,7
 2018/07/24/minmlb-tormlb-1,Minnesota Twins,142,5,2018-07-24,530923,Toronto Blue Jays,141,0
 2018/07/24/nyamlb-tbamlb-1,New York Yankees,147,4,2018-07-24,530924,Tampa Bay Rays,139,0
 2018/07/24/pitmlb-clemlb-1,Pittsburgh Pirates,134,9,2018-07-24,530926,Cleveland Indians,114,4
@@ -1512,7 +1513,6 @@ key,away,away_id,away_score,date,gamePk,home,home_id,home_score
 2018/07/24/oakmlb-texmlb-1,Oakland Athletics,133,13,2018-07-24,530925,Texas Rangers,140,10
 2018/07/24/wasmlb-milmlb-1,Washington Nationals,120,4,2018-07-24,530930,Milwaukee Brewers,158,5
 2018/07/24/detmlb-kcamlb-1,Detroit Tigers,116,4,2018-07-24,530920,Kansas City Royals,118,5
-2018/07/24/lanmlb-phimlb-1,Los Angeles Dodgers,119,4,2018-07-24,530922,Philadelphia Phillies,143,7
 2018/07/24/houmlb-colmlb-1,Houston Astros,117,8,2018-07-24,530921,Colorado Rockies,115,2
 2018/07/24/chamlb-anamlb-1,Chicago White Sox,145,4,2018-07-24,530919,Los Angeles Angels,108,2
 2018/07/24/sfnmlb-seamlb-1,San Francisco Giants,137,4,2018-07-24,530928,Seattle Mariners,136,3
@@ -1540,3 +1540,315 @@ key,away,away_id,away_score,date,gamePk,home,home_id,home_score
 2018/07/26/lanmlb-atlmlb-1,Los Angeles Dodgers,119,8,2018-07-26,530948,Atlanta Braves,144,2
 2018/07/26/oakmlb-texmlb-1,Oakland Athletics,133,7,2018-07-26,530952,Texas Rangers,140,6
 2018/07/26/milmlb-sfnmlb-1,Milwaukee Brewers,158,7,2018-07-26,530949,San Francisco Giants,137,5
+2018/07/27/nynmlb-pitmlb-1,New York Mets,121,4,2018-07-27,530963,Pittsburgh Pirates,134,5
+2018/07/27/tbamlb-balmlb-1,Tampa Bay Rays,139,5,2018-07-27,530967,Baltimore Orioles,110,15
+2018/07/27/clemlb-detmlb-1,Cleveland Indians,114,8,2018-07-27,530958,Detroit Tigers,116,3
+2018/07/27/minmlb-bosmlb-1,Minnesota Twins,142,3,2018-07-27,530962,Boston Red Sox,111,4
+2018/07/27/phimlb-cinmlb-1,Philadelphia Phillies,143,4,2018-07-27,530965,Cincinnati Reds,113,6
+2018/07/27/wasmlb-miamlb-1,Washington Nationals,120,9,2018-07-27,530970,Miami Marlins,146,1
+2018/07/27/lanmlb-atlmlb-1,Los Angeles Dodgers,119,4,2018-07-27,530960,Atlanta Braves,144,1
+2018/07/27/texmlb-houmlb-1,Texas Rangers,140,11,2018-07-27,530968,Houston Astros,117,2
+2018/07/27/tormlb-chamlb-1,Toronto Blue Jays,141,10,2018-07-27,530969,Chicago White Sox,145,5
+2018/07/27/chnmlb-slnmlb-1,Chicago Cubs,112,2,2018-07-27,530957,St. Louis Cardinals,138,5
+2018/07/27/oakmlb-colmlb-1,Oakland Athletics,133,1,2018-07-27,530964,Colorado Rockies,115,3
+2018/07/27/seamlb-anamlb-1,Seattle Mariners,136,3,2018-07-27,530966,Los Angeles Angels,108,4
+2018/07/27/arimlb-sdnmlb-1,Arizona Diamondbacks,109,6,2018-07-27,530956,San Diego Padres,135,2
+2018/07/27/milmlb-sfnmlb-1,Milwaukee Brewers,158,3,2018-07-27,530961,San Francisco Giants,137,1
+2018/07/28/kcamlb-nyamlb-1,Kansas City Royals,118,10,2018-07-28,530974,New York Yankees,147,5
+2018/07/28/kcamlb-nyamlb-2,Kansas City Royals,118,4,2018-07-28,530959,New York Yankees,147,5
+2018/07/28/chnmlb-slnmlb-1,Chicago Cubs,112,2,2018-07-28,530972,St. Louis Cardinals,138,6
+2018/07/28/clemlb-detmlb-1,Cleveland Indians,114,1,2018-07-28,530973,Detroit Tigers,116,2
+2018/07/28/phimlb-cinmlb-1,Philadelphia Phillies,143,2,2018-07-28,530980,Cincinnati Reds,113,6
+2018/07/28/nynmlb-pitmlb-1,New York Mets,121,0,2018-07-28,530978,Pittsburgh Pirates,134,5
+2018/07/28/tbamlb-balmlb-1,Tampa Bay Rays,139,2,2018-07-28,530982,Baltimore Orioles,110,11
+2018/07/28/lanmlb-atlmlb-1,Los Angeles Dodgers,119,5,2018-07-28,530975,Atlanta Braves,144,1
+2018/07/28/minmlb-bosmlb-1,Minnesota Twins,142,4,2018-07-28,530977,Boston Red Sox,111,10
+2018/07/28/texmlb-houmlb-1,Texas Rangers,140,7,2018-07-28,530983,Houston Astros,117,3
+2018/07/28/tormlb-chamlb-1,Toronto Blue Jays,141,5,2018-07-28,530984,Chicago White Sox,145,9
+2018/07/28/wasmlb-miamlb-1,Washington Nationals,120,1,2018-07-28,530985,Miami Marlins,146,2
+2018/07/28/oakmlb-colmlb-1,Oakland Athletics,133,1,2018-07-28,530979,Colorado Rockies,115,4
+2018/07/28/arimlb-sdnmlb-1,Arizona Diamondbacks,109,9,2018-07-28,530971,San Diego Padres,135,4
+2018/07/28/milmlb-sfnmlb-1,Milwaukee Brewers,158,7,2018-07-28,530976,San Francisco Giants,137,1
+2018/07/28/seamlb-anamlb-1,Seattle Mariners,136,5,2018-07-28,530981,Los Angeles Angels,108,11
+2018/07/29/kcamlb-nyamlb-1,Kansas City Royals,118,3,2018-07-29,530989,New York Yankees,147,6
+2018/07/29/minmlb-bosmlb-1,Minnesota Twins,142,0,2018-07-29,530992,Boston Red Sox,111,3
+2018/07/29/tbamlb-balmlb-1,Tampa Bay Rays,139,5,2018-07-29,530997,Baltimore Orioles,110,11
+2018/07/29/clemlb-detmlb-1,Cleveland Indians,114,8,2018-07-29,530988,Detroit Tigers,116,1
+2018/07/29/phimlb-cinmlb-1,Philadelphia Phillies,143,0,2018-07-29,530995,Cincinnati Reds,113,4
+2018/07/29/wasmlb-miamlb-1,Washington Nationals,120,0,2018-07-29,531000,Miami Marlins,146,5
+2018/07/29/lanmlb-atlmlb-1,Los Angeles Dodgers,119,1,2018-07-29,530990,Atlanta Braves,144,4
+2018/07/29/nynmlb-pitmlb-1,New York Mets,121,1,2018-07-29,530993,Pittsburgh Pirates,134,0
+2018/07/29/texmlb-houmlb-1,Texas Rangers,140,4,2018-07-29,530998,Houston Astros,117,3
+2018/07/29/tormlb-chamlb-1,Toronto Blue Jays,141,7,2018-07-29,530999,Chicago White Sox,145,4
+2018/07/29/oakmlb-colmlb-1,Oakland Athletics,133,2,2018-07-29,530994,Colorado Rockies,115,3
+2018/07/29/milmlb-sfnmlb-1,Milwaukee Brewers,158,5,2018-07-29,530991,San Francisco Giants,137,8
+2018/07/29/seamlb-anamlb-1,Seattle Mariners,136,8,2018-07-29,530996,Los Angeles Angels,108,5
+2018/07/29/arimlb-sdnmlb-1,Arizona Diamondbacks,109,5,2018-07-29,530986,San Diego Padres,135,4
+2018/07/29/chnmlb-slnmlb-1,Chicago Cubs,112,5,2018-07-29,530987,St. Louis Cardinals,138,2
+2018/07/30/phimlb-bosmlb-1,Philadelphia Phillies,143,1,2018-07-30,531006,Boston Red Sox,111,2
+2018/07/30/miamlb-atlmlb-1,Miami Marlins,146,3,2018-07-30,531004,Atlanta Braves,144,5
+2018/07/30/clemlb-minmlb-1,Cleveland Indians,114,4,2018-07-30,531001,Minnesota Twins,142,5
+2018/07/30/colmlb-slnmlb-1,Colorado Rockies,115,4,2018-07-30,531002,St. Louis Cardinals,138,5
+2018/07/30/texmlb-arimlb-1,Texas Rangers,140,9,2018-07-30,531008,Arizona Diamondbacks,109,5
+2018/07/30/tormlb-oakmlb-1,Toronto Blue Jays,141,1,2018-07-30,531009,Oakland Athletics,133,10
+2018/07/30/houmlb-seamlb-1,Houston Astros,117,0,2018-07-30,531003,Seattle Mariners,136,2
+2018/07/30/milmlb-lanmlb-1,Milwaukee Brewers,158,5,2018-07-30,531005,Los Angeles Dodgers,119,2
+2018/07/30/sfnmlb-sdnmlb-1,San Francisco Giants,137,5,2018-07-30,531007,San Diego Padres,135,3
+2018/07/31/sfnmlb-sdnmlb-1,San Francisco Giants,137,3,2018-07-31,531022,San Diego Padres,135,2
+2018/07/31/balmlb-nyamlb-1,Baltimore Orioles,110,3,2018-07-31,531010,New York Yankees,147,6
+2018/07/31/chnmlb-pitmlb-1,Chicago Cubs,112,4,2018-07-31,531011,Pittsburgh Pirates,134,5
+2018/07/31/nynmlb-wasmlb-1,New York Mets,121,4,2018-07-31,531020,Washington Nationals,120,25
+2018/07/31/cinmlb-detmlb-1,Cincinnati Reds,113,1,2018-07-31,531012,Detroit Tigers,116,2
+2018/07/31/anamlb-tbamlb-1,Los Angeles Angels,108,6,2018-07-31,531017,Tampa Bay Rays,139,10
+2018/07/31/phimlb-bosmlb-1,Philadelphia Phillies,143,3,2018-07-31,531021,Boston Red Sox,111,1
+2018/07/31/miamlb-atlmlb-1,Miami Marlins,146,6,2018-07-31,531018,Atlanta Braves,144,11
+2018/07/31/clemlb-minmlb-1,Cleveland Indians,114,6,2018-07-31,531013,Minnesota Twins,142,2
+2018/07/31/kcamlb-chamlb-1,Kansas City Royals,118,4,2018-07-31,531016,Chicago White Sox,145,2
+2018/07/31/colmlb-slnmlb-1,Colorado Rockies,115,6,2018-07-31,531014,St. Louis Cardinals,138,3
+2018/07/31/texmlb-arimlb-1,Texas Rangers,140,0,2018-07-31,531023,Arizona Diamondbacks,109,6
+2018/07/31/tormlb-oakmlb-1,Toronto Blue Jays,141,2,2018-07-31,531024,Oakland Athletics,133,6
+2018/07/31/houmlb-seamlb-1,Houston Astros,117,5,2018-07-31,531015,Seattle Mariners,136,2
+2018/07/31/milmlb-lanmlb-1,Milwaukee Brewers,158,1,2018-07-31,531019,Los Angeles Dodgers,119,0
+2018/08/01/nynmlb-wasmlb-1,New York Mets,121,3,2018-08-01,531035,Washington Nationals,120,5
+2018/08/01/balmlb-nyamlb-1,Baltimore Orioles,110,7,2018-08-01,531025,New York Yankees,147,5
+2018/08/01/cinmlb-detmlb-1,Cincinnati Reds,113,4,2018-08-01,531027,Detroit Tigers,116,7
+2018/08/01/clemlb-minmlb-1,Cleveland Indians,114,2,2018-08-01,531028,Minnesota Twins,142,0
+2018/08/01/tormlb-oakmlb-1,Toronto Blue Jays,141,3,2018-08-01,531036,Oakland Athletics,133,8
+2018/08/01/houmlb-seamlb-1,Houston Astros,117,8,2018-08-01,531030,Seattle Mariners,136,3
+2018/08/01/chnmlb-pitmlb-1,Chicago Cubs,112,9,2018-08-01,531026,Pittsburgh Pirates,134,2
+2018/08/01/anamlb-tbamlb-1,Los Angeles Angels,108,2,2018-08-01,531032,Tampa Bay Rays,139,7
+2018/08/01/kcamlb-chamlb-1,Kansas City Royals,118,10,2018-08-01,531031,Chicago White Sox,145,5
+2018/08/01/colmlb-slnmlb-1,Colorado Rockies,115,3,2018-08-01,531029,St. Louis Cardinals,138,6
+2018/08/01/milmlb-lanmlb-1,Milwaukee Brewers,158,4,2018-08-01,531034,Los Angeles Dodgers,119,6
+2018/08/02/anamlb-tbamlb-1,Los Angeles Angels,108,2,2018-08-02,531042,Tampa Bay Rays,139,4
+2018/08/02/colmlb-slnmlb-1,Colorado Rockies,115,2,2018-08-02,531040,St. Louis Cardinals,138,3
+2018/08/02/kcamlb-chamlb-1,Kansas City Royals,118,4,2018-08-02,531041,Chicago White Sox,145,6
+2018/08/02/cinmlb-wasmlb-1,Cincinnati Reds,113,4,2018-08-02,531039,Washington Nationals,120,10
+2018/08/02/miamlb-phimlb-1,Miami Marlins,146,2,2018-08-02,531043,Philadelphia Phillies,143,5
+2018/08/02/atlmlb-nynmlb-1,Atlanta Braves,144,4,2018-08-02,531037,New York Mets,121,2
+2018/08/02/nyamlb-bosmlb-1,New York Yankees,147,7,2018-08-02,531045,Boston Red Sox,111,15
+2018/08/02/balmlb-texmlb-1,Baltimore Orioles,110,8,2018-08-02,531038,Texas Rangers,140,17
+2018/08/02/sdnmlb-chnmlb-1,San Diego Padres,135,6,2018-08-02,531046,Chicago Cubs,112,1
+2018/08/02/milmlb-lanmlb-1,Milwaukee Brewers,158,5,2018-08-02,531044,Los Angeles Dodgers,119,21
+2018/08/02/sfnmlb-arimlb-1,San Francisco Giants,137,8,2018-08-02,531047,Arizona Diamondbacks,109,1
+2018/08/02/tormlb-seamlb-1,Toronto Blue Jays,141,7,2018-08-02,531048,Seattle Mariners,136,3
+2018/08/03/sdnmlb-chnmlb-1,San Diego Padres,135,4,2018-08-03,531060,Chicago Cubs,112,5
+2018/08/03/miamlb-phimlb-1,Miami Marlins,146,1,2018-08-03,531058,Philadelphia Phillies,143,5
+2018/08/03/slnmlb-pitmlb-1,St. Louis Cardinals,138,6,2018-08-03,531062,Pittsburgh Pirates,134,7
+2018/08/03/atlmlb-nynmlb-1,Atlanta Braves,144,2,2018-08-03,531049,New York Mets,121,1
+2018/08/03/chamlb-tbamlb-1,Chicago White Sox,145,3,2018-08-03,531051,Tampa Bay Rays,139,2
+2018/08/03/anamlb-clemlb-1,Los Angeles Angels,108,7,2018-08-03,531057,Cleveland Indians,114,4
+2018/08/03/nyamlb-bosmlb-1,New York Yankees,147,1,2018-08-03,531059,Boston Red Sox,111,4
+2018/08/03/balmlb-texmlb-1,Baltimore Orioles,110,3,2018-08-03,531050,Texas Rangers,140,11
+2018/08/03/colmlb-milmlb-1,Colorado Rockies,115,3,2018-08-03,531053,Milwaukee Brewers,158,5
+2018/08/03/kcamlb-minmlb-1,Kansas City Royals,118,4,2018-08-03,531056,Minnesota Twins,142,6
+2018/08/03/sfnmlb-arimlb-1,San Francisco Giants,137,3,2018-08-03,531061,Arizona Diamondbacks,109,6
+2018/08/03/detmlb-oakmlb-1,Detroit Tigers,116,0,2018-08-03,531054,Oakland Athletics,133,1
+2018/08/03/houmlb-lanmlb-1,Houston Astros,117,2,2018-08-03,531055,Los Angeles Dodgers,119,1
+2018/08/03/tormlb-seamlb-1,Toronto Blue Jays,141,7,2018-08-03,531063,Seattle Mariners,136,2
+2018/08/04/cinmlb-wasmlb-1,Cincinnati Reds,113,7,2018-08-04,531052,Washington Nationals,120,1
+2018/08/04/cinmlb-wasmlb-2,Cincinnati Reds,113,2,2018-08-04,531067,Washington Nationals,120,6
+2018/08/04/sdnmlb-chnmlb-1,San Diego Padres,135,4,2018-08-04,531075,Chicago Cubs,112,5
+2018/08/04/nyamlb-bosmlb-1,New York Yankees,147,1,2018-08-04,531074,Boston Red Sox,111,4
+2018/08/04/chamlb-tbamlb-1,Chicago White Sox,145,2,2018-08-04,531066,Tampa Bay Rays,139,1
+2018/08/04/miamlb-phimlb-1,Miami Marlins,146,3,2018-08-04,531073,Philadelphia Phillies,143,8
+2018/08/04/slnmlb-pitmlb-1,St. Louis Cardinals,138,8,2018-08-04,531077,Pittsburgh Pirates,134,4
+2018/08/04/atlmlb-nynmlb-1,Atlanta Braves,144,0,2018-08-04,531064,New York Mets,121,3
+2018/08/04/colmlb-milmlb-1,Colorado Rockies,115,4,2018-08-04,531068,Milwaukee Brewers,158,8
+2018/08/04/kcamlb-minmlb-1,Kansas City Royals,118,2,2018-08-04,531071,Minnesota Twins,142,8
+2018/08/04/anamlb-clemlb-1,Los Angeles Angels,108,0,2018-08-04,531072,Cleveland Indians,114,3
+2018/08/04/balmlb-texmlb-1,Baltimore Orioles,110,1,2018-08-04,531065,Texas Rangers,140,3
+2018/08/04/sfnmlb-arimlb-1,San Francisco Giants,137,3,2018-08-04,531076,Arizona Diamondbacks,109,9
+2018/08/04/detmlb-oakmlb-1,Detroit Tigers,116,1,2018-08-04,531069,Oakland Athletics,133,2
+2018/08/04/houmlb-lanmlb-1,Houston Astros,117,14,2018-08-04,531070,Los Angeles Dodgers,119,0
+2018/08/04/tormlb-seamlb-1,Toronto Blue Jays,141,5,2018-08-04,531078,Seattle Mariners,136,1
+2018/08/05/atlmlb-nynmlb-1,Atlanta Braves,144,5,2018-08-05,531079,New York Mets,121,4
+2018/08/05/chamlb-tbamlb-1,Chicago White Sox,145,8,2018-08-05,531081,Tampa Bay Rays,139,7
+2018/08/05/anamlb-clemlb-1,Los Angeles Angels,108,3,2018-08-05,531087,Cleveland Indians,114,4
+2018/08/05/cinmlb-wasmlb-1,Cincinnati Reds,113,1,2018-08-05,531082,Washington Nationals,120,2
+2018/08/05/miamlb-phimlb-1,Miami Marlins,146,3,2018-08-05,531088,Philadelphia Phillies,143,5
+2018/08/05/slnmlb-pitmlb-1,St. Louis Cardinals,138,2,2018-08-05,531092,Pittsburgh Pirates,134,1
+2018/08/05/colmlb-milmlb-1,Colorado Rockies,115,5,2018-08-05,531083,Milwaukee Brewers,158,4
+2018/08/05/kcamlb-minmlb-1,Kansas City Royals,118,5,2018-08-05,531086,Minnesota Twins,142,6
+2018/08/05/sdnmlb-chnmlb-1,San Diego Padres,135,10,2018-08-05,531090,Chicago Cubs,112,6
+2018/08/05/balmlb-texmlb-1,Baltimore Orioles,110,9,2018-08-05,531080,Texas Rangers,140,6
+2018/08/05/detmlb-oakmlb-1,Detroit Tigers,116,0,2018-08-05,531084,Oakland Athletics,133,6
+2018/08/05/houmlb-lanmlb-1,Houston Astros,117,2,2018-08-05,531085,Los Angeles Dodgers,119,3
+2018/08/05/sfnmlb-arimlb-1,San Francisco Giants,137,3,2018-08-05,531091,Arizona Diamondbacks,109,2
+2018/08/05/tormlb-seamlb-1,Toronto Blue Jays,141,3,2018-08-05,531093,Seattle Mariners,136,6
+2018/08/05/nyamlb-bosmlb-1,New York Yankees,147,4,2018-08-05,531089,Boston Red Sox,111,5
+2018/08/06/cinmlb-nynmlb-1,Cincinnati Reds,113,4,2018-08-06,531095,New York Mets,121,6
+2018/08/06/minmlb-clemlb-1,Minnesota Twins,142,0,2018-08-06,531098,Cleveland Indians,114,10
+2018/08/06/slnmlb-miamlb-1,St. Louis Cardinals,138,1,2018-08-06,531103,Miami Marlins,146,2
+2018/08/06/seamlb-texmlb-1,Seattle Mariners,136,4,2018-08-06,531102,Texas Rangers,140,3
+2018/08/06/nyamlb-chamlb-1,New York Yankees,147,7,2018-08-06,531099,Chicago White Sox,145,0
+2018/08/06/chnmlb-kcamlb-1,Chicago Cubs,112,3,2018-08-06,531094,Kansas City Royals,118,1
+2018/08/06/pitmlb-colmlb-1,Pittsburgh Pirates,134,0,2018-08-06,531101,Colorado Rockies,115,2
+2018/08/06/phimlb-arimlb-1,Philadelphia Phillies,143,2,2018-08-06,531100,Arizona Diamondbacks,109,3
+2018/08/06/detmlb-anamlb-1,Detroit Tigers,116,2,2018-08-06,531096,Los Angeles Angels,108,6
+2018/08/06/houmlb-sfnmlb-1,Houston Astros,117,3,2018-08-06,531097,San Francisco Giants,137,1
+2018/08/07/atlmlb-wasmlb-1,Atlanta Braves,144,3,2018-08-07,530873,Washington Nationals,120,8
+2018/08/07/atlmlb-wasmlb-2,Atlanta Braves,144,3,2018-08-07,531104,Washington Nationals,120,1
+2018/08/07/houmlb-sfnmlb-1,Houston Astros,117,2,2018-08-07,531110,San Francisco Giants,137,1
+2018/08/07/bosmlb-tormlb-1,Boston Red Sox,111,10,2018-08-07,531106,Toronto Blue Jays,141,7
+2018/08/07/balmlb-tbamlb-1,Baltimore Orioles,110,3,2018-08-07,531105,Tampa Bay Rays,139,4
+2018/08/07/cinmlb-nynmlb-1,Cincinnati Reds,113,6,2018-08-07,531108,New York Mets,121,1
+2018/08/07/minmlb-clemlb-1,Minnesota Twins,142,3,2018-08-07,531112,Cleveland Indians,114,2
+2018/08/07/slnmlb-miamlb-1,St. Louis Cardinals,138,3,2018-08-07,531118,Miami Marlins,146,2
+2018/08/07/seamlb-texmlb-1,Seattle Mariners,136,4,2018-08-07,531117,Texas Rangers,140,11
+2018/08/07/nyamlb-chamlb-1,New York Yankees,147,4,2018-08-07,531113,Chicago White Sox,145,3
+2018/08/07/sdnmlb-milmlb-1,San Diego Padres,135,11,2018-08-07,531116,Milwaukee Brewers,158,5
+2018/08/07/chnmlb-kcamlb-1,Chicago Cubs,112,5,2018-08-07,531107,Kansas City Royals,118,0
+2018/08/07/pitmlb-colmlb-1,Pittsburgh Pirates,134,10,2018-08-07,531115,Colorado Rockies,115,2
+2018/08/07/phimlb-arimlb-1,Philadelphia Phillies,143,5,2018-08-07,531114,Arizona Diamondbacks,109,2
+2018/08/07/lanmlb-oakmlb-1,Los Angeles Dodgers,119,4,2018-08-07,531111,Oakland Athletics,133,2
+2018/08/07/detmlb-anamlb-1,Detroit Tigers,116,5,2018-08-07,531109,Los Angeles Angels,108,11
+2018/08/08/cinmlb-nynmlb-1,Cincinnati Reds,113,0,2018-08-08,531123,New York Mets,121,8
+2018/08/08/seamlb-texmlb-1,Seattle Mariners,136,7,2018-08-08,531131,Texas Rangers,140,11
+2018/08/08/pitmlb-colmlb-1,Pittsburgh Pirates,134,4,2018-08-08,531129,Colorado Rockies,115,3
+2018/08/08/phimlb-arimlb-1,Philadelphia Phillies,143,0,2018-08-08,531128,Arizona Diamondbacks,109,6
+2018/08/08/detmlb-anamlb-1,Detroit Tigers,116,0,2018-08-08,531124,Los Angeles Angels,108,6
+2018/08/08/atlmlb-wasmlb-1,Atlanta Braves,144,8,2018-08-08,531119,Washington Nationals,120,3
+2018/08/08/bosmlb-tormlb-1,Boston Red Sox,111,10,2018-08-08,531121,Toronto Blue Jays,141,5
+2018/08/08/balmlb-tbamlb-1,Baltimore Orioles,110,5,2018-08-08,531120,Tampa Bay Rays,139,4
+2018/08/08/minmlb-clemlb-1,Minnesota Twins,142,2,2018-08-08,531126,Cleveland Indians,114,5
+2018/08/08/slnmlb-miamlb-1,St. Louis Cardinals,138,7,2018-08-08,531132,Miami Marlins,146,1
+2018/08/08/nyamlb-chamlb-1,New York Yankees,147,7,2018-08-08,531127,Chicago White Sox,145,3
+2018/08/08/sdnmlb-milmlb-1,San Diego Padres,135,4,2018-08-08,531130,Milwaukee Brewers,158,8
+2018/08/08/chnmlb-kcamlb-1,Chicago Cubs,112,0,2018-08-08,531122,Kansas City Royals,118,9
+2018/08/08/lanmlb-oakmlb-1,Los Angeles Dodgers,119,2,2018-08-08,531125,Oakland Athletics,133,3
+2018/08/09/atlmlb-wasmlb-1,Atlanta Braves,144,3,2018-08-09,531133,Washington Nationals,120,6
+2018/08/09/minmlb-clemlb-1,Minnesota Twins,142,4,2018-08-09,531137,Cleveland Indians,114,5
+2018/08/09/sdnmlb-milmlb-1,San Diego Padres,135,8,2018-08-09,531139,Milwaukee Brewers,158,4
+2018/08/09/texmlb-nyamlb-1,Texas Rangers,140,3,2018-08-09,531141,New York Yankees,147,7
+2018/08/09/bosmlb-tormlb-1,Boston Red Sox,111,5,2018-08-09,531135,Toronto Blue Jays,141,8
+2018/08/09/balmlb-tbamlb-1,Baltimore Orioles,110,4,2018-08-09,531134,Tampa Bay Rays,139,5
+2018/08/09/seamlb-houmlb-1,Seattle Mariners,136,8,2018-08-09,531140,Houston Astros,117,6
+2018/08/09/lanmlb-colmlb-1,Los Angeles Dodgers,119,8,2018-08-09,531136,Colorado Rockies,115,5
+2018/08/09/pitmlb-sfnmlb-1,Pittsburgh Pirates,134,10,2018-08-09,531138,San Francisco Giants,137,5
+2018/08/10/wasmlb-chnmlb-1,Washington Nationals,120,2,2018-08-10,531156,Chicago Cubs,112,3
+2018/08/10/bosmlb-balmlb-1,Boston Red Sox,111,19,2018-08-10,531143,Baltimore Orioles,110,12
+2018/08/10/texmlb-nyamlb-1,Texas Rangers,140,12,2018-08-10,531155,New York Yankees,147,7
+2018/08/10/tbamlb-tormlb-1,Tampa Bay Rays,139,7,2018-08-10,531154,Toronto Blue Jays,141,0
+2018/08/10/arimlb-cinmlb-1,Arizona Diamondbacks,109,0,2018-08-10,531142,Cincinnati Reds,113,3
+2018/08/10/minmlb-detmlb-1,Minnesota Twins,142,3,2018-08-10,531147,Detroit Tigers,116,5
+2018/08/10/nynmlb-miamlb-1,New York Mets,121,6,2018-08-10,531148,Miami Marlins,146,2
+2018/08/10/milmlb-atlmlb-1,Milwaukee Brewers,158,1,2018-08-10,531146,Atlanta Braves,144,10
+2018/08/10/clemlb-chamlb-1,Cleveland Indians,114,0,2018-08-10,531144,Chicago White Sox,145,1
+2018/08/10/seamlb-houmlb-1,Seattle Mariners,136,5,2018-08-10,531152,Houston Astros,117,2
+2018/08/10/slnmlb-kcamlb-1,St. Louis Cardinals,138,7,2018-08-10,531153,Kansas City Royals,118,0
+2018/08/10/lanmlb-colmlb-1,Los Angeles Dodgers,119,4,2018-08-10,531145,Colorado Rockies,115,5
+2018/08/10/oakmlb-anamlb-1,Oakland Athletics,133,3,2018-08-10,531149,Los Angeles Angels,108,4
+2018/08/10/phimlb-sdnmlb-1,Philadelphia Phillies,143,0,2018-08-10,531150,San Diego Padres,135,2
+2018/08/10/pitmlb-sfnmlb-1,Pittsburgh Pirates,134,10,2018-08-10,531151,San Francisco Giants,137,13
+2018/08/11/bosmlb-balmlb-1,Boston Red Sox,111,5,2018-08-11,530932,Baltimore Orioles,110,0
+2018/08/11/bosmlb-balmlb-2,Boston Red Sox,111,6,2018-08-11,531158,Baltimore Orioles,110,4
+2018/08/11/texmlb-nyamlb-1,Texas Rangers,140,3,2018-08-11,531170,New York Yankees,147,5
+2018/08/11/wasmlb-chnmlb-1,Washington Nationals,120,9,2018-08-11,531171,Chicago Cubs,112,4
+2018/08/11/tbamlb-tormlb-1,Tampa Bay Rays,139,3,2018-08-11,531169,Toronto Blue Jays,141,1
+2018/08/11/minmlb-detmlb-1,Minnesota Twins,142,4,2018-08-11,531162,Detroit Tigers,116,3
+2018/08/11/arimlb-cinmlb-1,Arizona Diamondbacks,109,3,2018-08-11,531157,Cincinnati Reds,113,6
+2018/08/11/clemlb-chamlb-1,Cleveland Indians,114,3,2018-08-11,531159,Chicago White Sox,145,1
+2018/08/11/milmlb-atlmlb-1,Milwaukee Brewers,158,4,2018-08-11,531161,Atlanta Braves,144,2
+2018/08/11/nynmlb-miamlb-1,New York Mets,121,3,2018-08-11,531163,Miami Marlins,146,4
+2018/08/11/seamlb-houmlb-1,Seattle Mariners,136,3,2018-08-11,531167,Houston Astros,117,2
+2018/08/11/slnmlb-kcamlb-1,St. Louis Cardinals,138,8,2018-08-11,531168,Kansas City Royals,118,3
+2018/08/11/lanmlb-colmlb-1,Los Angeles Dodgers,119,2,2018-08-11,531160,Colorado Rockies,115,3
+2018/08/11/phimlb-sdnmlb-1,Philadelphia Phillies,143,5,2018-08-11,531165,San Diego Padres,135,1
+2018/08/11/pitmlb-sfnmlb-1,Pittsburgh Pirates,134,4,2018-08-11,531166,San Francisco Giants,137,0
+2018/08/11/oakmlb-anamlb-1,Oakland Athletics,133,7,2018-08-11,531164,Los Angeles Angels,108,0
+2018/08/12/bosmlb-balmlb-1,Boston Red Sox,111,4,2018-08-12,531173,Baltimore Orioles,110,1
+2018/08/12/texmlb-nyamlb-1,Texas Rangers,140,2,2018-08-12,531185,New York Yankees,147,7
+2018/08/12/tbamlb-tormlb-1,Tampa Bay Rays,139,1,2018-08-12,531184,Toronto Blue Jays,141,2
+2018/08/12/arimlb-cinmlb-1,Arizona Diamondbacks,109,9,2018-08-12,531172,Cincinnati Reds,113,2
+2018/08/12/minmlb-detmlb-1,Minnesota Twins,142,2,2018-08-12,531177,Detroit Tigers,116,4
+2018/08/12/nynmlb-miamlb-1,New York Mets,121,4,2018-08-12,531178,Miami Marlins,146,3
+2018/08/12/milmlb-atlmlb-1,Milwaukee Brewers,158,7,2018-08-12,531176,Atlanta Braves,144,8
+2018/08/12/clemlb-chamlb-1,Cleveland Indians,114,9,2018-08-12,531174,Chicago White Sox,145,7
+2018/08/12/seamlb-houmlb-1,Seattle Mariners,136,4,2018-08-12,531182,Houston Astros,117,3
+2018/08/12/slnmlb-kcamlb-1,St. Louis Cardinals,138,8,2018-08-12,531183,Kansas City Royals,118,2
+2018/08/12/lanmlb-colmlb-1,Los Angeles Dodgers,119,3,2018-08-12,531175,Colorado Rockies,115,4
+2018/08/12/phimlb-sdnmlb-1,Philadelphia Phillies,143,3,2018-08-12,531180,San Diego Padres,135,9
+2018/08/12/pitmlb-sfnmlb-1,Pittsburgh Pirates,134,3,2018-08-12,531181,San Francisco Giants,137,4
+2018/08/12/oakmlb-anamlb-1,Oakland Athletics,133,8,2018-08-12,531179,Los Angeles Angels,108,7
+2018/08/12/wasmlb-chnmlb-1,Washington Nationals,120,3,2018-08-12,531186,Chicago Cubs,112,4
+2018/08/13/miamlb-atlmlb-1,Miami Marlins,146,1,2018-08-13,531033,Atlanta Braves,144,9
+2018/08/13/miamlb-atlmlb-2,Miami Marlins,146,1,2018-08-13,531190,Atlanta Braves,144,6
+2018/08/13/nynmlb-nyamlb-1,New York Mets,121,8,2018-08-13,530898,New York Yankees,147,5
+2018/08/13/chamlb-detmlb-1,Chicago White Sox,145,5,2018-08-13,531187,Detroit Tigers,116,9
+2018/08/13/clemlb-cinmlb-1,Cleveland Indians,114,10,2018-08-13,531188,Cincinnati Reds,113,3
+2018/08/13/arimlb-texmlb-1,Arizona Diamondbacks,109,3,2018-08-13,531195,Texas Rangers,140,5
+2018/08/13/wasmlb-slnmlb-1,Washington Nationals,120,6,2018-08-13,531194,St. Louis Cardinals,138,7
+2018/08/13/tormlb-kcamlb-1,Toronto Blue Jays,141,1,2018-08-13,531193,Kansas City Royals,118,3
+2018/08/13/seamlb-oakmlb-1,Seattle Mariners,136,6,2018-08-13,531192,Oakland Athletics,133,7
+2018/08/13/anamlb-sdnmlb-1,Los Angeles Angels,108,6,2018-08-13,531189,San Diego Padres,135,3
+2018/08/13/sfnmlb-lanmlb-1,San Francisco Giants,137,5,2018-08-13,531191,Los Angeles Dodgers,119,2
+2018/08/14/milmlb-chnmlb-1,Milwaukee Brewers,158,7,2018-08-14,531202,Chicago Cubs,112,0
+2018/08/14/bosmlb-phimlb-1,Boston Red Sox,111,2,2018-08-14,531196,Philadelphia Phillies,143,1
+2018/08/14/nynmlb-balmlb-1,New York Mets,121,3,2018-08-14,531203,Baltimore Orioles,110,6
+2018/08/14/tbamlb-nyamlb-1,Tampa Bay Rays,139,1,2018-08-14,531207,New York Yankees,147,4
+2018/08/14/chamlb-detmlb-1,Chicago White Sox,145,6,2018-08-14,531197,Detroit Tigers,116,3
+2018/08/14/clemlb-cinmlb-1,Cleveland Indians,114,8,2018-08-14,531198,Cincinnati Reds,113,1
+2018/08/14/miamlb-atlmlb-1,Miami Marlins,146,6,2018-08-14,531201,Atlanta Braves,144,10
+2018/08/14/arimlb-texmlb-1,Arizona Diamondbacks,109,6,2018-08-14,531210,Texas Rangers,140,4
+2018/08/14/colmlb-houmlb-1,Colorado Rockies,115,5,2018-08-14,531199,Houston Astros,117,1
+2018/08/14/pitmlb-minmlb-1,Pittsburgh Pirates,134,2,2018-08-14,531204,Minnesota Twins,142,5
+2018/08/14/tormlb-kcamlb-1,Toronto Blue Jays,141,6,2018-08-14,531208,Kansas City Royals,118,5
+2018/08/14/wasmlb-slnmlb-1,Washington Nationals,120,4,2018-08-14,531209,St. Louis Cardinals,138,6
+2018/08/14/seamlb-oakmlb-1,Seattle Mariners,136,2,2018-08-14,531206,Oakland Athletics,133,3
+2018/08/14/anamlb-sdnmlb-1,Los Angeles Angels,108,7,2018-08-14,531200,San Diego Padres,135,3
+2018/08/14/sfnmlb-lanmlb-1,San Francisco Giants,137,2,2018-08-14,531205,Los Angeles Dodgers,119,1
+2018/08/15/chamlb-detmlb-1,Chicago White Sox,145,6,2018-08-15,531212,Detroit Tigers,116,5
+2018/08/15/pitmlb-minmlb-1,Pittsburgh Pirates,134,4,2018-08-15,531219,Minnesota Twins,142,6
+2018/08/15/milmlb-chnmlb-1,Milwaukee Brewers,158,4,2018-08-15,531217,Chicago Cubs,112,8
+2018/08/15/seamlb-oakmlb-1,Seattle Mariners,136,2,2018-08-15,531221,Oakland Athletics,133,0
+2018/08/15/bosmlb-phimlb-1,Boston Red Sox,111,4,2018-08-15,531211,Philadelphia Phillies,143,7
+2018/08/15/nynmlb-balmlb-1,New York Mets,121,16,2018-08-15,531218,Baltimore Orioles,110,5
+2018/08/15/tbamlb-nyamlb-1,Tampa Bay Rays,139,6,2018-08-15,531222,New York Yankees,147,1
+2018/08/15/clemlb-cinmlb-1,Cleveland Indians,114,4,2018-08-15,531213,Cincinnati Reds,113,3
+2018/08/15/miamlb-atlmlb-1,Miami Marlins,146,2,2018-08-15,531216,Atlanta Braves,144,5
+2018/08/15/colmlb-houmlb-1,Colorado Rockies,115,1,2018-08-15,531214,Houston Astros,117,12
+2018/08/15/tormlb-kcamlb-1,Toronto Blue Jays,141,6,2018-08-15,531223,Kansas City Royals,118,5
+2018/08/15/wasmlb-slnmlb-1,Washington Nationals,120,2,2018-08-15,531224,St. Louis Cardinals,138,4
+2018/08/15/anamlb-sdnmlb-1,Los Angeles Angels,108,3,2018-08-15,531215,San Diego Padres,135,2
+2018/08/15/sfnmlb-lanmlb-1,San Francisco Giants,137,3,2018-08-15,531220,Los Angeles Dodgers,119,4
+2018/08/16/nynmlb-phimlb-1,New York Mets,121,24,2018-08-16,531230,Philadelphia Phillies,143,4
+2018/08/16/nynmlb-phimlb-2,New York Mets,121,6,2018-08-16,529994,Philadelphia Phillies,143,9
+2018/08/16/tbamlb-nyamlb-1,Tampa Bay Rays,139,3,2018-08-16,531231,New York Yankees,147,1
+2018/08/16/chnmlb-pitmlb-1,Chicago Cubs,112,1,2018-08-16,531226,Pittsburgh Pirates,134,0
+2018/08/16/wasmlb-slnmlb-1,Washington Nationals,120,5,2018-08-16,531233,St. Louis Cardinals,138,4
+2018/08/16/colmlb-atlmlb-1,Colorado Rockies,115,5,2018-08-16,531227,Atlanta Braves,144,3
+2018/08/16/anamlb-texmlb-1,Los Angeles Angels,108,6,2018-08-16,531229,Texas Rangers,140,8
+2018/08/16/detmlb-minmlb-1,Detroit Tigers,116,8,2018-08-16,531228,Minnesota Twins,142,15
+2018/08/16/tormlb-kcamlb-1,Toronto Blue Jays,141,2,2018-08-16,531232,Kansas City Royals,118,6
+2018/08/16/arimlb-sdnmlb-1,Arizona Diamondbacks,109,5,2018-08-16,531225,San Diego Padres,135,1
+2018/08/17/nynmlb-phimlb-1,New York Mets,121,2,2018-08-17,531245,Philadelphia Phillies,143,4
+2018/08/17/chnmlb-pitmlb-1,Chicago Cubs,112,1,2018-08-17,531236,Pittsburgh Pirates,134,0
+2018/08/17/miamlb-wasmlb-1,Miami Marlins,146,2,2018-08-17,531243,Washington Nationals,120,8
+2018/08/17/tormlb-nyamlb-1,Toronto Blue Jays,141,5,2018-08-17,531248,New York Yankees,147,7
+2018/08/17/balmlb-clemlb-1,Baltimore Orioles,110,1,2018-08-17,531235,Cleveland Indians,114,2
+2018/08/17/sfnmlb-cinmlb-1,San Francisco Giants,137,1,2018-08-17,531246,Cincinnati Reds,113,2
+2018/08/17/tbamlb-bosmlb-1,Tampa Bay Rays,139,3,2018-08-17,531247,Boston Red Sox,111,7
+2018/08/17/colmlb-atlmlb-1,Colorado Rockies,115,11,2018-08-17,531237,Atlanta Braves,144,5
+2018/08/17/anamlb-texmlb-1,Los Angeles Angels,108,4,2018-08-17,531241,Texas Rangers,140,6
+2018/08/17/detmlb-minmlb-1,Detroit Tigers,116,4,2018-08-17,531238,Minnesota Twins,142,5
+2018/08/17/kcamlb-chamlb-1,Kansas City Royals,118,3,2018-08-17,531240,Chicago White Sox,145,9
+2018/08/17/milmlb-slnmlb-1,Milwaukee Brewers,158,2,2018-08-17,531244,St. Louis Cardinals,138,5
+2018/08/17/houmlb-oakmlb-1,Houston Astros,117,3,2018-08-17,531239,Oakland Athletics,133,4
+2018/08/17/arimlb-sdnmlb-1,Arizona Diamondbacks,109,9,2018-08-17,531234,San Diego Padres,135,4
+2018/08/17/lanmlb-seamlb-1,Los Angeles Dodgers,119,11,2018-08-17,531242,Seattle Mariners,136,1
+2018/08/18/tormlb-nyamlb-1,Toronto Blue Jays,141,6,2018-08-18,531263,New York Yankees,147,11
+2018/08/18/balmlb-clemlb-1,Baltimore Orioles,110,4,2018-08-18,531250,Cleveland Indians,114,2
+2018/08/18/houmlb-oakmlb-1,Houston Astros,117,1,2018-08-18,531254,Oakland Athletics,133,7
+2018/08/18/nynmlb-phimlb-1,New York Mets,121,3,2018-08-18,531260,Philadelphia Phillies,143,1
+2018/08/18/chnmlb-pitmlb-1,Chicago Cubs,112,1,2018-08-18,531251,Pittsburgh Pirates,134,3
+2018/08/18/miamlb-wasmlb-1,Miami Marlins,146,7,2018-08-18,531258,Washington Nationals,120,5
+2018/08/18/colmlb-atlmlb-1,Colorado Rockies,115,5,2018-08-18,531252,Atlanta Braves,144,3
+2018/08/18/detmlb-minmlb-1,Detroit Tigers,116,7,2018-08-18,531253,Minnesota Twins,142,5
+2018/08/18/kcamlb-chamlb-1,Kansas City Royals,118,3,2018-08-18,531255,Chicago White Sox,145,1
+2018/08/18/sfnmlb-cinmlb-1,San Francisco Giants,137,1,2018-08-18,531261,Cincinnati Reds,113,7
+2018/08/18/tbamlb-bosmlb-1,Tampa Bay Rays,139,2,2018-08-18,531262,Boston Red Sox,111,5
+2018/08/18/milmlb-slnmlb-1,Milwaukee Brewers,158,2,2018-08-18,531259,St. Louis Cardinals,138,7
+2018/08/18/anamlb-texmlb-1,Los Angeles Angels,108,11,2018-08-18,531256,Texas Rangers,140,7
+2018/08/18/arimlb-sdnmlb-1,Arizona Diamondbacks,109,6,2018-08-18,531249,San Diego Padres,135,7
+2018/08/18/lanmlb-seamlb-1,Los Angeles Dodgers,119,4,2018-08-18,531257,Seattle Mariners,136,5

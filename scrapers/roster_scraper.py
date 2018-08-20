@@ -14,7 +14,7 @@ def replace_names(name):
     name = name.replace('Mike Wright Jr.','Mike Wright').replace('Danny Coulombe', 'Daniel Coulombe')
     name = name.replace('Jorge De La Rosa','Jorge de la Rosa').replace('Felix Peña', 'Felix Pena')
     name = name.replace('Lucas Sims', 'Luke Sims').replace('Mark Leiter Jr.','Mark Leiter')
-    name = name.replace('Matt Strahm', 'Matthew Strahm')
+    name = name.replace('Matt Strahm', 'Matthew Strahm').replace('Matt Festa', 'Matthew Festa')
     return name
 
 def get_usage_breakdown():

@@ -70,4 +70,4 @@ def value_total_strati(results):
 with open ('data/results/results_2018.json', 'r') as f:
     results = json.load(f)
 
-value_total_strati(results)
+value_side_strati(results)

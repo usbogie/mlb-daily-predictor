@@ -53,7 +53,7 @@ def update_batter_projections(batter_id, hitter_logs, steamer_batters):
         projections_accumulator['triple'] = ((projections_accumulator['triple'] * (2*p_const - pa)) + stat_line['t'] / (pf['triple'] / 100)) / (2*p_const)
         projections_accumulator['double'] = ((projections_accumulator['double'] * (2*p_const - pa)) + stat_line['d'] / (pf['double'] / 100)) / (2*p_const)
         projections_accumulator['single'] = ((projections_accumulator['single'] * (2*p_const - pa)) + (stat_line['h'] - stat_line['hr'] - stat_line['t'] - stat_line['d']) / (pf['single'] / 100)) / (2*p_const)
-
+    all_projections.append(projections_accumulator)
     vL_base = batter_dict(batter_id, steamer_batters[steamer_batters['split'] == 'vL'])
     vR_base = batter_dict(batter_id, steamer_batters[steamer_batters['split'] == 'vR'])
     acc = []
@@ -141,7 +141,7 @@ def update_pitcher_projections(pitcher_id, pitcher_logs, steamer_pitchers):
         projections_accumulator['triple'] = ((projections_accumulator['triple'] * (3*p_const - tbf)) + ((stat_line['h'] - stat_line['hr']) * t_ratio) / (pf['triple'] / 100)) / (3*p_const)
         projections_accumulator['double'] = ((projections_accumulator['double'] * (3*p_const - tbf)) + ((stat_line['h'] - stat_line['hr']) * d_ratio) / (pf['double'] / 100)) / (3*p_const)
         projections_accumulator['single'] = ((projections_accumulator['single'] * (3*p_const - tbf)) + ((stat_line['h'] - stat_line['hr']) * s_ratio) / (pf['single'] / 100)) / (3*p_const)
-
+    all_projections.append(projections_accumulator)
     vL_projections = steamer_pitchers[steamer_pitchers['split'] == 'vL']
     vR_projections = steamer_pitchers[steamer_pitchers['split'] == 'vR']
     vL_base = pitcher_dict(pitcher_id, vL_projections)
