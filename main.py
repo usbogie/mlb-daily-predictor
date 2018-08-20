@@ -3,7 +3,7 @@ from scrapers.scraper_utils import team_codes, get_days_in_season
 from storage.Game import Game
 from simulation.MonteCarlo import MonteCarlo
 from utils.converters import winpct_to_ml, over_total_pct, d_to_a, ml_to_winpct, third_kelly_calculator, amount_won
-from lineups.lineups import get_batting_stats, get_pitching_stats
+from lineups.lineups import get_batting_stats, get_pitching_stats, get_team_defense
 from lineups.matchups import generate_matchups, calc_averages
 from scrapers.update import update_all
 from update_projections import batter_dict, pitcher_dict
@@ -36,6 +36,7 @@ def main():
         all_relievers = json.load(f)
     batter_projections = pd.read_csv(os.path.join('data','projections','hitters_{}.csv'.format(year)))
     pitcher_projections = pd.read_csv(os.path.join('data','projections','pitchers_{}.csv'.format(year)))
+    steamer_batters_general = pd.read_csv(os.path.join('data','steamer', 'steamer_hitters_{}.csv'.format(year)))
     steamer_batters = pd.read_csv(os.path.join('data','steamer', 'steamer_hitters_{}_split.csv'.format(year)))
     steamer_batters['fullname'] = steamer_batters[['firstname', 'lastname']].apply(lambda x: ' '.join(x), axis=1)
     steamer_pitchers = pd.read_csv(os.path.join('data','steamer','steamer_pitchers_{}_split.csv'.format(year)))
@@ -67,9 +68,12 @@ def main():
         if not away_pitching or not home_pitching or not away_lineup_stats or not home_lineup_stats:
             print('SOMETHING WRONG MAYBE CHECK IT OUT')
             continue
+
+        away_defense = get_team_defense(away_lineup_stats, steamer_batters_general)
+        home_defense = get_team_defense(home_lineup_stats, steamer_batters_general)
         pf = park_factors[park_factors['Team']==game['home']].to_dict(orient='records')
 
-        all_matchups = generate_matchups(pf,steamer_batters, home_pitching, away_pitching, home_lineup_stats, away_lineup_stats, league_avgs)
+        all_matchups = generate_matchups(pf,steamer_batters, home_pitching, away_pitching, home_lineup_stats, away_lineup_stats, home_defense, away_defense, league_avgs)
         print('Away lineup is', away_lineup['lineup_status'],'|| Home lineup is', home_lineup['lineup_status'])
         mcGame = MonteCarlo(game_obj,away_lineup_stats,home_lineup_stats,away_pitching,home_pitching, all_matchups)
         mcGame.sim_games()
@@ -219,6 +223,7 @@ def test_year(year):
     manifest = pd.read_csv(os.path.join('data','master.csv'))
     batter_projections = pd.read_csv(os.path.join('data','projections','hitters_{}.csv'.format(year)))
     pitcher_projections = pd.read_csv(os.path.join('data','projections','pitchers_{}.csv'.format(year)))
+    steamer_batters_general = pd.read_csv(os.path.join('data','steamer', 'steamer_hitters_{}.csv'.format(year)))
     steamer_batters = pd.read_csv(os.path.join('data','steamer', 'steamer_hitters_{}_split.csv'.format(year)))
     steamer_batters['fullname'] = steamer_batters[['firstname', 'lastname']].apply(lambda x: ' '.join(x), axis=1)
     steamer_pitchers = pd.read_csv(os.path.join('data','steamer','steamer_pitchers_{}_split.csv'.format(year)))
@@ -266,9 +271,11 @@ def test_year(year):
                 print('SOMETHING WRONG MAYBE CHECK IT OUT')
                 continue
             pf = park_factors[park_factors['Team']==game['home']].to_dict(orient='records')
+            away_defense = get_team_defense(away_lineup_stats, steamer_batters_general)
+            home_defense = get_team_defense(home_lineup_stats, steamer_batters_general)
 
             print('Simulating game:',day,game['away'],'vs',game['home'])
-            all_matchups = generate_matchups(pf,steamer_batters, home_pitching, away_pitching, home_lineup_stats, away_lineup_stats, league_avgs)
+            all_matchups = generate_matchups(pf,steamer_batters, home_pitching, away_pitching, home_lineup_stats, away_lineup_stats, home_defense, away_defense, league_avgs)
             mcGame = MonteCarlo(game_obj,away_lineup_stats,home_lineup_stats,away_pitching,home_pitching,all_matchups)
             try:
                 mcGame.sim_games(test=True)
@@ -448,5 +455,5 @@ if __name__ == '__main__':
         print('testing')
         test_year(year)
     else:
-        update_all(gr)
+        # update_all(gr)
         main()

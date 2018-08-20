@@ -266,8 +266,8 @@ class MonteCarlo(object):
         if pitcher_num == 0:
             # determine if starter should be pulled
             pull_starter = False
-            if not pitcher['vL']['GS'] == 0.0:
-                avg_start_length = pitcher['vL']['start_IP'] / pitcher['vL']['GS']
+            if not pitcher['GS'] == 0.0:
+                avg_start_length = pitcher['start_IP'] / pitcher['GS']
             else:
                 avg_start_length = 4.5
             cur_inning = len(self.scoreboard.frames)//2 + 1
