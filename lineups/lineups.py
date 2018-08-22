@@ -199,10 +199,10 @@ def get_team_defense(lineup, fielders):
             continue
         i = i + 1
         fielder = fielders[fielders['mlbamid'] == id].to_dict('records')[0]
-        uzr = fielder['UZR']
+        uzr = fielder['UZR'] / fielder['G']
         acc = acc + uzr
     if i < 7:
         print('Something wrong, not enough fielders')
         sys.exit()
-    print('acc',(acc / 500) + 1)
-    return (acc / 500) + 1
+    print('acc', acc / 5 + 1)
+    return acc / 5 + 1

@@ -240,6 +240,8 @@ def test_year(year):
     risk_acc = 0
     t_acc = 0
     t_risk_acc = 0
+    my_acc = 0
+    vegas_acc = 0
     for day in days:
         slate = games[games['date'] == day]
         day_results = []
@@ -343,6 +345,8 @@ def test_year(year):
                 elif result['bet_on'] == result['home']:
                     result['net'] = result['k_risk'] * -1
                     result['line'] = d_to_a(game_odds['ml_home'])
+                my_acc = my_acc + 1 - mcGameResults['home_win_prob']
+                vegas_acc = vegas_acc + ml_to_winpct(game_odds['ml_away'])
             elif game['home_score'] > game['away_score']:
                 if result['bet_on'] == result['home']:
                     result['net'] = amount_won(result['k_risk'], game_odds['ml_home'])
@@ -350,6 +354,8 @@ def test_year(year):
                 elif result['bet_on'] == result['away']:
                     result['net'] = result['k_risk'] * -1
                     result['line'] = d_to_a(game_odds['ml_away'])
+                my_acc = my_acc + mcGameResults['home_win_prob']
+                vegas_acc = vegas_acc + ml_to_winpct(game_odds['ml_home'])
 
             over_value = value(over_pct, game_odds['over_odds'])
             under_value = value(1 - over_pct, game_odds['under_odds'])
@@ -412,6 +418,7 @@ def test_year(year):
         day_summary['t_acc'] = t_acc
         all_results.extend(day_results)
         all_net.append(day_summary)
+    print(my_acc, vegas_acc)
 
     total_risk = sum([g['k_risk'] for g in all_results])
     total_win = sum([g['net'] for g in all_results])
@@ -455,5 +462,5 @@ if __name__ == '__main__':
         print('testing')
         test_year(year)
     else:
-        # update_all(gr)
+        update_all(gr)
         main()

@@ -27,7 +27,7 @@ def bet_against_pitcher(results):
     plt.show()
 
 def value_side_strati(results):
-    values = [[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],[10,11],[11,12],[12,13],[13,20]]
+    values = [[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],[10,11],[11,12],[12,13],[13,20]]
     ticks = []
     amounts = []
     for value in values:
@@ -70,4 +70,4 @@ def value_total_strati(results):
 with open ('data/results/results_2018.json', 'r') as f:
     results = json.load(f)
 
-value_side_strati(results)
+value_total_strati(results)
