@@ -1877,3 +1877,18 @@ key,away,away_id,away_score,date,gamePk,home,home_id,home_score
 2018/08/20/texmlb-oakmlb-1,Texas Rangers,140,0,2018-08-20,531287,Oakland Athletics,133,9
 2018/08/20/houmlb-seamlb-1,Houston Astros,117,4,2018-08-20,531283,Seattle Mariners,136,7
 2018/08/20/slnmlb-lanmlb-1,St. Louis Cardinals,138,5,2018-08-20,531286,Los Angeles Dodgers,119,3
+2018/08/21/atlmlb-pitmlb-1,Atlanta Braves,144,6,2018-08-21,531288,Pittsburgh Pirates,134,1
+2018/08/21/phimlb-wasmlb-1,Philadelphia Phillies,143,4,2018-08-21,531298,Washington Nationals,120,10
+2018/08/21/balmlb-tormlb-1,Baltimore Orioles,110,2,2018-08-21,531289,Toronto Blue Jays,141,8
+2018/08/21/sfnmlb-nynmlb-1,San Francisco Giants,137,3,2018-08-21,531300,New York Mets,121,6
+2018/08/21/chnmlb-detmlb-1,Chicago Cubs,112,1,2018-08-21,531290,Detroit Tigers,116,2
+2018/08/21/clemlb-bosmlb-1,Cleveland Indians,114,6,2018-08-21,531292,Boston Red Sox,111,3
+2018/08/21/kcamlb-tbamlb-1,Kansas City Royals,118,1,2018-08-21,531294,Tampa Bay Rays,139,4
+2018/08/21/nyamlb-miamlb-1,New York Yankees,147,2,2018-08-21,531297,Miami Marlins,146,1
+2018/08/21/cinmlb-milmlb-1,Cincinnati Reds,113,9,2018-08-21,531291,Milwaukee Brewers,158,7
+2018/08/21/minmlb-chamlb-1,Minnesota Twins,142,5,2018-08-21,531296,Chicago White Sox,145,2
+2018/08/21/sdnmlb-colmlb-1,San Diego Padres,135,4,2018-08-21,531299,Colorado Rockies,115,3
+2018/08/21/anamlb-arimlb-1,Los Angeles Angels,108,4,2018-08-21,531295,Arizona Diamondbacks,109,5
+2018/08/21/texmlb-oakmlb-1,Texas Rangers,140,0,2018-08-21,531302,Oakland Athletics,133,6
+2018/08/21/slnmlb-lanmlb-1,St. Louis Cardinals,138,5,2018-08-21,531301,Los Angeles Dodgers,119,2
+2018/08/21/houmlb-seamlb-1,Houston Astros,117,3,2018-08-21,531293,Seattle Mariners,136,2

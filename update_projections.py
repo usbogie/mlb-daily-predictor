@@ -34,7 +34,7 @@ def update_batter_projections(batter_id, hitter_logs, steamer_batters):
     baseline = dict(projections_accumulator)
     all_projections = []
 
-    p_const = 650
+    p_const = 300
     for ix, stat_line in batter_logs.iterrows():
         try:
             home_team = games[games['key'] == stat_line['game_id']].iloc[0]['home']
@@ -122,7 +122,7 @@ def update_pitcher_projections(pitcher_id, pitcher_logs, steamer_pitchers):
     d_ratio = baseline['double'] / all_hits
     t_ratio = baseline['triple'] / all_hits
 
-    p_const = 800
+    p_const = 450
     for ix, stat_line in p_logs.iterrows():
         try:
             home_team = games[games['key'] == stat_line['game_id']].iloc[0]['home']
