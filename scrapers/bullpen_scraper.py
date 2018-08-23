@@ -6,7 +6,7 @@ import os
 import time
 import datetime
 
-def parse(game):
+def parse(game, day):
     match = {}
     game_url = 'https://statsapi.mlb.com/api/v1.1/game/{}/feed/live?language=en'.format(game['gamePk'])
     soup = json.loads(get_soup(game_url).find('body').contents[0], strict=False)
@@ -20,6 +20,8 @@ def parse(game):
         match['bp_home_' + str(ix)] = arm
     match['key'] = soup['gameData']['game']['id']
     match['date'] = soup['gameData']['datetime']['originalDate']
+    if match['date'] != day:
+        return None
 
     return match
 
@@ -33,7 +35,7 @@ def scrape_day_bullpens(day):
     except:
         print("continue", day, "all star break or no games")
         return []
-    data = [parse(g) for g in games]
+    data = [x for x in [parse(g, day) for g in games] if x != None]
     return data
 
 def scrape_bullpens(year=2017):

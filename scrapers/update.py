@@ -91,7 +91,7 @@ def get_relievers():
 
 def update_all(gr):
     if (gr):
-        get_relievers()
+        # get_relievers()
         update_bullpens()
     update_games()
     update_lineups()
