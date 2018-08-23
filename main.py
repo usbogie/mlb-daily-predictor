@@ -255,7 +255,7 @@ def test_year(year):
                 print('mismatch of game/lineup keys for', game['key'], 'continuing')
                 continue
 
-            game_obj = Game(game['date'],'12:05p',game['away'],game['home'])
+            game_obj = Game(game['date'],'12:05p',game['away'],game['home'], away_lineup['temp'])
 
             if away_lineup['10_name'] in starters_to_ignore[year] or home_lineup['10_name'] in starters_to_ignore[year]:
                 print('Starter {} has no projections. Continue'.format(away_lineup['10_name']))
@@ -279,7 +279,7 @@ def test_year(year):
             away_defense = get_team_defense(away_lineup_stats, steamer_batters_general)
             home_defense = get_team_defense(home_lineup_stats, steamer_batters_general)
 
-            print('Simulating game:',day,game['away'],'vs',game['home'])
+            print('Simulating game:',day,game['away'],'vs',game['home'], game_obj.temp, '°')
             all_matchups = generate_matchups(pf,steamer_batters, home_pitching, away_pitching, home_lineup_stats, away_lineup_stats, home_defense, away_defense, league_avgs, game_obj.temp)
             mcGame = MonteCarlo(game_obj,away_lineup_stats,home_lineup_stats,away_pitching,home_pitching,all_matchups)
             try:

@@ -53,8 +53,8 @@ def get_outcome_distribution(park_factors, league_avgs, batter, pitcher, defense
 
     split_avgs = league_avgs['b{}_v_p{}'.format(batter_hand,pitcher_hand)]
 
-    temp_hit_adj = 0.7350849 + (1.053625 - 0.7350849)/(1 + (temp/116.337)**3.8334)
-    temp_hr_adj = 0.7278051 + (1.367619 - 0.7278051)/(1 + (temp/68.24085)**3.382424)
+    temp_hit_adj = 0.8416988 + (1.025144 - 0.8416988)/(1 + (temp/92.86499) ** 4.391434)
+    temp_hr_adj = 0.3639859 + (1.571536 - 0.3639859)/(1 + (temp/67.64016) ** 1.381388)
 
     outcomes_w_factor_w_defense = ["single","double","triple"]
     outcomes_w_factor = ["hr"]
