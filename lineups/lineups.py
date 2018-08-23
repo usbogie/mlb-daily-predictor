@@ -206,5 +206,4 @@ def get_team_defense(lineup, fielders):
     if i < 7:
         print('Something wrong, not enough fielders')
         sys.exit()
-    print('acc', acc / 3 + 1)
     return acc / 3 + 1

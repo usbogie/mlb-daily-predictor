@@ -26,7 +26,7 @@ starters_to_ignore = {2017: ['Cesar Valdez', 'Jeremy Guthrie', 'Christian Bergma
     'Chris Rowley','Chad Bettis','Andrew Albers','Aaron Slegers','T.J. McFarland','Tim Melville',
     'Tyler Mahle','Dillon Peters','Jack Flaherty','Onelki Garcia','Chad Bell','Artie Lewicki',
     'Luiz Gohara','Gabriel Ynoa','Myles Jaye','Jen-Ho Tseng','Aaron Wilkerson','Deck McGuire',
-    'Chris Volstad','Jacob Turner','Ryan Weber','Lisalverto Bonilla','Jacob Turner'],
+    'Chris Volstad','Jacob Turner','Ryan Weber','Lisalverto Bonilla'],
                       2018: ['Jonny Venters']}
 
 def main():
@@ -42,15 +42,15 @@ def main():
     steamer_pitchers = pd.read_csv(os.path.join('data','steamer','steamer_pitchers_{}_split.csv'.format(year)))
     steamer_pitchers['fullname'] = steamer_pitchers[['firstname', 'lastname']].apply(lambda x: ' '.join(x), axis=1)
     steamer_starters = pd.read_csv(os.path.join('data','steamer','steamer_pitchers_{}.csv'.format(year)))
-    today = datetime.now().strftime('%Y-%m-%d')
     games = pd.read_csv(os.path.join('data','lines','today.csv'))
     lineups = pd.read_csv(os.path.join('data','lineups','today.csv'))
     park_factors = pd.read_csv(os.path.join('data','park_factors_handedness.csv'))
+
+    today = datetime.now().strftime('%Y-%m-%d')
     game_outputs = []
     league_avgs = calc_averages(steamer_batters)
     for index, game in games.iterrows():
         print('\n')
-        game_obj = Game(game['date'],game['time'],game['away'],game['home'])
         print('Simulating game:',today,game['time'],game['away'],game['home'])
         try:
             away_lineup = lineups[(lineups['key'] == game['key']) & (game['away'] == lineups['name'])].to_dict('records')[0]
@@ -58,6 +58,8 @@ def main():
         except:
             print("bad lineups, continue")
             continue
+
+        game_obj = Game(game['date'],game['time'],game['away'],game['home'], away_lineup['temp'])
 
         away_output = dict(team=game['away'], lineup=away_lineup['lineup_status'])
         home_output = dict(team=game['home'], lineup=home_lineup['lineup_status'])
@@ -73,7 +75,7 @@ def main():
         home_defense = get_team_defense(home_lineup_stats, steamer_batters_general)
         pf = park_factors[park_factors['Team']==game['home']].to_dict(orient='records')
 
-        all_matchups = generate_matchups(pf,steamer_batters, home_pitching, away_pitching, home_lineup_stats, away_lineup_stats, home_defense, away_defense, league_avgs)
+        all_matchups = generate_matchups(pf,steamer_batters, home_pitching, away_pitching, home_lineup_stats, away_lineup_stats, home_defense, away_defense, league_avgs, game_obj.temp)
         print('Away lineup is', away_lineup['lineup_status'],'|| Home lineup is', home_lineup['lineup_status'])
         mcGame = MonteCarlo(game_obj,away_lineup_stats,home_lineup_stats,away_pitching,home_pitching, all_matchups)
         mcGame.sim_games()
@@ -246,13 +248,14 @@ def test_year(year):
         slate = games[games['date'] == day]
         day_results = []
         for index, game in slate.iterrows():
-            game_obj = Game(game['date'],'12:05p',game['away'],game['home'])
             try:
                 away_lineup = lineups[(lineups['key'] == game['key']) & (game['away'] == lineups['name'])].to_dict('records')[0]
                 home_lineup = lineups[(lineups['key'] == game['key']) & (game['home'] == lineups['name'])].to_dict('records')[0]
             except:
                 print('mismatch of game/lineup keys for', game['key'], 'continuing')
                 continue
+
+            game_obj = Game(game['date'],'12:05p',game['away'],game['home'])
 
             if away_lineup['10_name'] in starters_to_ignore[year] or home_lineup['10_name'] in starters_to_ignore[year]:
                 print('Starter {} has no projections. Continue'.format(away_lineup['10_name']))
@@ -277,7 +280,7 @@ def test_year(year):
             home_defense = get_team_defense(home_lineup_stats, steamer_batters_general)
 
             print('Simulating game:',day,game['away'],'vs',game['home'])
-            all_matchups = generate_matchups(pf,steamer_batters, home_pitching, away_pitching, home_lineup_stats, away_lineup_stats, home_defense, away_defense, league_avgs)
+            all_matchups = generate_matchups(pf,steamer_batters, home_pitching, away_pitching, home_lineup_stats, away_lineup_stats, home_defense, away_defense, league_avgs, game_obj.temp)
             mcGame = MonteCarlo(game_obj,away_lineup_stats,home_lineup_stats,away_pitching,home_pitching,all_matchups)
             try:
                 mcGame.sim_games(test=True)
