@@ -17,7 +17,7 @@ def get_day_of_games(day):
 	todays_games = []
 	for game in games:
 		game_obj = {}
-		if game['status']['detailedState'] == 'Postponed' or game['status']['detailedState'] == 'Suspended':
+		if game['status']['detailedState'] != 'Final':
 			continue
 		if 'All-Stars' in game['teams']['away']['team']['name']:
 			print("all star game, continue")

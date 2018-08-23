@@ -33,6 +33,8 @@ def determine_reliever_2018(name, team):
         return 642003
     elif name == 'Luis Santos' and team == 'Toronto Blue Jays':
         return 608601
+    elif name == 'Carlos Martinez' and team == 'St. Louis Cardinals':
+        return 593372
     return False
 
 def player_not_in_fantasy_labs(name, id, manifest):
@@ -204,5 +206,5 @@ def get_team_defense(lineup, fielders):
     if i < 7:
         print('Something wrong, not enough fielders')
         sys.exit()
-    print('acc', acc / 5 + 1)
-    return acc / 5 + 1
+    print('acc', acc / 3 + 1)
+    return acc / 3 + 1

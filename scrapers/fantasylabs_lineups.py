@@ -40,15 +40,6 @@ def scrape_day_lineups(day):
         if ev['EventSummary'] == 'Postponed' or ev['EventSummary'] == 'PPD':
             continue
 
-        # batadj = 0.7350849 + (1.053625 - 0.7350849)/(1 + (temp/116.337)^3.8334)
-        # hradj = 0.7278051 + (1.367619 - 0.7278051)/(1 + (temp/68.24085)^3.382424)
-        # print(ev['WeatherSummary'])
-        # if ev['WeatherSummary'] == 'Roof Closed':
-        #     temp = 72
-        # else:
-        #     temp = ev['WeatherSummary'].split('Temp: ')[1].split('°')[0]
-        # print(temp)
-
         lineup_away = dict(date = day,
                            name = ev['VisitorTeam'].replace('St', 'St.'),
                            lineup_status = ev['VisitorLineupStatus'].split()[0])
@@ -56,6 +47,17 @@ def scrape_day_lineups(day):
         lineup_home = dict(date = day,
                            name = ev['HomeTeam'].replace('St', 'St.'),
                            lineup_status = ev['HomeLineupStatus'].split()[0])
+
+        # batadj = 0.7350849 + (1.053625 - 0.7350849)/(1 + (temp/116.337)^3.8334)
+        # hradj = 0.7278051 + (1.367619 - 0.7278051)/(1 + (temp/68.24085)^3.382424)
+        print(ev['WeatherSummary'])
+        if ev['WeatherSummary'] == 'Roof Closed':
+            temp = 72
+        else:
+            temp = ev['WeatherSummary'].split('Temp: ')[1].split('°')[0]
+        print(temp)
+        lineup_away['temp'] = temp
+        lineup_home['temp'] = temp
 
         def locate(lineup, player):
             return (str(ev['EventId']) in player['Key'] and
