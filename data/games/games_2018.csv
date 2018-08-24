@@ -1892,3 +1892,27 @@ key,away,away_id,away_score,date,gamePk,home,home_id,home_score
 2018/08/21/texmlb-oakmlb-1,Texas Rangers,140,0,2018-08-21,531302,Oakland Athletics,133,6
 2018/08/21/slnmlb-lanmlb-1,St. Louis Cardinals,138,5,2018-08-21,531301,Los Angeles Dodgers,119,2
 2018/08/21/houmlb-seamlb-1,Houston Astros,117,3,2018-08-21,531293,Seattle Mariners,136,2
+2018/08/22/balmlb-tormlb-1,Baltimore Orioles,110,0,2018-08-22,531304,Toronto Blue Jays,141,6
+2018/08/22/cinmlb-milmlb-1,Cincinnati Reds,113,0,2018-08-22,531306,Milwaukee Brewers,158,4
+2018/08/22/minmlb-chamlb-1,Minnesota Twins,142,3,2018-08-22,531311,Chicago White Sox,145,7
+2018/08/22/texmlb-oakmlb-1,Texas Rangers,140,4,2018-08-22,531317,Oakland Athletics,133,2
+2018/08/22/houmlb-seamlb-1,Houston Astros,117,10,2018-08-22,531308,Seattle Mariners,136,7
+2018/08/22/atlmlb-pitmlb-1,Atlanta Braves,144,2,2018-08-22,531303,Pittsburgh Pirates,134,1
+2018/08/22/phimlb-wasmlb-1,Philadelphia Phillies,143,7,2018-08-22,531313,Washington Nationals,120,8
+2018/08/22/chnmlb-detmlb-1,Chicago Cubs,112,8,2018-08-22,531305,Detroit Tigers,116,2
+2018/08/22/clemlb-bosmlb-1,Cleveland Indians,114,4,2018-08-22,531307,Boston Red Sox,111,10
+2018/08/22/kcamlb-tbamlb-1,Kansas City Royals,118,3,2018-08-22,531309,Tampa Bay Rays,139,6
+2018/08/22/nyamlb-miamlb-1,New York Yankees,147,3,2018-08-22,531312,Miami Marlins,146,9
+2018/08/22/sfnmlb-nynmlb-1,San Francisco Giants,137,3,2018-08-22,531315,New York Mets,121,5
+2018/08/22/sdnmlb-colmlb-1,San Diego Padres,135,2,2018-08-22,531314,Colorado Rockies,115,6
+2018/08/22/anamlb-arimlb-1,Los Angeles Angels,108,1,2018-08-22,531310,Arizona Diamondbacks,109,5
+2018/08/22/slnmlb-lanmlb-1,St. Louis Cardinals,138,3,2018-08-22,531316,Los Angeles Dodgers,119,1
+2018/08/23/clemlb-bosmlb-1,Cleveland Indians,114,0,2018-08-23,531321,Boston Red Sox,111,7
+2018/08/23/phimlb-wasmlb-1,Philadelphia Phillies,143,2,2018-08-23,531324,Washington Nationals,120,0
+2018/08/23/chamlb-detmlb-1,Chicago White Sox,145,2,2018-08-23,531319,Detroit Tigers,116,7
+2018/08/23/sfnmlb-nynmlb-1,San Francisco Giants,137,3,2018-08-23,531326,New York Mets,121,1
+2018/08/23/sdnmlb-colmlb-1,San Diego Padres,135,3,2018-08-23,531325,Colorado Rockies,115,4
+2018/08/23/atlmlb-miamlb-1,Atlanta Braves,144,5,2018-08-23,531318,Miami Marlins,146,0
+2018/08/23/kcamlb-tbamlb-1,Kansas City Royals,118,3,2018-08-23,531322,Tampa Bay Rays,139,4
+2018/08/23/cinmlb-chnmlb-1,Cincinnati Reds,113,1,2018-08-23,531320,Chicago Cubs,112,7
+2018/08/23/oakmlb-minmlb-1,Oakland Athletics,133,4,2018-08-23,531323,Minnesota Twins,142,6

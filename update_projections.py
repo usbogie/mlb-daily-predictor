@@ -4,8 +4,12 @@ import random
 import json
 import sys
 import os
+import copy
 
 year = 2018
+
+with open(os.path.join('data','temps.json')) as f:
+    temps = json.load(f)
 
 def batter_dict(batter_id, projections):
     batter_projections = projections[(projections['mlbamid'] == batter_id) & (projections['pn'] == 1)].to_dict('records')
@@ -31,7 +35,7 @@ def update_batter_projections(batter_id, hitter_logs, steamer_batters):
     print(batter_logs['player'].tolist()[0])
     batter_projections = steamer_batters[steamer_batters['split'] == 'overall']
     projections_accumulator = batter_dict(batter_id, batter_projections)
-    baseline = dict(projections_accumulator)
+    baseline = copy.deepcopy(projections_accumulator)
     all_projections = []
 
     p_const = 300
@@ -41,18 +45,27 @@ def update_batter_projections(batter_id, hitter_logs, steamer_batters):
         except:
             print('Game',stat_line['game_id'],'doesn\'t exist. Continuing')
             continue
-        acc = dict(projections_accumulator)
+
+
+        acc = copy.deepcopy(projections_accumulator)
         acc['date'] = stat_line['game_date']
+        try:
+            temp_hit_adj = 0.8416988 + (1.025144 - 0.8416988)/(1 + (temps[acc['date']][home_team]/92.86499) ** 4.391434)
+            temp_hr_adj = 0.3639859 + (1.571536 - 0.3639859)/(1 + (temps[acc['date']][home_team]/67.64016) ** 1.381388)
+        except:
+            print(games[games['key'] == stat_line['game_id']].iloc[0])
+            temp_hit_adj = 1
+            temp_hr_adj = 1
         all_projections.append(acc)
         pf = park_factors[park_factors['Team'] == home_team].to_dict('records')[0]
         pa = stat_line['tpa']
         projections_accumulator['k'] = ((projections_accumulator['k'] * (p_const - pa)) + stat_line['so']) / p_const
         projections_accumulator['bb'] = ((projections_accumulator['bb'] * (p_const - pa)) + stat_line['bb']) / p_const
         projections_accumulator['hbp'] = ((projections_accumulator['hbp'] * (p_const - pa)) + stat_line['hbp']) / p_const
-        projections_accumulator['hr'] = ((projections_accumulator['hr'] * (1.5*p_const - pa)) + stat_line['hr'] / (pf['hr'] / 100)) / (1.5*p_const)
-        projections_accumulator['triple'] = ((projections_accumulator['triple'] * (2*p_const - pa)) + stat_line['t'] / (pf['triple'] / 100)) / (2*p_const)
-        projections_accumulator['double'] = ((projections_accumulator['double'] * (2*p_const - pa)) + stat_line['d'] / (pf['double'] / 100)) / (2*p_const)
-        projections_accumulator['single'] = ((projections_accumulator['single'] * (2*p_const - pa)) + (stat_line['h'] - stat_line['hr'] - stat_line['t'] - stat_line['d']) / (pf['single'] / 100)) / (2*p_const)
+        projections_accumulator['hr'] = ((projections_accumulator['hr'] * (1.5*p_const - pa)) + stat_line['hr'] / (pf['hr'] / 100) * temp_hr_adj) / (1.5*p_const)
+        projections_accumulator['triple'] = ((projections_accumulator['triple'] * (2*p_const - pa)) + stat_line['t'] / (pf['triple'] / 100) * temp_hit_adj) / (2*p_const)
+        projections_accumulator['double'] = ((projections_accumulator['double'] * (2*p_const - pa)) + stat_line['d'] / (pf['double'] / 100) * temp_hit_adj) / (2*p_const)
+        projections_accumulator['single'] = ((projections_accumulator['single'] * (2*p_const - pa)) + (stat_line['h'] - stat_line['hr'] - stat_line['t'] - stat_line['d']) / (pf['single'] / 100)  * temp_hit_adj) / (2*p_const)
     all_projections.append(projections_accumulator)
     vL_base = batter_dict(batter_id, steamer_batters[steamer_batters['split'] == 'vL'])
     vR_base = batter_dict(batter_id, steamer_batters[steamer_batters['split'] == 'vR'])
@@ -114,7 +127,7 @@ def update_pitcher_projections(pitcher_id, pitcher_logs, steamer_pitchers):
     p_logs = pitcher_logs[pitcher_logs['player_id'] == pitcher_id]
     print(p_logs['player_id'].tolist()[0])
     projections_accumulator = pitcher_dict(pitcher_id, steamer_pitchers)
-    baseline = dict(projections_accumulator)
+    baseline = copy.deepcopy(projections_accumulator)
     all_projections = []
     #hackery as pitcher logs do not individually log non-hr hits
     all_hits = baseline['single'] + baseline['double'] + baseline['triple'] + baseline['hr']
@@ -129,18 +142,25 @@ def update_pitcher_projections(pitcher_id, pitcher_logs, steamer_pitchers):
         except:
             print('Game',stat_line['game_id'],'doesn\'t exist. Continuing')
             continue
-        acc = dict(projections_accumulator)
+        acc = copy.deepcopy(projections_accumulator)
         acc['date'] = stat_line['game_date']
         all_projections.append(acc)
+        try:
+            temp_hit_adj = 0.8416988 + (1.025144 - 0.8416988)/(1 + (temps[acc['date']][home_team]/92.86499) ** 4.391434)
+            temp_hr_adj = 0.3639859 + (1.571536 - 0.3639859)/(1 + (temps[acc['date']][home_team]/67.64016) ** 1.381388)
+        except:
+            print(games[games['key'] == stat_line['game_id']].iloc[0])
+            temp_hit_adj = 1
+            temp_hr_adj = 1
         pf = park_factors[park_factors['Team'] == home_team].to_dict('records')[0]
         tbf = stat_line['tbf']
         projections_accumulator['k'] = ((projections_accumulator['k'] * (p_const - tbf)) + stat_line['so']) / p_const
         projections_accumulator['bb'] = ((projections_accumulator['bb'] * (p_const - tbf)) + stat_line['bb']) / p_const
         projections_accumulator['hbp'] = ((projections_accumulator['hbp'] * (p_const - tbf)) + stat_line['hb']) / p_const
-        projections_accumulator['hr'] = ((projections_accumulator['hr'] * (2*p_const - tbf)) + stat_line['hr'] / (pf['hr'] / 100)) / (2*p_const)
-        projections_accumulator['triple'] = ((projections_accumulator['triple'] * (3*p_const - tbf)) + ((stat_line['h'] - stat_line['hr']) * t_ratio) / (pf['triple'] / 100)) / (3*p_const)
-        projections_accumulator['double'] = ((projections_accumulator['double'] * (3*p_const - tbf)) + ((stat_line['h'] - stat_line['hr']) * d_ratio) / (pf['double'] / 100)) / (3*p_const)
-        projections_accumulator['single'] = ((projections_accumulator['single'] * (3*p_const - tbf)) + ((stat_line['h'] - stat_line['hr']) * s_ratio) / (pf['single'] / 100)) / (3*p_const)
+        projections_accumulator['hr'] = ((projections_accumulator['hr'] * (2*p_const - tbf)) + stat_line['hr'] / (pf['hr'] / 100) * temp_hr_adj) / (2*p_const)
+        projections_accumulator['triple'] = ((projections_accumulator['triple'] * (3*p_const - tbf)) + ((stat_line['h'] - stat_line['hr']) * t_ratio) / (pf['triple'] / 100) * temp_hit_adj) / (3*p_const)
+        projections_accumulator['double'] = ((projections_accumulator['double'] * (3*p_const - tbf)) + ((stat_line['h'] - stat_line['hr']) * d_ratio) / (pf['double'] / 100) * temp_hit_adj) / (3*p_const)
+        projections_accumulator['single'] = ((projections_accumulator['single'] * (3*p_const - tbf)) + ((stat_line['h'] - stat_line['hr']) * s_ratio) / (pf['single'] / 100) * temp_hit_adj) / (3*p_const)
     all_projections.append(projections_accumulator)
     vL_projections = steamer_pitchers[steamer_pitchers['split'] == 'vL']
     vR_projections = steamer_pitchers[steamer_pitchers['split'] == 'vR']
