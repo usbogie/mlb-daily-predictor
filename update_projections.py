@@ -1,4 +1,4 @@
-from scrapers.scraper_utils import get_days_in_season
+from scrapers.scraper_utils import get_days_in_season, team_codes
 import pandas as pd
 import random
 import json
@@ -7,9 +7,6 @@ import os
 import copy
 
 year = 2018
-
-with open(os.path.join('data','temps.json')) as f:
-    temps = json.load(f)
 
 def batter_dict(batter_id, projections):
     batter_projections = projections[(projections['mlbamid'] == batter_id) & (projections['pn'] == 1)].to_dict('records')
@@ -29,6 +26,8 @@ def batter_dict(batter_id, projections):
     return projections_accumulator
 
 def update_batter_projections(batter_id, hitter_logs, steamer_batters):
+    with open(os.path.join('data','temps.json')) as f:
+        temps = json.load(f)
     park_factors = pd.read_csv(os.path.join('data','park_factors_general.csv'))
     games = pd.read_csv(os.path.join('data','games','games_{}.csv'.format(year)))
     batter_logs = hitter_logs[hitter_logs['player_id'] == batter_id]
@@ -122,6 +121,8 @@ def pitcher_dict(pitcher_id, projections):
 
 
 def update_pitcher_projections(pitcher_id, pitcher_logs, steamer_pitchers):
+    with open(os.path.join('data','temps.json')) as f:
+        temps = json.load(f)
     park_factors = pd.read_csv(os.path.join('data','park_factors_general.csv'))
     games = pd.read_csv(os.path.join('data','games','games_{}.csv'.format(year)))
     p_logs = pitcher_logs[pitcher_logs['player_id'] == pitcher_id]
@@ -181,7 +182,23 @@ def update_pitcher_projections(pitcher_id, pitcher_logs, steamer_pitchers):
         acc.append(combined)
     return pd.DataFrame(acc)
 
+def update_temperatures():
+    lineups = pd.read_csv(os.path.join('data','lineups','lineups_{}.csv'.format(year)))
+    temperature_dict = {}
+    for ix, row in lineups.iterrows():
+        if team_codes[row['name']] != row['key'].split('-')[1].split('mlb')[0]:
+            continue
+        home_team = row['name']
+        date = row['date']
+        temp = row['temp']
+        if date not in temperature_dict:
+            temperature_dict[date] = {}
+        temperature_dict[date][home_team] = temp
+    with open(os.path.join('data','temps.json'), 'w') as outfile:
+        json.dump(temperature_dict, outfile)
+
 if __name__ == '__main__':
+    update_temperatures()
     pitcher_logs = pd.read_csv(os.path.join('data','player_logs','pitchers_{}.csv'.format(year)))
     steamer_pitchers = pd.read_csv(os.path.join('data','steamer', 'steamer_pitchers_{}_split.csv'.format(year)))
     player_ids = list(set(pitcher_logs['player_id'].tolist()))
