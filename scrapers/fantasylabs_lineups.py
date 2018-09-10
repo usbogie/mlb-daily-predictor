@@ -20,6 +20,7 @@ def fix_name(name):
     name = name.replace('Nicholas Martini', 'Nick Martini').replace('yefry ramirez', 'Yefry Ramirez')
     name = name.replace('Duane Underwood', 'Duane Underwood Jr.').replace('Nathan Orf','Nate Orf')
     name = name.replace('Michael Gerber', 'Mike Gerber').replace('Adolis Garcia', 'Adonis Garcia')
+    name = name.replace('Nicholas Ciuffo', 'Nick Ciuffo').replace('Christopher Shaw', 'Chris Shaw')
     return name
 
 def scrape_day_lineups(day):
@@ -51,7 +52,10 @@ def scrape_day_lineups(day):
         if ev['WeatherSummary'] == 'Roof Closed':
             temp = 72
         else:
-            temp = int(ev['WeatherSummary'].split('Temp: ')[1].split('°')[0])
+            try:
+                temp = int(ev['WeatherSummary'].split('Temp: ')[1].split('°')[0])
+            except:
+                temp = 72
         lineup_away['temp'] = temp
         lineup_home['temp'] = temp
 

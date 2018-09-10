@@ -36,7 +36,7 @@ def value_side_strati(results):
                 len([x for x in results if x['side_value'] >= value[0] and x['side_value'] < value[1] and x['net'] > 0]),'-',
                 len([x for x in results if x['side_value'] >= value[0] and x['side_value'] < value[1] and x['net'] < 0]))
         total_risk = sum([x['k_risk'] for x in results if x['side_value'] >= value[0]])
-        total_net = sum([x['net'] for x in results if x['side_value'] >= value[0]])
+        total_net = sum([x['net'] for x in results if x['side_value'] >= value[0] and x['home_ml'] > -250 and x['away_ml'] > -250])
         amount = 0 if total_risk == 0 else total_net/total_risk*100
         amounts.append(amount)
     index = np.arange(len(ticks))

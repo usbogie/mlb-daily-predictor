@@ -35,6 +35,10 @@ def determine_reliever_2018(name, team):
         return 608601
     elif name == 'Carlos Martinez' and team == 'St. Louis Cardinals':
         return 593372
+    elif name == 'Aaron Brooks' and team == 'Oakland Athletics':
+        return 605156
+    elif name == 'Jose Fernandez' and team == 'Toronto Blue Jays':
+        return 622774
     return False
 
 def player_not_in_fantasy_labs(name, id, manifest):
@@ -153,6 +157,8 @@ def get_pitching_stats(manifest, pitcher_projections, all_relievers, steamer_pit
                 print('No pitcher matched', name)
                 continue
             reliever = get_stats(date, reliever_id, pitcher_projections, steamer_pitchers, pitcher_dict, 'throws')
+            if not reliever:
+                continue
             reliever['usage'] = info[1]
             if 'CL' not in info:
                 pitchers.append(reliever)

@@ -221,7 +221,7 @@ mlb_id,fantasy_labs,mlb_name
 572128,0,Richie Shaffer
 572073,22557,Joey Rickard
 572182,8116,Darnell Sweeney
-598284,0,Peter O'Brien
+598284,19628,Peter O'Brien
 571851,22701,Spencer Kieboom
 571970,8242,Max Muncy
 545121,0,Ildemaro Vargas
@@ -632,7 +632,7 @@ mlb_id,fantasy_labs,mlb_name
 444843,2812,Andre Ethier
 543706,6285,Daniel Robertson
 435041,0,Carlos Quentin
-488681,0,Brandon Barnes
+488681,1268,Brandon Barnes
 444876,2800,Alcides Escobar
 435560,0,Omar Quintanilla
 502143,7429,Danny Valencia
@@ -1675,7 +1675,7 @@ mlb_id,fantasy_labs,mlb_name
 606967,0,Jeff Diehl
 605148,0,Zach Borenstein
 607168,0,Nick Flair
-596012,0,Kevin Kramer
+596012,40912,Kevin Kramer
 607410,0,Shawn Pleffner
 607211,0,Austin Diemer
 607221,0,Taylor Sparks
@@ -1816,7 +1816,7 @@ mlb_id,fantasy_labs,mlb_name
 622445,0,Andres Martinez
 622463,0,Daniel Fajardo
 622713,31676,Engelb Vielma
-622569,0,Pablo Reyes
+622569,75643,Pablo Reyes
 622356,0,Bryant Flete
 622794,0,Carlos Garay
 622691,0,Henrry Rosario
@@ -1857,7 +1857,7 @@ mlb_id,fantasy_labs,mlb_name
 621550,75804,Patrick Wisdom
 608356,0,Mitch Nay
 621515,0,Steve Bean
-623214,0,Abiatal Avelino
+623214,39996,Abiatal Avelino
 621445,0,Courtney Hawkins
 622761,0,Jorge Mateo
 622058,0,D.J. Davis
@@ -1956,7 +1956,7 @@ mlb_id,fantasy_labs,mlb_name
 623319,0,Wes Rogers
 621011,0,Max Schrock
 621466,0,D.J. Stewart
-622046,0,Chris Shaw
+622046,81768,Chris Shaw
 621450,0,Skye Bolt
 621310,0,Rashad Brown
 621556,0,Evan Van Hoosier
@@ -1996,7 +1996,7 @@ mlb_id,fantasy_labs,mlb_name
 623925,0,Tim Remes
 623927,0,Jiandido Tromp
 610141,0,Wuilmer Becerra
-608475,0,Dawel Lugo
+608475,31670,Dawel Lugo
 609274,0,Elier Hernandez
 623517,0,Nick Lovullo
 622057,0,Cam Gibson
@@ -2185,8 +2185,8 @@ mlb_id,fantasy_labs,mlb_name
 640457,8162,Austin Meadows
 642404,0,Daniel Suero
 642482,0,Carlos Jean
-624512,0,Reese McGuire
-624419,0,Nick Ciuffo
+624512,39900,Reese McGuire
+624419,82192,Nick Ciuffo
 641856,39763,Billy McKinney
 641513,0,Travis Demeritte
 640450,0,Josh Hart
@@ -2252,7 +2252,7 @@ mlb_id,fantasy_labs,mlb_name
 641823,0,Dylan Manwaring
 643529,0,Justin Seager
 608382,0,Erich Weiss
-641477,0,Ryan Cordell
+641477,31604,Ryan Cordell
 641561,0,Johneshwy Fargas
 643259,0,Kendall Coleman
 643419,0,Sicnarf Loopstok
@@ -2300,7 +2300,7 @@ mlb_id,fantasy_labs,mlb_name
 642227,0,Stephen Wrenn
 643351,0,Reed Harper
 641802,0,Nick Longhi
-642133,0,Rowdy Tellez
+642133,39819,Rowdy Tellez
 641364,0,Venn Biter
 641323,0,Luis Aviles
 643527,0,Ryan Scott
@@ -2375,7 +2375,7 @@ mlb_id,fantasy_labs,mlb_name
 642134,0,Robbie Tenerowicz
 643398,0,Ryan Kirby
 642271,0,Fernery Ozuna
-641505,0,Jonathan Davis
+641505,82235,Jonathan Davis
 642364,0,Manuel Guzman
 642318,0,Miguel Guzman
 620444,0,Alexander Palma
@@ -2878,7 +2878,7 @@ mlb_id,fantasy_labs,mlb_name
 650508,0,Carlos Herrera
 658137,0,Jose Benjamin
 645282,0,Marten Gasparini
-650619,0,Meibrys Viloria
+650619,39812,Meibrys Viloria
 655997,0,Jomar Reyes
 650798,0,Luis Encarnacion
 650988,0,Yeltsin Gudino
@@ -3262,7 +3262,7 @@ mlb_id,fantasy_labs,mlb_name
 650744,0,Carlos Tatis
 663905,0,Travis Blankenhorn
 663897,0,Luke Williams
-664167,0,Blake Trahan
+664167,82021,Blake Trahan
 663672,0,Zeke White
 664029,0,Mark Mathias
 663692,0,Jalen Miller
@@ -4446,7 +4446,7 @@ mlb_id,fantasy_labs,mlb_name
 621381,22706,Matthew Strahm
 613534,0,Austin Adams
 622217,0,Chris O'Grady
-621219,81302,Alec Mills
+621219,22676,Alec Mills
 621209,0,Jon Moscot
 621962,0,Ian Thomas
 623149,0,Paul Sewald
@@ -4634,7 +4634,7 @@ mlb_id,fantasy_labs,mlb_name
 607481,0,Aaron Bummer
 620982,0,Ricardo Pinto
 622161,0,Eduardo Paredes
-622382,0,Gabriel Moya
+622382,36217,Gabriel Moya
 641816,34128,Tyler Mahle
 424324,0,Cliff Lee
 625643,27280,Reynaldo Lopez
@@ -4828,7 +4828,7 @@ mlb_id,fantasy_labs,mlb_name
 518633,2679,Danny Duffy
 453329,1764,Clay Buchholz
 516910,0,Carlos Frias
-521230,0,Liam Hendriks
+521230,3709,Liam Hendriks
 453385,6225,Clayton Richard
 501817,0,Tony Barnette
 450351,0,C.J. Wilson
@@ -5056,7 +5056,7 @@ mlb_id,fantasy_labs,mlb_name
 502042,1098,Chris Archer
 469802,0,Luis Perez
 543606,5608,Jake Odorizzi
-543507,0,Trevor May
+543507,5018,Trevor May
 516935,0,Stolmy Pimentel
 431162,0,Tim Stauffer
 474699,0,Vance Worley
@@ -7298,7 +7298,7 @@ mlb_id,fantasy_labs,mlb_name
 656685,0,Brett Martin
 656237,0,Blake Bivens
 656529,0,Sam Hentges
-656257,0,Jeff Brigham
+656257,82075,Jeff Brigham
 656942,0,Jordan Schwartz
 650511,0,Jan Carlos Lopez
 656060,0,Felix Jimenez
@@ -7507,7 +7507,7 @@ mlb_id,fantasy_labs,mlb_name
 657812,0,Keegan Yuhl
 657714,0,Jon Perrin
 657661,0,Zach Lewis
-657624,0,Josh James
+657624,81849,Josh James
 657021,0,Andrew Summerville
 657203,0,Will Carter
 613317,0,Kyle Bird
@@ -8164,7 +8164,7 @@ mlb_id,fantasy_labs,mlb_name
 665074,0,Christian Meister
 663990,0,Matthias Dietz
 665073,0,Armando Ruiz
-605488,0,Jeffrey Springs
+605488,77891,Jeffrey Springs
 665067,0,Jack Charleston
 656278,0,Brendan Butler
 663721,0,Logan Crouse
