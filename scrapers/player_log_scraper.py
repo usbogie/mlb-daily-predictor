@@ -27,8 +27,19 @@ def get_pitcher_logs(year, player_id):
 	player_log_url = "http://lookup-service-prod.mlb.com/json/" + \
 		"named.sport_pitching_game_log_composed.bam?game_type=%27R%27" + \
 		"&league_list_id=%27mlb_hist%27&player_id="+player_id+"&season="+str(year)
+	player_playoff_log_url = "http://lookup-service-prod.mlb.com/json/" + \
+		"named.sport_pitching_game_log_composed.bam?game_type=%27F%27&" + \
+		"game_type=%27D%27&game_type=%27L%27&game_type=%27W%27&game_type=%27C%27&" + \
+		"league_list_id=%27mlb_hist%27&player_id="+player_id+"&season=" + str(year)
 	soup = json.loads(get_soup(player_log_url).find('body').contents[0], strict=False)
 	pitcher_logs = soup['sport_pitching_game_log_composed']['sport_pitching_game_log']['queryResults']['row']
+	playoff_soup = json.loads(get_soup(player_playoff_log_url).find('body').contents[0], strict=False)
+	if 'row' in playoff_soup['sport_pitching_game_log_composed']['sport_pitching_game_log']['queryResults']:
+		playoff_logs = playoff_soup['sport_pitching_game_log_composed']['sport_pitching_game_log']['queryResults']['row']
+		if isinstance(playoff_logs, dict):
+			pitcher_logs += [playoff_logs]
+		else:
+			pitcher_logs += playoff_logs
 	ex_keys = ['game_type','game_nbr','game_day','opponent','opponent_short',
 			   'sport_id','sport','avg','opp_score','team_score',
 			   'team','obp','np','team_result','whip','cg','irs',
@@ -52,8 +63,19 @@ def get_batter_logs(year, player_id):
 	player_log_url = "http://lookup-service-prod.mlb.com/json/" + \
 		"named.sport_hitting_game_log_composed.bam?game_type=%27R%27" + \
 		"&league_list_id=%27mlb_hist%27&player_id="+player_id+"&season="+str(year)
+	player_playoff_log_url = "http://lookup-service-prod.mlb.com/json/" + \
+		"named.sport_hitting_game_log_composed.bam?game_type=%27F%27&" + \
+		"game_type=%27D%27&game_type=%27L%27&game_type=%27W%27&game_type=%27C%27&" + \
+		"league_list_id=%27mlb_hist%27&player_id="+player_id+"&season=" + str(year)
 	soup = json.loads(get_soup(player_log_url).find('body').contents[0], strict=False)
+	playoff_soup = json.loads(get_soup(player_playoff_log_url).find('body').contents[0], strict=False)
 	batter_logs = soup['sport_hitting_game_log_composed']['sport_hitting_game_log']['queryResults']['row']
+	if 'row' in playoff_soup['sport_hitting_game_log_composed']['sport_hitting_game_log']['queryResults']:
+		playoff_logs = playoff_soup['sport_hitting_game_log_composed']['sport_hitting_game_log']['queryResults']['row']
+		if isinstance(playoff_logs, dict):
+			batter_logs += [playoff_logs]
+		else:
+			batter_logs += playoff_logs
 	ex_keys = ['game_type','game_nbr','lob','game_day','opponent',
 			   'opponent_short','sport_id','slg','avg','opp_score','go_ao',
 			   'team_score','ops','sport','team','obp','team_result']
@@ -112,6 +134,9 @@ def scrape_player_stats(year=2017):
 	teams = get_teams(year)
 	pitchers_list, batters_list = [], []
 	for team in teams:
+		print(team['name'])
+		if team['name'] not in ['Red Sox', 'Astros', 'Brewers', 'Dodgers']:
+			continue
 		print(team['name'])
 		pitchers_df, batters_df = get_team_logs(year,team['id'])
 		pitchers_list.append(pitchers_df)

@@ -5,10 +5,10 @@ from update_projections import batter_dict, pitcher_dict
 
 keys = ['single','double','triple','hr','k','hbp','bb']
 avg_pitcher_stats = {'vL': {'pa': 5277, 'single': 0.0879, 'double': 0.015, 'triple': 0.0013, 'hr': 0.0051,
-                            'bb': 0.0307, 'hbp': 0.003, 'k': 0.3843, 'bats': 'B', 'mlb_id': 'pitcher'},
+                            'bb': 0.0307, 'hbp': 0.003, 'k': 0.3843, 'bats': 'B'},
                      'vR': {'pa': 5277, 'single': 0.0879, 'double': 0.015, 'triple': 0.0013, 'hr': 0.0051,
-                            'bb': 0.0307, 'hbp': 0.003, 'k': 0.3843, 'bats': 'B', 'mlb_id': 'pitcher'},
-                     'pos': 'SP'}
+                            'bb': 0.0307, 'hbp': 0.003, 'k': 0.3843, 'bats': 'B'},
+                     'pos': 'SP', 'mlb_id': 'pitcher'}
 
 def determine_reliever_2018(name, team):
     if name == 'Ryan Cook' and team == 'Seattle Mariners':
@@ -68,17 +68,17 @@ def player_not_in_fantasy_labs(name, id, manifest):
 def nearest(items, pivot):
     return min(items, key=lambda x: abs(x - pivot))
 
-def get_stats(date, id, projections, steamer, player_dict, arg):
-    player = projections[projections['mlb_id'] == id]
+def get_stats(date, player_id, projections, steamer, player_dict, arg):
+    player = projections[projections['mlb_id'] == player_id]
     if player.empty:
-        player = steamer[steamer['mlbamid'] == id]
+        player = steamer[steamer['mlbamid'] == player_id]
         if player.empty:
-            print(id, 'player not in steamer')
+            print(player_id, 'player not in steamer')
             return False
 
-        vL = player_dict(id, player[player['split'] == 'vL'])
-        vR = player_dict(id, player[player['split'] == 'vR'])
-        return dict(vL = vL, vR = vR)
+        vL = player_dict(player_id, player[player['split'] == 'vL'])
+        vR = player_dict(player_id, player[player['split'] == 'vR'])
+        return dict(vL = vL, vR = vR, mlb_id = player_id)
     else:
         dates = player['date'].tolist()
         if date not in dates:
@@ -100,7 +100,7 @@ def get_stats(date, id, projections, steamer, player_dict, arg):
         vR = { key: player['vR_'+key] for key in keys }
         vL[arg], vR[arg] = player[arg], player[arg]
         vL['mlb_id'], vR['mlb_id'] = player['mlb_id'], player['mlb_id']
-        return dict(vL = vL, vR = vR)
+        return dict(vL = vL, vR = vR, mlb_id = player['mlb_id'])
 
 def get_batting_stats(manifest, batter_projections, steamer_batters, lineup, date):
     lineup_stats = []
@@ -192,17 +192,17 @@ def get_team_defense(lineup, fielders):
         ratio_high = 0
         most_likely_catcher = None
         for c in catchers:
-            catcher = fielders[fielders['mlbamid'] == c['vL']['mlb_id']].to_dict('records')[0]
+            catcher = fielders[fielders['mlbamid'] == c['mlb_id']].to_dict('records')[0]
             catcher_ratio = catcher['gC'] / math.ceil(catcher['G'])
             if catcher_ratio >= ratio_high:
                 ratio_high = catcher_ratio
-                most_likely_catcher = c['vL']['mlb_id']
+                most_likely_catcher = c['mlb_id']
     else:
-        most_likely_catcher = catchers[0]['vL']['mlb_id']
+        most_likely_catcher = catchers[0]['mlb_id']
 
     for player in lineup:
         pos = player['pos']
-        id = player['vL']['mlb_id']
+        id = player['mlb_id']
         if pos == 'SP' or (pos == 'C' and id == most_likely_catcher):
             continue
         i = i + 1

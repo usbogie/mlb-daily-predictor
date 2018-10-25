@@ -48,6 +48,7 @@ class MonteCarlo(object):
         self.home_pitchers = home_pitchers
         self.matchups = matchups
 
+
         self.comb_histo = [0]*75
         self.f5_comb_histo = [0]*75
 
@@ -158,7 +159,7 @@ class MonteCarlo(object):
 
     def sim_atbat(self, batter, pitcher, state):
         # possible outcomes: K,BB,HBP,1B,2B,3B,HR,OutNonK
-        outcomes = self.matchups[(pitcher['vL']['mlb_id'],batter['vL']['mlb_id'])]
+        outcomes = self.matchups[(pitcher['mlb_id'],batter['mlb_id'])]
         event = None
         rand = random.random()
         for (key, val) in outcomes:
@@ -258,6 +259,12 @@ class MonteCarlo(object):
             self.scores_in_first = self.scores_in_first + 1
         self.scoreboard.inc_runs()
 
+    def is_opener(self, pitcher):
+        opener_ids = {'Liam Hendriks': 521230, 'Brandon Woodruff': 605540, 'Gio Gonzalez': 461829}
+        if pitcher['mlb_id'] in list(opener_ids.values()):
+            return True
+        return False
+
     def determine_pitcher(self, home, test):
         #print(self.scoreboard.get_away_runs(),'to',self.scoreboard.get_home_runs(), 'frame', len(self.scoreboard.frames))
         pitchers = self.home_pitchers if home else self.away_pitchers
@@ -266,30 +273,36 @@ class MonteCarlo(object):
         if pitcher_num == 0:
             # determine if starter should be pulled
             pull_starter = False
-            if not pitcher['GS'] == 0.0:
-                avg_start_length = pitcher['start_IP'] / pitcher['GS']
-            else:
-                avg_start_length = 4.5
             cur_inning = len(self.scoreboard.frames)//2 + 1
             rand = random.random()
-            if not ((cur_inning == floor(avg_start_length)-1 and rand < .15) or \
-                (cur_inning == floor(avg_start_length)+0 and rand < .25) or \
-                (cur_inning == floor(avg_start_length)+1 and rand < .50) or \
-                (cur_inning == floor(avg_start_length)+2 and rand < .70) or \
-                (cur_inning == floor(avg_start_length)+3 and rand < .90) or \
-                (cur_inning == floor(avg_start_length)+4 and rand < .99) or \
-                (cur_inning == floor(avg_start_length)+5 and rand < 1.00)):
-                return pitcher
+            if self.is_opener(pitcher):
+                if not ((cur_inning == 2 and rand < .2) or \
+                    (cur_inning == 3 and rand < .4) or \
+                    (cur_inning == 3 and rand < .8) or \
+                    (cur_inning == 4 and rand < 1.00)):
+                    return pitcher
+            else:
+                if not pitcher['GS'] == 0.0:
+                    avg_start_length = pitcher['start_IP'] / pitcher['GS']
+                else:
+                    avg_start_length = 4.5
+                if not ((cur_inning == floor(avg_start_length)-1 and rand < .15) or \
+                    (cur_inning == floor(avg_start_length)+0 and rand < .25) or \
+                    (cur_inning == floor(avg_start_length)+1 and rand < .50) or \
+                    (cur_inning == floor(avg_start_length)+2 and rand < .70) or \
+                    (cur_inning == floor(avg_start_length)+3 and rand < .90) or \
+                    (cur_inning == floor(avg_start_length)+4 and rand < .99) or \
+                    (cur_inning == floor(avg_start_length)+5 and rand < 1.00)):
+                    return pitcher
             #print("pulling starter", pitcher['lastname'],'before',cur_inning,'inning')
             if home:
                 self.home_pitcher = 1
             else:
                 self.away_pitcher = 1
 
-        # bring in closer?
         home_margin = self.scoreboard.get_home_runs() - self.scoreboard.get_away_runs()
-        if len(self.scoreboard.frames)//2 + 1 == 9 and \
-                ((home and home_margin < 5 and home_margin > -1) or \
+        if len(self.scoreboard.frames)//2 + 1 in [9] and \
+                ((home and home_margin < 5 and home_margin > -5) or \
                 (not home and home_margin > -5)):
             #print("Closer situation")
             #print(team_closers[i]['lastname'], 'is the closer')

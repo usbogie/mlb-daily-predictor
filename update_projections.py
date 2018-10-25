@@ -19,7 +19,6 @@ def batter_dict(batter_id, projections):
         triple = batter_projections['3B'] / batter_projections['PA'],
         double = batter_projections['2B'] / batter_projections['PA'],
         single = batter_projections['1B'] / batter_projections['PA'],
-        mlb_id = batter_id,
         date = get_days_in_season(year)[0],
         bats = batter_projections['bats']
     )
@@ -76,7 +75,7 @@ def update_batter_projections(batter_id, hitter_logs, steamer_batters):
         vR = { 'vR_'+key: vR_base[key] * transformations[key] for key in keys }
         combined = {**vL, **vR}
         combined['date'] = ros_proj['date']
-        combined['mlb_id'] = ros_proj['mlb_id']
+        combined['mlb_id'] = batter_id
         combined['bats'] = ros_proj['bats']
         acc.append(combined)
     return pd.DataFrame(acc)
@@ -94,19 +93,19 @@ def pitcher_dict(pitcher_id, projections):
     keys = ['HBP/PA','SO/PA','BB/PA','1B/PA','2B/PA','3B/PA','HR/PA']
     if len(reliever) == 0:
         starter = starter[0]
-        base = dict(throws = starter['Throws'], mlb_id = starter['mlbamid'], date = get_days_in_season(year)[0])
+        base = dict(throws = starter['Throws'], date = get_days_in_season(year)[0])
         for key in keys:
             base[key] = starter[key]
     elif len(starter) == 0:
         reliever = reliever[0]
-        base = dict(throws = reliever['Throws'], mlb_id = reliever['mlbamid'], date = get_days_in_season(year)[0])
+        base = dict(throws = reliever['Throws'], date = get_days_in_season(year)[0])
         for key in keys:
             base[key] = reliever[key]
     else:
         starter = starter[0]
         reliever = reliever[0]
         pct_starter = 0 if starter['TBF'] == 0 else (starter['TBF'] + reliever['TBF']) / starter['TBF']
-        base = dict(throws = starter['Throws'], mlb_id = starter['mlbamid'], date = get_days_in_season(year)[0])
+        base = dict(throws = starter['Throws'], date = get_days_in_season(year)[0])
         for key in keys:
             base[key] = (starter[key] * pct_starter) + (reliever[key] * (1 - pct_starter))
 
@@ -170,14 +169,13 @@ def update_pitcher_projections(pitcher_id, pitcher_logs, steamer_pitchers):
     acc = []
     keys = ['k','bb','hbp','hr','triple','double','single']
     throws = vR_base['throws']
-    mlb_id = vR_base['mlb_id']
     for ros_proj in all_projections:
         transformations = { key: ros_proj[key]/baseline[key] for key in keys }
         vL = { 'vL_'+key: vL_base[key] * transformations[key] for key in keys }
         vR = { 'vR_'+key: vR_base[key] * transformations[key] for key in keys }
         combined = {**vL, **vR}
         combined['date'] = ros_proj['date']
-        combined['mlb_id'] = mlb_id
+        combined['mlb_id'] = pitcher_id
         combined['throws'] = throws
         acc.append(combined)
     return pd.DataFrame(acc)

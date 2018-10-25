@@ -46,12 +46,11 @@ def main():
     lineups = pd.read_csv(os.path.join('data','lineups','today.csv'))
     park_factors = pd.read_csv(os.path.join('data','park_factors_handedness.csv'))
 
-    today = datetime.now().strftime('%Y-%m-%d')
     game_outputs = []
     league_avgs = calc_averages(steamer_batters)
     for index, game in games.iterrows():
         print('\n')
-        print('Simulating game:',today,game['time'],game['away'],game['home'])
+        print('Simulating game:', datetime.now().strftime('%Y-%m-%d'), game['time'],game['away'],game['home'])
         try:
             away_lineup = lineups[(lineups['key'] == game['key']) & (game['away'] == lineups['name'])].to_dict('records')[0]
             home_lineup = lineups[(lineups['key'] == game['key']) & (game['home'] == lineups['name'])].to_dict('records')[0]

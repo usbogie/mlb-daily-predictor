@@ -31,11 +31,11 @@ def generate_matchups(park_factors, steamer_batters, home_pitchers, away_pitcher
     for batter in away_batters:
         for pitcher in home_pitchers:
             outcome_dict = get_outcome_distribution(park_factors, league_avgs, batter, pitcher, home_defense, temp)
-            matchups[(pitcher['vL']['mlb_id'],batter['vL']['mlb_id'])] = outcome_dict
+            matchups[(pitcher['mlb_id'],batter['mlb_id'])] = outcome_dict
     for batter in home_batters:
         for pitcher in away_pitchers:
             outcome_dict = get_outcome_distribution(park_factors, league_avgs, batter, pitcher, away_defense, temp)
-            matchups[(pitcher['vL']['mlb_id'],batter['vL']['mlb_id'])] = outcome_dict
+            matchups[(pitcher['mlb_id'],batter['mlb_id'])] = outcome_dict
 
     return matchups
 
