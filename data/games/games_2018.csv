@@ -2456,3 +2456,7 @@ key,away,away_id,away_score,date,gamePk,home,home_id,home_score
 2018/10/19/lanmlb-milmlb-1,Los Angeles Dodgers,119,2,2018-10-19,563405,Milwaukee Brewers,158,7
 2018/10/20/lanmlb-milmlb-1,Los Angeles Dodgers,119,5,2018-10-20,563406,Milwaukee Brewers,158,1
 2018/10/23/lanmlb-bosmlb-1,Los Angeles Dodgers,119,4,2018-10-23,563407,Boston Red Sox,111,8
+2018/10/24/lanmlb-bosmlb-1,Los Angeles Dodgers,119,2,2018-10-24,563408,Boston Red Sox,111,4
+2018/10/26/bosmlb-lanmlb-1,Boston Red Sox,111,2,2018-10-26,563409,Los Angeles Dodgers,119,3
+2018/10/27/bosmlb-lanmlb-1,Boston Red Sox,111,9,2018-10-27,563410,Los Angeles Dodgers,119,6
+2018/10/28/bosmlb-lanmlb-1,Boston Red Sox,111,5,2018-10-28,563411,Los Angeles Dodgers,119,1

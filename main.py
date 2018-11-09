@@ -267,6 +267,8 @@ def test_year(year):
                 print('something wrong with game odds')
                 continue
 
+            print('Simulating game:',day,game['away'],'vs',game['home'], game_obj.temp, '°')
+
             away_lineup_stats = get_batting_stats(manifest, batter_projections, steamer_batters, away_lineup, game['date'])
             home_lineup_stats = get_batting_stats(manifest, batter_projections, steamer_batters, home_lineup, game['date'])
             away_pitching = get_pitching_stats(manifest, pitcher_projections, all_relievers, steamer_pitchers, steamer_starters, away_lineup, game['date'], test=True, bullpens=bullpens)
@@ -278,7 +280,6 @@ def test_year(year):
             away_defense = get_team_defense(away_lineup_stats, steamer_batters_general)
             home_defense = get_team_defense(home_lineup_stats, steamer_batters_general)
 
-            print('Simulating game:',day,game['away'],'vs',game['home'], game_obj.temp, '°')
             all_matchups = generate_matchups(pf,steamer_batters, home_pitching, away_pitching, home_lineup_stats, away_lineup_stats, home_defense, away_defense, league_avgs, game_obj.temp)
             mcGame = MonteCarlo(game_obj,away_lineup_stats,home_lineup_stats,away_pitching,home_pitching,all_matchups)
             try:

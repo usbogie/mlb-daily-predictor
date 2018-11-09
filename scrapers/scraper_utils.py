@@ -40,6 +40,40 @@ team_codes = {
 	"Washington Nationals": "was",
 }
 
+fangraphs_to_mlb = {
+	"ARI": "ari",
+	"ATL": "atl",
+	"BAL": "bal",
+	"BOS": "bos",
+	"CHC": "chn",
+	"CHW": "cha",
+	"CIN": "cin",
+	"CLE": "cle",
+	"COL": "col",
+	"DET": "det",
+	"HOU": "hou",
+	"KCR": "kca",
+	"LAA": "ana",
+	"LAD": "lan",
+	"MIA": "mia",
+	"FLA": "mia",
+	"MIL": "mil",
+	"MIN": "min",
+	"NYM": "nyn",
+	"NYY": "nya",
+	"OAK": "oak",
+	"PHI": "phi",
+	"PIT": "pit",
+	"SDP": "sdn",
+	"SFG": "sfn",
+	"SEA": "sea",
+	"STL": "sln",
+	"TBR": "tba",
+	"TEX": "tex",
+	"TOR": "tor",
+	"WSN": "was",
+}
+
 def get_soup(url):
 	ua = UserAgent()
 	try:
@@ -55,7 +89,7 @@ def get_soup(url):
 
 def get_days_in_season(year):
 	opening_days = {2017:'2017-04-02',2018:'2018-03-29'}
-	closing_days = {2017:'2017-10-01',2018:(datetime.now() - timedelta(1)).strftime('%Y-%m-%d')}
+	closing_days = {2017:'2017-10-01',2018:'2018-10-02'}
 	months = ['03','04', '05', '06', '07', '08', '09', '10']
 	dates = {'03': list(range(32)[1:]), '04': list(range(31)[1:]), '05': list(range(32)[1:]),
 			 '06': list(range(31)[1:]), '07': list(range(32)[1:]), '08': list(range(32)[1:]),

@@ -72,7 +72,7 @@ def get_current_relievers(team):
 def get_todays_relievers():
     team_pitchers = {}
     for team in team_codes.keys():
-        if team not in ['Boston Red Sox', 'Houston Astros', 'Milwaukee Brewers','Los Angeles Dodgers']:
+        if team not in ['Boston Red Sox','Los Angeles Dodgers']:
             continue
         team_pitchers[team] = get_current_relievers(team.lower().replace(' ','-'))
     usages = get_usage_breakdown()

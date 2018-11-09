@@ -2460,3 +2460,7 @@ key,away,date,home,ml_away,ml_away_f5,ml_home,ml_home_f5,over_odds,over_odds_f5,
 2018/10/19/lanmlb-milmlb-1,Los Angeles Dodgers,2018-10-19,Milwaukee Brewers,1.88,1.74,2.03,2.15,2.01,2.05,2.46,2.15,1.6,1.74,8:39p,7.5,4.0,1.83,1.8
 2018/10/20/lanmlb-milmlb-1,Los Angeles Dodgers,2018-10-20,Milwaukee Brewers,2.0,1.9,1.91,1.92,1.83,1.84,1.44,2.27,2.88,1.67,8:09p,7.0,3.5,2.0,1.99
 2018/10/23/lanmlb-bosmlb-1,Los Angeles Dodgers,2018-10-23,Boston Red Sox,2.56,2.51,1.57,1.57,2.0,1.91,1.69,2.0,2.25,1.83,8:09p,7.5,3.5,1.83,1.91
+2018/10/24/lanmlb-bosmlb-1,Los Angeles Dodgers,2018-10-24,Boston Red Sox,2.25,2.2,1.72,1.71,1.91,1.91,1.61,1.8,2.44,2.05,8:09p,8.5,4.5,1.91,1.91
+2018/10/26/bosmlb-lanmlb-1,Boston Red Sox,2018-10-26,Los Angeles Dodgers,2.6,2.61,1.56,1.53,1.83,1.91,1.74,2.05,2.15,1.8,8:09p,7.5,4.0,2.0,1.91
+2018/10/27/bosmlb-lanmlb-1,Boston Red Sox,2018-10-27,Los Angeles Dodgers,2.26,2.15,1.71,1.74,1.95,1.95,1.58,1.77,2.5,2.1,8:09p,8.5,4.5,1.87,1.87
+2018/10/28/bosmlb-lanmlb-1,Boston Red Sox,2018-10-28,Los Angeles Dodgers,2.31,2.4,1.69,1.62,1.95,2.09,1.6,1.87,2.44,1.95,8:15p,7.5,4.0,1.87,1.78

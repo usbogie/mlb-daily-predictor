@@ -135,9 +135,6 @@ def scrape_player_stats(year=2017):
 	pitchers_list, batters_list = [], []
 	for team in teams:
 		print(team['name'])
-		if team['name'] not in ['Red Sox', 'Astros', 'Brewers', 'Dodgers']:
-			continue
-		print(team['name'])
 		pitchers_df, batters_df = get_team_logs(year,team['id'])
 		pitchers_list.append(pitchers_df)
 		batters_list.append(batters_df)

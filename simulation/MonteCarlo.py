@@ -260,7 +260,9 @@ class MonteCarlo(object):
         self.scoreboard.inc_runs()
 
     def is_opener(self, pitcher):
-        opener_ids = {'Liam Hendriks': 521230, 'Brandon Woodruff': 605540, 'Gio Gonzalez': 461829}
+        opener_ids = {'Ryne Stanek': 592773, 'Liam Hendriks': 521230, 'Hunter Wood': 621056, 'Gabriel Moya': 622382,
+                      'Sergio Romo': 489265, 'Diego Castillo': 650895, 'Tyler Clippard': 461325, 'Scott Alexander': 518397,
+                      'Alex Claudio': 592222, 'Connor Sadzeck': 592712, 'Jeffrey Springs': 605488}
         if pitcher['mlb_id'] in list(opener_ids.values()):
             return True
         return False
@@ -276,9 +278,9 @@ class MonteCarlo(object):
             cur_inning = len(self.scoreboard.frames)//2 + 1
             rand = random.random()
             if self.is_opener(pitcher):
-                if not ((cur_inning == 2 and rand < .2) or \
-                    (cur_inning == 3 and rand < .4) or \
-                    (cur_inning == 3 and rand < .8) or \
+                if not ((cur_inning == 2 and rand < .4) or \
+                    (cur_inning == 3 and rand < .65) or \
+                    (cur_inning == 3 and rand < .9) or \
                     (cur_inning == 4 and rand < 1.00)):
                     return pitcher
             else:

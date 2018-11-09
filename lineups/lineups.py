@@ -133,8 +133,7 @@ def get_pitching_stats(manifest, pitcher_projections, all_relievers, steamer_pit
         return False
     pitcher_id = manifest[manifest['fantasy_labs'] == starter_fantasylabs_id].iloc[0]['mlb_id']
     starting_pitcher = get_stats(date, pitcher_id, pitcher_projections, steamer_pitchers, pitcher_dict, 'throws')
-    starting_pitcher['usage'] = 'SP'
-    starting_pitcher['pos'] = 'SP'
+    starting_pitcher['usage'], starting_pitcher['pos'] = 'SP', 'SP'
     starting_pitcher['GS'] = steamer_starters[steamer_starters['mlbamid'] == pitcher_id].iloc[0]['GS']
     starting_pitcher['start_IP'] = steamer_starters[steamer_starters['mlbamid'] == pitcher_id].iloc[0]['start_IP']
     pitchers = [starting_pitcher]
