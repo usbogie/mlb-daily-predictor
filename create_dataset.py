@@ -1,9 +1,10 @@
 import pandas as pd
 import os
 import copy
+from datetime import datetime, timedelta
 from math import floor
 
-year = 2016
+year = 2017
 
 bb_path = os.path.join('data','batted_ball_profiles')
 prev_1_df = pd.read_csv(os.path.join(bb_path,'{}.csv'.format(year-1)))
@@ -59,9 +60,9 @@ def get_bb_rates(mlb_id):
         ld = ld + (float(prev_1['LD%'][:-1]) / 100.0 * pa)
     else:
         pa = pa + 6 * 300
-        gb = gb + .44 * pa
-        fb = fb + .35 * pa
-        ld = ld + .21 * pa
+        gb = gb + .432 * pa
+        fb = fb + .354 * pa
+        ld = ld + .214 * pa
 
     if not prev_2.empty:
         prev_2 = prev_2.iloc[0]
@@ -70,9 +71,9 @@ def get_bb_rates(mlb_id):
         ld = ld + float(prev_2['LD%'][:-1]) / 100.0 * 3 * int(prev_2['PA'])
         pa = pa + 3 * int(prev_2['PA'])
     else:
-        gb = gb + .44 * 3 * 300
-        fb = fb + .35 * 3 * 300
-        ld = ld + .21 * 3 * 300
+        gb = gb + .432 * 3 * 300
+        fb = fb + .354 * 3 * 300
+        ld = ld + .214 * 3 * 300
         pa = pa + 3 * 300
 
     if not prev_3.empty:
@@ -82,9 +83,9 @@ def get_bb_rates(mlb_id):
         ld = ld + float(prev_3['LD%'][:-1]) / 100.0 * 1 * int(prev_3['PA'])
         pa = pa + 1 * int(prev_3['PA'])
     else:
-        gb = gb + .44 * 1 * 300
-        fb = fb + .35 * 1 * 300
-        ld = ld + .21 * 1 * 300
+        gb = gb + .442 * 1 * 300
+        fb = fb + .354 * 1 * 300
+        ld = ld + .214 * 1 * 300
         pa = pa + 1 * 300
 
     gb = gb / pa
@@ -118,6 +119,8 @@ def generate_batter_stats(batters):
             gb_rate = gb, #lgAvg
             fb_rate = fb, #lgAvg
             ld_rate = ld, #lgAvg
+            bats = projection['bats'],
+            mlb_id = mlb_id
         )
         all_projections = []
         totals = dict(k=0, bb=0, hbp=0, hr=0, wraa=0, gb=0, fb=0, ld=0, pa=0, bip=0)
@@ -147,8 +150,7 @@ def generate_batter_stats(batters):
             proj_acc['gb_rate'] = accumulator_conditional(totals, proj_acc['gb_rate'], 'gb', 'bip', 80)
             proj_acc['fb_rate'] = accumulator_conditional(totals, proj_acc['fb_rate'], 'fb', 'bip', 80)
             proj_acc['ld_rate'] = accumulator_conditional(totals, proj_acc['ld_rate'], 'ld', 'bip', 600)
-        proj_acc['date'] = 'current'
-        proj_acc['mlb_id'] = mlb_id
+        proj_acc['date'] = (datetime.strptime(all_projections[-1]['date'], '%Y-%m-%d') + timedelta(1)).strftime('%Y-%m-%d')
         all_projections.append(proj_acc)
         dfs.append(pd.DataFrame(all_projections))
     return pd.concat(dfs)
@@ -169,23 +171,26 @@ def generate_pitcher_stats(pitchers):
             k_rate = projection['Krate'],
             bb_rate = projection['BBrate'],
             hbp_rate = projection['HBPrate'],
+            hr_rate = projection['HR'] / projection['TBF'],
             gb_rate = projection['GBrate'],
             fb_rate = projection['FBrate'],
             ld_rate = projection['LDrate'],
+            throws = projection['Throws'],
+            mlb_id = mlb_id,
         )
         all_projections = []
-        totals = dict(k=0,bb=0,hbp=0,gb=0,fb=0,ld=0,pa=0,bip=0)
+        totals = dict(k=0,bb=0,hbp=0,hr=0,gb=0,fb=0,ld=0,pa=0,bip=0)
         for ix, stat_line in logs.iterrows():
             # link the dates of the projection to game dates and append to projections
             acc = copy.deepcopy(proj_acc)
             acc['date'] = stat_line['date']
-            acc['mlb_id'] = mlb_id
             all_projections.append(acc)
 
             #then update the stats for the next game
             totals['k'] = totals['k'] + stat_line['k']
             totals['bb'] = totals['bb'] + stat_line['bb']
             totals['hbp'] = totals['hbp'] + stat_line['hbp']
+            totals['hr'] = totals['hr'] + stat_line['hr']
             totals['gb'] = totals['gb'] + stat_line['gb']
             totals['fb'] = totals['fb'] + stat_line['fb']
             totals['ld'] = totals['ld'] + stat_line['ld']
@@ -194,11 +199,11 @@ def generate_pitcher_stats(pitchers):
             proj_acc['k_rate'] = accumulator_conditional(totals, proj_acc['k_rate'], 'k', 'pa', 75)
             proj_acc['bb_rate'] = accumulator_conditional(totals, proj_acc['bb_rate'], 'bb', 'pa', 170)
             proj_acc['hbp_rate'] = accumulator_conditional(totals, proj_acc['hbp_rate'], 'hbp', 'pa', 650)
+            proj_acc['hr_rate'] = accumulator_conditional(totals, proj_acc['hr_rate'], 'hr', 'pa', 650)
             proj_acc['gb_rate'] = accumulator_conditional(totals, proj_acc['gb_rate'], 'gb', 'bip', 75)
             proj_acc['fb_rate'] = accumulator_conditional(totals, proj_acc['fb_rate'], 'fb', 'bip', 75)
             proj_acc['ld_rate'] = accumulator_conditional(totals, proj_acc['ld_rate'], 'ld', 'bip', 650)
-        proj_acc['date'] = 'current'
-        proj_acc['mlb_id'] = mlb_id
+        proj_acc['date'] = (datetime.strptime(all_projections[-1]['date'], '%Y-%m-%d') + timedelta(1)).strftime('%Y-%m-%d')
         all_projections.append(proj_acc)
         dfs.append(pd.DataFrame(all_projections))
     return pd.concat(dfs)
@@ -212,11 +217,11 @@ def get_matchup_results(batter_stats, pitcher_stats):
         if home_team != matchup['key'].split('mlb-')[1]:
             print(matchup['key'].split('mlb-')[1])
             home_team = matchup['key'].split('mlb-')[1]
-        batter_id, batter_name = get_mlb_id_from_retro(matchup['batter'])
-        if batter_id not in batter_list:
-            continue
 
         try:
+            batter_id, batter_name = get_mlb_id_from_retro(matchup['batter'])
+            if batter_id not in batter_list:
+                continue
             batter_proj = batter_stats[
                 (batter_stats['mlb_id'] == batter_id) & (batter_stats['date'] == matchup['date'])
             ].iloc[0]
@@ -235,20 +240,28 @@ def get_matchup_results(batter_stats, pitcher_stats):
             print("Missing", pitcher_name, "on date", matchup['date'])
             continue
 
-        if matchup['outcome'] != 'k' and matchup['outcome'] != 'bb' and matchup['outcome'] != 'hitbypitch':
-            lines.append(dict(
-                p_ld = pitcher_proj['ld_rate'],
-                p_gb = pitcher_proj['gb_rate'],
-                p_fb = pitcher_proj['fb_rate'],
-                b_hr = batter_proj['hr_rate'],
-                b_ld = batter_proj['ld_rate'],
-                b_gb = batter_proj['gb_rate'],
-                b_fb = batter_proj['fb_rate'],
-                res_1b = int(matchup['outcome'] == 'single'),
-                res_xbh = int(matchup['outcome'] == 'double') + int(matchup['outcome'] == 'triple'),
-                res_hr = int(matchup['outcome'] == 'hr'),
-                res_out = int(matchup['outcome'] == 'NonKOut'),
-            ))
+        if matchup['outcome'] == 'k' or matchup['outcome'] == 'bb' or matchup['outcome'] == 'hitbypitch':
+            continue
+
+        if pitcher_proj['throws'] == 'B':
+            pitcher_proj['throws'] == 'R'
+        if batter_proj['bats'] == 'B':
+            batter_proj['bats'] = 'L' if pitcher_proj['throws'] == 'R' else 'R'
+        lines.append(dict(
+            matchup = "{}_v_{}".format(pitcher_proj['throws'], batter_proj['bats']),
+            p_hr = pitcher_proj['hr_rate'],
+            p_ld = pitcher_proj['ld_rate'],
+            p_gb = pitcher_proj['gb_rate'],
+            p_fb = pitcher_proj['fb_rate'],
+            b_hr = batter_proj['hr_rate'],
+            b_ld = batter_proj['ld_rate'],
+            b_gb = batter_proj['gb_rate'],
+            b_fb = batter_proj['fb_rate'],
+            res_1b = int(matchup['outcome'] == 'single'),
+            res_xbh = int(matchup['outcome'] == 'double') + int(matchup['outcome'] == 'triple'),
+            res_hr = int(matchup['outcome'] == 'hr'),
+            res_out = int(matchup['outcome'] == 'NonKOut'),
+        ))
     df = pd.DataFrame(lines)
     return df
 
@@ -259,4 +272,4 @@ if __name__ == '__main__':
      all_pitchers = list(set([x for x in matchups['pitcher'].tolist() if not ',' in x]))
      pitcher_stats = generate_pitcher_stats(all_pitchers)
      matchup_results = get_matchup_results(batter_stats, pitcher_stats)
-     matchup_results.to_csv(os.path.join('data','RFC_input','{}.csv'.format(year)))
+     matchup_results.to_csv(os.path.join('data','RFC_input','{}.csv'.format(year)),index=False)

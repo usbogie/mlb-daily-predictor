@@ -1,4 +1,4 @@
-from scraper_utils import get_soup, team_codes, get_days_in_season
+from scrapers.scraper_utils import get_soup, team_codes, get_days_in_season
 from multiprocessing import Pool
 import pandas as pd
 import json

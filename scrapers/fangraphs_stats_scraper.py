@@ -54,6 +54,7 @@ def get_pitcher_standard_stats(url):
 		if game_info['tbf'] == 0:
 			keys_w_no_batters.append(key)
 		game_info['gs'] = bool(int(tds[8].text))
+		game_info['hr'] = int(tds[19].text)
 		game_info['bb'] = int(tds[20].text)
 		game_info['hbp'] =int(tds[22].text)
 		game_info['k'] = int(tds[25].text)
@@ -102,7 +103,7 @@ def scrape_pitcher_logs(year):
 		dfs.append(df)
 	print(missing_players)
 	df = pd.concat(dfs)
-	df = df[['name', 'key', 'date', 'mlb_id', 'gs', 'gb', 'fb', 'ld', 'iffb', 'tbf', 'bb', 'hbp', 'k']]
+	df = df[['name', 'key', 'date', 'mlb_id', 'gs', 'gb', 'fb', 'ld', 'iffb', 'tbf', 'hr', 'bb', 'hbp', 'k']]
 	return df.set_index(['mlb_id', 'date'])
 
 def get_batter_standard_stats(url):
@@ -180,7 +181,7 @@ def scrape_batter_logs(year):
 	return df.set_index(['mlb_id','date'])
 
 if __name__ == '__main__':
-	year = 2018
+	year = 2016
 	df = scrape_pitcher_logs(year)
 	csv_path = os.path.join('..','data','player_logs','pitcher_logs_{}.csv'.format(year))
 	# df = scrape_batter_logs(year)
