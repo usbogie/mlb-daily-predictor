@@ -14,7 +14,7 @@ pitcher_logs = pd.read_csv(os.path.join('data','player_logs','pitcher_logs_{}.cs
 batter_logs = pd.read_csv(os.path.join('data','player_logs','batter_logs_{}.csv'.format(year)))
 steamer_pitchers = pd.read_csv(os.path.join('data','steamer', 'steamer_pitchers_{}.csv'.format(year)))
 steamer_batters_split = pd.read_csv(os.path.join('data','steamer', 'steamer_hitters_{}_split.csv'.format(year)))
-matchups = pd.read_csv(os.path.join('data','retrosheet', str(year), '{}_matchups.csv'.format(year)))
+# matchups = pd.read_csv(os.path.join('data','retrosheet', str(year), '{}_matchups.csv'.format(year)))
 manifest = pd.read_csv(os.path.join('data','master2.csv'), encoding='latin1')
 manifest2 = pd.read_csv(os.path.join('data','master3.csv'), encoding='latin1')
 
@@ -41,8 +41,7 @@ def get_fangraphs_id_from_mlb(mlb_id):
 def accumulator_conditional(totals, current, numer, denom, thresh):
     if totals[denom] <= thresh:
         return (current * (thresh - totals[denom]) + totals[numer]) / thresh
-    else:
-        return totals[numer] / totals[denom]
+    return totals[numer] / totals[denom]
 
 def get_bb_rates(mlb_id):
     fg_id = get_fangraphs_id_from_mlb(mlb_id)
@@ -95,8 +94,7 @@ def get_bb_rates(mlb_id):
 
 def generate_batter_stats(batters):
     dfs = []
-    for batter in batters:
-        mlb_id, name = get_mlb_id_from_retro(batter)
+    for mlb_id in batters:
         logs = batter_logs[batter_logs['mlb_id'] == mlb_id]
         if logs.empty:
             continue
@@ -106,7 +104,7 @@ def generate_batter_stats(batters):
             (steamer_batters_split['split'] == 'overall')
         ]
         if projection.empty:
-            print('No steamer for -', name, '- skipping')
+            print('No steamer for -', mlb_id, '- skipping')
             continue
         projection = projection.iloc[0]
         gb, fb, ld = get_bb_rates(mlb_id)
@@ -116,11 +114,12 @@ def generate_batter_stats(batters):
             hbp_rate = projection['HBP'] / projection['PA'],
             hr_rate = projection['HR'] / projection['PA'],
             wraa_rate = projection['wRAA'] / projection['PA'],
-            gb_rate = gb, #lgAvg
-            fb_rate = fb, #lgAvg
-            ld_rate = ld, #lgAvg
+            hr_fb_rate = (projection['HR'] / (projection['AB'] - projection['K'])) / fb,
+            gb_rate = gb,
+            fb_rate = fb,
+            ld_rate = ld,
             bats = projection['bats'],
-            mlb_id = mlb_id
+            mlb_id = int(mlb_id)
         )
         all_projections = []
         totals = dict(k=0, bb=0, hbp=0, hr=0, wraa=0, gb=0, fb=0, ld=0, pa=0, bip=0)
@@ -146,7 +145,8 @@ def generate_batter_stats(batters):
             proj_acc['bb_rate'] = accumulator_conditional(totals, proj_acc['bb_rate'], 'bb', 'pa', 120)
             proj_acc['hbp_rate'] = accumulator_conditional(totals, proj_acc['hbp_rate'], 'hbp', 'pa', 240)
             proj_acc['wraa_rate'] = accumulator_conditional(totals, proj_acc['wraa_rate'], 'wraa', 'pa', 400)
-            proj_acc['hr_rate'] = accumulator_conditional(totals, proj_acc['hr_rate'], 'hbp', 'pa', 170)
+            proj_acc['hr_rate'] = accumulator_conditional(totals, proj_acc['hr_rate'], 'hr', 'pa', 170)
+            proj_acc['hr_fb_rate'] = accumulator_conditional(totals, proj_acc['hr_fb_rate'], 'hr', 'fb', 50)
             proj_acc['gb_rate'] = accumulator_conditional(totals, proj_acc['gb_rate'], 'gb', 'bip', 80)
             proj_acc['fb_rate'] = accumulator_conditional(totals, proj_acc['fb_rate'], 'fb', 'bip', 80)
             proj_acc['ld_rate'] = accumulator_conditional(totals, proj_acc['ld_rate'], 'ld', 'bip', 600)
@@ -157,14 +157,13 @@ def generate_batter_stats(batters):
 
 def generate_pitcher_stats(pitchers):
     dfs = []
-    for pitcher in pitchers:
-        mlb_id, name = get_mlb_id_from_retro(pitcher)
+    for mlb_id in pitchers:
         logs = pitcher_logs[pitcher_logs['mlb_id'] == mlb_id]
         if logs.empty:
             continue
         projection = steamer_pitchers[steamer_pitchers['mlbamid'] == mlb_id]
         if projection.empty:
-            print('No steamer for -', name, '- skipping')
+            print('No steamer for -', mlb_id, '- skipping')
             continue
         projection = projection.iloc[0]
         proj_acc = dict(
@@ -172,6 +171,7 @@ def generate_pitcher_stats(pitchers):
             bb_rate = projection['BBrate'],
             hbp_rate = projection['HBPrate'],
             hr_rate = projection['HR'] / projection['TBF'],
+            hr_fb_rate = projection['HR/FB'],
             gb_rate = projection['GBrate'],
             fb_rate = projection['FBrate'],
             ld_rate = projection['LDrate'],
@@ -200,6 +200,7 @@ def generate_pitcher_stats(pitchers):
             proj_acc['bb_rate'] = accumulator_conditional(totals, proj_acc['bb_rate'], 'bb', 'pa', 170)
             proj_acc['hbp_rate'] = accumulator_conditional(totals, proj_acc['hbp_rate'], 'hbp', 'pa', 650)
             proj_acc['hr_rate'] = accumulator_conditional(totals, proj_acc['hr_rate'], 'hr', 'pa', 650)
+            proj_acc['hr_fb_rate'] = accumulator_conditional(totals, proj_acc['hr_fb_rate'], 'hr', 'fb', 400)
             proj_acc['gb_rate'] = accumulator_conditional(totals, proj_acc['gb_rate'], 'gb', 'bip', 75)
             proj_acc['fb_rate'] = accumulator_conditional(totals, proj_acc['fb_rate'], 'fb', 'bip', 75)
             proj_acc['ld_rate'] = accumulator_conditional(totals, proj_acc['ld_rate'], 'ld', 'bip', 650)
@@ -266,10 +267,11 @@ def get_matchup_results(batter_stats, pitcher_stats):
     return df
 
 if __name__ == '__main__':
-     # calc_siera(488984, '2017/10/07')
-     all_batters = list(set(matchups['batter'].tolist()))
+     all_batters = list(set(batter_logs['mlb_id'].tolist()))
      batter_stats = generate_batter_stats(all_batters)
-     all_pitchers = list(set([x for x in matchups['pitcher'].tolist() if not ',' in x]))
+     batter_stats.to_csv(os.path.join('data','projections','batter_proj_{}.csv'.format(year)),index=False)
+     all_pitchers = list(set(pitcher_logs['mlb_id'].tolist()))
      pitcher_stats = generate_pitcher_stats(all_pitchers)
-     matchup_results = get_matchup_results(batter_stats, pitcher_stats)
-     matchup_results.to_csv(os.path.join('data','RFC_input','{}.csv'.format(year)),index=False)
+     pitcher_stats.to_csv(os.path.join('data','projections','pitcher_proj_{}.csv'.format(year)),index=False)
+     # matchup_results = get_matchup_results(batter_stats, pitcher_stats)
+     # matchup_results.to_csv(os.path.join('data','RFC_input','{}.csv'.format(year)),index=False)

@@ -36,7 +36,6 @@ def main():
         all_relievers = json.load(f)
     batter_projections = pd.read_csv(os.path.join('data','projections','hitters_{}.csv'.format(year)))
     pitcher_projections = pd.read_csv(os.path.join('data','projections','pitchers_{}.csv'.format(year)))
-    steamer_batters_general = pd.read_csv(os.path.join('data','steamer', 'steamer_hitters_{}.csv'.format(year)))
     steamer_batters = pd.read_csv(os.path.join('data','steamer', 'steamer_hitters_{}_split.csv'.format(year)))
     steamer_batters['fullname'] = steamer_batters[['firstname', 'lastname']].apply(lambda x: ' '.join(x), axis=1)
     steamer_pitchers = pd.read_csv(os.path.join('data','steamer','steamer_pitchers_{}_split.csv'.format(year)))
@@ -70,8 +69,8 @@ def main():
             print('SOMETHING WRONG MAYBE CHECK IT OUT')
             continue
 
-        away_defense = get_team_defense(away_lineup_stats, steamer_batters_general)
-        home_defense = get_team_defense(home_lineup_stats, steamer_batters_general)
+        away_defense = get_team_defense(away_lineup_stats, steamer_batters)
+        home_defense = get_team_defense(home_lineup_stats, steamer_batters)
         pf = park_factors[park_factors['Team']==game['home']].to_dict(orient='records')
 
         all_matchups = generate_matchups(pf,steamer_batters, home_pitching, away_pitching, home_lineup_stats, away_lineup_stats, home_defense, away_defense, league_avgs, game_obj.temp)
@@ -224,7 +223,6 @@ def test_year(year):
     manifest = pd.read_csv(os.path.join('data','master.csv'))
     batter_projections = pd.read_csv(os.path.join('data','projections','hitters_{}.csv'.format(year)))
     pitcher_projections = pd.read_csv(os.path.join('data','projections','pitchers_{}.csv'.format(year)))
-    steamer_batters_general = pd.read_csv(os.path.join('data','steamer', 'steamer_hitters_{}.csv'.format(year)))
     steamer_batters = pd.read_csv(os.path.join('data','steamer', 'steamer_hitters_{}_split.csv'.format(year)))
     steamer_batters['fullname'] = steamer_batters[['firstname', 'lastname']].apply(lambda x: ' '.join(x), axis=1)
     steamer_pitchers = pd.read_csv(os.path.join('data','steamer','steamer_pitchers_{}_split.csv'.format(year)))
@@ -277,8 +275,8 @@ def test_year(year):
                 print('SOMETHING WRONG MAYBE CHECK IT OUT')
                 continue
             pf = park_factors[park_factors['Team']==game['home']].to_dict(orient='records')
-            away_defense = get_team_defense(away_lineup_stats, steamer_batters_general)
-            home_defense = get_team_defense(home_lineup_stats, steamer_batters_general)
+            away_defense = get_team_defense(away_lineup_stats, steamer_batters)
+            home_defense = get_team_defense(home_lineup_stats, steamer_batters)
 
             all_matchups = generate_matchups(pf,steamer_batters, home_pitching, away_pitching, home_lineup_stats, away_lineup_stats, home_defense, away_defense, league_avgs, game_obj.temp)
             mcGame = MonteCarlo(game_obj,away_lineup_stats,home_lineup_stats,away_pitching,home_pitching,all_matchups)

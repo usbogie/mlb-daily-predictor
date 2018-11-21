@@ -191,7 +191,9 @@ def get_team_defense(lineup, fielders):
         ratio_high = 0
         most_likely_catcher = None
         for c in catchers:
-            catcher = fielders[fielders['mlbamid'] == c['mlb_id']].to_dict('records')[0]
+            catcher = fielders[(fielders['split'] == 'overall') &
+                               (fielders['pn'] == 1) &
+                               (fielders['mlbamid'] == c['mlb_id'])].to_dict('records')[0]
             catcher_ratio = catcher['gC'] / math.ceil(catcher['G'])
             if catcher_ratio >= ratio_high:
                 ratio_high = catcher_ratio
@@ -205,7 +207,9 @@ def get_team_defense(lineup, fielders):
         if pos == 'SP' or (pos == 'C' and id == most_likely_catcher):
             continue
         i = i + 1
-        fielder = fielders[fielders['mlbamid'] == id].to_dict('records')[0]
+        fielder = fielders[(fielders['split'] == 'overall') &
+                           (fielders['pn'] == 1) &
+                           (fielders['mlbamid'] == id)].to_dict('records')[0]
         uzr = fielder['UZR'] / fielder['G']
         acc = acc + uzr
     if i < 7:
