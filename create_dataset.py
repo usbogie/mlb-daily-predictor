@@ -4,7 +4,7 @@ import copy
 from datetime import datetime, timedelta
 from math import floor
 
-year = 2017
+year = 2018
 
 bb_path = os.path.join('data','batted_ball_profiles')
 prev_1_df = pd.read_csv(os.path.join(bb_path,'{}.csv'.format(year-1)))
@@ -14,7 +14,7 @@ pitcher_logs = pd.read_csv(os.path.join('data','player_logs','pitcher_logs_{}.cs
 batter_logs = pd.read_csv(os.path.join('data','player_logs','batter_logs_{}.csv'.format(year)))
 steamer_pitchers = pd.read_csv(os.path.join('data','steamer', 'steamer_pitchers_{}.csv'.format(year)))
 steamer_batters_split = pd.read_csv(os.path.join('data','steamer', 'steamer_hitters_{}_split.csv'.format(year)))
-# matchups = pd.read_csv(os.path.join('data','retrosheet', str(year), '{}_matchups.csv'.format(year)))
+matchups = pd.read_csv(os.path.join('data','retrosheet', str(year), '{}_matchups.csv'.format(year)))
 manifest = pd.read_csv(os.path.join('data','master2.csv'), encoding='latin1')
 manifest2 = pd.read_csv(os.path.join('data','master3.csv'), encoding='latin1')
 
@@ -27,7 +27,7 @@ def get_mlb_id_from_retro(retro_id):
             row = manifest2[manifest2['retro_id'] == retro_id]
             return int(row['mlb_id'].iloc[0]), row['mlb_name'].iloc[0]
         except:
-            print(retro_id)
+            print(retro_id, "not found in manifest")
             sys.exit()
 
 def get_fangraphs_id_from_mlb(mlb_id):
@@ -273,5 +273,5 @@ if __name__ == '__main__':
      all_pitchers = list(set(pitcher_logs['mlb_id'].tolist()))
      pitcher_stats = generate_pitcher_stats(all_pitchers)
      pitcher_stats.to_csv(os.path.join('data','projections','pitcher_proj_{}.csv'.format(year)),index=False)
-     # matchup_results = get_matchup_results(batter_stats, pitcher_stats)
-     # matchup_results.to_csv(os.path.join('data','RFC_input','{}.csv'.format(year)),index=False)
+     matchup_results = get_matchup_results(batter_stats, pitcher_stats)
+     matchup_results.to_csv(os.path.join('data','RFC_input','{}.csv'.format(year)),index=False)
