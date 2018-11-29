@@ -3,8 +3,10 @@ import os
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.datasets import make_classification
 
-df = pd.concat([pd.read_csv(os.path.join('data','RFC_input','2017.csv')),
-                pd.read_csv(os.path.join('data','RFC_input','2016.csv'))])
+df = pd.concat([pd.read_csv(os.path.join('data','RFC_input','2016.csv')),
+                pd.read_csv(os.path.join('data','RFC_input','2017.csv')),
+                pd.read_csv(os.path.join('data','RFC_input','2018.csv'))])
+
 
 xL_v_L = df[df['matchup'] == 'L_v_L'][['p_ld','p_gb','p_fb','b_hr','b_ld','b_gb','b_fb']]
 xR_v_L = df[df['matchup'] == 'R_v_L'][['p_ld','p_gb','p_fb','b_hr','b_ld','b_gb','b_fb']]
