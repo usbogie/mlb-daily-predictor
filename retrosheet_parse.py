@@ -2,7 +2,7 @@ import pandas as pd
 import os
 from scrapers.scraper_utils import team_codes
 
-year = 2018
+year = 2015
 
 retro_path = os.path.join('data', 'retrosheet', str(year))
 

@@ -66,6 +66,7 @@ def main():
         away_pitching = get_pitching_stats(manifest, pitcher_projections, all_relievers, steamer_pitchers, steamer_starters, away_lineup, game['date'], test=False)
         home_pitching = get_pitching_stats(manifest, pitcher_projections, all_relievers, steamer_pitchers, steamer_starters, home_lineup, game['date'], test=False)
         if not away_pitching or not home_pitching or not away_lineup_stats or not home_lineup_stats:
+            print('here')
             print('SOMETHING WRONG MAYBE CHECK IT OUT')
             continue
 
@@ -233,18 +234,15 @@ def test_year(year):
 
     all_results = []
     all_net = []
-    t_all_results = []
-    t_all_net = []
     acc = 0
     risk_acc = 0
-    t_acc = 0
-    t_risk_acc = 0
     my_acc = 0
     vegas_acc = 0
     for day in days:
         slate = games[games['date'] == day]
         day_results = []
         for index, game in slate.iterrows():
+            print('')
             try:
                 away_lineup = lineups[(lineups['key'] == game['key']) & (game['away'] == lineups['name'])].to_dict('records')[0]
                 home_lineup = lineups[(lineups['key'] == game['key']) & (game['home'] == lineups['name'])].to_dict('records')[0]
@@ -265,12 +263,15 @@ def test_year(year):
                 print('something wrong with game odds')
                 continue
 
-            print('Simulating game:',day,game['away'],'vs',game['home'], game_obj.temp, '°')
+            print(day,game['away'],'vs',game['home'], game_obj.temp, '°')
 
             away_lineup_stats = get_batting_stats(manifest, batter_projections, steamer_batters, away_lineup, game['date'])
             home_lineup_stats = get_batting_stats(manifest, batter_projections, steamer_batters, home_lineup, game['date'])
             away_pitching = get_pitching_stats(manifest, pitcher_projections, all_relievers, steamer_pitchers, steamer_starters, away_lineup, game['date'], test=True, bullpens=bullpens)
+            print('vs', end=" ")
             home_pitching = get_pitching_stats(manifest, pitcher_projections, all_relievers, steamer_pitchers, steamer_starters, home_lineup, game['date'], test=True, bullpens=bullpens)
+            print()
+            print(game['away_score'], '-', game['home_score'])
             if not away_pitching or not home_pitching or not away_lineup_stats or not home_lineup_stats:
                 print('SOMETHING WRONG MAYBE CHECK IT OUT')
                 continue
@@ -289,12 +290,6 @@ def test_year(year):
             mcGameResults = mcGame.sim_results()
             value = lambda pct, odds: round(100 * pct - ml_to_winpct(odds),1)
 
-            try:
-                over_pct = over_total_pct(mcGame.comb_histo, game_odds['total_line'])
-            except:
-                print('odds messed up, continue')
-                continue
-
             result = dict(
                 away = game['away'],
                 home = game['home'],
@@ -302,11 +297,6 @@ def test_year(year):
                 home_ml = d_to_a(game_odds['ml_home']),
                 away_ml_proj = winpct_to_ml(1 - mcGameResults['home_win_prob']),
                 home_ml_proj = winpct_to_ml(mcGameResults['home_win_prob']),
-                over_odds = d_to_a(game_odds['over_odds']),
-                under_odds = d_to_a(game_odds['under_odds']),
-                over_proj = winpct_to_ml(over_pct),
-                under_proj = winpct_to_ml(1 - over_pct),
-                total = game_odds['total_line'],
             )
 
             value_away = value(1 - mcGameResults['home_win_prob'], game_odds['ml_away'])
@@ -358,65 +348,27 @@ def test_year(year):
                 my_acc = my_acc + mcGameResults['home_win_prob']
                 vegas_acc = vegas_acc + ml_to_winpct(game_odds['ml_home'])
 
-            over_value = value(over_pct, game_odds['over_odds'])
-            under_value = value(1 - over_pct, game_odds['under_odds'])
-
-            if over_value > 0 and game['home'] != 'Colorado Rockies':
-                result['t_risk'] = int(third_kelly_calculator(game_odds['over_odds'], over_pct) * 5)
-                if game['away_score'] + game['home_score'] > game_odds['total_line']:
-                    result['t_net'] = int(amount_won(result['t_risk'], game_odds['over_odds']))
-                elif game['away_score'] + game['home_score'] < game_odds['total_line']:
-                    result['t_net'] = -1 * result['t_risk']
-                else:
-                    result['t_net'] = 0
-                result['t_bet_on'] = 'Over'
-                result['t_value'] = over_value
-            elif under_value > 0 and game['home'] != 'Colorado Rockies':
-                result['t_risk'] = int(third_kelly_calculator(game_odds['under_odds'], 1-over_pct) * 5)
-                if game['away_score'] + game['home_score'] < game_odds['total_line']:
-                    result['t_net'] = int(amount_won(result['t_risk'], game_odds['under_odds']))
-                elif game['away_score'] + game['home_score'] > game_odds['total_line']:
-                    result['t_net'] = -1 * result['t_risk']
-                else:
-                    result['t_net'] = 0
-                result['t_bet_on'] = 'Under'
-                result['t_value'] = under_value
-            else:
-                result['t_risk'] = 0
-                result['t_net'] = 0
-                result['t_value'] = 0
-                result['t_bet_on'] = 'no bet'
             day_results.append(result)
             result['line'] = int(result['line'])
-            print('Money Line:', result['bet_on'], result['line'], result['k_risk'], result['net'])
-            print('Total:', result['t_bet_on'], result['total'], 'Final:', game['away_score'] + game['home_score'], result['t_risk'], result['t_net'])
+            print('Bet:', result['bet_on'], result['line'], result['k_risk'], result['net'])
         day_risk = 0
         day_net = 0
-        t_day_risk = 0
-        t_day_net = 0
         for result in day_results:
             day_risk = day_risk + result['k_risk']
             day_net = day_net + result['net']
-            t_day_risk = t_day_risk + result['t_risk']
-            t_day_net = t_day_net + result['t_net']
         risk_acc = risk_acc + day_risk
-        t_risk_acc = t_risk_acc + t_day_risk
         acc = acc + day_net
-        t_acc = t_acc + t_day_net
+
+        print('\n----------------------------------------------------')
         print(day,'-- total risk:',day_risk,'-- total net:',day_net,'-- acc:',acc)
         roi = 0 if risk_acc == 0 else acc/risk_acc*100
         print('ROI to date', roi)
-        print(day,'-- total t_risk:',t_day_risk,'-- total t_net:',t_day_net,'-- t_acc:',t_acc)
-        roi = 0 if t_risk_acc == 0 else t_acc/t_risk_acc*100
-        print('ROI to date', roi)
+        print('----------------------------------------------------')
         day_summary = dict()
         day_summary['date'] = day
         day_summary['risk'] = day_risk
         day_summary['net'] = day_net
         day_summary['acc'] = acc
-        day_summary['t_risk'] = t_day_risk
-        day_summary['t_net'] = t_day_net
-        day_summary['t_acc'] = t_acc
         all_results.extend(day_results)
         all_net.append(day_summary)
     print(my_acc, vegas_acc)

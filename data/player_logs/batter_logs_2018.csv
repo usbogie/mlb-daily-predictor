@@ -35983,6 +35983,11 @@ mlb_id,date,name,key,pa,bb,k,hbp,hr,wRAA,ld,gb,fb,iffb
 594011,2018-09-27,Rosell Herrera,2018/09/27/clemlb-kcamlb-1,0,0,0,0,0,0.0,0,0,0,0
 594011,2018-09-28,Rosell Herrera,2018/09/28/clemlb-kcamlb-1,2,0,0,0,0,0.2,1,1,0,0
 594011,2018-09-30,Rosell Herrera,2018/09/30/clemlb-kcamlb-1,4,0,0,0,0,-0.3,1,3,0,0
+624507,2018-07-20,Ryder Jones,2018/07/20/sfnmlb-oakmlb-1,4,0,3,0,1,0.6,1,0,0,0
+624507,2018-09-04,Ryder Jones,2018/09/04/sfnmlb-colmlb-1,1,0,0,0,0,0.5,1,0,0,0
+624507,2018-09-05,Ryder Jones,2018/09/05/sfnmlb-colmlb-1,1,0,1,0,0,-0.3,0,0,0,0
+624507,2018-09-08,Ryder Jones,2018/09/08/sfnmlb-milmlb-1,1,0,0,0,1,1.4,0,0,1,0
+624507,2018-09-09,Ryder Jones,2018/09/09/sfnmlb-milmlb-1,1,0,1,0,0,-0.3,0,0,0,0
 573135,2018-03-31,Tyler Saladino,2018/03/31/chamlb-kcamlb-1,0,0,0,0,0,0.0,0,0,0,0
 573135,2018-04-03,Tyler Saladino,2018/04/03/chamlb-tormlb-1,2,0,2,0,0,-0.5,0,0,0,0
 573135,2018-04-05,Tyler Saladino,2018/04/05/detmlb-chamlb-1,0,0,0,0,0,0.0,0,0,0,0
@@ -36726,6 +36731,12 @@ mlb_id,date,name,key,pa,bb,k,hbp,hr,wRAA,ld,gb,fb,iffb
 456124,2018-09-28,Erik Kratz,2018/09/28/detmlb-milmlb-1,4,0,0,0,0,-1.0,0,2,2,0
 456124,2018-09-29,Erik Kratz,2018/09/29/detmlb-milmlb-1,4,0,1,0,0,-0.3,0,2,1,1
 456124,2018-10-01,Erik Kratz,2018/10/01/milmlb-chnmlb-1,4,0,1,0,0,-1.0,0,1,2,1
+543432,2018-09-11,Ryan Lavarnway,2018/09/11/pitmlb-slnmlb-1,1,0,0,0,0,0.8,1,0,0,0
+543432,2018-09-18,Ryan Lavarnway,2018/09/18/kcamlb-pitmlb-1,1,0,0,0,0,0.5,1,0,0,0
+543432,2018-09-22,Ryan Lavarnway,2018/09/22/milmlb-pitmlb-1,1,0,0,0,0,0.5,1,0,0,0
+543432,2018-09-23,Ryan Lavarnway,2018/09/23/milmlb-pitmlb-1,1,0,1,0,0,-0.3,0,0,0,0
+543432,2018-09-26,Ryan Lavarnway,2018/09/26/pitmlb-chnmlb-1,1,0,0,0,0,-0.3,1,0,0,0
+543432,2018-09-30,Ryan Lavarnway,2018/09/30/pitmlb-cinmlb-1,1,0,0,0,0,0.5,0,1,0,0
 488671,2018-03-29,Alex Avila,2018/03/29/colmlb-arimlb-1,5,0,1,0,0,-0.6,1,3,0,0
 488671,2018-03-30,Alex Avila,2018/03/30/colmlb-arimlb-1,1,0,1,0,0,-0.3,0,0,0,0
 488671,2018-04-02,Alex Avila,2018/04/02/lanmlb-arimlb-1,7,3,1,0,0,-0.5,1,1,1,0
@@ -37275,6 +37286,11 @@ mlb_id,date,name,key,pa,bb,k,hbp,hr,wRAA,ld,gb,fb,iffb
 488818,2018-09-26,Chase d'Arnaud,2018/09/26/sdnmlb-sfnmlb-1,1,0,1,0,0,-0.3,0,0,0,0
 488818,2018-09-28,Chase d'Arnaud,2018/09/28/lanmlb-sfnmlb-1,1,0,1,0,0,-0.3,0,0,0,0
 488818,2018-09-30,Chase d'Arnaud,2018/09/30/lanmlb-sfnmlb-1,1,0,1,0,0,-0.3,0,0,0,0
+572114,2018-04-07,Ryan Schimpf,2018/04/07/oakmlb-anamlb-1,1,0,1,0,0,-0.3,0,0,0,0
+572114,2018-04-08,Ryan Schimpf,2018/04/08/oakmlb-anamlb-1,4,2,1,0,1,1.8,0,0,1,0
+572114,2018-04-09,Ryan Schimpf,2018/04/09/anamlb-texmlb-1,2,0,1,0,0,-0.5,0,1,0,0
+572114,2018-04-10,Ryan Schimpf,2018/04/10/anamlb-texmlb-1,0,0,0,0,0,0.0,0,0,0,0
+572114,2018-05-02,Ryan Schimpf,2018/05/02/balmlb-anamlb-1,0,0,0,0,0,0.0,0,0,0,0
 491676,2018-03-29,Gorkys Hernandez,2018/03/29/sfnmlb-lanmlb-1,1,0,0,0,0,-0.3,0,1,0,0
 491676,2018-03-31,Gorkys Hernandez,2018/03/31/sfnmlb-lanmlb-1,1,0,1,0,0,-0.3,0,0,0,0
 491676,2018-04-04,Gorkys Hernandez,2018/04/04/seamlb-sfnmlb-1,4,0,0,0,1,2.1,1,1,2,0
@@ -37429,6 +37445,10 @@ mlb_id,date,name,key,pa,bb,k,hbp,hr,wRAA,ld,gb,fb,iffb
 649966,2018-09-07,Luis Urias,2018/09/07/sdnmlb-cinmlb-1,4,0,1,0,0,-0.3,1,1,1,0
 649966,2018-09-09,Luis Urias,2018/09/09/sdnmlb-cinmlb-1,5,0,2,0,1,1.1,0,2,1,0
 649966,2018-09-11,Luis Urias,2018/09/11/sdnmlb-seamlb-1,4,0,1,0,0,-0.3,1,2,0,0
+492802,2018-05-05,Juan Graterol,2018/05/05/anamlb-seamlb-1,1,0,0,0,0,0.5,1,0,0,0
+492802,2018-09-26,Juan Graterol,2018/09/26/detmlb-minmlb-1,0,0,0,0,0,0.0,0,0,0,0
+492802,2018-09-28,Juan Graterol,2018/09/28/chamlb-minmlb-2,5,1,0,0,0,0.0,1,2,1,0
+492802,2018-09-30,Juan Graterol,2018/09/30/chamlb-minmlb-1,3,0,0,0,0,-0.8,0,2,1,0
 602922,2018-05-05,Jose Rondon,2018/05/05/minmlb-chamlb-1,1,0,0,0,0,-0.3,1,0,0,0
 602922,2018-05-06,Jose Rondon,2018/05/06/minmlb-chamlb-1,4,0,0,0,0,0.4,0,3,1,0
 602922,2018-05-09,Jose Rondon,2018/05/09/pitmlb-chamlb-1,2,0,0,0,0,0.5,1,0,1,0
@@ -37758,6 +37778,11 @@ mlb_id,date,name,key,pa,bb,k,hbp,hr,wRAA,ld,gb,fb,iffb
 614173,2018-05-25,Franchy Cordero,2018/05/25/sdnmlb-lanmlb-1,4,0,2,0,0,-1.0,0,2,0,0
 614173,2018-05-26,Franchy Cordero,2018/05/26/sdnmlb-lanmlb-1,1,0,1,0,0,-0.3,0,0,0,0
 614173,2018-05-27,Franchy Cordero,2018/05/27/sdnmlb-lanmlb-1,0,0,0,0,0,0.0,0,0,0,0
+657145,2018-05-09,Mark Zagunis,2018/05/09/miamlb-chnmlb-1,2,0,1,0,0,0.2,1,0,0,0
+657145,2018-05-11,Mark Zagunis,2018/05/11/chamlb-chnmlb-1,1,0,0,0,0,0.8,0,0,1,0
+657145,2018-05-12,Mark Zagunis,2018/05/12/chamlb-chnmlb-1,1,1,0,0,0,0.3,0,0,0,0
+657145,2018-05-13,Mark Zagunis,2018/05/13/chamlb-chnmlb-1,1,0,0,0,0,-0.3,1,0,0,0
+657145,2018-05-14,Mark Zagunis,2018/05/14/atlmlb-chnmlb-1,1,0,0,0,0,-0.3,0,0,1,0
 605474,2018-05-28,Matt Skole,2018/05/28/chamlb-clemlb-1,4,1,1,0,1,1.9,1,0,1,0
 605474,2018-05-29,Matt Skole,2018/05/29/chamlb-clemlb-1,3,1,0,0,0,-0.2,0,1,1,1
 605474,2018-05-30,Matt Skole,2018/05/30/chamlb-clemlb-1,4,0,0,0,0,-0.3,2,0,2,1
@@ -38075,6 +38100,20 @@ mlb_id,date,name,key,pa,bb,k,hbp,hr,wRAA,ld,gb,fb,iffb
 448602,2018-09-28,Mark Reynolds,2018/09/28/wasmlb-colmlb-1,4,0,2,0,0,-0.3,1,0,1,1
 448602,2018-09-29,Mark Reynolds,2018/09/29/wasmlb-colmlb-1,5,0,2,0,0,-0.6,0,1,2,0
 448602,2018-09-30,Mark Reynolds,2018/09/30/wasmlb-colmlb-1,3,1,1,0,0,-0.2,0,0,1,0
+605253,2018-09-02,Terrance Gore,2018/09/02/chnmlb-phimlb-1,0,0,0,0,0,0.0,0,0,0,0
+605253,2018-09-03,Terrance Gore,2018/09/03/chnmlb-milmlb-1,0,0,0,0,0,0.0,0,0,0,0
+605253,2018-09-04,Terrance Gore,2018/09/04/chnmlb-milmlb-1,1,0,1,0,0,-0.3,0,0,0,0
+605253,2018-09-06,Terrance Gore,2018/09/06/chnmlb-wasmlb-1,0,0,0,0,0,0.0,0,0,0,0
+605253,2018-09-08,Terrance Gore,2018/09/08/chnmlb-wasmlb-1,1,0,0,0,0,0.5,0,1,0,0
+605253,2018-09-08,Terrance Gore,2018/09/08/chnmlb-wasmlb-2,0,0,0,0,0,0.0,0,0,0,0
+605253,2018-09-10,Terrance Gore,2018/09/10/milmlb-chnmlb-1,0,0,0,0,0,0.0,0,0,0,0
+605253,2018-09-13,Terrance Gore,2018/09/13/chnmlb-wasmlb-1,1,0,0,0,0,-0.3,0,0,0,0
+605253,2018-09-18,Terrance Gore,2018/09/18/chnmlb-arimlb-1,1,0,0,0,0,-0.3,0,0,1,1
+605253,2018-09-19,Terrance Gore,2018/09/19/chnmlb-arimlb-1,1,0,0,0,0,-0.3,0,1,0,0
+605253,2018-09-21,Terrance Gore,2018/09/21/chnmlb-chamlb-1,0,0,0,0,0,0.0,0,0,0,0
+605253,2018-09-22,Terrance Gore,2018/09/22/chnmlb-chamlb-1,0,0,0,0,0,0.0,0,0,0,0
+605253,2018-09-26,Terrance Gore,2018/09/26/pitmlb-chnmlb-1,0,0,0,0,0,0.0,0,0,0,0
+605253,2018-09-27,Terrance Gore,2018/09/27/pitmlb-chnmlb-1,0,0,0,0,0,0.0,0,0,0,0
 596105,2018-05-03,Dwight Smith Jr.,2018/05/03/tormlb-clemlb-1,0,0,0,0,0,0.0,0,0,0,0
 596105,2018-05-03,Dwight Smith Jr.,2018/05/03/tormlb-clemlb-2,4,0,0,0,0,1.0,0,1,3,0
 596105,2018-05-15,Dwight Smith Jr.,2018/05/15/tormlb-nynmlb-1,1,0,1,0,0,-0.3,0,0,0,0
@@ -38428,6 +38467,7 @@ mlb_id,date,name,key,pa,bb,k,hbp,hr,wRAA,ld,gb,fb,iffb
 461865,2018-09-25,Andrew Romine,2018/09/25/oakmlb-seamlb-1,0,0,0,0,0,0.0,0,0,0,0
 461865,2018-09-26,Andrew Romine,2018/09/26/oakmlb-seamlb-1,1,0,0,0,0,1.0,0,0,1,0
 461865,2018-09-30,Andrew Romine,2018/09/30/texmlb-seamlb-1,3,0,0,0,0,-0.1,0,0,3,0
+572863,2018-08-05,Dustin Garneau,2018/08/05/chamlb-tbamlb-1,3,1,0,0,0,0.5,1,0,1,1
 623182,2018-09-07,Patrick Kivlehan,2018/09/07/atlmlb-arimlb-1,0,0,0,0,0,0.0,0,0,0,0
 623182,2018-09-10,Patrick Kivlehan,2018/09/10/arimlb-colmlb-1,1,0,0,0,0,0.5,0,1,0,0
 623182,2018-09-15,Patrick Kivlehan,2018/09/15/arimlb-houmlb-1,1,0,1,0,0,-0.3,0,0,0,0
@@ -39714,6 +39754,13 @@ mlb_id,date,name,key,pa,bb,k,hbp,hr,wRAA,ld,gb,fb,iffb
 592808,2018-09-26,Andrew Toles,2018/09/26/lanmlb-arimlb-1,1,0,0,0,0,-0.3,0,0,1,0
 592808,2018-09-29,Andrew Toles,2018/09/29/lanmlb-sfnmlb-1,1,0,0,0,0,0.5,1,0,0,0
 592808,2018-09-30,Andrew Toles,2018/09/30/lanmlb-sfnmlb-1,0,0,0,0,0,0.0,0,0,0,0
+607333,2018-09-01,Beau Taylor,2018/09/01/seamlb-oakmlb-1,0,0,0,0,0,0.0,0,0,0,0
+607333,2018-09-12,Beau Taylor,2018/09/12/oakmlb-balmlb-1,1,0,1,0,0,-0.3,0,0,0,0
+607333,2018-09-13,Beau Taylor,2018/09/13/oakmlb-balmlb-1,0,0,0,0,0,0.0,0,0,0,0
+607333,2018-09-18,Beau Taylor,2018/09/18/anamlb-oakmlb-1,0,0,0,0,0,0.0,0,0,0,0
+607333,2018-09-19,Beau Taylor,2018/09/19/anamlb-oakmlb-1,1,0,0,0,0,-0.3,0,1,0,0
+607333,2018-09-20,Beau Taylor,2018/09/20/anamlb-oakmlb-1,2,1,0,0,0,0.0,0,0,1,0
+607333,2018-09-30,Beau Taylor,2018/09/30/oakmlb-anamlb-1,2,0,1,0,0,0.5,0,0,1,0
 593934,2018-03-29,Miguel Sano,2018/03/29/minmlb-balmlb-1,5,0,3,0,0,-1.3,0,1,1,0
 593934,2018-03-31,Miguel Sano,2018/03/31/minmlb-balmlb-1,4,0,1,0,1,0.6,0,2,1,0
 593934,2018-04-01,Miguel Sano,2018/04/01/minmlb-balmlb-1,5,0,4,0,1,0.4,0,0,1,0
@@ -39897,6 +39944,7 @@ mlb_id,date,name,key,pa,bb,k,hbp,hr,wRAA,ld,gb,fb,iffb
 541645,2018-09-28,Avisail Garcia,2018/09/28/chamlb-minmlb-1,4,1,1,0,0,0.3,0,1,1,0
 541645,2018-09-29,Avisail Garcia,2018/09/29/chamlb-minmlb-1,4,1,1,0,0,-0.5,0,1,1,0
 541645,2018-09-30,Avisail Garcia,2018/09/30/chamlb-minmlb-1,4,0,1,0,0,-0.3,0,1,2,0
+572227,2018-08-01,Zach Vincej,2018/08/01/houmlb-seamlb-1,4,0,1,0,0,0.4,2,0,1,0
 595885,2018-05-15,Greg Bird,2018/05/15/nyamlb-wasmlb-1,1,0,0,0,0,0.8,0,0,1,0
 595885,2018-05-26,Greg Bird,2018/05/26/anamlb-nyamlb-1,4,0,2,0,0,-1.0,0,2,0,0
 595885,2018-05-27,Greg Bird,2018/05/27/anamlb-nyamlb-1,4,0,0,1,0,0.3,1,1,1,0
@@ -40061,6 +40109,11 @@ mlb_id,date,name,key,pa,bb,k,hbp,hr,wRAA,ld,gb,fb,iffb
 543376,2018-09-26,Caleb Joseph,2018/09/26/balmlb-bosmlb-2,5,0,2,0,0,0.5,1,0,2,0
 543376,2018-09-29,Caleb Joseph,2018/09/29/houmlb-balmlb-1,3,0,1,0,0,-0.1,0,1,1,0
 543376,2018-09-30,Caleb Joseph,2018/09/30/houmlb-balmlb-1,3,0,1,0,0,-0.8,0,1,1,0
+543089,2018-09-04,Taylor Davis,2018/09/04/chnmlb-milmlb-1,1,0,0,0,0,-0.3,0,1,0,0
+543089,2018-09-06,Taylor Davis,2018/09/06/chnmlb-wasmlb-1,1,0,0,0,0,0.5,0,1,0,0
+543089,2018-09-08,Taylor Davis,2018/09/08/chnmlb-wasmlb-1,1,0,0,0,0,-0.3,0,0,1,0
+543089,2018-09-18,Taylor Davis,2018/09/18/chnmlb-arimlb-1,1,0,0,0,0,0.5,0,1,0,0
+543089,2018-09-21,Taylor Davis,2018/09/21/chnmlb-chamlb-1,2,0,1,0,0,-0.5,0,0,1,1
 446481,2018-04-01,Sean Rodriguez,2018/04/01/pitmlb-detmlb-2,4,0,2,0,0,-1.0,1,0,1,1
 446481,2018-04-02,Sean Rodriguez,2018/04/02/minmlb-pitmlb-1,2,0,0,0,0,0.2,0,1,1,0
 446481,2018-04-04,Sean Rodriguez,2018/04/04/minmlb-pitmlb-1,4,1,0,0,0,0.3,1,0,2,0
@@ -40376,6 +40429,12 @@ mlb_id,date,name,key,pa,bb,k,hbp,hr,wRAA,ld,gb,fb,iffb
 642082,2018-09-08,Chance Sisco,2018/09/08/balmlb-tbamlb-1,4,0,1,0,0,-1.0,0,1,2,0
 642082,2018-09-12,Chance Sisco,2018/09/12/oakmlb-balmlb-1,1,0,1,0,0,-0.3,0,0,0,0
 642082,2018-09-16,Chance Sisco,2018/09/16/chamlb-balmlb-1,2,0,0,0,0,-0.5,0,1,1,0
+573113,2018-08-05,Tony Renda,2018/08/05/nyamlb-bosmlb-1,0,0,0,0,0,0.0,0,0,0,0
+624641,2018-09-23,Edmundo Sosa,2018/09/23/sfnmlb-slnmlb-1,1,1,0,0,0,0.3,0,0,0,0
+624641,2018-09-25,Edmundo Sosa,2018/09/25/milmlb-slnmlb-1,1,0,1,0,0,-0.3,0,0,0,0
+624641,2018-09-30,Edmundo Sosa,2018/09/30/slnmlb-chnmlb-1,1,0,0,0,0,-0.3,0,0,1,0
+431151,2018-09-28,David Wright,2018/09/28/miamlb-nynmlb-1,1,0,0,0,0,-0.3,0,1,0,0
+431151,2018-09-29,David Wright,2018/09/29/miamlb-nynmlb-1,2,1,0,0,0,0.0,0,0,1,0
 592863,2018-07-26,Mason Williams,2018/07/26/phimlb-cinmlb-1,1,0,0,0,0,-0.3,0,0,1,0
 592863,2018-07-27,Mason Williams,2018/07/27/phimlb-cinmlb-1,4,0,1,0,1,1.2,0,1,1,0
 592863,2018-07-28,Mason Williams,2018/07/28/phimlb-cinmlb-1,5,0,0,0,0,-0.4,0,2,2,0
@@ -40576,6 +40635,8 @@ mlb_id,date,name,key,pa,bb,k,hbp,hr,wRAA,ld,gb,fb,iffb
 446263,2018-09-20,Lucas Duda,2018/09/20/phimlb-atlmlb-1,1,0,0,0,0,0.8,1,0,0,0
 446263,2018-09-21,Lucas Duda,2018/09/21/phimlb-atlmlb-1,1,0,0,0,0,0.5,0,1,0,0
 446263,2018-09-23,Lucas Duda,2018/09/23/phimlb-atlmlb-1,2,1,0,0,0,0.0,1,0,0,0
+474319,2018-04-17,Brandon Snyder,2018/04/17/texmlb-tbamlb-1,4,0,2,0,0,-1.0,0,2,0,0
+474319,2018-04-18,Brandon Snyder,2018/04/18/texmlb-tbamlb-1,2,0,0,0,0,0.5,0,1,1,0
 606132,2018-07-01,Raimel Tapia,2018/07/01/colmlb-lanmlb-1,4,1,2,0,0,-0.5,0,1,0,0
 606132,2018-07-02,Raimel Tapia,2018/07/02/sfnmlb-colmlb-1,0,0,0,0,0,0.0,0,0,0,0
 606132,2018-07-03,Raimel Tapia,2018/07/03/sfnmlb-colmlb-1,1,0,0,0,0,-0.3,0,0,1,0
@@ -40601,6 +40662,9 @@ mlb_id,date,name,key,pa,bb,k,hbp,hr,wRAA,ld,gb,fb,iffb
 606132,2018-09-26,Raimel Tapia,2018/09/26/phimlb-colmlb-1,1,0,0,0,0,1.0,1,0,0,0
 606132,2018-09-29,Raimel Tapia,2018/09/29/wasmlb-colmlb-1,1,0,0,0,0,-0.3,0,1,0,0
 606132,2018-09-30,Raimel Tapia,2018/09/30/wasmlb-colmlb-1,0,0,0,0,0,0.0,0,0,0,0
+628356,2018-09-28,Jung Ho Kang,2018/09/28/pitmlb-cinmlb-1,1,0,0,0,0,0.5,1,0,0,0
+628356,2018-09-29,Jung Ho Kang,2018/09/29/pitmlb-cinmlb-1,4,0,1,0,0,-0.3,1,2,0,0
+628356,2018-09-30,Jung Ho Kang,2018/09/30/pitmlb-cinmlb-1,1,0,0,0,0,-0.3,0,0,1,0
 460269,2018-05-28,Chris Gimenez,2018/05/28/chnmlb-pitmlb-1,5,0,1,0,0,0.2,1,2,1,0
 460269,2018-06-01,Chris Gimenez,2018/06/01/chnmlb-nynmlb-1,2,0,0,0,0,-0.5,0,1,1,1
 460269,2018-06-05,Chris Gimenez,2018/06/05/phimlb-chnmlb-1,1,0,0,0,0,-0.3,0,1,0,0
@@ -40676,6 +40740,13 @@ mlb_id,date,name,key,pa,bb,k,hbp,hr,wRAA,ld,gb,fb,iffb
 506703,2018-09-28,Adrian Sanchez,2018/09/28/wasmlb-colmlb-1,3,0,0,0,0,0.7,0,3,0,0
 506703,2018-09-29,Adrian Sanchez,2018/09/29/wasmlb-colmlb-1,0,0,0,0,0,0.0,0,0,0,0
 506703,2018-09-30,Adrian Sanchez,2018/09/30/wasmlb-colmlb-1,3,0,0,0,0,-0.1,2,1,0,0
+605439,2018-07-22,Michael Reed,2018/07/22/atlmlb-wasmlb-1,0,0,0,0,0,0.0,0,0,0,0
+605439,2018-07-23,Michael Reed,2018/07/23/atlmlb-miamlb-1,1,0,1,0,0,-0.3,0,0,0,0
+605439,2018-07-26,Michael Reed,2018/07/26/lanmlb-atlmlb-1,2,0,0,0,0,0.2,2,0,0,0
+605439,2018-07-27,Michael Reed,2018/07/27/lanmlb-atlmlb-1,1,0,0,0,0,-0.3,1,0,0,0
+605439,2018-07-28,Michael Reed,2018/07/28/lanmlb-atlmlb-1,1,0,1,0,0,-0.3,0,0,0,0
+605439,2018-08-21,Michael Reed,2018/08/21/atlmlb-pitmlb-1,1,0,0,0,0,0.5,0,1,0,0
+605439,2018-09-01,Michael Reed,2018/09/01/pitmlb-atlmlb-1,1,0,1,0,0,-0.3,0,0,0,0
 605170,2018-03-30,,2018/03/30/chnmlb-miamlb-1,3,1,1,0,0,-0.2,0,0,1,0
 605170,2018-03-31,,2018/03/31/chnmlb-miamlb-1,1,0,0,0,0,-0.3,0,1,0,0
 605170,2018-04-01,,2018/04/01/chnmlb-miamlb-1,4,0,1,0,0,-1.0,1,1,1,0
@@ -40760,6 +40831,8 @@ mlb_id,date,name,key,pa,bb,k,hbp,hr,wRAA,ld,gb,fb,iffb
 446192,2018-09-25,Adam Moore,2018/09/25/nyamlb-tbamlb-1,4,0,3,0,0,-1.0,0,1,0,0
 446192,2018-09-28,Adam Moore,2018/09/28/tormlb-tbamlb-1,4,0,0,0,1,1.3,0,0,3,0
 446192,2018-09-30,Adam Moore,2018/09/30/tormlb-tbamlb-1,2,1,0,0,0,0.0,0,0,1,0
+572182,2018-07-01,Darnell Sweeney,2018/07/01/detmlb-tormlb-1,0,0,0,0,0,0.0,0,0,0,0
+572182,2018-08-01,Darnell Sweeney,2018/08/01/tormlb-oakmlb-1,4,2,0,0,0,0.1,0,0,2,0
 594828,2018-03-29,Evan Gattis,2018/03/29/houmlb-texmlb-1,4,1,2,0,0,-0.5,0,1,0,0
 594828,2018-03-30,Evan Gattis,2018/03/30/houmlb-texmlb-1,4,0,1,0,0,0.0,2,0,1,0
 594828,2018-03-31,Evan Gattis,2018/03/31/houmlb-texmlb-1,5,1,2,0,0,0.3,0,1,1,0
@@ -40971,6 +41044,8 @@ mlb_id,date,name,key,pa,bb,k,hbp,hr,wRAA,ld,gb,fb,iffb
 641856,2018-09-28,Billy McKinney,2018/09/28/tormlb-tbamlb-1,5,1,0,0,0,0.3,1,1,2,2
 641856,2018-09-29,Billy McKinney,2018/09/29/tormlb-tbamlb-1,1,0,1,0,0,-0.3,0,0,0,0
 641856,2018-09-30,Billy McKinney,2018/09/30/tormlb-tbamlb-1,4,0,0,0,0,-1.0,0,0,4,1
+571467,2018-05-18,Steve Baron,2018/05/18/phimlb-slnmlb-1,1,0,0,0,0,-0.3,0,0,1,1
+571467,2018-05-19,Steve Baron,2018/05/19/phimlb-slnmlb-1,4,0,2,0,0,-0.3,1,0,1,0
 608654,2018-04-14,Johnny Field,2018/04/14/phimlb-tbamlb-1,4,1,0,0,0,-0.5,0,3,0,0
 608654,2018-04-15,Johnny Field,2018/04/15/phimlb-tbamlb-1,4,0,1,0,0,0.7,1,1,1,0
 608654,2018-04-16,Johnny Field,2018/04/16/texmlb-tbamlb-1,4,1,2,0,0,-0.5,0,0,1,1
@@ -41055,6 +41130,7 @@ mlb_id,date,name,key,pa,bb,k,hbp,hr,wRAA,ld,gb,fb,iffb
 608654,2018-09-27,Johnny Field,2018/09/27/detmlb-minmlb-1,4,0,1,0,0,-1.0,0,2,1,0
 608654,2018-09-28,Johnny Field,2018/09/28/chamlb-minmlb-2,1,0,0,0,0,0.8,0,1,0,0
 608654,2018-09-29,Johnny Field,2018/09/29/chamlb-minmlb-1,4,0,1,0,0,0.7,0,0,3,0
+545338,2018-05-08,Nick Franklin,2018/05/08/clemlb-milmlb-1,2,0,0,0,0,-0.5,0,2,0,0
 453203,2018-04-10,Shane Robinson,2018/04/10/nyamlb-bosmlb-1,4,1,1,0,0,0.3,1,0,1,0
 453203,2018-04-11,Shane Robinson,2018/04/11/nyamlb-bosmlb-1,1,1,0,0,0,0.3,0,0,0,0
 453203,2018-07-28,Shane Robinson,2018/07/28/kcamlb-nyamlb-1,3,0,0,0,0,-0.1,1,1,1,0
@@ -41222,6 +41298,12 @@ mlb_id,date,name,key,pa,bb,k,hbp,hr,wRAA,ld,gb,fb,iffb
 467827,2018-09-28,Gerardo Parra,2018/09/28/wasmlb-colmlb-1,1,0,0,0,0,-0.3,0,1,0,0
 467827,2018-09-29,Gerardo Parra,2018/09/29/wasmlb-colmlb-1,2,1,1,0,0,0.0,0,0,0,0
 467827,2018-10-01,Gerardo Parra,2018/10/01/colmlb-lanmlb-1,1,0,1,0,0,-0.3,0,0,0,0
+502570,2018-09-23,Rocky Gale,2018/09/23/sdnmlb-lanmlb-1,1,0,0,0,0,-0.3,0,0,1,1
+502570,2018-09-25,Rocky Gale,2018/09/25/lanmlb-arimlb-1,0,0,0,0,0,0.0,0,0,0,0
+502570,2018-09-30,Rocky Gale,2018/09/30/lanmlb-sfnmlb-1,1,0,1,0,0,-0.3,0,0,0,0
+642211,2018-07-21,Justin Williams,2018/07/21/miamlb-tbamlb-1,1,0,0,0,0,-0.3,0,1,0,0
+640460,2018-05-28,Dustin Peterson,2018/05/28/nynmlb-atlmlb-2,1,0,1,0,0,-0.3,0,0,0,0
+640460,2018-05-30,Dustin Peterson,2018/05/30/nynmlb-atlmlb-1,1,0,0,0,0,-0.3,0,0,1,0
 622497,2018-05-15,Miguel Gomez,2018/05/15/cinmlb-sfnmlb-1,1,0,1,0,0,-0.3,0,0,0,0
 622497,2018-05-16,Miguel Gomez,2018/05/16/cinmlb-sfnmlb-1,4,0,1,0,0,-0.3,0,3,0,0
 622497,2018-05-17,Miguel Gomez,2018/05/17/colmlb-sfnmlb-1,1,0,1,0,0,-0.3,0,0,0,0
@@ -41231,6 +41313,10 @@ mlb_id,date,name,key,pa,bb,k,hbp,hr,wRAA,ld,gb,fb,iffb
 622497,2018-05-22,Miguel Gomez,2018/05/22/sfnmlb-houmlb-1,1,0,0,0,0,-0.3,0,1,0,0
 622497,2018-05-26,Miguel Gomez,2018/05/26/sfnmlb-chnmlb-1,1,0,1,0,0,-0.3,0,0,0,0
 622497,2018-05-27,Miguel Gomez,2018/05/27/sfnmlb-chnmlb-1,1,0,0,0,0,-0.3,0,0,1,0
+664842,2018-06-24,Kevin Kaczmarski,2018/06/24/lanmlb-nynmlb-1,1,0,0,0,0,-0.3,0,1,0,0
+664842,2018-06-27,Kevin Kaczmarski,2018/06/27/pitmlb-nynmlb-1,1,1,0,0,0,0.3,0,0,0,0
+664842,2018-07-08,Kevin Kaczmarski,2018/07/08/tbamlb-nynmlb-1,1,0,0,0,0,-0.3,0,0,1,0
+664842,2018-07-09,Kevin Kaczmarski,2018/07/09/phimlb-nynmlb-2,2,0,1,0,0,-0.5,0,0,1,0
 664068,2018-03-30,Scott Kingery,2018/03/30/phimlb-atlmlb-1,5,0,1,0,0,0.2,1,2,1,0
 664068,2018-03-31,Scott Kingery,2018/03/31/phimlb-atlmlb-1,4,0,0,0,0,1.0,3,1,0,0
 664068,2018-04-03,Scott Kingery,2018/04/03/phimlb-nynmlb-1,4,0,1,0,0,-1.0,0,1,2,1
@@ -41378,6 +41464,7 @@ mlb_id,date,name,key,pa,bb,k,hbp,hr,wRAA,ld,gb,fb,iffb
 664068,2018-09-28,Scott Kingery,2018/09/28/atlmlb-phimlb-1,4,0,1,0,0,-1.0,0,2,1,0
 664068,2018-09-29,Scott Kingery,2018/09/29/atlmlb-phimlb-1,4,1,2,0,0,0.3,0,0,0,0
 664068,2018-09-30,Scott Kingery,2018/09/30/atlmlb-phimlb-1,4,0,2,0,0,-1.0,1,1,0,0
+606157,2018-08-19,Aristides Aquino,2018/08/19/sfnmlb-cinmlb-1,1,0,1,0,0,-0.3,0,0,0,0
 623214,2018-09-08,Abiatal Avelino,2018/09/08/sfnmlb-milmlb-1,2,0,2,0,0,-0.5,0,0,0,0
 623214,2018-09-19,Abiatal Avelino,2018/09/19/sfnmlb-sdnmlb-1,1,0,0,0,0,-0.3,0,1,0,0
 623214,2018-09-25,Abiatal Avelino,2018/09/25/sdnmlb-sfnmlb-1,2,0,0,0,0,-0.5,0,2,0,0
@@ -41413,6 +41500,9 @@ mlb_id,date,name,key,pa,bb,k,hbp,hr,wRAA,ld,gb,fb,iffb
 607471,2018-09-26,Chris Bostick,2018/09/26/miamlb-wasmlb-1,3,1,1,0,0,-0.2,0,0,1,0
 607471,2018-09-29,Chris Bostick,2018/09/29/miamlb-nynmlb-1,1,0,0,0,0,-0.3,0,0,1,1
 607471,2018-09-30,Chris Bostick,2018/09/30/miamlb-nynmlb-1,1,0,0,0,0,-0.3,0,1,0,0
+624431,2018-06-15,Jose Trevino,2018/06/15/colmlb-texmlb-1,4,0,1,0,0,-1.0,0,2,1,0
+624431,2018-06-16,Jose Trevino,2018/06/16/colmlb-texmlb-1,3,0,0,0,0,-0.1,0,2,1,0
+624431,2018-06-17,Jose Trevino,2018/06/17/colmlb-texmlb-1,1,0,0,0,0,0.5,0,0,1,0
 621529,2018-09-08,Joe Hudson,2018/09/08/anamlb-chamlb-1,1,0,0,0,0,-0.3,0,1,0,0
 621529,2018-09-11,Joe Hudson,2018/09/11/texmlb-anamlb-1,3,0,0,0,0,-0.8,0,2,1,0
 621529,2018-09-13,Joe Hudson,2018/09/13/seamlb-anamlb-1,0,0,0,0,0,0.0,0,0,0,0
@@ -41421,6 +41511,9 @@ mlb_id,date,name,key,pa,bb,k,hbp,hr,wRAA,ld,gb,fb,iffb
 621529,2018-09-22,Joe Hudson,2018/09/22/anamlb-houmlb-1,0,0,0,0,0,0.0,0,0,0,0
 621529,2018-09-25,Joe Hudson,2018/09/25/texmlb-anamlb-1,3,0,0,0,0,-0.8,2,1,0,0
 621529,2018-09-30,Joe Hudson,2018/09/30/oakmlb-anamlb-1,2,0,0,0,0,0.5,0,0,2,0
+502273,2018-09-26,Mike Freeman,2018/09/26/pitmlb-chnmlb-1,1,0,0,0,0,-0.3,0,0,0,0
+576788,2018-08-10,Dan Butler,2018/08/10/bosmlb-balmlb-1,4,0,1,0,0,-0.3,1,1,1,0
+576788,2018-08-11,Dan Butler,2018/08/11/bosmlb-balmlb-2,3,0,1,0,0,-0.8,0,1,1,0
 518595,2018-03-31,Travis d'Arnaud,2018/03/31/slnmlb-nynmlb-1,4,1,1,0,1,1.2,1,0,1,0
 518595,2018-04-03,Travis d'Arnaud,2018/04/03/phimlb-nynmlb-1,3,0,1,0,0,-0.1,1,0,1,0
 518595,2018-04-07,Travis d'Arnaud,2018/04/07/nynmlb-wasmlb-1,4,0,2,0,0,-0.3,1,0,1,0
@@ -41512,6 +41605,11 @@ mlb_id,date,name,key,pa,bb,k,hbp,hr,wRAA,ld,gb,fb,iffb
 571974,2018-09-25,John Ryan Murphy,2018/09/25/lanmlb-arimlb-1,2,0,1,0,0,-0.5,0,0,1,0
 571974,2018-09-28,John Ryan Murphy,2018/09/28/arimlb-sdnmlb-1,6,1,3,0,0,0.0,1,0,1,0
 571974,2018-09-30,John Ryan Murphy,2018/09/30/arimlb-sdnmlb-1,4,0,1,0,0,-1.0,0,2,1,0
+519068,2018-04-10,Efren Navarro,2018/04/10/pitmlb-chnmlb-1,1,0,0,0,0,0.5,0,1,0,0
+519068,2018-04-12,Efren Navarro,2018/04/12/pitmlb-chnmlb-1,1,0,1,0,0,-0.3,0,0,0,0
+519068,2018-04-13,Efren Navarro,2018/04/13/atlmlb-chnmlb-1,1,0,1,0,0,-0.3,0,0,0,0
+519068,2018-04-14,Efren Navarro,2018/04/14/atlmlb-chnmlb-1,3,0,2,0,0,-0.8,0,0,1,0
+607223,2018-06-29,A.J. Reed,2018/06/29/houmlb-tbamlb-1,3,0,1,0,0,-0.8,0,1,1,0
 542908,2018-03-31,Jett Bandy,2018/03/31/milmlb-sdnmlb-1,5,0,1,0,0,-0.6,3,0,1,0
 542908,2018-04-05,Jett Bandy,2018/04/05/chnmlb-milmlb-1,3,0,1,1,0,-0.2,0,0,1,0
 542908,2018-04-07,Jett Bandy,2018/04/07/chnmlb-milmlb-1,3,0,1,1,0,-0.2,0,0,1,0
@@ -41809,6 +41907,9 @@ mlb_id,date,name,key,pa,bb,k,hbp,hr,wRAA,ld,gb,fb,iffb
 594838,2018-04-23,Phil Gosselin,2018/04/23/atlmlb-cinmlb-1,0,0,0,0,0,0.0,0,0,0,0
 594838,2018-04-25,Phil Gosselin,2018/04/25/atlmlb-cinmlb-1,0,0,0,0,0,0.0,0,0,0,0
 594838,2018-04-26,Phil Gosselin,2018/04/26/atlmlb-cinmlb-1,2,1,0,0,0,0.0,0,1,0,0
+554054,2018-05-26,Alfredo Gonzalez,2018/05/26/chamlb-detmlb-1,4,0,3,0,0,-1.0,0,0,1,0
+554054,2018-05-28,Alfredo Gonzalez,2018/05/28/chamlb-clemlb-1,2,0,0,0,0,-0.5,0,2,0,0
+554054,2018-06-03,Alfredo Gonzalez,2018/06/03/milmlb-chamlb-1,3,0,1,0,0,-0.1,2,0,0,0
 543148,2018-05-31,Tim Federowicz,2018/05/31/bosmlb-houmlb-1,3,0,1,0,0,0.2,0,0,2,0
 543148,2018-06-06,Tim Federowicz,2018/06/06/seamlb-houmlb-1,4,0,2,0,0,-1.0,0,2,0,0
 543148,2018-07-03,Tim Federowicz,2018/07/03/houmlb-texmlb-1,3,0,2,0,0,-0.1,0,1,0,0
@@ -42334,6 +42435,12 @@ mlb_id,date,name,key,pa,bb,k,hbp,hr,wRAA,ld,gb,fb,iffb
 543333,2018-09-28,Eric Hosmer,2018/09/28/arimlb-sdnmlb-1,6,2,0,0,0,0.3,0,4,0,0
 543333,2018-09-29,Eric Hosmer,2018/09/29/arimlb-sdnmlb-1,4,0,0,0,1,2.1,0,3,1,0
 543333,2018-09-30,Eric Hosmer,2018/09/30/arimlb-sdnmlb-1,5,2,1,0,0,0.3,0,0,2,0
+622713,2018-04-13,Engelb Vielma,2018/04/13/balmlb-bosmlb-1,0,0,0,0,0,0.0,0,0,0,0
+622713,2018-04-14,Engelb Vielma,2018/04/14/balmlb-bosmlb-1,0,0,0,0,0,0.0,0,0,0,0
+622713,2018-04-18,Engelb Vielma,2018/04/18/balmlb-detmlb-1,3,0,2,0,0,-0.8,0,1,0,0
+622713,2018-05-02,Engelb Vielma,2018/05/02/balmlb-anamlb-1,3,1,0,0,0,0.5,1,1,0,0
+622713,2018-05-03,Engelb Vielma,2018/05/03/balmlb-anamlb-1,0,0,0,0,0,0.0,0,0,0,0
+622713,2018-05-06,Engelb Vielma,2018/05/06/balmlb-oakmlb-1,2,0,2,0,0,-0.5,0,0,0,0
 621514,2018-09-09,Christin Stewart,2018/09/09/slnmlb-detmlb-1,1,0,0,0,0,-0.3,0,0,1,1
 621514,2018-09-10,Christin Stewart,2018/09/10/houmlb-detmlb-1,4,0,2,0,0,-0.3,0,1,1,0
 621514,2018-09-11,Christin Stewart,2018/09/11/houmlb-detmlb-1,5,2,2,0,0,0.6,0,1,0,0
@@ -42361,6 +42468,15 @@ mlb_id,date,name,key,pa,bb,k,hbp,hr,wRAA,ld,gb,fb,iffb
 582473,2018-09-26,Sherman Johnson,2018/09/26/texmlb-anamlb-1,0,0,0,0,0,0.0,0,0,0,0
 582473,2018-09-29,Sherman Johnson,2018/09/29/oakmlb-anamlb-1,0,0,0,0,0,0.0,0,0,0,0
 582473,2018-09-30,Sherman Johnson,2018/09/30/oakmlb-anamlb-1,3,0,1,0,0,-0.8,0,1,1,0
+622441,2018-04-25,Rafael Bautista,2018/04/25/wasmlb-sfnmlb-1,1,0,0,0,0,-0.3,0,0,1,0
+622441,2018-04-28,Rafael Bautista,2018/04/28/arimlb-wasmlb-1,0,0,0,0,0,0.0,0,0,0,0
+622441,2018-04-29,Rafael Bautista,2018/04/29/arimlb-wasmlb-1,0,0,0,0,0,0.0,0,0,0,0
+622441,2018-04-30,Rafael Bautista,2018/04/30/pitmlb-wasmlb-1,0,0,0,0,0,0.0,0,0,0,0
+622441,2018-05-01,Rafael Bautista,2018/05/01/pitmlb-wasmlb-1,1,0,0,0,0,-0.3,0,0,1,0
+622441,2018-05-03,Rafael Bautista,2018/05/03/pitmlb-wasmlb-1,0,0,0,0,0,0.0,0,0,0,0
+622441,2018-05-04,Rafael Bautista,2018/05/04/phimlb-wasmlb-1,1,0,0,0,0,-0.3,0,0,1,0
+622441,2018-05-05,Rafael Bautista,2018/05/05/phimlb-wasmlb-1,3,0,1,0,0,-0.8,0,1,1,1
+622441,2018-05-06,Rafael Bautista,2018/05/06/phimlb-wasmlb-1,0,0,0,0,0,0.0,0,0,0,0
 608596,2018-06-12,Tom Murphy,2018/06/12/colmlb-phimlb-1,4,0,0,0,0,1.4,3,0,1,0
 608596,2018-06-13,Tom Murphy,2018/06/13/colmlb-phimlb-1,4,0,3,0,0,-0.3,0,1,0,0
 608596,2018-06-15,Tom Murphy,2018/06/15/colmlb-texmlb-1,5,0,1,0,0,-0.6,3,1,0,0
@@ -43004,6 +43120,11 @@ mlb_id,date,name,key,pa,bb,k,hbp,hr,wRAA,ld,gb,fb,iffb
 434670,2018-05-22,Hanley Ramirez,2018/05/22/bosmlb-tbamlb-1,4,1,0,0,0,-0.5,0,2,1,0
 434670,2018-05-23,Hanley Ramirez,2018/05/23/bosmlb-tbamlb-1,4,0,1,0,0,-1.0,0,2,1,0
 434670,2018-05-24,Hanley Ramirez,2018/05/24/bosmlb-tbamlb-1,4,0,3,0,0,-1.0,0,1,0,0
+457454,2018-09-11,Jarrod Saltalamacchia,2018/09/11/houmlb-detmlb-1,0,0,0,0,0,0.0,0,0,0,0
+457454,2018-09-15,Jarrod Saltalamacchia,2018/09/15/detmlb-clemlb-1,3,1,1,0,0,-0.2,1,0,0,0
+457454,2018-09-21,Jarrod Saltalamacchia,2018/09/21/kcamlb-detmlb-1,3,0,2,0,0,-0.8,0,1,0,0
+457454,2018-09-28,Jarrod Saltalamacchia,2018/09/28/detmlb-milmlb-1,1,0,1,0,0,-0.3,0,0,0,0
+457454,2018-09-29,Jarrod Saltalamacchia,2018/09/29/detmlb-milmlb-1,1,0,0,0,0,-0.3,0,1,0,0
 605512,2018-03-29,Preston Tucker,2018/03/29/phimlb-atlmlb-1,4,0,1,0,0,-0.3,1,0,2,0
 605512,2018-03-30,Preston Tucker,2018/03/30/phimlb-atlmlb-1,4,0,1,0,0,0.4,1,1,1,0
 605512,2018-03-31,Preston Tucker,2018/03/31/phimlb-atlmlb-1,4,0,1,0,0,0.7,1,2,0,0

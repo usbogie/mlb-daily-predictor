@@ -1,7 +1,7 @@
 import pandas as pd
 import os
 from operator import itemgetter
-from scraper_utils import get_soup, fangraphs_to_mlb
+from scraper_utils import get_soup, fangraphs_to_mlb, get_days_in_season
 
 manifest = pd.read_csv(os.path.join('..','data','master2.csv'), encoding='latin1')
 manifest2 = pd.read_csv(os.path.join('..','data','master3.csv'), encoding='latin1')
@@ -37,14 +37,17 @@ def get_pitcher_standard_stats(url):
 	soup, rows = get_game_log_rows(url)
 	name = soup.find('div', {'class', 'player-info-box-name'}).h1.text
 	print(name)
-	mlb_id, name = match_id_to_mlb(name, url.split('playerid=')[1].split('&')[0])
+	pos = soup.find('div', {'class', 'player-info-box-pos'}).text
+	if pos != 'P' and name != 'Shohei Ohtani':
+		return None, name
+	mlb_id, mlb_name = match_id_to_mlb(name, url.split('playerid=')[1].split('&')[0])
 	if mlb_id is None:
-		return None, soup.find('div', {'class', 'player-info-box-name'}).h1.text
+		return None, name
 	games = {}
 	keys_w_no_batters = []
 	for tr in rows:
 		game_info = {}
-		game_info['name'] = name
+		game_info['name'] = mlb_name
 		game_info['mlb_id'] = mlb_id
 		tds = tr.findAll('td')
 		key = get_key(tds)
@@ -81,7 +84,7 @@ def get_pitcher_batted_ball_stats(url, game_dict, keys_w_no_batters):
 
 def scrape_pitcher_logs(year):
 	urls = []
-	url = "https://www.fangraphs.com/leaders.aspx?pos=all&stats=pit&lg=all&qual=10&type=8&season={}&month=0&season1={}&ind=0&team=0&rost=0&age=0&filter=&players=0&page=1_1000".format(year, year)
+	url = "https://www.fangraphs.com/leaders.aspx?pos=all&stats=pit&lg=all&qual=0&type=8&season={}&month=0&season1={}&ind=0&team=0&rost=0&age=0&filter=&players=0&page=1_1000".format(year, year)
 	player_rows = get_soup(url).find('table', {'class', 'rgMasterTable'}).tbody.findAll('a')
 	for item in player_rows:
 		if item.has_attr('href') and item['href'].startswith('statss'):
@@ -95,7 +98,7 @@ def scrape_pitcher_logs(year):
 		standard_url = base + url + "&gds=&gde=&type=1&season=" + str(year)
 		games, keys_w_no_batters = get_pitcher_standard_stats(standard_url)
 		if games is None:
-			print("Player not in MAP, continue")
+			print("Player not in MAP or non-pitcher, continue")
 			missing_players.append(keys_w_no_batters)
 			continue
 		bb_url = base + url + "&gds=&gde=&type=4&season=" + str(year)
@@ -155,7 +158,7 @@ def get_batter_batted_ball_stats(url, game_dict):
 
 def scrape_batter_logs(year):
 	urls = []
-	url = base + "leaders.aspx?pos=np&stats=bat&lg=all&qual=10&type=8&season={}&month=0&season1={}&ind=0&team=0&rost=0&age=0&filter=&players=0&page=1_1000".format(year, year)
+	url = base + "leaders.aspx?pos=np&stats=bat&lg=all&qual=0&type=8&season={}&month=0&season1={}&ind=0&team=0&rost=0&age=0&filter=&players=0&page=1_1000".format(year, year)
 	player_rows = get_soup(url).find('table', {'class', 'rgMasterTable'}).tbody.findAll('a')
 	for item in player_rows:
 		if not item.has_attr('href') or not item['href'].startswith('statss'):
@@ -180,8 +183,9 @@ def scrape_batter_logs(year):
 	df = df[['name', 'key', 'date', 'mlb_id', 'pa', 'bb', 'k', 'hbp', 'hr', 'wRAA', 'ld', 'gb', 'fb', 'iffb']]
 	return df.set_index(['mlb_id','date'])
 
+
 if __name__ == '__main__':
-	year = 2016
+	year = 2018
 	df = scrape_pitcher_logs(year)
 	csv_path = os.path.join('..','data','player_logs','pitcher_logs_{}.csv'.format(year))
 	# df = scrape_batter_logs(year)

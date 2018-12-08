@@ -4,10 +4,12 @@ from datetime import datetime
 from update_projections import batter_dict, pitcher_dict
 
 keys = ['single','double','triple','hr','k','hbp','bb']
-avg_pitcher_stats = {'vL': {'pa': 5277, 'single': 0.0879, 'double': 0.015, 'triple': 0.0013, 'hr': 0.0051,
-                            'bb': 0.0307, 'hbp': 0.003, 'k': 0.3843, 'bats': 'B'},
-                     'vR': {'pa': 5277, 'single': 0.0879, 'double': 0.015, 'triple': 0.0013, 'hr': 0.0051,
-                            'bb': 0.0307, 'hbp': 0.003, 'k': 0.3843, 'bats': 'B'},
+avg_pitcher_stats = {'vL': {'pa': 5277, 'single': 0.0879, 'double': 0.015, 'triple': 0.0013,
+                            'hr': 0.0042, 'bb': 0.032,
+                            'hbp': 0.0025, 'k': 0.414, 'bats': 'B'},
+                     'vR': {'pa': 5277, 'single': 0.0879, 'double': 0.015, 'triple': 0.0013,
+                            'hr': 0.0042, 'bb': 0.032,
+                            'hbp': 0.0025, 'k': 0.414, 'bats': 'B'},
                      'pos': 'SP', 'mlb_id': 'pitcher'}
 
 def determine_reliever_2018(name, team):
@@ -118,21 +120,23 @@ def get_batting_stats(manifest, batter_projections, steamer_batters, lineup, dat
 
         player_id = manifest[manifest['fantasy_labs'] == batter_fantasylabs_id].iloc[0]['mlb_id']
         stats = get_stats(date, player_id, batter_projections, steamer_batters, batter_dict, 'bats')
-        stats['pos'] = lineup['{}_pos'.format(str(i))]
         if not stats:
             return False
+        stats['pos'] = lineup['{}_pos'.format(str(i))]
         lineup_stats.append(stats)
     return lineup_stats
 
 def get_pitching_stats(manifest, pitcher_projections, all_relievers, steamer_pitchers, steamer_starters, lineup, date, test=False, bullpens=None):
     starter_name = lineup['10_name']
     starter_fantasylabs_id = int(lineup['10_id'])
-    print(starter_name)
+    print(starter_name, end=" ")
 
     if player_not_in_fantasy_labs(starter_name, starter_fantasylabs_id, manifest) == False:
         return False
     pitcher_id = manifest[manifest['fantasy_labs'] == starter_fantasylabs_id].iloc[0]['mlb_id']
     starting_pitcher = get_stats(date, pitcher_id, pitcher_projections, steamer_pitchers, pitcher_dict, 'throws')
+    if not starting_pitcher:
+        return False
     starting_pitcher['usage'], starting_pitcher['pos'] = 'SP', 'SP'
     starting_pitcher['GS'] = steamer_starters[steamer_starters['mlbamid'] == pitcher_id].iloc[0]['GS']
     starting_pitcher['start_IP'] = steamer_starters[steamer_starters['mlbamid'] == pitcher_id].iloc[0]['start_IP']

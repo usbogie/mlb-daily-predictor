@@ -499,7 +499,7 @@ mlb_id,fantasy_labs,mlb_name,fangraphs
 434567,6912,Geovany Soto,0
 434658,2476,Rajai Davis,0
 519346,7200,Eric Thames,0
-431151,0,David Wright,0
+431151,7953,David Wright,0
 429666,3550,J.J. Hardy,0
 463610,5896,Gregorio Petit,0
 455755,7005,Chris Stewart,0
@@ -1702,7 +1702,7 @@ mlb_id,fantasy_labs,mlb_name,fangraphs
 606993,0,Jake Hager,0
 608413,0,Sthervin Matos,0
 608418,0,Claudio Bautista,0
-606992,0,Eric Haase,0
+606992,39950,Eric Haase,0
 547173,0,Christian Lopes,0
 608589,0,Ronnier Mustelier,0
 596069,0,Max Pentecost,0
@@ -1928,7 +1928,7 @@ mlb_id,fantasy_labs,mlb_name,fangraphs
 621023,0,Landon Lassiter,0
 623520,31963,David Bote,0
 621447,0,Andrew Calica,0
-582473,0,Sherman Johnson,0
+582473,40896,Sherman Johnson,0
 621505,0,Chuck Moorman,0
 622336,0,Brauly Mejia,0
 621485,0,Robert Martinez,0
@@ -4447,6 +4447,7 @@ mlb_id,fantasy_labs,mlb_name,fangraphs
 613534,0,Austin Adams,0
 622217,0,Chris O'Grady,0
 621219,22676,Alec Mills,0
+621219,81302,Alec Mills,0
 621209,0,Jon Moscot,0
 621962,0,Ian Thomas,0
 623149,0,Paul Sewald,0
