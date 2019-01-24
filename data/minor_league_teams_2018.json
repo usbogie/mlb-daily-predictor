@@ -1,0 +1,151 @@
+{
+  "ATL (A)": "SAL",
+  "ATL (A+)": "CAR",
+  "ATL (AA)": "SL",
+  "ATL (AAA)": "IL",
+
+  "ARI (A)": "MDW",
+  "ARI (A+)": "CAL",
+  "ARI (AA)": "SL",
+  "ARI (AAA)": "PCL",
+
+  "BAL (A)": "SAL",
+  "BAL (A+)": "CAR",
+  "BAL (AA)": "EL",
+  "BAL (AAA)": "IL",
+
+  "BOS (A)": "SAL",
+  "BOS (A+)": "CAR",
+  "BOS (AA)": "EL",
+  "BOS (AAA)": "IL",
+
+  "CIN (A)": "MDW",
+  "CIN (A+)": "FSL",
+  "CIN (AA)": "SL",
+  "CIN (AAA)": "IL",
+
+  "CHC (A)": "MDW",
+  "CHC (A+)": "CAR",
+  "CHC (AA)": "SL",
+  "CHC (AAA)": "PCL",
+
+  "CLE (A)": "MDW",
+  "CLE (A+)": "CAR",
+  "CLE (AA)": "EL",
+  "CLE (AAA)": "IL",
+
+  "COL (A)": "SAL",
+  "COL (A+)": "CAL",
+  "COL (AA)": "EL",
+  "COL (AAA)": "PCL",
+
+  "CWS (A)": "SAL",
+  "CWS (A+)": "CAR",
+  "CWS (AA)": "SL",
+  "CWS (AAA)": "IL",
+
+  "DET (A)": "MDW",
+  "DET (A+)": "FSL",
+  "DET (AA)": "EL",
+  "DET (AAA)": "IL",
+
+  "LAA (A)": "MDW",
+  "LAA (A+)": "CAL",
+  "LAA (AA)": "SL",
+  "LAA (AAA)": "PCL",
+
+  "LAD (A)": "MDW",
+  "LAD (A+)": "CAL",
+  "LAD (AA)": "TEX",
+  "LAD (AAA)": "PCL",
+
+  "HOU (A)": "MDW",
+  "HOU (A+)": "CAR",
+  "HOU (AA)": "TEX",
+  "HOU (AAA)": "PCL",
+
+  "KCR (A)": "SAL",
+  "KCR (A+)": "CAR",
+  "KCR (AA)": "TEX",
+  "KCR (AAA)": "PCL",
+
+  "MIA (A)": "SAL",
+  "MIA (A+)": "FSL",
+  "MIA (AA)": "SL",
+  "MIA (AAA)": "PCL",
+
+  "MIL (A)": "MDW",
+  "MIL (A+)": "CAR",
+  "MIL (AA)": "SL",
+  "MIL (AAA)": "PCL",
+
+  "MIN (A)": "MDW",
+  "MIN (A+)": "FSL",
+  "MIN (AA)": "SL",
+  "MIN (AAA)": "IL",
+
+  "NYM (A)": "SAL",
+  "NYM (A+)": "FSL",
+  "NYM (AA)": "EL",
+  "NYM (AAA)": "PCL",
+
+  "NYY (A)": "SAL",
+  "NYY (A+)": "FSL",
+  "NYY (AA)": "EL",
+  "NYY (AAA)": "IL",
+
+  "OAK (A)": "MDW",
+  "OAK (A+)": "CAL",
+  "OAK (AA)": "TEX",
+  "OAK (AAA)": "PCL",
+
+  "PHI (A)": "SAL",
+  "PHI (A+)": "FSL",
+  "PHI (AA)": "EL",
+  "PHI (AAA)": "IL",
+
+  "PIT (A)": "SAL",
+  "PIT (A+)": "FSL",
+  "PIT (AA)": "EL",
+  "PIT (AAA)": "IL",
+
+  "SDG (A)": "MDW",
+  "SDG (A+)": "CAL",
+  "SDG (AA)": "TEX",
+  "SDG (AAA)": "PCL",
+
+  "SEA (A)": "MDW",
+  "SEA (A+)": "CAL",
+  "SEA (AA)": "TEX",
+  "SEA (AAA)": "PCL",
+
+  "SFG (A)": "SAL",
+  "SFG (A+)": "CAL",
+  "SFG (AA)": "EL",
+  "SFG (AAA)": "PCL",
+
+  "STL (A)": "MDW",
+  "STL (A+)": "FSL",
+  "STL (AA)": "TEX",
+  "STL (AAA)": "PCL",
+
+  "TEX (A)": "SAL",
+  "TEX (A+)": "CAR",
+  "TEX (AA)": "TEX",
+  "TEX (AAA)": "PCL",
+
+  "TBR (A)": "MDW",
+  "TBR (A+)": "FSL",
+  "TBR (AA)": "SL",
+  "TBR (AAA)": "IL",
+
+  "TOR (A)": "MDW",
+  "TOR (A+)": "FSL",
+  "TOR (AA)": "EL",
+  "TOR (AAA)": "IL",
+
+  "WSN (A)": "SAL",
+  "WSN (A+)": "CAR",
+  "WSN (AA)": "EL",
+  "WSN (AAA)": "IL",
+}
