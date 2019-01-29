@@ -5,6 +5,9 @@ def get_split_avgs(split, bats, pitcher_split):
     total_PA = float(split['PA'].sum())
     avgs_dict = dict()
     avgs_dict['hit'] = (split['H'].sum() - split['HR'].sum()) / total_PA
+    # avgs_dict['single'] = split['1B'].sum() / total_PA
+    # avgs_dict['double'] = split['2B'].sum() / total_PA
+    # avgs_dict['triple'] = split['3B'].sum() / total_PA
     avgs_dict['hr'] = split['HR'].sum() / total_PA
     avgs_dict['bb'] = split['BB'].sum() / total_PA
     avgs_dict['hbp'] = split['HBP'].sum() / total_PA
@@ -58,6 +61,7 @@ def get_outcome_distribution(park_factors, league_avgs, batter, pitcher, defense
     pitcher_split['hit'] = pitcher_split['single'] + pitcher_split['double'] + pitcher_split['triple']
 
     outcomes_w_factor_w_defense = ['hit']
+    # outcomes_w_factor_w_defense = ['single','double','triple']
     outcomes_w_factor = ['hr']
     outcomes_wo_factor = ['k','hbp','bb']
     outcomes = outcomes_w_factor + outcomes_wo_factor + outcomes_w_factor_w_defense

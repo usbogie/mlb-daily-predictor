@@ -39,10 +39,10 @@
   "COL (AA)": "EL",
   "COL (AAA)": "PCL",
 
-  "CWS (A)": "SAL",
-  "CWS (A+)": "CAR",
-  "CWS (AA)": "SL",
-  "CWS (AAA)": "IL",
+  "CHW (A)": "SAL",
+  "CHW (A+)": "CAR",
+  "CHW (AA)": "SL",
+  "CHW (AAA)": "IL",
 
   "DET (A)": "MDW",
   "DET (A+)": "FSL",
@@ -109,10 +109,10 @@
   "PIT (AA)": "EL",
   "PIT (AAA)": "IL",
 
-  "SDG (A)": "MDW",
-  "SDG (A+)": "CAL",
-  "SDG (AA)": "TEX",
-  "SDG (AAA)": "PCL",
+  "SDP (A)": "MDW",
+  "SDP (A+)": "CAL",
+  "SDP (AA)": "TEX",
+  "SDP (AAA)": "PCL",
 
   "SEA (A)": "MDW",
   "SEA (A+)": "CAL",
@@ -147,5 +147,5 @@
   "WSN (A)": "SAL",
   "WSN (A+)": "CAR",
   "WSN (AA)": "EL",
-  "WSN (AAA)": "IL",
+  "WSN (AAA)": "IL"
 }

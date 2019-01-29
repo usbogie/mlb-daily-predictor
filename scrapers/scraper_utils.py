@@ -4,6 +4,7 @@ from datetime import datetime, timedelta, date
 from random import random, gauss
 import time
 import sys
+import requests
 import urllib.request as request
 import urllib.error as error
 
@@ -38,6 +39,39 @@ team_codes = {
 	"Texas Rangers": "tex",
 	"Toronto Blue Jays": "tor",
 	"Washington Nationals": "was",
+}
+
+team_leagues = {
+	"Arizona Diamondbacks": "NL",
+	"Atlanta Braves": "NL",
+	"Baltimore Orioles": "AL",
+	"Boston Red Sox": "AL",
+	"Chicago Cubs": "NL",
+	"Chicago White Sox": "AL",
+	"Cincinnati Reds": "NL",
+	"Cleveland Indians": "AL",
+	"Colorado Rockies": "NL",
+	"Detroit Tigers": "AL",
+	"Houston Astros": "AL",
+	"Kansas City Royals": "AL",
+	"Los Angeles Angels": "AL",
+	"Los Angeles Dodgers": "NL",
+	"Miami Marlins": "NL",
+	"Milwaukee Brewers": "NL",
+	"Minnesota Twins": "AL",
+	"New York Mets": "NL",
+	"New York Yankees": "AL",
+	"Oakland Athletics": "AL",
+	"Philadelphia Phillies": "NL",
+	"Pittsburgh Pirates": "NL",
+	"San Diego Padres": "NL",
+	"San Francisco Giants": "NL",
+	"Seattle Mariners": "AL",
+	"St. Louis Cardinals": "NL",
+	"Tampa Bay Rays": "AL",
+	"Texas Rangers": "AL",
+	"Toronto Blue Jays": "AL",
+	"Washington Nationals": "NL",
 }
 
 alt_team_codes = {
@@ -107,9 +141,18 @@ fangraphs_to_mlb = {
 	"WSN": "was",
 }
 
-def get_soup(url):
+def get_soup(url, check_500 = False):
 	ua = UserAgent()
 	try:
+		if check_500:
+			try:
+				resp = requests.head(url)
+			except:
+				time.sleep(30)
+				resp = requests.head(url)
+			if str(resp) == "<Response [500]>":
+				print("500 for url", url)
+				return None
 		page = request.urlopen(request.Request(url, headers = { 'User-Agent' : ua.random }))
 	except (ConnectionResetError, error.URLError, error.HTTPError) as e:
 		print(e)

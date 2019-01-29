@@ -1,5 +1,5 @@
 from datetime import datetime
-from scrapers.scraper_utils import team_codes, get_days_in_season
+from scrapers.scraper_utils import team_codes, get_days_in_season, team_leagues
 from storage.Game import Game
 from simulation.MonteCarlo import MonteCarlo
 from utils.converters import winpct_to_ml, over_total_pct, d_to_a, ml_to_winpct, third_kelly_calculator, amount_won
@@ -58,7 +58,6 @@ def main():
             continue
 
         game_obj = Game(game['date'],game['time'],game['away'],game['home'], away_lineup['temp'])
-
         away_output = dict(team=game['away'], lineup=away_lineup['lineup_status'])
         home_output = dict(team=game['home'], lineup=home_lineup['lineup_status'])
         away_lineup_stats = get_batting_stats(manifest, batter_projections, steamer_batters, away_lineup, game['date'])
@@ -276,8 +275,11 @@ def test_year(year):
                 print('SOMETHING WRONG MAYBE CHECK IT OUT')
                 continue
             pf = park_factors[park_factors['Team']==game['home']].to_dict(orient='records')
-            away_defense = get_team_defense(away_lineup_stats, steamer_batters)
-            home_defense = get_team_defense(home_lineup_stats, steamer_batters)
+
+            dh = team_leagues[game['home']] == 'AL'
+
+            away_defense = get_team_defense(dh, away_lineup_stats, steamer_batters)
+            home_defense = get_team_defense(dh, home_lineup_stats, steamer_batters)
 
             all_matchups = generate_matchups(pf,steamer_batters, home_pitching, away_pitching, home_lineup_stats, away_lineup_stats, home_defense, away_defense, league_avgs, game_obj.temp)
             mcGame = MonteCarlo(game_obj,away_lineup_stats,home_lineup_stats,away_pitching,home_pitching,all_matchups)
@@ -384,7 +386,7 @@ def test_year(year):
     ticks = []
     for day in all_net:
         date = day['date']
-        if int(date.split('-')[2]) % 5 == 0:
+        if int(date.split('-')[2]) in [10, 20, 1]:
             ticks.append(date[5:])
         else:
             ticks.append('')

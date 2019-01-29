@@ -51,6 +51,7 @@ def player_not_in_fantasy_labs(name, id, manifest):
     print(players)
     if len(ids) > 0:
         if len(ids) > 1:
+            print(ids)
             print("DUPLICATE something is wrong\n",players)
             ix = int(input("Which player is actually playing? => "))
             players = players.iloc[[ix-1]]
@@ -187,36 +188,37 @@ def get_pitching_stats(manifest, pitcher_projections, all_relievers, steamer_pit
             pitchers.append(reliever)
     return pitchers
 
-def get_team_defense(lineup, fielders):
+def get_team_defense(dh, lineup, fielders):
     acc = 0
     i = 0
-    catchers = [p for p in lineup if p['pos'] == 'C']
-    if len(catchers) != 1:
-        ratio_high = 0
-        most_likely_catcher = None
-        for c in catchers:
-            catcher = fielders[(fielders['split'] == 'overall') &
-                               (fielders['pn'] == 1) &
-                               (fielders['mlbamid'] == c['mlb_id'])].to_dict('records')[0]
-            catcher_ratio = catcher['gC'] / math.ceil(catcher['G'])
-            if catcher_ratio >= ratio_high:
-                ratio_high = catcher_ratio
-                most_likely_catcher = c['mlb_id']
-    else:
-        most_likely_catcher = catchers[0]['mlb_id']
+    fielders = fielders[(fielders['mlbamid'].isin([player['mlb_id'] for player in lineup])) &
+                        (fielders['split'] == 'overall') &
+                        (fielders['pn'] == 1)]
 
-    for player in lineup:
-        pos = player['pos']
-        id = player['mlb_id']
-        if pos == 'SP' or (pos == 'C' and id == most_likely_catcher):
-            continue
-        i = i + 1
-        fielder = fielders[(fielders['split'] == 'overall') &
-                           (fielders['pn'] == 1) &
-                           (fielders['mlbamid'] == id)].to_dict('records')[0]
-        uzr = fielder['UZR'] / fielder['G']
-        acc = acc + uzr
-    if i < 7:
-        print('Something wrong, not enough fielders')
-        sys.exit()
-    return acc / 3 + 1
+    positions = ['C', '1B', '2B', 'SS', '3B', 'LF', 'CF', 'RF']
+    if dh:
+        positions = positions + ['DH']
+
+    position_dict = {}
+    position_importance = {
+        "1B": 0.09,
+        "2B": 0.15,
+        "SS": 0.18,
+        "3B": 0.12,
+        "LF": 0.14,
+        "CF": 0.18,
+        "RF": 0.14,
+    }
+    for position in positions:
+        fielders = fielders.assign(f = (fielders['g'+position] + fielders['gUIF'] + fielders['gUOF'])/fielders['G']).sort_values('f').drop('f', axis=1).iloc[::-1]
+        fielder = fielders.to_dict('records')[0]
+        if position != 'C' and position != 'DH':
+            try:
+                uzr = fielder['UZR'] / sum([fielder['g'+pos] for pos in ['1B', '2B', 'SS', '3B', 'LF', 'CF', 'RF', 'UIF', 'UOF']])
+            except:
+                uzr = 0
+            uzr_adj = uzr * position_importance[position]
+            acc = acc + uzr_adj
+        position_dict[position] = fielder['fullname']
+        fielders = fielders.iloc[1:]
+    return (1.2 * acc) + 1

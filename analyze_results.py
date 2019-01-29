@@ -5,11 +5,11 @@ from itertools import groupby
 import numpy as np
 
 def bet_against_pitcher(results):
-    sorted_by_bet_against = sorted(results, key = lambda i: i['bet_against'])
-    grouped = groupby(sorted_by_bet_against, lambda content: content['bet_against'])
+    sorted_by_bet_on = sorted(results, key = lambda i: i['bet_on'])
+    grouped = groupby(sorted_by_bet_on, lambda content: content['bet_on'])
     pitchers = []
     for pitcher, outcomes in grouped:
-        y = sum([x['k_risk'] for x in outcomes])
+        y = sum([x['net'] for x in outcomes])
         pitchers.append([pitcher, y])
     sorted_pitchers = (sorted(pitchers, key = lambda i: i[1]))
     print(sorted_pitchers)
