@@ -125,6 +125,7 @@ def get_batter_standard_stats(url):
 		game_info['mlb_id'] = mlb_id
 		game_info['key'] = key
 		game_info['date'] = tds[0].a.text
+		game_info['team'] = fangraphs_to_mlb[tds[1].text]
 		game_info['pa'] = int(tds[7].text)
 		game_info['hr'] = int(tds[12].text)
 		game_info['bb'] = int(tds[15].text)
@@ -141,20 +142,20 @@ def get_batter_advanced_stats(url, game_dict):
 		game_dict[key]['wRAA'] = float(tds[17].text)
 	return game_dict
 
-def get_batter_batted_ball_stats(url, game_dict):
-	games = []
-	_, rows = get_game_log_rows(url)
-	for tr in rows:
-		tds = tr.findAll('td')
-		key = get_key(tds)
-		game_info = game_dict[key]
-		game_info['gb'] = int(tds[5].text)
-		game_info['fb'] = int(tds[6].text)
-		game_info['ld'] = int(tds[7].text)
-		game_info['iffb'] = int(tds[8].text)
-		games.append(game_info)
-	games = sorted(games, key=itemgetter('key'))
-	return pd.DataFrame(list(games))
+# def get_batter_batted_ball_stats(url, game_dict):
+# 	games = []
+# 	_, rows = get_game_log_rows(url)
+# 	for tr in rows:
+# 		tds = tr.findAll('td')
+# 		key = get_key(tds)
+# 		game_info = game_dict[key]
+# 		game_info['gb'] = int(tds[5].text)
+# 		game_info['fb'] = int(tds[6].text)
+# 		game_info['ld'] = int(tds[7].text)
+# 		game_info['iffb'] = int(tds[8].text)
+# 		games.append(game_info)
+# 	games = sorted(games, key=itemgetter('key'))
+# 	return pd.DataFrame(list(games))
 
 def scrape_batter_logs(year):
 	urls = []
@@ -164,6 +165,8 @@ def scrape_batter_logs(year):
 		if not item.has_attr('href') or not item['href'].startswith('statss'):
 			continue
 		urls.append(item['href'])
+
+	print(len(urls))
 	dfs = []
 	for ix, url in enumerate(urls):
 		print(ix, end=" - ")
@@ -175,19 +178,17 @@ def scrape_batter_logs(year):
 			continue
 		advanced_url = base + url + "&gds=&gde=&type=2&season=" + str(year)
 		games = get_batter_advanced_stats(advanced_url, games)
-		bb_url = base + url + "&gds=&gde=&type=4&season=" + str(year)
-		df = get_batter_batted_ball_stats(bb_url, games)
+		df = pd.DataFrame(list(games.values()))[::-1]
 		dfs.append(df)
 	df = pd.concat(dfs)
 	print(df)
-	df = df[['name', 'key', 'date', 'mlb_id', 'pa', 'bb', 'k', 'hbp', 'hr', 'wRAA', 'ld', 'gb', 'fb', 'iffb']]
+	df = df[['name', 'key', 'date', 'team', 'mlb_id', 'pa', 'bb', 'k', 'hbp', 'hr', 'wRAA']]
 	return df.set_index(['mlb_id','date'])
 
-
 if __name__ == '__main__':
-	year = 2018
-	df = scrape_pitcher_logs(year)
-	csv_path = os.path.join('..','data','player_logs','pitcher_logs_{}.csv'.format(year))
-	# df = scrape_batter_logs(year)
-	# csv_path = os.path.join('..','data','player_logs','batter_logs_{}.csv'.format(year))
+	year = 2015
+	# df = scrape_pitcher_logs(year)
+	# csv_path = os.path.join('..','data','player_logs','pitcher_logs_{}.csv'.format(year))
+	df = scrape_batter_logs(year)
+	csv_path = os.path.join('..','data','player_logs','batter_logs_{}.csv'.format(year))
 	df.to_csv(csv_path)

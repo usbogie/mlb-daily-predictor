@@ -22,7 +22,7 @@ def fix_name(name):
     name = name.replace('Michael Gerber', 'Mike Gerber').replace('Adolis Garcia', 'Adonis Garcia')
     name = name.replace('Nicholas Ciuffo', 'Nick Ciuffo').replace('Christopher Shaw', 'Chris Shaw')
     name = name.replace('Joseph Hudson', 'Joe Hudson').replace('Demetrius Stewart', 'D.J. Stewart')
-    name = name.replace('Andrew Moore', 'Adam Moore')
+    name = name.replace('Andrew Moore', 'Adam Moore').replace('Jung-ho Kang', 'Jung Ho Kang')
     return name
 
 def scrape_day_lineups(day):
