@@ -24,12 +24,12 @@ def get_game_log_rows(url):
 
 def match_id_to_mlb(name, fangraphs_id):
 	try:
-		row = manifest[manifest['IDFANGRAPHS'] == fangraphs_id]
-		return int(row['MLBID'].iloc[0]), row['MLBNAME'].iloc[0]
+		row = manifest2[manifest2['fg_id'] == fangraphs_id]
+		return int(row['mlb_id'].iloc[0]), row['mlb_name'].iloc[0]
 	except:
 		try:
-			row = manifest2[manifest2['fg_id'] == fangraphs_id]
-			return int(row['mlb_id'].iloc[0]), row['mlb_name'].iloc[0]
+			row = manifest[manifest['IDFANGRAPHS'] == fangraphs_id]
+			return int(row['MLBID'].iloc[0]), row['MLBNAME'].iloc[0]
 		except:
 			return None, None
 

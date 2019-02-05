@@ -53,7 +53,7 @@ team_leagues = {
 	"col": "NL",
 	"det": "AL",
 	"hou": "AL",
-	"kcr": "AL",
+	"kca": "AL",
 	"ana": "AL",
 	"lan": "NL",
 	"mia": "NL",
