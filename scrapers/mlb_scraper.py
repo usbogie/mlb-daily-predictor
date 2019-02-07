@@ -3,7 +3,7 @@ import sys
 import json
 import os
 import time
-from scrapers.scraper_utils import team_codes, get_soup, get_days_in_season
+from scraper_utils import team_codes, get_soup, get_days_in_season
 
 def get_day_of_games(day):
 	url = "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date="+day+"&hydrate=linescore(matchup,runners)"
@@ -53,7 +53,7 @@ def scrape_games(year=2017):
 	return season_df
 
 if __name__ == '__main__':
-	year = 2018
+	year = 2016
 	df = scrape_games(year=year)
 	csv_path = os.path.join('..','data','games','games_{}.csv'.format(year))
 	df.drop_duplicates().to_csv(csv_path)

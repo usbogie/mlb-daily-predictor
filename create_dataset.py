@@ -5,8 +5,7 @@ from datetime import datetime, timedelta
 from math import floor
 from scrapers.scraper_utils import fangraphs_to_mlb, team_leagues
 
-year = 2018
-
+year = 2016
 pitcher_logs = pd.read_csv(os.path.join('data','player_logs','pitcher_logs_{}.csv'.format(year)))
 batter_logs = pd.read_csv(os.path.join('data','player_logs','batter_logs_{}.csv'.format(year)))
 steamer_pitchers = pd.read_csv(os.path.join('data','steamer', 'steamer_pitchers_{}.csv'.format(year)))
@@ -67,9 +66,8 @@ league_stats = {
     },
 }
 
-def calc_wrcplus(team_list, pa, wraa):
-    pf = sum([park_factors[park_factors['Team'] == x].iloc[0]['Basic'] * team_list.count(x) for x in list(set(team_list))]) / float(len(team_list))
-    al_nl = 'NL' if sum([1 if team_leagues[x] == 'NL' else 0 for x in team_list]) / float(len(team_list)) > 0.5 else 'AL'
+def calc_wrcplus(al_nl, teams_list, pa, wraa):
+    pf = sum(teams_list) / float(len(teams_list))
     wrcplus = (((wraa/pa + league_stats['r_pa'][str(year)]) + (league_stats['r_pa'][str(year)] - (pf/100 * league_stats['r_pa'][str(year)]))) / (league_stats['wrc'][al_nl][str(year)])) * 100
     return round(wrcplus, 2)
 
@@ -80,6 +78,7 @@ def generate_batter_stats(batters):
         if logs.empty:
             print("Empty logs for", mlb_id)
             continue
+        logs = logs.sort_values(by='date')
         steamer = steamer_batters_split[
             (steamer_batters_split['mlbamid'] == mlb_id) &
             (steamer_batters_split['pn'] == 1) &
@@ -89,33 +88,48 @@ def generate_batter_stats(batters):
             print("No steamer for", mlb_id)
             continue
         steamer = steamer.iloc[0]
+        if isinstance(steamer['Team'], float):
+            league_init = 'AL'
+        else:
+            league_init = team_leagues[steamer['Team'].lower().replace('laa','ana')] if steamer['Team'] != 'FA' else 'AL'
         proj = dict(
             pa = 0,
             wRAA = 0,
             throws = steamer['bats'],
-            wrcplus = calc_wrcplus([logs['team'].iloc[0]], steamer['PA'], steamer['wRAA']),
+            wrcplus = calc_wrcplus(league_init, [100], steamer['PA'], steamer['wRAA']),
             mlb_id = mlb_id,
         )
         last_date = 0
 
         proj_acc = copy.deepcopy(proj)
         all_projections = []
-        thresh = 300
+        pfs_list = []
+        teams_list = []
+        thresh = 150
         for ix, stat_line in logs.iterrows():
             # print(proj_acc['wrcplus'])
             acc = copy.deepcopy(proj_acc)
             acc['date'] = stat_line['date']
             all_projections.append(acc)
             if stat_line['pa'] == 0:
-                print('no plate appearances for', stat_line['name'], stat_line['date'])
+                # print('no plate appearances for', stat_line['name'], stat_line['date'])
                 continue
-            proj_acc['pa'] = proj_acc['pa'] + stat_line['pa']
-            proj_acc['wRAA'] = round(proj_acc['wRAA'] + stat_line['wRAA'], 1)
+
+            if last_date == 0:
+                decay = 0
+            else:
+                decay = (datetime.strptime(stat_line['date'], '%Y-%m-%d') - datetime.strptime(last_date, '%Y-%m-%d')).days
+
+            teams_list.append(team_leagues[stat_line['team']])
+            league = 'AL' if teams_list.count('AL') > len(teams_list) * 0.5 else 'NL'
+            pfs_list.append(park_factors[park_factors['Team'] == stat_line['team']].iloc[0]['Basic'] * 2 - 100)
+            proj_acc['pa'] = proj_acc['pa'] * (.990**decay) + stat_line['pa']
+            proj_acc['wRAA'] = proj_acc['wRAA'] * (.990**decay) + stat_line['wRAA']
             if thresh > proj_acc['pa']:
-                proj_acc['wrcplus'] = round((calc_wrcplus(list(logs['team']), proj_acc['pa'], proj_acc['wRAA']) * proj_acc['pa'] / thresh) + \
+                proj_acc['wrcplus'] = round((calc_wrcplus(league, pfs_list, proj_acc['pa'], proj_acc['wRAA']) * proj_acc['pa'] / thresh) + \
                                     (proj['wrcplus'] * (1 - proj_acc['pa'] / thresh)), 3)
             else:
-                proj_acc['wrcplus'] = calc_wrcplus(list(logs['team']), proj_acc['pa'], proj_acc['wRAA'])
+                proj_acc['wrcplus'] = calc_wrcplus(league, pfs_list, proj_acc['pa'], proj_acc['wRAA'])
 
             last_date = stat_line['date']
         # print(all_projections)
@@ -138,7 +152,7 @@ def calc_siera(proj_acc):
             + 15.421 * (proj_acc['k']/proj_acc['tbf'])*(proj_acc['bb']/proj_acc['tbf']) \
             + 5.226 * (proj_acc['k']/proj_acc['tbf'])*((proj_acc['gb'] - proj_acc['fb'])/proj_acc['tbf']) \
             + 10.150 * (proj_acc['bb']/proj_acc['tbf'])*((proj_acc['gb'] - proj_acc['fb'])/proj_acc['tbf']) \
-            + 0.246 * (proj_acc['tbfSP'] / proj_acc['tbf'])            
+            + 0.246 * (proj_acc['tbfSP'] / proj_acc['tbf'])
     return round(siera + plus_minus, 3)
 
 def generate_pitcher_stats(pitchers):
@@ -148,6 +162,7 @@ def generate_pitcher_stats(pitchers):
         if logs.empty:
             print("Empty logs for", mlb_id)
             continue
+        logs = logs.sort_values(by='date')
         steamer = steamer_pitchers[steamer_pitchers['mlbamid'] == mlb_id]
         if steamer.empty:
             print("No steamer for", mlb_id)
@@ -169,20 +184,27 @@ def generate_pitcher_stats(pitchers):
 
         proj_acc = copy.deepcopy(proj)
         all_projections = []
-        thresh = 150
+        thresh = 50
         for ix, stat_line in logs.iterrows():
             if stat_line['tbf'] == 0:
                 print('no batters faced for', stat_line['name'], stat_line['date'])
+                continue
+
+            if last_date == 0:
+                decay = 0
+            else:
+                decay = (datetime.strptime(stat_line['date'], '%Y-%m-%d') - datetime.strptime(last_date, '%Y-%m-%d')).days
+
             acc = copy.deepcopy(proj_acc)
             acc['date'] = stat_line['date']
             all_projections.append(acc)
-            proj_acc['tbf'] = proj_acc['tbf'] + stat_line['tbf']
+            proj_acc['tbf'] = proj_acc['tbf']  * (.990**decay) + stat_line['tbf']
             proj_acc['tbfSP'] = proj_acc['tbfSP'] + (stat_line['tbf'] if stat_line['gs'] == 1 else 0)
-            proj_acc['k'] = proj_acc['k'] + stat_line['k']
-            proj_acc['bb'] = proj_acc['bb'] + stat_line['bb']
-            proj_acc['gb'] = proj_acc['gb'] + stat_line['gb']
-            proj_acc['fb'] = proj_acc['fb'] + stat_line['fb']
-            proj_acc['ld'] = proj_acc['ld'] + stat_line['ld']
+            proj_acc['k'] = proj_acc['k'] * (.990**decay) + stat_line['k']
+            proj_acc['bb'] = proj_acc['bb'] * (.990**decay) + stat_line['bb']
+            proj_acc['gb'] = proj_acc['gb'] * (.990**decay) + stat_line['gb']
+            proj_acc['fb'] = proj_acc['fb'] * (.990**decay) + stat_line['fb']
+            proj_acc['ld'] = proj_acc['ld'] * (.990**decay) + stat_line['ld']
             if thresh > proj_acc['tbf']:
                 proj_acc['siera'] = round((calc_siera(proj_acc) * proj_acc['tbf'] / thresh) + \
                                     (proj['siera'] * (1 - proj_acc['tbf'] / thresh)), 3)
@@ -202,14 +224,14 @@ def generate_pitcher_stats(pitchers):
 
 if __name__ == '__main__':
     import random
-    # all_batters = list(set(batter_logs['mlb_id'].tolist()))
-    # random.shuffle(all_batters)
-    # # all_batters = [664068]
-    # batter_stats = generate_batter_stats(all_batters)
-    # batter_stats.to_csv(os.path.join('data',
-    #                                  'projections',
-    #                                  'batter_proj_{}.csv'.format(year)),
-    #                     index=False)
+    all_batters = list(set(batter_logs['mlb_id'].tolist()))
+    random.shuffle(all_batters)
+    # all_batters = [664023]
+    batter_stats = generate_batter_stats(all_batters)
+    batter_stats.to_csv(os.path.join('data',
+                                     'projections',
+                                     'batter_proj_{}.csv'.format(year)),
+                        index=False)
     all_pitchers = list(set(pitcher_logs['mlb_id'].tolist()))
     # all_pitchers = [595014]
     pitcher_stats = generate_pitcher_stats(all_pitchers)

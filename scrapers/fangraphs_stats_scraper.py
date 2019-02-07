@@ -125,7 +125,7 @@ def get_batter_standard_stats(url):
 		game_info['mlb_id'] = mlb_id
 		game_info['key'] = key
 		game_info['date'] = tds[0].a.text
-		game_info['team'] = fangraphs_to_mlb[tds[1].text]
+		game_info['team'] = fangraphs_to_mlb[tds[2].text.replace('@','')]
 		game_info['pa'] = int(tds[7].text)
 		game_info['hr'] = int(tds[12].text)
 		game_info['bb'] = int(tds[15].text)
@@ -142,21 +142,6 @@ def get_batter_advanced_stats(url, game_dict):
 		game_dict[key]['wRAA'] = float(tds[17].text)
 	return game_dict
 
-# def get_batter_batted_ball_stats(url, game_dict):
-# 	games = []
-# 	_, rows = get_game_log_rows(url)
-# 	for tr in rows:
-# 		tds = tr.findAll('td')
-# 		key = get_key(tds)
-# 		game_info = game_dict[key]
-# 		game_info['gb'] = int(tds[5].text)
-# 		game_info['fb'] = int(tds[6].text)
-# 		game_info['ld'] = int(tds[7].text)
-# 		game_info['iffb'] = int(tds[8].text)
-# 		games.append(game_info)
-# 	games = sorted(games, key=itemgetter('key'))
-# 	return pd.DataFrame(list(games))
-
 def scrape_batter_logs(year):
 	urls = []
 	url = base + "leaders.aspx?pos=np&stats=bat&lg=all&qual=0&type=8&season={}&month=0&season1={}&ind=0&team=0&rost=0&age=0&filter=&players=0&page=1_1000".format(year, year)
@@ -167,6 +152,7 @@ def scrape_batter_logs(year):
 		urls.append(item['href'])
 
 	print(len(urls))
+	print(urls[0])
 	dfs = []
 	for ix, url in enumerate(urls):
 		print(ix, end=" - ")
@@ -186,7 +172,7 @@ def scrape_batter_logs(year):
 	return df.set_index(['mlb_id','date'])
 
 if __name__ == '__main__':
-	year = 2015
+	year = 2016
 	# df = scrape_pitcher_logs(year)
 	# csv_path = os.path.join('..','data','player_logs','pitcher_logs_{}.csv'.format(year))
 	df = scrape_batter_logs(year)

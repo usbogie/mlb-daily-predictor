@@ -5,7 +5,7 @@ import time
 import datetime
 import random
 from operator import itemgetter
-from scrapers.scraper_utils import get_soup, team_codes, get_days_in_season
+from scraper_utils import get_soup, team_codes, get_days_in_season
 
 def fix_name(name):
     name = name.replace('Matthew Joyce','Matt Joyce').replace('Jackie Bradley', 'Jackie Bradley Jr.')
@@ -19,10 +19,11 @@ def fix_name(name):
     name = name.replace('Dan Robertson', 'Daniel Robertson').replace('Jakob Bauers','Jake Bauers')
     name = name.replace('Nicholas Martini', 'Nick Martini').replace('yefry ramirez', 'Yefry Ramirez')
     name = name.replace('Duane Underwood', 'Duane Underwood Jr.').replace('Nathan Orf','Nate Orf')
-    name = name.replace('Michael Gerber', 'Mike Gerber').replace('Adolis Garcia', 'Adonis Garcia')
+    name = name.replace('Michael Gerber', 'Mike Gerber').replace('Melvin Upton', 'Melvin Upton Jr.')
     name = name.replace('Nicholas Ciuffo', 'Nick Ciuffo').replace('Christopher Shaw', 'Chris Shaw')
     name = name.replace('Joseph Hudson', 'Joe Hudson').replace('Demetrius Stewart', 'D.J. Stewart')
-    name = name.replace('Andrew Moore', 'Adam Moore').replace('Jung-ho Kang', 'Jung Ho Kang')
+    name = name.replace('Jung-ho Kang', 'Jung Ho Kang').replace('Byung-ho Park','Byung Ho Park')
+    name = name.replace('Jorge De La Rosa', 'Jorge de la Rosa')
     return name
 
 def scrape_day_lineups(day):
@@ -67,9 +68,9 @@ def scrape_day_lineups(day):
 
         away_players = list(filter(lambda p: locate(lineup_away, p), players))
         home_players = list(filter(lambda p: locate(lineup_home, p), players))
-        if len(away_players) < 10 or len(home_players) < 10:
-            print('Bad lineup {} vs {}'.format(lineup_away['name'],lineup_home['name']))
-            continue
+        # if len(away_players) < 10 or len(home_players) < 10:
+        #     print('Bad lineup {} vs {}'.format(lineup_away['name'],lineup_home['name']))
+        #     continue
 
         for player in away_players:
             lineup_away['{}_name'.format(player['LineupOrder'])] = fix_name(player['PlayerName'])
@@ -104,7 +105,7 @@ def scrape_year_lineups(year=2017):
     return pd.DataFrame(lineups).set_index(['key', 'name'])
 
 if __name__ == '__main__':
-    year = 2018
+    year = 2016
     df = scrape_year_lineups(year=year)
     csv_path = os.path.join('..','data','lineups','lineups_{}.csv'.format(year))
     df.drop_duplicates().to_csv(csv_path)

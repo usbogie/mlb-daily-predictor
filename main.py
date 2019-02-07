@@ -9,11 +9,9 @@ from scrapers.update import update_all
 from update_projections import batter_dict, pitcher_dict
 import gsheets_upload
 import pandas as pd
-import random
 import json
 import sys
 import os
-import argparse
 
 year = 2018
 

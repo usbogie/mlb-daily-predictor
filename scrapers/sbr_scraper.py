@@ -2,7 +2,7 @@ import json
 import os
 import sqlite3
 import pandas as pd
-from scrapers.scraper_utils import get_soup, team_codes, get_days_in_season
+from scraper_utils import get_soup, team_codes, get_days_in_season
 
 team_abbrvs = {
   "ARI": "Arizona Diamondbacks",
@@ -46,8 +46,11 @@ def c_to_d(odds):
 
 def get_names(grid):
 	teams = grid.find('div', {'class': 'el-div eventLine-team'}).find_all('div', {'class': 'eventLine-value'})
-	away = team_abbrvs[teams[0].a.text.split()[0].strip()]
-	home = team_abbrvs[teams[1].a.text.split()[0].strip()]
+	try:
+		away = team_abbrvs[teams[0].a.text.split()[0].strip()]
+		home = team_abbrvs[teams[1].a.text.split()[0].strip()]
+	except:
+		return (None, None)
 	return (away, home)
 
 def get_grids(soup):
@@ -67,9 +70,8 @@ def get_money_lines(ml_url, day):
 		game_info['time'] = grid.find('div',{'class', 'el-div eventLine-time'}).text
 		game_info['date'] = day
 
-		try:
-			game_info['away'], game_info['home'] = get_names(grid)
-		except:
+		game_info['away'], game_info['home'] = get_names(grid)
+		if game_info['away'] == None:
 			continue
 
 		lines = grid.findAll('div', {'class': 'el-div eventLine-book'})[2].find_all('div', {'class': 'eventLine-book-value'})
@@ -241,7 +243,7 @@ def scrape_sbr_year(year=2017):
 	return pd.DataFrame(season_games).set_index('key')
 
 if __name__ == '__main__':
-	year = 2018
+	year = 2016
 	df = scrape_sbr_year(year)
 	csv_path = os.path.join('..','data','lines','lines_{}.csv'.format(year))
 	df.drop_duplicates().to_csv(csv_path)
