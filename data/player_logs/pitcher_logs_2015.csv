@@ -3873,33 +3873,33 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 502009,2015-09-15,Mat Latos,2015/09/15/colmlb-lanmlb-1,False,1,1,0,0,4,1,0,0,2
 502009,2015-09-29,Mat Latos,2015/09/29/oakmlb-anamlb-1,False,4,1,1,1,8,0,0,0,2
 502009,2015-10-03,Mat Latos,2015/10/03/anamlb-texmlb-1,False,1,4,1,0,8,2,1,0,1
-501992,2015-04-07,Nate Karns,2015/04/07/balmlb-tbamlb-1,True,10,5,1,0,25,1,4,1,4
-501992,2015-04-12,Nate Karns,2015/04/12/tbamlb-miamlb-1,True,9,8,1,1,26,0,2,0,6
-501992,2015-04-17,Nate Karns,2015/04/17/nyamlb-tbamlb-1,True,4,5,0,0,21,2,4,0,7
-501992,2015-04-22,Nate Karns,2015/04/22/bosmlb-tbamlb-1,True,8,8,5,0,29,2,4,1,3
-501992,2015-04-27,Nate Karns,2015/04/27/tbamlb-nyamlb-1,True,8,2,2,1,19,0,2,0,5
-501992,2015-05-03,Nate Karns,2015/05/03/tbamlb-balmlb-1,True,4,5,4,0,18,0,1,0,4
-501992,2015-05-08,Nate Karns,2015/05/08/texmlb-tbamlb-1,True,9,7,0,0,27,1,2,0,9
-501992,2015-05-13,Nate Karns,2015/05/13/nyamlb-tbamlb-1,True,8,5,3,0,24,0,2,0,6
-501992,2015-05-23,Nate Karns,2015/05/23/oakmlb-tbamlb-1,True,7,7,7,1,24,0,1,0,2
-501992,2015-05-29,Nate Karns,2015/05/29/tbamlb-balmlb-1,True,6,4,2,0,21,0,2,0,7
-501992,2015-06-03,Nate Karns,2015/06/03/tbamlb-anamlb-1,True,6,7,2,1,22,2,3,0,3
-501992,2015-06-09,Nate Karns,2015/06/09/anamlb-tbamlb-1,True,9,10,5,1,30,1,2,0,4
-501992,2015-06-14,Nate Karns,2015/06/14/chamlb-tbamlb-1,True,8,2,6,0,25,0,1,0,8
-501992,2015-06-19,Nate Karns,2015/06/19/tbamlb-clemlb-1,True,8,0,8,0,22,0,1,0,4
-501992,2015-06-24,Nate Karns,2015/06/24/tormlb-tbamlb-1,True,5,7,3,1,23,0,3,0,5
-501992,2015-06-29,Nate Karns,2015/06/29/clemlb-tbamlb-1,True,6,5,6,0,28,0,2,0,7
-501992,2015-07-04,Nate Karns,2015/07/04/tbamlb-nyamlb-1,True,5,7,3,0,27,0,2,0,10
-501992,2015-07-09,Nate Karns,2015/07/09/tbamlb-kcamlb-1,True,9,10,3,2,28,2,0,1,5
-501992,2015-07-21,Nate Karns,2015/07/21/tbamlb-phimlb-1,True,4,4,4,0,19,0,2,1,4
-501992,2015-07-27,Nate Karns,2015/07/27/detmlb-tbamlb-1,True,8,7,3,0,21,1,0,0,3
-501992,2015-08-03,Nate Karns,2015/08/03/tbamlb-chamlb-1,True,1,9,2,1,21,1,2,0,7
-501992,2015-08-08,Nate Karns,2015/08/08/nynmlb-tbamlb-1,True,6,5,4,0,25,2,2,0,8
-501992,2015-08-14,Nate Karns,2015/08/14/tbamlb-texmlb-1,True,6,2,2,0,20,1,5,1,4
-501992,2015-08-19,Nate Karns,2015/08/19/tbamlb-houmlb-1,True,6,4,4,3,24,1,1,0,8
-501992,2015-08-25,Nate Karns,2015/08/25/minmlb-tbamlb-1,True,2,5,3,0,17,1,4,0,3
-501992,2015-08-30,Nate Karns,2015/08/30/kcamlb-tbamlb-1,True,7,5,3,1,22,0,1,0,5
-501992,2015-09-08,Nate Karns,2015/09/08/tbamlb-detmlb-1,False,2,4,2,1,13,1,1,0,4
+501992,2015-04-07,Nathan Karns,2015/04/07/balmlb-tbamlb-1,True,10,5,1,0,25,1,4,1,4
+501992,2015-04-12,Nathan Karns,2015/04/12/tbamlb-miamlb-1,True,9,8,1,1,26,0,2,0,6
+501992,2015-04-17,Nathan Karns,2015/04/17/nyamlb-tbamlb-1,True,4,5,0,0,21,2,4,0,7
+501992,2015-04-22,Nathan Karns,2015/04/22/bosmlb-tbamlb-1,True,8,8,5,0,29,2,4,1,3
+501992,2015-04-27,Nathan Karns,2015/04/27/tbamlb-nyamlb-1,True,8,2,2,1,19,0,2,0,5
+501992,2015-05-03,Nathan Karns,2015/05/03/tbamlb-balmlb-1,True,4,5,4,0,18,0,1,0,4
+501992,2015-05-08,Nathan Karns,2015/05/08/texmlb-tbamlb-1,True,9,7,0,0,27,1,2,0,9
+501992,2015-05-13,Nathan Karns,2015/05/13/nyamlb-tbamlb-1,True,8,5,3,0,24,0,2,0,6
+501992,2015-05-23,Nathan Karns,2015/05/23/oakmlb-tbamlb-1,True,7,7,7,1,24,0,1,0,2
+501992,2015-05-29,Nathan Karns,2015/05/29/tbamlb-balmlb-1,True,6,4,2,0,21,0,2,0,7
+501992,2015-06-03,Nathan Karns,2015/06/03/tbamlb-anamlb-1,True,6,7,2,1,22,2,3,0,3
+501992,2015-06-09,Nathan Karns,2015/06/09/anamlb-tbamlb-1,True,9,10,5,1,30,1,2,0,4
+501992,2015-06-14,Nathan Karns,2015/06/14/chamlb-tbamlb-1,True,8,2,6,0,25,0,1,0,8
+501992,2015-06-19,Nathan Karns,2015/06/19/tbamlb-clemlb-1,True,8,0,8,0,22,0,1,0,4
+501992,2015-06-24,Nathan Karns,2015/06/24/tormlb-tbamlb-1,True,5,7,3,1,23,0,3,0,5
+501992,2015-06-29,Nathan Karns,2015/06/29/clemlb-tbamlb-1,True,6,5,6,0,28,0,2,0,7
+501992,2015-07-04,Nathan Karns,2015/07/04/tbamlb-nyamlb-1,True,5,7,3,0,27,0,2,0,10
+501992,2015-07-09,Nathan Karns,2015/07/09/tbamlb-kcamlb-1,True,9,10,3,2,28,2,0,1,5
+501992,2015-07-21,Nathan Karns,2015/07/21/tbamlb-phimlb-1,True,4,4,4,0,19,0,2,1,4
+501992,2015-07-27,Nathan Karns,2015/07/27/detmlb-tbamlb-1,True,8,7,3,0,21,1,0,0,3
+501992,2015-08-03,Nathan Karns,2015/08/03/tbamlb-chamlb-1,True,1,9,2,1,21,1,2,0,7
+501992,2015-08-08,Nathan Karns,2015/08/08/nynmlb-tbamlb-1,True,6,5,4,0,25,2,2,0,8
+501992,2015-08-14,Nathan Karns,2015/08/14/tbamlb-texmlb-1,True,6,2,2,0,20,1,5,1,4
+501992,2015-08-19,Nathan Karns,2015/08/19/tbamlb-houmlb-1,True,6,4,4,3,24,1,1,0,8
+501992,2015-08-25,Nathan Karns,2015/08/25/minmlb-tbamlb-1,True,2,5,3,0,17,1,4,0,3
+501992,2015-08-30,Nathan Karns,2015/08/30/kcamlb-tbamlb-1,True,7,5,3,1,22,0,1,0,5
+501992,2015-09-08,Nathan Karns,2015/09/08/tbamlb-detmlb-1,False,2,4,2,1,13,1,1,0,4
 521230,2015-04-10,Liam Hendriks,2015/04/10/tormlb-balmlb-1,False,2,0,1,0,3,0,0,0,0
 521230,2015-04-11,Liam Hendriks,2015/04/11/tormlb-balmlb-1,False,1,1,0,0,6,0,0,0,4
 521230,2015-04-14,Liam Hendriks,2015/04/14/tbamlb-tormlb-1,False,2,0,0,0,6,0,1,0,3
@@ -8738,53 +8738,53 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 474699,2015-09-16,Vance Worley,2015/09/16/chnmlb-pitmlb-1,False,0,2,2,1,5,0,0,0,1
 474699,2015-09-17,Vance Worley,2015/09/17/chnmlb-pitmlb-1,False,2,2,1,0,5,0,0,0,0
 474699,2015-09-30,Vance Worley,2015/09/30/slnmlb-pitmlb-2,False,0,1,2,0,6,0,2,0,1
-573046,2015-04-08,,2015/04/08/anamlb-seamlb-1,False,1,1,0,0,3,0,0,0,1
-573046,2015-04-10,,2015/04/10/kcamlb-anamlb-1,False,1,0,0,0,1,0,0,0,0
-573046,2015-04-11,,2015/04/11/kcamlb-anamlb-1,False,0,4,0,1,4,0,0,0,0
-573046,2015-04-14,,2015/04/14/anamlb-texmlb-1,False,1,1,0,0,3,0,0,0,1
-573046,2015-04-18,,2015/04/18/anamlb-houmlb-1,False,0,1,0,0,3,1,1,0,1
-573046,2015-04-19,,2015/04/19/anamlb-houmlb-1,False,2,1,0,0,3,0,0,0,0
-573046,2015-04-20,,2015/04/20/oakmlb-anamlb-1,False,1,1,0,0,3,0,0,0,1
-573046,2015-04-22,,2015/04/22/oakmlb-anamlb-1,False,3,2,1,0,7,0,1,0,0
-573046,2015-04-25,,2015/04/25/texmlb-anamlb-1,False,1,0,0,0,1,0,0,0,0
-573046,2015-04-26,,2015/04/26/texmlb-anamlb-1,False,0,2,0,1,4,0,0,1,1
-573046,2015-04-29,,2015/04/29/anamlb-oakmlb-1,False,0,0,0,0,1,0,0,0,1
-573046,2015-04-30,,2015/04/30/anamlb-oakmlb-1,False,2,2,0,0,4,1,0,0,0
-573046,2015-05-02,,2015/05/02/anamlb-sfnmlb-1,False,0,2,0,0,3,0,0,0,1
-573046,2015-05-04,,2015/05/04/seamlb-anamlb-1,False,0,1,1,0,3,0,0,0,1
-573046,2015-05-09,,2015/05/09/houmlb-anamlb-1,False,2,0,0,0,3,0,0,0,1
-573046,2015-05-13,,2015/05/13/colmlb-anamlb-1,False,1,1,1,0,5,0,0,0,2
-573046,2015-05-17,,2015/05/17/anamlb-balmlb-1,False,1,1,1,0,3,0,0,0,0
-573046,2015-05-18,,2015/05/18/anamlb-tormlb-1,False,0,0,1,0,5,0,2,0,1
-573046,2015-05-22,,2015/05/22/anamlb-bosmlb-1,False,1,2,0,1,4,0,0,0,1
-573046,2015-05-23,,2015/05/23/anamlb-bosmlb-1,False,0,0,0,0,1,0,1,0,0
-573046,2015-07-03,,2015/07/03/anamlb-texmlb-1,False,2,2,0,0,4,1,0,0,0
-573046,2015-07-07,,2015/07/07/anamlb-colmlb-1,False,0,1,1,0,5,0,1,0,2
-573046,2015-07-09,,2015/07/09/anamlb-seamlb-1,False,1,0,1,0,3,0,0,0,0
-573046,2015-07-11,,2015/07/11/anamlb-seamlb-1,False,0,0,2,0,3,0,1,0,0
-573046,2015-07-20,,2015/07/20/bosmlb-anamlb-1,False,2,1,1,0,6,0,0,0,2
-573046,2015-07-23,,2015/07/23/minmlb-anamlb-1,False,0,1,0,0,3,0,0,0,2
-573046,2015-07-24,,2015/07/24/texmlb-anamlb-1,False,0,1,0,0,2,0,0,0,0
-573046,2015-07-25,,2015/07/25/texmlb-anamlb-1,False,1,0,0,0,3,0,0,0,2
-573046,2015-07-28,,2015/07/28/anamlb-houmlb-1,False,1,5,0,1,8,0,0,0,2
-573046,2015-09-01,,2015/09/01/anamlb-oakmlb-1,False,0,1,0,0,1,0,0,0,0
-573046,2015-09-05,,2015/09/05/texmlb-anamlb-1,False,1,0,0,0,3,0,1,0,1
-573046,2015-09-06,,2015/09/06/texmlb-anamlb-1,False,1,0,0,0,3,0,0,0,2
-573046,2015-09-07,,2015/09/07/lanmlb-anamlb-1,False,0,0,0,0,1,0,0,0,1
-573046,2015-09-13,,2015/09/13/houmlb-anamlb-1,False,0,0,0,0,1,0,0,0,1
-573046,2015-09-14,,2015/09/14/anamlb-seamlb-1,False,0,0,0,0,2,0,0,0,2
-573046,2015-09-16,,2015/09/16/anamlb-seamlb-1,False,0,0,0,0,1,0,0,0,1
-573046,2015-09-17,,2015/09/17/anamlb-minmlb-1,False,1,0,0,0,5,0,0,1,3
-573046,2015-09-19,,2015/09/19/anamlb-minmlb-1,False,0,0,0,0,2,0,0,0,2
-573046,2015-09-21,,2015/09/21/anamlb-houmlb-1,False,0,2,1,1,5,0,0,0,2
-573046,2015-09-23,,2015/09/23/anamlb-houmlb-1,False,2,2,0,1,4,0,0,0,0
-573046,2015-09-25,,2015/09/25/seamlb-anamlb-1,False,3,0,1,0,4,0,0,0,0
-573046,2015-09-26,,2015/09/26/seamlb-anamlb-1,False,2,0,0,0,3,0,0,0,0
-573046,2015-09-27,,2015/09/27/seamlb-anamlb-1,False,0,1,0,0,3,0,0,0,2
-573046,2015-09-30,,2015/09/30/oakmlb-anamlb-1,False,1,0,1,0,4,0,1,0,1
-573046,2015-10-02,,2015/10/02/anamlb-texmlb-1,False,1,0,0,0,1,0,0,0,0
-573046,2015-10-03,,2015/10/03/anamlb-texmlb-1,False,0,1,2,1,3,0,0,0,0
-573046,2015-10-04,,2015/10/04/anamlb-texmlb-1,False,1,1,2,0,4,0,0,0,0
+573046,2015-04-08,Mike Morin,2015/04/08/anamlb-seamlb-1,False,1,1,0,0,3,0,0,0,1
+573046,2015-04-10,Mike Morin,2015/04/10/kcamlb-anamlb-1,False,1,0,0,0,1,0,0,0,0
+573046,2015-04-11,Mike Morin,2015/04/11/kcamlb-anamlb-1,False,0,4,0,1,4,0,0,0,0
+573046,2015-04-14,Mike Morin,2015/04/14/anamlb-texmlb-1,False,1,1,0,0,3,0,0,0,1
+573046,2015-04-18,Mike Morin,2015/04/18/anamlb-houmlb-1,False,0,1,0,0,3,1,1,0,1
+573046,2015-04-19,Mike Morin,2015/04/19/anamlb-houmlb-1,False,2,1,0,0,3,0,0,0,0
+573046,2015-04-20,Mike Morin,2015/04/20/oakmlb-anamlb-1,False,1,1,0,0,3,0,0,0,1
+573046,2015-04-22,Mike Morin,2015/04/22/oakmlb-anamlb-1,False,3,2,1,0,7,0,1,0,0
+573046,2015-04-25,Mike Morin,2015/04/25/texmlb-anamlb-1,False,1,0,0,0,1,0,0,0,0
+573046,2015-04-26,Mike Morin,2015/04/26/texmlb-anamlb-1,False,0,2,0,1,4,0,0,1,1
+573046,2015-04-29,Mike Morin,2015/04/29/anamlb-oakmlb-1,False,0,0,0,0,1,0,0,0,1
+573046,2015-04-30,Mike Morin,2015/04/30/anamlb-oakmlb-1,False,2,2,0,0,4,1,0,0,0
+573046,2015-05-02,Mike Morin,2015/05/02/anamlb-sfnmlb-1,False,0,2,0,0,3,0,0,0,1
+573046,2015-05-04,Mike Morin,2015/05/04/seamlb-anamlb-1,False,0,1,1,0,3,0,0,0,1
+573046,2015-05-09,Mike Morin,2015/05/09/houmlb-anamlb-1,False,2,0,0,0,3,0,0,0,1
+573046,2015-05-13,Mike Morin,2015/05/13/colmlb-anamlb-1,False,1,1,1,0,5,0,0,0,2
+573046,2015-05-17,Mike Morin,2015/05/17/anamlb-balmlb-1,False,1,1,1,0,3,0,0,0,0
+573046,2015-05-18,Mike Morin,2015/05/18/anamlb-tormlb-1,False,0,0,1,0,5,0,2,0,1
+573046,2015-05-22,Mike Morin,2015/05/22/anamlb-bosmlb-1,False,1,2,0,1,4,0,0,0,1
+573046,2015-05-23,Mike Morin,2015/05/23/anamlb-bosmlb-1,False,0,0,0,0,1,0,1,0,0
+573046,2015-07-03,Mike Morin,2015/07/03/anamlb-texmlb-1,False,2,2,0,0,4,1,0,0,0
+573046,2015-07-07,Mike Morin,2015/07/07/anamlb-colmlb-1,False,0,1,1,0,5,0,1,0,2
+573046,2015-07-09,Mike Morin,2015/07/09/anamlb-seamlb-1,False,1,0,1,0,3,0,0,0,0
+573046,2015-07-11,Mike Morin,2015/07/11/anamlb-seamlb-1,False,0,0,2,0,3,0,1,0,0
+573046,2015-07-20,Mike Morin,2015/07/20/bosmlb-anamlb-1,False,2,1,1,0,6,0,0,0,2
+573046,2015-07-23,Mike Morin,2015/07/23/minmlb-anamlb-1,False,0,1,0,0,3,0,0,0,2
+573046,2015-07-24,Mike Morin,2015/07/24/texmlb-anamlb-1,False,0,1,0,0,2,0,0,0,0
+573046,2015-07-25,Mike Morin,2015/07/25/texmlb-anamlb-1,False,1,0,0,0,3,0,0,0,2
+573046,2015-07-28,Mike Morin,2015/07/28/anamlb-houmlb-1,False,1,5,0,1,8,0,0,0,2
+573046,2015-09-01,Mike Morin,2015/09/01/anamlb-oakmlb-1,False,0,1,0,0,1,0,0,0,0
+573046,2015-09-05,Mike Morin,2015/09/05/texmlb-anamlb-1,False,1,0,0,0,3,0,1,0,1
+573046,2015-09-06,Mike Morin,2015/09/06/texmlb-anamlb-1,False,1,0,0,0,3,0,0,0,2
+573046,2015-09-07,Mike Morin,2015/09/07/lanmlb-anamlb-1,False,0,0,0,0,1,0,0,0,1
+573046,2015-09-13,Mike Morin,2015/09/13/houmlb-anamlb-1,False,0,0,0,0,1,0,0,0,1
+573046,2015-09-14,Mike Morin,2015/09/14/anamlb-seamlb-1,False,0,0,0,0,2,0,0,0,2
+573046,2015-09-16,Mike Morin,2015/09/16/anamlb-seamlb-1,False,0,0,0,0,1,0,0,0,1
+573046,2015-09-17,Mike Morin,2015/09/17/anamlb-minmlb-1,False,1,0,0,0,5,0,0,1,3
+573046,2015-09-19,Mike Morin,2015/09/19/anamlb-minmlb-1,False,0,0,0,0,2,0,0,0,2
+573046,2015-09-21,Mike Morin,2015/09/21/anamlb-houmlb-1,False,0,2,1,1,5,0,0,0,2
+573046,2015-09-23,Mike Morin,2015/09/23/anamlb-houmlb-1,False,2,2,0,1,4,0,0,0,0
+573046,2015-09-25,Mike Morin,2015/09/25/seamlb-anamlb-1,False,3,0,1,0,4,0,0,0,0
+573046,2015-09-26,Mike Morin,2015/09/26/seamlb-anamlb-1,False,2,0,0,0,3,0,0,0,0
+573046,2015-09-27,Mike Morin,2015/09/27/seamlb-anamlb-1,False,0,1,0,0,3,0,0,0,2
+573046,2015-09-30,Mike Morin,2015/09/30/oakmlb-anamlb-1,False,1,0,1,0,4,0,1,0,1
+573046,2015-10-02,Mike Morin,2015/10/02/anamlb-texmlb-1,False,1,0,0,0,1,0,0,0,0
+573046,2015-10-03,Mike Morin,2015/10/03/anamlb-texmlb-1,False,0,1,2,1,3,0,0,0,0
+573046,2015-10-04,Mike Morin,2015/10/04/anamlb-texmlb-1,False,1,1,2,0,4,0,0,0,0
 572020,2015-04-07,James Paxton,2015/04/07/anamlb-seamlb-1,True,7,7,3,0,23,1,1,0,5
 572020,2015-04-13,James Paxton,2015/04/13/seamlb-lanmlb-1,True,8,8,3,0,27,1,2,0,6
 572020,2015-04-19,James Paxton,2015/04/19/texmlb-seamlb-1,True,10,5,2,0,19,1,0,0,1
@@ -10203,29 +10203,29 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 450306,2015-06-03,Jason Vargas,2015/06/03/clemlb-kcamlb-1,True,7,8,6,0,24,0,0,0,3
 450306,2015-06-08,Jason Vargas,2015/06/08/kcamlb-minmlb-1,True,9,5,5,0,22,0,0,1,2
 450306,2015-07-21,Jason Vargas,2015/07/21/pitmlb-kcamlb-1,True,1,2,0,1,6,0,1,0,2
-544836,2015-05-23,,2015/05/23/oakmlb-tbamlb-1,False,3,3,0,0,14,0,5,0,3
-544836,2015-06-09,,2015/06/09/anamlb-tbamlb-1,False,7,2,2,0,13,0,0,0,2
-544836,2015-06-15,,2015/06/15/wasmlb-tbamlb-1,False,1,1,0,0,3,0,0,0,1
-544836,2015-06-16,,2015/06/16/wasmlb-tbamlb-1,False,4,2,4,0,12,0,1,0,1
-544836,2015-06-22,,2015/06/22/tormlb-tbamlb-1,False,3,1,2,0,10,0,1,0,3
-544836,2015-08-17,,2015/08/17/tbamlb-houmlb-1,False,1,1,0,0,5,0,1,0,2
-544836,2015-08-23,,2015/08/23/tbamlb-oakmlb-1,False,1,1,0,0,3,0,0,0,1
-544836,2015-08-25,,2015/08/25/minmlb-tbamlb-1,False,1,1,2,0,7,0,0,0,3
-544836,2015-08-26,,2015/08/26/minmlb-tbamlb-1,False,0,2,0,0,4,0,0,0,2
-544836,2015-08-29,,2015/08/29/kcamlb-tbamlb-1,False,6,3,1,0,12,0,0,0,2
-544836,2015-09-04,,2015/09/04/tbamlb-nyamlb-1,False,2,1,0,0,4,0,0,0,1
-544836,2015-09-06,,2015/09/06/tbamlb-nyamlb-1,False,1,1,0,0,2,0,0,0,0
-544836,2015-09-09,,2015/09/09/tbamlb-detmlb-1,False,1,1,0,0,4,0,0,0,2
-544836,2015-09-11,,2015/09/11/bosmlb-tbamlb-1,False,1,0,1,0,2,0,0,0,0
-544836,2015-09-13,,2015/09/13/bosmlb-tbamlb-1,False,2,2,2,1,7,0,0,0,1
-544836,2015-09-15,,2015/09/15/nyamlb-tbamlb-1,False,0,1,1,0,4,0,1,0,1
-544836,2015-09-21,,2015/09/21/tbamlb-bosmlb-1,False,2,1,0,0,5,0,1,0,1
-544836,2015-09-22,,2015/09/22/tbamlb-bosmlb-1,False,0,0,1,0,1,0,0,0,0
-544836,2015-09-25,,2015/09/25/tbamlb-tormlb-1,False,1,0,1,0,6,0,1,0,2
-544836,2015-09-27,,2015/09/27/tbamlb-tormlb-1,False,1,1,1,1,7,0,1,0,2
-544836,2015-09-30,,2015/09/30/miamlb-tbamlb-1,False,2,1,0,0,5,0,1,0,1
-544836,2015-10-02,,2015/10/02/tormlb-tbamlb-1,False,1,2,0,0,3,0,0,0,0
-544836,2015-10-04,,2015/10/04/tormlb-tbamlb-1,False,3,2,2,0,7,1,0,0,0
+544836,2015-05-23,Enny Romero,2015/05/23/oakmlb-tbamlb-1,False,3,3,0,0,14,0,5,0,3
+544836,2015-06-09,Enny Romero,2015/06/09/anamlb-tbamlb-1,False,7,2,2,0,13,0,0,0,2
+544836,2015-06-15,Enny Romero,2015/06/15/wasmlb-tbamlb-1,False,1,1,0,0,3,0,0,0,1
+544836,2015-06-16,Enny Romero,2015/06/16/wasmlb-tbamlb-1,False,4,2,4,0,12,0,1,0,1
+544836,2015-06-22,Enny Romero,2015/06/22/tormlb-tbamlb-1,False,3,1,2,0,10,0,1,0,3
+544836,2015-08-17,Enny Romero,2015/08/17/tbamlb-houmlb-1,False,1,1,0,0,5,0,1,0,2
+544836,2015-08-23,Enny Romero,2015/08/23/tbamlb-oakmlb-1,False,1,1,0,0,3,0,0,0,1
+544836,2015-08-25,Enny Romero,2015/08/25/minmlb-tbamlb-1,False,1,1,2,0,7,0,0,0,3
+544836,2015-08-26,Enny Romero,2015/08/26/minmlb-tbamlb-1,False,0,2,0,0,4,0,0,0,2
+544836,2015-08-29,Enny Romero,2015/08/29/kcamlb-tbamlb-1,False,6,3,1,0,12,0,0,0,2
+544836,2015-09-04,Enny Romero,2015/09/04/tbamlb-nyamlb-1,False,2,1,0,0,4,0,0,0,1
+544836,2015-09-06,Enny Romero,2015/09/06/tbamlb-nyamlb-1,False,1,1,0,0,2,0,0,0,0
+544836,2015-09-09,Enny Romero,2015/09/09/tbamlb-detmlb-1,False,1,1,0,0,4,0,0,0,2
+544836,2015-09-11,Enny Romero,2015/09/11/bosmlb-tbamlb-1,False,1,0,1,0,2,0,0,0,0
+544836,2015-09-13,Enny Romero,2015/09/13/bosmlb-tbamlb-1,False,2,2,2,1,7,0,0,0,1
+544836,2015-09-15,Enny Romero,2015/09/15/nyamlb-tbamlb-1,False,0,1,1,0,4,0,1,0,1
+544836,2015-09-21,Enny Romero,2015/09/21/tbamlb-bosmlb-1,False,2,1,0,0,5,0,1,0,1
+544836,2015-09-22,Enny Romero,2015/09/22/tbamlb-bosmlb-1,False,0,0,1,0,1,0,0,0,0
+544836,2015-09-25,Enny Romero,2015/09/25/tbamlb-tormlb-1,False,1,0,1,0,6,0,1,0,2
+544836,2015-09-27,Enny Romero,2015/09/27/tbamlb-tormlb-1,False,1,1,1,1,7,0,1,0,2
+544836,2015-09-30,Enny Romero,2015/09/30/miamlb-tbamlb-1,False,2,1,0,0,5,0,1,0,1
+544836,2015-10-02,Enny Romero,2015/10/02/tormlb-tbamlb-1,False,1,2,0,0,3,0,0,0,0
+544836,2015-10-04,Enny Romero,2015/10/04/tormlb-tbamlb-1,False,3,2,2,0,7,1,0,0,0
 501822,2015-04-06,Chris Hatcher,2015/04/06/sdnmlb-lanmlb-1,False,1,0,0,0,3,0,0,1,1
 501822,2015-04-07,Chris Hatcher,2015/04/07/sdnmlb-lanmlb-1,False,3,0,0,0,4,0,0,0,0
 501822,2015-04-12,Chris Hatcher,2015/04/12/lanmlb-arimlb-1,False,0,0,3,0,5,0,1,0,1
@@ -11228,26 +11228,26 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 543557,2015-08-14,Mike Montgomery,2015/08/14/seamlb-bosmlb-1,True,10,3,3,0,18,2,1,0,1
 543557,2015-08-19,Mike Montgomery,2015/08/19/seamlb-texmlb-1,True,14,2,3,1,28,0,4,1,3
 543557,2015-08-25,Mike Montgomery,2015/08/25/oakmlb-seamlb-1,True,3,4,4,0,12,1,1,0,0
-433584,2015-04-11,Fausto Carmona,2015/04/11/houmlb-texmlb-1,True,10,4,3,1,23,0,4,0,2
-433584,2015-04-17,Fausto Carmona,2015/04/17/anamlb-houmlb-1,True,9,5,1,0,22,1,1,0,6
-433584,2015-04-22,Fausto Carmona,2015/04/22/houmlb-seamlb-1,True,14,6,4,0,27,1,1,0,2
-433584,2015-04-28,Fausto Carmona,2015/04/28/houmlb-sdnmlb-1,True,9,4,4,0,25,2,1,0,6
-433584,2015-05-03,Fausto Carmona,2015/05/03/seamlb-houmlb-1,True,7,8,7,1,25,0,2,0,1
-433584,2015-05-08,Fausto Carmona,2015/05/08/houmlb-anamlb-1,True,16,5,4,0,29,0,0,1,3
-433584,2015-05-14,Fausto Carmona,2015/05/14/tormlb-houmlb-1,True,13,8,2,2,26,2,3,0,0
-433584,2015-05-19,Fausto Carmona,2015/05/19/oakmlb-houmlb-1,True,9,7,4,0,25,1,2,0,3
-433584,2015-05-24,Fausto Carmona,2015/05/24/houmlb-detmlb-1,True,8,4,4,0,25,0,3,0,5
-433584,2015-05-31,Fausto Carmona,2015/05/31/chamlb-houmlb-1,True,15,6,3,0,27,0,1,0,2
-433584,2015-06-05,Fausto Carmona,2015/06/05/houmlb-tormlb-1,True,8,9,5,1,26,2,2,0,1
-433584,2015-06-13,Fausto Carmona,2015/06/13/seamlb-houmlb-1,False,5,3,2,1,15,0,0,0,5
-433584,2015-06-19,Fausto Carmona,2015/06/19/houmlb-seamlb-1,False,4,3,2,0,11,0,1,0,1
-433584,2015-06-23,Fausto Carmona,2015/06/23/houmlb-anamlb-1,False,1,2,2,0,5,0,0,0,0
-433584,2015-06-26,Fausto Carmona,2015/06/26/nyamlb-houmlb-1,False,1,1,2,0,5,0,0,0,1
-433584,2015-06-27,Fausto Carmona,2015/06/27/nyamlb-houmlb-1,False,7,2,2,0,16,0,3,0,2
-433584,2015-07-03,Fausto Carmona,2015/07/03/houmlb-bosmlb-1,False,3,0,0,0,3,0,0,0,0
-433584,2015-07-04,Fausto Carmona,2015/07/04/houmlb-bosmlb-1,False,6,4,1,0,14,0,2,0,1
-433584,2015-07-07,Fausto Carmona,2015/07/07/houmlb-clemlb-1,False,2,0,2,0,5,0,0,0,1
-433584,2015-07-19,Fausto Carmona,2015/07/19/texmlb-houmlb-1,False,1,1,1,0,3,0,0,0,0
+433584,2015-04-11,Roberto Hernandez,2015/04/11/houmlb-texmlb-1,True,10,4,3,1,23,0,4,0,2
+433584,2015-04-17,Roberto Hernandez,2015/04/17/anamlb-houmlb-1,True,9,5,1,0,22,1,1,0,6
+433584,2015-04-22,Roberto Hernandez,2015/04/22/houmlb-seamlb-1,True,14,6,4,0,27,1,1,0,2
+433584,2015-04-28,Roberto Hernandez,2015/04/28/houmlb-sdnmlb-1,True,9,4,4,0,25,2,1,0,6
+433584,2015-05-03,Roberto Hernandez,2015/05/03/seamlb-houmlb-1,True,7,8,7,1,25,0,2,0,1
+433584,2015-05-08,Roberto Hernandez,2015/05/08/houmlb-anamlb-1,True,16,5,4,0,29,0,0,1,3
+433584,2015-05-14,Roberto Hernandez,2015/05/14/tormlb-houmlb-1,True,13,8,2,2,26,2,3,0,0
+433584,2015-05-19,Roberto Hernandez,2015/05/19/oakmlb-houmlb-1,True,9,7,4,0,25,1,2,0,3
+433584,2015-05-24,Roberto Hernandez,2015/05/24/houmlb-detmlb-1,True,8,4,4,0,25,0,3,0,5
+433584,2015-05-31,Roberto Hernandez,2015/05/31/chamlb-houmlb-1,True,15,6,3,0,27,0,1,0,2
+433584,2015-06-05,Roberto Hernandez,2015/06/05/houmlb-tormlb-1,True,8,9,5,1,26,2,2,0,1
+433584,2015-06-13,Roberto Hernandez,2015/06/13/seamlb-houmlb-1,False,5,3,2,1,15,0,0,0,5
+433584,2015-06-19,Roberto Hernandez,2015/06/19/houmlb-seamlb-1,False,4,3,2,0,11,0,1,0,1
+433584,2015-06-23,Roberto Hernandez,2015/06/23/houmlb-anamlb-1,False,1,2,2,0,5,0,0,0,0
+433584,2015-06-26,Roberto Hernandez,2015/06/26/nyamlb-houmlb-1,False,1,1,2,0,5,0,0,0,1
+433584,2015-06-27,Roberto Hernandez,2015/06/27/nyamlb-houmlb-1,False,7,2,2,0,16,0,3,0,2
+433584,2015-07-03,Roberto Hernandez,2015/07/03/houmlb-bosmlb-1,False,3,0,0,0,3,0,0,0,0
+433584,2015-07-04,Roberto Hernandez,2015/07/04/houmlb-bosmlb-1,False,6,4,1,0,14,0,2,0,1
+433584,2015-07-07,Roberto Hernandez,2015/07/07/houmlb-clemlb-1,False,2,0,2,0,5,0,0,0,1
+433584,2015-07-19,Roberto Hernandez,2015/07/19/texmlb-houmlb-1,False,1,1,1,0,3,0,0,0,0
 503449,2015-04-08,Wily Peralta,2015/04/08/colmlb-milmlb-1,True,10,9,5,1,26,1,0,0,2
 503449,2015-04-15,Wily Peralta,2015/04/15/milmlb-slnmlb-1,True,10,7,5,0,26,0,1,0,1
 503449,2015-04-20,Wily Peralta,2015/04/20/cinmlb-milmlb-1,True,11,8,4,2,31,2,3,0,5
@@ -11961,32 +11961,32 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 506693,2015-04-12,Henderson Alvarez,2015/04/12/tbamlb-miamlb-1,True,11,2,4,0,22,1,1,0,3
 506693,2015-05-17,Henderson Alvarez,2015/05/17/atlmlb-miamlb-1,True,10,6,6,1,27,0,2,0,2
 506693,2015-05-22,Henderson Alvarez,2015/05/22/balmlb-miamlb-1,True,10,5,3,1,25,0,4,0,2
-594840,2015-04-22,,2015/04/22/slnmlb-wasmlb-1,False,3,0,0,0,4,0,1,0,0
-594840,2015-04-24,,2015/04/24/wasmlb-miamlb-1,False,1,0,0,0,1,0,0,0,0
-594840,2015-04-26,,2015/04/26/wasmlb-miamlb-1,False,3,0,0,0,4,0,0,0,1
-594840,2015-04-27,,2015/04/27/wasmlb-atlmlb-1,False,1,0,0,0,1,0,0,0,0
-594840,2015-04-29,,2015/04/29/wasmlb-atlmlb-1,False,1,0,0,0,3,0,0,0,2
-594840,2015-05-02,,2015/05/02/wasmlb-nynmlb-1,False,1,0,0,0,1,0,0,0,0
-594840,2015-05-04,,2015/05/04/miamlb-wasmlb-1,False,1,0,1,0,4,0,1,0,1
-594840,2015-05-08,,2015/05/08/atlmlb-wasmlb-1,False,2,0,1,0,3,0,0,0,0
-594840,2015-05-10,,2015/05/10/atlmlb-wasmlb-1,False,1,2,2,1,5,0,0,0,0
-594840,2015-05-12,,2015/05/12/wasmlb-arimlb-1,False,2,0,2,0,5,0,0,0,1
-594840,2015-05-14,,2015/05/14/wasmlb-sdnmlb-1,False,4,2,0,0,8,0,1,0,1
-594840,2015-05-19,,2015/05/19/nyamlb-wasmlb-1,False,0,0,1,0,4,0,1,0,2
-594840,2015-05-20,,2015/05/20/nyamlb-wasmlb-1,False,2,0,0,0,5,0,2,0,1
-594840,2015-05-24,,2015/05/24/phimlb-wasmlb-1,False,1,0,0,0,2,0,0,0,1
-594840,2015-05-26,,2015/05/26/wasmlb-chnmlb-1,False,2,2,0,0,4,0,0,0,0
-594840,2015-05-27,,2015/05/27/wasmlb-chnmlb-1,False,0,0,1,0,2,0,0,1,0
-594840,2015-05-31,,2015/05/31/wasmlb-cinmlb-1,False,1,0,2,0,5,0,2,0,0
-594840,2015-09-02,,2015/09/02/wasmlb-slnmlb-1,False,1,0,0,0,1,0,0,0,0
-594840,2015-09-05,,2015/09/05/atlmlb-wasmlb-1,False,2,1,2,0,5,0,0,0,0
-594840,2015-09-12,,2015/09/12/wasmlb-miamlb-1,False,2,1,0,0,3,0,0,0,0
-594840,2015-09-17,,2015/09/17/miamlb-wasmlb-1,False,0,0,0,0,1,0,0,0,1
-594840,2015-09-20,,2015/09/20/miamlb-wasmlb-1,False,1,1,2,1,5,0,0,0,1
-594840,2015-09-25,,2015/09/25/phimlb-wasmlb-1,False,1,2,0,0,4,0,0,0,1
-594840,2015-09-27,,2015/09/27/phimlb-wasmlb-1,False,1,0,0,0,1,0,0,0,0
-594840,2015-09-29,,2015/09/29/wasmlb-atlmlb-1,False,0,0,0,0,1,0,0,0,1
-594840,2015-10-03,,2015/10/03/wasmlb-nynmlb-1,False,2,0,0,0,2,0,0,0,0
+594840,2015-04-22,Matt Grace,2015/04/22/slnmlb-wasmlb-1,False,3,0,0,0,4,0,1,0,0
+594840,2015-04-24,Matt Grace,2015/04/24/wasmlb-miamlb-1,False,1,0,0,0,1,0,0,0,0
+594840,2015-04-26,Matt Grace,2015/04/26/wasmlb-miamlb-1,False,3,0,0,0,4,0,0,0,1
+594840,2015-04-27,Matt Grace,2015/04/27/wasmlb-atlmlb-1,False,1,0,0,0,1,0,0,0,0
+594840,2015-04-29,Matt Grace,2015/04/29/wasmlb-atlmlb-1,False,1,0,0,0,3,0,0,0,2
+594840,2015-05-02,Matt Grace,2015/05/02/wasmlb-nynmlb-1,False,1,0,0,0,1,0,0,0,0
+594840,2015-05-04,Matt Grace,2015/05/04/miamlb-wasmlb-1,False,1,0,1,0,4,0,1,0,1
+594840,2015-05-08,Matt Grace,2015/05/08/atlmlb-wasmlb-1,False,2,0,1,0,3,0,0,0,0
+594840,2015-05-10,Matt Grace,2015/05/10/atlmlb-wasmlb-1,False,1,2,2,1,5,0,0,0,0
+594840,2015-05-12,Matt Grace,2015/05/12/wasmlb-arimlb-1,False,2,0,2,0,5,0,0,0,1
+594840,2015-05-14,Matt Grace,2015/05/14/wasmlb-sdnmlb-1,False,4,2,0,0,8,0,1,0,1
+594840,2015-05-19,Matt Grace,2015/05/19/nyamlb-wasmlb-1,False,0,0,1,0,4,0,1,0,2
+594840,2015-05-20,Matt Grace,2015/05/20/nyamlb-wasmlb-1,False,2,0,0,0,5,0,2,0,1
+594840,2015-05-24,Matt Grace,2015/05/24/phimlb-wasmlb-1,False,1,0,0,0,2,0,0,0,1
+594840,2015-05-26,Matt Grace,2015/05/26/wasmlb-chnmlb-1,False,2,2,0,0,4,0,0,0,0
+594840,2015-05-27,Matt Grace,2015/05/27/wasmlb-chnmlb-1,False,0,0,1,0,2,0,0,1,0
+594840,2015-05-31,Matt Grace,2015/05/31/wasmlb-cinmlb-1,False,1,0,2,0,5,0,2,0,0
+594840,2015-09-02,Matt Grace,2015/09/02/wasmlb-slnmlb-1,False,1,0,0,0,1,0,0,0,0
+594840,2015-09-05,Matt Grace,2015/09/05/atlmlb-wasmlb-1,False,2,1,2,0,5,0,0,0,0
+594840,2015-09-12,Matt Grace,2015/09/12/wasmlb-miamlb-1,False,2,1,0,0,3,0,0,0,0
+594840,2015-09-17,Matt Grace,2015/09/17/miamlb-wasmlb-1,False,0,0,0,0,1,0,0,0,1
+594840,2015-09-20,Matt Grace,2015/09/20/miamlb-wasmlb-1,False,1,1,2,1,5,0,0,0,1
+594840,2015-09-25,Matt Grace,2015/09/25/phimlb-wasmlb-1,False,1,2,0,0,4,0,0,0,1
+594840,2015-09-27,Matt Grace,2015/09/27/phimlb-wasmlb-1,False,1,0,0,0,1,0,0,0,0
+594840,2015-09-29,Matt Grace,2015/09/29/wasmlb-atlmlb-1,False,0,0,0,0,1,0,0,0,1
+594840,2015-10-03,Matt Grace,2015/10/03/wasmlb-nynmlb-1,False,2,0,0,0,2,0,0,0,0
 457768,2015-04-07,Bryan Morris,2015/04/07/atlmlb-miamlb-1,False,3,0,0,0,3,0,0,0,0
 457768,2015-04-08,Bryan Morris,2015/04/08/atlmlb-miamlb-1,False,1,1,1,0,3,0,0,0,0
 457768,2015-04-10,Bryan Morris,2015/04/10/tbamlb-miamlb-1,False,1,0,0,0,4,0,1,0,2
@@ -12642,6 +12642,13 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 450212,2015-09-23,Pat Neshek,2015/09/23/anamlb-houmlb-1,False,0,2,1,0,3,0,0,0,0
 450212,2015-09-29,Pat Neshek,2015/09/29/houmlb-seamlb-1,False,0,1,2,0,4,0,1,0,0
 450212,2015-10-04,Pat Neshek,2015/10/04/houmlb-arimlb-1,False,1,1,2,0,5,0,0,0,1
+460283,2015-04-06,Jerry Blevins,2015/04/06/nynmlb-wasmlb-1,False,0,0,1,0,1,0,0,0,0
+460283,2015-04-10,Jerry Blevins,2015/04/10/nynmlb-atlmlb-1,False,0,0,0,0,1,0,0,0,1
+460283,2015-04-12,Jerry Blevins,2015/04/12/nynmlb-atlmlb-1,False,1,0,0,0,3,0,0,0,2
+460283,2015-04-13,Jerry Blevins,2015/04/13/phimlb-nynmlb-1,False,1,1,0,0,3,0,0,0,1
+460283,2015-04-16,Jerry Blevins,2015/04/16/miamlb-nynmlb-1,False,2,0,0,0,2,0,0,0,0
+460283,2015-04-17,Jerry Blevins,2015/04/17/miamlb-nynmlb-1,False,2,0,1,0,3,0,0,0,0
+460283,2015-04-19,Jerry Blevins,2015/04/19/miamlb-nynmlb-1,False,0,0,2,0,2,0,0,0,0
 544993,2015-04-06,Steve Geltz,2015/04/06/balmlb-tbamlb-1,False,0,0,0,0,4,0,0,0,4
 544993,2015-04-07,Steve Geltz,2015/04/07/balmlb-tbamlb-1,False,2,0,0,0,3,0,1,0,0
 544993,2015-04-10,Steve Geltz,2015/04/10/tbamlb-miamlb-1,True,6,0,1,0,9,0,1,0,1
@@ -12791,42 +12798,42 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 543766,2015-09-28,Bryan Shaw,2015/09/28/minmlb-clemlb-1,False,1,1,0,0,3,0,0,0,1
 543766,2015-10-01,Bryan Shaw,2015/10/01/minmlb-clemlb-1,False,3,0,0,0,4,0,1,0,0
 543766,2015-10-04,Bryan Shaw,2015/10/04/bosmlb-clemlb-1,False,2,1,1,0,5,0,0,0,1
-475054,2015-05-24,,2015/05/24/balmlb-miamlb-1,False,2,1,1,0,6,0,0,0,2
-475054,2015-05-26,,2015/05/26/houmlb-balmlb-1,False,2,1,1,0,6,0,2,0,0
-475054,2015-05-28,,2015/05/28/chamlb-balmlb-1,False,3,1,1,0,6,0,0,0,1
-475054,2015-05-30,,2015/05/30/tbamlb-balmlb-1,False,1,0,1,0,5,0,1,0,1
-475054,2015-05-31,,2015/05/31/tbamlb-balmlb-1,False,1,0,0,0,5,0,0,0,4
-475054,2015-06-02,,2015/06/02/balmlb-houmlb-1,False,3,0,1,0,7,0,0,0,3
-475054,2015-06-07,,2015/06/07/balmlb-clemlb-1,False,3,1,0,0,5,0,0,0,1
-475054,2015-06-09,,2015/06/09/bosmlb-balmlb-1,False,1,0,0,0,6,0,1,1,2
-475054,2015-06-11,,2015/06/11/bosmlb-balmlb-1,False,0,3,0,0,4,1,0,0,1
-475054,2015-06-13,,2015/06/13/nyamlb-balmlb-1,False,2,3,2,0,9,0,0,0,2
-475054,2015-06-17,,2015/06/17/balmlb-phimlb-1,False,1,1,0,0,2,0,0,0,0
-475054,2015-06-20,,2015/06/20/balmlb-tormlb-1,False,0,2,0,0,5,0,1,0,2
-475054,2015-06-21,,2015/06/21/balmlb-tormlb-1,False,2,0,0,0,4,0,1,0,1
-475054,2015-06-23,,2015/06/23/balmlb-bosmlb-1,False,1,1,0,1,3,0,0,0,1
-475054,2015-06-28,,2015/06/28/clemlb-balmlb-1,False,0,2,0,0,3,0,1,0,0
-475054,2015-06-30,,2015/06/30/texmlb-balmlb-1,False,3,1,1,0,6,1,0,0,1
-475054,2015-07-02,,2015/07/02/texmlb-balmlb-1,False,3,1,0,0,7,0,1,0,1
-475054,2015-07-05,,2015/07/05/balmlb-chamlb-1,False,2,1,1,0,7,0,0,0,3
-475054,2015-07-08,,2015/07/08/balmlb-minmlb-1,False,0,0,2,0,6,0,2,0,2
-475054,2015-07-11,,2015/07/11/wasmlb-balmlb-1,False,4,1,0,0,7,0,0,0,2
-475054,2015-07-19,,2015/07/19/balmlb-detmlb-1,False,4,2,3,0,10,0,0,0,1
-475054,2015-07-23,,2015/07/23/balmlb-nyamlb-1,False,3,0,0,0,3,0,0,0,0
-475054,2015-07-25,,2015/07/25/balmlb-tbamlb-1,False,2,1,0,0,4,0,0,0,1
-475054,2015-07-28,,2015/07/28/atlmlb-balmlb-1,False,5,1,0,0,7,0,0,0,1
-475054,2015-07-31,,2015/07/31/detmlb-balmlb-1,False,1,0,2,0,3,0,0,0,0
-475054,2015-08-04,,2015/08/04/balmlb-oakmlb-1,False,0,1,0,0,4,1,2,0,1
-475054,2015-08-07,,2015/08/07/balmlb-anamlb-1,False,0,1,2,0,4,0,1,0,0
-475054,2015-08-09,,2015/08/09/balmlb-anamlb-1,False,0,0,1,0,2,0,0,0,1
-475054,2015-09-02,,2015/09/02/tbamlb-balmlb-1,False,5,0,0,0,7,0,1,0,1
-475054,2015-09-06,,2015/09/06/balmlb-tormlb-1,False,0,1,2,0,5,0,1,0,0
-475054,2015-09-11,,2015/09/11/kcamlb-balmlb-1,False,0,1,0,1,1,0,0,0,0
-475054,2015-09-12,,2015/09/12/kcamlb-balmlb-1,False,1,1,1,0,3,0,0,0,0
-475054,2015-09-15,,2015/09/15/bosmlb-balmlb-1,False,2,1,0,0,3,0,0,0,0
-475054,2015-09-17,,2015/09/17/balmlb-tbamlb-1,False,1,1,0,0,4,0,0,0,2
-475054,2015-09-18,,2015/09/18/balmlb-tbamlb-1,False,2,1,1,0,5,0,1,0,0
-475054,2015-09-24,,2015/09/24/balmlb-wasmlb-1,False,1,1,0,0,3,1,1,0,0
+475054,2015-05-24,Chaz Roe,2015/05/24/balmlb-miamlb-1,False,2,1,1,0,6,0,0,0,2
+475054,2015-05-26,Chaz Roe,2015/05/26/houmlb-balmlb-1,False,2,1,1,0,6,0,2,0,0
+475054,2015-05-28,Chaz Roe,2015/05/28/chamlb-balmlb-1,False,3,1,1,0,6,0,0,0,1
+475054,2015-05-30,Chaz Roe,2015/05/30/tbamlb-balmlb-1,False,1,0,1,0,5,0,1,0,1
+475054,2015-05-31,Chaz Roe,2015/05/31/tbamlb-balmlb-1,False,1,0,0,0,5,0,0,0,4
+475054,2015-06-02,Chaz Roe,2015/06/02/balmlb-houmlb-1,False,3,0,1,0,7,0,0,0,3
+475054,2015-06-07,Chaz Roe,2015/06/07/balmlb-clemlb-1,False,3,1,0,0,5,0,0,0,1
+475054,2015-06-09,Chaz Roe,2015/06/09/bosmlb-balmlb-1,False,1,0,0,0,6,0,1,1,2
+475054,2015-06-11,Chaz Roe,2015/06/11/bosmlb-balmlb-1,False,0,3,0,0,4,1,0,0,1
+475054,2015-06-13,Chaz Roe,2015/06/13/nyamlb-balmlb-1,False,2,3,2,0,9,0,0,0,2
+475054,2015-06-17,Chaz Roe,2015/06/17/balmlb-phimlb-1,False,1,1,0,0,2,0,0,0,0
+475054,2015-06-20,Chaz Roe,2015/06/20/balmlb-tormlb-1,False,0,2,0,0,5,0,1,0,2
+475054,2015-06-21,Chaz Roe,2015/06/21/balmlb-tormlb-1,False,2,0,0,0,4,0,1,0,1
+475054,2015-06-23,Chaz Roe,2015/06/23/balmlb-bosmlb-1,False,1,1,0,1,3,0,0,0,1
+475054,2015-06-28,Chaz Roe,2015/06/28/clemlb-balmlb-1,False,0,2,0,0,3,0,1,0,0
+475054,2015-06-30,Chaz Roe,2015/06/30/texmlb-balmlb-1,False,3,1,1,0,6,1,0,0,1
+475054,2015-07-02,Chaz Roe,2015/07/02/texmlb-balmlb-1,False,3,1,0,0,7,0,1,0,1
+475054,2015-07-05,Chaz Roe,2015/07/05/balmlb-chamlb-1,False,2,1,1,0,7,0,0,0,3
+475054,2015-07-08,Chaz Roe,2015/07/08/balmlb-minmlb-1,False,0,0,2,0,6,0,2,0,2
+475054,2015-07-11,Chaz Roe,2015/07/11/wasmlb-balmlb-1,False,4,1,0,0,7,0,0,0,2
+475054,2015-07-19,Chaz Roe,2015/07/19/balmlb-detmlb-1,False,4,2,3,0,10,0,0,0,1
+475054,2015-07-23,Chaz Roe,2015/07/23/balmlb-nyamlb-1,False,3,0,0,0,3,0,0,0,0
+475054,2015-07-25,Chaz Roe,2015/07/25/balmlb-tbamlb-1,False,2,1,0,0,4,0,0,0,1
+475054,2015-07-28,Chaz Roe,2015/07/28/atlmlb-balmlb-1,False,5,1,0,0,7,0,0,0,1
+475054,2015-07-31,Chaz Roe,2015/07/31/detmlb-balmlb-1,False,1,0,2,0,3,0,0,0,0
+475054,2015-08-04,Chaz Roe,2015/08/04/balmlb-oakmlb-1,False,0,1,0,0,4,1,2,0,1
+475054,2015-08-07,Chaz Roe,2015/08/07/balmlb-anamlb-1,False,0,1,2,0,4,0,1,0,0
+475054,2015-08-09,Chaz Roe,2015/08/09/balmlb-anamlb-1,False,0,0,1,0,2,0,0,0,1
+475054,2015-09-02,Chaz Roe,2015/09/02/tbamlb-balmlb-1,False,5,0,0,0,7,0,1,0,1
+475054,2015-09-06,Chaz Roe,2015/09/06/balmlb-tormlb-1,False,0,1,2,0,5,0,1,0,0
+475054,2015-09-11,Chaz Roe,2015/09/11/kcamlb-balmlb-1,False,0,1,0,1,1,0,0,0,0
+475054,2015-09-12,Chaz Roe,2015/09/12/kcamlb-balmlb-1,False,1,1,1,0,3,0,0,0,0
+475054,2015-09-15,Chaz Roe,2015/09/15/bosmlb-balmlb-1,False,2,1,0,0,3,0,0,0,0
+475054,2015-09-17,Chaz Roe,2015/09/17/balmlb-tbamlb-1,False,1,1,0,0,4,0,0,0,2
+475054,2015-09-18,Chaz Roe,2015/09/18/balmlb-tbamlb-1,False,2,1,1,0,5,0,1,0,0
+475054,2015-09-24,Chaz Roe,2015/09/24/balmlb-wasmlb-1,False,1,1,0,0,3,1,1,0,0
 534812,2015-04-24,Kevin Quackenbush,2015/04/24/lanmlb-sdnmlb-1,False,4,1,0,0,6,0,1,0,0
 534812,2015-04-27,Kevin Quackenbush,2015/04/27/houmlb-sdnmlb-1,False,1,0,1,0,4,0,1,0,1
 534812,2015-04-28,Kevin Quackenbush,2015/04/28/houmlb-sdnmlb-1,False,3,0,2,0,7,0,0,0,2
@@ -13197,6 +13204,13 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 453172,2015-09-30,Jared Hughes,2015/09/30/slnmlb-pitmlb-1,False,3,1,0,0,4,0,0,0,0
 453172,2015-10-02,Jared Hughes,2015/10/02/cinmlb-pitmlb-1,False,2,0,0,0,5,0,1,0,2
 453172,2015-10-03,Jared Hughes,2015/10/03/cinmlb-pitmlb-1,False,1,0,0,0,1,0,0,0,0
+516769,2015-07-12,Jenrry Mejia,2015/07/12/arimlb-nynmlb-1,False,0,1,0,0,1,0,0,0,0
+516769,2015-07-18,Jenrry Mejia,2015/07/18/nynmlb-slnmlb-1,False,1,2,1,0,4,0,0,0,0
+516769,2015-07-19,Jenrry Mejia,2015/07/19/nynmlb-slnmlb-1,False,3,2,0,0,7,0,1,0,1
+516769,2015-07-21,Jenrry Mejia,2015/07/21/nynmlb-wasmlb-1,False,3,0,0,0,4,0,0,0,1
+516769,2015-07-22,Jenrry Mejia,2015/07/22/nynmlb-wasmlb-1,False,1,1,0,0,3,0,0,0,1
+516769,2015-07-25,Jenrry Mejia,2015/07/25/lanmlb-nynmlb-1,False,0,0,1,0,4,0,0,0,3
+516769,2015-07-26,Jenrry Mejia,2015/07/26/lanmlb-nynmlb-1,False,0,1,0,0,4,0,1,0,1
 453222,2015-04-29,Scott Carroll,2015/04/29/chamlb-balmlb-1,False,3,2,1,0,7,0,0,0,1
 453222,2015-04-30,Scott Carroll,2015/04/30/chamlb-minmlb-1,False,5,1,1,0,9,0,0,0,2
 453222,2015-05-03,Scott Carroll,2015/05/03/chamlb-minmlb-1,False,5,0,1,0,7,0,0,0,1
@@ -13244,6 +13258,11 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 593423,2015-09-20,Frankie Montas,2015/09/20/chamlb-clemlb-1,False,1,0,0,0,3,0,0,0,2
 593423,2015-09-23,Frankie Montas,2015/09/23/chamlb-detmlb-1,True,4,5,3,1,17,1,2,0,3
 593423,2015-10-04,Frankie Montas,2015/10/04/detmlb-chamlb-1,True,2,4,1,0,17,0,3,0,7
+553872,2015-09-24,Yhonathan Barrios,2015/09/24/milmlb-slnmlb-1,False,2,0,0,0,3,0,0,0,1
+553872,2015-09-26,Yhonathan Barrios,2015/09/26/milmlb-slnmlb-1,False,1,0,2,0,7,0,0,0,4
+553872,2015-09-29,Yhonathan Barrios,2015/09/29/milmlb-sdnmlb-1,False,2,0,1,0,3,0,0,0,0
+553872,2015-10-01,Yhonathan Barrios,2015/10/01/milmlb-sdnmlb-1,False,0,2,0,0,3,0,0,0,1
+553872,2015-10-04,Yhonathan Barrios,2015/10/04/chnmlb-milmlb-1,False,3,2,0,0,6,0,0,0,1
 543184,2015-04-06,Christian Friedrich,2015/04/06/colmlb-milmlb-1,False,2,1,0,0,4,0,0,0,1
 543184,2015-04-08,Christian Friedrich,2015/04/08/colmlb-milmlb-1,False,1,0,0,0,1,0,0,0,0
 543184,2015-04-11,Christian Friedrich,2015/04/11/chnmlb-colmlb-1,False,4,1,2,0,9,0,0,0,2
@@ -13447,6 +13466,12 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 607457,2015-09-25,Kyle Barraclough,2015/09/25/atlmlb-miamlb-1,False,1,0,0,0,2,0,0,0,1
 607457,2015-09-26,Kyle Barraclough,2015/09/26/atlmlb-miamlb-1,False,1,1,1,0,4,0,1,0,0
 607457,2015-10-01,Kyle Barraclough,2015/10/01/miamlb-tbamlb-1,False,1,1,2,0,4,0,0,0,0
+573204,2015-04-17,Caleb Thielbar,2015/04/17/clemlb-minmlb-1,False,1,0,0,0,3,0,0,0,1
+573204,2015-04-18,Caleb Thielbar,2015/04/18/clemlb-minmlb-1,False,0,1,0,0,1,0,0,0,0
+573204,2015-04-20,Caleb Thielbar,2015/04/20/minmlb-kcamlb-1,False,1,2,0,0,5,0,0,0,1
+573204,2015-04-25,Caleb Thielbar,2015/04/25/minmlb-seamlb-1,False,1,0,0,0,1,0,0,0,0
+573204,2015-04-29,Caleb Thielbar,2015/04/29/detmlb-minmlb-1,False,1,1,0,0,3,0,0,0,1
+573204,2015-04-30,Caleb Thielbar,2015/04/30/chamlb-minmlb-1,False,5,0,0,0,7,0,0,0,2
 572888,2015-04-09,Shane Greene,2015/04/09/minmlb-detmlb-1,True,8,12,2,2,28,0,1,0,5
 572888,2015-04-14,Shane Greene,2015/04/14/detmlb-pitmlb-1,True,14,5,4,0,26,0,0,0,3
 572888,2015-04-19,Shane Greene,2015/04/19/chamlb-detmlb-1,True,11,5,3,2,26,0,4,0,3
@@ -13808,6 +13833,9 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 605333,2015-06-15,Jack Leathersich,2015/06/15/tormlb-nynmlb-1,False,1,1,0,0,3,0,1,0,0
 605333,2015-06-17,Jack Leathersich,2015/06/17/nynmlb-tormlb-1,False,0,0,0,0,2,0,1,0,1
 605333,2015-06-20,Jack Leathersich,2015/06/20/nynmlb-atlmlb-1,False,1,0,0,0,4,0,0,0,3
+595918,2015-04-28,A.J. Cole,2015/04/28/wasmlb-atlmlb-1,True,6,3,5,1,17,0,1,0,1
+595918,2015-05-15,A.J. Cole,2015/05/15/wasmlb-sdnmlb-1,False,4,5,0,2,10,0,0,0,1
+595918,2015-05-23,A.J. Cole,2015/05/23/phimlb-wasmlb-1,False,2,4,4,0,17,1,0,0,7
 451532,2015-05-05,Chad Billingsley,2015/05/05/phimlb-atlmlb-1,True,9,6,4,1,23,2,1,0,2
 451532,2015-05-10,Chad Billingsley,2015/05/10/nynmlb-phimlb-1,True,7,7,5,0,24,1,1,0,3
 451532,2015-05-15,Chad Billingsley,2015/05/15/arimlb-phimlb-1,True,11,10,2,0,26,0,1,0,2
@@ -13960,6 +13988,13 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 595032,2015-05-04,Chase Whitley,2015/05/04/nyamlb-tormlb-1,True,12,5,3,0,27,0,0,0,6
 595032,2015-05-09,Chase Whitley,2015/05/09/balmlb-nyamlb-1,True,8,9,1,0,27,3,2,2,5
 595032,2015-05-14,Chase Whitley,2015/05/14/nyamlb-tbamlb-1,True,1,3,2,0,8,0,2,0,0
+518715,2015-09-11,Cory Gearrin,2015/09/11/sdnmlb-sfnmlb-1,False,1,0,0,0,2,0,0,0,1
+518715,2015-09-16,Cory Gearrin,2015/09/16/cinmlb-sfnmlb-1,False,1,0,0,0,2,0,0,0,1
+518715,2015-09-18,Cory Gearrin,2015/09/18/arimlb-sfnmlb-1,False,0,0,0,0,1,0,0,0,1
+518715,2015-09-23,Cory Gearrin,2015/09/23/sfnmlb-sdnmlb-1,False,0,0,1,0,2,0,1,0,0
+518715,2015-09-27,Cory Gearrin,2015/09/27/sfnmlb-oakmlb-1,False,1,0,0,0,1,0,0,0,0
+518715,2015-09-29,Cory Gearrin,2015/09/29/lanmlb-sfnmlb-1,False,3,0,0,0,4,0,0,0,1
+518715,2015-10-04,Cory Gearrin,2015/10/04/colmlb-sfnmlb-1,False,0,0,0,0,1,0,0,0,1
 502239,2015-04-14,Trevor Cahill,2015/04/14/miamlb-atlmlb-1,True,3,2,4,0,15,0,3,1,2
 502239,2015-04-21,Trevor Cahill,2015/04/21/atlmlb-nynmlb-1,True,13,2,3,0,20,0,1,0,1
 502239,2015-04-26,Trevor Cahill,2015/04/26/atlmlb-phimlb-1,True,10,3,5,0,25,1,3,0,2
@@ -14212,6 +14247,17 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 425856,2015-09-17,Gavin Floyd,2015/09/17/kcamlb-clemlb-1,False,1,2,3,1,9,0,0,0,3
 425856,2015-09-23,Gavin Floyd,2015/09/23/clemlb-minmlb-1,False,6,2,0,0,10,0,1,0,1
 425856,2015-09-30,Gavin Floyd,2015/09/30/minmlb-clemlb-1,False,3,5,2,0,11,0,0,0,1
+489039,2015-05-14,Bobby LaFromboise,2015/05/14/pitmlb-phimlb-1,False,1,1,1,0,4,0,0,0,1
+489039,2015-09-01,Bobby LaFromboise,2015/09/01/pitmlb-milmlb-1,False,0,1,0,0,1,0,0,0,0
+489039,2015-09-02,Bobby LaFromboise,2015/09/02/pitmlb-milmlb-1,False,0,1,0,1,2,0,0,0,1
+489039,2015-09-10,Bobby LaFromboise,2015/09/10/milmlb-pitmlb-1,False,0,0,0,0,1,0,0,0,1
+489039,2015-09-17,Bobby LaFromboise,2015/09/17/chnmlb-pitmlb-1,False,2,1,2,0,8,0,1,0,1
+489039,2015-09-18,Bobby LaFromboise,2015/09/18/pitmlb-lanmlb-1,False,1,0,0,0,3,0,0,0,2
+489039,2015-09-21,Bobby LaFromboise,2015/09/21/pitmlb-colmlb-1,False,0,1,1,1,3,0,0,0,1
+489039,2015-09-24,Bobby LaFromboise,2015/09/24/pitmlb-colmlb-1,False,0,0,0,0,1,0,0,0,1
+489039,2015-09-27,Bobby LaFromboise,2015/09/27/pitmlb-chnmlb-1,False,0,1,0,0,1,0,0,0,0
+489039,2015-09-30,Bobby LaFromboise,2015/09/30/slnmlb-pitmlb-2,False,2,2,0,0,4,1,0,0,0
+489039,2015-10-03,Bobby LaFromboise,2015/10/03/cinmlb-pitmlb-1,False,1,0,0,0,1,0,0,0,0
 460008,2015-04-10,Anthony Varvaro,2015/04/10/bosmlb-nyamlb-1,False,2,2,1,0,6,0,1,0,0
 460008,2015-04-11,Anthony Varvaro,2015/04/11/bosmlb-nyamlb-1,False,0,0,0,0,1,0,0,0,1
 460008,2015-04-12,Anthony Varvaro,2015/04/12/bosmlb-nyamlb-1,False,2,1,0,0,4,0,0,0,1
@@ -14462,65 +14508,76 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 445197,2015-09-25,Mike Dunn,2015/09/25/atlmlb-miamlb-1,False,0,0,0,0,2,0,2,0,0
 445197,2015-09-26,Mike Dunn,2015/09/26/atlmlb-miamlb-1,False,0,0,0,0,1,0,1,0,0
 445197,2015-10-01,Mike Dunn,2015/10/01/miamlb-tbamlb-1,False,1,0,2,0,4,0,0,0,1
+542888,2015-08-08,Shawn Armstrong,2015/08/08/minmlb-clemlb-1,False,0,0,1,0,3,0,0,0,2
+542888,2015-08-13,Shawn Armstrong,2015/08/13/nyamlb-clemlb-1,False,1,1,0,0,5,0,1,0,2
+542888,2015-09-02,Shawn Armstrong,2015/09/02/clemlb-tormlb-1,False,2,1,1,1,5,0,0,0,1
+542888,2015-09-05,Shawn Armstrong,2015/09/05/clemlb-detmlb-1,False,2,0,0,0,3,0,0,0,1
+542888,2015-09-13,Shawn Armstrong,2015/09/13/detmlb-clemlb-2,False,1,2,0,0,4,0,0,0,1
+542888,2015-09-17,Shawn Armstrong,2015/09/17/kcamlb-clemlb-1,False,0,0,2,0,3,0,0,0,1
+542888,2015-09-19,Shawn Armstrong,2015/09/19/chamlb-clemlb-1,False,0,2,0,1,3,0,1,0,0
+542888,2015-09-30,Shawn Armstrong,2015/09/30/minmlb-clemlb-1,False,0,1,0,0,4,1,0,0,3
 468504,2015-08-24,Jhoulys Chacin,2015/08/24/slnmlb-arimlb-1,True,11,6,3,0,27,1,1,0,5
 468504,2015-08-29,Jhoulys Chacin,2015/08/29/oakmlb-arimlb-1,True,10,7,2,0,27,1,2,0,6
 468504,2015-09-15,Jhoulys Chacin,2015/09/15/sdnmlb-arimlb-1,True,4,7,2,0,19,1,2,0,3
 468504,2015-09-21,Jhoulys Chacin,2015/09/21/arimlb-lanmlb-1,True,9,4,5,1,25,1,4,0,3
 468504,2015-09-27,Jhoulys Chacin,2015/09/27/arimlb-sdnmlb-1,False,3,2,3,0,13,0,1,0,4
-543726,2015-04-08,Robbie Ross,2015/04/08/bosmlb-phimlb-1,False,1,0,1,0,4,0,0,0,2
-543726,2015-04-10,Robbie Ross,2015/04/10/bosmlb-nyamlb-1,False,0,2,0,0,2,0,0,0,0
-543726,2015-04-11,Robbie Ross,2015/04/11/bosmlb-nyamlb-1,False,2,0,1,0,4,0,0,0,1
-543726,2015-04-15,Robbie Ross,2015/04/15/wasmlb-bosmlb-1,False,4,2,2,0,9,1,1,0,0
-543726,2015-04-18,Robbie Ross,2015/04/18/balmlb-bosmlb-1,False,0,3,1,0,5,1,0,0,0
-543726,2015-04-20,Robbie Ross,2015/04/20/balmlb-bosmlb-1,False,1,0,0,0,1,0,0,0,0
-543726,2015-04-21,Robbie Ross,2015/04/21/bosmlb-tbamlb-1,False,1,0,0,0,1,0,0,0,0
-543726,2015-04-26,Robbie Ross,2015/04/26/bosmlb-balmlb-1,False,3,0,2,0,6,0,0,0,1
-543726,2015-04-28,Robbie Ross,2015/04/28/tormlb-bosmlb-1,False,3,1,1,0,7,0,1,0,1
-543726,2015-05-01,Robbie Ross,2015/05/01/nyamlb-bosmlb-1,False,1,1,0,0,5,0,2,0,1
-543726,2015-05-03,Robbie Ross,2015/05/03/nyamlb-bosmlb-1,False,1,1,0,0,2,0,0,0,0
-543726,2015-05-06,Robbie Ross,2015/05/06/tbamlb-bosmlb-1,False,0,2,0,0,3,0,0,0,1
-543726,2015-05-08,Robbie Ross,2015/05/08/bosmlb-tormlb-1,False,1,1,2,0,4,0,0,0,0
-543726,2015-05-22,Robbie Ross,2015/05/22/anamlb-bosmlb-1,False,4,1,1,0,10,0,2,0,2
-543726,2015-05-30,Robbie Ross,2015/05/30/bosmlb-texmlb-1,False,4,1,4,1,13,0,0,1,3
-543726,2015-06-15,Robbie Ross,2015/06/15/atlmlb-bosmlb-1,False,4,1,1,0,7,0,0,0,1
-543726,2015-06-17,Robbie Ross,2015/06/17/bosmlb-atlmlb-1,False,0,0,1,0,2,0,0,0,1
-543726,2015-06-19,Robbie Ross,2015/06/19/bosmlb-kcamlb-1,False,3,1,0,0,6,1,1,0,1
-543726,2015-06-23,Robbie Ross,2015/06/23/balmlb-bosmlb-1,False,5,0,0,0,8,0,1,0,1
-543726,2015-06-25,Robbie Ross,2015/06/25/balmlb-bosmlb-1,False,1,2,2,0,9,0,2,0,1
-543726,2015-07-01,Robbie Ross,2015/07/01/bosmlb-tormlb-1,False,5,3,3,1,13,1,1,0,1
-543726,2015-07-08,Robbie Ross,2015/07/08/miamlb-bosmlb-1,False,1,0,1,0,3,0,0,0,1
-543726,2015-07-10,Robbie Ross,2015/07/10/nyamlb-bosmlb-1,False,7,1,2,0,16,0,1,0,4
-543726,2015-07-20,Robbie Ross,2015/07/20/bosmlb-anamlb-1,False,3,1,3,1,10,0,0,0,3
-543726,2015-07-22,Robbie Ross,2015/07/22/bosmlb-houmlb-1,False,1,1,0,0,3,0,0,0,1
-543726,2015-07-26,Robbie Ross,2015/07/26/detmlb-bosmlb-1,False,1,0,1,0,3,0,0,0,1
-543726,2015-07-27,Robbie Ross,2015/07/27/chamlb-bosmlb-1,False,3,2,4,1,11,0,1,0,1
-543726,2015-07-30,Robbie Ross,2015/07/30/chamlb-bosmlb-1,False,0,1,0,0,3,0,0,0,2
-543726,2015-07-31,Robbie Ross,2015/07/31/tbamlb-bosmlb-1,False,0,1,0,0,4,0,1,1,1
-543726,2015-08-02,Robbie Ross,2015/08/02/tbamlb-bosmlb-1,False,0,0,0,0,3,0,1,1,1
-543726,2015-08-04,Robbie Ross,2015/08/04/bosmlb-nyamlb-1,False,2,1,1,0,5,0,1,0,0
-543726,2015-08-06,Robbie Ross,2015/08/06/bosmlb-nyamlb-1,False,2,0,0,0,3,0,0,0,1
-543726,2015-08-07,Robbie Ross,2015/08/07/bosmlb-detmlb-1,False,1,0,0,0,2,0,0,0,1
-543726,2015-08-09,Robbie Ross,2015/08/09/bosmlb-detmlb-1,False,2,0,0,0,3,0,0,0,1
-543726,2015-08-12,Robbie Ross,2015/08/12/bosmlb-miamlb-1,False,3,2,1,0,9,1,0,0,3
-543726,2015-08-15,Robbie Ross,2015/08/15/seamlb-bosmlb-1,False,1,1,1,0,3,0,0,0,0
-543726,2015-08-16,Robbie Ross,2015/08/16/seamlb-bosmlb-1,False,1,1,1,0,4,0,0,0,1
-543726,2015-08-20,Robbie Ross,2015/08/20/kcamlb-bosmlb-1,False,0,0,0,0,1,0,0,0,1
-543726,2015-08-24,Robbie Ross,2015/08/24/bosmlb-chamlb-1,False,1,0,0,0,1,0,0,0,0
-543726,2015-08-26,Robbie Ross,2015/08/26/bosmlb-chamlb-1,False,2,0,0,0,3,0,0,0,1
-543726,2015-08-28,Robbie Ross,2015/08/28/bosmlb-nynmlb-1,False,0,0,1,0,1,0,0,0,0
-543726,2015-08-30,Robbie Ross,2015/08/30/bosmlb-nynmlb-1,False,1,0,0,0,3,0,1,0,1
-543726,2015-08-31,Robbie Ross,2015/08/31/nyamlb-bosmlb-1,False,0,2,0,0,4,0,1,0,1
-543726,2015-09-04,Robbie Ross,2015/09/04/phimlb-bosmlb-1,False,0,0,0,0,1,0,0,0,1
-543726,2015-09-06,Robbie Ross,2015/09/06/phimlb-bosmlb-1,False,2,0,2,0,5,0,0,0,1
-543726,2015-09-08,Robbie Ross,2015/09/08/tormlb-bosmlb-1,False,2,0,0,0,3,0,0,0,1
-543726,2015-09-13,Robbie Ross,2015/09/13/bosmlb-tbamlb-1,False,1,1,1,0,4,0,0,0,1
-543726,2015-09-15,Robbie Ross,2015/09/15/bosmlb-balmlb-1,False,0,0,1,0,1,0,0,0,0
-543726,2015-09-19,Robbie Ross,2015/09/19/bosmlb-tormlb-1,False,2,3,0,0,6,1,1,0,0
-543726,2015-09-20,Robbie Ross,2015/09/20/bosmlb-tormlb-1,False,1,1,1,1,4,0,0,0,1
-543726,2015-09-21,Robbie Ross,2015/09/21/tbamlb-bosmlb-1,False,1,2,0,0,4,1,0,0,1
-543726,2015-09-27,Robbie Ross,2015/09/27/balmlb-bosmlb-1,False,2,0,0,0,4,0,0,0,2
-543726,2015-09-28,Robbie Ross,2015/09/28/bosmlb-nyamlb-1,False,1,2,0,0,5,0,1,0,1
-543726,2015-09-30,Robbie Ross,2015/09/30/bosmlb-nyamlb-1,False,1,1,1,0,3,0,0,0,0
+543726,2015-04-08,Robbie Ross Jr.,2015/04/08/bosmlb-phimlb-1,False,1,0,1,0,4,0,0,0,2
+543726,2015-04-10,Robbie Ross Jr.,2015/04/10/bosmlb-nyamlb-1,False,0,2,0,0,2,0,0,0,0
+543726,2015-04-11,Robbie Ross Jr.,2015/04/11/bosmlb-nyamlb-1,False,2,0,1,0,4,0,0,0,1
+543726,2015-04-15,Robbie Ross Jr.,2015/04/15/wasmlb-bosmlb-1,False,4,2,2,0,9,1,1,0,0
+543726,2015-04-18,Robbie Ross Jr.,2015/04/18/balmlb-bosmlb-1,False,0,3,1,0,5,1,0,0,0
+543726,2015-04-20,Robbie Ross Jr.,2015/04/20/balmlb-bosmlb-1,False,1,0,0,0,1,0,0,0,0
+543726,2015-04-21,Robbie Ross Jr.,2015/04/21/bosmlb-tbamlb-1,False,1,0,0,0,1,0,0,0,0
+543726,2015-04-26,Robbie Ross Jr.,2015/04/26/bosmlb-balmlb-1,False,3,0,2,0,6,0,0,0,1
+543726,2015-04-28,Robbie Ross Jr.,2015/04/28/tormlb-bosmlb-1,False,3,1,1,0,7,0,1,0,1
+543726,2015-05-01,Robbie Ross Jr.,2015/05/01/nyamlb-bosmlb-1,False,1,1,0,0,5,0,2,0,1
+543726,2015-05-03,Robbie Ross Jr.,2015/05/03/nyamlb-bosmlb-1,False,1,1,0,0,2,0,0,0,0
+543726,2015-05-06,Robbie Ross Jr.,2015/05/06/tbamlb-bosmlb-1,False,0,2,0,0,3,0,0,0,1
+543726,2015-05-08,Robbie Ross Jr.,2015/05/08/bosmlb-tormlb-1,False,1,1,2,0,4,0,0,0,0
+543726,2015-05-22,Robbie Ross Jr.,2015/05/22/anamlb-bosmlb-1,False,4,1,1,0,10,0,2,0,2
+543726,2015-05-30,Robbie Ross Jr.,2015/05/30/bosmlb-texmlb-1,False,4,1,4,1,13,0,0,1,3
+543726,2015-06-15,Robbie Ross Jr.,2015/06/15/atlmlb-bosmlb-1,False,4,1,1,0,7,0,0,0,1
+543726,2015-06-17,Robbie Ross Jr.,2015/06/17/bosmlb-atlmlb-1,False,0,0,1,0,2,0,0,0,1
+543726,2015-06-19,Robbie Ross Jr.,2015/06/19/bosmlb-kcamlb-1,False,3,1,0,0,6,1,1,0,1
+543726,2015-06-23,Robbie Ross Jr.,2015/06/23/balmlb-bosmlb-1,False,5,0,0,0,8,0,1,0,1
+543726,2015-06-25,Robbie Ross Jr.,2015/06/25/balmlb-bosmlb-1,False,1,2,2,0,9,0,2,0,1
+543726,2015-07-01,Robbie Ross Jr.,2015/07/01/bosmlb-tormlb-1,False,5,3,3,1,13,1,1,0,1
+543726,2015-07-08,Robbie Ross Jr.,2015/07/08/miamlb-bosmlb-1,False,1,0,1,0,3,0,0,0,1
+543726,2015-07-10,Robbie Ross Jr.,2015/07/10/nyamlb-bosmlb-1,False,7,1,2,0,16,0,1,0,4
+543726,2015-07-20,Robbie Ross Jr.,2015/07/20/bosmlb-anamlb-1,False,3,1,3,1,10,0,0,0,3
+543726,2015-07-22,Robbie Ross Jr.,2015/07/22/bosmlb-houmlb-1,False,1,1,0,0,3,0,0,0,1
+543726,2015-07-26,Robbie Ross Jr.,2015/07/26/detmlb-bosmlb-1,False,1,0,1,0,3,0,0,0,1
+543726,2015-07-27,Robbie Ross Jr.,2015/07/27/chamlb-bosmlb-1,False,3,2,4,1,11,0,1,0,1
+543726,2015-07-30,Robbie Ross Jr.,2015/07/30/chamlb-bosmlb-1,False,0,1,0,0,3,0,0,0,2
+543726,2015-07-31,Robbie Ross Jr.,2015/07/31/tbamlb-bosmlb-1,False,0,1,0,0,4,0,1,1,1
+543726,2015-08-02,Robbie Ross Jr.,2015/08/02/tbamlb-bosmlb-1,False,0,0,0,0,3,0,1,1,1
+543726,2015-08-04,Robbie Ross Jr.,2015/08/04/bosmlb-nyamlb-1,False,2,1,1,0,5,0,1,0,0
+543726,2015-08-06,Robbie Ross Jr.,2015/08/06/bosmlb-nyamlb-1,False,2,0,0,0,3,0,0,0,1
+543726,2015-08-07,Robbie Ross Jr.,2015/08/07/bosmlb-detmlb-1,False,1,0,0,0,2,0,0,0,1
+543726,2015-08-09,Robbie Ross Jr.,2015/08/09/bosmlb-detmlb-1,False,2,0,0,0,3,0,0,0,1
+543726,2015-08-12,Robbie Ross Jr.,2015/08/12/bosmlb-miamlb-1,False,3,2,1,0,9,1,0,0,3
+543726,2015-08-15,Robbie Ross Jr.,2015/08/15/seamlb-bosmlb-1,False,1,1,1,0,3,0,0,0,0
+543726,2015-08-16,Robbie Ross Jr.,2015/08/16/seamlb-bosmlb-1,False,1,1,1,0,4,0,0,0,1
+543726,2015-08-20,Robbie Ross Jr.,2015/08/20/kcamlb-bosmlb-1,False,0,0,0,0,1,0,0,0,1
+543726,2015-08-24,Robbie Ross Jr.,2015/08/24/bosmlb-chamlb-1,False,1,0,0,0,1,0,0,0,0
+543726,2015-08-26,Robbie Ross Jr.,2015/08/26/bosmlb-chamlb-1,False,2,0,0,0,3,0,0,0,1
+543726,2015-08-28,Robbie Ross Jr.,2015/08/28/bosmlb-nynmlb-1,False,0,0,1,0,1,0,0,0,0
+543726,2015-08-30,Robbie Ross Jr.,2015/08/30/bosmlb-nynmlb-1,False,1,0,0,0,3,0,1,0,1
+543726,2015-08-31,Robbie Ross Jr.,2015/08/31/nyamlb-bosmlb-1,False,0,2,0,0,4,0,1,0,1
+543726,2015-09-04,Robbie Ross Jr.,2015/09/04/phimlb-bosmlb-1,False,0,0,0,0,1,0,0,0,1
+543726,2015-09-06,Robbie Ross Jr.,2015/09/06/phimlb-bosmlb-1,False,2,0,2,0,5,0,0,0,1
+543726,2015-09-08,Robbie Ross Jr.,2015/09/08/tormlb-bosmlb-1,False,2,0,0,0,3,0,0,0,1
+543726,2015-09-13,Robbie Ross Jr.,2015/09/13/bosmlb-tbamlb-1,False,1,1,1,0,4,0,0,0,1
+543726,2015-09-15,Robbie Ross Jr.,2015/09/15/bosmlb-balmlb-1,False,0,0,1,0,1,0,0,0,0
+543726,2015-09-19,Robbie Ross Jr.,2015/09/19/bosmlb-tormlb-1,False,2,3,0,0,6,1,1,0,0
+543726,2015-09-20,Robbie Ross Jr.,2015/09/20/bosmlb-tormlb-1,False,1,1,1,1,4,0,0,0,1
+543726,2015-09-21,Robbie Ross Jr.,2015/09/21/tbamlb-bosmlb-1,False,1,2,0,0,4,1,0,0,1
+543726,2015-09-27,Robbie Ross Jr.,2015/09/27/balmlb-bosmlb-1,False,2,0,0,0,4,0,0,0,2
+543726,2015-09-28,Robbie Ross Jr.,2015/09/28/bosmlb-nyamlb-1,False,1,2,0,0,5,0,1,0,1
+543726,2015-09-30,Robbie Ross Jr.,2015/09/30/bosmlb-nyamlb-1,False,1,1,1,0,3,0,0,0,0
+542923,2015-07-07,Dallas Beeler,2015/07/07/slnmlb-chnmlb-2,True,10,2,1,0,21,0,2,0,6
+542923,2015-07-22,Dallas Beeler,2015/07/22/chnmlb-cinmlb-2,True,7,3,0,0,14,0,2,0,0
+542923,2015-07-28,Dallas Beeler,2015/07/28/colmlb-chnmlb-1,True,3,2,2,0,11,0,3,0,1
 608349,2015-05-19,Corey Knebel,2015/05/19/milmlb-detmlb-1,False,0,2,0,0,3,0,0,0,1
 608349,2015-05-22,Corey Knebel,2015/05/22/milmlb-atlmlb-1,False,0,0,1,0,4,0,0,0,3
 608349,2015-05-23,Corey Knebel,2015/05/23/milmlb-atlmlb-1,False,0,0,0,0,3,0,1,0,2
@@ -14624,20 +14681,26 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 592705,2015-09-20,Nick Rumbelow,2015/09/20/nyamlb-nynmlb-1,False,0,1,0,0,3,0,0,0,2
 592705,2015-09-25,Nick Rumbelow,2015/09/25/chamlb-nyamlb-1,False,1,0,2,0,4,0,0,0,1
 592705,2015-09-28,Nick Rumbelow,2015/09/28/bosmlb-nyamlb-1,False,1,0,1,0,2,0,0,0,0
-592815,2015-05-03,,2015/05/03/pitmlb-slnmlb-1,False,1,4,0,1,7,1,0,0,2
-592815,2015-05-18,,2015/05/18/slnmlb-nynmlb-1,False,0,0,0,0,2,0,2,0,0
-592815,2015-05-19,,2015/05/19/slnmlb-nynmlb-1,False,1,1,1,0,4,0,0,0,1
-592815,2015-07-11,,2015/07/11/slnmlb-pitmlb-1,False,4,0,0,0,6,0,0,0,2
-592815,2015-07-12,,2015/07/12/slnmlb-pitmlb-1,False,0,1,0,1,3,0,0,0,2
-592815,2015-07-18,,2015/07/18/nynmlb-slnmlb-1,False,1,0,1,0,3,0,1,0,0
-592815,2015-07-19,,2015/07/19/nynmlb-slnmlb-1,False,3,0,0,0,5,0,1,0,1
-592815,2015-07-21,,2015/07/21/slnmlb-chamlb-1,False,3,0,0,0,4,0,1,0,0
-592815,2015-07-22,,2015/07/22/slnmlb-chamlb-1,False,0,0,3,0,4,0,0,0,1
-592815,2015-07-26,,2015/07/26/atlmlb-slnmlb-1,False,1,1,0,0,3,0,1,0,0
-592815,2015-08-29,,2015/08/29/slnmlb-sfnmlb-1,False,0,0,1,0,5,0,1,0,3
-592815,2015-09-10,,2015/09/10/slnmlb-cinmlb-1,False,2,3,0,0,8,1,0,0,3
-592815,2015-09-18,,2015/09/18/slnmlb-chnmlb-1,False,2,0,0,0,6,0,1,0,3
-592815,2015-09-23,,2015/09/23/cinmlb-slnmlb-1,False,0,2,1,0,5,0,0,0,2
+502748,2015-04-14,Brad Peacock,2015/04/14/oakmlb-houmlb-1,True,5,6,5,0,22,0,2,1,3
+523848,2015-04-15,Jose Dominguez,2015/04/15/tbamlb-tormlb-1,False,3,0,0,0,4,0,1,0,0
+523848,2015-04-18,Jose Dominguez,2015/04/18/nyamlb-tbamlb-1,False,3,0,1,0,6,0,0,0,2
+523848,2015-04-21,Jose Dominguez,2015/04/21/bosmlb-tbamlb-1,False,0,1,1,0,4,0,0,0,1
+523848,2015-04-24,Jose Dominguez,2015/04/24/tormlb-tbamlb-1,False,2,0,0,0,5,0,1,0,2
+592815,2015-05-03,Sam Tuivailala,2015/05/03/pitmlb-slnmlb-1,False,1,4,0,1,7,1,0,0,2
+592815,2015-05-18,Sam Tuivailala,2015/05/18/slnmlb-nynmlb-1,False,0,0,0,0,2,0,2,0,0
+592815,2015-05-19,Sam Tuivailala,2015/05/19/slnmlb-nynmlb-1,False,1,1,1,0,4,0,0,0,1
+592815,2015-07-11,Sam Tuivailala,2015/07/11/slnmlb-pitmlb-1,False,4,0,0,0,6,0,0,0,2
+592815,2015-07-12,Sam Tuivailala,2015/07/12/slnmlb-pitmlb-1,False,0,1,0,1,3,0,0,0,2
+592815,2015-07-18,Sam Tuivailala,2015/07/18/nynmlb-slnmlb-1,False,1,0,1,0,3,0,1,0,0
+592815,2015-07-19,Sam Tuivailala,2015/07/19/nynmlb-slnmlb-1,False,3,0,0,0,5,0,1,0,1
+592815,2015-07-21,Sam Tuivailala,2015/07/21/slnmlb-chamlb-1,False,3,0,0,0,4,0,1,0,0
+592815,2015-07-22,Sam Tuivailala,2015/07/22/slnmlb-chamlb-1,False,0,0,3,0,4,0,0,0,1
+592815,2015-07-26,Sam Tuivailala,2015/07/26/atlmlb-slnmlb-1,False,1,1,0,0,3,0,1,0,0
+592815,2015-08-29,Sam Tuivailala,2015/08/29/slnmlb-sfnmlb-1,False,0,0,1,0,5,0,1,0,3
+592815,2015-09-10,Sam Tuivailala,2015/09/10/slnmlb-cinmlb-1,False,2,3,0,0,8,1,0,0,3
+592815,2015-09-18,Sam Tuivailala,2015/09/18/slnmlb-chnmlb-1,False,2,0,0,0,6,0,1,0,3
+592815,2015-09-23,Sam Tuivailala,2015/09/23/cinmlb-slnmlb-1,False,0,2,1,0,5,0,0,0,2
+571476,2015-05-28,Chris Beck,2015/05/28/chamlb-balmlb-2,True,11,8,4,0,31,0,4,0,3
 285064,2015-04-07,Ryan Vogelsong,2015/04/07/sfnmlb-arimlb-1,True,5,7,2,0,24,2,4,0,5
 285064,2015-04-11,Ryan Vogelsong,2015/04/11/sfnmlb-sdnmlb-1,False,5,6,7,0,21,0,1,0,2
 285064,2015-04-17,Ryan Vogelsong,2015/04/17/arimlb-sfnmlb-1,False,4,3,1,0,15,0,4,0,3
@@ -14730,6 +14793,20 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 518553,2015-09-28,Steve Cishek,2015/09/28/slnmlb-pitmlb-1,False,0,0,1,0,5,0,3,0,1
 518553,2015-10-02,Steve Cishek,2015/10/02/slnmlb-atlmlb-1,False,1,0,1,0,5,0,1,0,2
 518553,2015-10-04,Steve Cishek,2015/10/04/slnmlb-atlmlb-2,False,2,0,2,0,5,0,0,0,1
+543351,2015-09-14,Jay Jackson,2015/09/14/sdnmlb-arimlb-1,False,3,1,1,0,6,0,0,0,1
+543351,2015-09-18,Jay Jackson,2015/09/18/sdnmlb-colmlb-1,False,1,0,0,0,1,0,0,0,0
+543351,2015-09-19,Jay Jackson,2015/09/19/sdnmlb-colmlb-1,False,1,1,1,0,4,0,1,0,0
+543351,2015-09-25,Jay Jackson,2015/09/25/arimlb-sdnmlb-1,False,1,1,0,0,2,0,0,0,0
+543351,2015-09-30,Jay Jackson,2015/09/30/milmlb-sdnmlb-1,False,0,1,2,0,4,0,0,0,1
+543351,2015-10-02,Jay Jackson,2015/10/02/sdnmlb-lanmlb-1,False,1,0,0,0,3,0,0,0,2
+543698,2015-06-27,Donn Roach,2015/06/27/chnmlb-slnmlb-1,True,11,2,3,0,18,0,1,0,1
+518764,2015-06-17,Donovan Hand,2015/06/17/detmlb-cinmlb-1,False,5,1,2,0,13,0,1,1,3
+430613,2015-06-17,Ronald Belisario,2015/06/17/tbamlb-wasmlb-1,False,5,1,0,0,7,0,1,0,0
+430613,2015-06-20,Ronald Belisario,2015/06/20/tbamlb-clemlb-1,False,4,0,1,0,7,0,0,0,2
+430613,2015-06-22,Ronald Belisario,2015/06/22/tormlb-tbamlb-1,False,2,0,2,0,6,0,1,0,1
+430613,2015-06-28,Ronald Belisario,2015/06/28/bosmlb-tbamlb-1,False,3,1,0,0,4,0,0,0,0
+430613,2015-06-29,Ronald Belisario,2015/06/29/clemlb-tbamlb-1,False,4,0,1,0,8,0,2,0,1
+430613,2015-06-30,Ronald Belisario,2015/06/30/clemlb-tbamlb-1,False,2,0,0,0,4,0,0,0,2
 476570,2015-05-25,Vin Mazzaro,2015/05/25/miamlb-pitmlb-1,False,2,3,0,0,7,0,0,0,2
 476570,2015-05-27,Vin Mazzaro,2015/05/27/miamlb-pitmlb-1,False,0,2,1,0,4,0,0,0,1
 476570,2015-05-30,Vin Mazzaro,2015/05/30/miamlb-nynmlb-1,False,1,2,2,1,5,0,0,0,0
@@ -14806,6 +14883,11 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 541652,2015-09-16,Bruce Rondon,2015/09/16/detmlb-minmlb-1,False,2,1,0,0,6,0,2,0,0
 541652,2015-09-19,Bruce Rondon,2015/09/19/kcamlb-detmlb-1,False,1,2,2,0,5,1,0,0,0
 541652,2015-09-21,Bruce Rondon,2015/09/21/chamlb-detmlb-2,False,2,1,0,0,3,0,0,0,0
+518833,2015-04-10,Colt Hynes,2015/04/10/tormlb-balmlb-1,False,2,1,1,0,5,0,0,0,1
+518833,2015-04-11,Colt Hynes,2015/04/11/tormlb-balmlb-1,False,0,0,1,0,3,0,1,0,1
+518833,2015-04-14,Colt Hynes,2015/04/14/tbamlb-tormlb-1,False,2,0,1,0,5,0,0,0,2
+518833,2015-04-15,Colt Hynes,2015/04/15/tbamlb-tormlb-1,False,1,0,1,0,3,0,1,0,0
+518833,2015-04-18,Colt Hynes,2015/04/18/atlmlb-tormlb-1,False,1,0,1,0,2,0,0,0,0
 592346,2015-05-30,Chi Chi Gonzalez,2015/05/30/bosmlb-texmlb-1,True,12,3,2,0,24,0,5,0,2
 592346,2015-06-05,Chi Chi Gonzalez,2015/06/05/texmlb-kcamlb-1,True,12,9,4,1,30,0,2,0,2
 592346,2015-06-11,Chi Chi Gonzalez,2015/06/11/texmlb-oakmlb-1,True,10,8,5,0,31,0,3,1,4
@@ -14820,6 +14902,12 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 592346,2015-09-22,Chi Chi Gonzalez,2015/09/22/texmlb-oakmlb-1,False,3,4,0,0,7,0,0,0,0
 592346,2015-09-26,Chi Chi Gonzalez,2015/09/26/texmlb-houmlb-1,False,3,3,0,0,9,1,2,0,0
 592346,2015-10-03,Chi Chi Gonzalez,2015/10/03/anamlb-texmlb-1,False,1,2,1,0,7,0,2,0,1
+543803,2015-09-05,Giovanni Soto,2015/09/05/clemlb-detmlb-1,False,1,0,0,0,1,0,0,0,0
+543803,2015-09-08,Giovanni Soto,2015/09/08/clemlb-chamlb-1,False,2,2,0,1,4,0,0,0,0
+543803,2015-09-13,Giovanni Soto,2015/09/13/detmlb-clemlb-2,False,0,1,0,0,1,0,0,0,0
+543803,2015-09-17,Giovanni Soto,2015/09/17/kcamlb-clemlb-1,False,2,1,0,0,3,0,0,0,0
+543803,2015-09-19,Giovanni Soto,2015/09/19/chamlb-clemlb-1,False,1,0,0,0,1,0,0,0,0
+543803,2015-09-27,Giovanni Soto,2015/09/27/clemlb-kcamlb-1,False,3,0,0,0,3,0,0,0,0
 453156,2015-04-08,Brooks Brown,2015/04/08/colmlb-milmlb-1,False,2,1,0,0,3,0,0,0,0
 453156,2015-04-10,Brooks Brown,2015/04/10/chnmlb-colmlb-1,False,1,3,0,0,8,0,1,0,2
 453156,2015-04-13,Brooks Brown,2015/04/13/colmlb-sfnmlb-1,False,1,0,1,0,2,0,0,0,0
@@ -14856,6 +14944,23 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 453156,2015-09-26,Brooks Brown,2015/09/26/lanmlb-colmlb-1,False,1,2,0,0,4,0,0,0,1
 453156,2015-09-29,Brooks Brown,2015/09/29/colmlb-arimlb-1,False,0,0,0,0,3,0,3,0,0
 453156,2015-10-02,Brooks Brown,2015/10/02/colmlb-sfnmlb-1,False,2,0,0,0,3,0,0,0,1
+434678,2015-04-12,Kyle Davies,2015/04/12/bosmlb-nyamlb-1,False,7,1,0,0,10,0,0,0,2
+489334,2015-04-08,Craig Stammen,2015/04/08/nynmlb-wasmlb-1,False,1,2,0,0,4,0,1,0,0
+489334,2015-04-10,Craig Stammen,2015/04/10/wasmlb-phimlb-1,False,1,1,1,0,3,0,0,0,0
+489334,2015-04-11,Craig Stammen,2015/04/11/wasmlb-phimlb-1,False,1,0,0,0,5,0,1,0,3
+489334,2015-04-12,Craig Stammen,2015/04/12/wasmlb-phimlb-1,False,2,1,0,1,3,0,0,0,0
+489334,2015-04-14,Craig Stammen,2015/04/14/wasmlb-bosmlb-1,False,1,0,0,0,2,0,1,0,0
+572021,2015-09-05,James Pazos,2015/09/05/tbamlb-nyamlb-1,False,0,1,0,0,2,0,0,0,1
+572021,2015-09-09,James Pazos,2015/09/09/balmlb-nyamlb-1,False,0,0,0,0,1,0,0,0,0
+572021,2015-09-12,James Pazos,2015/09/12/tormlb-nyamlb-2,False,2,1,0,0,3,0,0,0,0
+572021,2015-09-13,James Pazos,2015/09/13/tormlb-nyamlb-1,False,0,0,1,0,1,0,0,0,0
+572021,2015-09-15,James Pazos,2015/09/15/nyamlb-tbamlb-1,False,1,1,0,0,3,0,1,0,0
+572021,2015-09-18,James Pazos,2015/09/18/nyamlb-nynmlb-1,False,0,1,0,0,1,0,0,0,0
+572021,2015-09-19,James Pazos,2015/09/19/nyamlb-nynmlb-1,False,1,0,0,0,1,0,0,0,0
+572021,2015-09-21,James Pazos,2015/09/21/nyamlb-tormlb-1,False,1,1,0,1,2,0,0,0,0
+572021,2015-09-23,James Pazos,2015/09/23/nyamlb-tormlb-1,False,0,0,1,0,1,0,0,0,0
+572021,2015-09-28,James Pazos,2015/09/28/bosmlb-nyamlb-1,False,0,0,0,0,1,0,1,0,0
+572021,2015-10-04,James Pazos,2015/10/04/nyamlb-balmlb-1,False,1,1,0,0,5,0,1,0,2
 459967,2015-08-19,Sam LeCure,2015/08/19/kcamlb-cinmlb-1,False,3,1,0,0,6,0,0,0,2
 459967,2015-08-21,Sam LeCure,2015/08/21/arimlb-cinmlb-1,False,1,1,1,1,6,0,1,0,2
 459967,2015-08-25,Sam LeCure,2015/08/25/lanmlb-cinmlb-1,False,2,1,0,0,3,0,0,0,0
@@ -14875,6 +14980,9 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 459967,2015-09-30,Sam LeCure,2015/09/30/chnmlb-cinmlb-1,False,4,0,0,0,7,0,1,0,2
 459967,2015-10-02,Sam LeCure,2015/10/02/cinmlb-pitmlb-1,False,2,0,0,0,3,0,0,0,1
 459967,2015-10-04,Sam LeCure,2015/10/04/cinmlb-pitmlb-1,False,2,3,0,0,6,0,1,0,0
+502087,2015-05-01,Kevin Chapman,2015/05/01/seamlb-houmlb-1,False,0,1,1,1,3,0,0,0,1
+502087,2015-05-05,Kevin Chapman,2015/05/05/texmlb-houmlb-1,False,1,5,0,1,11,1,1,0,4
+502087,2015-05-12,Kevin Chapman,2015/05/12/sfnmlb-houmlb-1,False,1,1,1,0,8,0,2,0,3
 592341,2015-05-26,David Goforth,2015/05/26/sfnmlb-milmlb-1,False,0,1,0,0,1,0,0,0,0
 592341,2015-05-29,David Goforth,2015/05/29/arimlb-milmlb-1,False,0,0,0,0,1,0,0,0,1
 592341,2015-05-30,David Goforth,2015/05/30/arimlb-milmlb-1,False,2,0,2,0,5,0,1,0,0
@@ -14894,6 +15002,10 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 592341,2015-09-27,David Goforth,2015/09/27/milmlb-slnmlb-1,False,1,0,0,0,3,0,1,0,1
 592341,2015-10-02,David Goforth,2015/10/02/chnmlb-milmlb-1,False,3,2,3,1,9,0,0,0,1
 592341,2015-10-04,David Goforth,2015/10/04/chnmlb-milmlb-1,False,2,1,0,0,5,0,1,0,1
+547348,2015-06-12,C.C. Lee,2015/06/12/clemlb-detmlb-1,False,2,1,1,0,4,0,0,0,0
+547348,2015-09-30,C.C. Lee,2015/09/30/minmlb-clemlb-1,False,1,0,1,0,6,0,1,0,3
+607068,2015-08-01,Chris Reed,2015/08/01/sdnmlb-miamlb-1,False,3,2,1,1,7,0,0,0,0
+607068,2015-08-03,Chris Reed,2015/08/03/nynmlb-miamlb-1,False,3,2,4,0,11,0,1,0,1
 519168,2015-04-15,Anthony Ranaudo,2015/04/15/anamlb-texmlb-1,True,1,4,3,0,13,0,2,0,2
 519168,2015-06-18,Anthony Ranaudo,2015/06/18/texmlb-lanmlb-1,True,5,8,7,0,27,0,2,0,4
 519168,2015-07-05,Anthony Ranaudo,2015/07/05/anamlb-texmlb-1,False,4,7,2,1,15,1,1,0,1
@@ -14949,6 +15061,7 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 543391,2015-09-19,Casey Kelly,2015/09/19/sdnmlb-colmlb-1,False,3,1,4,0,11,0,0,0,3
 543391,2015-09-25,Casey Kelly,2015/09/25/arimlb-sdnmlb-1,True,8,5,6,0,23,1,1,1,1
 543391,2015-10-02,Casey Kelly,2015/10/02/sdnmlb-lanmlb-1,True,8,5,4,0,22,0,2,0,3
+594987,2015-04-12,Casey Sadler,2015/04/12/pitmlb-milmlb-1,True,5,3,4,0,19,1,1,0,5
 592593,2015-06-20,Justin Nicolino,2015/06/20/miamlb-cinmlb-1,True,10,7,4,0,25,0,2,0,2
 592593,2015-06-26,Justin Nicolino,2015/06/26/lanmlb-miamlb-1,True,4,6,4,0,18,1,1,1,2
 592593,2015-08-11,Justin Nicolino,2015/08/11/bosmlb-miamlb-1,True,12,6,5,1,25,0,1,0,0
@@ -14961,6 +15074,30 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 592593,2015-09-20,Justin Nicolino,2015/09/20/miamlb-wasmlb-1,True,5,8,5,0,25,1,2,0,3
 592593,2015-09-26,Justin Nicolino,2015/09/26/atlmlb-miamlb-1,True,10,9,2,0,25,0,3,0,0
 592593,2015-10-03,Justin Nicolino,2015/10/03/miamlb-phimlb-2,True,10,10,4,1,27,1,0,1,2
+543261,2015-08-29,Jason Gurka,2015/08/29/colmlb-pitmlb-1,False,2,0,1,0,3,0,0,0,0
+543261,2015-09-01,Jason Gurka,2015/09/01/arimlb-colmlb-1,False,0,0,2,0,3,0,1,0,0
+543261,2015-09-05,Jason Gurka,2015/09/05/sfnmlb-colmlb-1,False,2,2,0,0,4,1,0,0,0
+543261,2015-09-09,Jason Gurka,2015/09/09/colmlb-sdnmlb-1,False,2,2,1,0,6,0,0,0,1
+543261,2015-09-19,Jason Gurka,2015/09/19/sdnmlb-colmlb-1,False,0,2,0,0,3,0,0,0,1
+543261,2015-09-21,Jason Gurka,2015/09/21/pitmlb-colmlb-1,False,3,2,0,0,6,0,0,0,1
+543261,2015-09-23,Jason Gurka,2015/09/23/pitmlb-colmlb-1,False,2,0,2,0,7,0,1,0,2
+543261,2015-09-27,Jason Gurka,2015/09/27/lanmlb-colmlb-1,False,1,1,1,0,5,0,0,0,2
+543261,2015-10-02,Jason Gurka,2015/10/02/colmlb-sfnmlb-1,False,1,1,0,0,2,0,0,0,0
+605218,2015-09-07,Carl Edwards Jr.,2015/09/07/chnmlb-slnmlb-1,False,2,0,0,0,3,0,1,0,0
+605218,2015-09-13,Carl Edwards Jr.,2015/09/13/chnmlb-phimlb-1,False,2,1,0,0,5,0,1,0,1
+605218,2015-09-26,Carl Edwards Jr.,2015/09/26/pitmlb-chnmlb-1,False,2,0,0,0,3,0,0,0,1
+605218,2015-09-29,Carl Edwards Jr.,2015/09/29/chnmlb-cinmlb-1,False,1,0,2,0,5,0,1,0,1
+605218,2015-10-02,Carl Edwards Jr.,2015/10/02/chnmlb-milmlb-1,False,0,1,1,0,3,0,0,0,1
+150274,2015-04-06,Joe Nathan,2015/04/06/minmlb-detmlb-1,False,0,0,0,0,1,0,0,0,1
+519411,2015-06-20,Matt West,2015/06/20/sfnmlb-lanmlb-1,False,2,3,1,0,7,0,1,0,0
+519411,2015-06-21,Matt West,2015/06/21/sfnmlb-lanmlb-1,False,1,1,0,0,4,0,0,0,2
+543518,2015-08-20,Scott McGough,2015/08/20/phimlb-miamlb-1,False,2,0,4,0,7,0,0,0,1
+543518,2015-08-24,Scott McGough,2015/08/24/pitmlb-miamlb-1,False,3,0,0,0,4,0,0,0,1
+543518,2015-08-26,Scott McGough,2015/08/26/pitmlb-miamlb-1,False,3,2,0,1,8,0,1,0,2
+543518,2015-09-13,Scott McGough,2015/09/13/wasmlb-miamlb-1,False,7,0,1,0,9,0,1,0,0
+543518,2015-09-19,Scott McGough,2015/09/19/miamlb-wasmlb-1,False,2,1,0,0,3,0,0,0,0
+543518,2015-09-20,Scott McGough,2015/09/20/miamlb-wasmlb-1,False,0,1,1,0,4,0,2,0,0
+598271,2015-07-21,Brian Johnson,2015/07/21/bosmlb-houmlb-1,True,4,3,5,0,19,0,4,0,3
 502032,2015-04-10,Bud Norris,2015/04/10/tormlb-balmlb-1,True,6,3,6,0,18,0,1,1,1
 502032,2015-04-15,Bud Norris,2015/04/15/nyamlb-balmlb-1,True,5,7,1,0,22,1,2,0,7
 502032,2015-04-21,Bud Norris,2015/04/21/balmlb-tormlb-1,True,3,5,4,1,17,1,3,0,2
@@ -14999,13 +15136,29 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 502032,2015-09-24,Bud Norris,2015/09/24/sfnmlb-sdnmlb-1,False,1,1,0,0,2,0,0,0,0
 502032,2015-09-30,Bud Norris,2015/09/30/milmlb-sdnmlb-1,False,2,1,0,0,4,0,0,0,1
 502032,2015-10-04,Bud Norris,2015/10/04/sdnmlb-lanmlb-1,False,0,3,0,1,8,0,2,0,3
+458690,2015-06-24,Chris Volstad,2015/06/24/cinmlb-pitmlb-1,False,5,1,0,0,7,0,0,0,0
 621281,2015-05-31,Tyler Wagner,2015/05/31/arimlb-milmlb-1,True,9,5,3,0,21,1,1,0,2
 621281,2015-09-26,Tyler Wagner,2015/09/26/milmlb-slnmlb-1,True,9,5,2,0,20,0,4,0,0
 621281,2015-10-03,Tyler Wagner,2015/10/03/chnmlb-milmlb-1,True,9,7,4,0,26,0,2,0,3
+594762,2015-09-11,Brett Bochy,2015/09/11/sdnmlb-sfnmlb-1,False,1,1,1,0,5,0,0,1,1
+594762,2015-09-19,Brett Bochy,2015/09/19/arimlb-sfnmlb-1,False,0,1,0,0,3,0,1,0,1
+594762,2015-10-02,Brett Bochy,2015/10/02/colmlb-sfnmlb-1,False,1,1,0,0,3,0,0,0,1
+594762,2015-10-04,Brett Bochy,2015/10/04/colmlb-sfnmlb-1,False,0,1,0,0,1,0,0,0,0
+596331,2015-09-09,Nefi Ogando,2015/09/09/atlmlb-phimlb-1,False,0,3,2,0,6,0,0,0,1
+596331,2015-09-11,Nefi Ogando,2015/09/11/chnmlb-phimlb-2,False,4,1,0,0,5,0,0,0,0
+596331,2015-09-16,Nefi Ogando,2015/09/16/wasmlb-phimlb-1,False,2,1,1,0,7,0,2,0,1
+596331,2015-10-03,Nefi Ogando,2015/10/03/miamlb-phimlb-2,False,2,1,0,0,3,0,0,0,0
 514981,2015-06-22,Diego Moreno,2015/06/22/phimlb-nyamlb-1,False,2,0,1,0,6,0,0,1,2
 514981,2015-06-24,Diego Moreno,2015/06/24/phimlb-nyamlb-1,False,2,1,2,0,7,0,1,0,1
 514981,2015-07-28,Diego Moreno,2015/07/28/nyamlb-texmlb-1,False,6,5,0,0,17,0,1,0,5
 514981,2015-08-01,Diego Moreno,2015/08/01/nyamlb-chamlb-1,False,3,9,1,1,15,1,1,1,0
+457915,2015-04-08,Javy Guerra,2015/04/08/chamlb-kcamlb-1,False,2,1,1,0,4,0,0,0,0
+457915,2015-04-09,Javy Guerra,2015/04/09/chamlb-kcamlb-1,False,0,0,1,0,1,0,0,0,0
+457915,2015-04-12,Javy Guerra,2015/04/12/minmlb-chamlb-1,False,0,1,0,1,2,0,1,0,0
+501870,2015-04-27,Everett Teaford,2015/04/27/tbamlb-nyamlb-1,False,2,2,4,0,13,0,2,1,2
+501870,2015-07-05,Everett Teaford,2015/07/05/tbamlb-nyamlb-1,False,3,0,0,0,6,0,1,0,2
+501870,2015-07-07,Everett Teaford,2015/07/07/tbamlb-kcamlb-1,False,0,2,1,0,4,0,0,0,0
+501870,2015-07-07,Everett Teaford,2015/07/07/tbamlb-kcamlb-2,False,1,0,0,0,1,0,0,0,0
 543594,2015-09-06,Sean Nolin,2015/09/06/seamlb-oakmlb-1,True,6,10,3,0,24,0,3,0,1
 543594,2015-09-12,Sean Nolin,2015/09/12/oakmlb-texmlb-1,True,9,6,1,1,24,1,2,0,5
 543594,2015-09-17,Sean Nolin,2015/09/17/oakmlb-chamlb-1,True,6,6,4,2,23,1,3,0,4
@@ -15080,6 +15233,33 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 458678,2015-09-29,Mike Broadway,2015/09/29/lanmlb-sfnmlb-1,False,0,2,2,0,5,0,0,0,1
 458678,2015-10-02,Mike Broadway,2015/10/02/colmlb-sfnmlb-1,False,1,1,0,1,2,0,0,0,0
 458678,2015-10-04,Mike Broadway,2015/10/04/colmlb-sfnmlb-1,False,0,2,0,0,2,0,0,0,0
+488786,2015-09-07,Louis Coleman,2015/09/07/minmlb-kcamlb-1,False,2,1,0,0,3,0,0,0,0
+488786,2015-09-12,Louis Coleman,2015/09/12/kcamlb-balmlb-1,False,0,2,0,1,4,0,1,0,1
+488786,2015-09-13,Louis Coleman,2015/09/13/kcamlb-balmlb-1,False,0,0,2,0,3,0,1,0,0
+488786,2015-10-02,Louis Coleman,2015/10/02/kcamlb-minmlb-1,False,1,0,0,0,1,0,0,0,0
+457456,2015-10-03,Jo-Jo Reyes,2015/10/03/anamlb-texmlb-1,False,0,0,1,0,1,0,0,0,0
+500891,2015-06-02,Edgar Ibarra,2015/06/02/tbamlb-anamlb-1,False,1,2,1,0,7,0,1,0,2
+500891,2015-06-05,Edgar Ibarra,2015/06/05/anamlb-nyamlb-1,False,4,1,4,0,12,0,2,0,1
+501627,2015-06-06,Cesar Cabral,2015/06/06/balmlb-clemlb-1,False,1,0,0,0,2,0,1,0,0
+501627,2015-06-07,Cesar Cabral,2015/06/07/balmlb-clemlb-1,False,0,0,0,0,1,0,0,0,1
+572889,2015-07-11,Nick Greenwood,2015/07/11/slnmlb-pitmlb-1,False,0,1,1,0,2,1,0,0,0
+580792,2015-07-30,Nick Goody,2015/07/30/nyamlb-texmlb-1,False,0,0,0,0,2,0,1,0,1
+580792,2015-07-31,Nick Goody,2015/07/31/nyamlb-chamlb-1,False,2,2,0,0,5,0,0,0,1
+580792,2015-08-12,Nick Goody,2015/08/12/nyamlb-clemlb-1,False,2,0,0,0,4,0,1,0,1
+580792,2015-08-26,Nick Goody,2015/08/26/houmlb-nyamlb-1,False,2,1,0,0,4,0,0,1,0
+580792,2015-09-12,Nick Goody,2015/09/12/tormlb-nyamlb-1,False,1,0,0,0,1,0,0,0,0
+580792,2015-09-20,Nick Goody,2015/09/20/nyamlb-nynmlb-1,False,1,1,1,0,3,0,0,0,0
+580792,2015-10-03,Nick Goody,2015/10/03/nyamlb-balmlb-1,False,1,2,3,0,7,0,1,0,0
+476595,2015-04-25,Lucas Luetge,2015/04/25/minmlb-seamlb-1,False,2,1,1,0,8,0,2,0,2
+599998,2015-08-03,Leonel Campos,2015/08/03/sdnmlb-milmlb-1,False,1,1,1,0,5,0,1,0,1
+592426,2015-09-04,Luke Jackson,2015/09/04/texmlb-anamlb-1,False,1,3,0,0,5,0,1,0,0
+592426,2015-09-06,Luke Jackson,2015/09/06/texmlb-anamlb-1,False,2,0,0,0,4,0,0,0,2
+592426,2015-09-09,Luke Jackson,2015/09/09/texmlb-seamlb-1,False,3,0,0,0,3,0,0,0,0
+592426,2015-09-12,Luke Jackson,2015/09/12/oakmlb-texmlb-1,False,0,1,2,0,3,0,0,0,0
+592426,2015-09-16,Luke Jackson,2015/09/16/houmlb-texmlb-1,False,1,0,0,0,3,0,0,0,2
+592426,2015-09-26,Luke Jackson,2015/09/26/texmlb-houmlb-1,False,1,2,1,0,5,1,0,0,1
+592426,2015-09-28,Luke Jackson,2015/09/28/detmlb-texmlb-1,False,2,0,0,0,4,0,1,0,1
+545346,2015-07-25,Zach Lee,2015/07/25/lanmlb-nynmlb-1,True,11,3,6,1,24,1,1,0,3
 430630,2015-04-08,Jason Frasor,2015/04/08/chamlb-kcamlb-1,False,0,1,0,0,3,0,0,0,2
 430630,2015-04-10,Jason Frasor,2015/04/10/kcamlb-anamlb-1,False,1,0,1,0,4,0,0,0,2
 430630,2015-04-12,Jason Frasor,2015/04/12/kcamlb-anamlb-1,False,1,1,0,0,4,0,1,0,1
@@ -15157,6 +15337,10 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 571521,2015-09-29,Rex Brothers,2015/09/29/colmlb-arimlb-1,False,1,0,0,0,1,0,0,0,0
 571521,2015-09-30,Rex Brothers,2015/09/30/colmlb-arimlb-1,False,1,0,0,0,1,0,0,0,0
 571521,2015-10-04,Rex Brothers,2015/10/04/colmlb-sfnmlb-1,False,1,0,1,0,3,0,0,0,1
+518397,2015-09-02,Scott Alexander,2015/09/02/detmlb-kcamlb-1,False,2,0,0,0,3,0,0,0,1
+518397,2015-09-05,Scott Alexander,2015/09/05/chamlb-kcamlb-1,False,3,1,1,0,7,0,1,0,1
+518397,2015-09-22,Scott Alexander,2015/09/22/seamlb-kcamlb-1,False,5,0,2,0,9,0,0,1,1
+518397,2015-09-25,Scott Alexander,2015/09/25/clemlb-kcamlb-1,False,4,0,0,0,6,0,2,0,0
 605156,2015-05-15,Aaron Brooks,2015/05/15/nyamlb-kcamlb-1,False,1,1,0,0,3,0,0,0,1
 605156,2015-06-21,Aaron Brooks,2015/06/21/bosmlb-kcamlb-1,False,3,7,3,0,15,0,0,0,2
 605156,2015-08-01,Aaron Brooks,2015/08/01/clemlb-oakmlb-1,True,10,10,2,1,27,1,0,0,5
@@ -15170,6 +15354,8 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 605156,2015-09-20,Aaron Brooks,2015/09/20/oakmlb-houmlb-1,True,11,4,6,0,29,2,2,0,5
 605156,2015-09-26,Aaron Brooks,2015/09/26/sfnmlb-oakmlb-1,False,10,1,2,0,15,0,1,0,1
 605156,2015-10-02,Aaron Brooks,2015/10/02/oakmlb-seamlb-1,True,12,11,1,2,29,1,2,1,1
+502281,2015-07-01,Marcus Hatley,2015/07/01/chamlb-slnmlb-1,False,3,0,0,0,4,0,0,0,1
+502281,2015-07-07,Marcus Hatley,2015/07/07/slnmlb-chnmlb-1,False,0,0,0,0,3,0,2,0,1
 594951,2015-07-07,Ryan O'Rourke,2015/07/07/balmlb-minmlb-1,False,0,2,0,0,3,0,0,0,1
 594951,2015-07-09,Ryan O'Rourke,2015/07/09/detmlb-minmlb-1,False,1,0,1,0,2,0,0,0,0
 594951,2015-07-10,Ryan O'Rourke,2015/07/10/detmlb-minmlb-1,False,1,0,0,0,3,0,0,0,2
@@ -15198,6 +15384,7 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 594951,2015-09-24,Ryan O'Rourke,2015/09/24/clemlb-minmlb-1,False,0,0,0,0,2,0,2,0,0
 594951,2015-09-30,Ryan O'Rourke,2015/09/30/minmlb-clemlb-2,False,0,2,0,2,3,0,0,0,1
 594951,2015-10-04,Ryan O'Rourke,2015/10/04/kcamlb-minmlb-1,False,1,2,1,0,7,0,1,0,2
+595441,2015-04-11,Matt Tracy,2015/04/11/bosmlb-nyamlb-1,False,5,2,1,0,11,0,2,0,1
 502202,2015-04-07,Brad Boxberger,2015/04/07/balmlb-tbamlb-1,False,1,1,0,0,3,0,0,0,1
 502202,2015-04-08,Brad Boxberger,2015/04/08/balmlb-tbamlb-1,False,1,0,0,0,4,0,0,0,3
 502202,2015-04-10,Brad Boxberger,2015/04/10/tbamlb-miamlb-1,False,1,0,1,0,3,0,0,0,1
@@ -15342,6 +15529,22 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 592612,2015-10-01,Josh Osich,2015/10/01/lanmlb-sfnmlb-1,False,2,0,1,0,5,0,1,0,1
 592612,2015-10-03,Josh Osich,2015/10/03/colmlb-sfnmlb-1,False,2,1,0,0,4,0,0,0,1
 592612,2015-10-04,Josh Osich,2015/10/04/colmlb-sfnmlb-1,False,0,1,0,0,1,0,0,0,0
+543409,2015-04-26,Michael Kohn,2015/04/26/atlmlb-phimlb-1,False,0,3,0,1,4,0,1,0,0
+543409,2015-04-28,Michael Kohn,2015/04/28/wasmlb-atlmlb-1,False,0,0,0,0,2,0,1,0,1
+543409,2015-04-29,Michael Kohn,2015/04/29/wasmlb-atlmlb-1,False,1,0,0,0,5,0,2,0,2
+543409,2015-05-02,Michael Kohn,2015/05/02/cinmlb-atlmlb-1,False,0,3,0,1,3,0,0,0,0
+543409,2015-05-03,Michael Kohn,2015/05/03/cinmlb-atlmlb-1,False,0,1,0,0,3,0,1,0,1
+543409,2015-05-04,Michael Kohn,2015/05/04/phimlb-atlmlb-1,False,1,0,0,0,2,0,1,0,0
+605288,2015-09-26,Adrian Houser,2015/09/26/milmlb-slnmlb-1,False,3,0,1,0,5,0,1,0,0
+605288,2015-10-02,Adrian Houser,2015/10/02/chnmlb-milmlb-1,False,2,0,0,0,3,0,1,0,0
+605396,2015-09-02,Colton Murray,2015/09/02/phimlb-nynmlb-1,False,0,2,0,0,4,1,0,0,2
+605396,2015-09-04,Colton Murray,2015/09/04/phimlb-bosmlb-1,False,1,1,0,1,3,0,0,0,1
+605396,2015-09-07,Colton Murray,2015/09/07/atlmlb-phimlb-1,False,2,2,1,0,6,1,0,0,0
+605396,2015-09-11,Colton Murray,2015/09/11/chnmlb-phimlb-1,False,1,1,0,0,4,0,0,0,2
+605396,2015-09-15,Colton Murray,2015/09/15/wasmlb-phimlb-1,False,2,1,0,0,6,0,1,0,2
+605396,2015-09-26,Colton Murray,2015/09/26/phimlb-wasmlb-1,False,2,0,1,0,4,0,1,0,0
+605396,2015-09-30,Colton Murray,2015/09/30/nynmlb-phimlb-1,False,2,1,0,1,4,0,0,0,1
+605396,2015-10-03,Colton Murray,2015/10/03/miamlb-phimlb-2,False,2,0,3,0,6,0,0,0,1
 502010,2015-06-30,Jake Brigham,2015/06/30/wasmlb-atlmlb-1,False,3,2,1,0,11,0,1,0,4
 502010,2015-07-04,Jake Brigham,2015/07/04/phimlb-atlmlb-1,False,2,0,0,0,3,0,1,0,0
 502010,2015-07-05,Jake Brigham,2015/07/05/phimlb-atlmlb-1,False,2,0,2,0,4,0,0,0,0
@@ -15359,6 +15562,24 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 429781,2015-06-22,Kevin Correia,2015/06/22/phimlb-nyamlb-1,True,2,9,5,1,20,1,1,0,1
 429781,2015-06-28,Kevin Correia,2015/06/28/wasmlb-phimlb-1,True,9,3,5,0,26,0,3,0,4
 429781,2015-07-04,Kevin Correia,2015/07/04/phimlb-atlmlb-1,True,9,4,6,0,22,1,2,0,1
+612272,2015-09-05,Raudel Lazo,2015/09/05/nynmlb-miamlb-1,False,0,1,1,0,3,0,0,0,1
+612272,2015-09-07,Raudel Lazo,2015/09/07/milmlb-miamlb-1,False,0,1,0,1,3,0,0,0,2
+612272,2015-09-12,Raudel Lazo,2015/09/12/wasmlb-miamlb-1,False,0,1,0,0,1,0,0,0,0
+612272,2015-09-18,Raudel Lazo,2015/09/18/miamlb-wasmlb-1,False,2,2,1,0,5,0,0,0,0
+612272,2015-09-20,Raudel Lazo,2015/09/20/miamlb-wasmlb-1,False,0,1,0,0,2,0,1,0,0
+612272,2015-09-22,Raudel Lazo,2015/09/22/phimlb-miamlb-1,False,2,1,0,0,5,1,1,0,1
+612272,2015-10-03,Raudel Lazo,2015/10/03/miamlb-phimlb-1,False,1,2,1,0,5,0,0,0,1
+605226,2015-08-31,Andrew Faulkner,2015/08/31/texmlb-sdnmlb-1,False,2,0,1,0,3,0,0,0,0
+605226,2015-09-06,Andrew Faulkner,2015/09/06/texmlb-anamlb-1,False,1,1,1,0,3,0,0,0,0
+605226,2015-09-07,Andrew Faulkner,2015/09/07/texmlb-seamlb-1,False,1,0,1,0,5,0,0,0,3
+605226,2015-09-13,Andrew Faulkner,2015/09/13/oakmlb-texmlb-1,False,2,2,1,0,5,1,0,0,0
+605226,2015-09-16,Andrew Faulkner,2015/09/16/houmlb-texmlb-1,False,0,2,0,0,5,1,1,0,2
+605226,2015-09-18,Andrew Faulkner,2015/09/18/seamlb-texmlb-1,False,3,1,0,0,6,0,0,0,1
+605226,2015-09-20,Andrew Faulkner,2015/09/20/seamlb-texmlb-1,False,0,1,0,0,3,0,1,0,1
+605226,2015-09-24,Andrew Faulkner,2015/09/24/texmlb-oakmlb-1,False,1,1,0,1,4,0,0,0,2
+605226,2015-09-25,Andrew Faulkner,2015/09/25/texmlb-houmlb-1,False,0,0,2,0,3,0,0,0,1
+605226,2015-09-30,Andrew Faulkner,2015/09/30/detmlb-texmlb-1,False,1,0,0,0,1,0,0,0,0
+605226,2015-10-03,Andrew Faulkner,2015/10/03/anamlb-texmlb-1,False,1,0,0,0,2,0,1,0,0
 502706,2015-04-10,Derek Holland,2015/04/10/houmlb-texmlb-1,True,2,2,0,0,4,1,0,0,0
 502706,2015-08-19,Derek Holland,2015/08/19/seamlb-texmlb-1,True,10,4,6,0,26,1,0,0,6
 502706,2015-08-25,Derek Holland,2015/08/25/tormlb-texmlb-1,True,6,9,5,1,25,3,1,1,3
@@ -15389,6 +15610,17 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 571951,2015-09-27,Bryan Mitchell,2015/09/27/chamlb-nyamlb-1,False,1,1,0,1,3,0,0,0,1
 571951,2015-09-29,Bryan Mitchell,2015/09/29/bosmlb-nyamlb-1,False,4,1,1,0,10,1,2,0,2
 571951,2015-10-04,Bryan Mitchell,2015/10/04/nyamlb-balmlb-1,False,1,1,0,0,4,1,2,0,0
+592781,2015-06-30,Matt Stites,2015/06/30/lanmlb-arimlb-1,False,1,0,0,0,1,0,0,0,0
+592781,2015-07-02,Matt Stites,2015/07/02/colmlb-arimlb-1,False,0,1,2,0,3,0,0,0,0
+592781,2015-07-21,Matt Stites,2015/07/21/miamlb-arimlb-1,False,3,0,0,0,3,0,0,0,0
+592781,2015-07-22,Matt Stites,2015/07/22/miamlb-arimlb-1,False,0,0,0,0,1,0,0,0,1
+592781,2015-09-02,Matt Stites,2015/09/02/arimlb-colmlb-1,False,3,3,1,0,7,1,0,0,0
+592781,2015-09-04,Matt Stites,2015/09/04/arimlb-chnmlb-1,False,0,1,0,1,3,0,0,0,2
+592781,2015-09-11,Matt Stites,2015/09/11/lanmlb-arimlb-1,False,2,1,0,1,6,0,0,0,3
+592781,2015-09-14,Matt Stites,2015/09/14/sdnmlb-arimlb-1,False,1,0,1,0,3,0,1,0,0
+592781,2015-09-20,Matt Stites,2015/09/20/arimlb-sfnmlb-1,False,1,2,1,0,5,0,1,0,0
+592781,2015-09-24,Matt Stites,2015/09/24/arimlb-lanmlb-1,False,1,1,1,0,4,0,1,0,0
+592781,2015-10-02,Matt Stites,2015/10/02/houmlb-arimlb-1,False,1,2,3,0,8,0,2,0,0
 543716,2015-07-04,David Rollins,2015/07/04/seamlb-oakmlb-1,False,0,2,0,0,3,0,0,0,1
 543716,2015-07-06,David Rollins,2015/07/06/detmlb-seamlb-1,False,3,1,4,0,9,0,0,0,0
 543716,2015-07-08,David Rollins,2015/07/08/detmlb-seamlb-1,False,3,0,0,0,6,0,0,0,3
@@ -15409,6 +15641,9 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 543716,2015-09-19,David Rollins,2015/09/19/seamlb-texmlb-1,False,2,2,0,0,4,0,0,0,0
 543716,2015-09-23,David Rollins,2015/09/23/seamlb-kcamlb-1,False,0,0,1,0,2,0,0,1,0
 543716,2015-09-30,David Rollins,2015/09/30/houmlb-seamlb-1,False,1,1,0,0,3,0,0,0,1
+448855,2015-06-12,Junior Guerra,2015/06/12/chamlb-tbamlb-1,False,2,1,3,0,9,0,1,0,2
+448855,2015-06-15,Junior Guerra,2015/06/15/chamlb-pitmlb-1,False,3,1,0,0,4,0,0,0,0
+448855,2015-06-22,Junior Guerra,2015/06/22/chamlb-minmlb-1,False,3,1,0,0,5,1,0,0,1
 572403,2015-07-05,Drew VerHagen,2015/07/05/tormlb-detmlb-1,False,3,0,0,0,7,0,4,0,0
 572403,2015-08-19,Drew VerHagen,2015/08/19/detmlb-chnmlb-1,False,4,1,0,0,5,1,0,0,0
 572403,2015-08-22,Drew VerHagen,2015/08/22/texmlb-detmlb-1,False,1,2,0,0,3,0,0,0,0
@@ -15429,6 +15664,13 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 572403,2015-09-23,Drew VerHagen,2015/09/23/chamlb-detmlb-1,False,0,1,0,1,1,0,0,0,0
 572403,2015-09-29,Drew VerHagen,2015/09/29/detmlb-texmlb-1,False,2,0,1,0,4,0,0,0,1
 572403,2015-10-03,Drew VerHagen,2015/10/03/detmlb-chamlb-1,False,5,1,1,0,9,0,1,0,1
+475138,2015-04-06,Kyle Drabek,2015/04/06/chamlb-kcamlb-1,False,4,2,2,0,9,1,0,0,1
+475138,2015-04-18,Kyle Drabek,2015/04/18/chamlb-detmlb-1,False,2,5,2,0,10,0,1,0,0
+475138,2015-04-19,Kyle Drabek,2015/04/19/chamlb-detmlb-1,False,1,3,0,0,7,0,1,0,2
+605477,2015-05-03,Chad Smith,2015/05/03/oakmlb-texmlb-1,False,0,1,2,0,7,0,2,0,2
+605477,2015-05-06,Chad Smith,2015/05/06/oakmlb-minmlb-1,False,1,1,2,0,6,0,1,1,0
+545404,2015-07-11,Brandon Beachy,2015/07/11/milmlb-lanmlb-1,True,4,6,3,1,19,0,3,0,2
+545404,2015-07-20,Brandon Beachy,2015/07/20/lanmlb-atlmlb-1,True,3,5,5,1,20,1,3,0,3
 572038,2015-04-15,Branden Pinder,2015/04/15/nyamlb-balmlb-1,False,0,1,1,0,3,0,0,0,0
 572038,2015-04-18,Branden Pinder,2015/04/18/nyamlb-tbamlb-1,False,1,1,1,0,6,0,2,0,1
 572038,2015-05-11,Branden Pinder,2015/05/11/nyamlb-tbamlb-1,False,0,1,1,0,3,0,0,0,1
@@ -15505,6 +15747,19 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 433585,2015-09-12,Jeff Francis,2015/09/12/tormlb-nyamlb-2,False,3,2,4,0,10,1,0,0,1
 433585,2015-10-01,Jeff Francis,2015/10/01/tormlb-balmlb-1,False,5,1,1,0,13,0,3,0,3
 433585,2015-10-04,Jeff Francis,2015/10/04/tormlb-tbamlb-1,False,2,0,1,0,3,0,0,0,0
+593582,2015-07-21,Abel De Los Santos,2015/07/21/nynmlb-wasmlb-1,False,1,0,0,0,3,0,1,0,1
+593582,2015-07-23,Abel De Los Santos,2015/07/23/wasmlb-pitmlb-1,False,0,2,1,0,5,1,0,0,2
+449079,2015-04-08,Wesley Wright,2015/04/08/balmlb-tbamlb-1,False,1,0,0,0,1,0,0,0,0
+449079,2015-04-10,Wesley Wright,2015/04/10/tormlb-balmlb-1,False,2,4,0,0,6,0,0,0,0
+449079,2015-09-01,Wesley Wright,2015/09/01/anamlb-oakmlb-1,False,0,2,0,0,2,0,0,0,0
+449079,2015-09-07,Wesley Wright,2015/09/07/lanmlb-anamlb-1,False,0,1,0,0,4,0,1,0,2
+449079,2015-09-08,Wesley Wright,2015/09/08/lanmlb-anamlb-1,False,1,1,0,0,3,0,0,0,1
+449079,2015-09-14,Wesley Wright,2015/09/14/anamlb-seamlb-1,False,0,0,1,0,1,0,0,0,0
+449079,2015-09-16,Wesley Wright,2015/09/16/anamlb-seamlb-1,False,1,0,1,0,2,0,0,0,0
+449079,2015-09-17,Wesley Wright,2015/09/17/anamlb-minmlb-1,False,0,0,1,0,1,0,0,0,0
+449079,2015-09-20,Wesley Wright,2015/09/20/anamlb-minmlb-1,False,0,2,1,0,6,1,1,0,2
+449079,2015-09-21,Wesley Wright,2015/09/21/anamlb-houmlb-1,False,2,0,1,0,4,0,1,0,0
+449079,2015-10-04,Wesley Wright,2015/10/04/anamlb-texmlb-1,False,0,1,0,0,1,0,0,0,0
 571527,2015-04-09,David Buchanan,2015/04/09/bosmlb-phimlb-1,True,9,2,3,0,19,0,4,0,1
 571527,2015-04-14,David Buchanan,2015/04/14/phimlb-nynmlb-1,True,9,7,5,3,29,0,2,2,3
 571527,2015-04-19,David Buchanan,2015/04/19/phimlb-wasmlb-1,True,9,5,3,0,24,0,3,0,4
@@ -15640,6 +15895,11 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 433589,2015-09-25,Yusmeiro Petit,2015/09/25/sfnmlb-oakmlb-1,False,1,2,1,0,5,0,0,0,1
 433589,2015-10-02,Yusmeiro Petit,2015/10/02/colmlb-sfnmlb-1,False,2,2,0,1,6,0,1,0,1
 433589,2015-10-04,Yusmeiro Petit,2015/10/04/colmlb-sfnmlb-1,False,2,0,1,0,3,0,0,0,0
+594772,2015-05-18,Jake Buchanan,2015/05/18/oakmlb-houmlb-1,False,5,0,1,0,7,0,0,0,1
+594772,2015-05-21,Jake Buchanan,2015/05/21/houmlb-detmlb-1,False,2,1,1,1,7,0,1,0,2
+594772,2015-05-31,Jake Buchanan,2015/05/31/chamlb-houmlb-1,False,4,3,0,0,7,1,0,0,0
+594772,2015-06-05,Jake Buchanan,2015/06/05/houmlb-tormlb-1,False,2,0,0,0,4,0,2,0,0
+594772,2015-06-06,Jake Buchanan,2015/06/06/houmlb-tormlb-1,False,2,3,2,0,12,0,1,1,2
 592135,2015-04-21,Cam Bedrosian,2015/04/21/oakmlb-anamlb-1,False,2,2,2,0,9,0,1,0,2
 592135,2015-04-28,Cam Bedrosian,2015/04/28/anamlb-oakmlb-1,False,1,1,1,0,4,0,1,0,0
 592135,2015-05-24,Cam Bedrosian,2015/05/24/anamlb-bosmlb-1,False,2,2,1,0,5,0,0,0,0
@@ -15674,6 +15934,13 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 592135,2015-09-29,Cam Bedrosian,2015/09/29/oakmlb-anamlb-1,False,1,0,0,0,2,0,0,0,1
 592135,2015-10-01,Cam Bedrosian,2015/10/01/anamlb-texmlb-1,False,0,1,1,0,4,0,1,0,1
 592135,2015-10-04,Cam Bedrosian,2015/10/04/anamlb-texmlb-1,False,0,0,0,0,2,0,1,0,0
+445213,2015-05-08,Brandon Kintzler,2015/05/08/chnmlb-milmlb-1,False,4,1,0,0,7,1,1,0,1
+445213,2015-05-12,Brandon Kintzler,2015/05/12/chamlb-milmlb-1,False,2,0,0,0,2,0,0,0,0
+445213,2015-05-13,Brandon Kintzler,2015/05/13/chamlb-milmlb-1,False,1,0,0,0,5,0,2,0,2
+445213,2015-05-16,Brandon Kintzler,2015/05/16/milmlb-nynmlb-1,False,2,1,3,0,8,0,0,0,2
+445213,2015-05-21,Brandon Kintzler,2015/05/21/milmlb-atlmlb-1,False,2,0,2,0,6,0,1,0,1
+445213,2015-05-23,Brandon Kintzler,2015/05/23/milmlb-atlmlb-1,False,2,0,2,0,5,0,1,0,0
+445213,2015-05-25,Brandon Kintzler,2015/05/25/sfnmlb-milmlb-1,False,2,0,0,0,3,0,0,0,1
 543881,2015-04-15,Pedro Villarreal,2015/04/15/cinmlb-chnmlb-1,False,3,1,2,1,7,0,1,0,0
 543881,2015-05-09,Pedro Villarreal,2015/05/09/cinmlb-chamlb-2,False,2,0,3,0,6,0,1,0,0
 543881,2015-06-05,Pedro Villarreal,2015/06/05/sdnmlb-cinmlb-1,False,3,2,1,0,7,1,0,0,1
@@ -15703,6 +15970,8 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 543881,2015-09-09,Pedro Villarreal,2015/09/09/pitmlb-cinmlb-1,False,2,1,1,1,4,0,0,0,0
 543881,2015-09-14,Pedro Villarreal,2015/09/14/cinmlb-sfnmlb-1,False,0,0,1,0,3,0,0,0,2
 543881,2015-09-22,Pedro Villarreal,2015/09/22/cinmlb-slnmlb-1,False,0,1,1,0,5,0,1,0,2
+573244,2015-04-15,Adam Wilk,2015/04/15/anamlb-texmlb-1,False,3,2,1,0,10,1,1,1,2
+607405,2015-04-29,John Cornely,2015/04/29/wasmlb-atlmlb-1,False,1,3,1,0,7,1,1,0,1
 592454,2015-06-01,Tommy Kahnle,2015/06/01/lanmlb-colmlb-1,False,1,0,1,0,5,0,1,0,2
 592454,2015-06-02,Tommy Kahnle,2015/06/02/lanmlb-colmlb-2,False,0,0,2,0,4,0,2,0,0
 592454,2015-06-05,Tommy Kahnle,2015/06/05/miamlb-colmlb-1,False,1,0,0,0,2,0,0,0,1
@@ -15767,6 +16036,8 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 592181,2015-09-27,Danny Burawa,2015/09/27/atlmlb-miamlb-1,False,0,1,0,0,1,0,0,0,0
 592181,2015-10-01,Danny Burawa,2015/10/01/wasmlb-atlmlb-1,False,2,0,0,0,4,0,0,0,2
 592181,2015-10-02,Danny Burawa,2015/10/02/slnmlb-atlmlb-1,False,2,0,0,0,3,0,0,0,1
+554432,2015-05-05,Chad Jenkins,2015/05/05/nyamlb-tormlb-1,False,2,3,1,0,9,0,1,0,2
+554432,2015-10-01,Chad Jenkins,2015/10/01/tormlb-balmlb-1,False,1,5,0,1,8,1,2,0,0
 608167,2015-06-25,Jonathan Aro,2015/06/25/balmlb-bosmlb-1,False,0,3,3,0,8,0,0,0,2
 608167,2015-06-28,Jonathan Aro,2015/06/28/bosmlb-tbamlb-1,False,1,0,2,0,3,0,0,0,0
 608167,2015-07-01,Jonathan Aro,2015/07/01/bosmlb-tormlb-1,False,2,6,5,0,14,1,0,0,1
@@ -15900,6 +16171,9 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 518858,2015-09-21,Nate Jones,2015/09/21/chamlb-detmlb-2,False,3,0,0,0,6,0,0,0,2
 518858,2015-09-24,Nate Jones,2015/09/24/chamlb-nyamlb-1,False,0,0,0,0,1,0,0,0,1
 518858,2015-10-03,Nate Jones,2015/10/03/detmlb-chamlb-1,False,0,0,0,0,1,0,0,0,1
+592527,2015-06-23,Michael Mariot,2015/06/23/kcamlb-seamlb-1,False,1,4,1,0,8,1,1,0,1
+592527,2015-09-22,Michael Mariot,2015/09/22/seamlb-kcamlb-1,False,1,0,2,0,4,0,1,0,0
+502166,2015-08-14,Brad Mills,2015/08/14/oakmlb-balmlb-1,True,7,9,4,0,23,1,1,1,1
 449170,2015-08-18,Erik Cordier,2015/08/18/miamlb-milmlb-1,False,3,2,0,0,8,0,2,0,1
 449170,2015-08-21,Erik Cordier,2015/08/21/phimlb-miamlb-1,False,5,1,1,0,9,0,0,0,1
 449170,2015-08-24,Erik Cordier,2015/08/24/pitmlb-miamlb-1,False,0,0,0,0,1,0,0,1,0
@@ -15908,6 +16182,11 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 449170,2015-09-01,Erik Cordier,2015/09/01/miamlb-atlmlb-1,False,0,3,2,1,6,0,1,0,0
 449170,2015-09-05,Erik Cordier,2015/09/05/nynmlb-miamlb-1,False,4,2,0,0,7,0,1,0,0
 449170,2015-09-07,Erik Cordier,2015/09/07/milmlb-miamlb-1,False,0,2,3,0,7,0,1,0,1
+542924,2015-04-06,Jeff Beliveau,2015/04/06/balmlb-tbamlb-1,False,0,0,1,0,1,0,0,0,0
+542924,2015-04-08,Jeff Beliveau,2015/04/08/balmlb-tbamlb-1,False,0,1,0,0,1,0,0,0,0
+542924,2015-04-10,Jeff Beliveau,2015/04/10/tbamlb-miamlb-1,False,0,0,0,0,2,0,0,0,1
+542924,2015-04-12,Jeff Beliveau,2015/04/12/tbamlb-miamlb-1,False,1,0,1,0,3,0,0,0,1
+542924,2015-04-15,Jeff Beliveau,2015/04/15/tbamlb-tormlb-1,False,1,4,2,1,8,1,1,0,0
 543331,2015-04-08,J.J. Hoover,2015/04/08/pitmlb-cinmlb-1,False,3,1,1,0,7,0,0,0,1
 543331,2015-04-10,J.J. Hoover,2015/04/10/slnmlb-cinmlb-1,False,2,0,0,0,5,0,0,0,3
 543331,2015-04-13,J.J. Hoover,2015/04/13/cinmlb-chnmlb-1,False,1,0,1,0,4,0,1,0,0
@@ -15975,6 +16254,7 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 543331,2015-09-19,J.J. Hoover,2015/09/19/cinmlb-milmlb-1,False,1,0,0,0,4,0,0,0,3
 543331,2015-09-21,J.J. Hoover,2015/09/21/cinmlb-slnmlb-1,False,1,3,2,1,6,0,0,0,0
 543331,2015-09-25,J.J. Hoover,2015/09/25/nynmlb-cinmlb-1,False,0,2,2,0,6,1,0,0,2
+517059,2015-06-21,Jose De Paula,2015/06/21/detmlb-nyamlb-1,False,2,6,1,0,15,1,4,0,2
 456027,2015-05-17,Ross Ohlendorf,2015/05/17/clemlb-texmlb-1,False,0,2,0,0,3,0,0,0,1
 456027,2015-05-20,Ross Ohlendorf,2015/05/20/texmlb-bosmlb-1,False,1,1,1,0,4,0,0,0,1
 456027,2015-05-22,Ross Ohlendorf,2015/05/22/texmlb-nyamlb-1,False,0,1,1,0,5,1,1,0,2
@@ -15996,12 +16276,25 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 456027,2015-09-30,Ross Ohlendorf,2015/09/30/detmlb-texmlb-1,False,4,1,0,0,5,0,0,0,0
 456027,2015-10-01,Ross Ohlendorf,2015/10/01/anamlb-texmlb-1,False,0,1,1,1,3,0,1,0,0
 456027,2015-10-03,Ross Ohlendorf,2015/10/03/anamlb-texmlb-1,False,2,1,3,0,7,0,0,0,1
+595235,2015-09-03,Cody Hall,2015/09/03/sfnmlb-colmlb-1,False,4,3,3,0,10,1,0,0,0
+595235,2015-09-15,Cody Hall,2015/09/15/cinmlb-sfnmlb-1,False,2,0,0,0,3,0,0,0,1
+595235,2015-09-19,Cody Hall,2015/09/19/arimlb-sfnmlb-1,False,2,1,2,0,8,0,1,0,2
+595235,2015-09-26,Cody Hall,2015/09/26/sfnmlb-oakmlb-1,False,2,1,0,0,6,0,2,0,1
+595235,2015-09-29,Cody Hall,2015/09/29/lanmlb-sfnmlb-1,False,4,0,0,0,5,0,0,1,0
+595235,2015-10-02,Cody Hall,2015/10/02/colmlb-sfnmlb-1,False,0,2,1,0,6,0,0,0,3
+595235,2015-10-04,Cody Hall,2015/10/04/colmlb-sfnmlb-1,False,1,0,1,0,3,0,1,0,0
 543607,2015-08-17,Edgar Olmos,2015/08/17/seamlb-texmlb-1,False,3,1,1,0,6,0,0,1,0
 543607,2015-08-22,Edgar Olmos,2015/08/22/chamlb-seamlb-1,False,3,0,0,0,4,0,0,0,1
 543607,2015-08-24,Edgar Olmos,2015/08/24/oakmlb-seamlb-1,False,1,1,3,0,5,0,0,0,0
 543607,2015-08-25,Edgar Olmos,2015/08/25/oakmlb-seamlb-1,False,6,6,0,1,15,0,2,0,1
 543607,2015-08-30,Edgar Olmos,2015/08/30/seamlb-chamlb-1,True,9,5,4,1,25,0,5,0,2
 543607,2015-09-04,Edgar Olmos,2015/09/04/seamlb-oakmlb-1,True,5,4,2,1,12,1,1,0,0
+502162,2015-05-09,Angel Castro,2015/05/09/oakmlb-seamlb-1,False,1,1,0,0,4,0,1,0,1
+502162,2015-05-11,Angel Castro,2015/05/11/bosmlb-oakmlb-1,False,1,1,0,0,6,1,2,0,1
+502162,2015-05-19,Angel Castro,2015/05/19/oakmlb-houmlb-1,False,1,1,0,0,2,0,0,0,0
+502162,2015-05-21,Angel Castro,2015/05/21/oakmlb-tbamlb-1,False,3,0,1,0,5,0,0,0,1
+502162,2015-07-24,Angel Castro,2015/07/24/oakmlb-sfnmlb-1,False,2,1,1,0,5,0,0,0,1
+519229,2015-06-20,Seth Rosin,2015/06/20/slnmlb-phimlb-1,False,6,2,4,0,14,1,1,1,0
 571561,2015-04-08,Tony Cingrani,2015/04/08/pitmlb-cinmlb-1,False,0,1,1,0,4,0,1,0,1
 571561,2015-04-12,Tony Cingrani,2015/04/12/slnmlb-cinmlb-1,False,2,1,1,1,8,0,2,0,2
 571561,2015-04-14,Tony Cingrani,2015/04/14/cinmlb-chnmlb-1,False,1,0,0,0,3,0,1,0,1
@@ -16037,6 +16330,14 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 571561,2015-09-27,Tony Cingrani,2015/09/27/nynmlb-cinmlb-1,False,1,0,0,0,3,0,0,0,2
 571561,2015-09-30,Tony Cingrani,2015/09/30/chnmlb-cinmlb-1,False,2,0,1,0,7,0,1,0,2
 571561,2015-10-02,Tony Cingrani,2015/10/02/cinmlb-pitmlb-1,False,1,0,0,0,2,0,1,0,0
+462089,2015-04-07,Juan Jaime,2015/04/07/atlmlb-miamlb-1,False,1,1,0,0,4,0,1,0,1
+462089,2015-04-12,Juan Jaime,2015/04/12/nynmlb-atlmlb-1,False,0,0,0,0,4,0,3,0,0
+444836,2015-07-10,Aaron Laffey,2015/07/10/atlmlb-colmlb-1,False,6,2,3,0,13,1,1,1,0
+444836,2015-07-29,Aaron Laffey,2015/07/29/colmlb-chnmlb-1,False,3,1,0,0,7,0,1,0,1
+444836,2015-07-31,Aaron Laffey,2015/07/31/colmlb-slnmlb-1,False,3,5,1,0,13,0,1,0,2
+594835,2015-09-01,Marco Gonzales,2015/09/01/wasmlb-slnmlb-1,True,5,4,5,0,16,1,1,0,1
+493117,2015-05-14,Kyuji Fujikawa,2015/05/14/kcamlb-texmlb-1,False,0,3,0,1,3,0,0,0,0
+493117,2015-05-15,Kyuji Fujikawa,2015/05/15/clemlb-texmlb-1,False,0,2,1,0,5,1,0,1,1
 452733,2015-04-09,Tom Gorzelanny,2015/04/09/minmlb-detmlb-1,False,2,2,0,0,4,0,0,0,0
 452733,2015-04-11,Tom Gorzelanny,2015/04/11/detmlb-clemlb-1,False,3,1,0,0,5,0,0,0,1
 452733,2015-04-18,Tom Gorzelanny,2015/04/18/chamlb-detmlb-1,False,0,0,1,0,3,0,0,0,2
@@ -16091,6 +16392,15 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 592398,2015-06-09,Taylor Hill,2015/06/09/wasmlb-nyamlb-1,False,3,1,1,0,5,1,0,0,0
 592398,2015-06-12,Taylor Hill,2015/06/12/wasmlb-milmlb-1,False,3,2,2,0,8,0,0,0,1
 592398,2015-06-15,Taylor Hill,2015/06/15/wasmlb-tbamlb-1,False,3,3,4,0,17,0,3,1,3
+543942,2015-04-25,Rob Wooten,2015/04/25/slnmlb-milmlb-1,False,1,0,1,0,3,0,0,0,1
+543942,2015-04-27,Rob Wooten,2015/04/27/milmlb-cinmlb-1,False,4,1,2,0,14,0,2,1,3
+543942,2015-05-05,Rob Wooten,2015/05/05/lanmlb-milmlb-1,False,0,1,1,0,2,0,0,0,0
+543942,2015-05-07,Rob Wooten,2015/05/07/lanmlb-milmlb-1,False,1,3,1,1,11,1,4,0,2
+593140,2015-05-31,Michael Feliz,2015/05/31/chamlb-houmlb-1,False,0,2,1,0,4,0,0,0,1
+593140,2015-09-04,Michael Feliz,2015/09/04/minmlb-houmlb-1,False,0,1,0,0,3,0,0,0,2
+593140,2015-09-07,Michael Feliz,2015/09/07/houmlb-oakmlb-1,False,2,1,1,1,6,0,1,0,1
+593140,2015-09-16,Michael Feliz,2015/09/16/houmlb-texmlb-1,False,6,4,4,0,18,2,2,1,1
+593140,2015-10-02,Michael Feliz,2015/10/02/houmlb-arimlb-1,False,2,0,2,0,7,0,1,0,2
 435045,2015-04-25,Sergio Santos,2015/04/25/lanmlb-sdnmlb-1,False,2,1,1,0,5,0,0,0,1
 435045,2015-04-28,Sergio Santos,2015/04/28/sfnmlb-lanmlb-1,False,1,0,0,0,1,0,0,0,0
 435045,2015-05-01,Sergio Santos,2015/05/01/arimlb-lanmlb-1,False,2,1,0,0,3,0,0,0,0
@@ -16135,6 +16445,16 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 519008,2015-10-01,T.J. McFarland,2015/10/01/tormlb-balmlb-1,False,11,1,2,0,16,0,0,0,2
 519008,2015-10-03,T.J. McFarland,2015/10/03/nyamlb-balmlb-2,False,5,0,0,0,6,0,0,0,1
 519008,2015-10-04,T.J. McFarland,2015/10/04/nyamlb-balmlb-1,False,4,1,1,0,6,0,0,0,0
+457732,2015-09-02,Andrew Bailey,2015/09/02/nyamlb-bosmlb-1,False,0,1,1,0,4,0,2,0,0
+457732,2015-09-05,Andrew Bailey,2015/09/05/tbamlb-nyamlb-1,False,1,0,0,0,2,0,1,0,0
+457732,2015-09-11,Andrew Bailey,2015/09/11/tormlb-nyamlb-1,False,3,4,0,1,8,1,0,0,1
+457732,2015-09-18,Andrew Bailey,2015/09/18/nyamlb-nynmlb-1,False,0,0,0,0,1,0,0,0,1
+457732,2015-09-21,Andrew Bailey,2015/09/21/nyamlb-tormlb-1,False,2,4,1,2,7,0,0,0,0
+457732,2015-09-23,Andrew Bailey,2015/09/23/nyamlb-tormlb-1,False,1,1,1,0,6,1,1,0,2
+457732,2015-09-25,Andrew Bailey,2015/09/25/chamlb-nyamlb-1,False,0,2,0,0,4,0,0,0,2
+457732,2015-09-28,Andrew Bailey,2015/09/28/bosmlb-nyamlb-1,False,1,0,1,0,2,0,0,0,0
+457732,2015-09-30,Andrew Bailey,2015/09/30/bosmlb-nyamlb-1,False,2,0,1,0,4,0,0,0,0
+457732,2015-10-04,Andrew Bailey,2015/10/04/nyamlb-balmlb-1,False,1,1,0,0,3,0,1,0,0
 621408,2015-07-31,Matt Marksberry,2015/07/31/atlmlb-phimlb-1,False,3,3,1,1,8,0,1,0,0
 621408,2015-08-03,Matt Marksberry,2015/08/03/sfnmlb-atlmlb-1,False,2,1,0,0,3,0,0,0,0
 621408,2015-08-04,Matt Marksberry,2015/08/04/sfnmlb-atlmlb-1,False,1,0,1,0,4,0,0,0,2
@@ -16166,6 +16486,7 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 621408,2015-10-01,Matt Marksberry,2015/10/01/wasmlb-atlmlb-1,False,0,0,0,0,1,0,1,0,0
 621408,2015-10-02,Matt Marksberry,2015/10/02/slnmlb-atlmlb-1,False,0,0,0,0,1,0,1,0,0
 621408,2015-10-04,Matt Marksberry,2015/10/04/slnmlb-atlmlb-1,False,1,0,0,0,3,0,1,0,1
+592570,2015-06-17,Akeel Morris,2015/06/17/nynmlb-tormlb-1,False,2,2,0,0,8,1,3,0,0
 457448,2015-07-08,Matt Harrison,2015/07/08/arimlb-texmlb-1,True,5,7,4,0,20,1,3,0,1
 457448,2015-07-21,Matt Harrison,2015/07/21/texmlb-colmlb-1,True,11,4,5,1,24,0,1,0,2
 457448,2015-07-27,Matt Harrison,2015/07/27/nyamlb-texmlb-1,True,7,11,3,1,25,2,2,0,2
@@ -16185,6 +16506,14 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 445170,2015-06-27,Todd Redmond,2015/06/27/texmlb-tormlb-1,False,1,0,3,0,7,0,0,0,3
 445170,2015-06-30,Todd Redmond,2015/06/30/bosmlb-tormlb-1,False,2,7,1,1,12,0,1,0,0
 445170,2015-07-02,Todd Redmond,2015/07/02/bosmlb-tormlb-1,False,1,1,2,0,4,0,0,0,0
+543508,2015-04-27,Cory Mazzoni,2015/04/27/houmlb-sdnmlb-1,False,2,2,0,0,5,1,1,0,0
+543508,2015-04-28,Cory Mazzoni,2015/04/28/houmlb-sdnmlb-1,False,2,1,4,0,9,0,1,0,1
+543508,2015-05-21,Cory Mazzoni,2015/05/21/chnmlb-sdnmlb-1,False,1,0,0,0,3,0,0,0,2
+543508,2015-05-28,Cory Mazzoni,2015/05/28/pitmlb-sdnmlb-1,False,4,0,4,0,10,0,0,0,2
+543508,2015-05-31,Cory Mazzoni,2015/05/31/pitmlb-sdnmlb-1,False,2,0,0,0,4,0,0,0,2
+543508,2015-06-01,Cory Mazzoni,2015/06/01/nynmlb-sdnmlb-1,False,2,0,0,0,3,0,1,0,0
+543508,2015-06-15,Cory Mazzoni,2015/06/15/oakmlb-sdnmlb-1,False,3,2,2,0,8,1,1,0,0
+543508,2015-06-17,Cory Mazzoni,2015/06/17/sdnmlb-oakmlb-1,False,4,1,4,0,11,0,1,0,1
 605304,2015-09-06,Erik Johnson,2015/09/06/chamlb-kcamlb-1,True,7,11,2,0,23,3,0,0,3
 605304,2015-09-11,Erik Johnson,2015/09/11/minmlb-chamlb-1,True,1,6,4,1,22,1,5,0,6
 605304,2015-09-16,Erik Johnson,2015/09/16/oakmlb-chamlb-1,True,6,10,3,0,26,1,3,0,3
@@ -16307,6 +16636,11 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 514669,2015-09-25,Rafael Martin,2015/09/25/phimlb-wasmlb-1,False,1,1,1,0,5,1,0,0,2
 514669,2015-09-27,Rafael Martin,2015/09/27/phimlb-wasmlb-1,False,0,1,0,0,2,0,0,0,1
 514669,2015-10-03,Rafael Martin,2015/10/03/wasmlb-nynmlb-1,False,0,0,0,0,1,0,0,0,1
+543258,2015-05-24,Preston Guilmet,2015/05/24/oakmlb-tbamlb-1,False,3,1,2,0,9,0,1,0,2
+543258,2015-06-11,Preston Guilmet,2015/06/11/anamlb-tbamlb-1,False,3,3,0,0,10,1,1,0,3
+543258,2015-07-01,Preston Guilmet,2015/07/01/clemlb-tbamlb-1,False,2,1,1,0,4,0,0,0,0
+543258,2015-08-01,Preston Guilmet,2015/08/01/chnmlb-milmlb-1,False,1,0,1,0,3,0,0,0,1
+543258,2015-08-03,Preston Guilmet,2015/08/03/sdnmlb-milmlb-1,False,2,3,2,0,9,1,2,0,0
 518693,2015-05-14,Sam Freeman,2015/05/14/kcamlb-texmlb-1,False,3,2,0,0,6,1,0,0,1
 518693,2015-05-15,Sam Freeman,2015/05/15/clemlb-texmlb-1,False,0,1,2,0,3,0,0,0,0
 518693,2015-05-19,Sam Freeman,2015/05/19/texmlb-bosmlb-1,False,0,2,1,0,4,0,0,1,0
@@ -16383,6 +16717,14 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 425626,2015-09-20,Chris Capuano,2015/09/20/nyamlb-nynmlb-1,False,2,0,1,0,4,0,0,0,1
 425626,2015-09-28,Chris Capuano,2015/09/28/bosmlb-nyamlb-1,False,0,0,0,0,2,0,0,0,2
 425626,2015-10-04,Chris Capuano,2015/10/04/nyamlb-balmlb-1,False,2,0,0,0,3,0,1,0,0
+542432,2015-05-15,Jose Ramirez,2015/05/15/nyamlb-kcamlb-1,False,2,4,0,1,8,0,2,0,0
+542432,2015-06-15,Jose Ramirez,2015/06/15/nyamlb-miamlb-1,False,1,0,0,0,3,0,1,1,0
+542432,2015-06-16,Jose Ramirez,2015/06/16/nyamlb-miamlb-1,False,2,3,1,0,9,0,1,0,2
+542432,2015-09-04,Jose Ramirez,2015/09/04/seamlb-oakmlb-1,False,2,1,1,0,5,0,0,0,1
+542432,2015-09-08,Jose Ramirez,2015/09/08/texmlb-seamlb-1,False,1,0,0,0,5,0,2,1,1
+542432,2015-09-13,Jose Ramirez,2015/09/13/colmlb-seamlb-1,False,0,1,0,1,2,0,1,0,0
+542432,2015-09-19,Jose Ramirez,2015/09/19/seamlb-texmlb-1,False,1,2,2,0,6,0,1,0,0
+542432,2015-09-24,Jose Ramirez,2015/09/24/seamlb-kcamlb-1,False,5,4,1,0,14,0,2,1,1
 475416,2015-04-09,Justin Masterson,2015/04/09/bosmlb-phimlb-1,True,9,1,4,0,23,0,2,0,7
 475416,2015-04-14,Justin Masterson,2015/04/14/wasmlb-bosmlb-1,True,11,2,4,0,26,0,3,2,4
 475416,2015-04-20,Justin Masterson,2015/04/20/balmlb-bosmlb-1,True,5,3,3,0,21,0,3,0,6
@@ -16477,6 +16819,8 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 447714,2015-09-15,Eric O'Flaherty,2015/09/15/miamlb-nynmlb-1,False,1,0,1,0,4,0,1,0,1
 447714,2015-09-20,Eric O'Flaherty,2015/09/20/nyamlb-nynmlb-1,False,1,1,1,0,5,0,1,1,0
 447714,2015-09-25,Eric O'Flaherty,2015/09/25/nynmlb-cinmlb-1,False,0,0,1,0,1,0,0,0,0
+595465,2015-09-21,Daniel Winkler,2015/09/21/atlmlb-nynmlb-1,False,0,0,0,0,3,0,1,0,2
+595465,2015-09-27,Daniel Winkler,2015/09/27/atlmlb-miamlb-1,False,2,3,0,0,5,2,0,0,0
 465679,2015-04-09,Samuel Deduno,2015/04/09/clemlb-houmlb-1,False,6,1,2,0,14,0,1,0,4
 465679,2015-04-12,Samuel Deduno,2015/04/12/houmlb-texmlb-1,False,1,1,1,0,6,0,1,1,1
 465679,2015-04-14,Samuel Deduno,2015/04/14/oakmlb-houmlb-1,False,2,0,1,0,5,0,0,1,1
@@ -16495,6 +16839,9 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 594815,2015-09-27,Jeff Ferrell,2015/09/27/minmlb-detmlb-1,False,1,1,0,0,3,0,0,0,1
 594815,2015-09-30,Jeff Ferrell,2015/09/30/detmlb-texmlb-1,False,1,3,2,0,7,0,1,0,0
 594815,2015-10-04,Jeff Ferrell,2015/10/04/detmlb-chamlb-1,False,0,2,1,1,3,0,0,0,0
+453307,2015-04-14,David Huff,2015/04/14/seamlb-lanmlb-1,True,9,4,2,0,21,2,1,1,2
+453307,2015-06-01,David Huff,2015/06/01/lanmlb-colmlb-1,False,1,1,3,0,6,0,0,0,1
+453307,2015-06-02,David Huff,2015/06/02/lanmlb-colmlb-1,False,1,1,0,1,3,0,0,0,1
 543859,2015-04-30,Michael Tonkin,2015/04/30/chamlb-minmlb-1,False,0,1,0,1,1,0,0,0,0
 543859,2015-05-02,Michael Tonkin,2015/05/02/chamlb-minmlb-1,False,0,1,0,0,1,0,0,0,0
 543859,2015-05-05,Michael Tonkin,2015/05/05/oakmlb-minmlb-1,False,1,0,0,0,1,0,0,0,0
@@ -16520,6 +16867,10 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 543859,2015-09-27,Michael Tonkin,2015/09/27/minmlb-detmlb-1,False,5,1,0,0,8,0,1,0,1
 543859,2015-09-30,Michael Tonkin,2015/09/30/minmlb-clemlb-1,False,2,1,0,0,3,0,0,0,0
 543859,2015-10-03,Michael Tonkin,2015/10/03/kcamlb-minmlb-1,False,3,2,0,0,6,0,0,0,1
+452027,2015-05-01,Andrew Albers,2015/05/01/tormlb-clemlb-1,False,4,2,2,0,11,1,2,0,1
+543921,2015-05-06,Joe Wieland,2015/05/06/lanmlb-milmlb-1,True,7,5,5,1,23,2,4,0,2
+543921,2015-09-09,Joe Wieland,2015/09/09/lanmlb-anamlb-1,True,5,5,4,1,17,0,1,0,2
+538506,2015-06-28,Toru Murata,2015/06/28/clemlb-balmlb-2,True,5,8,0,1,16,2,1,0,2
 554234,2015-05-08,Williams Perez,2015/05/08/atlmlb-wasmlb-1,False,1,1,1,0,5,1,2,0,0
 554234,2015-05-13,Williams Perez,2015/05/13/atlmlb-cinmlb-1,False,3,0,1,0,8,0,2,0,2
 554234,2015-05-20,Williams Perez,2015/05/20/tbamlb-atlmlb-1,True,9,1,3,0,21,0,1,0,7
@@ -16601,6 +16952,11 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 346798,2015-09-22,Kyle Lohse,2015/09/22/milmlb-chnmlb-1,False,3,3,2,1,12,0,1,0,3
 346798,2015-09-27,Kyle Lohse,2015/09/27/milmlb-slnmlb-1,False,5,4,0,0,9,0,0,0,0
 346798,2015-10-01,Kyle Lohse,2015/10/01/milmlb-sdnmlb-1,False,1,1,2,0,8,0,2,0,1
+519263,2015-04-12,A.J. Schugel,2015/04/12/lanmlb-arimlb-1,False,10,2,2,0,16,1,2,0,0
+519263,2015-08-30,A.J. Schugel,2015/08/30/oakmlb-arimlb-1,False,1,0,0,0,2,0,0,0,1
+519263,2015-09-04,A.J. Schugel,2015/09/04/arimlb-chnmlb-1,False,3,3,1,0,9,1,2,0,0
+519263,2015-09-14,A.J. Schugel,2015/09/14/sdnmlb-arimlb-1,False,6,1,1,0,11,0,0,0,3
+519263,2015-10-02,A.J. Schugel,2015/10/02/houmlb-arimlb-1,False,5,3,3,0,13,0,1,0,1
 593576,2015-04-23,Hector Neris,2015/04/23/miamlb-phimlb-1,False,3,1,1,0,8,0,0,1,2
 593576,2015-04-25,Hector Neris,2015/04/25/atlmlb-phimlb-1,False,0,2,1,0,4,0,1,0,0
 593576,2015-07-08,Hector Neris,2015/07/08/phimlb-lanmlb-1,False,0,2,1,0,8,0,0,0,4
@@ -16721,6 +17077,12 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 500724,2015-09-29,JC Ramirez,2015/09/29/houmlb-seamlb-1,False,0,2,1,0,5,0,1,0,1
 500724,2015-09-30,JC Ramirez,2015/09/30/houmlb-seamlb-1,False,0,1,0,0,3,1,1,0,0
 500724,2015-10-03,JC Ramirez,2015/10/03/oakmlb-seamlb-1,False,1,5,1,0,10,1,1,0,2
+489002,2015-09-01,Steve Johnson,2015/09/01/tbamlb-balmlb-1,False,1,2,0,0,5,0,2,0,0
+489002,2015-09-06,Steve Johnson,2015/09/06/balmlb-tormlb-1,False,4,0,0,0,7,0,1,0,2
+489002,2015-09-12,Steve Johnson,2015/09/12/kcamlb-balmlb-1,False,1,3,2,0,7,1,1,0,0
+489002,2015-09-16,Steve Johnson,2015/09/16/bosmlb-balmlb-1,False,0,3,0,0,3,0,0,0,0
+489002,2015-09-26,Steve Johnson,2015/09/26/balmlb-bosmlb-1,False,1,0,0,0,2,0,0,0,1
+489002,2015-09-30,Steve Johnson,2015/09/30/tormlb-balmlb-1,False,1,2,1,0,5,1,1,0,0
 502004,2015-04-07,George Kontos,2015/04/07/sfnmlb-arimlb-1,False,2,1,3,0,7,0,1,0,0
 502004,2015-04-09,George Kontos,2015/04/09/sfnmlb-sdnmlb-1,False,2,2,1,0,7,0,0,0,2
 502004,2015-04-11,George Kontos,2015/04/11/sfnmlb-sdnmlb-1,False,0,2,1,0,5,0,0,0,2
@@ -16793,6 +17155,21 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 502004,2015-09-27,George Kontos,2015/09/27/sfnmlb-oakmlb-1,False,3,2,0,0,6,0,0,0,1
 502004,2015-10-03,George Kontos,2015/10/03/colmlb-sfnmlb-1,False,2,0,0,0,2,0,0,0,0
 502004,2015-10-04,George Kontos,2015/10/04/colmlb-sfnmlb-1,False,0,1,2,0,3,1,0,0,0
+595371,2015-04-12,Chris Rearick,2015/04/12/sfnmlb-sdnmlb-1,False,0,0,0,0,1,0,0,0,1
+595371,2015-04-18,Chris Rearick,2015/04/18/sdnmlb-chnmlb-1,False,0,1,0,0,2,1,0,0,1
+595371,2015-04-20,Chris Rearick,2015/04/20/sdnmlb-colmlb-1,False,3,1,0,0,5,0,1,0,0
+595371,2015-04-23,Chris Rearick,2015/04/23/sdnmlb-colmlb-1,False,0,0,1,0,3,0,0,0,1
+595371,2015-04-25,Chris Rearick,2015/04/25/lanmlb-sdnmlb-1,False,1,1,1,0,5,1,1,0,1
+445968,2015-06-11,Dana Eveland,2015/06/11/sdnmlb-atlmlb-1,False,0,0,0,0,1,0,1,0,0
+445968,2015-06-13,Dana Eveland,2015/06/13/atlmlb-nynmlb-1,False,0,0,1,0,1,0,0,0,0
+445968,2015-06-14,Dana Eveland,2015/06/14/atlmlb-nynmlb-1,False,1,0,1,0,4,0,0,0,2
+445968,2015-06-15,Dana Eveland,2015/06/15/atlmlb-bosmlb-1,False,0,2,0,0,3,1,0,0,1
+445968,2015-06-18,Dana Eveland,2015/06/18/bosmlb-atlmlb-1,False,1,0,0,0,1,0,0,0,0
+445968,2015-06-21,Dana Eveland,2015/06/21/nynmlb-atlmlb-1,False,0,0,0,0,1,0,0,0,1
+445968,2015-06-23,Dana Eveland,2015/06/23/atlmlb-wasmlb-1,False,1,0,0,0,1,0,0,0,0
+445968,2015-06-24,Dana Eveland,2015/06/24/atlmlb-wasmlb-1,False,1,0,1,0,4,0,2,0,0
+445968,2015-07-04,Dana Eveland,2015/07/04/phimlb-atlmlb-1,False,0,1,0,0,1,0,0,0,0
+445968,2015-07-05,Dana Eveland,2015/07/05/phimlb-atlmlb-1,False,0,1,0,0,1,0,0,0,0
 592091,2015-08-07,A.J. Achter,2015/08/07/minmlb-clemlb-1,False,0,1,0,0,6,1,1,0,4
 592091,2015-08-08,A.J. Achter,2015/08/08/minmlb-clemlb-1,False,0,1,3,0,5,1,1,0,0
 592091,2015-08-12,A.J. Achter,2015/08/12/texmlb-minmlb-1,False,1,3,1,0,7,0,0,0,2
@@ -16844,10 +17221,16 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 543699,2015-09-24,Tanner Roark,2015/09/24/balmlb-wasmlb-1,True,8,7,3,0,21,1,2,0,1
 543699,2015-09-29,Tanner Roark,2015/09/29/wasmlb-atlmlb-1,True,10,6,2,2,25,2,1,1,4
 543699,2015-10-04,Tanner Roark,2015/10/04/wasmlb-nynmlb-1,True,6,7,1,0,22,0,1,1,6
-543334,2015-04-12,T.J. House,2015/04/12/detmlb-clemlb-1,True,5,1,2,0,14,1,3,1,2
-543334,2015-04-19,T.J. House,2015/04/19/clemlb-minmlb-1,True,12,3,7,0,27,0,2,1,2
-543334,2015-04-25,T.J. House,2015/04/25/clemlb-detmlb-1,True,5,1,3,0,16,0,4,0,3
-543334,2015-04-30,T.J. House,2015/04/30/tormlb-clemlb-1,True,9,0,4,0,16,0,3,0,0
+518526,2015-07-07,David Carpenter,2015/07/07/atlmlb-milmlb-1,False,0,0,0,0,1,0,0,0,1
+518526,2015-07-09,David Carpenter,2015/07/09/atlmlb-colmlb-1,False,2,1,1,0,5,0,0,0,1
+518526,2015-07-10,David Carpenter,2015/07/10/atlmlb-colmlb-1,False,0,2,0,0,3,0,0,0,1
+518526,2015-07-12,David Carpenter,2015/07/12/atlmlb-colmlb-1,False,2,4,0,0,8,2,0,0,2
+543542,2015-06-26,Alex Meyer,2015/06/26/minmlb-milmlb-1,False,1,5,0,0,9,2,1,0,2
+543542,2015-06-29,Alex Meyer,2015/06/29/minmlb-cinmlb-1,False,0,2,0,0,6,0,2,0,1
+543334,2015-04-12,TJ House,2015/04/12/detmlb-clemlb-1,True,5,1,2,0,14,1,3,1,2
+543334,2015-04-19,TJ House,2015/04/19/clemlb-minmlb-1,True,12,3,7,0,27,0,2,1,2
+543334,2015-04-25,TJ House,2015/04/25/clemlb-detmlb-1,True,5,1,3,0,16,0,4,0,3
+543334,2015-04-30,TJ House,2015/04/30/tormlb-clemlb-1,True,9,0,4,0,16,0,3,0,0
 594792,2015-04-07,Brandon Cunniff,2015/04/07/atlmlb-miamlb-1,False,0,2,0,0,4,0,1,0,1
 594792,2015-04-08,Brandon Cunniff,2015/04/08/atlmlb-miamlb-1,False,3,1,0,0,5,0,0,0,1
 594792,2015-04-10,Brandon Cunniff,2015/04/10/nynmlb-atlmlb-1,False,0,1,0,0,2,0,0,0,1
@@ -16887,6 +17270,13 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 594792,2015-09-23,Brandon Cunniff,2015/09/23/atlmlb-nynmlb-1,False,0,1,3,0,7,0,1,0,2
 594792,2015-09-26,Brandon Cunniff,2015/09/26/atlmlb-miamlb-1,False,0,0,2,0,7,0,3,0,1
 594792,2015-10-01,Brandon Cunniff,2015/10/01/wasmlb-atlmlb-1,False,2,1,0,0,3,0,0,0,0
+572308,2015-07-31,Jose Valdez,2015/07/31/detmlb-balmlb-1,False,0,2,1,0,4,1,1,0,0
+572308,2015-09-04,Jose Valdez,2015/09/04/clemlb-detmlb-1,False,2,1,2,0,6,0,0,0,1
+572308,2015-09-09,Jose Valdez,2015/09/09/tbamlb-detmlb-1,False,1,4,1,1,7,0,0,0,1
+572308,2015-09-13,Jose Valdez,2015/09/13/detmlb-clemlb-2,False,4,0,0,0,6,0,0,0,2
+572308,2015-09-16,Jose Valdez,2015/09/16/detmlb-minmlb-1,False,0,0,1,0,2,0,1,0,0
+572308,2015-09-20,Jose Valdez,2015/09/20/kcamlb-detmlb-1,False,3,5,0,0,10,0,2,0,0
+572308,2015-09-27,Jose Valdez,2015/09/27/minmlb-detmlb-1,False,1,3,0,0,4,1,0,0,0
 456696,2015-06-07,David Hernandez,2015/06/07/nynmlb-arimlb-1,False,0,1,1,1,4,0,1,0,1
 456696,2015-06-15,David Hernandez,2015/06/15/arimlb-anamlb-1,False,1,0,1,0,3,0,1,0,0
 456696,2015-06-17,David Hernandez,2015/06/17/anamlb-arimlb-1,False,0,1,1,0,3,0,0,0,0
@@ -16934,6 +17324,10 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 544365,2015-07-24,Manny Banuelos,2015/07/24/atlmlb-slnmlb-1,True,7,5,5,0,23,1,3,0,3
 544365,2015-09-01,Manny Banuelos,2015/09/01/miamlb-atlmlb-1,True,7,4,3,0,15,0,1,0,0
 544365,2015-09-06,Manny Banuelos,2015/09/06/atlmlb-wasmlb-1,True,2,3,3,0,13,2,1,1,3
+607968,2015-04-11,Drew Rucinski,2015/04/11/kcamlb-anamlb-1,False,1,2,3,0,8,0,0,0,2
+607968,2015-04-14,Drew Rucinski,2015/04/14/anamlb-texmlb-1,True,7,3,2,0,16,0,4,0,0
+607968,2015-08-02,Drew Rucinski,2015/08/02/anamlb-lanmlb-1,False,0,1,0,0,3,1,1,0,1
+607968,2015-08-26,Drew Rucinski,2015/08/26/anamlb-detmlb-1,False,3,2,0,0,8,0,1,1,1
 543144,2015-04-06,Danny Farquhar,2015/04/06/anamlb-seamlb-1,False,0,1,2,0,3,0,0,0,0
 543144,2015-04-08,Danny Farquhar,2015/04/08/anamlb-seamlb-1,False,1,1,0,0,3,0,0,0,1
 543144,2015-04-11,Danny Farquhar,2015/04/11/seamlb-oakmlb-1,False,1,1,1,0,5,0,0,0,0
@@ -16977,6 +17371,18 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 543144,2015-09-28,Danny Farquhar,2015/09/28/houmlb-seamlb-1,False,1,2,0,0,4,1,0,0,1
 543144,2015-09-30,Danny Farquhar,2015/09/30/houmlb-seamlb-1,False,2,2,2,0,9,0,0,0,3
 543144,2015-10-02,Danny Farquhar,2015/10/02/oakmlb-seamlb-1,False,1,3,2,0,8,1,0,0,2
+571584,2015-07-29,Caleb Cotham,2015/07/29/nyamlb-texmlb-1,False,2,0,1,0,8,0,0,0,4
+571584,2015-08-17,Caleb Cotham,2015/08/17/minmlb-nyamlb-1,False,5,3,3,0,12,2,0,0,1
+571584,2015-09-02,Caleb Cotham,2015/09/02/nyamlb-bosmlb-1,False,0,2,0,0,2,0,0,0,0
+571584,2015-09-11,Caleb Cotham,2015/09/11/tormlb-nyamlb-1,False,1,0,2,0,5,0,0,0,2
+571584,2015-09-13,Caleb Cotham,2015/09/13/tormlb-nyamlb-1,False,2,0,0,0,2,0,0,0,0
+571584,2015-09-14,Caleb Cotham,2015/09/14/nyamlb-tbamlb-1,False,0,0,0,0,1,0,0,0,1
+571584,2015-09-19,Caleb Cotham,2015/09/19/nyamlb-nynmlb-1,False,0,0,0,0,1,0,0,0,1
+571584,2015-09-21,Caleb Cotham,2015/09/21/nyamlb-tormlb-1,False,1,1,1,0,5,0,0,0,2
+571584,2015-09-23,Caleb Cotham,2015/09/23/nyamlb-tormlb-1,False,1,1,0,0,3,0,1,0,0
+571584,2015-09-28,Caleb Cotham,2015/09/28/bosmlb-nyamlb-1,False,1,2,0,0,3,1,0,0,0
+571584,2015-09-30,Caleb Cotham,2015/09/30/bosmlb-nyamlb-1,False,0,0,1,0,1,0,0,0,0
+571584,2015-10-04,Caleb Cotham,2015/10/04/nyamlb-balmlb-1,False,0,2,0,0,2,1,0,0,0
 592741,2015-04-06,Chasen Shreve,2015/04/06/tormlb-nyamlb-1,False,0,5,0,0,5,1,0,0,0
 592741,2015-04-10,Chasen Shreve,2015/04/10/bosmlb-nyamlb-1,False,3,2,3,1,13,0,0,0,4
 592741,2015-04-22,Chasen Shreve,2015/04/22/nyamlb-detmlb-1,False,1,0,0,0,3,0,0,0,2
@@ -17067,6 +17473,12 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 447755,2015-09-12,Steve Delabar,2015/09/12/tormlb-nyamlb-2,False,0,0,1,0,2,0,0,0,1
 447755,2015-09-22,Steve Delabar,2015/09/22/nyamlb-tormlb-1,False,0,2,1,0,3,0,0,0,0
 447755,2015-09-30,Steve Delabar,2015/09/30/tormlb-balmlb-2,False,2,4,0,0,6,2,0,0,0
+346797,2015-04-06,Grant Balfour,2015/04/06/balmlb-tbamlb-1,False,0,1,0,0,1,0,0,0,0
+346797,2015-04-07,Grant Balfour,2015/04/07/balmlb-tbamlb-1,False,0,0,2,0,3,0,1,0,0
+346797,2015-04-10,Grant Balfour,2015/04/10/tbamlb-miamlb-1,False,2,0,2,0,4,0,0,0,0
+346797,2015-04-14,Grant Balfour,2015/04/14/tbamlb-tormlb-1,False,0,3,0,0,3,0,0,0,0
+346797,2015-04-15,Grant Balfour,2015/04/15/tbamlb-tormlb-1,False,2,1,0,0,3,0,0,0,0
+346797,2015-04-18,Grant Balfour,2015/04/18/nyamlb-tbamlb-1,False,0,3,0,1,7,1,3,1,0
 504083,2015-04-28,Jorge Rondon,2015/04/28/colmlb-arimlb-1,False,1,2,2,0,7,0,1,0,1
 504083,2015-05-01,Jorge Rondon,2015/05/01/colmlb-sdnmlb-1,False,2,1,2,0,8,0,2,0,0
 504083,2015-08-02,Jorge Rondon,2015/08/02/detmlb-balmlb-1,False,3,4,4,0,12,0,0,0,1
@@ -17160,6 +17572,14 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 543746,2015-09-12,Rob Scahill,2015/09/12/milmlb-pitmlb-1,False,2,0,1,0,4,0,1,0,0
 543746,2015-09-17,Rob Scahill,2015/09/17/chnmlb-pitmlb-1,False,4,1,1,0,8,0,1,0,1
 543746,2015-09-30,Rob Scahill,2015/09/30/slnmlb-pitmlb-2,False,2,2,1,0,7,1,1,0,1
+400089,2015-07-20,Rafael Soriano,2015/07/20/chnmlb-cinmlb-1,False,1,2,1,0,5,0,1,0,0
+400089,2015-07-22,Rafael Soriano,2015/07/22/chnmlb-cinmlb-2,False,0,0,2,0,3,0,0,0,1
+400089,2015-07-24,Rafael Soriano,2015/07/24/phimlb-chnmlb-1,False,1,1,0,0,3,1,0,0,1
+400089,2015-07-27,Rafael Soriano,2015/07/27/colmlb-chnmlb-1,False,2,1,0,0,4,1,0,0,1
+400089,2015-07-28,Rafael Soriano,2015/07/28/colmlb-chnmlb-1,False,0,2,4,1,6,0,0,0,0
+400089,2015-07-30,Rafael Soriano,2015/07/30/chnmlb-milmlb-1,False,1,1,1,0,4,0,0,0,1
+136600,2015-05-09,Bruce Chen,2015/05/09/minmlb-clemlb-1,True,8,4,6,0,22,1,1,0,3
+136600,2015-05-15,Bruce Chen,2015/05/15/clemlb-texmlb-1,True,4,5,2,0,13,2,0,0,1
 571871,2015-04-08,Ian Krol,2015/04/08/minmlb-detmlb-1,False,1,0,0,0,3,0,0,0,2
 571871,2015-04-11,Ian Krol,2015/04/11/detmlb-clemlb-1,False,1,0,1,0,3,0,1,0,0
 571871,2015-04-13,Ian Krol,2015/04/13/detmlb-pitmlb-1,False,1,2,1,0,4,0,0,0,0
@@ -17309,6 +17729,7 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 502304,2015-06-28,David Carpenter,2015/06/28/wasmlb-phimlb-1,False,0,2,0,0,3,0,0,0,1
 502304,2015-06-30,David Carpenter,2015/06/30/wasmlb-atlmlb-1,False,1,2,1,0,5,1,0,0,1
 502304,2015-07-05,David Carpenter,2015/07/05/sfnmlb-wasmlb-1,False,1,0,1,0,2,0,0,0,0
+474668,2015-07-06,Eric Surkamp,2015/07/06/phimlb-lanmlb-1,False,3,2,3,0,16,2,1,2,4
 429780,2015-08-05,Chris Narveson,2015/08/05/nynmlb-miamlb-1,False,2,5,2,0,13,0,0,0,4
 429780,2015-08-08,Chris Narveson,2015/08/08/miamlb-atlmlb-1,False,1,0,0,0,1,0,0,0,0
 429780,2015-08-12,Chris Narveson,2015/08/12/bosmlb-miamlb-1,False,2,1,1,0,8,1,1,0,3
@@ -17360,8 +17781,39 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 595001,2015-09-24,Josh Smith,2015/09/24/nynmlb-cinmlb-1,True,8,5,4,0,23,0,1,0,5
 595001,2015-09-29,Josh Smith,2015/09/29/chnmlb-cinmlb-1,True,3,6,5,0,27,0,5,1,7
 595001,2015-10-04,Josh Smith,2015/10/04/cinmlb-pitmlb-1,True,8,4,3,0,19,1,0,0,4
+605338,2015-05-25,Jacob Lindgren,2015/05/25/kcamlb-nyamlb-1,False,1,0,2,0,7,0,2,0,2
+605338,2015-05-29,Jacob Lindgren,2015/05/29/nyamlb-oakmlb-1,False,2,3,0,0,7,1,1,0,1
+605338,2015-05-31,Jacob Lindgren,2015/05/31/nyamlb-oakmlb-1,False,0,1,0,0,1,0,0,0,0
+605338,2015-06-02,Jacob Lindgren,2015/06/02/nyamlb-seamlb-1,False,2,0,0,0,4,0,0,0,2
+605338,2015-06-05,Jacob Lindgren,2015/06/05/anamlb-nyamlb-1,False,1,0,0,0,4,0,1,0,2
+605338,2015-06-10,Jacob Lindgren,2015/06/10/wasmlb-nyamlb-1,False,1,2,0,0,4,1,0,0,1
+605338,2015-06-12,Jacob Lindgren,2015/06/12/nyamlb-balmlb-1,False,0,1,1,0,2,1,0,0,0
+502051,2015-06-02,Josh Ravin,2015/06/02/lanmlb-colmlb-2,False,0,0,0,0,1,0,0,0,1
+502051,2015-06-03,Josh Ravin,2015/06/03/lanmlb-colmlb-1,False,4,2,1,0,8,0,0,0,1
+502051,2015-06-08,Josh Ravin,2015/06/08/arimlb-lanmlb-1,False,1,1,2,0,5,0,0,0,1
+502051,2015-06-14,Josh Ravin,2015/06/14/lanmlb-sdnmlb-1,False,2,1,1,0,7,0,0,0,3
+502051,2015-06-16,Josh Ravin,2015/06/16/lanmlb-texmlb-1,False,0,1,0,0,1,1,0,0,0
+502051,2015-06-17,Josh Ravin,2015/06/17/texmlb-lanmlb-1,False,2,2,0,0,5,1,0,0,1
+502051,2015-06-19,Josh Ravin,2015/06/19/sfnmlb-lanmlb-1,False,2,0,1,0,6,0,1,0,2
+502051,2015-07-24,Josh Ravin,2015/07/24/lanmlb-nynmlb-1,False,2,1,0,0,3,0,0,0,0
+502051,2015-07-25,Josh Ravin,2015/07/25/lanmlb-nynmlb-1,False,0,2,2,0,11,1,3,1,3
 435044,2015-04-26,Scott Baker,2015/04/26/lanmlb-sdnmlb-1,True,6,10,2,1,26,2,2,0,6
 435044,2015-05-02,Scott Baker,2015/05/02/arimlb-lanmlb-1,True,7,6,3,0,19,2,1,0,2
+425835,2015-07-10,Chin-hui Tsao,2015/07/10/milmlb-lanmlb-1,False,2,0,1,0,4,0,0,0,1
+425835,2015-07-11,Chin-hui Tsao,2015/07/11/milmlb-lanmlb-1,False,3,2,0,0,7,0,0,0,2
+425835,2015-07-17,Chin-hui Tsao,2015/07/17/lanmlb-wasmlb-1,False,1,4,1,1,9,1,1,0,2
+425835,2015-07-21,Chin-hui Tsao,2015/07/21/lanmlb-atlmlb-1,False,0,2,2,1,7,0,1,0,2
+425835,2015-07-25,Chin-hui Tsao,2015/07/25/lanmlb-nynmlb-1,False,3,2,4,0,10,2,1,0,0
+489295,2015-04-10,Brian Schlitter,2015/04/10/chnmlb-colmlb-1,False,3,1,1,0,6,1,1,0,0
+489295,2015-04-13,Brian Schlitter,2015/04/13/cinmlb-chnmlb-1,False,3,0,0,0,3,0,0,0,0
+489295,2015-04-15,Brian Schlitter,2015/04/15/cinmlb-chnmlb-1,False,3,0,0,0,4,0,0,0,1
+489295,2015-04-17,Brian Schlitter,2015/04/17/sdnmlb-chnmlb-1,False,0,2,0,0,2,1,0,0,0
+489295,2015-04-19,Brian Schlitter,2015/04/19/sdnmlb-chnmlb-1,False,0,1,1,0,3,0,0,0,1
+489295,2015-04-21,Brian Schlitter,2015/04/21/chnmlb-pitmlb-1,False,5,0,0,0,6,0,1,0,0
+489295,2015-04-23,Brian Schlitter,2015/04/23/chnmlb-pitmlb-1,False,0,1,1,1,4,0,0,0,2
+489295,2015-05-16,Brian Schlitter,2015/05/16/pitmlb-chnmlb-1,False,0,0,2,0,2,0,0,0,0
+489295,2015-05-17,Brian Schlitter,2015/05/17/pitmlb-chnmlb-1,False,3,0,0,0,3,0,0,0,0
+489295,2015-06-14,Brian Schlitter,2015/06/14/cinmlb-chnmlb-1,False,2,0,0,0,2,0,0,0,0
 607309,2015-04-06,Phil Klein,2015/04/06/texmlb-oakmlb-1,False,0,3,1,0,6,1,1,0,1
 607309,2015-04-08,Phil Klein,2015/04/08/texmlb-oakmlb-1,False,0,2,2,0,4,0,0,0,0
 607309,2015-04-10,Phil Klein,2015/04/10/houmlb-texmlb-1,False,0,1,0,0,1,0,0,0,0
@@ -17390,23 +17842,23 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 592677,2015-09-26,C.J. Riefenhauser,2015/09/26/tbamlb-tormlb-1,False,0,3,0,1,5,0,1,0,1
 592677,2015-10-02,C.J. Riefenhauser,2015/10/02/tormlb-tbamlb-1,False,1,1,1,0,3,0,0,0,0
 592677,2015-10-03,C.J. Riefenhauser,2015/10/03/tormlb-tbamlb-1,False,2,0,0,0,3,0,0,0,1
-598287,2015-07-03,,2015/07/03/houmlb-bosmlb-1,False,2,2,2,0,8,0,0,1,1
-598287,2015-07-20,,2015/07/20/bosmlb-anamlb-1,False,1,6,2,3,12,1,2,0,1
-598287,2015-07-25,,2015/07/25/detmlb-bosmlb-1,False,2,4,1,1,8,1,1,0,0
-598287,2015-09-01,,2015/09/01/nyamlb-bosmlb-1,False,0,0,0,0,2,0,0,0,2
-598287,2015-09-04,,2015/09/04/phimlb-bosmlb-1,False,0,0,0,0,1,0,0,0,1
-598287,2015-09-07,,2015/09/07/tormlb-bosmlb-1,False,1,0,1,0,2,0,0,0,0
-598287,2015-09-08,,2015/09/08/tormlb-bosmlb-1,False,2,0,0,0,4,0,0,1,1
-598287,2015-09-11,,2015/09/11/bosmlb-tbamlb-1,False,0,1,0,0,2,1,0,0,1
-598287,2015-09-13,,2015/09/13/bosmlb-tbamlb-1,False,0,2,0,0,4,0,1,0,1
-598287,2015-09-15,,2015/09/15/bosmlb-balmlb-1,False,1,0,0,0,4,0,0,0,3
-598287,2015-09-19,,2015/09/19/bosmlb-tormlb-1,False,2,0,0,0,4,0,2,0,0
-598287,2015-09-20,,2015/09/20/bosmlb-tormlb-1,False,2,0,1,0,4,0,0,0,1
-598287,2015-09-23,,2015/09/23/tbamlb-bosmlb-1,False,1,0,0,0,2,0,0,0,1
-598287,2015-09-26,,2015/09/26/balmlb-bosmlb-1,False,0,1,0,0,1,0,0,0,0
-598287,2015-09-27,,2015/09/27/balmlb-bosmlb-1,False,1,0,0,0,1,0,0,0,0
-598287,2015-09-28,,2015/09/28/bosmlb-nyamlb-1,False,1,0,0,0,1,0,0,0,0
-598287,2015-09-30,,2015/09/30/bosmlb-nyamlb-1,False,0,0,0,0,1,0,1,0,0
+598287,2015-07-03,Noe Ramirez,2015/07/03/houmlb-bosmlb-1,False,2,2,2,0,8,0,0,1,1
+598287,2015-07-20,Noe Ramirez,2015/07/20/bosmlb-anamlb-1,False,1,6,2,3,12,1,2,0,1
+598287,2015-07-25,Noe Ramirez,2015/07/25/detmlb-bosmlb-1,False,2,4,1,1,8,1,1,0,0
+598287,2015-09-01,Noe Ramirez,2015/09/01/nyamlb-bosmlb-1,False,0,0,0,0,2,0,0,0,2
+598287,2015-09-04,Noe Ramirez,2015/09/04/phimlb-bosmlb-1,False,0,0,0,0,1,0,0,0,1
+598287,2015-09-07,Noe Ramirez,2015/09/07/tormlb-bosmlb-1,False,1,0,1,0,2,0,0,0,0
+598287,2015-09-08,Noe Ramirez,2015/09/08/tormlb-bosmlb-1,False,2,0,0,0,4,0,0,1,1
+598287,2015-09-11,Noe Ramirez,2015/09/11/bosmlb-tbamlb-1,False,0,1,0,0,2,1,0,0,1
+598287,2015-09-13,Noe Ramirez,2015/09/13/bosmlb-tbamlb-1,False,0,2,0,0,4,0,1,0,1
+598287,2015-09-15,Noe Ramirez,2015/09/15/bosmlb-balmlb-1,False,1,0,0,0,4,0,0,0,3
+598287,2015-09-19,Noe Ramirez,2015/09/19/bosmlb-tormlb-1,False,2,0,0,0,4,0,2,0,0
+598287,2015-09-20,Noe Ramirez,2015/09/20/bosmlb-tormlb-1,False,2,0,1,0,4,0,0,0,1
+598287,2015-09-23,Noe Ramirez,2015/09/23/tbamlb-bosmlb-1,False,1,0,0,0,2,0,0,0,1
+598287,2015-09-26,Noe Ramirez,2015/09/26/balmlb-bosmlb-1,False,0,1,0,0,1,0,0,0,0
+598287,2015-09-27,Noe Ramirez,2015/09/27/balmlb-bosmlb-1,False,1,0,0,0,1,0,0,0,0
+598287,2015-09-28,Noe Ramirez,2015/09/28/bosmlb-nyamlb-1,False,1,0,0,0,1,0,0,0,0
+598287,2015-09-30,Noe Ramirez,2015/09/30/bosmlb-nyamlb-1,False,0,0,0,0,1,0,1,0,0
 612434,2015-04-06,Miguel Castro,2015/04/06/tormlb-nyamlb-1,False,0,1,1,0,3,0,0,0,1
 612434,2015-04-08,Miguel Castro,2015/04/08/tormlb-nyamlb-1,False,0,1,0,0,2,0,0,0,1
 612434,2015-04-09,Miguel Castro,2015/04/09/tormlb-nyamlb-1,False,2,1,0,0,3,0,0,0,0
@@ -17425,6 +17877,7 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 612434,2015-09-08,Miguel Castro,2015/09/08/colmlb-sdnmlb-1,False,0,1,1,0,6,0,2,0,2
 612434,2015-09-12,Miguel Castro,2015/09/12/colmlb-seamlb-1,False,0,1,0,0,3,0,0,0,2
 612434,2015-09-14,Miguel Castro,2015/09/14/colmlb-lanmlb-1,False,0,1,2,0,5,1,0,0,2
+518418,2015-06-19,Phillippe Aumont,2015/06/19/slnmlb-phimlb-1,True,7,3,3,0,23,2,7,0,3
 623430,2015-09-01,Ryan Dull,2015/09/01/anamlb-oakmlb-1,False,2,1,0,0,4,0,0,0,1
 623430,2015-09-02,Ryan Dull,2015/09/02/anamlb-oakmlb-1,False,1,1,0,0,3,0,0,0,1
 623430,2015-09-04,Ryan Dull,2015/09/04/seamlb-oakmlb-1,False,1,0,0,0,3,0,0,0,2
@@ -17693,6 +18146,12 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 444446,2015-09-26,Collin Balester,2015/09/26/nynmlb-cinmlb-1,False,2,3,2,1,11,0,2,0,2
 444446,2015-09-30,Collin Balester,2015/09/30/chnmlb-cinmlb-1,False,1,4,0,0,7,0,0,0,2
 444446,2015-10-02,Collin Balester,2015/10/02/cinmlb-pitmlb-1,False,1,1,1,0,6,1,2,0,1
+516714,2015-09-07,Dario Alvarez,2015/09/07/nynmlb-wasmlb-1,False,0,0,0,0,1,0,0,0,1
+516714,2015-09-10,Dario Alvarez,2015/09/10/nynmlb-atlmlb-1,False,1,3,0,1,4,0,0,0,0
+516714,2015-09-13,Dario Alvarez,2015/09/13/nynmlb-atlmlb-1,False,1,1,0,0,5,0,1,1,0
+516714,2015-09-15,Dario Alvarez,2015/09/15/miamlb-nynmlb-1,False,0,2,2,0,4,1,0,0,0
+516714,2015-09-30,Dario Alvarez,2015/09/30/nynmlb-phimlb-1,False,0,1,0,0,2,0,0,1,0
+516714,2015-10-01,Dario Alvarez,2015/10/01/nynmlb-phimlb-1,False,0,2,0,0,3,1,0,0,1
 445612,2015-04-07,Dale Thayer,2015/04/07/sdnmlb-lanmlb-1,False,1,1,0,0,3,0,0,0,1
 445612,2015-04-09,Dale Thayer,2015/04/09/sfnmlb-sdnmlb-1,False,1,1,0,0,3,0,0,0,1
 445612,2015-04-12,Dale Thayer,2015/04/12/sfnmlb-sdnmlb-1,False,0,2,1,0,3,1,0,0,0
@@ -17731,6 +18190,10 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 445612,2015-08-06,Dale Thayer,2015/08/06/sdnmlb-milmlb-1,False,1,2,1,0,5,0,0,0,1
 445612,2015-08-09,Dale Thayer,2015/08/09/phimlb-sdnmlb-1,False,1,0,0,0,3,0,0,0,1
 445612,2015-08-10,Dale Thayer,2015/08/10/cinmlb-sdnmlb-1,False,1,2,0,0,4,0,1,0,0
+605317,2015-08-22,Guido Knudson,2015/08/22/texmlb-detmlb-1,False,0,2,0,0,4,1,0,0,2
+605317,2015-08-24,Guido Knudson,2015/08/24/detmlb-cinmlb-1,False,3,3,2,0,9,1,0,0,1
+605317,2015-08-29,Guido Knudson,2015/08/29/detmlb-tormlb-1,False,4,2,2,0,12,1,2,0,2
+605317,2015-09-02,Guido Knudson,2015/09/02/detmlb-kcamlb-1,False,1,3,0,0,6,2,1,0,1
 516970,2015-04-14,Sugar Ray Marimon,2015/04/14/miamlb-atlmlb-1,False,3,5,4,0,17,0,1,0,3
 516970,2015-04-18,Sugar Ray Marimon,2015/04/18/atlmlb-tormlb-1,False,0,1,0,0,1,1,0,0,0
 516970,2015-04-21,Sugar Ray Marimon,2015/04/21/atlmlb-nynmlb-1,False,3,6,0,0,11,0,2,0,0
@@ -17998,6 +18461,11 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 571479,2015-09-26,Andrew Bellatti,2015/09/26/tbamlb-tormlb-1,False,0,2,0,0,3,0,0,0,1
 571479,2015-09-27,Andrew Bellatti,2015/09/27/tbamlb-tormlb-1,False,1,0,0,0,1,0,0,0,0
 571479,2015-10-02,Andrew Bellatti,2015/10/02/tormlb-tbamlb-1,False,1,3,0,0,5,2,0,0,0
+453264,2015-04-30,Donnie Veal,2015/04/30/cinmlb-atlmlb-1,False,0,2,2,0,6,1,1,0,1
+453264,2015-05-02,Donnie Veal,2015/05/02/cinmlb-atlmlb-1,False,1,2,0,0,5,1,1,0,1
+453264,2015-05-04,Donnie Veal,2015/05/04/phimlb-atlmlb-1,False,3,1,0,0,5,0,0,1,0
+453264,2015-05-28,Donnie Veal,2015/05/28/atlmlb-sfnmlb-1,False,1,2,1,0,5,0,0,0,1
+453264,2015-05-31,Donnie Veal,2015/05/31/atlmlb-sfnmlb-1,False,1,1,0,0,3,1,0,0,0
 430911,2015-06-09,David Aardsma,2015/06/09/sdnmlb-atlmlb-1,False,0,1,0,0,1,0,0,0,0
 430911,2015-06-11,David Aardsma,2015/06/11/sdnmlb-atlmlb-1,False,1,0,0,0,3,0,0,0,1
 430911,2015-06-12,David Aardsma,2015/06/12/atlmlb-nynmlb-1,False,0,2,1,0,3,0,0,0,0
@@ -18204,6 +18672,15 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 488846,2015-09-24,Brian Duensing,2015/09/24/clemlb-minmlb-1,False,4,0,3,0,8,0,0,1,0
 488846,2015-09-30,Brian Duensing,2015/09/30/minmlb-clemlb-2,False,2,3,0,1,6,1,0,0,1
 488846,2015-10-04,Brian Duensing,2015/10/04/kcamlb-minmlb-1,False,6,2,1,0,9,0,0,0,0
+475857,2015-04-26,Ryan Cook,2015/04/26/houmlb-oakmlb-1,False,1,1,0,0,3,0,0,0,1
+475857,2015-04-29,Ryan Cook,2015/04/29/anamlb-oakmlb-1,False,2,0,0,0,4,0,1,0,1
+475857,2015-04-30,Ryan Cook,2015/04/30/anamlb-oakmlb-1,False,5,2,2,1,9,0,0,0,0
+475857,2015-05-02,Ryan Cook,2015/05/02/oakmlb-texmlb-1,False,2,2,0,0,7,0,2,0,1
+475857,2015-08-11,Ryan Cook,2015/08/11/bosmlb-miamlb-1,False,1,1,1,0,4,0,0,0,1
+475857,2015-08-12,Ryan Cook,2015/08/12/bosmlb-miamlb-1,False,2,0,2,0,5,0,0,0,1
+475857,2015-08-15,Ryan Cook,2015/08/15/seamlb-bosmlb-1,False,2,2,2,0,8,2,1,0,1
+475857,2015-09-02,Ryan Cook,2015/09/02/nyamlb-bosmlb-1,False,1,5,0,0,8,2,2,0,0
+475857,2015-09-16,Ryan Cook,2015/09/16/bosmlb-balmlb-1,False,5,0,0,0,6,0,1,0,0
 460156,2015-04-19,Brandon Gomes,2015/04/19/nyamlb-tbamlb-1,False,2,3,0,0,8,0,1,0,2
 460156,2015-04-21,Brandon Gomes,2015/04/21/bosmlb-tbamlb-1,False,1,1,1,1,4,0,0,0,1
 460156,2015-04-23,Brandon Gomes,2015/04/23/bosmlb-tbamlb-1,False,0,0,0,0,1,0,0,0,1
@@ -18282,6 +18759,15 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 572750,2015-08-03,Eddie Butler,2015/08/03/seamlb-colmlb-1,True,7,8,2,0,20,3,1,0,2
 572750,2015-08-08,Eddie Butler,2015/08/08/colmlb-wasmlb-1,True,13,6,2,0,28,0,4,0,2
 572750,2015-08-13,Eddie Butler,2015/08/13/colmlb-nynmlb-1,True,5,5,5,1,20,1,1,0,4
+602083,2015-09-01,Miguel Almonte,2015/09/01/detmlb-kcamlb-1,False,3,2,0,0,6,1,1,0,0
+602083,2015-09-03,Miguel Almonte,2015/09/03/detmlb-kcamlb-1,False,2,0,0,0,5,0,1,0,2
+602083,2015-09-07,Miguel Almonte,2015/09/07/minmlb-kcamlb-1,False,1,1,0,1,4,0,1,0,1
+602083,2015-09-12,Miguel Almonte,2015/09/12/kcamlb-balmlb-1,False,1,0,1,0,5,0,0,1,2
+602083,2015-09-19,Miguel Almonte,2015/09/19/kcamlb-detmlb-1,False,1,1,0,0,5,1,1,0,2
+602083,2015-09-22,Miguel Almonte,2015/09/22/seamlb-kcamlb-1,False,1,2,0,0,9,1,3,0,3
+602083,2015-09-25,Miguel Almonte,2015/09/25/clemlb-kcamlb-1,False,0,3,0,0,3,0,0,0,0
+602083,2015-09-26,Miguel Almonte,2015/09/26/clemlb-kcamlb-1,False,3,0,0,0,3,0,0,0,0
+602083,2015-09-28,Miguel Almonte,2015/09/28/kcamlb-chnmlb-1,False,0,1,0,0,1,1,0,0,0
 425840,2015-04-06,Neal Cotts,2015/04/06/colmlb-milmlb-1,False,3,0,1,0,7,0,0,0,3
 425840,2015-04-10,Neal Cotts,2015/04/10/pitmlb-milmlb-1,False,2,1,0,0,7,1,1,0,2
 425840,2015-04-12,Neal Cotts,2015/04/12/pitmlb-milmlb-1,False,0,0,0,0,1,0,0,0,1
@@ -18444,6 +18930,9 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 456071,2015-09-12,Yohan Flande,2015/09/12/colmlb-seamlb-1,True,4,7,3,0,20,2,2,0,3
 456071,2015-09-19,Yohan Flande,2015/09/19/sdnmlb-colmlb-1,True,5,3,4,1,14,0,2,0,0
 456071,2015-10-04,Yohan Flande,2015/10/04/colmlb-sfnmlb-1,False,4,0,2,0,7,0,0,0,1
+217096,2015-09-20,Barry Zito,2015/09/20/oakmlb-houmlb-1,False,2,3,0,1,6,1,1,0,0
+217096,2015-09-26,Barry Zito,2015/09/26/sfnmlb-oakmlb-1,True,2,6,4,0,13,1,1,0,0
+217096,2015-09-30,Barry Zito,2015/09/30/oakmlb-anamlb-1,True,8,3,1,0,18,2,4,0,2
 547179,2015-04-29,Michael Lorenzen,2015/04/29/milmlb-cinmlb-1,True,5,7,6,0,24,3,1,0,5
 547179,2015-05-05,Michael Lorenzen,2015/05/05/cinmlb-pitmlb-1,True,11,5,1,0,25,1,3,1,4
 547179,2015-05-10,Michael Lorenzen,2015/05/10/cinmlb-chamlb-1,True,4,5,9,0,25,0,4,0,2

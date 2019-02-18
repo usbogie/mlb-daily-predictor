@@ -53,7 +53,7 @@ def scrape_games(year=2017):
 	return season_df
 
 if __name__ == '__main__':
-	year = 2016
+	year = 2015
 	df = scrape_games(year=year)
 	csv_path = os.path.join('..','data','games','games_{}.csv'.format(year))
 	df.drop_duplicates().to_csv(csv_path)

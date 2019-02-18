@@ -21,7 +21,11 @@ def calculate(dh, pitcher_id, player_ids, steamer):
         "RF": 1.04,
     }
     for position in positions:
-        fielders = fielders.assign(f = (fielders['g'+position] + fielders['gUIF'] + fielders['gUOF'])/fielders['G']).sort_values('f').drop('f', axis=1).iloc[::-1]
+        if position == 'C':
+            fielders = fielders.assign(f = fielders['g'+position]/fielders['G']).sort_values('f').drop('f', axis=1).iloc[::-1]
+        else:
+            fielders = fielders.assign(f = (fielders['g'+position] + fielders['gUIF'] + fielders['gUOF'])/fielders['G']).sort_values('f').drop('f', axis=1).iloc[::-1]
+
         try:
             fielder = fielders.to_dict('records')[0]
         except:
@@ -34,6 +38,8 @@ def calculate(dh, pitcher_id, player_ids, steamer):
             except:
                 uzr = 0
             uzr_adj = uzr * position_importance[position]
+            # print(uzr_adj, position)
+            # print(fielder)
             acc = acc + uzr_adj
         position_dict[position] = fielder['fullname']
         fielders = fielders.iloc[1:]

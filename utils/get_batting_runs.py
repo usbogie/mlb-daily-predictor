@@ -33,10 +33,8 @@ def nearest(items, pivot):
 def player_in_fantasy_labs(name, id, manifest):
     players = manifest[(manifest['mlb_name'] == name)]
     ids = players['mlb_id'].unique().tolist()
-    print(players)
     if len(ids) > 0:
         if len(ids) > 1:
-            print(ids)
             print("DUPLICATE something is wrong\n",players)
             ix = int(input("Which player is actually playing? => "))
             player = players.iloc[[ix-1]]
@@ -64,7 +62,7 @@ def get_player(player_id, name, date, manifest, projections):
     dates = player['date'].tolist()
     if date not in dates:
         try:
-            print(name)
+            print(date, name, 'date not in projection dates')
             target = nearest([datetime.strptime(d, '%Y-%m-%d') for d in dates], datetime.strptime(date, '%Y-%m-%d'))
             target = target.strftime('%Y-%m-%d')
         except:
@@ -77,15 +75,28 @@ def get_player(player_id, name, date, manifest, projections):
 def calculate(lineup, date, manifest, projections):
     total_runs = 0
     pitcher_fantasylabs_id = int(lineup['10_id'])
+    all_batters = []
     for i in range(1,10):
         fantasylabs_id = int(lineup['{}_id'.format(str(i))])
         batter_name = lineup['{}_name'.format(str(i))]
         if fantasylabs_id == pitcher_fantasylabs_id:
-            total_runs = total_runs + ((-0.2 / 100) * r_pa[date[:4]] * pa_by_order[i])
+            all_batters.append(-20)
             continue
         player = get_player(fantasylabs_id, batter_name, date, manifest, projections)
         if player is None:
             return None
         # print(player)
-        total_runs = total_runs + ((player['wrcplus'] / 100) * r_pa[date[:4]] * pa_by_order[i])
-    return total_runs * 162
+        all_batters.append(player['wrcplus'])
+        # total_runs = total_runs + ((player['wrcplus'] / 100) * r_pa[date[:4]] * pa_by_order[i])
+    # for i in range(1,10):
+    #     fantasylabs_id = int(lineup['{}_id'.format(str(i))])
+    #     batter_name = lineup['{}_name'.format(str(i))]
+    #     if fantasylabs_id == pitcher_fantasylabs_id:
+    #         total_runs = total_runs + ((-20 / 100) * r_pa[date[:4]] * 4.22)
+    #         continue
+    #     player = get_player(fantasylabs_id, batter_name, date, manifest, projections)
+    #     if player is None:
+    #         return None
+    #     # print(player)
+    #     total_runs = total_runs + ((player['wrcplus'] / 100) * r_pa[date[:4]] * pa_by_order[i])
+    return all_batters

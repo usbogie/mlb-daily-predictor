@@ -2,6 +2,10 @@ def amount_won(risk, odds):
     return int(risk * (odds-1))
 
 def winpct_to_ml(winpct):
+    try:
+        winpct = winpct.real
+    except:
+        winpct = float(winpct)
     if winpct >= .5:
         return int((-100 * winpct) / (1 - winpct))
     else:

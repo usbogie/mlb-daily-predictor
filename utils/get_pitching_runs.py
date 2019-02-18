@@ -298,7 +298,7 @@ def get_player(player_id, name, date, manifest, projections):
     dates = player['date'].tolist()
     if date not in dates:
         try:
-            print('Date not in projection dates')
+            print(date, name, 'date not in projection dates')
             target = nearest([datetime.strptime(d, '%Y-%m-%d') for d in dates], datetime.strptime(date, '%Y-%m-%d'))
             target = target.strftime('%Y-%m-%d')
         except:
@@ -311,12 +311,11 @@ def get_player(player_id, name, date, manifest, projections):
 
 def calculate(lineup, date, manifest, projections):
     starter_name = lineup['10_name']
-    print(starter_name, end=" ")
+    # print(starter_name, end=" ")
     fantasylabs_id = int(lineup['10_id'])
 
     pitcher = get_player(fantasylabs_id, starter_name, date, manifest, projections)
     if pitcher is None:
-        print(pitcher)
         return None
     # print(pitcher)
     if date in opener_innings and pitcher['mlb_id'] in opener_innings[date]:

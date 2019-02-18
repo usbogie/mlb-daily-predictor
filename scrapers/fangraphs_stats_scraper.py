@@ -168,13 +168,13 @@ def scrape_batter_logs(year):
 		dfs.append(df)
 	df = pd.concat(dfs)
 	print(df)
-	df = df[['name', 'key', 'date', 'team', 'mlb_id', 'pa', 'bb', 'k', 'hbp', 'hr', 'wRAA']]
+	df = df[['mlb_id', 'date', 'name', 'key', 'team', 'pa', 'bb', 'k', 'hbp', 'hr', 'wRAA']]
 	return df.set_index(['mlb_id','date'])
 
 if __name__ == '__main__':
-	year = 2016
-	# df = scrape_pitcher_logs(year)
-	# csv_path = os.path.join('..','data','player_logs','pitcher_logs_{}.csv'.format(year))
-	df = scrape_batter_logs(year)
-	csv_path = os.path.join('..','data','player_logs','batter_logs_{}.csv'.format(year))
+	year = 2018
+	df = scrape_pitcher_logs(year)
+	csv_path = os.path.join('..','data','player_logs','pitcher_logs_{}.csv'.format(year))
+	# df = scrape_batter_logs(year)
+	# csv_path = os.path.join('..','data','player_logs','batter_logs_{}.csv'.format(year))
 	df.to_csv(csv_path)
