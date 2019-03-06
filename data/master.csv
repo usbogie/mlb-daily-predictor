@@ -425,7 +425,7 @@ mlb_id,fantasy_labs,mlb_name
 408236,3260,Adrian Gonzalez
 493329,27256,Yulieski Gurriel
 669720,35482,Austin Hays
-666561,0,Jae-Gyun Hwang
+666561,0,Jae-gyun Hwang
 457775,4127,Desmond Jennings
 660271,39750,Shohei Ohtani
 519445,7948,Danny Worth
@@ -777,6 +777,7 @@ mlb_id,fantasy_labs,mlb_name
 457787,2806,Danny Espinosa
 516782,4913,Starling Marte
 503351,0,Blake Lalli
+458924,0,Jonny Venters
 542979,8113,Keon Broxton
 572041,5965,A.J. Pollock
 448801,2471,Chris Davis
@@ -3833,6 +3834,8 @@ mlb_id,fantasy_labs,mlb_name
 666848,0,Robert Valera
 668549,0,Marco Hernandez
 667353,0,Mike Loaisiga
+642528,0,Jonathan Loaisiga
+543377,0,Corban Joseph
 668567,0,Yerwin Trejo
 668568,0,Miguel Jerez
 666794,0,Jeison Rodriguez
@@ -3844,6 +3847,7 @@ mlb_id,fantasy_labs,mlb_name
 665782,0,Luis De Los Santos
 669793,0,Eudis Lora
 665809,0,Jose Briceno
+502151,0,Chad Huffman
 666815,0,T.J. Bennett
 666160,0,Mickey Moniak
 666139,0,Josh Lowe
@@ -4262,7 +4266,7 @@ mlb_id,fantasy_labs,mlb_name
 596720,0,Dovydas Neverauskas
 592464,0,Mike Kickham
 592390,0,Heath Hembree
-538506,0,Toru Murata
+538506,8462,Toru Murata
 515052,0,Mayckol Guaipe
 592791,8088,Jameson Taillon
 553883,0,Vicente Campos
@@ -4543,7 +4547,7 @@ mlb_id,fantasy_labs,mlb_name
 421685,3537,Aaron Harang
 600986,0,Thyago Vieira
 600917,0,Jose Leclerc
-605347,22268,Jorge Lopez
+605347,22266,Jorge Lopez
 602928,31678,Felix Jorge
 608032,0,Carlos Estevez
 624586,0,James Hoyt
@@ -4954,7 +4958,6 @@ mlb_id,fantasy_labs,mlb_name
 477003,5540,Jon Niese
 476205,0,Josh Wall
 476601,0,Michael Bowden
-519455,8022,J.Zimmermann
 519455,8022,Jordan Zimmermann
 518771,0,Mitch Harris
 448693,0,Ross Wolf

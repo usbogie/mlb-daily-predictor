@@ -40,7 +40,7 @@ def player_in_fantasy_labs(name, id, manifest):
             player = players.iloc[[ix-1]]
         else:
             player = players.iloc[[0]]
-        print("NEW PLAYER! Matching", name, "to", player['mlb_name'])
+        print("NEW PLAYER! Matching", name, "to", player['mlb_name'].iloc[0])
         manifest.at[manifest.index[manifest['mlb_id'] == player['mlb_id'].iloc[0]],'fantasy_labs'] = id
         print('Matched', id, "to", player['mlb_id'].iloc[0])
         return player
@@ -54,18 +54,22 @@ def get_player(player_id, name, date, manifest, projections):
         print(name, 'not in manifest, looking...')
         player_ids = player_in_fantasy_labs(name, player_id, manifest)
         if player_ids.empty:
+            print(name)
             return None
-
     player_id = player_ids.iloc[0]['mlb_id']
     player = projections[projections['mlb_id'] == player_id]
 
     dates = player['date'].tolist()
     if date not in dates:
         try:
+            if date < min(dates):
+                print(name, 'does not have enough plate appearances, skipping')
+                return None
             print(date, name, 'date not in projection dates')
             target = nearest([datetime.strptime(d, '%Y-%m-%d') for d in dates], datetime.strptime(date, '%Y-%m-%d'))
             target = target.strftime('%Y-%m-%d')
         except:
+            print(name)
             return None
     else:
         target = date
@@ -77,10 +81,15 @@ def calculate(lineup, date, manifest, projections):
     pitcher_fantasylabs_id = int(lineup['10_id'])
     all_batters = []
     for i in range(1,10):
-        fantasylabs_id = int(lineup['{}_id'.format(str(i))])
+        try:
+            fantasylabs_id = int(lineup['{}_id'.format(str(i))])
+        except:
+            print(lineup)
+            print(date)
+            sys.exit()
         batter_name = lineup['{}_name'.format(str(i))]
         if fantasylabs_id == pitcher_fantasylabs_id:
-            all_batters.append(-20)
+            all_batters.append(0)
             continue
         player = get_player(fantasylabs_id, batter_name, date, manifest, projections)
         if player is None:

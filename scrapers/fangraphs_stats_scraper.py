@@ -106,7 +106,7 @@ def scrape_pitcher_logs(year):
 		dfs.append(df)
 	print(missing_players)
 	df = pd.concat(dfs)
-	df = df[['name', 'key', 'date', 'mlb_id', 'gs', 'gb', 'fb', 'ld', 'iffb', 'tbf', 'hr', 'bb', 'hbp', 'k']]
+	df = df[['mlb_id', 'date', 'name', 'key', 'gs', 'gb', 'fb', 'ld', 'iffb', 'tbf', 'hr', 'bb', 'hbp', 'k']]
 	return df.set_index(['mlb_id', 'date'])
 
 def get_batter_standard_stats(url):

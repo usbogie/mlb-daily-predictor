@@ -141,6 +141,40 @@ fangraphs_to_mlb = {
 	"WSN": "was",
 }
 
+statcast_to_mlb = {
+	"ARI": "ari",
+	"ATL": "atl",
+	"BAL": "bal",
+	"BOS": "bos",
+	"CHC": "chn",
+	"CWS": "cha",
+	"CIN": "cin",
+	"CLE": "cle",
+	"COL": "col",
+	"DET": "det",
+	"HOU": "hou",
+	"KC": "kca",
+	"LAA": "ana",
+	"LAD": "lan",
+	"MIA": "mia",
+	"FLA": "mia",
+	"MIL": "mil",
+	"MIN": "min",
+	"NYM": "nyn",
+	"NYY": "nya",
+	"OAK": "oak",
+	"PHI": "phi",
+	"PIT": "pit",
+	"SD": "sdn",
+	"SF": "sfn",
+	"SEA": "sea",
+	"STL": "sln",
+	"TB": "tba",
+	"TEX": "tex",
+	"TOR": "tor",
+	"WSH": "was",
+}
+
 def get_soup(url, check_500 = False):
 	ua = UserAgent()
 	try:

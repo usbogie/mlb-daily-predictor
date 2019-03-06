@@ -47,7 +47,7 @@ def value_side_strati(results):
     plt.title('Values')
     plt.show()
 
-with open ('data/results/results_2015.json', 'r') as f:
+with open ('data/results/results_2018.json', 'r') as f:
     results = json.load(f)
 
 value_side_strati(results)

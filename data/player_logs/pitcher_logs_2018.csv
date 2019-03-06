@@ -2260,21 +2260,21 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 502706,2018-09-24,Derek Holland,2018/09/24/sdnmlb-sfnmlb-1,True,9,7,5,1,26,1,2,0,2
 502706,2018-09-29,Derek Holland,2018/09/29/lanmlb-sfnmlb-1,False,1,2,1,1,5,0,1,0,0
 502706,2018-09-30,Derek Holland,2018/09/30/lanmlb-sfnmlb-1,False,3,0,1,0,7,0,1,0,2
-547943,2018-04-02,Hyun-Jin-Ryu,2018/04/02/lanmlb-arimlb-1,True,5,5,3,0,20,0,5,0,2
-547943,2018-04-10,Hyun-Jin-Ryu,2018/04/10/oakmlb-lanmlb-1,True,7,4,0,1,20,0,1,0,8
-547943,2018-04-16,Hyun-Jin-Ryu,2018/04/16/lanmlb-sdnmlb-1,True,6,4,2,0,22,1,0,1,9
-547943,2018-04-21,Hyun-Jin-Ryu,2018/04/21/wasmlb-lanmlb-1,True,9,4,2,0,26,0,3,0,8
-547943,2018-04-27,Hyun-Jin-Ryu,2018/04/27/lanmlb-sfnmlb-1,True,9,4,0,0,21,2,0,0,7
-547943,2018-05-02,Hyun-Jin-Ryu,2018/05/02/lanmlb-arimlb-1,True,2,0,1,0,6,0,1,0,2
-547943,2018-08-15,Hyun-Jin-Ryu,2018/08/15/sfnmlb-lanmlb-1,True,7,7,1,1,21,0,0,0,6
-547943,2018-08-21,Hyun-Jin-Ryu,2018/08/21/slnmlb-lanmlb-1,True,5,5,2,0,18,1,1,0,4
-547943,2018-08-26,Hyun-Jin-Ryu,2018/08/26/sdnmlb-lanmlb-1,True,8,5,6,0,28,1,1,0,8
-547943,2018-08-31,Hyun-Jin-Ryu,2018/08/31/arimlb-lanmlb-1,True,9,9,1,1,24,1,0,0,5
-547943,2018-09-05,Hyun-Jin-Ryu,2018/09/05/nynmlb-lanmlb-1,True,4,6,9,0,27,0,0,0,8
-547943,2018-09-11,Hyun-Jin-Ryu,2018/09/11/lanmlb-cinmlb-1,True,3,6,6,0,23,2,1,0,6
-547943,2018-09-17,Hyun-Jin-Ryu,2018/09/17/colmlb-lanmlb-1,True,10,5,4,1,24,0,0,0,5
-547943,2018-09-23,Hyun-Jin-Ryu,2018/09/23/sdnmlb-lanmlb-1,True,5,6,3,3,22,0,0,0,8
-547943,2018-09-28,Hyun-Jin-Ryu,2018/09/28/lanmlb-sfnmlb-1,True,10,6,1,0,22,1,2,0,3
+547943,2018-04-02,Hyun-Jin Ryu,2018/04/02/lanmlb-arimlb-1,True,5,5,3,0,20,0,5,0,2
+547943,2018-04-10,Hyun-Jin Ryu,2018/04/10/oakmlb-lanmlb-1,True,7,4,0,1,20,0,1,0,8
+547943,2018-04-16,Hyun-Jin Ryu,2018/04/16/lanmlb-sdnmlb-1,True,6,4,2,0,22,1,0,1,9
+547943,2018-04-21,Hyun-Jin Ryu,2018/04/21/wasmlb-lanmlb-1,True,9,4,2,0,26,0,3,0,8
+547943,2018-04-27,Hyun-Jin Ryu,2018/04/27/lanmlb-sfnmlb-1,True,9,4,0,0,21,2,0,0,7
+547943,2018-05-02,Hyun-Jin Ryu,2018/05/02/lanmlb-arimlb-1,True,2,0,1,0,6,0,1,0,2
+547943,2018-08-15,Hyun-Jin Ryu,2018/08/15/sfnmlb-lanmlb-1,True,7,7,1,1,21,0,0,0,6
+547943,2018-08-21,Hyun-Jin Ryu,2018/08/21/slnmlb-lanmlb-1,True,5,5,2,0,18,1,1,0,4
+547943,2018-08-26,Hyun-Jin Ryu,2018/08/26/sdnmlb-lanmlb-1,True,8,5,6,0,28,1,1,0,8
+547943,2018-08-31,Hyun-Jin Ryu,2018/08/31/arimlb-lanmlb-1,True,9,9,1,1,24,1,0,0,5
+547943,2018-09-05,Hyun-Jin Ryu,2018/09/05/nynmlb-lanmlb-1,True,4,6,9,0,27,0,0,0,8
+547943,2018-09-11,Hyun-Jin Ryu,2018/09/11/lanmlb-cinmlb-1,True,3,6,6,0,23,2,1,0,6
+547943,2018-09-17,Hyun-Jin Ryu,2018/09/17/colmlb-lanmlb-1,True,10,5,4,1,24,0,0,0,5
+547943,2018-09-23,Hyun-Jin Ryu,2018/09/23/sdnmlb-lanmlb-1,True,5,6,3,3,22,0,0,0,8
+547943,2018-09-28,Hyun-Jin Ryu,2018/09/28/lanmlb-sfnmlb-1,True,10,6,1,0,22,1,2,0,3
 571510,2018-04-03,Matt Boyd,2018/04/03/kcamlb-detmlb-1,True,3,14,4,1,22,0,0,0,1
 571510,2018-04-10,Matt Boyd,2018/04/10/detmlb-clemlb-1,True,8,11,0,0,25,1,1,1,4
 571510,2018-04-18,Matt Boyd,2018/04/18/balmlb-detmlb-1,True,3,9,3,0,24,1,3,0,6
@@ -2451,76 +2451,76 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 493603,2018-09-23,Adam Ottavino,2018/09/23/colmlb-arimlb-1,False,0,0,0,0,3,0,2,0,1
 493603,2018-09-27,Adam Ottavino,2018/09/27/phimlb-colmlb-1,False,0,1,0,0,6,1,1,1,3
 493603,2018-09-28,Adam Ottavino,2018/09/28/wasmlb-colmlb-1,False,1,1,0,0,3,0,0,0,1
-621237,2018-03-30,,2018/03/30/bosmlb-tbamlb-1,False,3,0,0,0,4,0,0,0,1
-621237,2018-04-01,,2018/04/01/bosmlb-tbamlb-1,False,2,1,0,0,4,0,0,0,1
-621237,2018-04-04,,2018/04/04/tbamlb-nyamlb-1,False,2,0,0,0,3,0,0,0,1
-621237,2018-04-05,,2018/04/05/tbamlb-bosmlb-1,False,1,0,0,0,3,0,0,0,2
-621237,2018-04-08,,2018/04/08/tbamlb-bosmlb-1,False,2,1,0,0,4,0,1,0,0
-621237,2018-04-09,,2018/04/09/tbamlb-chamlb-1,False,1,1,0,0,2,0,0,0,0
-621237,2018-04-11,,2018/04/11/tbamlb-chamlb-1,False,1,0,1,0,5,0,1,0,2
-621237,2018-04-13,,2018/04/13/phimlb-tbamlb-1,False,0,1,0,0,4,0,1,0,2
-621237,2018-04-18,,2018/04/18/texmlb-tbamlb-1,False,2,0,0,0,3,0,0,0,1
-621237,2018-04-20,,2018/04/20/minmlb-tbamlb-1,False,0,0,0,0,3,0,1,0,2
-621237,2018-04-22,,2018/04/22/minmlb-tbamlb-1,False,3,0,1,0,5,0,0,0,1
-621237,2018-04-25,,2018/04/25/tbamlb-balmlb-1,False,1,1,0,0,3,0,0,0,1
-621237,2018-04-26,,2018/04/26/tbamlb-balmlb-1,False,2,0,0,0,2,0,0,0,0
-621237,2018-04-28,,2018/04/28/tbamlb-bosmlb-1,False,3,0,0,0,5,0,0,0,2
-621237,2018-04-30,,2018/04/30/tbamlb-detmlb-1,False,2,1,0,0,4,0,1,0,0
-621237,2018-05-02,,2018/05/02/tbamlb-detmlb-1,False,0,2,0,0,2,0,0,0,0
-621237,2018-05-05,,2018/05/05/tormlb-tbamlb-1,False,1,0,0,0,1,0,0,0,0
-621237,2018-05-12,,2018/05/12/tbamlb-balmlb-2,False,1,1,0,0,4,0,1,0,1
-621237,2018-05-14,,2018/05/14/tbamlb-kcamlb-1,False,0,1,0,0,1,0,0,0,0
-621237,2018-05-15,,2018/05/15/tbamlb-kcamlb-1,False,5,1,0,0,8,0,1,0,1
-621237,2018-05-20,,2018/05/20/tbamlb-anamlb-1,False,0,3,1,1,8,0,2,1,1
-621237,2018-05-23,,2018/05/23/bosmlb-tbamlb-1,False,0,1,0,0,5,0,0,0,4
-621237,2018-05-28,,2018/05/28/tbamlb-oakmlb-1,False,2,2,0,0,6,0,1,0,1
-621237,2018-06-01,,2018/06/01/tbamlb-seamlb-1,False,3,1,1,0,8,0,1,0,2
-621237,2018-06-03,,2018/06/03/tbamlb-seamlb-1,False,1,1,0,0,7,0,1,0,3
-621237,2018-06-06,,2018/06/06/tbamlb-wasmlb-1,False,3,0,2,0,5,0,0,0,0
-621237,2018-06-10,,2018/06/10/seamlb-tbamlb-1,False,1,1,0,0,5,1,1,0,2
-621237,2018-06-12,,2018/06/12/tormlb-tbamlb-1,False,2,1,1,0,5,0,0,0,1
-621237,2018-06-17,,2018/06/17/tbamlb-nyamlb-1,False,1,0,0,0,4,0,2,0,1
-621237,2018-06-18,,2018/06/18/tbamlb-houmlb-1,False,1,0,1,0,3,0,0,0,1
-621237,2018-06-19,,2018/06/19/tbamlb-houmlb-1,False,0,1,1,0,2,0,0,0,0
-621237,2018-06-22,,2018/06/22/nyamlb-tbamlb-1,False,1,2,1,0,4,0,0,0,0
-621237,2018-06-24,,2018/06/24/nyamlb-tbamlb-1,False,1,1,0,0,5,0,1,0,2
-621237,2018-06-26,,2018/06/26/wasmlb-tbamlb-1,False,0,1,1,0,3,0,1,0,0
-621237,2018-06-29,,2018/06/29/houmlb-tbamlb-1,False,1,0,0,0,1,0,0,0,0
-621237,2018-06-30,,2018/06/30/houmlb-tbamlb-1,False,2,0,0,0,5,0,1,0,2
-621237,2018-07-03,,2018/07/03/tbamlb-miamlb-1,False,2,0,0,0,3,0,1,0,0
-621237,2018-07-06,,2018/07/06/tbamlb-nynmlb-1,False,1,1,0,0,3,0,0,0,1
-621237,2018-07-07,,2018/07/07/tbamlb-nynmlb-1,False,0,1,1,0,2,0,0,0,0
-621237,2018-07-09,,2018/07/09/detmlb-tbamlb-1,False,1,0,1,0,2,0,0,0,0
-621237,2018-07-10,,2018/07/10/detmlb-tbamlb-1,False,1,1,1,0,6,0,0,0,3
-621237,2018-07-21,,2018/07/21/miamlb-tbamlb-1,False,0,1,1,0,3,0,0,0,1
-621237,2018-07-23,,2018/07/23/nyamlb-tbamlb-1,False,3,1,0,0,7,0,2,0,0
-621237,2018-07-25,,2018/07/25/nyamlb-tbamlb-1,False,2,2,1,0,7,0,1,0,1
-621237,2018-07-28,,2018/07/28/tbamlb-balmlb-1,False,2,2,0,0,4,0,0,0,0
-621237,2018-07-31,,2018/07/31/anamlb-tbamlb-1,False,0,1,2,0,5,0,1,0,1
-621237,2018-08-01,,2018/08/01/anamlb-tbamlb-1,False,2,0,0,0,3,0,0,0,1
-621237,2018-08-03,,2018/08/03/chamlb-tbamlb-1,False,2,0,2,0,5,0,1,0,0
-621237,2018-08-08,,2018/08/08/balmlb-tbamlb-1,False,1,1,0,0,3,0,0,0,1
-621237,2018-08-09,,2018/08/09/balmlb-tbamlb-1,False,1,0,0,0,3,0,0,0,2
-621237,2018-08-11,,2018/08/11/tbamlb-tormlb-1,False,0,1,0,0,3,0,0,0,2
-621237,2018-08-12,,2018/08/12/tbamlb-tormlb-1,False,1,0,1,0,3,0,0,0,1
-621237,2018-08-16,,2018/08/16/tbamlb-nyamlb-1,False,1,1,1,0,4,0,0,0,1
-621237,2018-08-19,,2018/08/19/tbamlb-bosmlb-1,False,0,0,0,0,3,0,0,0,3
-621237,2018-08-20,,2018/08/20/kcamlb-tbamlb-1,False,1,0,0,0,4,0,1,0,2
-621237,2018-08-22,,2018/08/22/kcamlb-tbamlb-1,False,0,0,0,0,1,0,0,0,1
-621237,2018-08-23,,2018/08/23/kcamlb-tbamlb-1,False,1,0,0,0,3,0,0,0,2
-621237,2018-08-25,,2018/08/25/bosmlb-tbamlb-1,False,1,1,0,0,3,0,0,0,1
-621237,2018-08-29,,2018/08/29/tbamlb-atlmlb-1,False,3,1,0,1,4,0,0,0,0
-621237,2018-09-01,,2018/09/01/tbamlb-clemlb-1,False,2,0,0,0,3,0,1,0,0
-621237,2018-09-02,,2018/09/02/tbamlb-clemlb-1,False,0,0,1,0,3,0,0,0,2
-621237,2018-09-04,,2018/09/04/tbamlb-tormlb-1,False,0,0,0,0,2,0,1,0,1
-621237,2018-09-08,,2018/09/08/balmlb-tbamlb-1,False,0,0,0,0,1,0,0,0,1
-621237,2018-09-12,,2018/09/12/clemlb-tbamlb-1,False,0,1,0,0,3,0,0,0,2
-621237,2018-09-14,,2018/09/14/oakmlb-tbamlb-1,False,0,0,0,0,3,0,0,0,3
-621237,2018-09-16,,2018/09/16/oakmlb-tbamlb-1,False,0,0,0,0,1,0,0,0,1
-621237,2018-09-17,,2018/09/17/tbamlb-texmlb-1,False,1,0,0,0,3,0,0,0,2
-621237,2018-09-22,,2018/09/22/tbamlb-tormlb-1,False,2,0,2,0,5,0,0,0,1
-621237,2018-09-26,,2018/09/26/nyamlb-tbamlb-1,False,0,0,0,0,4,0,0,0,4
-621237,2018-09-28,,2018/09/28/tormlb-tbamlb-1,False,1,0,1,0,5,0,2,0,1
+621237,2018-03-30,Jose Alvarado,2018/03/30/bosmlb-tbamlb-1,False,3,0,0,0,4,0,0,0,1
+621237,2018-04-01,Jose Alvarado,2018/04/01/bosmlb-tbamlb-1,False,2,1,0,0,4,0,0,0,1
+621237,2018-04-04,Jose Alvarado,2018/04/04/tbamlb-nyamlb-1,False,2,0,0,0,3,0,0,0,1
+621237,2018-04-05,Jose Alvarado,2018/04/05/tbamlb-bosmlb-1,False,1,0,0,0,3,0,0,0,2
+621237,2018-04-08,Jose Alvarado,2018/04/08/tbamlb-bosmlb-1,False,2,1,0,0,4,0,1,0,0
+621237,2018-04-09,Jose Alvarado,2018/04/09/tbamlb-chamlb-1,False,1,1,0,0,2,0,0,0,0
+621237,2018-04-11,Jose Alvarado,2018/04/11/tbamlb-chamlb-1,False,1,0,1,0,5,0,1,0,2
+621237,2018-04-13,Jose Alvarado,2018/04/13/phimlb-tbamlb-1,False,0,1,0,0,4,0,1,0,2
+621237,2018-04-18,Jose Alvarado,2018/04/18/texmlb-tbamlb-1,False,2,0,0,0,3,0,0,0,1
+621237,2018-04-20,Jose Alvarado,2018/04/20/minmlb-tbamlb-1,False,0,0,0,0,3,0,1,0,2
+621237,2018-04-22,Jose Alvarado,2018/04/22/minmlb-tbamlb-1,False,3,0,1,0,5,0,0,0,1
+621237,2018-04-25,Jose Alvarado,2018/04/25/tbamlb-balmlb-1,False,1,1,0,0,3,0,0,0,1
+621237,2018-04-26,Jose Alvarado,2018/04/26/tbamlb-balmlb-1,False,2,0,0,0,2,0,0,0,0
+621237,2018-04-28,Jose Alvarado,2018/04/28/tbamlb-bosmlb-1,False,3,0,0,0,5,0,0,0,2
+621237,2018-04-30,Jose Alvarado,2018/04/30/tbamlb-detmlb-1,False,2,1,0,0,4,0,1,0,0
+621237,2018-05-02,Jose Alvarado,2018/05/02/tbamlb-detmlb-1,False,0,2,0,0,2,0,0,0,0
+621237,2018-05-05,Jose Alvarado,2018/05/05/tormlb-tbamlb-1,False,1,0,0,0,1,0,0,0,0
+621237,2018-05-12,Jose Alvarado,2018/05/12/tbamlb-balmlb-2,False,1,1,0,0,4,0,1,0,1
+621237,2018-05-14,Jose Alvarado,2018/05/14/tbamlb-kcamlb-1,False,0,1,0,0,1,0,0,0,0
+621237,2018-05-15,Jose Alvarado,2018/05/15/tbamlb-kcamlb-1,False,5,1,0,0,8,0,1,0,1
+621237,2018-05-20,Jose Alvarado,2018/05/20/tbamlb-anamlb-1,False,0,3,1,1,8,0,2,1,1
+621237,2018-05-23,Jose Alvarado,2018/05/23/bosmlb-tbamlb-1,False,0,1,0,0,5,0,0,0,4
+621237,2018-05-28,Jose Alvarado,2018/05/28/tbamlb-oakmlb-1,False,2,2,0,0,6,0,1,0,1
+621237,2018-06-01,Jose Alvarado,2018/06/01/tbamlb-seamlb-1,False,3,1,1,0,8,0,1,0,2
+621237,2018-06-03,Jose Alvarado,2018/06/03/tbamlb-seamlb-1,False,1,1,0,0,7,0,1,0,3
+621237,2018-06-06,Jose Alvarado,2018/06/06/tbamlb-wasmlb-1,False,3,0,2,0,5,0,0,0,0
+621237,2018-06-10,Jose Alvarado,2018/06/10/seamlb-tbamlb-1,False,1,1,0,0,5,1,1,0,2
+621237,2018-06-12,Jose Alvarado,2018/06/12/tormlb-tbamlb-1,False,2,1,1,0,5,0,0,0,1
+621237,2018-06-17,Jose Alvarado,2018/06/17/tbamlb-nyamlb-1,False,1,0,0,0,4,0,2,0,1
+621237,2018-06-18,Jose Alvarado,2018/06/18/tbamlb-houmlb-1,False,1,0,1,0,3,0,0,0,1
+621237,2018-06-19,Jose Alvarado,2018/06/19/tbamlb-houmlb-1,False,0,1,1,0,2,0,0,0,0
+621237,2018-06-22,Jose Alvarado,2018/06/22/nyamlb-tbamlb-1,False,1,2,1,0,4,0,0,0,0
+621237,2018-06-24,Jose Alvarado,2018/06/24/nyamlb-tbamlb-1,False,1,1,0,0,5,0,1,0,2
+621237,2018-06-26,Jose Alvarado,2018/06/26/wasmlb-tbamlb-1,False,0,1,1,0,3,0,1,0,0
+621237,2018-06-29,Jose Alvarado,2018/06/29/houmlb-tbamlb-1,False,1,0,0,0,1,0,0,0,0
+621237,2018-06-30,Jose Alvarado,2018/06/30/houmlb-tbamlb-1,False,2,0,0,0,5,0,1,0,2
+621237,2018-07-03,Jose Alvarado,2018/07/03/tbamlb-miamlb-1,False,2,0,0,0,3,0,1,0,0
+621237,2018-07-06,Jose Alvarado,2018/07/06/tbamlb-nynmlb-1,False,1,1,0,0,3,0,0,0,1
+621237,2018-07-07,Jose Alvarado,2018/07/07/tbamlb-nynmlb-1,False,0,1,1,0,2,0,0,0,0
+621237,2018-07-09,Jose Alvarado,2018/07/09/detmlb-tbamlb-1,False,1,0,1,0,2,0,0,0,0
+621237,2018-07-10,Jose Alvarado,2018/07/10/detmlb-tbamlb-1,False,1,1,1,0,6,0,0,0,3
+621237,2018-07-21,Jose Alvarado,2018/07/21/miamlb-tbamlb-1,False,0,1,1,0,3,0,0,0,1
+621237,2018-07-23,Jose Alvarado,2018/07/23/nyamlb-tbamlb-1,False,3,1,0,0,7,0,2,0,0
+621237,2018-07-25,Jose Alvarado,2018/07/25/nyamlb-tbamlb-1,False,2,2,1,0,7,0,1,0,1
+621237,2018-07-28,Jose Alvarado,2018/07/28/tbamlb-balmlb-1,False,2,2,0,0,4,0,0,0,0
+621237,2018-07-31,Jose Alvarado,2018/07/31/anamlb-tbamlb-1,False,0,1,2,0,5,0,1,0,1
+621237,2018-08-01,Jose Alvarado,2018/08/01/anamlb-tbamlb-1,False,2,0,0,0,3,0,0,0,1
+621237,2018-08-03,Jose Alvarado,2018/08/03/chamlb-tbamlb-1,False,2,0,2,0,5,0,1,0,0
+621237,2018-08-08,Jose Alvarado,2018/08/08/balmlb-tbamlb-1,False,1,1,0,0,3,0,0,0,1
+621237,2018-08-09,Jose Alvarado,2018/08/09/balmlb-tbamlb-1,False,1,0,0,0,3,0,0,0,2
+621237,2018-08-11,Jose Alvarado,2018/08/11/tbamlb-tormlb-1,False,0,1,0,0,3,0,0,0,2
+621237,2018-08-12,Jose Alvarado,2018/08/12/tbamlb-tormlb-1,False,1,0,1,0,3,0,0,0,1
+621237,2018-08-16,Jose Alvarado,2018/08/16/tbamlb-nyamlb-1,False,1,1,1,0,4,0,0,0,1
+621237,2018-08-19,Jose Alvarado,2018/08/19/tbamlb-bosmlb-1,False,0,0,0,0,3,0,0,0,3
+621237,2018-08-20,Jose Alvarado,2018/08/20/kcamlb-tbamlb-1,False,1,0,0,0,4,0,1,0,2
+621237,2018-08-22,Jose Alvarado,2018/08/22/kcamlb-tbamlb-1,False,0,0,0,0,1,0,0,0,1
+621237,2018-08-23,Jose Alvarado,2018/08/23/kcamlb-tbamlb-1,False,1,0,0,0,3,0,0,0,2
+621237,2018-08-25,Jose Alvarado,2018/08/25/bosmlb-tbamlb-1,False,1,1,0,0,3,0,0,0,1
+621237,2018-08-29,Jose Alvarado,2018/08/29/tbamlb-atlmlb-1,False,3,1,0,1,4,0,0,0,0
+621237,2018-09-01,Jose Alvarado,2018/09/01/tbamlb-clemlb-1,False,2,0,0,0,3,0,1,0,0
+621237,2018-09-02,Jose Alvarado,2018/09/02/tbamlb-clemlb-1,False,0,0,1,0,3,0,0,0,2
+621237,2018-09-04,Jose Alvarado,2018/09/04/tbamlb-tormlb-1,False,0,0,0,0,2,0,1,0,1
+621237,2018-09-08,Jose Alvarado,2018/09/08/balmlb-tbamlb-1,False,0,0,0,0,1,0,0,0,1
+621237,2018-09-12,Jose Alvarado,2018/09/12/clemlb-tbamlb-1,False,0,1,0,0,3,0,0,0,2
+621237,2018-09-14,Jose Alvarado,2018/09/14/oakmlb-tbamlb-1,False,0,0,0,0,3,0,0,0,3
+621237,2018-09-16,Jose Alvarado,2018/09/16/oakmlb-tbamlb-1,False,0,0,0,0,1,0,0,0,1
+621237,2018-09-17,Jose Alvarado,2018/09/17/tbamlb-texmlb-1,False,1,0,0,0,3,0,0,0,2
+621237,2018-09-22,Jose Alvarado,2018/09/22/tbamlb-tormlb-1,False,2,0,2,0,5,0,0,0,1
+621237,2018-09-26,Jose Alvarado,2018/09/26/nyamlb-tbamlb-1,False,0,0,0,0,4,0,0,0,4
+621237,2018-09-28,Jose Alvarado,2018/09/28/tormlb-tbamlb-1,False,1,0,1,0,5,0,2,0,1
 625643,2018-04-02,Reynaldo Lopez,2018/04/02/chamlb-tormlb-1,True,6,5,2,1,21,1,2,0,6
 625643,2018-04-08,Reynaldo Lopez,2018/04/08/detmlb-chamlb-1,True,5,9,3,1,27,0,5,0,5
 625643,2018-04-16,Reynaldo Lopez,2018/04/16/chamlb-oakmlb-1,True,3,7,2,1,26,1,4,0,10
@@ -4863,66 +4863,66 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 502171,2018-08-29,Alex Cobb,2018/08/29/tormlb-balmlb-1,True,8,6,7,0,27,3,2,0,4
 502171,2018-09-04,Alex Cobb,2018/09/04/balmlb-seamlb-1,True,9,6,3,0,24,1,3,0,2
 502171,2018-09-11,Alex Cobb,2018/09/11/oakmlb-balmlb-1,True,3,0,2,0,8,0,1,0,2
-656547,2018-03-31,,2018/03/31/nyamlb-tormlb-1,False,0,0,1,0,2,0,0,0,1
-656547,2018-04-03,,2018/04/03/tbamlb-nyamlb-1,False,1,2,1,0,5,0,0,0,1
-656547,2018-04-06,,2018/04/06/balmlb-nyamlb-1,False,1,4,1,0,10,1,1,0,2
-656547,2018-04-21,,2018/04/21/tormlb-nyamlb-1,False,0,4,0,0,6,0,0,0,2
-656547,2018-04-24,,2018/04/24/minmlb-nyamlb-1,False,1,0,0,0,3,0,0,0,2
-656547,2018-04-27,,2018/04/27/nyamlb-anamlb-1,False,1,2,0,0,3,0,0,0,0
-656547,2018-04-30,,2018/04/30/nyamlb-houmlb-1,False,2,0,1,0,3,0,0,0,0
-656547,2018-05-06,,2018/05/06/clemlb-nyamlb-1,False,0,0,3,0,4,0,0,0,0
-656547,2018-05-09,,2018/05/09/bosmlb-nyamlb-1,False,1,0,0,0,3,0,1,0,1
-656547,2018-05-10,,2018/05/10/bosmlb-nyamlb-1,False,2,2,0,0,6,0,0,0,2
-656547,2018-05-12,,2018/05/12/oakmlb-nyamlb-1,False,1,1,0,0,3,0,0,0,1
-656547,2018-05-18,,2018/05/18/nyamlb-kcamlb-1,False,0,1,1,0,4,0,0,0,2
-656547,2018-05-21,,2018/05/21/nyamlb-texmlb-1,False,0,2,0,0,3,0,0,0,1
-656547,2018-05-23,,2018/05/23/nyamlb-texmlb-1,False,2,0,0,0,3,0,0,0,1
-656547,2018-05-26,,2018/05/26/anamlb-nyamlb-1,False,0,1,0,0,5,0,1,0,3
-656547,2018-05-29,,2018/05/29/houmlb-nyamlb-1,False,1,5,1,0,8,0,0,0,1
-656547,2018-06-02,,2018/06/02/nyamlb-balmlb-1,False,0,2,0,0,3,0,0,0,1
-656547,2018-06-04,,2018/06/04/nyamlb-detmlb-1,False,1,4,0,1,5,0,0,0,0
-656547,2018-06-08,,2018/06/08/nyamlb-nynmlb-1,False,2,1,0,0,3,0,0,0,0
-656547,2018-06-10,,2018/06/10/nyamlb-nynmlb-1,False,0,1,0,0,3,0,0,0,2
-656547,2018-06-13,,2018/06/13/wasmlb-nyamlb-1,False,3,0,1,0,4,0,0,0,0
-656547,2018-06-15,,2018/06/15/tbamlb-nyamlb-1,False,1,1,0,0,3,0,1,0,0
-656547,2018-06-18,,2018/06/18/nyamlb-wasmlb-1,False,0,1,0,0,3,0,0,0,2
-656547,2018-06-20,,2018/06/20/seamlb-nyamlb-1,False,2,3,0,1,8,0,0,1,2
-656547,2018-06-24,,2018/06/24/nyamlb-tbamlb-1,False,2,3,0,1,7,0,0,0,2
-656547,2018-06-27,,2018/06/27/nyamlb-phimlb-1,False,1,1,1,0,4,0,0,0,1
-656547,2018-06-30,,2018/06/30/bosmlb-nyamlb-1,False,2,1,2,0,5,0,0,0,0
-656547,2018-07-02,,2018/07/02/atlmlb-nyamlb-1,False,1,3,2,0,8,0,0,0,1
-656547,2018-07-04,,2018/07/04/atlmlb-nyamlb-1,False,2,2,0,0,4,0,0,0,0
-656547,2018-07-07,,2018/07/07/nyamlb-tormlb-1,False,1,3,1,0,5,0,0,0,0
-656547,2018-07-09,,2018/07/09/nyamlb-balmlb-1,False,0,3,0,1,5,0,1,0,1
-656547,2018-07-10,,2018/07/10/nyamlb-balmlb-1,False,0,2,0,0,2,0,0,0,0
-656547,2018-07-13,,2018/07/13/nyamlb-clemlb-1,False,2,2,1,1,8,0,1,0,2
-656547,2018-07-20,,2018/07/20/nynmlb-nyamlb-1,False,1,0,1,0,3,0,0,0,1
-656547,2018-07-21,,2018/07/21/nynmlb-nyamlb-1,False,0,2,0,1,3,0,0,0,1
-656547,2018-07-25,,2018/07/25/nyamlb-tbamlb-1,False,0,2,1,1,4,1,0,0,1
-656547,2018-07-28,,2018/07/28/kcamlb-nyamlb-2,False,0,1,1,1,5,0,1,0,1
-656547,2018-08-01,,2018/08/01/balmlb-nyamlb-1,False,1,3,0,0,5,0,0,0,1
-656547,2018-08-02,,2018/08/02/nyamlb-bosmlb-1,False,1,3,2,0,7,1,1,0,0
-656547,2018-08-05,,2018/08/05/nyamlb-bosmlb-1,False,2,0,1,0,5,0,1,0,1
-656547,2018-08-07,,2018/08/07/nyamlb-chamlb-1,False,1,2,0,0,4,0,1,0,0
-656547,2018-08-08,,2018/08/08/nyamlb-chamlb-1,False,1,0,2,0,4,0,0,0,1
-656547,2018-08-12,,2018/08/12/texmlb-nyamlb-1,False,0,2,0,1,8,0,2,0,4
-656547,2018-08-15,,2018/08/15/tbamlb-nyamlb-1,False,0,0,0,0,2,0,0,0,2
-656547,2018-08-18,,2018/08/18/tormlb-nyamlb-1,False,0,0,1,0,1,0,0,0,0
-656547,2018-08-19,,2018/08/19/tormlb-nyamlb-1,False,0,2,1,2,4,0,0,0,1
-656547,2018-08-21,,2018/08/21/nyamlb-miamlb-1,False,1,0,0,0,4,0,0,0,3
-656547,2018-08-25,,2018/08/25/nyamlb-balmlb-2,False,2,1,1,0,7,0,1,0,2
-656547,2018-08-28,,2018/08/28/chamlb-nyamlb-1,False,1,4,3,1,9,0,0,0,1
-656547,2018-08-31,,2018/08/31/detmlb-nyamlb-1,False,0,2,2,0,4,0,0,0,0
-656547,2018-09-01,,2018/09/01/detmlb-nyamlb-1,False,2,0,0,0,3,0,0,0,1
-656547,2018-09-05,,2018/09/05/nyamlb-oakmlb-1,False,3,2,0,0,6,0,1,0,0
-656547,2018-09-10,,2018/09/10/nyamlb-minmlb-1,False,1,1,0,0,3,0,0,0,1
-656547,2018-09-15,,2018/09/15/tormlb-nyamlb-1,False,2,2,0,0,5,0,0,0,1
-656547,2018-09-19,,2018/09/19/bosmlb-nyamlb-1,False,0,2,1,0,4,0,0,0,1
-656547,2018-09-20,,2018/09/20/bosmlb-nyamlb-1,False,0,1,0,0,2,0,1,0,0
-656547,2018-09-22,,2018/09/22/balmlb-nyamlb-1,False,2,2,1,0,6,0,1,0,0
-656547,2018-09-24,,2018/09/24/nyamlb-tbamlb-1,True,0,1,1,0,5,0,2,0,1
-656547,2018-09-26,,2018/09/26/nyamlb-tbamlb-1,False,0,2,1,0,4,0,1,0,0
-656547,2018-09-29,,2018/09/29/nyamlb-bosmlb-1,False,1,1,1,0,4,1,0,0,1
+656547,2018-03-31,Jonathan Holder,2018/03/31/nyamlb-tormlb-1,False,0,0,1,0,2,0,0,0,1
+656547,2018-04-03,Jonathan Holder,2018/04/03/tbamlb-nyamlb-1,False,1,2,1,0,5,0,0,0,1
+656547,2018-04-06,Jonathan Holder,2018/04/06/balmlb-nyamlb-1,False,1,4,1,0,10,1,1,0,2
+656547,2018-04-21,Jonathan Holder,2018/04/21/tormlb-nyamlb-1,False,0,4,0,0,6,0,0,0,2
+656547,2018-04-24,Jonathan Holder,2018/04/24/minmlb-nyamlb-1,False,1,0,0,0,3,0,0,0,2
+656547,2018-04-27,Jonathan Holder,2018/04/27/nyamlb-anamlb-1,False,1,2,0,0,3,0,0,0,0
+656547,2018-04-30,Jonathan Holder,2018/04/30/nyamlb-houmlb-1,False,2,0,1,0,3,0,0,0,0
+656547,2018-05-06,Jonathan Holder,2018/05/06/clemlb-nyamlb-1,False,0,0,3,0,4,0,0,0,0
+656547,2018-05-09,Jonathan Holder,2018/05/09/bosmlb-nyamlb-1,False,1,0,0,0,3,0,1,0,1
+656547,2018-05-10,Jonathan Holder,2018/05/10/bosmlb-nyamlb-1,False,2,2,0,0,6,0,0,0,2
+656547,2018-05-12,Jonathan Holder,2018/05/12/oakmlb-nyamlb-1,False,1,1,0,0,3,0,0,0,1
+656547,2018-05-18,Jonathan Holder,2018/05/18/nyamlb-kcamlb-1,False,0,1,1,0,4,0,0,0,2
+656547,2018-05-21,Jonathan Holder,2018/05/21/nyamlb-texmlb-1,False,0,2,0,0,3,0,0,0,1
+656547,2018-05-23,Jonathan Holder,2018/05/23/nyamlb-texmlb-1,False,2,0,0,0,3,0,0,0,1
+656547,2018-05-26,Jonathan Holder,2018/05/26/anamlb-nyamlb-1,False,0,1,0,0,5,0,1,0,3
+656547,2018-05-29,Jonathan Holder,2018/05/29/houmlb-nyamlb-1,False,1,5,1,0,8,0,0,0,1
+656547,2018-06-02,Jonathan Holder,2018/06/02/nyamlb-balmlb-1,False,0,2,0,0,3,0,0,0,1
+656547,2018-06-04,Jonathan Holder,2018/06/04/nyamlb-detmlb-1,False,1,4,0,1,5,0,0,0,0
+656547,2018-06-08,Jonathan Holder,2018/06/08/nyamlb-nynmlb-1,False,2,1,0,0,3,0,0,0,0
+656547,2018-06-10,Jonathan Holder,2018/06/10/nyamlb-nynmlb-1,False,0,1,0,0,3,0,0,0,2
+656547,2018-06-13,Jonathan Holder,2018/06/13/wasmlb-nyamlb-1,False,3,0,1,0,4,0,0,0,0
+656547,2018-06-15,Jonathan Holder,2018/06/15/tbamlb-nyamlb-1,False,1,1,0,0,3,0,1,0,0
+656547,2018-06-18,Jonathan Holder,2018/06/18/nyamlb-wasmlb-1,False,0,1,0,0,3,0,0,0,2
+656547,2018-06-20,Jonathan Holder,2018/06/20/seamlb-nyamlb-1,False,2,3,0,1,8,0,0,1,2
+656547,2018-06-24,Jonathan Holder,2018/06/24/nyamlb-tbamlb-1,False,2,3,0,1,7,0,0,0,2
+656547,2018-06-27,Jonathan Holder,2018/06/27/nyamlb-phimlb-1,False,1,1,1,0,4,0,0,0,1
+656547,2018-06-30,Jonathan Holder,2018/06/30/bosmlb-nyamlb-1,False,2,1,2,0,5,0,0,0,0
+656547,2018-07-02,Jonathan Holder,2018/07/02/atlmlb-nyamlb-1,False,1,3,2,0,8,0,0,0,1
+656547,2018-07-04,Jonathan Holder,2018/07/04/atlmlb-nyamlb-1,False,2,2,0,0,4,0,0,0,0
+656547,2018-07-07,Jonathan Holder,2018/07/07/nyamlb-tormlb-1,False,1,3,1,0,5,0,0,0,0
+656547,2018-07-09,Jonathan Holder,2018/07/09/nyamlb-balmlb-1,False,0,3,0,1,5,0,1,0,1
+656547,2018-07-10,Jonathan Holder,2018/07/10/nyamlb-balmlb-1,False,0,2,0,0,2,0,0,0,0
+656547,2018-07-13,Jonathan Holder,2018/07/13/nyamlb-clemlb-1,False,2,2,1,1,8,0,1,0,2
+656547,2018-07-20,Jonathan Holder,2018/07/20/nynmlb-nyamlb-1,False,1,0,1,0,3,0,0,0,1
+656547,2018-07-21,Jonathan Holder,2018/07/21/nynmlb-nyamlb-1,False,0,2,0,1,3,0,0,0,1
+656547,2018-07-25,Jonathan Holder,2018/07/25/nyamlb-tbamlb-1,False,0,2,1,1,4,1,0,0,1
+656547,2018-07-28,Jonathan Holder,2018/07/28/kcamlb-nyamlb-2,False,0,1,1,1,5,0,1,0,1
+656547,2018-08-01,Jonathan Holder,2018/08/01/balmlb-nyamlb-1,False,1,3,0,0,5,0,0,0,1
+656547,2018-08-02,Jonathan Holder,2018/08/02/nyamlb-bosmlb-1,False,1,3,2,0,7,1,1,0,0
+656547,2018-08-05,Jonathan Holder,2018/08/05/nyamlb-bosmlb-1,False,2,0,1,0,5,0,1,0,1
+656547,2018-08-07,Jonathan Holder,2018/08/07/nyamlb-chamlb-1,False,1,2,0,0,4,0,1,0,0
+656547,2018-08-08,Jonathan Holder,2018/08/08/nyamlb-chamlb-1,False,1,0,2,0,4,0,0,0,1
+656547,2018-08-12,Jonathan Holder,2018/08/12/texmlb-nyamlb-1,False,0,2,0,1,8,0,2,0,4
+656547,2018-08-15,Jonathan Holder,2018/08/15/tbamlb-nyamlb-1,False,0,0,0,0,2,0,0,0,2
+656547,2018-08-18,Jonathan Holder,2018/08/18/tormlb-nyamlb-1,False,0,0,1,0,1,0,0,0,0
+656547,2018-08-19,Jonathan Holder,2018/08/19/tormlb-nyamlb-1,False,0,2,1,2,4,0,0,0,1
+656547,2018-08-21,Jonathan Holder,2018/08/21/nyamlb-miamlb-1,False,1,0,0,0,4,0,0,0,3
+656547,2018-08-25,Jonathan Holder,2018/08/25/nyamlb-balmlb-2,False,2,1,1,0,7,0,1,0,2
+656547,2018-08-28,Jonathan Holder,2018/08/28/chamlb-nyamlb-1,False,1,4,3,1,9,0,0,0,1
+656547,2018-08-31,Jonathan Holder,2018/08/31/detmlb-nyamlb-1,False,0,2,2,0,4,0,0,0,0
+656547,2018-09-01,Jonathan Holder,2018/09/01/detmlb-nyamlb-1,False,2,0,0,0,3,0,0,0,1
+656547,2018-09-05,Jonathan Holder,2018/09/05/nyamlb-oakmlb-1,False,3,2,0,0,6,0,1,0,0
+656547,2018-09-10,Jonathan Holder,2018/09/10/nyamlb-minmlb-1,False,1,1,0,0,3,0,0,0,1
+656547,2018-09-15,Jonathan Holder,2018/09/15/tormlb-nyamlb-1,False,2,2,0,0,5,0,0,0,1
+656547,2018-09-19,Jonathan Holder,2018/09/19/bosmlb-nyamlb-1,False,0,2,1,0,4,0,0,0,1
+656547,2018-09-20,Jonathan Holder,2018/09/20/bosmlb-nyamlb-1,False,0,1,0,0,2,0,1,0,0
+656547,2018-09-22,Jonathan Holder,2018/09/22/balmlb-nyamlb-1,False,2,2,1,0,6,0,1,0,0
+656547,2018-09-24,Jonathan Holder,2018/09/24/nyamlb-tbamlb-1,True,0,1,1,0,5,0,2,0,1
+656547,2018-09-26,Jonathan Holder,2018/09/26/nyamlb-tbamlb-1,False,0,2,1,0,4,0,1,0,0
+656547,2018-09-29,Jonathan Holder,2018/09/29/nyamlb-bosmlb-1,False,1,1,1,0,4,1,0,0,1
 596001,2018-04-03,Jake Junis,2018/04/03/kcamlb-detmlb-1,True,8,7,3,1,25,0,1,0,6
 596001,2018-04-09,Jake Junis,2018/04/09/seamlb-kcamlb-1,True,8,8,2,1,26,0,2,3,3
 596001,2018-04-14,Jake Junis,2018/04/14/anamlb-kcamlb-1,True,3,9,2,1,22,3,1,0,7
@@ -5031,32 +5031,32 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 592662,2018-09-19,Robbie Ray,2018/09/19/chnmlb-arimlb-1,True,5,2,4,0,23,0,4,0,8
 592662,2018-09-24,Robbie Ray,2018/09/24/lanmlb-arimlb-1,True,3,4,5,0,22,1,3,0,7
 592662,2018-09-30,Robbie Ray,2018/09/30/arimlb-sdnmlb-1,True,3,4,2,0,21,1,4,0,8
-642545,2018-04-11,,2018/04/11/anamlb-texmlb-1,True,3,9,1,3,20,1,3,1,3
-642545,2018-04-22,,2018/04/22/sfnmlb-anamlb-1,True,3,3,4,1,12,0,1,0,1
-642545,2018-05-03,,2018/05/03/balmlb-anamlb-1,True,13,2,5,0,24,0,2,0,2
-642545,2018-05-09,,2018/05/09/anamlb-colmlb-1,True,4,5,4,0,22,0,1,1,7
-642545,2018-05-15,,2018/05/15/houmlb-anamlb-1,True,7,6,4,0,25,0,0,1,7
-642545,2018-05-26,,2018/05/26/anamlb-nyamlb-1,True,5,10,1,1,21,3,1,0,4
-642545,2018-06-01,,2018/06/01/texmlb-anamlb-1,True,7,7,2,1,23,0,1,0,6
-642545,2018-06-12,,2018/06/12/anamlb-seamlb-1,True,6,9,3,2,22,2,0,0,2
-642545,2018-06-18,,2018/06/18/arimlb-anamlb-1,True,5,5,3,0,19,2,1,0,5
-642545,2018-06-23,,2018/06/23/tormlb-anamlb-1,True,4,5,3,0,21,1,4,0,5
-642545,2018-06-28,,2018/06/28/anamlb-bosmlb-1,True,6,7,2,0,21,1,2,0,4
-642545,2018-07-05,,2018/07/05/anamlb-seamlb-1,True,9,6,3,1,22,0,3,0,1
-642545,2018-07-11,,2018/07/11/seamlb-anamlb-1,True,5,5,4,1,21,1,0,2,5
-642545,2018-07-23,,2018/07/23/chamlb-anamlb-1,True,6,7,2,1,20,1,3,0,2
-642545,2018-07-28,,2018/07/28/seamlb-anamlb-1,True,11,6,3,0,23,2,0,0,2
-642545,2018-08-03,,2018/08/03/anamlb-clemlb-1,True,10,7,2,0,24,0,2,0,3
-642545,2018-08-08,,2018/08/08/detmlb-anamlb-1,True,3,10,4,2,23,0,1,0,5
-642545,2018-08-14,,2018/08/14/anamlb-sdnmlb-1,True,4,4,5,1,21,1,1,0,7
-642545,2018-08-19,,2018/08/19/anamlb-texmlb-1,True,7,3,4,1,20,0,1,0,5
-642545,2018-08-25,,2018/08/25/houmlb-anamlb-1,True,3,6,3,2,15,0,2,0,1
-642545,2018-08-31,,2018/08/31/anamlb-houmlb-1,True,5,9,3,2,22,0,1,0,4
-642545,2018-09-05,,2018/09/05/anamlb-texmlb-1,True,4,5,2,0,19,0,3,0,5
-642545,2018-09-10,,2018/09/10/texmlb-anamlb-1,True,3,6,1,0,16,1,4,0,2
-642545,2018-09-16,,2018/09/16/seamlb-anamlb-1,True,3,9,5,1,21,1,1,0,3
-642545,2018-09-22,,2018/09/22/anamlb-houmlb-1,True,2,10,2,1,21,0,3,1,3
-642545,2018-09-28,,2018/09/28/oakmlb-anamlb-1,True,4,5,0,2,19,0,6,0,4
+642545,2018-04-11,Jaime Barria,2018/04/11/anamlb-texmlb-1,True,3,9,1,3,20,1,3,1,3
+642545,2018-04-22,Jaime Barria,2018/04/22/sfnmlb-anamlb-1,True,3,3,4,1,12,0,1,0,1
+642545,2018-05-03,Jaime Barria,2018/05/03/balmlb-anamlb-1,True,13,2,5,0,24,0,2,0,2
+642545,2018-05-09,Jaime Barria,2018/05/09/anamlb-colmlb-1,True,4,5,4,0,22,0,1,1,7
+642545,2018-05-15,Jaime Barria,2018/05/15/houmlb-anamlb-1,True,7,6,4,0,25,0,0,1,7
+642545,2018-05-26,Jaime Barria,2018/05/26/anamlb-nyamlb-1,True,5,10,1,1,21,3,1,0,4
+642545,2018-06-01,Jaime Barria,2018/06/01/texmlb-anamlb-1,True,7,7,2,1,23,0,1,0,6
+642545,2018-06-12,Jaime Barria,2018/06/12/anamlb-seamlb-1,True,6,9,3,2,22,2,0,0,2
+642545,2018-06-18,Jaime Barria,2018/06/18/arimlb-anamlb-1,True,5,5,3,0,19,2,1,0,5
+642545,2018-06-23,Jaime Barria,2018/06/23/tormlb-anamlb-1,True,4,5,3,0,21,1,4,0,5
+642545,2018-06-28,Jaime Barria,2018/06/28/anamlb-bosmlb-1,True,6,7,2,0,21,1,2,0,4
+642545,2018-07-05,Jaime Barria,2018/07/05/anamlb-seamlb-1,True,9,6,3,1,22,0,3,0,1
+642545,2018-07-11,Jaime Barria,2018/07/11/seamlb-anamlb-1,True,5,5,4,1,21,1,0,2,5
+642545,2018-07-23,Jaime Barria,2018/07/23/chamlb-anamlb-1,True,6,7,2,1,20,1,3,0,2
+642545,2018-07-28,Jaime Barria,2018/07/28/seamlb-anamlb-1,True,11,6,3,0,23,2,0,0,2
+642545,2018-08-03,Jaime Barria,2018/08/03/anamlb-clemlb-1,True,10,7,2,0,24,0,2,0,3
+642545,2018-08-08,Jaime Barria,2018/08/08/detmlb-anamlb-1,True,3,10,4,2,23,0,1,0,5
+642545,2018-08-14,Jaime Barria,2018/08/14/anamlb-sdnmlb-1,True,4,4,5,1,21,1,1,0,7
+642545,2018-08-19,Jaime Barria,2018/08/19/anamlb-texmlb-1,True,7,3,4,1,20,0,1,0,5
+642545,2018-08-25,Jaime Barria,2018/08/25/houmlb-anamlb-1,True,3,6,3,2,15,0,2,0,1
+642545,2018-08-31,Jaime Barria,2018/08/31/anamlb-houmlb-1,True,5,9,3,2,22,0,1,0,4
+642545,2018-09-05,Jaime Barria,2018/09/05/anamlb-texmlb-1,True,4,5,2,0,19,0,3,0,5
+642545,2018-09-10,Jaime Barria,2018/09/10/texmlb-anamlb-1,True,3,6,1,0,16,1,4,0,2
+642545,2018-09-16,Jaime Barria,2018/09/16/seamlb-anamlb-1,True,3,9,5,1,21,1,1,0,3
+642545,2018-09-22,Jaime Barria,2018/09/22/anamlb-houmlb-1,True,2,10,2,1,21,0,3,1,3
+642545,2018-09-28,Jaime Barria,2018/09/28/oakmlb-anamlb-1,True,4,5,0,2,19,0,6,0,4
 593144,2018-04-17,Richard Rodriguez,2018/04/17/colmlb-pitmlb-1,False,0,2,0,0,4,0,0,0,2
 593144,2018-04-19,Richard Rodriguez,2018/04/19/pitmlb-phimlb-1,False,2,0,1,0,9,0,0,0,6
 593144,2018-04-22,Richard Rodriguez,2018/04/22/pitmlb-phimlb-1,False,1,2,0,0,3,0,0,0,0
@@ -5620,79 +5620,79 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 476451,2018-08-10,Jeremy Hellickson,2018/08/10/wasmlb-chnmlb-1,True,6,5,3,2,21,0,4,0,3
 476451,2018-08-15,Jeremy Hellickson,2018/08/15/wasmlb-slnmlb-1,True,6,5,2,0,19,1,2,1,2
 476451,2018-09-15,Jeremy Hellickson,2018/09/15/wasmlb-atlmlb-1,True,4,5,1,0,12,0,1,0,1
-493200,2018-03-29,Seung-hwan Oh,2018/03/29/nyamlb-tormlb-1,False,3,1,0,0,5,0,0,0,1
-493200,2018-04-01,Seung-hwan Oh,2018/04/01/nyamlb-tormlb-1,False,0,2,1,0,4,0,0,0,1
-493200,2018-04-02,Seung-hwan Oh,2018/04/02/chamlb-tormlb-1,False,1,3,0,1,6,1,1,1,0
-493200,2018-04-04,Seung-hwan Oh,2018/04/04/chamlb-tormlb-1,False,1,0,1,0,4,0,0,0,2
-493200,2018-04-06,Seung-hwan Oh,2018/04/06/tormlb-texmlb-1,False,0,2,2,0,4,0,0,0,0
-493200,2018-04-08,Seung-hwan Oh,2018/04/08/tormlb-texmlb-1,False,2,1,0,1,3,0,0,0,0
-493200,2018-04-11,Seung-hwan Oh,2018/04/11/tormlb-balmlb-1,False,1,2,0,0,5,0,0,0,2
-493200,2018-04-17,Seung-hwan Oh,2018/04/17/kcamlb-tormlb-1,False,2,0,1,0,4,0,0,0,1
-493200,2018-04-20,Seung-hwan Oh,2018/04/20/tormlb-nyamlb-1,False,2,0,0,0,4,0,0,0,2
-493200,2018-04-22,Seung-hwan Oh,2018/04/22/tormlb-nyamlb-1,False,0,3,0,1,3,0,0,0,0
-493200,2018-04-25,Seung-hwan Oh,2018/04/25/bosmlb-tormlb-1,False,1,1,0,0,3,0,1,0,0
-493200,2018-04-26,Seung-hwan Oh,2018/04/26/bosmlb-tormlb-1,False,0,2,0,0,3,0,0,0,1
-493200,2018-04-28,Seung-hwan Oh,2018/04/28/texmlb-tormlb-1,False,0,2,0,0,4,1,0,0,2
-493200,2018-05-01,Seung-hwan Oh,2018/05/01/tormlb-minmlb-1,False,1,0,0,0,3,0,0,0,2
-493200,2018-05-03,Seung-hwan Oh,2018/05/03/tormlb-clemlb-1,False,0,2,0,0,3,0,0,0,1
-493200,2018-05-05,Seung-hwan Oh,2018/05/05/tormlb-tbamlb-1,False,1,1,4,0,7,0,1,0,0
-493200,2018-05-09,Seung-hwan Oh,2018/05/09/seamlb-tormlb-1,False,1,1,0,0,3,0,0,0,1
-493200,2018-05-11,Seung-hwan Oh,2018/05/11/bosmlb-tormlb-1,False,1,0,0,0,3,0,0,0,2
-493200,2018-05-12,Seung-hwan Oh,2018/05/12/bosmlb-tormlb-1,False,1,2,0,0,5,0,0,0,2
-493200,2018-05-17,Seung-hwan Oh,2018/05/17/oakmlb-tormlb-1,False,1,2,3,0,7,1,1,0,0
-493200,2018-05-19,Seung-hwan Oh,2018/05/19/oakmlb-tormlb-1,False,1,3,0,0,6,0,1,0,1
-493200,2018-05-23,Seung-hwan Oh,2018/05/23/anamlb-tormlb-1,False,0,1,1,0,3,0,0,0,1
-493200,2018-05-25,Seung-hwan Oh,2018/05/25/tormlb-phimlb-1,False,0,1,0,1,4,0,1,0,2
-493200,2018-05-27,Seung-hwan Oh,2018/05/27/tormlb-phimlb-1,False,1,1,0,1,4,0,0,0,2
-493200,2018-05-30,Seung-hwan Oh,2018/05/30/tormlb-bosmlb-1,False,1,1,0,0,5,0,1,0,2
-493200,2018-06-02,Seung-hwan Oh,2018/06/02/tormlb-detmlb-1,False,1,4,1,0,7,0,1,0,0
-493200,2018-06-05,Seung-hwan Oh,2018/06/05/nyamlb-tormlb-1,False,0,3,0,0,6,1,1,1,1
-493200,2018-06-07,Seung-hwan Oh,2018/06/07/balmlb-tormlb-1,False,1,2,0,0,3,0,0,0,0
-493200,2018-06-08,Seung-hwan Oh,2018/06/08/balmlb-tormlb-1,False,1,2,1,1,4,0,0,0,0
-493200,2018-06-11,Seung-hwan Oh,2018/06/11/tormlb-tbamlb-1,False,0,2,1,0,4,0,0,0,1
-493200,2018-06-13,Seung-hwan Oh,2018/06/13/tormlb-tbamlb-1,False,1,0,0,0,4,0,0,1,2
-493200,2018-06-15,Seung-hwan Oh,2018/06/15/wasmlb-tormlb-1,False,2,0,0,0,3,0,0,0,1
-493200,2018-06-17,Seung-hwan Oh,2018/06/17/wasmlb-tormlb-1,False,1,1,0,0,2,0,0,0,0
-493200,2018-06-21,Seung-hwan Oh,2018/06/21/tormlb-anamlb-1,False,0,0,0,0,3,0,0,0,3
-493200,2018-06-23,Seung-hwan Oh,2018/06/23/tormlb-anamlb-1,False,0,1,0,0,4,1,0,0,3
-493200,2018-06-24,Seung-hwan Oh,2018/06/24/tormlb-anamlb-1,False,1,1,0,0,3,0,0,0,1
-493200,2018-06-25,Seung-hwan Oh,2018/06/25/tormlb-houmlb-1,False,0,1,1,0,5,0,1,0,2
-493200,2018-06-29,Seung-hwan Oh,2018/06/29/detmlb-tormlb-1,False,0,0,0,0,3,0,0,0,3
-493200,2018-06-30,Seung-hwan Oh,2018/06/30/detmlb-tormlb-1,False,1,0,2,0,4,0,0,0,1
-493200,2018-07-02,Seung-hwan Oh,2018/07/02/detmlb-tormlb-1,False,1,1,1,0,4,0,0,0,1
-493200,2018-07-06,Seung-hwan Oh,2018/07/06/nyamlb-tormlb-1,False,1,0,0,0,2,0,0,0,1
-493200,2018-07-08,Seung-hwan Oh,2018/07/08/nyamlb-tormlb-1,False,1,3,1,2,6,0,0,0,1
-493200,2018-07-10,Seung-hwan Oh,2018/07/10/tormlb-atlmlb-1,False,1,0,0,0,2,0,0,0,1
-493200,2018-07-12,Seung-hwan Oh,2018/07/12/tormlb-bosmlb-1,False,1,1,1,0,4,0,0,0,1
-493200,2018-07-13,Seung-hwan Oh,2018/07/13/tormlb-bosmlb-1,False,0,0,2,0,4,0,0,0,2
-493200,2018-07-20,Seung-hwan Oh,2018/07/20/balmlb-tormlb-1,False,0,0,0,0,1,0,0,0,1
-493200,2018-07-21,Seung-hwan Oh,2018/07/21/balmlb-tormlb-1,False,0,3,0,0,3,0,0,0,0
-493200,2018-07-24,Seung-hwan Oh,2018/07/24/minmlb-tormlb-1,False,0,2,0,1,3,0,0,0,1
-493200,2018-07-28,Seung-hwan Oh,2018/07/28/oakmlb-colmlb-1,False,0,3,1,1,5,0,1,0,0
-493200,2018-07-30,Seung-hwan Oh,2018/07/30/colmlb-slnmlb-1,False,0,2,2,0,5,0,0,0,1
-493200,2018-07-31,Seung-hwan Oh,2018/07/31/colmlb-slnmlb-1,False,1,1,0,0,2,0,0,0,0
-493200,2018-08-02,Seung-hwan Oh,2018/08/02/colmlb-slnmlb-1,False,1,1,0,0,3,0,0,0,1
-493200,2018-08-05,Seung-hwan Oh,2018/08/05/colmlb-milmlb-1,False,1,1,2,0,4,0,0,0,0
-493200,2018-08-06,Seung-hwan Oh,2018/08/06/pitmlb-colmlb-1,False,0,2,0,0,3,0,0,0,1
-493200,2018-08-08,Seung-hwan Oh,2018/08/08/pitmlb-colmlb-1,False,1,1,1,0,4,0,1,0,0
-493200,2018-08-09,Seung-hwan Oh,2018/08/09/lanmlb-colmlb-1,False,0,2,0,0,5,1,1,0,2
-493200,2018-08-11,Seung-hwan Oh,2018/08/11/lanmlb-colmlb-1,False,0,1,1,0,3,0,0,0,1
-493200,2018-08-16,Seung-hwan Oh,2018/08/16/colmlb-atlmlb-1,False,2,1,0,0,3,0,0,0,0
-493200,2018-08-21,Seung-hwan Oh,2018/08/21/sdnmlb-colmlb-1,False,2,0,0,0,5,0,1,0,2
-493200,2018-08-22,Seung-hwan Oh,2018/08/22/sdnmlb-colmlb-1,False,1,0,0,0,2,0,0,0,1
-493200,2018-08-25,Seung-hwan Oh,2018/08/25/slnmlb-colmlb-1,False,0,1,0,0,3,0,0,0,2
-493200,2018-08-27,Seung-hwan Oh,2018/08/27/colmlb-anamlb-1,False,1,0,1,0,5,0,2,0,1
-493200,2018-08-30,Seung-hwan Oh,2018/08/30/colmlb-sdnmlb-1,False,0,1,0,0,3,0,0,0,2
-493200,2018-08-31,Seung-hwan Oh,2018/08/31/colmlb-sdnmlb-1,False,0,2,1,0,4,0,0,0,1
-493200,2018-09-02,Seung-hwan Oh,2018/09/02/colmlb-sdnmlb-1,False,0,0,1,0,3,0,0,0,1
-493200,2018-09-03,Seung-hwan Oh,2018/09/03/sfnmlb-colmlb-1,False,0,3,0,1,6,2,0,1,2
-493200,2018-09-07,Seung-hwan Oh,2018/09/07/lanmlb-colmlb-1,False,1,0,0,0,2,0,0,0,1
-493200,2018-09-09,Seung-hwan Oh,2018/09/09/lanmlb-colmlb-1,False,1,1,0,0,3,0,1,0,0
-493200,2018-09-19,Seung-hwan Oh,2018/09/19/colmlb-lanmlb-1,False,2,0,0,0,2,0,0,0,0
-493200,2018-09-23,Seung-hwan Oh,2018/09/23/colmlb-arimlb-1,False,0,1,0,0,2,0,0,0,1
-493200,2018-09-26,Seung-hwan Oh,2018/09/26/phimlb-colmlb-1,False,0,1,0,0,3,0,0,0,2
-493200,2018-09-27,Seung-hwan Oh,2018/09/27/phimlb-colmlb-1,False,2,0,0,0,4,0,0,0,2
-493200,2018-09-30,Seung-hwan Oh,2018/09/30/wasmlb-colmlb-1,False,0,1,0,0,1,0,0,0,0
+493200,2018-03-29,Seung Hwan Oh,2018/03/29/nyamlb-tormlb-1,False,3,1,0,0,5,0,0,0,1
+493200,2018-04-01,Seung Hwan Oh,2018/04/01/nyamlb-tormlb-1,False,0,2,1,0,4,0,0,0,1
+493200,2018-04-02,Seung Hwan Oh,2018/04/02/chamlb-tormlb-1,False,1,3,0,1,6,1,1,1,0
+493200,2018-04-04,Seung Hwan Oh,2018/04/04/chamlb-tormlb-1,False,1,0,1,0,4,0,0,0,2
+493200,2018-04-06,Seung Hwan Oh,2018/04/06/tormlb-texmlb-1,False,0,2,2,0,4,0,0,0,0
+493200,2018-04-08,Seung Hwan Oh,2018/04/08/tormlb-texmlb-1,False,2,1,0,1,3,0,0,0,0
+493200,2018-04-11,Seung Hwan Oh,2018/04/11/tormlb-balmlb-1,False,1,2,0,0,5,0,0,0,2
+493200,2018-04-17,Seung Hwan Oh,2018/04/17/kcamlb-tormlb-1,False,2,0,1,0,4,0,0,0,1
+493200,2018-04-20,Seung Hwan Oh,2018/04/20/tormlb-nyamlb-1,False,2,0,0,0,4,0,0,0,2
+493200,2018-04-22,Seung Hwan Oh,2018/04/22/tormlb-nyamlb-1,False,0,3,0,1,3,0,0,0,0
+493200,2018-04-25,Seung Hwan Oh,2018/04/25/bosmlb-tormlb-1,False,1,1,0,0,3,0,1,0,0
+493200,2018-04-26,Seung Hwan Oh,2018/04/26/bosmlb-tormlb-1,False,0,2,0,0,3,0,0,0,1
+493200,2018-04-28,Seung Hwan Oh,2018/04/28/texmlb-tormlb-1,False,0,2,0,0,4,1,0,0,2
+493200,2018-05-01,Seung Hwan Oh,2018/05/01/tormlb-minmlb-1,False,1,0,0,0,3,0,0,0,2
+493200,2018-05-03,Seung Hwan Oh,2018/05/03/tormlb-clemlb-1,False,0,2,0,0,3,0,0,0,1
+493200,2018-05-05,Seung Hwan Oh,2018/05/05/tormlb-tbamlb-1,False,1,1,4,0,7,0,1,0,0
+493200,2018-05-09,Seung Hwan Oh,2018/05/09/seamlb-tormlb-1,False,1,1,0,0,3,0,0,0,1
+493200,2018-05-11,Seung Hwan Oh,2018/05/11/bosmlb-tormlb-1,False,1,0,0,0,3,0,0,0,2
+493200,2018-05-12,Seung Hwan Oh,2018/05/12/bosmlb-tormlb-1,False,1,2,0,0,5,0,0,0,2
+493200,2018-05-17,Seung Hwan Oh,2018/05/17/oakmlb-tormlb-1,False,1,2,3,0,7,1,1,0,0
+493200,2018-05-19,Seung Hwan Oh,2018/05/19/oakmlb-tormlb-1,False,1,3,0,0,6,0,1,0,1
+493200,2018-05-23,Seung Hwan Oh,2018/05/23/anamlb-tormlb-1,False,0,1,1,0,3,0,0,0,1
+493200,2018-05-25,Seung Hwan Oh,2018/05/25/tormlb-phimlb-1,False,0,1,0,1,4,0,1,0,2
+493200,2018-05-27,Seung Hwan Oh,2018/05/27/tormlb-phimlb-1,False,1,1,0,1,4,0,0,0,2
+493200,2018-05-30,Seung Hwan Oh,2018/05/30/tormlb-bosmlb-1,False,1,1,0,0,5,0,1,0,2
+493200,2018-06-02,Seung Hwan Oh,2018/06/02/tormlb-detmlb-1,False,1,4,1,0,7,0,1,0,0
+493200,2018-06-05,Seung Hwan Oh,2018/06/05/nyamlb-tormlb-1,False,0,3,0,0,6,1,1,1,1
+493200,2018-06-07,Seung Hwan Oh,2018/06/07/balmlb-tormlb-1,False,1,2,0,0,3,0,0,0,0
+493200,2018-06-08,Seung Hwan Oh,2018/06/08/balmlb-tormlb-1,False,1,2,1,1,4,0,0,0,0
+493200,2018-06-11,Seung Hwan Oh,2018/06/11/tormlb-tbamlb-1,False,0,2,1,0,4,0,0,0,1
+493200,2018-06-13,Seung Hwan Oh,2018/06/13/tormlb-tbamlb-1,False,1,0,0,0,4,0,0,1,2
+493200,2018-06-15,Seung Hwan Oh,2018/06/15/wasmlb-tormlb-1,False,2,0,0,0,3,0,0,0,1
+493200,2018-06-17,Seung Hwan Oh,2018/06/17/wasmlb-tormlb-1,False,1,1,0,0,2,0,0,0,0
+493200,2018-06-21,Seung Hwan Oh,2018/06/21/tormlb-anamlb-1,False,0,0,0,0,3,0,0,0,3
+493200,2018-06-23,Seung Hwan Oh,2018/06/23/tormlb-anamlb-1,False,0,1,0,0,4,1,0,0,3
+493200,2018-06-24,Seung Hwan Oh,2018/06/24/tormlb-anamlb-1,False,1,1,0,0,3,0,0,0,1
+493200,2018-06-25,Seung Hwan Oh,2018/06/25/tormlb-houmlb-1,False,0,1,1,0,5,0,1,0,2
+493200,2018-06-29,Seung Hwan Oh,2018/06/29/detmlb-tormlb-1,False,0,0,0,0,3,0,0,0,3
+493200,2018-06-30,Seung Hwan Oh,2018/06/30/detmlb-tormlb-1,False,1,0,2,0,4,0,0,0,1
+493200,2018-07-02,Seung Hwan Oh,2018/07/02/detmlb-tormlb-1,False,1,1,1,0,4,0,0,0,1
+493200,2018-07-06,Seung Hwan Oh,2018/07/06/nyamlb-tormlb-1,False,1,0,0,0,2,0,0,0,1
+493200,2018-07-08,Seung Hwan Oh,2018/07/08/nyamlb-tormlb-1,False,1,3,1,2,6,0,0,0,1
+493200,2018-07-10,Seung Hwan Oh,2018/07/10/tormlb-atlmlb-1,False,1,0,0,0,2,0,0,0,1
+493200,2018-07-12,Seung Hwan Oh,2018/07/12/tormlb-bosmlb-1,False,1,1,1,0,4,0,0,0,1
+493200,2018-07-13,Seung Hwan Oh,2018/07/13/tormlb-bosmlb-1,False,0,0,2,0,4,0,0,0,2
+493200,2018-07-20,Seung Hwan Oh,2018/07/20/balmlb-tormlb-1,False,0,0,0,0,1,0,0,0,1
+493200,2018-07-21,Seung Hwan Oh,2018/07/21/balmlb-tormlb-1,False,0,3,0,0,3,0,0,0,0
+493200,2018-07-24,Seung Hwan Oh,2018/07/24/minmlb-tormlb-1,False,0,2,0,1,3,0,0,0,1
+493200,2018-07-28,Seung Hwan Oh,2018/07/28/oakmlb-colmlb-1,False,0,3,1,1,5,0,1,0,0
+493200,2018-07-30,Seung Hwan Oh,2018/07/30/colmlb-slnmlb-1,False,0,2,2,0,5,0,0,0,1
+493200,2018-07-31,Seung Hwan Oh,2018/07/31/colmlb-slnmlb-1,False,1,1,0,0,2,0,0,0,0
+493200,2018-08-02,Seung Hwan Oh,2018/08/02/colmlb-slnmlb-1,False,1,1,0,0,3,0,0,0,1
+493200,2018-08-05,Seung Hwan Oh,2018/08/05/colmlb-milmlb-1,False,1,1,2,0,4,0,0,0,0
+493200,2018-08-06,Seung Hwan Oh,2018/08/06/pitmlb-colmlb-1,False,0,2,0,0,3,0,0,0,1
+493200,2018-08-08,Seung Hwan Oh,2018/08/08/pitmlb-colmlb-1,False,1,1,1,0,4,0,1,0,0
+493200,2018-08-09,Seung Hwan Oh,2018/08/09/lanmlb-colmlb-1,False,0,2,0,0,5,1,1,0,2
+493200,2018-08-11,Seung Hwan Oh,2018/08/11/lanmlb-colmlb-1,False,0,1,1,0,3,0,0,0,1
+493200,2018-08-16,Seung Hwan Oh,2018/08/16/colmlb-atlmlb-1,False,2,1,0,0,3,0,0,0,0
+493200,2018-08-21,Seung Hwan Oh,2018/08/21/sdnmlb-colmlb-1,False,2,0,0,0,5,0,1,0,2
+493200,2018-08-22,Seung Hwan Oh,2018/08/22/sdnmlb-colmlb-1,False,1,0,0,0,2,0,0,0,1
+493200,2018-08-25,Seung Hwan Oh,2018/08/25/slnmlb-colmlb-1,False,0,1,0,0,3,0,0,0,2
+493200,2018-08-27,Seung Hwan Oh,2018/08/27/colmlb-anamlb-1,False,1,0,1,0,5,0,2,0,1
+493200,2018-08-30,Seung Hwan Oh,2018/08/30/colmlb-sdnmlb-1,False,0,1,0,0,3,0,0,0,2
+493200,2018-08-31,Seung Hwan Oh,2018/08/31/colmlb-sdnmlb-1,False,0,2,1,0,4,0,0,0,1
+493200,2018-09-02,Seung Hwan Oh,2018/09/02/colmlb-sdnmlb-1,False,0,0,1,0,3,0,0,0,1
+493200,2018-09-03,Seung Hwan Oh,2018/09/03/sfnmlb-colmlb-1,False,0,3,0,1,6,2,0,1,2
+493200,2018-09-07,Seung Hwan Oh,2018/09/07/lanmlb-colmlb-1,False,1,0,0,0,2,0,0,0,1
+493200,2018-09-09,Seung Hwan Oh,2018/09/09/lanmlb-colmlb-1,False,1,1,0,0,3,0,1,0,0
+493200,2018-09-19,Seung Hwan Oh,2018/09/19/colmlb-lanmlb-1,False,2,0,0,0,2,0,0,0,0
+493200,2018-09-23,Seung Hwan Oh,2018/09/23/colmlb-arimlb-1,False,0,1,0,0,2,0,0,0,1
+493200,2018-09-26,Seung Hwan Oh,2018/09/26/phimlb-colmlb-1,False,0,1,0,0,3,0,0,0,2
+493200,2018-09-27,Seung Hwan Oh,2018/09/27/phimlb-colmlb-1,False,2,0,0,0,4,0,0,0,2
+493200,2018-09-30,Seung Hwan Oh,2018/09/30/wasmlb-colmlb-1,False,0,1,0,0,1,0,0,0,0
 612672,2018-04-28,Wei-Yin Chen,2018/04/28/colmlb-miamlb-1,True,6,6,3,0,22,1,2,1,3
 612672,2018-05-04,Wei-Yin Chen,2018/05/04/miamlb-cinmlb-1,True,2,11,1,1,20,2,4,0,2
 612672,2018-05-09,Wei-Yin Chen,2018/05/09/miamlb-chnmlb-1,True,5,7,2,0,18,3,2,0,1
@@ -5932,32 +5932,32 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 630023,2018-09-15,Yonny Chirinos,2018/09/15/oakmlb-tbamlb-1,False,7,4,5,0,22,1,1,0,5
 630023,2018-09-20,Yonny Chirinos,2018/09/20/tbamlb-tormlb-1,False,7,2,1,0,16,0,1,0,5
 630023,2018-09-26,Yonny Chirinos,2018/09/26/nyamlb-tbamlb-1,False,3,4,4,0,16,0,2,0,3
-664192,2018-03-30,,2018/03/30/milmlb-sdnmlb-1,True,7,8,5,0,22,0,0,0,1
-664192,2018-04-05,,2018/04/05/colmlb-sdnmlb-1,True,4,2,1,1,18,0,3,0,7
-664192,2018-04-10,,2018/04/10/sdnmlb-colmlb-1,True,6,5,2,0,22,1,1,0,8
-664192,2018-04-15,,2018/04/15/sfnmlb-sdnmlb-1,True,6,4,3,0,22,0,0,0,9
-664192,2018-04-22,,2018/04/22/sdnmlb-arimlb-1,True,7,6,2,0,23,1,4,0,4
-664192,2018-04-28,,2018/04/28/nynmlb-sdnmlb-1,True,4,5,6,1,23,1,2,0,6
-664192,2018-05-04,,2018/05/04/lanmlb-sdnmlb-1,True,7,6,1,1,22,2,3,0,5
-664192,2018-05-09,,2018/05/09/wasmlb-sdnmlb-1,True,7,2,4,0,20,1,1,0,6
-664192,2018-05-14,,2018/05/14/colmlb-sdnmlb-1,True,8,6,4,1,21,2,1,0,2
-664192,2018-06-20,,2018/06/20/oakmlb-sdnmlb-1,True,2,2,1,0,11,2,2,1,3
-664192,2018-06-25,,2018/06/25/sdnmlb-texmlb-1,True,5,2,2,0,15,0,2,0,4
-664192,2018-06-30,,2018/06/30/pitmlb-sdnmlb-1,True,9,0,1,0,19,0,4,0,5
-664192,2018-07-06,,2018/07/06/sdnmlb-arimlb-1,True,5,4,5,1,22,0,1,2,5
-664192,2018-07-11,,2018/07/11/lanmlb-sdnmlb-1,True,7,5,4,0,21,0,1,0,4
-664192,2018-07-23,,2018/07/23/sdnmlb-nynmlb-1,True,7,6,2,2,23,0,0,1,6
-664192,2018-07-29,,2018/07/29/arimlb-sdnmlb-1,True,8,5,2,0,21,3,3,0,3
-664192,2018-08-05,,2018/08/05/sdnmlb-chnmlb-1,True,5,5,4,0,24,1,0,0,9
-664192,2018-08-12,,2018/08/12/phimlb-sdnmlb-1,True,8,3,1,0,21,0,3,0,6
-664192,2018-08-17,,2018/08/17/arimlb-sdnmlb-1,True,7,2,3,0,23,1,3,0,6
-664192,2018-08-23,,2018/08/23/sdnmlb-colmlb-1,True,4,5,6,0,23,1,1,0,6
-664192,2018-08-29,,2018/08/29/seamlb-sdnmlb-1,True,6,5,4,0,27,0,2,0,9
-664192,2018-09-04,,2018/09/04/sdnmlb-arimlb-1,True,1,6,4,0,19,0,1,0,6
-664192,2018-09-12,,2018/09/12/sdnmlb-seamlb-1,True,11,4,2,0,22,1,2,0,3
-664192,2018-09-18,,2018/09/18/sfnmlb-sdnmlb-1,True,4,5,5,0,23,1,1,0,8
-664192,2018-09-23,,2018/09/23/sdnmlb-lanmlb-1,True,3,7,3,1,21,3,2,0,6
-664192,2018-09-30,,2018/09/30/arimlb-sdnmlb-1,True,7,3,2,0,20,2,0,0,8
+664192,2018-03-30,Joey Lucchesi,2018/03/30/milmlb-sdnmlb-1,True,7,8,5,0,22,0,0,0,1
+664192,2018-04-05,Joey Lucchesi,2018/04/05/colmlb-sdnmlb-1,True,4,2,1,1,18,0,3,0,7
+664192,2018-04-10,Joey Lucchesi,2018/04/10/sdnmlb-colmlb-1,True,6,5,2,0,22,1,1,0,8
+664192,2018-04-15,Joey Lucchesi,2018/04/15/sfnmlb-sdnmlb-1,True,6,4,3,0,22,0,0,0,9
+664192,2018-04-22,Joey Lucchesi,2018/04/22/sdnmlb-arimlb-1,True,7,6,2,0,23,1,4,0,4
+664192,2018-04-28,Joey Lucchesi,2018/04/28/nynmlb-sdnmlb-1,True,4,5,6,1,23,1,2,0,6
+664192,2018-05-04,Joey Lucchesi,2018/05/04/lanmlb-sdnmlb-1,True,7,6,1,1,22,2,3,0,5
+664192,2018-05-09,Joey Lucchesi,2018/05/09/wasmlb-sdnmlb-1,True,7,2,4,0,20,1,1,0,6
+664192,2018-05-14,Joey Lucchesi,2018/05/14/colmlb-sdnmlb-1,True,8,6,4,1,21,2,1,0,2
+664192,2018-06-20,Joey Lucchesi,2018/06/20/oakmlb-sdnmlb-1,True,2,2,1,0,11,2,2,1,3
+664192,2018-06-25,Joey Lucchesi,2018/06/25/sdnmlb-texmlb-1,True,5,2,2,0,15,0,2,0,4
+664192,2018-06-30,Joey Lucchesi,2018/06/30/pitmlb-sdnmlb-1,True,9,0,1,0,19,0,4,0,5
+664192,2018-07-06,Joey Lucchesi,2018/07/06/sdnmlb-arimlb-1,True,5,4,5,1,22,0,1,2,5
+664192,2018-07-11,Joey Lucchesi,2018/07/11/lanmlb-sdnmlb-1,True,7,5,4,0,21,0,1,0,4
+664192,2018-07-23,Joey Lucchesi,2018/07/23/sdnmlb-nynmlb-1,True,7,6,2,2,23,0,0,1,6
+664192,2018-07-29,Joey Lucchesi,2018/07/29/arimlb-sdnmlb-1,True,8,5,2,0,21,3,3,0,3
+664192,2018-08-05,Joey Lucchesi,2018/08/05/sdnmlb-chnmlb-1,True,5,5,4,0,24,1,0,0,9
+664192,2018-08-12,Joey Lucchesi,2018/08/12/phimlb-sdnmlb-1,True,8,3,1,0,21,0,3,0,6
+664192,2018-08-17,Joey Lucchesi,2018/08/17/arimlb-sdnmlb-1,True,7,2,3,0,23,1,3,0,6
+664192,2018-08-23,Joey Lucchesi,2018/08/23/sdnmlb-colmlb-1,True,4,5,6,0,23,1,1,0,6
+664192,2018-08-29,Joey Lucchesi,2018/08/29/seamlb-sdnmlb-1,True,6,5,4,0,27,0,2,0,9
+664192,2018-09-04,Joey Lucchesi,2018/09/04/sdnmlb-arimlb-1,True,1,6,4,0,19,0,1,0,6
+664192,2018-09-12,Joey Lucchesi,2018/09/12/sdnmlb-seamlb-1,True,11,4,2,0,22,1,2,0,3
+664192,2018-09-18,Joey Lucchesi,2018/09/18/sfnmlb-sdnmlb-1,True,4,5,5,0,23,1,1,0,8
+664192,2018-09-23,Joey Lucchesi,2018/09/23/sdnmlb-lanmlb-1,True,3,7,3,1,21,3,2,0,6
+664192,2018-09-30,Joey Lucchesi,2018/09/30/arimlb-sdnmlb-1,True,7,3,2,0,20,2,0,0,8
 467100,2018-03-30,Ivan Nova,2018/03/30/pitmlb-detmlb-1,True,5,7,5,0,24,0,3,0,4
 467100,2018-04-04,Ivan Nova,2018/04/04/minmlb-pitmlb-1,True,8,7,3,1,22,1,1,0,3
 467100,2018-04-10,Ivan Nova,2018/04/10/pitmlb-chnmlb-1,True,10,9,2,0,28,2,0,1,6
@@ -6865,27 +6865,27 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 435043,2018-09-27,Zach Duke,2018/09/27/texmlb-seamlb-1,False,2,0,1,0,4,0,0,0,1
 435043,2018-09-28,Zach Duke,2018/09/28/texmlb-seamlb-1,False,1,0,0,0,2,0,0,0,1
 435043,2018-09-30,Zach Duke,2018/09/30/texmlb-seamlb-1,False,1,0,0,0,3,0,0,0,2
-593334,2018-04-08,,2018/04/08/balmlb-nyamlb-1,False,1,2,3,0,12,1,1,0,5
-593334,2018-04-12,,2018/04/12/nyamlb-bosmlb-1,False,3,3,1,2,10,0,0,0,3
-593334,2018-04-20,,2018/04/20/tormlb-nyamlb-1,False,2,2,0,0,11,0,4,0,3
-593334,2018-04-26,,2018/04/26/minmlb-nyamlb-1,False,3,2,5,0,14,1,1,0,3
-593334,2018-05-01,,2018/05/01/nyamlb-houmlb-1,False,2,5,4,0,16,0,1,0,4
-593334,2018-05-06,,2018/05/06/clemlb-nyamlb-1,True,5,4,0,0,20,0,2,0,9
-593334,2018-05-12,,2018/05/12/oakmlb-nyamlb-1,True,6,6,6,1,22,1,3,0,1
-593334,2018-05-22,,2018/05/22/nyamlb-texmlb-1,True,8,1,1,0,20,2,3,1,6
-593334,2018-05-28,,2018/05/28/houmlb-nyamlb-1,True,7,4,4,0,24,1,2,0,7
-593334,2018-06-04,,2018/06/04/nyamlb-detmlb-2,True,7,13,4,0,30,0,2,1,3
-593334,2018-06-09,,2018/06/09/nyamlb-nynmlb-1,True,4,8,2,2,24,2,0,1,9
-593334,2018-06-14,,2018/06/14/tbamlb-nyamlb-1,True,7,3,2,0,24,1,2,0,10
-593334,2018-06-19,,2018/06/19/seamlb-nyamlb-1,True,5,7,3,2,24,1,0,0,9
-593334,2018-06-24,,2018/06/24/nyamlb-tbamlb-1,True,8,4,4,0,19,1,0,1,2
-593334,2018-06-27,,2018/06/27/nyamlb-phimlb-1,False,0,0,2,0,3,0,0,0,1
-593334,2018-07-03,,2018/07/03/atlmlb-nyamlb-1,True,2,8,3,0,22,2,3,0,6
-593334,2018-07-08,,2018/07/08/nyamlb-tormlb-1,True,8,7,3,1,25,1,2,0,5
-593334,2018-07-13,,2018/07/13/nyamlb-clemlb-1,True,6,4,1,0,21,0,4,0,6
-593334,2018-07-20,,2018/07/20/nynmlb-nyamlb-1,True,1,8,4,0,18,1,2,0,3
-593334,2018-09-25,,2018/09/25/nyamlb-tbamlb-1,False,1,2,0,1,7,0,0,0,4
-593334,2018-09-29,,2018/09/29/nyamlb-bosmlb-1,True,2,2,0,0,9,0,1,1,3
+593334,2018-04-08,Domingo German,2018/04/08/balmlb-nyamlb-1,False,1,2,3,0,12,1,1,0,5
+593334,2018-04-12,Domingo German,2018/04/12/nyamlb-bosmlb-1,False,3,3,1,2,10,0,0,0,3
+593334,2018-04-20,Domingo German,2018/04/20/tormlb-nyamlb-1,False,2,2,0,0,11,0,4,0,3
+593334,2018-04-26,Domingo German,2018/04/26/minmlb-nyamlb-1,False,3,2,5,0,14,1,1,0,3
+593334,2018-05-01,Domingo German,2018/05/01/nyamlb-houmlb-1,False,2,5,4,0,16,0,1,0,4
+593334,2018-05-06,Domingo German,2018/05/06/clemlb-nyamlb-1,True,5,4,0,0,20,0,2,0,9
+593334,2018-05-12,Domingo German,2018/05/12/oakmlb-nyamlb-1,True,6,6,6,1,22,1,3,0,1
+593334,2018-05-22,Domingo German,2018/05/22/nyamlb-texmlb-1,True,8,1,1,0,20,2,3,1,6
+593334,2018-05-28,Domingo German,2018/05/28/houmlb-nyamlb-1,True,7,4,4,0,24,1,2,0,7
+593334,2018-06-04,Domingo German,2018/06/04/nyamlb-detmlb-2,True,7,13,4,0,30,0,2,1,3
+593334,2018-06-09,Domingo German,2018/06/09/nyamlb-nynmlb-1,True,4,8,2,2,24,2,0,1,9
+593334,2018-06-14,Domingo German,2018/06/14/tbamlb-nyamlb-1,True,7,3,2,0,24,1,2,0,10
+593334,2018-06-19,Domingo German,2018/06/19/seamlb-nyamlb-1,True,5,7,3,2,24,1,0,0,9
+593334,2018-06-24,Domingo German,2018/06/24/nyamlb-tbamlb-1,True,8,4,4,0,19,1,0,1,2
+593334,2018-06-27,Domingo German,2018/06/27/nyamlb-phimlb-1,False,0,0,2,0,3,0,0,0,1
+593334,2018-07-03,Domingo German,2018/07/03/atlmlb-nyamlb-1,True,2,8,3,0,22,2,3,0,6
+593334,2018-07-08,Domingo German,2018/07/08/nyamlb-tormlb-1,True,8,7,3,1,25,1,2,0,5
+593334,2018-07-13,Domingo German,2018/07/13/nyamlb-clemlb-1,True,6,4,1,0,21,0,4,0,6
+593334,2018-07-20,Domingo German,2018/07/20/nynmlb-nyamlb-1,True,1,8,4,0,18,1,2,0,3
+593334,2018-09-25,Domingo German,2018/09/25/nyamlb-tbamlb-1,False,1,2,0,1,7,0,0,0,4
+593334,2018-09-29,Domingo German,2018/09/29/nyamlb-bosmlb-1,True,2,2,0,0,9,0,1,1,3
 451584,2018-03-31,Wade Davis,2018/03/31/colmlb-arimlb-1,False,0,1,0,0,3,0,0,0,2
 451584,2018-04-02,Wade Davis,2018/04/02/colmlb-sdnmlb-1,False,0,0,1,0,1,0,0,0,0
 451584,2018-04-04,Wade Davis,2018/04/04/colmlb-sdnmlb-1,False,1,0,1,0,3,0,1,0,0
@@ -7076,47 +7076,47 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 474463,2018-09-19,Brett Anderson,2018/09/19/anamlb-oakmlb-1,True,14,4,2,0,23,0,0,0,3
 474463,2018-09-25,Brett Anderson,2018/09/25/oakmlb-seamlb-1,True,7,2,2,0,14,2,0,0,3
 474463,2018-09-30,Brett Anderson,2018/09/30/oakmlb-anamlb-1,True,1,3,4,0,13,1,0,0,5
-621381,2018-05-07,Matt Strahm,2018/05/07/wasmlb-sdnmlb-1,False,3,1,2,0,10,1,3,0,1
-621381,2018-05-11,Matt Strahm,2018/05/11/slnmlb-sdnmlb-1,False,1,1,0,0,4,0,1,0,1
-621381,2018-05-14,Matt Strahm,2018/05/14/colmlb-sdnmlb-1,False,2,2,1,2,8,0,2,0,1
-621381,2018-05-17,Matt Strahm,2018/05/17/sdnmlb-pitmlb-1,False,1,2,2,1,5,0,0,0,0
-621381,2018-05-20,Matt Strahm,2018/05/20/sdnmlb-pitmlb-1,False,0,4,1,1,6,0,1,0,0
-621381,2018-05-22,Matt Strahm,2018/05/22/sdnmlb-wasmlb-1,False,1,1,0,0,3,0,1,0,0
-621381,2018-05-27,Matt Strahm,2018/05/27/sdnmlb-lanmlb-1,True,2,2,1,1,8,0,1,0,2
-621381,2018-05-30,Matt Strahm,2018/05/30/miamlb-sdnmlb-1,False,3,1,1,1,6,0,0,0,1
-621381,2018-06-04,Matt Strahm,2018/06/04/atlmlb-sdnmlb-1,False,0,2,1,0,3,0,0,0,0
-621381,2018-06-06,Matt Strahm,2018/06/06/atlmlb-sdnmlb-1,True,1,4,1,1,9,1,0,0,2
-621381,2018-06-12,Matt Strahm,2018/06/12/sdnmlb-slnmlb-1,True,3,2,0,0,9,0,0,0,4
-621381,2018-06-17,Matt Strahm,2018/06/17/sdnmlb-atlmlb-1,True,1,4,0,0,11,0,0,0,5
-621381,2018-06-23,Matt Strahm,2018/06/23/sdnmlb-sfnmlb-1,True,1,4,2,0,14,0,2,0,5
-621381,2018-06-26,Matt Strahm,2018/06/26/sdnmlb-texmlb-1,False,0,1,1,0,4,0,0,0,2
-621381,2018-06-30,Matt Strahm,2018/06/30/pitmlb-sdnmlb-1,False,2,0,2,0,5,0,0,0,1
-621381,2018-07-05,Matt Strahm,2018/07/05/sdnmlb-arimlb-1,False,0,4,4,1,11,1,0,0,3
-621381,2018-07-08,Matt Strahm,2018/07/08/sdnmlb-arimlb-1,False,3,1,1,0,7,0,0,0,2
-621381,2018-07-12,Matt Strahm,2018/07/12/lanmlb-sdnmlb-1,False,1,0,0,0,5,0,1,0,3
-621381,2018-07-15,Matt Strahm,2018/07/15/chnmlb-sdnmlb-1,False,2,5,1,1,11,0,1,1,0
-621381,2018-07-22,Matt Strahm,2018/07/22/sdnmlb-phimlb-1,False,3,3,0,0,10,0,1,1,2
-621381,2018-07-25,Matt Strahm,2018/07/25/sdnmlb-nynmlb-1,False,1,1,0,0,4,0,1,0,1
-621381,2018-07-30,Matt Strahm,2018/07/30/sfnmlb-sdnmlb-1,False,1,4,1,0,10,1,0,1,3
-621381,2018-08-02,Matt Strahm,2018/08/02/sdnmlb-chnmlb-1,False,2,1,0,0,3,0,0,0,0
-621381,2018-08-04,Matt Strahm,2018/08/04/sdnmlb-chnmlb-1,False,0,0,1,0,3,0,0,0,2
-621381,2018-08-07,Matt Strahm,2018/08/07/sdnmlb-milmlb-1,False,0,0,0,0,1,0,0,0,1
-621381,2018-08-10,Matt Strahm,2018/08/10/phimlb-sdnmlb-1,False,1,0,1,0,5,0,1,0,2
-621381,2018-08-14,Matt Strahm,2018/08/14/anamlb-sdnmlb-1,False,1,0,1,0,3,0,0,0,1
-621381,2018-08-16,Matt Strahm,2018/08/16/arimlb-sdnmlb-1,False,0,1,0,0,3,0,0,0,2
-621381,2018-08-19,Matt Strahm,2018/08/19/arimlb-sdnmlb-1,False,1,0,2,0,7,0,1,0,3
-621381,2018-08-25,Matt Strahm,2018/08/25/sdnmlb-lanmlb-1,False,3,2,0,0,7,1,0,0,2
-621381,2018-08-30,Matt Strahm,2018/08/30/colmlb-sdnmlb-1,False,2,0,0,0,3,0,0,0,1
-621381,2018-08-31,Matt Strahm,2018/08/31/colmlb-sdnmlb-1,False,0,1,1,0,4,0,0,0,2
-621381,2018-09-04,Matt Strahm,2018/09/04/sdnmlb-arimlb-1,False,1,0,0,0,1,0,0,0,0
-621381,2018-09-07,Matt Strahm,2018/09/07/sdnmlb-cinmlb-1,False,1,2,1,0,9,1,0,0,5
-621381,2018-09-11,Matt Strahm,2018/09/11/sdnmlb-seamlb-1,False,2,2,1,0,7,0,1,0,1
-621381,2018-09-15,Matt Strahm,2018/09/15/texmlb-sdnmlb-1,False,2,2,1,0,7,0,0,0,2
-621381,2018-09-18,Matt Strahm,2018/09/18/sfnmlb-sdnmlb-1,False,0,1,0,0,3,0,0,0,2
-621381,2018-09-21,Matt Strahm,2018/09/21/sdnmlb-lanmlb-1,False,1,1,0,0,4,0,1,0,1
-621381,2018-09-25,Matt Strahm,2018/09/25/sdnmlb-sfnmlb-1,False,0,1,0,0,3,0,0,0,2
-621381,2018-09-26,Matt Strahm,2018/09/26/sdnmlb-sfnmlb-1,False,1,0,0,0,1,0,0,0,0
-621381,2018-09-29,Matt Strahm,2018/09/29/arimlb-sdnmlb-1,False,2,2,1,0,8,0,2,0,1
+621381,2018-05-07,Matthew Strahm,2018/05/07/wasmlb-sdnmlb-1,False,3,1,2,0,10,1,3,0,1
+621381,2018-05-11,Matthew Strahm,2018/05/11/slnmlb-sdnmlb-1,False,1,1,0,0,4,0,1,0,1
+621381,2018-05-14,Matthew Strahm,2018/05/14/colmlb-sdnmlb-1,False,2,2,1,2,8,0,2,0,1
+621381,2018-05-17,Matthew Strahm,2018/05/17/sdnmlb-pitmlb-1,False,1,2,2,1,5,0,0,0,0
+621381,2018-05-20,Matthew Strahm,2018/05/20/sdnmlb-pitmlb-1,False,0,4,1,1,6,0,1,0,0
+621381,2018-05-22,Matthew Strahm,2018/05/22/sdnmlb-wasmlb-1,False,1,1,0,0,3,0,1,0,0
+621381,2018-05-27,Matthew Strahm,2018/05/27/sdnmlb-lanmlb-1,True,2,2,1,1,8,0,1,0,2
+621381,2018-05-30,Matthew Strahm,2018/05/30/miamlb-sdnmlb-1,False,3,1,1,1,6,0,0,0,1
+621381,2018-06-04,Matthew Strahm,2018/06/04/atlmlb-sdnmlb-1,False,0,2,1,0,3,0,0,0,0
+621381,2018-06-06,Matthew Strahm,2018/06/06/atlmlb-sdnmlb-1,True,1,4,1,1,9,1,0,0,2
+621381,2018-06-12,Matthew Strahm,2018/06/12/sdnmlb-slnmlb-1,True,3,2,0,0,9,0,0,0,4
+621381,2018-06-17,Matthew Strahm,2018/06/17/sdnmlb-atlmlb-1,True,1,4,0,0,11,0,0,0,5
+621381,2018-06-23,Matthew Strahm,2018/06/23/sdnmlb-sfnmlb-1,True,1,4,2,0,14,0,2,0,5
+621381,2018-06-26,Matthew Strahm,2018/06/26/sdnmlb-texmlb-1,False,0,1,1,0,4,0,0,0,2
+621381,2018-06-30,Matthew Strahm,2018/06/30/pitmlb-sdnmlb-1,False,2,0,2,0,5,0,0,0,1
+621381,2018-07-05,Matthew Strahm,2018/07/05/sdnmlb-arimlb-1,False,0,4,4,1,11,1,0,0,3
+621381,2018-07-08,Matthew Strahm,2018/07/08/sdnmlb-arimlb-1,False,3,1,1,0,7,0,0,0,2
+621381,2018-07-12,Matthew Strahm,2018/07/12/lanmlb-sdnmlb-1,False,1,0,0,0,5,0,1,0,3
+621381,2018-07-15,Matthew Strahm,2018/07/15/chnmlb-sdnmlb-1,False,2,5,1,1,11,0,1,1,0
+621381,2018-07-22,Matthew Strahm,2018/07/22/sdnmlb-phimlb-1,False,3,3,0,0,10,0,1,1,2
+621381,2018-07-25,Matthew Strahm,2018/07/25/sdnmlb-nynmlb-1,False,1,1,0,0,4,0,1,0,1
+621381,2018-07-30,Matthew Strahm,2018/07/30/sfnmlb-sdnmlb-1,False,1,4,1,0,10,1,0,1,3
+621381,2018-08-02,Matthew Strahm,2018/08/02/sdnmlb-chnmlb-1,False,2,1,0,0,3,0,0,0,0
+621381,2018-08-04,Matthew Strahm,2018/08/04/sdnmlb-chnmlb-1,False,0,0,1,0,3,0,0,0,2
+621381,2018-08-07,Matthew Strahm,2018/08/07/sdnmlb-milmlb-1,False,0,0,0,0,1,0,0,0,1
+621381,2018-08-10,Matthew Strahm,2018/08/10/phimlb-sdnmlb-1,False,1,0,1,0,5,0,1,0,2
+621381,2018-08-14,Matthew Strahm,2018/08/14/anamlb-sdnmlb-1,False,1,0,1,0,3,0,0,0,1
+621381,2018-08-16,Matthew Strahm,2018/08/16/arimlb-sdnmlb-1,False,0,1,0,0,3,0,0,0,2
+621381,2018-08-19,Matthew Strahm,2018/08/19/arimlb-sdnmlb-1,False,1,0,2,0,7,0,1,0,3
+621381,2018-08-25,Matthew Strahm,2018/08/25/sdnmlb-lanmlb-1,False,3,2,0,0,7,1,0,0,2
+621381,2018-08-30,Matthew Strahm,2018/08/30/colmlb-sdnmlb-1,False,2,0,0,0,3,0,0,0,1
+621381,2018-08-31,Matthew Strahm,2018/08/31/colmlb-sdnmlb-1,False,0,1,1,0,4,0,0,0,2
+621381,2018-09-04,Matthew Strahm,2018/09/04/sdnmlb-arimlb-1,False,1,0,0,0,1,0,0,0,0
+621381,2018-09-07,Matthew Strahm,2018/09/07/sdnmlb-cinmlb-1,False,1,2,1,0,9,1,0,0,5
+621381,2018-09-11,Matthew Strahm,2018/09/11/sdnmlb-seamlb-1,False,2,2,1,0,7,0,1,0,1
+621381,2018-09-15,Matthew Strahm,2018/09/15/texmlb-sdnmlb-1,False,2,2,1,0,7,0,0,0,2
+621381,2018-09-18,Matthew Strahm,2018/09/18/sfnmlb-sdnmlb-1,False,0,1,0,0,3,0,0,0,2
+621381,2018-09-21,Matthew Strahm,2018/09/21/sdnmlb-lanmlb-1,False,1,1,0,0,4,0,1,0,1
+621381,2018-09-25,Matthew Strahm,2018/09/25/sdnmlb-sfnmlb-1,False,0,1,0,0,3,0,0,0,2
+621381,2018-09-26,Matthew Strahm,2018/09/26/sdnmlb-sfnmlb-1,False,1,0,0,0,1,0,0,0,0
+621381,2018-09-29,Matthew Strahm,2018/09/29/arimlb-sdnmlb-1,False,2,2,1,0,8,0,2,0,1
 519455,2018-03-30,Jordan Zimmermann,2018/03/30/pitmlb-detmlb-1,True,5,9,1,4,24,0,1,0,8
 519455,2018-04-05,Jordan Zimmermann,2018/04/05/detmlb-chamlb-1,True,4,8,6,1,22,0,1,0,3
 519455,2018-04-11,Jordan Zimmermann,2018/04/11/detmlb-clemlb-1,True,0,0,2,0,2,0,0,0,0
@@ -7272,29 +7272,29 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 448306,2018-09-14,James Shields,2018/09/14/chamlb-balmlb-1,True,5,8,3,0,22,2,1,0,5
 448306,2018-09-20,James Shields,2018/09/20/chamlb-clemlb-1,True,7,7,5,1,24,2,3,1,1
 448306,2018-09-25,James Shields,2018/09/25/clemlb-chamlb-1,True,4,7,7,1,28,1,4,0,6
-641778,2018-04-24,,2018/04/24/sdnmlb-colmlb-1,True,4,3,4,0,19,1,4,0,3
-641778,2018-04-30,,2018/04/30/sdnmlb-sfnmlb-1,True,5,7,3,0,24,0,2,0,7
-641778,2018-05-06,,2018/05/06/lanmlb-sdnmlb-1,True,10,5,6,0,27,0,1,0,5
-641778,2018-05-11,,2018/05/11/slnmlb-sdnmlb-1,True,1,7,4,0,14,4,1,0,0
-641778,2018-05-17,,2018/05/17/sdnmlb-pitmlb-1,True,6,5,4,0,23,0,3,0,3
-641778,2018-05-22,,2018/05/22/sdnmlb-wasmlb-1,True,4,9,3,0,25,1,2,0,7
-641778,2018-05-28,,2018/05/28/miamlb-sdnmlb-1,True,2,2,6,1,15,0,2,0,3
-641778,2018-06-02,,2018/06/02/cinmlb-sdnmlb-1,True,6,7,1,0,21,1,2,0,4
-641778,2018-06-08,,2018/06/08/sdnmlb-miamlb-1,True,5,3,6,0,27,0,7,0,6
-641778,2018-06-13,,2018/06/13/sdnmlb-slnmlb-1,True,8,7,7,1,24,1,0,0,2
-641778,2018-06-19,,2018/06/19/oakmlb-sdnmlb-1,True,6,4,2,2,22,0,2,0,7
-641778,2018-06-24,,2018/06/24/sdnmlb-sfnmlb-1,True,7,5,6,1,23,1,1,0,4
-641778,2018-06-29,,2018/06/29/pitmlb-sdnmlb-1,True,7,7,6,1,24,1,0,0,3
-641778,2018-07-05,,2018/07/05/sdnmlb-arimlb-1,True,9,6,2,1,23,0,2,1,2
-641778,2018-07-10,,2018/07/10/lanmlb-sdnmlb-1,True,6,7,6,0,31,1,2,0,8
-641778,2018-07-15,,2018/07/15/chnmlb-sdnmlb-1,True,4,0,3,0,13,0,1,1,3
-641778,2018-07-24,,2018/07/24/sdnmlb-nynmlb-1,True,4,6,3,1,21,1,3,0,5
-641778,2018-07-30,,2018/07/30/sfnmlb-sdnmlb-1,True,8,3,6,0,22,1,2,0,3
-641778,2018-08-30,,2018/08/30/colmlb-sdnmlb-1,True,9,6,1,1,21,0,2,1,2
-641778,2018-09-06,,2018/09/06/sdnmlb-cinmlb-1,True,3,0,1,0,16,0,3,0,8
-641778,2018-09-15,,2018/09/15/texmlb-sdnmlb-1,True,3,5,5,1,21,1,1,2,4
-641778,2018-09-21,,2018/09/21/sdnmlb-lanmlb-1,True,5,6,3,1,21,1,2,0,5
-641778,2018-09-28,,2018/09/28/arimlb-sdnmlb-1,True,5,8,5,1,27,0,1,1,6
+641778,2018-04-24,Eric Lauer,2018/04/24/sdnmlb-colmlb-1,True,4,3,4,0,19,1,4,0,3
+641778,2018-04-30,Eric Lauer,2018/04/30/sdnmlb-sfnmlb-1,True,5,7,3,0,24,0,2,0,7
+641778,2018-05-06,Eric Lauer,2018/05/06/lanmlb-sdnmlb-1,True,10,5,6,0,27,0,1,0,5
+641778,2018-05-11,Eric Lauer,2018/05/11/slnmlb-sdnmlb-1,True,1,7,4,0,14,4,1,0,0
+641778,2018-05-17,Eric Lauer,2018/05/17/sdnmlb-pitmlb-1,True,6,5,4,0,23,0,3,0,3
+641778,2018-05-22,Eric Lauer,2018/05/22/sdnmlb-wasmlb-1,True,4,9,3,0,25,1,2,0,7
+641778,2018-05-28,Eric Lauer,2018/05/28/miamlb-sdnmlb-1,True,2,2,6,1,15,0,2,0,3
+641778,2018-06-02,Eric Lauer,2018/06/02/cinmlb-sdnmlb-1,True,6,7,1,0,21,1,2,0,4
+641778,2018-06-08,Eric Lauer,2018/06/08/sdnmlb-miamlb-1,True,5,3,6,0,27,0,7,0,6
+641778,2018-06-13,Eric Lauer,2018/06/13/sdnmlb-slnmlb-1,True,8,7,7,1,24,1,0,0,2
+641778,2018-06-19,Eric Lauer,2018/06/19/oakmlb-sdnmlb-1,True,6,4,2,2,22,0,2,0,7
+641778,2018-06-24,Eric Lauer,2018/06/24/sdnmlb-sfnmlb-1,True,7,5,6,1,23,1,1,0,4
+641778,2018-06-29,Eric Lauer,2018/06/29/pitmlb-sdnmlb-1,True,7,7,6,1,24,1,0,0,3
+641778,2018-07-05,Eric Lauer,2018/07/05/sdnmlb-arimlb-1,True,9,6,2,1,23,0,2,1,2
+641778,2018-07-10,Eric Lauer,2018/07/10/lanmlb-sdnmlb-1,True,6,7,6,0,31,1,2,0,8
+641778,2018-07-15,Eric Lauer,2018/07/15/chnmlb-sdnmlb-1,True,4,0,3,0,13,0,1,1,3
+641778,2018-07-24,Eric Lauer,2018/07/24/sdnmlb-nynmlb-1,True,4,6,3,1,21,1,3,0,5
+641778,2018-07-30,Eric Lauer,2018/07/30/sfnmlb-sdnmlb-1,True,8,3,6,0,22,1,2,0,3
+641778,2018-08-30,Eric Lauer,2018/08/30/colmlb-sdnmlb-1,True,9,6,1,1,21,0,2,1,2
+641778,2018-09-06,Eric Lauer,2018/09/06/sdnmlb-cinmlb-1,True,3,0,1,0,16,0,3,0,8
+641778,2018-09-15,Eric Lauer,2018/09/15/texmlb-sdnmlb-1,True,3,5,5,1,21,1,1,2,4
+641778,2018-09-21,Eric Lauer,2018/09/21/sdnmlb-lanmlb-1,True,5,6,3,1,21,1,2,0,5
+641778,2018-09-28,Eric Lauer,2018/09/28/arimlb-sdnmlb-1,True,5,8,5,1,27,0,1,1,6
 520980,2018-03-31,Pedro Baez,2018/03/31/sfnmlb-lanmlb-1,False,2,1,0,0,3,0,0,0,0
 520980,2018-04-02,Pedro Baez,2018/04/02/lanmlb-arimlb-1,False,1,2,0,0,4,0,0,0,1
 520980,2018-04-03,Pedro Baez,2018/04/03/lanmlb-arimlb-1,False,1,0,0,0,4,0,2,0,1
@@ -8094,17 +8094,17 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 642232,2018-09-19,Ryan Yarbrough,2018/09/19/tbamlb-texmlb-1,False,2,5,4,1,19,1,2,0,6
 642232,2018-09-24,Ryan Yarbrough,2018/09/24/nyamlb-tbamlb-1,False,9,4,3,0,22,0,2,1,3
 642232,2018-09-30,Ryan Yarbrough,2018/09/30/tormlb-tbamlb-1,False,0,6,5,1,14,0,1,0,2
-622864,2018-05-02,,2018/05/02/tormlb-minmlb-1,True,8,2,4,0,23,0,3,1,5
-622864,2018-05-07,,2018/05/07/minmlb-slnmlb-1,True,6,2,2,0,24,0,3,1,9
-622864,2018-05-13,,2018/05/13/minmlb-anamlb-1,True,6,5,2,1,22,0,3,0,6
-622864,2018-05-19,,2018/05/19/milmlb-minmlb-1,True,8,7,1,1,21,1,2,1,2
-622864,2018-05-25,,2018/05/25/minmlb-seamlb-1,True,10,4,3,1,26,0,2,0,7
-622864,2018-05-30,,2018/05/30/minmlb-kcamlb-1,True,5,3,5,0,15,1,1,0,1
-622864,2018-06-05,,2018/06/05/chamlb-minmlb-1,True,7,9,6,1,27,1,0,1,4
-622864,2018-06-10,,2018/06/10/anamlb-minmlb-1,True,3,6,6,2,24,0,2,2,5
-622864,2018-06-16,,2018/06/16/minmlb-clemlb-1,True,9,5,2,0,18,2,1,0,1
-622864,2018-06-22,,2018/06/22/texmlb-minmlb-1,True,7,8,2,1,24,1,2,0,4
-622864,2018-07-15,,2018/07/15/tbamlb-minmlb-1,True,11,3,6,1,23,0,0,1,1
+622864,2018-05-02,Fernando Romero,2018/05/02/tormlb-minmlb-1,True,8,2,4,0,23,0,3,1,5
+622864,2018-05-07,Fernando Romero,2018/05/07/minmlb-slnmlb-1,True,6,2,2,0,24,0,3,1,9
+622864,2018-05-13,Fernando Romero,2018/05/13/minmlb-anamlb-1,True,6,5,2,1,22,0,3,0,6
+622864,2018-05-19,Fernando Romero,2018/05/19/milmlb-minmlb-1,True,8,7,1,1,21,1,2,1,2
+622864,2018-05-25,Fernando Romero,2018/05/25/minmlb-seamlb-1,True,10,4,3,1,26,0,2,0,7
+622864,2018-05-30,Fernando Romero,2018/05/30/minmlb-kcamlb-1,True,5,3,5,0,15,1,1,0,1
+622864,2018-06-05,Fernando Romero,2018/06/05/chamlb-minmlb-1,True,7,9,6,1,27,1,0,1,4
+622864,2018-06-10,Fernando Romero,2018/06/10/anamlb-minmlb-1,True,3,6,6,2,24,0,2,2,5
+622864,2018-06-16,Fernando Romero,2018/06/16/minmlb-clemlb-1,True,9,5,2,0,18,2,1,0,1
+622864,2018-06-22,Fernando Romero,2018/06/22/texmlb-minmlb-1,True,7,8,2,1,24,1,2,0,4
+622864,2018-07-15,Fernando Romero,2018/07/15/tbamlb-minmlb-1,True,11,3,6,1,23,0,0,1,1
 523260,2018-03-29,Joe Kelly,2018/03/29/bosmlb-tbamlb-1,False,0,1,0,0,5,0,3,0,1
 523260,2018-04-01,Joe Kelly,2018/04/01/bosmlb-tbamlb-1,False,0,1,2,1,5,0,0,0,2
 523260,2018-04-03,Joe Kelly,2018/04/03/bosmlb-miamlb-1,False,1,2,2,1,7,0,1,0,1
@@ -9589,62 +9589,62 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 543475,2018-09-18,Jordan Lyles,2018/09/18/cinmlb-milmlb-1,False,0,0,1,0,3,0,0,0,2
 543475,2018-09-23,Jordan Lyles,2018/09/23/milmlb-pitmlb-1,False,1,3,0,1,7,0,0,1,2
 543475,2018-09-30,Jordan Lyles,2018/09/30/detmlb-milmlb-1,False,2,0,1,0,8,0,0,0,5
-594840,2018-03-31,,2018/03/31/wasmlb-cinmlb-1,False,1,2,0,0,5,1,0,0,2
-594840,2018-04-01,,2018/04/01/wasmlb-cinmlb-1,False,1,1,0,0,2,0,0,0,0
-594840,2018-04-02,,2018/04/02/wasmlb-atlmlb-1,False,0,2,0,0,3,0,0,0,1
-594840,2018-04-04,,2018/04/04/wasmlb-atlmlb-1,False,1,2,0,0,7,0,1,0,3
-594840,2018-04-07,,2018/04/07/nynmlb-wasmlb-1,False,1,1,0,0,2,0,0,0,0
-594840,2018-04-08,,2018/04/08/nynmlb-wasmlb-1,False,1,1,0,0,3,0,0,0,1
-594840,2018-04-11,,2018/04/11/atlmlb-wasmlb-1,False,2,2,0,1,6,0,0,1,1
-594840,2018-04-12,,2018/04/12/colmlb-wasmlb-1,False,2,2,1,0,6,1,0,0,1
-594840,2018-04-16,,2018/04/16/wasmlb-nynmlb-1,False,2,0,0,0,5,0,2,0,0
-594840,2018-04-20,,2018/04/20/wasmlb-lanmlb-1,False,1,0,0,0,3,0,1,0,1
-594840,2018-06-06,,2018/06/06/tbamlb-wasmlb-1,False,1,0,1,0,3,0,0,0,1
-594840,2018-06-08,,2018/06/08/sfnmlb-wasmlb-1,False,1,5,1,0,7,0,0,0,0
-594840,2018-06-10,,2018/06/10/sfnmlb-wasmlb-1,False,1,1,1,0,3,0,0,0,0
-594840,2018-06-12,,2018/06/12/wasmlb-nyamlb-1,False,3,0,0,0,4,0,0,0,1
-594840,2018-06-18,,2018/06/18/nyamlb-wasmlb-1,False,2,2,0,0,4,0,0,0,0
-594840,2018-06-20,,2018/06/20/balmlb-wasmlb-1,False,1,3,1,0,7,0,0,0,2
-594840,2018-06-22,,2018/06/22/phimlb-wasmlb-1,False,1,2,3,0,8,1,0,0,2
-594840,2018-06-24,,2018/06/24/phimlb-wasmlb-1,False,2,1,0,0,3,0,0,0,0
-594840,2018-06-25,,2018/06/25/wasmlb-tbamlb-1,False,6,0,1,0,10,0,0,0,3
-594840,2018-06-29,,2018/06/29/wasmlb-phimlb-1,False,2,0,0,0,3,0,0,0,1
-594840,2018-07-01,,2018/07/01/wasmlb-phimlb-1,False,1,0,1,0,3,0,0,0,1
-594840,2018-07-03,,2018/07/03/bosmlb-wasmlb-1,False,3,1,0,0,5,1,1,0,0
-594840,2018-07-04,,2018/07/04/bosmlb-wasmlb-1,False,6,1,1,0,12,0,0,0,4
-594840,2018-07-08,,2018/07/08/miamlb-wasmlb-1,False,4,3,1,2,9,0,0,0,1
-594840,2018-07-09,,2018/07/09/wasmlb-pitmlb-1,False,2,0,1,0,4,0,1,0,0
-594840,2018-07-10,,2018/07/10/wasmlb-pitmlb-1,False,1,0,0,0,4,0,1,0,2
-594840,2018-07-13,,2018/07/13/wasmlb-nynmlb-1,False,1,0,1,0,4,0,0,0,2
-594840,2018-07-14,,2018/07/14/wasmlb-nynmlb-1,False,1,1,0,0,4,0,0,0,2
-594840,2018-07-20,,2018/07/20/atlmlb-wasmlb-1,False,2,0,1,0,5,0,1,0,0
-594840,2018-07-22,,2018/07/22/atlmlb-wasmlb-1,False,2,1,0,0,3,0,0,0,0
-594840,2018-07-24,,2018/07/24/wasmlb-milmlb-1,False,2,1,0,0,5,0,1,0,1
-594840,2018-07-29,,2018/07/29/wasmlb-miamlb-1,False,3,1,2,0,6,0,0,0,0
-594840,2018-08-02,,2018/08/02/cinmlb-wasmlb-1,False,1,1,0,0,4,0,1,0,1
-594840,2018-08-04,,2018/08/04/cinmlb-wasmlb-2,False,0,2,1,1,5,0,0,0,2
-594840,2018-08-07,,2018/08/07/atlmlb-wasmlb-1,False,2,0,1,0,3,0,0,0,0
-594840,2018-08-08,,2018/08/08/atlmlb-wasmlb-1,False,2,2,1,1,5,0,0,0,0
-594840,2018-08-15,,2018/08/15/wasmlb-slnmlb-1,False,2,2,2,0,9,0,1,1,1
-594840,2018-08-17,,2018/08/17/miamlb-wasmlb-1,False,0,0,0,0,1,0,0,0,1
-594840,2018-08-18,,2018/08/18/miamlb-wasmlb-1,False,1,0,0,0,1,0,0,0,0
-594840,2018-08-21,,2018/08/21/phimlb-wasmlb-1,False,3,5,2,0,11,1,0,0,1
-594840,2018-08-22,,2018/08/22/phimlb-wasmlb-1,False,0,0,0,0,1,0,0,0,1
-594840,2018-08-25,,2018/08/25/wasmlb-nynmlb-1,False,2,0,1,0,3,0,0,0,0
-594840,2018-08-28,,2018/08/28/wasmlb-phimlb-1,False,3,0,0,0,6,0,0,0,3
-594840,2018-08-31,,2018/08/31/milmlb-wasmlb-1,False,0,1,1,0,3,0,0,0,1
-594840,2018-09-01,,2018/09/01/milmlb-wasmlb-1,False,1,0,0,0,1,0,0,0,0
-594840,2018-09-04,,2018/09/04/slnmlb-wasmlb-1,False,0,1,0,0,3,0,0,0,2
-594840,2018-09-06,,2018/09/06/chnmlb-wasmlb-1,False,0,1,0,0,1,0,0,0,0
-594840,2018-09-11,,2018/09/11/wasmlb-phimlb-2,False,0,0,1,0,1,0,0,0,0
-594840,2018-09-13,,2018/09/13/chnmlb-wasmlb-1,False,2,0,1,0,4,0,1,0,0
-594840,2018-09-15,,2018/09/15/wasmlb-atlmlb-1,False,0,2,2,0,4,0,0,0,0
-594840,2018-09-16,,2018/09/16/wasmlb-atlmlb-1,False,0,0,2,0,2,0,0,0,0
-594840,2018-09-18,,2018/09/18/wasmlb-miamlb-1,False,0,2,0,0,2,0,0,0,0
-594840,2018-09-20,,2018/09/20/nynmlb-wasmlb-1,False,1,0,2,0,3,0,0,0,0
-594840,2018-09-22,,2018/09/22/nynmlb-wasmlb-1,False,2,0,0,0,4,0,1,0,1
-594840,2018-09-24,,2018/09/24/miamlb-wasmlb-1,False,4,2,1,0,7,0,0,0,0
-594840,2018-09-26,,2018/09/26/miamlb-wasmlb-1,False,2,0,2,0,5,0,0,0,1
+594840,2018-03-31,Matt Grace,2018/03/31/wasmlb-cinmlb-1,False,1,2,0,0,5,1,0,0,2
+594840,2018-04-01,Matt Grace,2018/04/01/wasmlb-cinmlb-1,False,1,1,0,0,2,0,0,0,0
+594840,2018-04-02,Matt Grace,2018/04/02/wasmlb-atlmlb-1,False,0,2,0,0,3,0,0,0,1
+594840,2018-04-04,Matt Grace,2018/04/04/wasmlb-atlmlb-1,False,1,2,0,0,7,0,1,0,3
+594840,2018-04-07,Matt Grace,2018/04/07/nynmlb-wasmlb-1,False,1,1,0,0,2,0,0,0,0
+594840,2018-04-08,Matt Grace,2018/04/08/nynmlb-wasmlb-1,False,1,1,0,0,3,0,0,0,1
+594840,2018-04-11,Matt Grace,2018/04/11/atlmlb-wasmlb-1,False,2,2,0,1,6,0,0,1,1
+594840,2018-04-12,Matt Grace,2018/04/12/colmlb-wasmlb-1,False,2,2,1,0,6,1,0,0,1
+594840,2018-04-16,Matt Grace,2018/04/16/wasmlb-nynmlb-1,False,2,0,0,0,5,0,2,0,0
+594840,2018-04-20,Matt Grace,2018/04/20/wasmlb-lanmlb-1,False,1,0,0,0,3,0,1,0,1
+594840,2018-06-06,Matt Grace,2018/06/06/tbamlb-wasmlb-1,False,1,0,1,0,3,0,0,0,1
+594840,2018-06-08,Matt Grace,2018/06/08/sfnmlb-wasmlb-1,False,1,5,1,0,7,0,0,0,0
+594840,2018-06-10,Matt Grace,2018/06/10/sfnmlb-wasmlb-1,False,1,1,1,0,3,0,0,0,0
+594840,2018-06-12,Matt Grace,2018/06/12/wasmlb-nyamlb-1,False,3,0,0,0,4,0,0,0,1
+594840,2018-06-18,Matt Grace,2018/06/18/nyamlb-wasmlb-1,False,2,2,0,0,4,0,0,0,0
+594840,2018-06-20,Matt Grace,2018/06/20/balmlb-wasmlb-1,False,1,3,1,0,7,0,0,0,2
+594840,2018-06-22,Matt Grace,2018/06/22/phimlb-wasmlb-1,False,1,2,3,0,8,1,0,0,2
+594840,2018-06-24,Matt Grace,2018/06/24/phimlb-wasmlb-1,False,2,1,0,0,3,0,0,0,0
+594840,2018-06-25,Matt Grace,2018/06/25/wasmlb-tbamlb-1,False,6,0,1,0,10,0,0,0,3
+594840,2018-06-29,Matt Grace,2018/06/29/wasmlb-phimlb-1,False,2,0,0,0,3,0,0,0,1
+594840,2018-07-01,Matt Grace,2018/07/01/wasmlb-phimlb-1,False,1,0,1,0,3,0,0,0,1
+594840,2018-07-03,Matt Grace,2018/07/03/bosmlb-wasmlb-1,False,3,1,0,0,5,1,1,0,0
+594840,2018-07-04,Matt Grace,2018/07/04/bosmlb-wasmlb-1,False,6,1,1,0,12,0,0,0,4
+594840,2018-07-08,Matt Grace,2018/07/08/miamlb-wasmlb-1,False,4,3,1,2,9,0,0,0,1
+594840,2018-07-09,Matt Grace,2018/07/09/wasmlb-pitmlb-1,False,2,0,1,0,4,0,1,0,0
+594840,2018-07-10,Matt Grace,2018/07/10/wasmlb-pitmlb-1,False,1,0,0,0,4,0,1,0,2
+594840,2018-07-13,Matt Grace,2018/07/13/wasmlb-nynmlb-1,False,1,0,1,0,4,0,0,0,2
+594840,2018-07-14,Matt Grace,2018/07/14/wasmlb-nynmlb-1,False,1,1,0,0,4,0,0,0,2
+594840,2018-07-20,Matt Grace,2018/07/20/atlmlb-wasmlb-1,False,2,0,1,0,5,0,1,0,0
+594840,2018-07-22,Matt Grace,2018/07/22/atlmlb-wasmlb-1,False,2,1,0,0,3,0,0,0,0
+594840,2018-07-24,Matt Grace,2018/07/24/wasmlb-milmlb-1,False,2,1,0,0,5,0,1,0,1
+594840,2018-07-29,Matt Grace,2018/07/29/wasmlb-miamlb-1,False,3,1,2,0,6,0,0,0,0
+594840,2018-08-02,Matt Grace,2018/08/02/cinmlb-wasmlb-1,False,1,1,0,0,4,0,1,0,1
+594840,2018-08-04,Matt Grace,2018/08/04/cinmlb-wasmlb-2,False,0,2,1,1,5,0,0,0,2
+594840,2018-08-07,Matt Grace,2018/08/07/atlmlb-wasmlb-1,False,2,0,1,0,3,0,0,0,0
+594840,2018-08-08,Matt Grace,2018/08/08/atlmlb-wasmlb-1,False,2,2,1,1,5,0,0,0,0
+594840,2018-08-15,Matt Grace,2018/08/15/wasmlb-slnmlb-1,False,2,2,2,0,9,0,1,1,1
+594840,2018-08-17,Matt Grace,2018/08/17/miamlb-wasmlb-1,False,0,0,0,0,1,0,0,0,1
+594840,2018-08-18,Matt Grace,2018/08/18/miamlb-wasmlb-1,False,1,0,0,0,1,0,0,0,0
+594840,2018-08-21,Matt Grace,2018/08/21/phimlb-wasmlb-1,False,3,5,2,0,11,1,0,0,1
+594840,2018-08-22,Matt Grace,2018/08/22/phimlb-wasmlb-1,False,0,0,0,0,1,0,0,0,1
+594840,2018-08-25,Matt Grace,2018/08/25/wasmlb-nynmlb-1,False,2,0,1,0,3,0,0,0,0
+594840,2018-08-28,Matt Grace,2018/08/28/wasmlb-phimlb-1,False,3,0,0,0,6,0,0,0,3
+594840,2018-08-31,Matt Grace,2018/08/31/milmlb-wasmlb-1,False,0,1,1,0,3,0,0,0,1
+594840,2018-09-01,Matt Grace,2018/09/01/milmlb-wasmlb-1,False,1,0,0,0,1,0,0,0,0
+594840,2018-09-04,Matt Grace,2018/09/04/slnmlb-wasmlb-1,False,0,1,0,0,3,0,0,0,2
+594840,2018-09-06,Matt Grace,2018/09/06/chnmlb-wasmlb-1,False,0,1,0,0,1,0,0,0,0
+594840,2018-09-11,Matt Grace,2018/09/11/wasmlb-phimlb-2,False,0,0,1,0,1,0,0,0,0
+594840,2018-09-13,Matt Grace,2018/09/13/chnmlb-wasmlb-1,False,2,0,1,0,4,0,1,0,0
+594840,2018-09-15,Matt Grace,2018/09/15/wasmlb-atlmlb-1,False,0,2,2,0,4,0,0,0,0
+594840,2018-09-16,Matt Grace,2018/09/16/wasmlb-atlmlb-1,False,0,0,2,0,2,0,0,0,0
+594840,2018-09-18,Matt Grace,2018/09/18/wasmlb-miamlb-1,False,0,2,0,0,2,0,0,0,0
+594840,2018-09-20,Matt Grace,2018/09/20/nynmlb-wasmlb-1,False,1,0,2,0,3,0,0,0,0
+594840,2018-09-22,Matt Grace,2018/09/22/nynmlb-wasmlb-1,False,2,0,0,0,4,0,1,0,1
+594840,2018-09-24,Matt Grace,2018/09/24/miamlb-wasmlb-1,False,4,2,1,0,7,0,0,0,0
+594840,2018-09-26,Matt Grace,2018/09/26/miamlb-wasmlb-1,False,2,0,2,0,5,0,0,0,1
 608717,2018-04-01,Chris Stratton,2018/04/01/sfnmlb-lanmlb-1,True,4,4,7,0,21,0,0,1,4
 608717,2018-04-07,Chris Stratton,2018/04/07/lanmlb-sfnmlb-1,True,3,5,6,0,21,0,4,0,3
 608717,2018-04-12,Chris Stratton,2018/04/12/sfnmlb-sdnmlb-1,True,7,7,3,0,24,0,3,0,4
@@ -10379,53 +10379,53 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 572021,2018-09-27,James Pazos,2018/09/27/texmlb-seamlb-1,False,1,1,1,0,4,0,0,0,1
 572021,2018-09-28,James Pazos,2018/09/28/texmlb-seamlb-1,False,2,1,1,1,5,0,1,0,0
 572021,2018-09-30,James Pazos,2018/09/30/texmlb-seamlb-1,False,1,3,0,1,5,1,0,0,1
-584171,2018-04-01,,2018/04/01/bosmlb-tbamlb-1,True,7,9,1,1,23,1,1,0,5
-584171,2018-04-05,,2018/04/05/tbamlb-bosmlb-1,False,2,1,0,0,3,0,0,0,0
-584171,2018-04-08,,2018/04/08/tbamlb-bosmlb-1,False,5,2,1,1,10,0,1,0,1
-584171,2018-04-14,,2018/04/14/balmlb-bosmlb-1,True,3,7,5,2,21,1,1,0,5
-584171,2018-04-20,,2018/04/20/bosmlb-oakmlb-1,False,4,2,5,0,13,0,0,1,1
-584171,2018-04-27,,2018/04/27/tbamlb-bosmlb-1,False,6,3,3,0,15,0,1,1,0
-584171,2018-04-30,,2018/04/30/kcamlb-bosmlb-1,False,2,1,1,0,7,0,0,0,3
-584171,2018-05-03,,2018/05/03/bosmlb-texmlb-1,False,2,1,0,0,5,1,1,0,1
-584171,2018-05-12,,2018/05/12/bosmlb-tormlb-1,False,3,0,0,0,3,0,0,0,0
-584171,2018-05-13,,2018/05/13/bosmlb-tormlb-1,False,1,2,2,1,7,0,0,0,2
-584171,2018-05-24,,2018/05/24/bosmlb-tbamlb-1,False,1,1,0,0,3,0,1,0,0
-584171,2018-05-26,,2018/05/26/atlmlb-bosmlb-1,False,0,2,2,0,4,0,0,0,0
-584171,2018-05-27,,2018/05/27/atlmlb-bosmlb-1,False,3,2,2,0,11,0,2,0,2
-584171,2018-05-29,,2018/05/29/tormlb-bosmlb-1,False,2,1,1,0,4,0,0,0,0
-584171,2018-06-05,,2018/06/05/detmlb-bosmlb-1,False,2,1,1,0,4,0,0,0,0
-584171,2018-06-07,,2018/06/07/detmlb-bosmlb-1,False,1,0,0,0,3,0,0,0,2
-584171,2018-06-12,,2018/06/12/bosmlb-balmlb-1,False,1,1,1,0,6,0,1,0,2
-584171,2018-06-17,,2018/06/17/bosmlb-seamlb-1,False,4,1,0,0,5,0,0,0,0
-584171,2018-06-19,,2018/06/19/bosmlb-minmlb-1,False,0,1,0,0,1,0,0,0,0
-584171,2018-06-21,,2018/06/21/bosmlb-minmlb-1,False,4,2,2,0,8,0,0,0,0
-584171,2018-06-23,,2018/06/23/seamlb-bosmlb-1,False,7,4,3,0,15,0,0,0,1
-584171,2018-06-28,,2018/06/28/anamlb-bosmlb-1,False,4,0,0,0,8,0,0,1,3
-584171,2018-06-30,,2018/06/30/bosmlb-nyamlb-1,False,4,0,0,0,4,0,0,0,0
-584171,2018-07-01,,2018/07/01/bosmlb-nyamlb-1,False,1,2,2,0,6,1,1,0,0
-584171,2018-07-06,,2018/07/06/bosmlb-kcamlb-1,False,4,0,1,0,5,0,0,0,0
-584171,2018-07-07,,2018/07/07/bosmlb-kcamlb-1,False,2,1,0,1,3,0,0,0,0
-584171,2018-07-10,,2018/07/10/texmlb-bosmlb-1,True,4,3,2,1,13,1,2,0,2
-584171,2018-07-13,,2018/07/13/tormlb-bosmlb-1,False,4,0,0,0,9,0,2,0,3
-584171,2018-07-21,,2018/07/21/bosmlb-detmlb-1,False,1,1,0,0,3,0,0,0,1
-584171,2018-07-24,,2018/07/24/bosmlb-balmlb-1,False,2,3,2,0,8,0,1,0,0
-584171,2018-07-30,,2018/07/30/phimlb-bosmlb-1,False,1,1,0,0,5,0,1,0,2
-584171,2018-07-31,,2018/07/31/phimlb-bosmlb-1,False,4,0,2,0,6,0,0,0,0
-584171,2018-08-09,,2018/08/09/bosmlb-tormlb-1,False,2,1,4,0,7,0,0,0,0
-584171,2018-08-11,,2018/08/11/bosmlb-balmlb-2,True,7,1,2,0,12,0,1,1,0
-584171,2018-08-15,,2018/08/15/bosmlb-phimlb-1,False,0,3,0,1,3,0,0,0,0
-584171,2018-08-19,,2018/08/19/tbamlb-bosmlb-1,True,9,3,0,0,18,1,3,1,2
-584171,2018-08-24,,2018/08/24/bosmlb-tbamlb-1,True,6,3,3,1,18,0,2,0,4
-584171,2018-08-29,,2018/08/29/miamlb-bosmlb-1,False,4,1,3,0,13,0,1,1,3
-584171,2018-09-02,,2018/09/02/bosmlb-chamlb-1,False,2,1,1,0,5,0,0,0,1
-584171,2018-09-05,,2018/09/05/bosmlb-atlmlb-1,True,6,4,3,0,18,1,3,0,2
-584171,2018-09-11,,2018/09/11/tormlb-bosmlb-1,False,1,0,0,0,1,0,0,0,0
-584171,2018-09-16,,2018/09/16/nynmlb-bosmlb-1,False,3,1,0,1,5,0,0,1,0
-584171,2018-09-19,,2018/09/19/bosmlb-nyamlb-1,False,0,2,1,0,4,0,0,0,1
-584171,2018-09-21,,2018/09/21/bosmlb-clemlb-1,False,1,1,1,0,3,0,0,0,0
-584171,2018-09-23,,2018/09/23/bosmlb-clemlb-1,True,6,1,3,0,13,0,0,0,3
-584171,2018-09-26,,2018/09/26/balmlb-bosmlb-2,False,0,1,0,0,2,0,0,0,1
-584171,2018-09-29,,2018/09/29/nyamlb-bosmlb-1,False,3,2,2,0,7,0,0,0,0
+584171,2018-04-01,Hector Velazquez,2018/04/01/bosmlb-tbamlb-1,True,7,9,1,1,23,1,1,0,5
+584171,2018-04-05,Hector Velazquez,2018/04/05/tbamlb-bosmlb-1,False,2,1,0,0,3,0,0,0,0
+584171,2018-04-08,Hector Velazquez,2018/04/08/tbamlb-bosmlb-1,False,5,2,1,1,10,0,1,0,1
+584171,2018-04-14,Hector Velazquez,2018/04/14/balmlb-bosmlb-1,True,3,7,5,2,21,1,1,0,5
+584171,2018-04-20,Hector Velazquez,2018/04/20/bosmlb-oakmlb-1,False,4,2,5,0,13,0,0,1,1
+584171,2018-04-27,Hector Velazquez,2018/04/27/tbamlb-bosmlb-1,False,6,3,3,0,15,0,1,1,0
+584171,2018-04-30,Hector Velazquez,2018/04/30/kcamlb-bosmlb-1,False,2,1,1,0,7,0,0,0,3
+584171,2018-05-03,Hector Velazquez,2018/05/03/bosmlb-texmlb-1,False,2,1,0,0,5,1,1,0,1
+584171,2018-05-12,Hector Velazquez,2018/05/12/bosmlb-tormlb-1,False,3,0,0,0,3,0,0,0,0
+584171,2018-05-13,Hector Velazquez,2018/05/13/bosmlb-tormlb-1,False,1,2,2,1,7,0,0,0,2
+584171,2018-05-24,Hector Velazquez,2018/05/24/bosmlb-tbamlb-1,False,1,1,0,0,3,0,1,0,0
+584171,2018-05-26,Hector Velazquez,2018/05/26/atlmlb-bosmlb-1,False,0,2,2,0,4,0,0,0,0
+584171,2018-05-27,Hector Velazquez,2018/05/27/atlmlb-bosmlb-1,False,3,2,2,0,11,0,2,0,2
+584171,2018-05-29,Hector Velazquez,2018/05/29/tormlb-bosmlb-1,False,2,1,1,0,4,0,0,0,0
+584171,2018-06-05,Hector Velazquez,2018/06/05/detmlb-bosmlb-1,False,2,1,1,0,4,0,0,0,0
+584171,2018-06-07,Hector Velazquez,2018/06/07/detmlb-bosmlb-1,False,1,0,0,0,3,0,0,0,2
+584171,2018-06-12,Hector Velazquez,2018/06/12/bosmlb-balmlb-1,False,1,1,1,0,6,0,1,0,2
+584171,2018-06-17,Hector Velazquez,2018/06/17/bosmlb-seamlb-1,False,4,1,0,0,5,0,0,0,0
+584171,2018-06-19,Hector Velazquez,2018/06/19/bosmlb-minmlb-1,False,0,1,0,0,1,0,0,0,0
+584171,2018-06-21,Hector Velazquez,2018/06/21/bosmlb-minmlb-1,False,4,2,2,0,8,0,0,0,0
+584171,2018-06-23,Hector Velazquez,2018/06/23/seamlb-bosmlb-1,False,7,4,3,0,15,0,0,0,1
+584171,2018-06-28,Hector Velazquez,2018/06/28/anamlb-bosmlb-1,False,4,0,0,0,8,0,0,1,3
+584171,2018-06-30,Hector Velazquez,2018/06/30/bosmlb-nyamlb-1,False,4,0,0,0,4,0,0,0,0
+584171,2018-07-01,Hector Velazquez,2018/07/01/bosmlb-nyamlb-1,False,1,2,2,0,6,1,1,0,0
+584171,2018-07-06,Hector Velazquez,2018/07/06/bosmlb-kcamlb-1,False,4,0,1,0,5,0,0,0,0
+584171,2018-07-07,Hector Velazquez,2018/07/07/bosmlb-kcamlb-1,False,2,1,0,1,3,0,0,0,0
+584171,2018-07-10,Hector Velazquez,2018/07/10/texmlb-bosmlb-1,True,4,3,2,1,13,1,2,0,2
+584171,2018-07-13,Hector Velazquez,2018/07/13/tormlb-bosmlb-1,False,4,0,0,0,9,0,2,0,3
+584171,2018-07-21,Hector Velazquez,2018/07/21/bosmlb-detmlb-1,False,1,1,0,0,3,0,0,0,1
+584171,2018-07-24,Hector Velazquez,2018/07/24/bosmlb-balmlb-1,False,2,3,2,0,8,0,1,0,0
+584171,2018-07-30,Hector Velazquez,2018/07/30/phimlb-bosmlb-1,False,1,1,0,0,5,0,1,0,2
+584171,2018-07-31,Hector Velazquez,2018/07/31/phimlb-bosmlb-1,False,4,0,2,0,6,0,0,0,0
+584171,2018-08-09,Hector Velazquez,2018/08/09/bosmlb-tormlb-1,False,2,1,4,0,7,0,0,0,0
+584171,2018-08-11,Hector Velazquez,2018/08/11/bosmlb-balmlb-2,True,7,1,2,0,12,0,1,1,0
+584171,2018-08-15,Hector Velazquez,2018/08/15/bosmlb-phimlb-1,False,0,3,0,1,3,0,0,0,0
+584171,2018-08-19,Hector Velazquez,2018/08/19/tbamlb-bosmlb-1,True,9,3,0,0,18,1,3,1,2
+584171,2018-08-24,Hector Velazquez,2018/08/24/bosmlb-tbamlb-1,True,6,3,3,1,18,0,2,0,4
+584171,2018-08-29,Hector Velazquez,2018/08/29/miamlb-bosmlb-1,False,4,1,3,0,13,0,1,1,3
+584171,2018-09-02,Hector Velazquez,2018/09/02/bosmlb-chamlb-1,False,2,1,1,0,5,0,0,0,1
+584171,2018-09-05,Hector Velazquez,2018/09/05/bosmlb-atlmlb-1,True,6,4,3,0,18,1,3,0,2
+584171,2018-09-11,Hector Velazquez,2018/09/11/tormlb-bosmlb-1,False,1,0,0,0,1,0,0,0,0
+584171,2018-09-16,Hector Velazquez,2018/09/16/nynmlb-bosmlb-1,False,3,1,0,1,5,0,0,1,0
+584171,2018-09-19,Hector Velazquez,2018/09/19/bosmlb-nyamlb-1,False,0,2,1,0,4,0,0,0,1
+584171,2018-09-21,Hector Velazquez,2018/09/21/bosmlb-clemlb-1,False,1,1,1,0,3,0,0,0,0
+584171,2018-09-23,Hector Velazquez,2018/09/23/bosmlb-clemlb-1,True,6,1,3,0,13,0,0,0,3
+584171,2018-09-26,Hector Velazquez,2018/09/26/balmlb-bosmlb-2,False,0,1,0,0,2,0,0,0,1
+584171,2018-09-29,Hector Velazquez,2018/09/29/nyamlb-bosmlb-1,False,3,2,2,0,7,0,0,0,0
 642003,2018-04-09,Cody Reed,2018/04/09/cinmlb-phimlb-1,True,4,4,2,0,15,2,1,0,4
 642003,2018-04-12,Cody Reed,2018/04/12/slnmlb-cinmlb-1,False,1,1,0,0,4,0,0,0,2
 642003,2018-04-16,Cody Reed,2018/04/16/cinmlb-milmlb-1,False,0,0,1,0,1,0,0,0,0
@@ -12482,28 +12482,28 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 571901,2018-09-27,Aaron Loup,2018/09/27/phimlb-colmlb-1,False,1,0,0,0,1,0,0,0,0
 571901,2018-09-28,Aaron Loup,2018/09/28/atlmlb-phimlb-1,False,1,0,0,0,1,0,0,0,0
 571901,2018-09-30,Aaron Loup,2018/09/30/atlmlb-phimlb-1,False,0,0,0,0,1,0,0,0,1
-501817,2018-04-11,,2018/04/11/anamlb-texmlb-1,False,1,1,1,1,4,0,0,1,0
-501817,2018-04-14,,2018/04/14/texmlb-houmlb-1,False,3,0,0,0,7,0,1,0,3
-501817,2018-04-29,,2018/04/29/texmlb-tormlb-1,False,3,2,1,0,10,0,1,1,2
-501817,2018-05-03,,2018/05/03/bosmlb-texmlb-1,False,4,0,0,0,4,0,0,0,0
-501817,2018-05-06,,2018/05/06/bosmlb-texmlb-1,False,1,1,0,0,3,0,0,0,1
-501817,2018-05-07,,2018/05/07/detmlb-texmlb-1,False,2,0,1,0,3,0,0,0,0
-501817,2018-05-12,,2018/05/12/texmlb-houmlb-1,False,2,3,1,0,6,1,0,0,0
-501817,2018-05-15,,2018/05/15/texmlb-seamlb-1,False,1,1,1,0,6,0,0,0,3
-501817,2018-05-18,,2018/05/18/texmlb-chamlb-1,False,0,0,0,0,4,0,1,0,3
-501817,2018-05-20,,2018/05/20/texmlb-chamlb-1,False,0,2,0,0,3,0,0,0,1
-501817,2018-05-23,,2018/05/23/nyamlb-texmlb-1,False,1,2,0,0,4,1,0,0,1
-501817,2018-05-27,,2018/05/27/kcamlb-texmlb-1,False,1,1,1,0,4,0,0,0,0
-501817,2018-05-30,,2018/05/30/texmlb-seamlb-1,False,2,0,1,0,3,0,0,0,0
-501817,2018-06-06,,2018/06/06/oakmlb-texmlb-1,False,2,1,0,0,3,0,0,0,0
-501817,2018-06-08,,2018/06/08/houmlb-texmlb-1,False,3,0,1,0,7,0,0,0,3
-501817,2018-06-12,,2018/06/12/texmlb-lanmlb-1,False,1,1,2,0,8,0,1,0,3
-501817,2018-06-15,,2018/06/15/colmlb-texmlb-1,False,4,0,3,0,9,0,0,0,2
-501817,2018-06-18,,2018/06/18/texmlb-kcamlb-1,False,0,2,0,0,3,0,0,0,1
-501817,2018-06-23,,2018/06/23/texmlb-minmlb-1,False,1,0,0,0,3,0,1,0,1
-501817,2018-06-25,,2018/06/25/sdnmlb-texmlb-1,False,1,1,0,0,3,0,0,0,1
-501817,2018-06-29,,2018/06/29/chamlb-texmlb-1,False,3,0,0,0,3,0,0,0,0
-501817,2018-07-03,,2018/07/03/houmlb-texmlb-1,False,0,3,0,0,4,0,0,0,1
+501817,2018-04-11,Tony Barnette,2018/04/11/anamlb-texmlb-1,False,1,1,1,1,4,0,0,1,0
+501817,2018-04-14,Tony Barnette,2018/04/14/texmlb-houmlb-1,False,3,0,0,0,7,0,1,0,3
+501817,2018-04-29,Tony Barnette,2018/04/29/texmlb-tormlb-1,False,3,2,1,0,10,0,1,1,2
+501817,2018-05-03,Tony Barnette,2018/05/03/bosmlb-texmlb-1,False,4,0,0,0,4,0,0,0,0
+501817,2018-05-06,Tony Barnette,2018/05/06/bosmlb-texmlb-1,False,1,1,0,0,3,0,0,0,1
+501817,2018-05-07,Tony Barnette,2018/05/07/detmlb-texmlb-1,False,2,0,1,0,3,0,0,0,0
+501817,2018-05-12,Tony Barnette,2018/05/12/texmlb-houmlb-1,False,2,3,1,0,6,1,0,0,0
+501817,2018-05-15,Tony Barnette,2018/05/15/texmlb-seamlb-1,False,1,1,1,0,6,0,0,0,3
+501817,2018-05-18,Tony Barnette,2018/05/18/texmlb-chamlb-1,False,0,0,0,0,4,0,1,0,3
+501817,2018-05-20,Tony Barnette,2018/05/20/texmlb-chamlb-1,False,0,2,0,0,3,0,0,0,1
+501817,2018-05-23,Tony Barnette,2018/05/23/nyamlb-texmlb-1,False,1,2,0,0,4,1,0,0,1
+501817,2018-05-27,Tony Barnette,2018/05/27/kcamlb-texmlb-1,False,1,1,1,0,4,0,0,0,0
+501817,2018-05-30,Tony Barnette,2018/05/30/texmlb-seamlb-1,False,2,0,1,0,3,0,0,0,0
+501817,2018-06-06,Tony Barnette,2018/06/06/oakmlb-texmlb-1,False,2,1,0,0,3,0,0,0,0
+501817,2018-06-08,Tony Barnette,2018/06/08/houmlb-texmlb-1,False,3,0,1,0,7,0,0,0,3
+501817,2018-06-12,Tony Barnette,2018/06/12/texmlb-lanmlb-1,False,1,1,2,0,8,0,1,0,3
+501817,2018-06-15,Tony Barnette,2018/06/15/colmlb-texmlb-1,False,4,0,3,0,9,0,0,0,2
+501817,2018-06-18,Tony Barnette,2018/06/18/texmlb-kcamlb-1,False,0,2,0,0,3,0,0,0,1
+501817,2018-06-23,Tony Barnette,2018/06/23/texmlb-minmlb-1,False,1,0,0,0,3,0,1,0,1
+501817,2018-06-25,Tony Barnette,2018/06/25/sdnmlb-texmlb-1,False,1,1,0,0,3,0,0,0,1
+501817,2018-06-29,Tony Barnette,2018/06/29/chamlb-texmlb-1,False,3,0,0,0,3,0,0,0,0
+501817,2018-07-03,Tony Barnette,2018/07/03/houmlb-texmlb-1,False,0,3,0,0,4,0,0,0,1
 592865,2018-04-08,Taylor Williams,2018/04/08/chnmlb-milmlb-1,False,1,1,1,0,6,0,0,0,3
 592865,2018-04-10,Taylor Williams,2018/04/10/milmlb-slnmlb-1,False,0,0,0,0,5,0,1,0,3
 592865,2018-04-15,Taylor Williams,2018/04/15/milmlb-nynmlb-1,False,1,3,0,1,10,1,3,1,2
@@ -13604,67 +13604,67 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 606162,2018-09-15,Yefry Ramirez,2018/09/15/chamlb-balmlb-1,True,4,5,2,0,20,0,1,0,7
 606162,2018-09-21,Yefry Ramirez,2018/09/21/balmlb-nyamlb-1,True,3,7,3,1,19,2,3,0,3
 606162,2018-09-29,Yefry Ramirez,2018/09/29/houmlb-balmlb-2,True,4,11,4,2,26,2,3,0,4
-475054,2018-03-30,,2018/03/30/bosmlb-tbamlb-1,False,0,1,0,0,2,0,0,0,1
-475054,2018-03-31,,2018/03/31/bosmlb-tbamlb-1,False,0,2,0,1,3,0,1,0,0
-475054,2018-04-04,,2018/04/04/tbamlb-nyamlb-1,False,1,0,0,0,3,0,0,0,2
-475054,2018-04-05,,2018/04/05/tbamlb-bosmlb-1,False,2,1,0,0,3,0,0,0,0
-475054,2018-04-07,,2018/04/07/tbamlb-bosmlb-1,False,0,2,1,0,4,2,0,0,1
-475054,2018-04-09,,2018/04/09/tbamlb-chamlb-1,False,1,0,0,0,2,0,0,0,1
-475054,2018-04-11,,2018/04/11/tbamlb-chamlb-1,False,0,0,0,0,2,0,0,1,1
-475054,2018-04-13,,2018/04/13/phimlb-tbamlb-1,False,1,1,1,0,4,0,0,0,1
-475054,2018-04-15,,2018/04/15/phimlb-tbamlb-1,False,0,2,0,1,5,0,2,0,1
-475054,2018-04-18,,2018/04/18/texmlb-tbamlb-1,False,0,0,0,0,3,0,0,0,3
-475054,2018-04-22,,2018/04/22/minmlb-tbamlb-1,False,0,1,1,1,3,0,1,0,0
-475054,2018-04-26,,2018/04/26/tbamlb-balmlb-1,False,1,0,1,0,4,0,0,1,1
-475054,2018-04-27,,2018/04/27/tbamlb-bosmlb-1,False,3,1,0,0,4,0,0,0,0
-475054,2018-04-28,,2018/04/28/tbamlb-bosmlb-1,False,2,0,0,0,3,0,0,0,1
-475054,2018-04-30,,2018/04/30/tbamlb-detmlb-1,False,1,0,0,0,4,0,0,2,1
-475054,2018-05-02,,2018/05/02/tbamlb-detmlb-1,False,1,1,0,0,2,0,0,0,0
-475054,2018-05-05,,2018/05/05/tormlb-tbamlb-1,False,1,1,1,1,4,0,0,0,1
-475054,2018-05-12,,2018/05/12/tbamlb-balmlb-2,False,2,0,0,0,3,0,0,0,1
-475054,2018-05-13,,2018/05/13/tbamlb-balmlb-1,False,0,0,3,0,4,0,0,0,1
-475054,2018-05-14,,2018/05/14/tbamlb-kcamlb-1,False,1,1,0,0,3,0,0,0,1
-475054,2018-05-16,,2018/05/16/tbamlb-kcamlb-1,False,0,1,0,0,2,0,0,0,1
-475054,2018-05-18,,2018/05/18/tbamlb-anamlb-1,False,1,0,1,0,4,1,1,0,1
-475054,2018-05-19,,2018/05/19/tbamlb-anamlb-1,False,1,0,0,0,1,0,0,0,0
-475054,2018-05-23,,2018/05/23/bosmlb-tbamlb-1,False,0,1,0,0,3,0,2,0,0
-475054,2018-05-26,,2018/05/26/balmlb-tbamlb-1,False,1,1,0,0,3,0,0,0,1
-475054,2018-05-29,,2018/05/29/tbamlb-oakmlb-1,False,1,1,0,0,5,0,1,0,2
-475054,2018-06-01,,2018/06/01/tbamlb-seamlb-1,False,0,2,0,0,4,0,0,0,2
-475054,2018-06-03,,2018/06/03/tbamlb-seamlb-1,False,1,0,0,0,2,0,0,0,1
-475054,2018-06-07,,2018/06/07/seamlb-tbamlb-1,False,1,0,0,0,3,0,0,0,2
-475054,2018-06-09,,2018/06/09/seamlb-tbamlb-1,False,3,0,0,0,4,0,0,0,1
-475054,2018-06-10,,2018/06/10/seamlb-tbamlb-1,False,2,0,1,0,3,0,0,0,0
-475054,2018-06-12,,2018/06/12/tormlb-tbamlb-1,False,2,1,0,0,5,0,1,0,1
-475054,2018-06-17,,2018/06/17/tbamlb-nyamlb-1,False,2,1,1,0,6,0,0,0,2
-475054,2018-06-18,,2018/06/18/tbamlb-houmlb-1,False,1,1,1,0,4,0,0,0,1
-475054,2018-06-22,,2018/06/22/nyamlb-tbamlb-1,False,2,1,1,0,5,0,1,0,0
-475054,2018-06-23,,2018/06/23/nyamlb-tbamlb-1,False,1,0,0,0,3,0,0,0,2
-475054,2018-06-26,,2018/06/26/wasmlb-tbamlb-1,False,0,0,0,0,1,0,0,0,1
-475054,2018-06-29,,2018/06/29/houmlb-tbamlb-1,False,2,1,0,0,3,0,0,0,0
-475054,2018-06-30,,2018/06/30/houmlb-tbamlb-1,False,1,1,0,0,3,0,0,0,1
-475054,2018-07-03,,2018/07/03/tbamlb-miamlb-1,False,1,1,0,0,5,0,1,1,1
-475054,2018-07-06,,2018/07/06/tbamlb-nynmlb-1,False,3,1,0,0,7,1,2,0,0
-475054,2018-08-15,,2018/08/15/tbamlb-nyamlb-1,False,1,0,0,0,3,0,0,1,1
-475054,2018-08-16,,2018/08/16/tbamlb-nyamlb-1,False,0,0,0,0,3,0,0,0,2
-475054,2018-08-19,,2018/08/19/tbamlb-bosmlb-1,False,1,1,0,0,4,0,0,0,2
-475054,2018-08-21,,2018/08/21/kcamlb-tbamlb-1,False,0,1,1,0,4,0,0,0,2
-475054,2018-08-22,,2018/08/22/kcamlb-tbamlb-1,False,0,1,0,0,2,0,0,0,1
-475054,2018-08-25,,2018/08/25/bosmlb-tbamlb-1,False,1,2,0,0,3,0,0,0,0
-475054,2018-08-28,,2018/08/28/tbamlb-atlmlb-1,False,1,1,1,0,4,1,1,0,0
-475054,2018-08-29,,2018/08/29/tbamlb-atlmlb-1,False,1,0,1,0,3,0,0,0,1
-475054,2018-09-01,,2018/09/01/tbamlb-clemlb-1,False,1,2,1,0,5,1,0,0,1
-475054,2018-09-08,,2018/09/08/balmlb-tbamlb-1,False,1,0,1,0,3,0,0,1,0
-475054,2018-09-09,,2018/09/09/balmlb-tbamlb-1,False,1,0,0,0,1,0,0,0,0
-475054,2018-09-10,,2018/09/10/clemlb-tbamlb-1,False,1,1,1,0,6,0,1,1,1
-475054,2018-09-12,,2018/09/12/clemlb-tbamlb-1,False,1,0,0,0,3,0,1,0,1
-475054,2018-09-14,,2018/09/14/oakmlb-tbamlb-1,False,2,2,0,0,4,0,0,0,0
-475054,2018-09-15,,2018/09/15/oakmlb-tbamlb-1,False,0,0,2,0,3,0,0,0,1
-475054,2018-09-18,,2018/09/18/tbamlb-texmlb-1,False,0,0,3,0,3,0,0,0,0
-475054,2018-09-23,,2018/09/23/tbamlb-tormlb-1,False,1,0,0,0,1,0,0,0,0
-475054,2018-09-26,,2018/09/26/nyamlb-tbamlb-1,False,0,1,0,1,2,0,0,0,1
-475054,2018-09-28,,2018/09/28/tormlb-tbamlb-1,False,2,0,0,0,2,0,0,0,0
-475054,2018-09-29,,2018/09/29/tormlb-tbamlb-1,False,1,1,0,0,3,0,0,0,1
+475054,2018-03-30,Chaz Roe,2018/03/30/bosmlb-tbamlb-1,False,0,1,0,0,2,0,0,0,1
+475054,2018-03-31,Chaz Roe,2018/03/31/bosmlb-tbamlb-1,False,0,2,0,1,3,0,1,0,0
+475054,2018-04-04,Chaz Roe,2018/04/04/tbamlb-nyamlb-1,False,1,0,0,0,3,0,0,0,2
+475054,2018-04-05,Chaz Roe,2018/04/05/tbamlb-bosmlb-1,False,2,1,0,0,3,0,0,0,0
+475054,2018-04-07,Chaz Roe,2018/04/07/tbamlb-bosmlb-1,False,0,2,1,0,4,2,0,0,1
+475054,2018-04-09,Chaz Roe,2018/04/09/tbamlb-chamlb-1,False,1,0,0,0,2,0,0,0,1
+475054,2018-04-11,Chaz Roe,2018/04/11/tbamlb-chamlb-1,False,0,0,0,0,2,0,0,1,1
+475054,2018-04-13,Chaz Roe,2018/04/13/phimlb-tbamlb-1,False,1,1,1,0,4,0,0,0,1
+475054,2018-04-15,Chaz Roe,2018/04/15/phimlb-tbamlb-1,False,0,2,0,1,5,0,2,0,1
+475054,2018-04-18,Chaz Roe,2018/04/18/texmlb-tbamlb-1,False,0,0,0,0,3,0,0,0,3
+475054,2018-04-22,Chaz Roe,2018/04/22/minmlb-tbamlb-1,False,0,1,1,1,3,0,1,0,0
+475054,2018-04-26,Chaz Roe,2018/04/26/tbamlb-balmlb-1,False,1,0,1,0,4,0,0,1,1
+475054,2018-04-27,Chaz Roe,2018/04/27/tbamlb-bosmlb-1,False,3,1,0,0,4,0,0,0,0
+475054,2018-04-28,Chaz Roe,2018/04/28/tbamlb-bosmlb-1,False,2,0,0,0,3,0,0,0,1
+475054,2018-04-30,Chaz Roe,2018/04/30/tbamlb-detmlb-1,False,1,0,0,0,4,0,0,2,1
+475054,2018-05-02,Chaz Roe,2018/05/02/tbamlb-detmlb-1,False,1,1,0,0,2,0,0,0,0
+475054,2018-05-05,Chaz Roe,2018/05/05/tormlb-tbamlb-1,False,1,1,1,1,4,0,0,0,1
+475054,2018-05-12,Chaz Roe,2018/05/12/tbamlb-balmlb-2,False,2,0,0,0,3,0,0,0,1
+475054,2018-05-13,Chaz Roe,2018/05/13/tbamlb-balmlb-1,False,0,0,3,0,4,0,0,0,1
+475054,2018-05-14,Chaz Roe,2018/05/14/tbamlb-kcamlb-1,False,1,1,0,0,3,0,0,0,1
+475054,2018-05-16,Chaz Roe,2018/05/16/tbamlb-kcamlb-1,False,0,1,0,0,2,0,0,0,1
+475054,2018-05-18,Chaz Roe,2018/05/18/tbamlb-anamlb-1,False,1,0,1,0,4,1,1,0,1
+475054,2018-05-19,Chaz Roe,2018/05/19/tbamlb-anamlb-1,False,1,0,0,0,1,0,0,0,0
+475054,2018-05-23,Chaz Roe,2018/05/23/bosmlb-tbamlb-1,False,0,1,0,0,3,0,2,0,0
+475054,2018-05-26,Chaz Roe,2018/05/26/balmlb-tbamlb-1,False,1,1,0,0,3,0,0,0,1
+475054,2018-05-29,Chaz Roe,2018/05/29/tbamlb-oakmlb-1,False,1,1,0,0,5,0,1,0,2
+475054,2018-06-01,Chaz Roe,2018/06/01/tbamlb-seamlb-1,False,0,2,0,0,4,0,0,0,2
+475054,2018-06-03,Chaz Roe,2018/06/03/tbamlb-seamlb-1,False,1,0,0,0,2,0,0,0,1
+475054,2018-06-07,Chaz Roe,2018/06/07/seamlb-tbamlb-1,False,1,0,0,0,3,0,0,0,2
+475054,2018-06-09,Chaz Roe,2018/06/09/seamlb-tbamlb-1,False,3,0,0,0,4,0,0,0,1
+475054,2018-06-10,Chaz Roe,2018/06/10/seamlb-tbamlb-1,False,2,0,1,0,3,0,0,0,0
+475054,2018-06-12,Chaz Roe,2018/06/12/tormlb-tbamlb-1,False,2,1,0,0,5,0,1,0,1
+475054,2018-06-17,Chaz Roe,2018/06/17/tbamlb-nyamlb-1,False,2,1,1,0,6,0,0,0,2
+475054,2018-06-18,Chaz Roe,2018/06/18/tbamlb-houmlb-1,False,1,1,1,0,4,0,0,0,1
+475054,2018-06-22,Chaz Roe,2018/06/22/nyamlb-tbamlb-1,False,2,1,1,0,5,0,1,0,0
+475054,2018-06-23,Chaz Roe,2018/06/23/nyamlb-tbamlb-1,False,1,0,0,0,3,0,0,0,2
+475054,2018-06-26,Chaz Roe,2018/06/26/wasmlb-tbamlb-1,False,0,0,0,0,1,0,0,0,1
+475054,2018-06-29,Chaz Roe,2018/06/29/houmlb-tbamlb-1,False,2,1,0,0,3,0,0,0,0
+475054,2018-06-30,Chaz Roe,2018/06/30/houmlb-tbamlb-1,False,1,1,0,0,3,0,0,0,1
+475054,2018-07-03,Chaz Roe,2018/07/03/tbamlb-miamlb-1,False,1,1,0,0,5,0,1,1,1
+475054,2018-07-06,Chaz Roe,2018/07/06/tbamlb-nynmlb-1,False,3,1,0,0,7,1,2,0,0
+475054,2018-08-15,Chaz Roe,2018/08/15/tbamlb-nyamlb-1,False,1,0,0,0,3,0,0,1,1
+475054,2018-08-16,Chaz Roe,2018/08/16/tbamlb-nyamlb-1,False,0,0,0,0,3,0,0,0,2
+475054,2018-08-19,Chaz Roe,2018/08/19/tbamlb-bosmlb-1,False,1,1,0,0,4,0,0,0,2
+475054,2018-08-21,Chaz Roe,2018/08/21/kcamlb-tbamlb-1,False,0,1,1,0,4,0,0,0,2
+475054,2018-08-22,Chaz Roe,2018/08/22/kcamlb-tbamlb-1,False,0,1,0,0,2,0,0,0,1
+475054,2018-08-25,Chaz Roe,2018/08/25/bosmlb-tbamlb-1,False,1,2,0,0,3,0,0,0,0
+475054,2018-08-28,Chaz Roe,2018/08/28/tbamlb-atlmlb-1,False,1,1,1,0,4,1,1,0,0
+475054,2018-08-29,Chaz Roe,2018/08/29/tbamlb-atlmlb-1,False,1,0,1,0,3,0,0,0,1
+475054,2018-09-01,Chaz Roe,2018/09/01/tbamlb-clemlb-1,False,1,2,1,0,5,1,0,0,1
+475054,2018-09-08,Chaz Roe,2018/09/08/balmlb-tbamlb-1,False,1,0,1,0,3,0,0,1,0
+475054,2018-09-09,Chaz Roe,2018/09/09/balmlb-tbamlb-1,False,1,0,0,0,1,0,0,0,0
+475054,2018-09-10,Chaz Roe,2018/09/10/clemlb-tbamlb-1,False,1,1,1,0,6,0,1,1,1
+475054,2018-09-12,Chaz Roe,2018/09/12/clemlb-tbamlb-1,False,1,0,0,0,3,0,1,0,1
+475054,2018-09-14,Chaz Roe,2018/09/14/oakmlb-tbamlb-1,False,2,2,0,0,4,0,0,0,0
+475054,2018-09-15,Chaz Roe,2018/09/15/oakmlb-tbamlb-1,False,0,0,2,0,3,0,0,0,1
+475054,2018-09-18,Chaz Roe,2018/09/18/tbamlb-texmlb-1,False,0,0,3,0,3,0,0,0,0
+475054,2018-09-23,Chaz Roe,2018/09/23/tbamlb-tormlb-1,False,1,0,0,0,1,0,0,0,0
+475054,2018-09-26,Chaz Roe,2018/09/26/nyamlb-tbamlb-1,False,0,1,0,1,2,0,0,0,1
+475054,2018-09-28,Chaz Roe,2018/09/28/tormlb-tbamlb-1,False,2,0,0,0,2,0,0,0,0
+475054,2018-09-29,Chaz Roe,2018/09/29/tormlb-tbamlb-1,False,1,1,0,0,3,0,0,0,1
 112526,2018-04-02,Bartolo Colon,2018/04/02/texmlb-oakmlb-1,True,10,7,2,1,24,1,1,0,4
 112526,2018-04-08,Bartolo Colon,2018/04/08/tormlb-texmlb-1,False,3,0,0,0,7,0,0,0,4
 112526,2018-04-10,Bartolo Colon,2018/04/10/anamlb-texmlb-1,False,3,3,2,0,10,0,0,0,2
@@ -14196,42 +14196,42 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 543935,2018-09-20,Alex Wilson,2018/09/20/kcamlb-detmlb-1,False,1,3,0,0,4,0,0,0,0
 543935,2018-09-25,Alex Wilson,2018/09/25/detmlb-minmlb-1,False,0,0,1,0,1,0,0,0,0
 543935,2018-09-28,Alex Wilson,2018/09/28/detmlb-milmlb-1,False,2,0,0,0,6,0,0,0,4
-592815,2018-03-29,,2018/03/29/slnmlb-nynmlb-1,False,2,0,0,0,5,0,2,0,1
-592815,2018-03-31,,2018/03/31/slnmlb-nynmlb-1,False,1,3,0,0,6,0,1,0,1
-592815,2018-04-04,,2018/04/04/slnmlb-milmlb-1,False,0,0,1,0,1,0,0,0,0
-592815,2018-04-09,,2018/04/09/milmlb-slnmlb-1,False,2,4,2,0,8,0,0,0,0
-592815,2018-05-06,,2018/05/06/chnmlb-slnmlb-1,False,2,3,0,0,6,0,0,0,1
-592815,2018-05-08,,2018/05/08/minmlb-slnmlb-1,False,1,0,2,0,4,0,0,0,0
-592815,2018-05-12,,2018/05/12/slnmlb-sdnmlb-1,False,1,0,1,0,3,0,0,0,1
-592815,2018-05-15,,2018/05/15/slnmlb-minmlb-1,False,2,2,0,0,6,0,0,0,2
-592815,2018-05-17,,2018/05/17/phimlb-slnmlb-1,False,3,0,0,0,5,0,1,0,1
-592815,2018-05-19,,2018/05/19/phimlb-slnmlb-1,False,0,1,0,1,3,0,0,0,2
-592815,2018-05-23,,2018/05/23/kcamlb-slnmlb-1,False,1,0,0,0,1,0,0,0,0
-592815,2018-05-27,,2018/05/27/slnmlb-pitmlb-1,False,1,1,0,0,3,0,0,0,1
-592815,2018-05-29,,2018/05/29/slnmlb-milmlb-1,False,0,0,1,0,2,0,0,0,1
-592815,2018-05-30,,2018/05/30/slnmlb-milmlb-1,False,3,3,3,0,10,0,0,0,1
-592815,2018-06-01,,2018/06/01/pitmlb-slnmlb-1,False,2,0,0,0,6,0,1,0,3
-592815,2018-06-05,,2018/06/05/miamlb-slnmlb-1,False,2,0,0,0,5,0,1,0,2
-592815,2018-06-08,,2018/06/08/slnmlb-cinmlb-1,False,1,1,0,0,2,0,0,0,0
-592815,2018-06-09,,2018/06/09/slnmlb-cinmlb-1,False,2,1,3,0,6,1,0,0,0
-592815,2018-06-11,,2018/06/11/sdnmlb-slnmlb-1,False,1,0,0,0,2,0,0,0,1
-592815,2018-06-16,,2018/06/16/chnmlb-slnmlb-1,False,1,1,1,0,5,0,1,0,0
-592815,2018-06-18,,2018/06/18/slnmlb-phimlb-1,False,1,0,0,0,3,0,1,0,1
-592815,2018-06-20,,2018/06/20/slnmlb-phimlb-1,False,1,1,2,0,5,1,0,0,1
-592815,2018-06-23,,2018/06/23/slnmlb-milmlb-1,False,2,0,0,0,3,0,0,1,0
-592815,2018-06-27,,2018/06/27/clemlb-slnmlb-1,False,3,2,1,0,8,0,1,0,1
-592815,2018-07-03,,2018/07/03/slnmlb-arimlb-1,False,2,1,1,0,5,0,0,0,1
-592815,2018-07-06,,2018/07/06/slnmlb-sfnmlb-1,False,3,0,0,0,3,0,0,0,0
-592815,2018-07-08,,2018/07/08/slnmlb-sfnmlb-1,False,2,2,2,0,7,0,0,0,1
-592815,2018-07-13,,2018/07/13/cinmlb-slnmlb-1,False,2,1,1,0,5,1,1,0,0
-592815,2018-07-19,,2018/07/19/slnmlb-chnmlb-1,False,4,0,0,0,5,0,0,0,1
-592815,2018-07-21,,2018/07/21/slnmlb-chnmlb-2,False,1,1,1,0,4,0,1,0,0
-592815,2018-07-24,,2018/07/24/slnmlb-cinmlb-1,False,0,3,0,0,7,0,0,1,2
-592815,2018-07-31,,2018/07/31/houmlb-seamlb-1,False,3,0,3,0,6,0,0,0,0
-592815,2018-08-02,,2018/08/02/tormlb-seamlb-1,False,2,0,1,0,4,0,0,0,1
-592815,2018-08-04,,2018/08/04/tormlb-seamlb-1,False,2,0,1,0,5,0,1,0,1
-592815,2018-08-06,,2018/08/06/seamlb-texmlb-1,False,1,1,0,0,3,0,0,0,1
-592815,2018-08-08,,2018/08/08/seamlb-texmlb-1,False,1,0,1,0,3,0,0,0,1
+592815,2018-03-29,Sam Tuivailala,2018/03/29/slnmlb-nynmlb-1,False,2,0,0,0,5,0,2,0,1
+592815,2018-03-31,Sam Tuivailala,2018/03/31/slnmlb-nynmlb-1,False,1,3,0,0,6,0,1,0,1
+592815,2018-04-04,Sam Tuivailala,2018/04/04/slnmlb-milmlb-1,False,0,0,1,0,1,0,0,0,0
+592815,2018-04-09,Sam Tuivailala,2018/04/09/milmlb-slnmlb-1,False,2,4,2,0,8,0,0,0,0
+592815,2018-05-06,Sam Tuivailala,2018/05/06/chnmlb-slnmlb-1,False,2,3,0,0,6,0,0,0,1
+592815,2018-05-08,Sam Tuivailala,2018/05/08/minmlb-slnmlb-1,False,1,0,2,0,4,0,0,0,0
+592815,2018-05-12,Sam Tuivailala,2018/05/12/slnmlb-sdnmlb-1,False,1,0,1,0,3,0,0,0,1
+592815,2018-05-15,Sam Tuivailala,2018/05/15/slnmlb-minmlb-1,False,2,2,0,0,6,0,0,0,2
+592815,2018-05-17,Sam Tuivailala,2018/05/17/phimlb-slnmlb-1,False,3,0,0,0,5,0,1,0,1
+592815,2018-05-19,Sam Tuivailala,2018/05/19/phimlb-slnmlb-1,False,0,1,0,1,3,0,0,0,2
+592815,2018-05-23,Sam Tuivailala,2018/05/23/kcamlb-slnmlb-1,False,1,0,0,0,1,0,0,0,0
+592815,2018-05-27,Sam Tuivailala,2018/05/27/slnmlb-pitmlb-1,False,1,1,0,0,3,0,0,0,1
+592815,2018-05-29,Sam Tuivailala,2018/05/29/slnmlb-milmlb-1,False,0,0,1,0,2,0,0,0,1
+592815,2018-05-30,Sam Tuivailala,2018/05/30/slnmlb-milmlb-1,False,3,3,3,0,10,0,0,0,1
+592815,2018-06-01,Sam Tuivailala,2018/06/01/pitmlb-slnmlb-1,False,2,0,0,0,6,0,1,0,3
+592815,2018-06-05,Sam Tuivailala,2018/06/05/miamlb-slnmlb-1,False,2,0,0,0,5,0,1,0,2
+592815,2018-06-08,Sam Tuivailala,2018/06/08/slnmlb-cinmlb-1,False,1,1,0,0,2,0,0,0,0
+592815,2018-06-09,Sam Tuivailala,2018/06/09/slnmlb-cinmlb-1,False,2,1,3,0,6,1,0,0,0
+592815,2018-06-11,Sam Tuivailala,2018/06/11/sdnmlb-slnmlb-1,False,1,0,0,0,2,0,0,0,1
+592815,2018-06-16,Sam Tuivailala,2018/06/16/chnmlb-slnmlb-1,False,1,1,1,0,5,0,1,0,0
+592815,2018-06-18,Sam Tuivailala,2018/06/18/slnmlb-phimlb-1,False,1,0,0,0,3,0,1,0,1
+592815,2018-06-20,Sam Tuivailala,2018/06/20/slnmlb-phimlb-1,False,1,1,2,0,5,1,0,0,1
+592815,2018-06-23,Sam Tuivailala,2018/06/23/slnmlb-milmlb-1,False,2,0,0,0,3,0,0,1,0
+592815,2018-06-27,Sam Tuivailala,2018/06/27/clemlb-slnmlb-1,False,3,2,1,0,8,0,1,0,1
+592815,2018-07-03,Sam Tuivailala,2018/07/03/slnmlb-arimlb-1,False,2,1,1,0,5,0,0,0,1
+592815,2018-07-06,Sam Tuivailala,2018/07/06/slnmlb-sfnmlb-1,False,3,0,0,0,3,0,0,0,0
+592815,2018-07-08,Sam Tuivailala,2018/07/08/slnmlb-sfnmlb-1,False,2,2,2,0,7,0,0,0,1
+592815,2018-07-13,Sam Tuivailala,2018/07/13/cinmlb-slnmlb-1,False,2,1,1,0,5,1,1,0,0
+592815,2018-07-19,Sam Tuivailala,2018/07/19/slnmlb-chnmlb-1,False,4,0,0,0,5,0,0,0,1
+592815,2018-07-21,Sam Tuivailala,2018/07/21/slnmlb-chnmlb-2,False,1,1,1,0,4,0,1,0,0
+592815,2018-07-24,Sam Tuivailala,2018/07/24/slnmlb-cinmlb-1,False,0,3,0,0,7,0,0,1,2
+592815,2018-07-31,Sam Tuivailala,2018/07/31/houmlb-seamlb-1,False,3,0,3,0,6,0,0,0,0
+592815,2018-08-02,Sam Tuivailala,2018/08/02/tormlb-seamlb-1,False,2,0,1,0,4,0,0,0,1
+592815,2018-08-04,Sam Tuivailala,2018/08/04/tormlb-seamlb-1,False,2,0,1,0,5,0,1,0,1
+592815,2018-08-06,Sam Tuivailala,2018/08/06/seamlb-texmlb-1,False,1,1,0,0,3,0,0,0,1
+592815,2018-08-08,Sam Tuivailala,2018/08/08/seamlb-texmlb-1,False,1,0,1,0,3,0,0,0,1
 445213,2018-03-30,Brandon Kintzler,2018/03/30/wasmlb-cinmlb-1,False,2,0,0,0,3,0,0,0,1
 445213,2018-04-05,Brandon Kintzler,2018/04/05/nynmlb-wasmlb-1,False,0,4,0,1,7,1,2,0,1
 445213,2018-04-07,Brandon Kintzler,2018/04/07/nynmlb-wasmlb-1,False,2,0,2,0,6,0,1,0,1
@@ -14583,9 +14583,9 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 605476,2018-05-11,Carson Smith,2018/05/11/bosmlb-tormlb-1,False,1,0,1,0,4,0,0,0,2
 605476,2018-05-12,Carson Smith,2018/05/12/bosmlb-tormlb-1,False,2,0,0,0,3,0,0,0,1
 605476,2018-05-14,Carson Smith,2018/05/14/oakmlb-bosmlb-1,False,1,2,1,0,4,1,0,0,0
-573046,2018-06-09,,2018/06/09/seamlb-tbamlb-1,False,0,0,1,0,3,0,0,0,2
-573046,2018-06-13,,2018/06/13/anamlb-seamlb-1,False,0,2,2,1,6,0,1,0,1
-573046,2018-07-13,,2018/07/13/seamlb-colmlb-1,False,3,1,2,0,9,0,0,0,3
+573046,2018-06-09,Mike Morin,2018/06/09/seamlb-tbamlb-1,False,0,0,1,0,3,0,0,0,2
+573046,2018-06-13,Mike Morin,2018/06/13/anamlb-seamlb-1,False,0,2,2,1,6,0,1,0,1
+573046,2018-07-13,Mike Morin,2018/07/13/seamlb-colmlb-1,False,3,1,2,0,9,0,0,0,3
 543391,2018-08-11,Casey Kelly,2018/08/11/pitmlb-sfnmlb-1,False,10,3,1,1,17,0,0,0,3
 543391,2018-08-15,Casey Kelly,2018/08/15/sfnmlb-lanmlb-1,False,2,2,1,0,7,0,2,0,0
 543391,2018-08-17,Casey Kelly,2018/08/17/sfnmlb-cinmlb-1,True,7,4,7,0,21,0,1,0,2
@@ -14916,6 +14916,14 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 605155,2018-09-23,Colten Brewer,2018/09/23/sdnmlb-lanmlb-1,False,3,0,0,0,4,0,1,0,0
 605155,2018-09-28,Colten Brewer,2018/09/28/arimlb-sdnmlb-1,False,1,2,0,1,7,0,2,0,2
 605155,2018-09-30,Colten Brewer,2018/09/30/arimlb-sdnmlb-1,False,1,2,0,0,4,0,0,0,1
+670036,2018-07-14,Matt Festa,2018/07/14/seamlb-colmlb-1,False,2,1,1,0,4,0,0,0,0
+670036,2018-08-19,Matt Festa,2018/08/19/lanmlb-seamlb-1,False,2,3,4,1,10,0,1,0,0
+670036,2018-09-12,Matt Festa,2018/09/12/sdnmlb-seamlb-1,False,1,1,1,0,4,0,0,1,0
+670036,2018-09-15,Matt Festa,2018/09/15/seamlb-anamlb-1,False,3,2,1,0,7,0,0,0,1
+670036,2018-09-19,Matt Festa,2018/09/19/seamlb-houmlb-1,True,0,3,0,0,3,0,0,0,0
+670036,2018-09-23,Matt Festa,2018/09/23/seamlb-texmlb-1,False,2,0,0,0,4,0,0,0,2
+670036,2018-09-25,Matt Festa,2018/09/25/oakmlb-seamlb-1,False,0,1,3,0,5,0,1,0,0
+670036,2018-09-28,Matt Festa,2018/09/28/texmlb-seamlb-1,False,1,0,1,0,3,0,0,0,1
 608638,2018-03-29,J.T. Chargois,2018/03/29/sfnmlb-lanmlb-1,False,1,0,0,0,3,0,0,0,2
 608638,2018-04-02,J.T. Chargois,2018/04/02/lanmlb-arimlb-1,False,0,0,1,0,3,0,1,0,1
 608638,2018-04-07,J.T. Chargois,2018/04/07/lanmlb-sfnmlb-1,False,3,1,0,1,4,0,0,0,0
@@ -15441,16 +15449,16 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 607755,2018-09-26,Andrew Vasquez,2018/09/26/detmlb-minmlb-1,False,1,0,1,0,3,0,0,0,1
 607755,2018-09-28,Andrew Vasquez,2018/09/28/chamlb-minmlb-2,False,2,0,2,0,7,0,1,1,1
 607755,2018-09-30,Andrew Vasquez,2018/09/30/chamlb-minmlb-1,False,0,0,0,0,3,0,0,0,3
-500872,2018-03-29,,2018/03/29/chamlb-kcamlb-1,False,2,1,1,0,4,0,0,0,0
-500872,2018-04-03,,2018/04/03/chamlb-tormlb-1,False,0,2,2,0,6,0,2,0,0
-500872,2018-04-05,,2018/04/05/detmlb-chamlb-1,False,0,1,1,0,3,0,1,0,0
-500872,2018-04-07,,2018/04/07/detmlb-chamlb-1,False,0,1,0,1,3,0,0,0,2
-500872,2018-04-09,,2018/04/09/tbamlb-chamlb-1,False,1,1,0,0,2,0,0,0,0
-500872,2018-04-10,,2018/04/10/tbamlb-chamlb-1,False,1,0,3,0,7,0,2,0,1
-500872,2018-04-21,,2018/04/21/houmlb-chamlb-1,False,2,2,0,1,6,0,0,0,2
-500872,2018-04-22,,2018/04/22/houmlb-chamlb-1,False,1,1,0,1,3,0,0,0,1
-500872,2018-04-25,,2018/04/25/seamlb-chamlb-1,False,1,1,1,0,5,0,2,0,0
-500872,2018-04-27,,2018/04/27/chamlb-kcamlb-1,False,2,0,0,0,3,0,1,0,0
+500872,2018-03-29,Gregory Infante,2018/03/29/chamlb-kcamlb-1,False,2,1,1,0,4,0,0,0,0
+500872,2018-04-03,Gregory Infante,2018/04/03/chamlb-tormlb-1,False,0,2,2,0,6,0,2,0,0
+500872,2018-04-05,Gregory Infante,2018/04/05/detmlb-chamlb-1,False,0,1,1,0,3,0,1,0,0
+500872,2018-04-07,Gregory Infante,2018/04/07/detmlb-chamlb-1,False,0,1,0,1,3,0,0,0,2
+500872,2018-04-09,Gregory Infante,2018/04/09/tbamlb-chamlb-1,False,1,1,0,0,2,0,0,0,0
+500872,2018-04-10,Gregory Infante,2018/04/10/tbamlb-chamlb-1,False,1,0,3,0,7,0,2,0,1
+500872,2018-04-21,Gregory Infante,2018/04/21/houmlb-chamlb-1,False,2,2,0,1,6,0,0,0,2
+500872,2018-04-22,Gregory Infante,2018/04/22/houmlb-chamlb-1,False,1,1,0,1,3,0,0,0,1
+500872,2018-04-25,Gregory Infante,2018/04/25/seamlb-chamlb-1,False,1,1,1,0,5,0,2,0,0
+500872,2018-04-27,Gregory Infante,2018/04/27/chamlb-kcamlb-1,False,2,0,0,0,3,0,1,0,0
 656977,2018-08-10,Chad Sobotka,2018/08/10/milmlb-atlmlb-1,False,2,0,0,0,3,0,0,0,1
 656977,2018-08-13,Chad Sobotka,2018/08/13/miamlb-atlmlb-1,False,0,2,1,1,9,0,3,0,3
 656977,2018-08-16,Chad Sobotka,2018/08/16/colmlb-atlmlb-1,False,0,1,0,0,1,0,0,0,0
@@ -16586,17 +16594,17 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 605260,2018-09-21,Taylor Guerrieri,2018/09/21/tbamlb-tormlb-1,False,1,0,1,0,7,0,2,1,2
 605260,2018-09-25,Taylor Guerrieri,2018/09/25/houmlb-tormlb-1,False,1,0,0,0,3,0,0,0,2
 605260,2018-09-30,Taylor Guerrieri,2018/09/30/tormlb-tbamlb-1,False,2,1,1,0,6,0,0,2,0
-596271,2018-03-31,,2018/03/31/clemlb-seamlb-1,False,1,5,0,2,8,0,0,0,2
-596271,2018-04-09,,2018/04/09/seamlb-kcamlb-1,False,2,3,3,0,12,0,2,1,1
-596271,2018-05-04,,2018/05/04/anamlb-seamlb-1,False,3,1,1,0,8,0,1,0,2
-596271,2018-05-06,,2018/05/06/anamlb-seamlb-1,False,6,1,0,0,11,0,1,1,2
-596271,2018-07-13,,2018/07/13/seamlb-colmlb-1,False,1,1,1,0,5,0,1,0,1
-596271,2018-07-14,,2018/07/14/seamlb-colmlb-1,False,1,1,1,0,4,0,0,0,1
-596271,2018-07-28,,2018/07/28/seamlb-anamlb-1,False,8,5,5,0,19,1,0,0,1
-596271,2018-08-13,,2018/08/13/seamlb-oakmlb-1,False,5,5,1,0,14,0,2,0,1
-596271,2018-09-19,,2018/09/19/seamlb-houmlb-1,False,5,2,0,0,10,0,2,0,1
-596271,2018-09-24,,2018/09/24/oakmlb-seamlb-1,False,2,0,1,0,3,0,0,0,0
-596271,2018-09-26,,2018/09/26/oakmlb-seamlb-1,False,3,5,1,0,12,1,1,0,2
+596271,2018-03-31,Casey Lawrence,2018/03/31/clemlb-seamlb-1,False,1,5,0,2,8,0,0,0,2
+596271,2018-04-09,Casey Lawrence,2018/04/09/seamlb-kcamlb-1,False,2,3,3,0,12,0,2,1,1
+596271,2018-05-04,Casey Lawrence,2018/05/04/anamlb-seamlb-1,False,3,1,1,0,8,0,1,0,2
+596271,2018-05-06,Casey Lawrence,2018/05/06/anamlb-seamlb-1,False,6,1,0,0,11,0,1,1,2
+596271,2018-07-13,Casey Lawrence,2018/07/13/seamlb-colmlb-1,False,1,1,1,0,5,0,1,0,1
+596271,2018-07-14,Casey Lawrence,2018/07/14/seamlb-colmlb-1,False,1,1,1,0,4,0,0,0,1
+596271,2018-07-28,Casey Lawrence,2018/07/28/seamlb-anamlb-1,False,8,5,5,0,19,1,0,0,1
+596271,2018-08-13,Casey Lawrence,2018/08/13/seamlb-oakmlb-1,False,5,5,1,0,14,0,2,0,1
+596271,2018-09-19,Casey Lawrence,2018/09/19/seamlb-houmlb-1,False,5,2,0,0,10,0,2,0,1
+596271,2018-09-24,Casey Lawrence,2018/09/24/oakmlb-seamlb-1,False,2,0,1,0,3,0,0,0,0
+596271,2018-09-26,Casey Lawrence,2018/09/26/oakmlb-seamlb-1,False,3,5,1,0,12,1,1,0,2
 657228,2018-06-16,Jake Jewell,2018/06/16/anamlb-oakmlb-1,False,2,0,0,0,4,0,0,1,1
 657228,2018-06-17,Jake Jewell,2018/06/17/anamlb-oakmlb-1,False,0,1,1,0,3,0,0,1,0
 657228,2018-06-27,Jake Jewell,2018/06/27/anamlb-bosmlb-1,False,1,1,1,0,4,0,1,0,0
@@ -17186,135 +17194,135 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 596112,2018-08-15,Robert Stephenson,2018/08/15/clemlb-cinmlb-1,True,2,2,1,0,11,0,4,0,2
 596112,2018-08-22,Robert Stephenson,2018/08/22/cinmlb-milmlb-1,True,8,5,6,0,26,1,3,0,4
 596112,2018-08-26,Robert Stephenson,2018/08/26/cinmlb-chnmlb-1,False,1,3,1,0,6,1,0,0,1
-594027,2018-03-29,,2018/03/29/chnmlb-miamlb-1,False,0,1,1,0,7,1,0,0,4
-594027,2018-04-01,,2018/04/01/chnmlb-miamlb-1,False,3,0,0,0,4,0,0,0,1
-594027,2018-04-03,,2018/04/03/bosmlb-miamlb-1,False,4,0,2,0,7,0,1,0,0
-594027,2018-04-05,,2018/04/05/miamlb-phimlb-1,False,0,0,0,0,4,0,1,0,3
-594027,2018-04-07,,2018/04/07/miamlb-phimlb-1,False,3,2,1,0,7,0,0,0,1
-594027,2018-04-09,,2018/04/09/nynmlb-miamlb-1,False,2,0,0,0,3,0,0,0,1
-594027,2018-04-11,,2018/04/11/nynmlb-miamlb-1,False,0,0,0,0,2,0,0,1,1
-594027,2018-04-13,,2018/04/13/pitmlb-miamlb-1,False,2,0,1,0,5,0,1,0,1
-594027,2018-04-15,,2018/04/15/pitmlb-miamlb-1,False,1,0,0,0,3,0,0,0,2
-594027,2018-04-17,,2018/04/17/miamlb-nyamlb-1,False,0,0,1,0,6,0,2,0,3
-594027,2018-04-20,,2018/04/20/miamlb-milmlb-1,False,0,0,0,0,5,0,1,0,4
-594027,2018-04-23,,2018/04/23/miamlb-lanmlb-1,False,0,0,0,0,4,0,1,0,3
-594027,2018-04-24,,2018/04/24/miamlb-lanmlb-1,False,0,1,0,0,3,0,2,0,0
-594027,2018-04-28,,2018/04/28/colmlb-miamlb-1,False,2,0,0,0,3,0,0,0,1
-594027,2018-04-30,,2018/04/30/phimlb-miamlb-1,False,0,0,1,0,3,0,0,0,2
-594027,2018-05-01,,2018/05/01/phimlb-miamlb-1,False,1,1,0,0,5,0,0,1,2
-594027,2018-05-06,,2018/05/06/miamlb-cinmlb-1,False,1,1,2,0,5,0,0,0,1
-594027,2018-05-08,,2018/05/08/miamlb-chnmlb-1,False,2,0,1,0,3,0,0,0,0
-594027,2018-05-11,,2018/05/11/atlmlb-miamlb-1,False,1,1,0,0,3,0,0,0,1
-594027,2018-05-12,,2018/05/12/atlmlb-miamlb-1,False,0,3,0,0,3,0,0,0,0
-594027,2018-05-15,,2018/05/15/lanmlb-miamlb-1,False,1,2,1,0,4,1,0,0,0
-594027,2018-05-20,,2018/05/20/miamlb-atlmlb-1,False,0,0,2,0,4,0,2,0,0
-594027,2018-05-21,,2018/05/21/miamlb-nynmlb-1,False,4,0,0,0,5,0,1,0,0
-594027,2018-05-25,,2018/05/25/wasmlb-miamlb-1,False,1,1,0,0,3,0,0,0,1
-594027,2018-05-27,,2018/05/27/wasmlb-miamlb-1,False,3,1,0,0,4,0,0,0,0
-594027,2018-05-29,,2018/05/29/miamlb-sdnmlb-1,False,1,0,1,0,4,0,2,0,0
-594027,2018-05-31,,2018/05/31/miamlb-sdnmlb-1,False,0,0,0,0,4,0,1,0,3
-594027,2018-06-01,,2018/06/01/miamlb-arimlb-1,False,1,0,2,0,3,0,0,0,0
-594027,2018-06-03,,2018/06/03/miamlb-arimlb-1,False,1,1,2,0,6,1,1,0,1
-594027,2018-06-07,,2018/06/07/miamlb-slnmlb-1,False,3,0,0,0,4,0,0,0,1
-594027,2018-06-10,,2018/06/10/sdnmlb-miamlb-1,False,2,1,1,0,7,0,0,0,3
-594027,2018-06-13,,2018/06/13/sfnmlb-miamlb-1,False,5,0,1,0,8,0,2,0,0
-594027,2018-06-16,,2018/06/16/miamlb-balmlb-1,False,0,1,2,0,5,0,0,0,2
-594027,2018-06-18,,2018/06/18/miamlb-sfnmlb-1,False,1,1,0,0,4,0,1,0,1
-594027,2018-06-20,,2018/06/20/miamlb-sfnmlb-1,False,0,2,1,1,5,0,0,0,2
-594027,2018-06-22,,2018/06/22/miamlb-colmlb-1,False,1,1,1,0,5,0,1,0,1
-594027,2018-06-24,,2018/06/24/miamlb-colmlb-1,False,0,2,0,0,6,0,0,0,4
-594027,2018-06-27,,2018/06/27/arimlb-miamlb-1,False,1,1,0,0,4,0,1,0,1
-594027,2018-06-28,,2018/06/28/arimlb-miamlb-1,False,0,1,0,0,3,0,1,0,1
-594027,2018-07-01,,2018/07/01/nynmlb-miamlb-1,False,0,2,1,0,6,0,2,0,1
-594027,2018-07-03,,2018/07/03/tbamlb-miamlb-1,False,0,2,2,0,5,0,0,0,1
-594027,2018-07-31,,2018/07/31/miamlb-atlmlb-1,False,1,3,1,1,5,1,0,0,0
-594027,2018-08-03,,2018/08/03/miamlb-phimlb-1,False,1,0,1,0,4,0,1,0,1
-594027,2018-08-05,,2018/08/05/miamlb-phimlb-1,False,2,1,0,0,3,0,0,0,0
-594027,2018-08-06,,2018/08/06/slnmlb-miamlb-1,False,3,0,0,0,4,0,0,0,1
-594027,2018-08-11,,2018/08/11/nynmlb-miamlb-1,False,1,1,1,0,3,0,0,0,0
-594027,2018-08-13,,2018/08/13/miamlb-atlmlb-2,False,1,3,0,0,4,1,0,0,0
-594027,2018-08-17,,2018/08/17/miamlb-wasmlb-1,False,1,2,1,0,5,0,0,0,1
-594027,2018-08-18,,2018/08/18/miamlb-wasmlb-1,False,1,2,1,1,5,0,0,1,0
-594027,2018-08-21,,2018/08/21/nyamlb-miamlb-1,False,1,0,0,0,4,0,0,0,3
-594027,2018-08-22,,2018/08/22/nyamlb-miamlb-1,False,2,2,0,0,5,0,0,0,1
-594027,2018-08-24,,2018/08/24/atlmlb-miamlb-1,False,0,3,0,0,4,0,1,0,0
-594027,2018-08-28,,2018/08/28/miamlb-bosmlb-1,False,2,0,3,0,7,0,1,0,1
-594027,2018-09-01,,2018/09/01/tormlb-miamlb-1,False,2,2,1,0,5,1,0,0,0
-594027,2018-09-07,,2018/09/07/miamlb-pitmlb-1,False,2,2,0,0,6,1,0,0,2
-594027,2018-09-14,,2018/09/14/miamlb-phimlb-1,False,1,1,0,0,6,1,2,0,2
-594027,2018-09-18,,2018/09/18/wasmlb-miamlb-1,False,1,0,1,0,3,0,0,0,1
-594027,2018-09-20,,2018/09/20/cinmlb-miamlb-1,False,3,0,0,0,3,0,0,0,0
-594027,2018-09-26,,2018/09/26/miamlb-wasmlb-1,False,2,1,1,1,4,0,0,0,0
-594027,2018-09-29,,2018/09/29/miamlb-nynmlb-1,False,0,1,1,0,4,0,1,0,1
-598287,2018-03-29,,2018/03/29/anamlb-oakmlb-1,False,0,3,0,1,8,0,2,0,3
-598287,2018-04-02,,2018/04/02/clemlb-anamlb-1,False,1,0,1,0,6,0,1,0,3
-598287,2018-04-04,,2018/04/04/clemlb-anamlb-1,False,0,0,0,0,1,0,0,0,1
-598287,2018-04-06,,2018/04/06/oakmlb-anamlb-1,False,2,1,1,0,5,0,0,0,1
-598287,2018-04-07,,2018/04/07/oakmlb-anamlb-1,False,1,0,2,0,6,0,1,0,2
-598287,2018-04-09,,2018/04/09/anamlb-texmlb-1,False,2,1,0,0,4,0,0,0,1
-598287,2018-04-11,,2018/04/11/anamlb-texmlb-1,False,0,0,0,0,2,0,1,0,1
-598287,2018-04-13,,2018/04/13/anamlb-kcamlb-1,False,1,0,2,0,5,0,1,0,1
-598287,2018-04-17,,2018/04/17/bosmlb-anamlb-1,False,3,2,1,0,6,0,0,0,0
-598287,2018-04-19,,2018/04/19/bosmlb-anamlb-1,False,2,1,1,0,5,0,0,1,0
-598287,2018-04-20,,2018/04/20/sfnmlb-anamlb-1,False,2,1,1,0,5,0,0,0,1
-598287,2018-04-22,,2018/04/22/sfnmlb-anamlb-1,False,1,1,0,0,4,1,0,0,2
-598287,2018-04-24,,2018/04/24/anamlb-houmlb-1,False,0,0,1,0,3,0,0,0,1
-598287,2018-04-28,,2018/04/28/nyamlb-anamlb-1,False,3,5,0,0,12,0,1,0,3
-598287,2018-05-02,,2018/05/02/balmlb-anamlb-1,False,0,0,0,0,3,0,0,0,3
-598287,2018-05-05,,2018/05/05/anamlb-seamlb-1,False,1,0,0,0,4,0,1,0,2
-598287,2018-05-06,,2018/05/06/anamlb-seamlb-1,False,1,0,0,0,1,0,0,0,0
-598287,2018-05-08,,2018/05/08/anamlb-colmlb-1,False,2,0,2,0,6,0,1,0,1
-598287,2018-05-11,,2018/05/11/minmlb-anamlb-1,False,0,2,0,0,3,0,0,0,1
-598287,2018-05-12,,2018/05/12/minmlb-anamlb-1,False,5,2,1,1,12,0,0,0,4
-598287,2018-05-16,,2018/05/16/houmlb-anamlb-1,False,2,1,0,0,4,0,0,0,1
-598287,2018-05-18,,2018/05/18/tbamlb-anamlb-1,False,0,1,1,0,4,0,0,0,2
-598287,2018-05-19,,2018/05/19/tbamlb-anamlb-1,False,3,0,0,0,5,0,2,0,0
-598287,2018-05-22,,2018/05/22/anamlb-tormlb-1,False,1,0,2,0,6,0,0,0,3
-598287,2018-05-24,,2018/05/24/anamlb-tormlb-1,False,1,0,0,0,2,0,0,0,1
-598287,2018-05-26,,2018/05/26/anamlb-nyamlb-1,False,2,2,1,0,6,0,1,0,0
-598287,2018-05-29,,2018/05/29/anamlb-detmlb-1,False,1,3,0,1,5,0,1,0,0
-598287,2018-05-31,,2018/05/31/anamlb-detmlb-1,False,1,4,3,1,9,0,0,0,1
-598287,2018-06-03,,2018/06/03/texmlb-anamlb-1,False,0,3,0,1,4,1,0,0,1
-598287,2018-06-04,,2018/06/04/kcamlb-anamlb-1,False,2,2,0,0,4,1,0,0,0
-598287,2018-06-08,,2018/06/08/anamlb-minmlb-1,False,1,0,0,0,4,0,0,0,3
-598287,2018-06-11,,2018/06/11/anamlb-seamlb-1,False,2,1,0,0,5,0,0,0,2
-598287,2018-06-13,,2018/06/13/anamlb-seamlb-1,False,3,3,0,0,9,1,1,0,2
-598287,2018-06-16,,2018/06/16/anamlb-oakmlb-1,False,0,1,1,0,8,0,2,2,2
-598287,2018-06-18,,2018/06/18/arimlb-anamlb-1,False,1,0,0,0,5,0,1,0,3
-598287,2018-06-21,,2018/06/21/tormlb-anamlb-1,False,1,3,0,1,8,0,0,0,4
-598287,2018-06-24,,2018/06/24/tormlb-anamlb-1,False,0,3,0,0,5,2,0,0,2
-598287,2018-06-28,,2018/06/28/anamlb-bosmlb-1,False,2,2,0,0,5,1,0,0,1
-598287,2018-06-30,,2018/06/30/anamlb-balmlb-1,False,1,0,1,0,3,0,1,0,0
-598287,2018-07-03,,2018/07/03/anamlb-seamlb-1,False,0,2,1,0,4,1,0,0,1
-598287,2018-07-06,,2018/07/06/lanmlb-anamlb-1,False,1,0,0,0,3,0,2,0,0
-598287,2018-07-07,,2018/07/07/lanmlb-anamlb-1,False,1,1,0,0,4,1,0,0,2
-598287,2018-07-10,,2018/07/10/seamlb-anamlb-1,False,1,2,1,0,5,0,0,0,1
-598287,2018-07-12,,2018/07/12/seamlb-anamlb-1,False,1,0,1,0,5,0,1,1,1
-598287,2018-07-15,,2018/07/15/anamlb-lanmlb-1,False,2,3,0,1,6,0,0,0,1
-598287,2018-07-20,,2018/07/20/houmlb-anamlb-1,False,1,0,1,0,3,0,0,0,1
-598287,2018-07-21,,2018/07/21/houmlb-anamlb-1,False,0,1,0,0,4,1,1,1,1
-598287,2018-07-24,,2018/07/24/chamlb-anamlb-1,False,2,3,2,0,9,1,0,0,2
-598287,2018-07-28,,2018/07/28/seamlb-anamlb-1,False,6,2,0,0,10,1,0,0,2
-598287,2018-07-31,,2018/07/31/anamlb-tbamlb-1,False,4,1,4,0,11,0,0,0,2
-598287,2018-08-04,,2018/08/04/anamlb-clemlb-1,False,4,0,0,0,4,0,0,0,0
-598287,2018-08-06,,2018/08/06/detmlb-anamlb-1,False,1,0,1,0,4,0,2,0,0
-598287,2018-08-08,,2018/08/08/detmlb-anamlb-1,False,0,1,1,0,3,0,0,0,1
-598287,2018-08-11,,2018/08/11/oakmlb-anamlb-1,False,1,4,0,0,7,0,1,0,1
-598287,2018-08-14,,2018/08/14/anamlb-sdnmlb-1,False,0,0,0,0,1,0,0,0,1
-598287,2018-08-16,,2018/08/16/anamlb-texmlb-1,False,3,1,0,0,7,0,0,1,2
-598287,2018-08-19,,2018/08/19/anamlb-texmlb-1,False,3,2,1,0,6,1,0,0,0
-598287,2018-08-22,,2018/08/22/anamlb-arimlb-1,False,0,0,0,0,1,0,0,0,1
-598287,2018-08-24,,2018/08/24/houmlb-anamlb-1,False,1,1,2,0,5,0,1,0,0
-598287,2018-08-27,,2018/08/27/colmlb-anamlb-1,False,0,2,0,0,3,0,0,0,1
-598287,2018-08-28,,2018/08/28/colmlb-anamlb-1,True,0,1,2,0,5,1,0,0,2
-598287,2018-09-02,,2018/09/02/anamlb-houmlb-1,False,3,1,0,0,6,0,0,0,2
-598287,2018-09-05,,2018/09/05/anamlb-texmlb-1,False,0,1,1,0,3,0,0,0,1
-598287,2018-09-11,,2018/09/11/texmlb-anamlb-1,False,1,1,0,0,6,0,1,0,3
-598287,2018-09-13,,2018/09/13/seamlb-anamlb-1,False,1,1,1,0,7,1,2,0,2
-598287,2018-09-18,,2018/09/18/anamlb-oakmlb-1,False,2,1,0,0,4,0,1,0,0
-598287,2018-09-21,,2018/09/21/anamlb-houmlb-1,False,1,2,0,0,6,0,0,0,3
-598287,2018-09-25,,2018/09/25/texmlb-anamlb-1,False,2,1,0,0,4,0,0,0,1
-598287,2018-09-29,,2018/09/29/oakmlb-anamlb-1,False,3,0,1,0,5,0,0,0,1
+594027,2018-03-29,Tayron Guerrero,2018/03/29/chnmlb-miamlb-1,False,0,1,1,0,7,1,0,0,4
+594027,2018-04-01,Tayron Guerrero,2018/04/01/chnmlb-miamlb-1,False,3,0,0,0,4,0,0,0,1
+594027,2018-04-03,Tayron Guerrero,2018/04/03/bosmlb-miamlb-1,False,4,0,2,0,7,0,1,0,0
+594027,2018-04-05,Tayron Guerrero,2018/04/05/miamlb-phimlb-1,False,0,0,0,0,4,0,1,0,3
+594027,2018-04-07,Tayron Guerrero,2018/04/07/miamlb-phimlb-1,False,3,2,1,0,7,0,0,0,1
+594027,2018-04-09,Tayron Guerrero,2018/04/09/nynmlb-miamlb-1,False,2,0,0,0,3,0,0,0,1
+594027,2018-04-11,Tayron Guerrero,2018/04/11/nynmlb-miamlb-1,False,0,0,0,0,2,0,0,1,1
+594027,2018-04-13,Tayron Guerrero,2018/04/13/pitmlb-miamlb-1,False,2,0,1,0,5,0,1,0,1
+594027,2018-04-15,Tayron Guerrero,2018/04/15/pitmlb-miamlb-1,False,1,0,0,0,3,0,0,0,2
+594027,2018-04-17,Tayron Guerrero,2018/04/17/miamlb-nyamlb-1,False,0,0,1,0,6,0,2,0,3
+594027,2018-04-20,Tayron Guerrero,2018/04/20/miamlb-milmlb-1,False,0,0,0,0,5,0,1,0,4
+594027,2018-04-23,Tayron Guerrero,2018/04/23/miamlb-lanmlb-1,False,0,0,0,0,4,0,1,0,3
+594027,2018-04-24,Tayron Guerrero,2018/04/24/miamlb-lanmlb-1,False,0,1,0,0,3,0,2,0,0
+594027,2018-04-28,Tayron Guerrero,2018/04/28/colmlb-miamlb-1,False,2,0,0,0,3,0,0,0,1
+594027,2018-04-30,Tayron Guerrero,2018/04/30/phimlb-miamlb-1,False,0,0,1,0,3,0,0,0,2
+594027,2018-05-01,Tayron Guerrero,2018/05/01/phimlb-miamlb-1,False,1,1,0,0,5,0,0,1,2
+594027,2018-05-06,Tayron Guerrero,2018/05/06/miamlb-cinmlb-1,False,1,1,2,0,5,0,0,0,1
+594027,2018-05-08,Tayron Guerrero,2018/05/08/miamlb-chnmlb-1,False,2,0,1,0,3,0,0,0,0
+594027,2018-05-11,Tayron Guerrero,2018/05/11/atlmlb-miamlb-1,False,1,1,0,0,3,0,0,0,1
+594027,2018-05-12,Tayron Guerrero,2018/05/12/atlmlb-miamlb-1,False,0,3,0,0,3,0,0,0,0
+594027,2018-05-15,Tayron Guerrero,2018/05/15/lanmlb-miamlb-1,False,1,2,1,0,4,1,0,0,0
+594027,2018-05-20,Tayron Guerrero,2018/05/20/miamlb-atlmlb-1,False,0,0,2,0,4,0,2,0,0
+594027,2018-05-21,Tayron Guerrero,2018/05/21/miamlb-nynmlb-1,False,4,0,0,0,5,0,1,0,0
+594027,2018-05-25,Tayron Guerrero,2018/05/25/wasmlb-miamlb-1,False,1,1,0,0,3,0,0,0,1
+594027,2018-05-27,Tayron Guerrero,2018/05/27/wasmlb-miamlb-1,False,3,1,0,0,4,0,0,0,0
+594027,2018-05-29,Tayron Guerrero,2018/05/29/miamlb-sdnmlb-1,False,1,0,1,0,4,0,2,0,0
+594027,2018-05-31,Tayron Guerrero,2018/05/31/miamlb-sdnmlb-1,False,0,0,0,0,4,0,1,0,3
+594027,2018-06-01,Tayron Guerrero,2018/06/01/miamlb-arimlb-1,False,1,0,2,0,3,0,0,0,0
+594027,2018-06-03,Tayron Guerrero,2018/06/03/miamlb-arimlb-1,False,1,1,2,0,6,1,1,0,1
+594027,2018-06-07,Tayron Guerrero,2018/06/07/miamlb-slnmlb-1,False,3,0,0,0,4,0,0,0,1
+594027,2018-06-10,Tayron Guerrero,2018/06/10/sdnmlb-miamlb-1,False,2,1,1,0,7,0,0,0,3
+594027,2018-06-13,Tayron Guerrero,2018/06/13/sfnmlb-miamlb-1,False,5,0,1,0,8,0,2,0,0
+594027,2018-06-16,Tayron Guerrero,2018/06/16/miamlb-balmlb-1,False,0,1,2,0,5,0,0,0,2
+594027,2018-06-18,Tayron Guerrero,2018/06/18/miamlb-sfnmlb-1,False,1,1,0,0,4,0,1,0,1
+594027,2018-06-20,Tayron Guerrero,2018/06/20/miamlb-sfnmlb-1,False,0,2,1,1,5,0,0,0,2
+594027,2018-06-22,Tayron Guerrero,2018/06/22/miamlb-colmlb-1,False,1,1,1,0,5,0,1,0,1
+594027,2018-06-24,Tayron Guerrero,2018/06/24/miamlb-colmlb-1,False,0,2,0,0,6,0,0,0,4
+594027,2018-06-27,Tayron Guerrero,2018/06/27/arimlb-miamlb-1,False,1,1,0,0,4,0,1,0,1
+594027,2018-06-28,Tayron Guerrero,2018/06/28/arimlb-miamlb-1,False,0,1,0,0,3,0,1,0,1
+594027,2018-07-01,Tayron Guerrero,2018/07/01/nynmlb-miamlb-1,False,0,2,1,0,6,0,2,0,1
+594027,2018-07-03,Tayron Guerrero,2018/07/03/tbamlb-miamlb-1,False,0,2,2,0,5,0,0,0,1
+594027,2018-07-31,Tayron Guerrero,2018/07/31/miamlb-atlmlb-1,False,1,3,1,1,5,1,0,0,0
+594027,2018-08-03,Tayron Guerrero,2018/08/03/miamlb-phimlb-1,False,1,0,1,0,4,0,1,0,1
+594027,2018-08-05,Tayron Guerrero,2018/08/05/miamlb-phimlb-1,False,2,1,0,0,3,0,0,0,0
+594027,2018-08-06,Tayron Guerrero,2018/08/06/slnmlb-miamlb-1,False,3,0,0,0,4,0,0,0,1
+594027,2018-08-11,Tayron Guerrero,2018/08/11/nynmlb-miamlb-1,False,1,1,1,0,3,0,0,0,0
+594027,2018-08-13,Tayron Guerrero,2018/08/13/miamlb-atlmlb-2,False,1,3,0,0,4,1,0,0,0
+594027,2018-08-17,Tayron Guerrero,2018/08/17/miamlb-wasmlb-1,False,1,2,1,0,5,0,0,0,1
+594027,2018-08-18,Tayron Guerrero,2018/08/18/miamlb-wasmlb-1,False,1,2,1,1,5,0,0,1,0
+594027,2018-08-21,Tayron Guerrero,2018/08/21/nyamlb-miamlb-1,False,1,0,0,0,4,0,0,0,3
+594027,2018-08-22,Tayron Guerrero,2018/08/22/nyamlb-miamlb-1,False,2,2,0,0,5,0,0,0,1
+594027,2018-08-24,Tayron Guerrero,2018/08/24/atlmlb-miamlb-1,False,0,3,0,0,4,0,1,0,0
+594027,2018-08-28,Tayron Guerrero,2018/08/28/miamlb-bosmlb-1,False,2,0,3,0,7,0,1,0,1
+594027,2018-09-01,Tayron Guerrero,2018/09/01/tormlb-miamlb-1,False,2,2,1,0,5,1,0,0,0
+594027,2018-09-07,Tayron Guerrero,2018/09/07/miamlb-pitmlb-1,False,2,2,0,0,6,1,0,0,2
+594027,2018-09-14,Tayron Guerrero,2018/09/14/miamlb-phimlb-1,False,1,1,0,0,6,1,2,0,2
+594027,2018-09-18,Tayron Guerrero,2018/09/18/wasmlb-miamlb-1,False,1,0,1,0,3,0,0,0,1
+594027,2018-09-20,Tayron Guerrero,2018/09/20/cinmlb-miamlb-1,False,3,0,0,0,3,0,0,0,0
+594027,2018-09-26,Tayron Guerrero,2018/09/26/miamlb-wasmlb-1,False,2,1,1,1,4,0,0,0,0
+594027,2018-09-29,Tayron Guerrero,2018/09/29/miamlb-nynmlb-1,False,0,1,1,0,4,0,1,0,1
+598287,2018-03-29,Noe Ramirez,2018/03/29/anamlb-oakmlb-1,False,0,3,0,1,8,0,2,0,3
+598287,2018-04-02,Noe Ramirez,2018/04/02/clemlb-anamlb-1,False,1,0,1,0,6,0,1,0,3
+598287,2018-04-04,Noe Ramirez,2018/04/04/clemlb-anamlb-1,False,0,0,0,0,1,0,0,0,1
+598287,2018-04-06,Noe Ramirez,2018/04/06/oakmlb-anamlb-1,False,2,1,1,0,5,0,0,0,1
+598287,2018-04-07,Noe Ramirez,2018/04/07/oakmlb-anamlb-1,False,1,0,2,0,6,0,1,0,2
+598287,2018-04-09,Noe Ramirez,2018/04/09/anamlb-texmlb-1,False,2,1,0,0,4,0,0,0,1
+598287,2018-04-11,Noe Ramirez,2018/04/11/anamlb-texmlb-1,False,0,0,0,0,2,0,1,0,1
+598287,2018-04-13,Noe Ramirez,2018/04/13/anamlb-kcamlb-1,False,1,0,2,0,5,0,1,0,1
+598287,2018-04-17,Noe Ramirez,2018/04/17/bosmlb-anamlb-1,False,3,2,1,0,6,0,0,0,0
+598287,2018-04-19,Noe Ramirez,2018/04/19/bosmlb-anamlb-1,False,2,1,1,0,5,0,0,1,0
+598287,2018-04-20,Noe Ramirez,2018/04/20/sfnmlb-anamlb-1,False,2,1,1,0,5,0,0,0,1
+598287,2018-04-22,Noe Ramirez,2018/04/22/sfnmlb-anamlb-1,False,1,1,0,0,4,1,0,0,2
+598287,2018-04-24,Noe Ramirez,2018/04/24/anamlb-houmlb-1,False,0,0,1,0,3,0,0,0,1
+598287,2018-04-28,Noe Ramirez,2018/04/28/nyamlb-anamlb-1,False,3,5,0,0,12,0,1,0,3
+598287,2018-05-02,Noe Ramirez,2018/05/02/balmlb-anamlb-1,False,0,0,0,0,3,0,0,0,3
+598287,2018-05-05,Noe Ramirez,2018/05/05/anamlb-seamlb-1,False,1,0,0,0,4,0,1,0,2
+598287,2018-05-06,Noe Ramirez,2018/05/06/anamlb-seamlb-1,False,1,0,0,0,1,0,0,0,0
+598287,2018-05-08,Noe Ramirez,2018/05/08/anamlb-colmlb-1,False,2,0,2,0,6,0,1,0,1
+598287,2018-05-11,Noe Ramirez,2018/05/11/minmlb-anamlb-1,False,0,2,0,0,3,0,0,0,1
+598287,2018-05-12,Noe Ramirez,2018/05/12/minmlb-anamlb-1,False,5,2,1,1,12,0,0,0,4
+598287,2018-05-16,Noe Ramirez,2018/05/16/houmlb-anamlb-1,False,2,1,0,0,4,0,0,0,1
+598287,2018-05-18,Noe Ramirez,2018/05/18/tbamlb-anamlb-1,False,0,1,1,0,4,0,0,0,2
+598287,2018-05-19,Noe Ramirez,2018/05/19/tbamlb-anamlb-1,False,3,0,0,0,5,0,2,0,0
+598287,2018-05-22,Noe Ramirez,2018/05/22/anamlb-tormlb-1,False,1,0,2,0,6,0,0,0,3
+598287,2018-05-24,Noe Ramirez,2018/05/24/anamlb-tormlb-1,False,1,0,0,0,2,0,0,0,1
+598287,2018-05-26,Noe Ramirez,2018/05/26/anamlb-nyamlb-1,False,2,2,1,0,6,0,1,0,0
+598287,2018-05-29,Noe Ramirez,2018/05/29/anamlb-detmlb-1,False,1,3,0,1,5,0,1,0,0
+598287,2018-05-31,Noe Ramirez,2018/05/31/anamlb-detmlb-1,False,1,4,3,1,9,0,0,0,1
+598287,2018-06-03,Noe Ramirez,2018/06/03/texmlb-anamlb-1,False,0,3,0,1,4,1,0,0,1
+598287,2018-06-04,Noe Ramirez,2018/06/04/kcamlb-anamlb-1,False,2,2,0,0,4,1,0,0,0
+598287,2018-06-08,Noe Ramirez,2018/06/08/anamlb-minmlb-1,False,1,0,0,0,4,0,0,0,3
+598287,2018-06-11,Noe Ramirez,2018/06/11/anamlb-seamlb-1,False,2,1,0,0,5,0,0,0,2
+598287,2018-06-13,Noe Ramirez,2018/06/13/anamlb-seamlb-1,False,3,3,0,0,9,1,1,0,2
+598287,2018-06-16,Noe Ramirez,2018/06/16/anamlb-oakmlb-1,False,0,1,1,0,8,0,2,2,2
+598287,2018-06-18,Noe Ramirez,2018/06/18/arimlb-anamlb-1,False,1,0,0,0,5,0,1,0,3
+598287,2018-06-21,Noe Ramirez,2018/06/21/tormlb-anamlb-1,False,1,3,0,1,8,0,0,0,4
+598287,2018-06-24,Noe Ramirez,2018/06/24/tormlb-anamlb-1,False,0,3,0,0,5,2,0,0,2
+598287,2018-06-28,Noe Ramirez,2018/06/28/anamlb-bosmlb-1,False,2,2,0,0,5,1,0,0,1
+598287,2018-06-30,Noe Ramirez,2018/06/30/anamlb-balmlb-1,False,1,0,1,0,3,0,1,0,0
+598287,2018-07-03,Noe Ramirez,2018/07/03/anamlb-seamlb-1,False,0,2,1,0,4,1,0,0,1
+598287,2018-07-06,Noe Ramirez,2018/07/06/lanmlb-anamlb-1,False,1,0,0,0,3,0,2,0,0
+598287,2018-07-07,Noe Ramirez,2018/07/07/lanmlb-anamlb-1,False,1,1,0,0,4,1,0,0,2
+598287,2018-07-10,Noe Ramirez,2018/07/10/seamlb-anamlb-1,False,1,2,1,0,5,0,0,0,1
+598287,2018-07-12,Noe Ramirez,2018/07/12/seamlb-anamlb-1,False,1,0,1,0,5,0,1,1,1
+598287,2018-07-15,Noe Ramirez,2018/07/15/anamlb-lanmlb-1,False,2,3,0,1,6,0,0,0,1
+598287,2018-07-20,Noe Ramirez,2018/07/20/houmlb-anamlb-1,False,1,0,1,0,3,0,0,0,1
+598287,2018-07-21,Noe Ramirez,2018/07/21/houmlb-anamlb-1,False,0,1,0,0,4,1,1,1,1
+598287,2018-07-24,Noe Ramirez,2018/07/24/chamlb-anamlb-1,False,2,3,2,0,9,1,0,0,2
+598287,2018-07-28,Noe Ramirez,2018/07/28/seamlb-anamlb-1,False,6,2,0,0,10,1,0,0,2
+598287,2018-07-31,Noe Ramirez,2018/07/31/anamlb-tbamlb-1,False,4,1,4,0,11,0,0,0,2
+598287,2018-08-04,Noe Ramirez,2018/08/04/anamlb-clemlb-1,False,4,0,0,0,4,0,0,0,0
+598287,2018-08-06,Noe Ramirez,2018/08/06/detmlb-anamlb-1,False,1,0,1,0,4,0,2,0,0
+598287,2018-08-08,Noe Ramirez,2018/08/08/detmlb-anamlb-1,False,0,1,1,0,3,0,0,0,1
+598287,2018-08-11,Noe Ramirez,2018/08/11/oakmlb-anamlb-1,False,1,4,0,0,7,0,1,0,1
+598287,2018-08-14,Noe Ramirez,2018/08/14/anamlb-sdnmlb-1,False,0,0,0,0,1,0,0,0,1
+598287,2018-08-16,Noe Ramirez,2018/08/16/anamlb-texmlb-1,False,3,1,0,0,7,0,0,1,2
+598287,2018-08-19,Noe Ramirez,2018/08/19/anamlb-texmlb-1,False,3,2,1,0,6,1,0,0,0
+598287,2018-08-22,Noe Ramirez,2018/08/22/anamlb-arimlb-1,False,0,0,0,0,1,0,0,0,1
+598287,2018-08-24,Noe Ramirez,2018/08/24/houmlb-anamlb-1,False,1,1,2,0,5,0,1,0,0
+598287,2018-08-27,Noe Ramirez,2018/08/27/colmlb-anamlb-1,False,0,2,0,0,3,0,0,0,1
+598287,2018-08-28,Noe Ramirez,2018/08/28/colmlb-anamlb-1,True,0,1,2,0,5,1,0,0,2
+598287,2018-09-02,Noe Ramirez,2018/09/02/anamlb-houmlb-1,False,3,1,0,0,6,0,0,0,2
+598287,2018-09-05,Noe Ramirez,2018/09/05/anamlb-texmlb-1,False,0,1,1,0,3,0,0,0,1
+598287,2018-09-11,Noe Ramirez,2018/09/11/texmlb-anamlb-1,False,1,1,0,0,6,0,1,0,3
+598287,2018-09-13,Noe Ramirez,2018/09/13/seamlb-anamlb-1,False,1,1,1,0,7,1,2,0,2
+598287,2018-09-18,Noe Ramirez,2018/09/18/anamlb-oakmlb-1,False,2,1,0,0,4,0,1,0,0
+598287,2018-09-21,Noe Ramirez,2018/09/21/anamlb-houmlb-1,False,1,2,0,0,6,0,0,0,3
+598287,2018-09-25,Noe Ramirez,2018/09/25/texmlb-anamlb-1,False,2,1,0,0,4,0,0,0,1
+598287,2018-09-29,Noe Ramirez,2018/09/29/oakmlb-anamlb-1,False,3,0,1,0,5,0,0,0,1
 605441,2018-03-30,Yacksel Rios,2018/03/30/phimlb-atlmlb-1,False,2,0,0,0,3,0,0,0,1
 605441,2018-03-31,Yacksel Rios,2018/03/31/phimlb-atlmlb-1,False,4,0,1,0,6,0,1,0,0
 605441,2018-04-03,Yacksel Rios,2018/04/03/phimlb-nynmlb-1,False,1,0,0,0,1,0,0,0,0
@@ -19110,35 +19118,35 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 519240,2018-07-06,Marc Rzepczynski,2018/07/06/oakmlb-clemlb-1,False,0,0,1,0,1,0,0,0,0
 519240,2018-07-08,Marc Rzepczynski,2018/07/08/oakmlb-clemlb-1,False,0,0,0,0,1,0,1,0,0
 519240,2018-07-09,Marc Rzepczynski,2018/07/09/cinmlb-clemlb-1,False,3,0,1,0,4,0,0,0,0
-623451,2018-03-31,,2018/03/31/wasmlb-cinmlb-1,False,0,3,2,0,7,0,0,1,1
-623451,2018-05-07,,2018/05/07/nynmlb-cinmlb-1,False,5,3,0,0,10,1,1,0,1
-623451,2018-05-11,,2018/05/11/cinmlb-lanmlb-1,False,0,3,1,1,6,0,0,0,2
-623451,2018-05-14,,2018/05/14/cinmlb-sfnmlb-1,False,2,2,1,0,9,0,0,0,2
-623451,2018-05-18,,2018/05/18/chnmlb-cinmlb-1,False,8,2,3,0,16,0,1,0,2
-623451,2018-05-23,,2018/05/23/pitmlb-cinmlb-1,False,2,0,0,0,3,0,0,0,1
-623451,2018-05-27,,2018/05/27/cinmlb-colmlb-1,False,0,1,0,0,3,0,0,0,2
-623451,2018-05-28,,2018/05/28/cinmlb-arimlb-1,False,0,1,3,0,5,1,0,0,1
-623451,2018-06-02,,2018/06/02/cinmlb-sdnmlb-1,False,2,1,3,0,6,0,0,0,0
-623451,2018-06-24,,2018/06/24/chnmlb-cinmlb-1,False,2,1,0,0,4,1,0,0,1
-623451,2018-06-27,,2018/06/27/cinmlb-atlmlb-1,False,2,1,1,1,6,0,0,0,2
-623451,2018-06-29,,2018/06/29/milmlb-cinmlb-1,False,0,1,2,0,4,1,0,0,1
-623451,2018-07-01,,2018/07/01/milmlb-cinmlb-1,False,2,1,0,1,3,0,0,0,0
-623451,2018-07-03,,2018/07/03/chamlb-cinmlb-1,False,3,1,2,0,10,0,3,0,0
-623451,2018-07-08,,2018/07/08/cinmlb-chnmlb-1,False,1,0,0,0,5,0,3,0,1
-623451,2018-07-11,,2018/07/11/cinmlb-clemlb-1,False,5,3,1,0,12,1,1,0,2
-623451,2018-07-20,,2018/07/20/pitmlb-cinmlb-1,False,2,2,4,0,9,1,0,0,1
-623451,2018-07-22,,2018/07/22/pitmlb-cinmlb-1,False,4,4,6,0,17,0,0,0,3
-623451,2018-08-29,,2018/08/29/milmlb-cinmlb-1,False,0,1,1,0,4,0,0,0,2
-623451,2018-08-30,,2018/08/30/milmlb-cinmlb-1,False,1,1,1,1,4,0,0,1,0
-623451,2018-08-31,,2018/08/31/cinmlb-slnmlb-1,False,1,1,2,0,9,1,2,1,0
-623451,2018-09-03,,2018/09/03/cinmlb-pitmlb-1,False,0,1,0,0,3,0,0,0,2
-623451,2018-09-07,,2018/09/07/sdnmlb-cinmlb-1,False,2,0,0,0,3,0,0,0,1
-623451,2018-09-12,,2018/09/12/lanmlb-cinmlb-1,False,0,2,1,0,5,0,1,0,1
-623451,2018-09-17,,2018/09/17/cinmlb-milmlb-1,False,0,2,1,0,4,0,0,0,1
-623451,2018-09-19,,2018/09/19/cinmlb-milmlb-1,False,1,2,0,0,4,0,1,0,0
-623451,2018-09-22,,2018/09/22/cinmlb-miamlb-1,False,1,0,2,0,3,0,0,0,0
-623451,2018-09-26,,2018/09/26/kcamlb-cinmlb-1,False,1,0,0,0,3,0,0,0,2
-623451,2018-09-30,,2018/09/30/pitmlb-cinmlb-1,False,0,0,3,0,6,0,2,0,1
+623451,2018-03-31,Jackson Stephens,2018/03/31/wasmlb-cinmlb-1,False,0,3,2,0,7,0,0,1,1
+623451,2018-05-07,Jackson Stephens,2018/05/07/nynmlb-cinmlb-1,False,5,3,0,0,10,1,1,0,1
+623451,2018-05-11,Jackson Stephens,2018/05/11/cinmlb-lanmlb-1,False,0,3,1,1,6,0,0,0,2
+623451,2018-05-14,Jackson Stephens,2018/05/14/cinmlb-sfnmlb-1,False,2,2,1,0,9,0,0,0,2
+623451,2018-05-18,Jackson Stephens,2018/05/18/chnmlb-cinmlb-1,False,8,2,3,0,16,0,1,0,2
+623451,2018-05-23,Jackson Stephens,2018/05/23/pitmlb-cinmlb-1,False,2,0,0,0,3,0,0,0,1
+623451,2018-05-27,Jackson Stephens,2018/05/27/cinmlb-colmlb-1,False,0,1,0,0,3,0,0,0,2
+623451,2018-05-28,Jackson Stephens,2018/05/28/cinmlb-arimlb-1,False,0,1,3,0,5,1,0,0,1
+623451,2018-06-02,Jackson Stephens,2018/06/02/cinmlb-sdnmlb-1,False,2,1,3,0,6,0,0,0,0
+623451,2018-06-24,Jackson Stephens,2018/06/24/chnmlb-cinmlb-1,False,2,1,0,0,4,1,0,0,1
+623451,2018-06-27,Jackson Stephens,2018/06/27/cinmlb-atlmlb-1,False,2,1,1,1,6,0,0,0,2
+623451,2018-06-29,Jackson Stephens,2018/06/29/milmlb-cinmlb-1,False,0,1,2,0,4,1,0,0,1
+623451,2018-07-01,Jackson Stephens,2018/07/01/milmlb-cinmlb-1,False,2,1,0,1,3,0,0,0,0
+623451,2018-07-03,Jackson Stephens,2018/07/03/chamlb-cinmlb-1,False,3,1,2,0,10,0,3,0,0
+623451,2018-07-08,Jackson Stephens,2018/07/08/cinmlb-chnmlb-1,False,1,0,0,0,5,0,3,0,1
+623451,2018-07-11,Jackson Stephens,2018/07/11/cinmlb-clemlb-1,False,5,3,1,0,12,1,1,0,2
+623451,2018-07-20,Jackson Stephens,2018/07/20/pitmlb-cinmlb-1,False,2,2,4,0,9,1,0,0,1
+623451,2018-07-22,Jackson Stephens,2018/07/22/pitmlb-cinmlb-1,False,4,4,6,0,17,0,0,0,3
+623451,2018-08-29,Jackson Stephens,2018/08/29/milmlb-cinmlb-1,False,0,1,1,0,4,0,0,0,2
+623451,2018-08-30,Jackson Stephens,2018/08/30/milmlb-cinmlb-1,False,1,1,1,1,4,0,0,1,0
+623451,2018-08-31,Jackson Stephens,2018/08/31/cinmlb-slnmlb-1,False,1,1,2,0,9,1,2,1,0
+623451,2018-09-03,Jackson Stephens,2018/09/03/cinmlb-pitmlb-1,False,0,1,0,0,3,0,0,0,2
+623451,2018-09-07,Jackson Stephens,2018/09/07/sdnmlb-cinmlb-1,False,2,0,0,0,3,0,0,0,1
+623451,2018-09-12,Jackson Stephens,2018/09/12/lanmlb-cinmlb-1,False,0,2,1,0,5,0,1,0,1
+623451,2018-09-17,Jackson Stephens,2018/09/17/cinmlb-milmlb-1,False,0,2,1,0,4,0,0,0,1
+623451,2018-09-19,Jackson Stephens,2018/09/19/cinmlb-milmlb-1,False,1,2,0,0,4,0,1,0,0
+623451,2018-09-22,Jackson Stephens,2018/09/22/cinmlb-miamlb-1,False,1,0,2,0,3,0,0,0,0
+623451,2018-09-26,Jackson Stephens,2018/09/26/kcamlb-cinmlb-1,False,1,0,0,0,3,0,0,0,2
+623451,2018-09-30,Jackson Stephens,2018/09/30/pitmlb-cinmlb-1,False,0,0,3,0,6,0,2,0,1
 639373,2018-04-17,Gerson Bautista,2018/04/17/wasmlb-nynmlb-1,False,3,0,0,0,5,0,1,0,1
 639373,2018-04-19,Gerson Bautista,2018/04/19/nynmlb-atlmlb-1,False,1,3,1,0,9,0,3,0,1
 639373,2018-05-29,Gerson Bautista,2018/05/29/nynmlb-atlmlb-1,False,0,1,1,0,2,1,0,0,0
@@ -19219,15 +19227,15 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 592779,2018-06-06,Brock Stewart,2018/06/06/lanmlb-pitmlb-1,False,3,3,2,1,11,0,2,1,0
 592779,2018-06-07,Brock Stewart,2018/06/07/lanmlb-pitmlb-1,False,2,1,1,0,4,1,0,0,0
 592779,2018-06-19,Brock Stewart,2018/06/19/lanmlb-chnmlb-2,False,1,1,0,0,3,0,1,0,0
-608371,2018-04-19,,2018/04/19/nynmlb-atlmlb-1,False,0,2,1,1,6,1,3,0,0
-608371,2018-05-05,,2018/05/05/sfnmlb-atlmlb-1,False,4,2,2,0,16,0,1,1,6
-608371,2018-05-20,,2018/05/20/miamlb-atlmlb-1,False,2,5,1,0,10,1,1,0,1
-608371,2018-05-26,,2018/05/26/atlmlb-bosmlb-1,False,3,0,0,0,3,0,0,0,0
-608371,2018-05-28,,2018/05/28/nynmlb-atlmlb-2,False,1,2,2,0,10,0,2,0,3
-608371,2018-06-25,,2018/06/25/cinmlb-atlmlb-1,False,4,1,1,1,7,0,1,0,0
-608371,2018-09-02,,2018/09/02/cinmlb-slnmlb-1,False,2,1,0,0,7,0,1,0,3
-608371,2018-09-05,,2018/09/05/cinmlb-pitmlb-1,False,0,3,1,0,7,0,1,1,1
-608371,2018-09-09,,2018/09/09/sdnmlb-cinmlb-1,False,1,3,2,0,11,1,3,0,2
+608371,2018-04-19,Lucas Sims,2018/04/19/nynmlb-atlmlb-1,False,0,2,1,1,6,1,3,0,0
+608371,2018-05-05,Lucas Sims,2018/05/05/sfnmlb-atlmlb-1,False,4,2,2,0,16,0,1,1,6
+608371,2018-05-20,Lucas Sims,2018/05/20/miamlb-atlmlb-1,False,2,5,1,0,10,1,1,0,1
+608371,2018-05-26,Lucas Sims,2018/05/26/atlmlb-bosmlb-1,False,3,0,0,0,3,0,0,0,0
+608371,2018-05-28,Lucas Sims,2018/05/28/nynmlb-atlmlb-2,False,1,2,2,0,10,0,2,0,3
+608371,2018-06-25,Lucas Sims,2018/06/25/cinmlb-atlmlb-1,False,4,1,1,1,7,0,1,0,0
+608371,2018-09-02,Lucas Sims,2018/09/02/cinmlb-slnmlb-1,False,2,1,0,0,7,0,1,0,3
+608371,2018-09-05,Lucas Sims,2018/09/05/cinmlb-pitmlb-1,False,0,3,1,0,7,0,1,1,1
+608371,2018-09-09,Lucas Sims,2018/09/09/sdnmlb-cinmlb-1,False,1,3,2,0,11,1,3,0,2
 643466,2018-04-23,Harrison Musgrave,2018/04/23/sdnmlb-colmlb-1,False,1,0,0,0,3,0,0,0,1
 643466,2018-05-02,Harrison Musgrave,2018/05/02/colmlb-chnmlb-1,False,1,3,0,0,5,0,1,0,0
 643466,2018-05-10,Harrison Musgrave,2018/05/10/milmlb-colmlb-1,False,2,2,2,0,7,0,1,0,0
@@ -19657,24 +19665,24 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 608665,2018-05-11,Kendall Graveman,2018/05/11/oakmlb-nyamlb-1,True,12,6,0,1,24,2,2,0,4
 500724,2018-04-02,JC Ramirez,2018/04/02/clemlb-anamlb-1,True,4,6,6,0,21,3,2,0,3
 500724,2018-04-07,JC Ramirez,2018/04/07/oakmlb-anamlb-1,True,1,2,3,0,12,0,5,0,1
-592468,2018-04-29,,2018/04/29/slnmlb-pitmlb-1,True,4,7,2,0,22,0,0,0,9
-592468,2018-05-04,,2018/05/04/pitmlb-milmlb-1,True,6,4,5,1,23,2,1,0,7
-592468,2018-05-19,,2018/05/19/sdnmlb-pitmlb-1,True,10,4,4,0,24,0,1,0,5
-592468,2018-05-29,,2018/05/29/chnmlb-pitmlb-1,True,5,11,4,2,27,1,2,1,4
-592468,2018-06-03,,2018/06/03/pitmlb-slnmlb-1,True,6,7,3,0,22,1,1,0,5
-592468,2018-06-09,,2018/06/09/pitmlb-chnmlb-1,True,5,11,2,0,26,0,2,1,5
-592468,2018-07-02,,2018/07/02/pitmlb-lanmlb-1,True,7,6,3,0,21,3,3,0,2
-592468,2018-07-08,,2018/07/08/phimlb-pitmlb-1,True,8,5,3,1,24,1,1,1,5
-592468,2018-07-13,,2018/07/13/milmlb-pitmlb-1,True,10,3,1,0,24,2,1,0,9
-592468,2018-07-21,,2018/07/21/pitmlb-cinmlb-1,True,9,8,3,2,25,1,2,0,3
-592468,2018-07-26,,2018/07/26/nynmlb-pitmlb-1,True,6,5,4,0,20,2,4,0,1
-592468,2018-08-01,,2018/08/01/chnmlb-pitmlb-1,True,4,2,0,1,9,0,1,1,1
-592468,2018-08-26,,2018/08/26/pitmlb-milmlb-1,False,0,4,1,1,8,1,0,0,2
-592468,2018-08-30,,2018/08/30/pitmlb-slnmlb-1,False,1,1,1,0,3,0,0,0,0
-592468,2018-09-02,,2018/09/02/pitmlb-atlmlb-1,True,4,5,5,0,19,1,0,0,4
-592468,2018-09-08,,2018/09/08/miamlb-pitmlb-1,False,1,4,1,0,10,0,2,0,2
-592468,2018-09-23,,2018/09/23/milmlb-pitmlb-1,True,0,5,5,0,15,2,2,1,2
-592468,2018-09-28,,2018/09/28/pitmlb-cinmlb-1,True,5,3,5,1,20,1,3,0,3
+592468,2018-04-29,Nick Kingham,2018/04/29/slnmlb-pitmlb-1,True,4,7,2,0,22,0,0,0,9
+592468,2018-05-04,Nick Kingham,2018/05/04/pitmlb-milmlb-1,True,6,4,5,1,23,2,1,0,7
+592468,2018-05-19,Nick Kingham,2018/05/19/sdnmlb-pitmlb-1,True,10,4,4,0,24,0,1,0,5
+592468,2018-05-29,Nick Kingham,2018/05/29/chnmlb-pitmlb-1,True,5,11,4,2,27,1,2,1,4
+592468,2018-06-03,Nick Kingham,2018/06/03/pitmlb-slnmlb-1,True,6,7,3,0,22,1,1,0,5
+592468,2018-06-09,Nick Kingham,2018/06/09/pitmlb-chnmlb-1,True,5,11,2,0,26,0,2,1,5
+592468,2018-07-02,Nick Kingham,2018/07/02/pitmlb-lanmlb-1,True,7,6,3,0,21,3,3,0,2
+592468,2018-07-08,Nick Kingham,2018/07/08/phimlb-pitmlb-1,True,8,5,3,1,24,1,1,1,5
+592468,2018-07-13,Nick Kingham,2018/07/13/milmlb-pitmlb-1,True,10,3,1,0,24,2,1,0,9
+592468,2018-07-21,Nick Kingham,2018/07/21/pitmlb-cinmlb-1,True,9,8,3,2,25,1,2,0,3
+592468,2018-07-26,Nick Kingham,2018/07/26/nynmlb-pitmlb-1,True,6,5,4,0,20,2,4,0,1
+592468,2018-08-01,Nick Kingham,2018/08/01/chnmlb-pitmlb-1,True,4,2,0,1,9,0,1,1,1
+592468,2018-08-26,Nick Kingham,2018/08/26/pitmlb-milmlb-1,False,0,4,1,1,8,1,0,0,2
+592468,2018-08-30,Nick Kingham,2018/08/30/pitmlb-slnmlb-1,False,1,1,1,0,3,0,0,0,0
+592468,2018-09-02,Nick Kingham,2018/09/02/pitmlb-atlmlb-1,True,4,5,5,0,19,1,0,0,4
+592468,2018-09-08,Nick Kingham,2018/09/08/miamlb-pitmlb-1,False,1,4,1,0,10,0,2,0,2
+592468,2018-09-23,Nick Kingham,2018/09/23/milmlb-pitmlb-1,True,0,5,5,0,15,2,2,1,2
+592468,2018-09-28,Nick Kingham,2018/09/28/pitmlb-cinmlb-1,True,5,3,5,1,20,1,3,0,3
 641501,2018-07-27,Tyler Danish,2018/07/27/tormlb-chamlb-1,False,1,0,0,0,3,0,0,0,2
 641501,2018-07-28,Tyler Danish,2018/07/28/tormlb-chamlb-1,False,3,1,0,0,6,0,0,1,1
 641501,2018-08-01,Tyler Danish,2018/08/01/kcamlb-chamlb-1,False,2,3,0,0,7,1,2,0,0
@@ -19886,14 +19894,14 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 643230,2018-09-26,Steven Brault,2018/09/26/pitmlb-chnmlb-1,False,2,0,0,0,3,0,0,0,1
 643230,2018-09-28,Steven Brault,2018/09/28/pitmlb-cinmlb-1,False,5,1,1,0,11,0,1,0,3
 643230,2018-09-30,Steven Brault,2018/09/30/pitmlb-cinmlb-1,False,1,0,0,0,3,0,0,0,2
-544836,2018-03-31,,2018/03/31/wasmlb-cinmlb-1,False,0,1,2,0,5,1,1,0,1
-544836,2018-04-03,,2018/04/03/wasmlb-atlmlb-1,False,3,1,2,0,8,0,0,1,1
-544836,2018-04-18,,2018/04/18/colmlb-pitmlb-1,False,2,3,1,0,9,0,0,0,3
-544836,2018-04-25,,2018/04/25/detmlb-pitmlb-1,False,2,6,2,1,15,0,3,0,2
-544836,2018-07-07,,2018/07/07/bosmlb-kcamlb-1,False,1,2,1,0,6,0,2,0,0
-544836,2018-07-08,,2018/07/08/bosmlb-kcamlb-1,False,2,0,0,0,3,0,0,0,1
-544836,2018-07-11,,2018/07/11/kcamlb-minmlb-1,False,2,3,0,0,6,2,0,0,1
-544836,2018-07-15,,2018/07/15/kcamlb-chamlb-1,False,3,2,3,0,9,1,0,0,1
+544836,2018-03-31,Enny Romero,2018/03/31/wasmlb-cinmlb-1,False,0,1,2,0,5,1,1,0,1
+544836,2018-04-03,Enny Romero,2018/04/03/wasmlb-atlmlb-1,False,3,1,2,0,8,0,0,1,1
+544836,2018-04-18,Enny Romero,2018/04/18/colmlb-pitmlb-1,False,2,3,1,0,9,0,0,0,3
+544836,2018-04-25,Enny Romero,2018/04/25/detmlb-pitmlb-1,False,2,6,2,1,15,0,3,0,2
+544836,2018-07-07,Enny Romero,2018/07/07/bosmlb-kcamlb-1,False,1,2,1,0,6,0,2,0,0
+544836,2018-07-08,Enny Romero,2018/07/08/bosmlb-kcamlb-1,False,2,0,0,0,3,0,0,0,1
+544836,2018-07-11,Enny Romero,2018/07/11/kcamlb-minmlb-1,False,2,3,0,0,6,2,0,0,1
+544836,2018-07-15,Enny Romero,2018/07/15/kcamlb-chamlb-1,False,3,2,3,0,9,1,0,0,1
 552640,2018-03-31,Andrew Kittredge,2018/03/31/bosmlb-tbamlb-1,True,6,3,2,0,13,1,1,0,1
 552640,2018-04-05,Andrew Kittredge,2018/04/05/tbamlb-bosmlb-1,False,4,1,2,0,11,0,2,0,1
 552640,2018-04-08,Andrew Kittredge,2018/04/08/tbamlb-bosmlb-1,True,2,3,2,0,8,0,0,0,1
@@ -20624,15 +20632,15 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 607457,2018-09-21,Kyle Barraclough,2018/09/21/cinmlb-miamlb-1,False,0,2,0,0,2,0,0,0,0
 607457,2018-09-28,Kyle Barraclough,2018/09/28/miamlb-nynmlb-1,False,2,1,0,0,4,0,1,0,0
 607457,2018-09-29,Kyle Barraclough,2018/09/29/miamlb-nynmlb-1,False,1,0,1,0,5,0,1,0,1
-608334,2018-04-04,Carson Fullmer,2018/04/04/chamlb-tormlb-1,True,8,4,3,0,21,0,1,0,5
-608334,2018-04-10,Carson Fullmer,2018/04/10/tbamlb-chamlb-1,True,5,5,5,0,27,0,6,2,4
-608334,2018-04-18,Carson Fullmer,2018/04/18/chamlb-oakmlb-1,True,2,3,3,0,10,1,2,0,0
-608334,2018-04-20,Carson Fullmer,2018/04/20/houmlb-chamlb-1,False,1,3,0,1,7,1,0,0,3
-608334,2018-04-23,Carson Fullmer,2018/04/23/seamlb-chamlb-1,True,6,11,1,1,22,1,1,0,3
-608334,2018-04-28,Carson Fullmer,2018/04/28/chamlb-kcamlb-1,True,5,12,4,1,27,0,3,0,3
-608334,2018-05-04,Carson Fullmer,2018/05/04/minmlb-chamlb-1,True,2,7,3,1,20,4,2,0,6
-608334,2018-05-11,Carson Fullmer,2018/05/11/chamlb-chnmlb-1,True,2,2,1,0,13,1,4,1,3
-608334,2018-05-18,Carson Fullmer,2018/05/18/texmlb-chamlb-1,True,3,2,2,0,17,0,5,2,2
+608334,2018-04-04,Carson Fulmer,2018/04/04/chamlb-tormlb-1,True,8,4,3,0,21,0,1,0,5
+608334,2018-04-10,Carson Fulmer,2018/04/10/tbamlb-chamlb-1,True,5,5,5,0,27,0,6,2,4
+608334,2018-04-18,Carson Fulmer,2018/04/18/chamlb-oakmlb-1,True,2,3,3,0,10,1,2,0,0
+608334,2018-04-20,Carson Fulmer,2018/04/20/houmlb-chamlb-1,False,1,3,0,1,7,1,0,0,3
+608334,2018-04-23,Carson Fulmer,2018/04/23/seamlb-chamlb-1,True,6,11,1,1,22,1,1,0,3
+608334,2018-04-28,Carson Fulmer,2018/04/28/chamlb-kcamlb-1,True,5,12,4,1,27,0,3,0,3
+608334,2018-05-04,Carson Fulmer,2018/05/04/minmlb-chamlb-1,True,2,7,3,1,20,4,2,0,6
+608334,2018-05-11,Carson Fulmer,2018/05/11/chamlb-chnmlb-1,True,2,2,1,0,13,1,4,1,3
+608334,2018-05-18,Carson Fulmer,2018/05/18/texmlb-chamlb-1,True,3,2,2,0,17,0,5,2,2
 571800,2018-03-30,Drew Hutchison,2018/03/30/phimlb-atlmlb-1,False,3,2,0,0,9,0,1,1,2
 571800,2018-04-04,Drew Hutchison,2018/04/04/phimlb-nynmlb-1,False,1,1,1,0,5,0,2,0,0
 571800,2018-04-08,Drew Hutchison,2018/04/08/miamlb-phimlb-1,False,2,0,1,0,3,0,0,0,0
@@ -20758,25 +20766,25 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 606478,2018-05-27,Pedro Araujo,2018/05/27/balmlb-tbamlb-1,False,3,2,1,0,9,1,3,0,0
 606478,2018-06-02,Pedro Araujo,2018/06/02/nyamlb-balmlb-1,False,2,1,1,0,4,0,0,0,0
 606478,2018-06-10,Pedro Araujo,2018/06/10/balmlb-tormlb-1,False,2,4,0,0,9,2,2,0,1
-571863,2018-04-07,,2018/04/07/arimlb-slnmlb-1,False,0,3,0,0,6,0,0,0,3
-571863,2018-04-20,,2018/04/20/sdnmlb-arimlb-1,True,10,5,1,1,22,1,2,0,4
-571863,2018-04-26,,2018/04/26/arimlb-phimlb-1,True,11,4,3,0,24,0,2,0,4
-571863,2018-05-01,,2018/05/01/lanmlb-arimlb-1,True,7,4,4,0,22,1,3,1,3
-571863,2018-05-06,,2018/05/06/houmlb-arimlb-1,True,9,7,4,1,25,1,0,1,3
-571863,2018-05-11,,2018/05/11/wasmlb-arimlb-1,True,10,12,5,0,32,2,1,1,3
-571863,2018-05-16,,2018/05/16/milmlb-arimlb-1,True,8,8,5,1,22,4,1,0,0
-571863,2018-05-22,,2018/05/22/arimlb-milmlb-1,True,4,6,4,1,22,0,3,0,5
-571863,2018-05-28,,2018/05/28/cinmlb-arimlb-1,True,6,7,9,2,26,0,1,1,0
-571863,2018-06-03,,2018/06/03/miamlb-arimlb-1,True,10,4,2,1,22,0,0,0,6
-571863,2018-06-09,,2018/06/09/arimlb-colmlb-1,True,6,8,6,0,23,3,1,0,2
-571863,2018-06-14,,2018/06/14/nynmlb-arimlb-1,True,6,7,3,0,22,2,1,0,5
-571863,2018-06-19,,2018/06/19/arimlb-anamlb-1,True,9,8,6,2,27,2,2,2,0
-571863,2018-07-12,,2018/07/12/arimlb-colmlb-1,False,3,0,0,0,3,0,0,0,0
-571863,2018-07-23,,2018/07/23/arimlb-chnmlb-1,False,2,2,0,0,4,0,0,0,0
-571863,2018-09-03,,2018/09/03/sdnmlb-arimlb-1,False,4,0,1,0,6,0,0,0,1
-571863,2018-09-13,,2018/09/13/arimlb-colmlb-1,True,7,4,2,1,17,2,2,0,2
-571863,2018-09-18,,2018/09/18/chnmlb-arimlb-1,False,5,1,3,1,16,0,0,0,7
-571863,2018-09-25,,2018/09/25/lanmlb-arimlb-1,True,7,3,4,0,19,1,3,0,2
+571863,2018-04-07,Matt Koch,2018/04/07/arimlb-slnmlb-1,False,0,3,0,0,6,0,0,0,3
+571863,2018-04-20,Matt Koch,2018/04/20/sdnmlb-arimlb-1,True,10,5,1,1,22,1,2,0,4
+571863,2018-04-26,Matt Koch,2018/04/26/arimlb-phimlb-1,True,11,4,3,0,24,0,2,0,4
+571863,2018-05-01,Matt Koch,2018/05/01/lanmlb-arimlb-1,True,7,4,4,0,22,1,3,1,3
+571863,2018-05-06,Matt Koch,2018/05/06/houmlb-arimlb-1,True,9,7,4,1,25,1,0,1,3
+571863,2018-05-11,Matt Koch,2018/05/11/wasmlb-arimlb-1,True,10,12,5,0,32,2,1,1,3
+571863,2018-05-16,Matt Koch,2018/05/16/milmlb-arimlb-1,True,8,8,5,1,22,4,1,0,0
+571863,2018-05-22,Matt Koch,2018/05/22/arimlb-milmlb-1,True,4,6,4,1,22,0,3,0,5
+571863,2018-05-28,Matt Koch,2018/05/28/cinmlb-arimlb-1,True,6,7,9,2,26,0,1,1,0
+571863,2018-06-03,Matt Koch,2018/06/03/miamlb-arimlb-1,True,10,4,2,1,22,0,0,0,6
+571863,2018-06-09,Matt Koch,2018/06/09/arimlb-colmlb-1,True,6,8,6,0,23,3,1,0,2
+571863,2018-06-14,Matt Koch,2018/06/14/nynmlb-arimlb-1,True,6,7,3,0,22,2,1,0,5
+571863,2018-06-19,Matt Koch,2018/06/19/arimlb-anamlb-1,True,9,8,6,2,27,2,2,2,0
+571863,2018-07-12,Matt Koch,2018/07/12/arimlb-colmlb-1,False,3,0,0,0,3,0,0,0,0
+571863,2018-07-23,Matt Koch,2018/07/23/arimlb-chnmlb-1,False,2,2,0,0,4,0,0,0,0
+571863,2018-09-03,Matt Koch,2018/09/03/sdnmlb-arimlb-1,False,4,0,1,0,6,0,0,0,1
+571863,2018-09-13,Matt Koch,2018/09/13/arimlb-colmlb-1,True,7,4,2,1,17,2,2,0,2
+571863,2018-09-18,Matt Koch,2018/09/18/chnmlb-arimlb-1,False,5,1,3,1,16,0,0,0,7
+571863,2018-09-25,Matt Koch,2018/09/25/lanmlb-arimlb-1,True,7,3,4,0,19,1,3,0,2
 448178,2018-03-29,Kevin Jepsen,2018/03/29/houmlb-texmlb-1,False,1,1,0,0,3,0,0,0,1
 448178,2018-03-30,Kevin Jepsen,2018/03/30/houmlb-texmlb-1,False,3,0,0,0,3,0,0,0,0
 448178,2018-04-01,Kevin Jepsen,2018/04/01/houmlb-texmlb-1,False,0,1,2,0,3,0,0,0,0
@@ -21052,35 +21060,35 @@ mlb_id,date,name,key,gs,gb,fb,ld,iffb,tbf,hr,bb,hbp,k
 488846,2018-09-13,Brian Duensing,2018/09/13/chnmlb-wasmlb-1,False,0,0,1,0,1,0,0,0,0
 488846,2018-09-21,Brian Duensing,2018/09/21/chnmlb-chamlb-1,False,2,0,1,0,4,0,1,0,0
 488846,2018-09-24,Brian Duensing,2018/09/24/pitmlb-chnmlb-1,False,1,1,0,0,3,1,0,0,1
-606424,2018-03-30,,2018/03/30/chnmlb-miamlb-1,False,6,4,2,0,20,0,2,0,6
-606424,2018-04-05,,2018/04/05/miamlb-phimlb-1,False,8,5,1,0,18,1,2,0,2
-606424,2018-04-11,,2018/04/11/nynmlb-miamlb-1,True,9,4,1,0,19,0,2,0,3
-606424,2018-04-17,,2018/04/17/miamlb-nyamlb-1,True,6,6,1,0,20,0,5,0,2
-606424,2018-04-23,,2018/04/23/miamlb-lanmlb-1,True,3,8,4,0,23,1,1,0,7
-606424,2018-05-01,,2018/05/01/phimlb-miamlb-1,True,6,6,7,0,24,0,1,0,3
-606424,2018-05-07,,2018/05/07/miamlb-chnmlb-1,True,6,7,2,1,20,3,2,0,3
-606424,2018-05-12,,2018/05/12/atlmlb-miamlb-1,True,7,7,6,1,26,3,2,0,4
-606424,2018-05-19,,2018/05/19/miamlb-atlmlb-1,False,3,4,2,0,11,2,2,0,0
-606424,2018-05-27,,2018/05/27/wasmlb-miamlb-1,False,3,3,4,1,12,1,2,0,0
-606424,2018-05-29,,2018/05/29/miamlb-sdnmlb-1,False,2,1,0,0,4,0,0,0,1
-606424,2018-06-01,,2018/06/01/miamlb-arimlb-1,False,7,4,1,2,13,2,0,0,1
-606424,2018-08-04,,2018/08/04/miamlb-phimlb-1,False,3,3,0,1,9,1,0,0,3
-606424,2018-08-08,,2018/08/08/slnmlb-miamlb-1,False,2,2,0,0,5,0,0,0,1
-606424,2018-08-10,,2018/08/10/nynmlb-miamlb-1,False,2,1,0,0,3,0,0,0,0
-606424,2018-08-11,,2018/08/11/nynmlb-miamlb-1,False,1,0,0,0,1,0,0,0,0
-606424,2018-08-13,,2018/08/13/miamlb-atlmlb-1,False,3,2,1,0,9,0,1,0,2
-606424,2018-08-15,,2018/08/15/miamlb-atlmlb-1,False,2,3,0,0,6,1,1,0,0
-606424,2018-08-17,,2018/08/17/miamlb-wasmlb-1,False,2,0,1,0,3,0,0,0,0
-606424,2018-08-22,,2018/08/22/nyamlb-miamlb-1,False,0,2,0,0,2,0,0,0,0
-606424,2018-08-23,,2018/08/23/atlmlb-miamlb-1,False,2,1,3,0,9,1,1,0,2
-606424,2018-09-07,,2018/09/07/miamlb-pitmlb-1,False,0,1,2,0,4,0,1,0,0
-606424,2018-09-13,,2018/09/13/miamlb-nynmlb-2,False,1,1,1,0,3,0,0,0,0
-606424,2018-09-15,,2018/09/15/miamlb-phimlb-1,True,2,1,0,0,3,0,0,0,0
-606424,2018-09-17,,2018/09/17/wasmlb-miamlb-1,False,1,0,0,0,1,0,0,0,0
-606424,2018-09-18,,2018/09/18/wasmlb-miamlb-1,False,1,0,0,0,3,0,2,0,0
-606424,2018-09-22,,2018/09/22/cinmlb-miamlb-1,False,0,0,1,0,1,0,0,0,0
-606424,2018-09-28,,2018/09/28/miamlb-nynmlb-1,False,2,1,0,0,3,0,0,0,0
-606424,2018-09-29,,2018/09/29/miamlb-nynmlb-1,False,0,1,1,0,3,0,1,0,0
+606424,2018-03-30,Jarlin Garcia,2018/03/30/chnmlb-miamlb-1,False,6,4,2,0,20,0,2,0,6
+606424,2018-04-05,Jarlin Garcia,2018/04/05/miamlb-phimlb-1,False,8,5,1,0,18,1,2,0,2
+606424,2018-04-11,Jarlin Garcia,2018/04/11/nynmlb-miamlb-1,True,9,4,1,0,19,0,2,0,3
+606424,2018-04-17,Jarlin Garcia,2018/04/17/miamlb-nyamlb-1,True,6,6,1,0,20,0,5,0,2
+606424,2018-04-23,Jarlin Garcia,2018/04/23/miamlb-lanmlb-1,True,3,8,4,0,23,1,1,0,7
+606424,2018-05-01,Jarlin Garcia,2018/05/01/phimlb-miamlb-1,True,6,6,7,0,24,0,1,0,3
+606424,2018-05-07,Jarlin Garcia,2018/05/07/miamlb-chnmlb-1,True,6,7,2,1,20,3,2,0,3
+606424,2018-05-12,Jarlin Garcia,2018/05/12/atlmlb-miamlb-1,True,7,7,6,1,26,3,2,0,4
+606424,2018-05-19,Jarlin Garcia,2018/05/19/miamlb-atlmlb-1,False,3,4,2,0,11,2,2,0,0
+606424,2018-05-27,Jarlin Garcia,2018/05/27/wasmlb-miamlb-1,False,3,3,4,1,12,1,2,0,0
+606424,2018-05-29,Jarlin Garcia,2018/05/29/miamlb-sdnmlb-1,False,2,1,0,0,4,0,0,0,1
+606424,2018-06-01,Jarlin Garcia,2018/06/01/miamlb-arimlb-1,False,7,4,1,2,13,2,0,0,1
+606424,2018-08-04,Jarlin Garcia,2018/08/04/miamlb-phimlb-1,False,3,3,0,1,9,1,0,0,3
+606424,2018-08-08,Jarlin Garcia,2018/08/08/slnmlb-miamlb-1,False,2,2,0,0,5,0,0,0,1
+606424,2018-08-10,Jarlin Garcia,2018/08/10/nynmlb-miamlb-1,False,2,1,0,0,3,0,0,0,0
+606424,2018-08-11,Jarlin Garcia,2018/08/11/nynmlb-miamlb-1,False,1,0,0,0,1,0,0,0,0
+606424,2018-08-13,Jarlin Garcia,2018/08/13/miamlb-atlmlb-1,False,3,2,1,0,9,0,1,0,2
+606424,2018-08-15,Jarlin Garcia,2018/08/15/miamlb-atlmlb-1,False,2,3,0,0,6,1,1,0,0
+606424,2018-08-17,Jarlin Garcia,2018/08/17/miamlb-wasmlb-1,False,2,0,1,0,3,0,0,0,0
+606424,2018-08-22,Jarlin Garcia,2018/08/22/nyamlb-miamlb-1,False,0,2,0,0,2,0,0,0,0
+606424,2018-08-23,Jarlin Garcia,2018/08/23/atlmlb-miamlb-1,False,2,1,3,0,9,1,1,0,2
+606424,2018-09-07,Jarlin Garcia,2018/09/07/miamlb-pitmlb-1,False,0,1,2,0,4,0,1,0,0
+606424,2018-09-13,Jarlin Garcia,2018/09/13/miamlb-nynmlb-2,False,1,1,1,0,3,0,0,0,0
+606424,2018-09-15,Jarlin Garcia,2018/09/15/miamlb-phimlb-1,True,2,1,0,0,3,0,0,0,0
+606424,2018-09-17,Jarlin Garcia,2018/09/17/wasmlb-miamlb-1,False,1,0,0,0,1,0,0,0,0
+606424,2018-09-18,Jarlin Garcia,2018/09/18/wasmlb-miamlb-1,False,1,0,0,0,3,0,2,0,0
+606424,2018-09-22,Jarlin Garcia,2018/09/22/cinmlb-miamlb-1,False,0,0,1,0,1,0,0,0,0
+606424,2018-09-28,Jarlin Garcia,2018/09/28/miamlb-nynmlb-1,False,2,1,0,0,3,0,0,0,0
+606424,2018-09-29,Jarlin Garcia,2018/09/29/miamlb-nynmlb-1,False,0,1,1,0,3,0,1,0,0
 458708,2018-04-03,Josh Tomlin,2018/04/03/clemlb-anamlb-1,True,2,10,4,2,18,4,1,0,1
 458708,2018-04-10,Josh Tomlin,2018/04/10/detmlb-clemlb-1,True,7,6,3,1,22,0,2,1,3
 458708,2018-04-18,Josh Tomlin,2018/04/18/clemlb-minmlb-1,False,2,3,2,0,8,0,1,0,0

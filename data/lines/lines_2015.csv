@@ -441,7 +441,8 @@ key,away,date,home,ml_away,ml_away_f5,ml_home,ml_home_f5,over_odds,over_odds_f5,
 2015/05/09/kcamlb-detmlb-1,Kansas City Royals,2015-05-09,Detroit Tigers,2.35,2.5,1.67,1.57,1.91,1.91,1.62,1.95,2.4,1.87,12:08p,8.5,4.5,1.91,1.91
 2015/05/09/atlmlb-wasmlb-1,Atlanta Braves,2015-05-09,Washington Nationals,2.35,2.25,1.67,1.69,1.88,1.95,1.61,1.87,2.45,1.95,3:05p,7.5,4.0,1.93,1.87
 2015/05/09/minmlb-clemlb-1,Minnesota Twins,2015-05-09,Cleveland Indians,2.2,2.05,1.77,1.8,1.87,1.83,1.56,1.74,2.6,2.15,3:10p,8.5,4.5,1.95,2.0
-2015/05/09/cinmlb-chamlb-2,Cincinnati Reds,2015-05-09,Chicago White Sox,1.88,1.87,2.04,1.95,2.0,2.05,2.45,2.25,1.61,1.69,3:10p,7.5,4.0,1.83,1.8
+2015/05/09/cinmlb-chamlb-1,Cincinnati Reds,2015-05-09,Chicago White Sox,2.26,2.15,1.73,1.74,,,,,,,3:10p,,,,
+2015/05/09/cinmlb-chamlb-2,Cincinnati Reds,2015-05-09,Chicago White Sox,1.88,1.87,2.04,1.95,2.0,2.05,2.45,2.25,1.61,1.69,7:20p,7.5,4.0,1.83,1.8
 2015/05/09/texmlb-tbamlb-1,Texas Rangers,2015-05-09,Tampa Bay Rays,2.26,2.2,1.71,1.71,1.83,1.95,1.57,1.83,2.55,2.0,5:10p,8.0,4.5,2.0,1.87
 2015/05/09/nynmlb-phimlb-1,New York Mets,2015-05-09,Philadelphia Phillies,1.85,1.74,2.08,2.15,1.89,1.91,2.4,2.05,1.62,1.8,6:05p,7.5,4.0,1.93,1.91
 2015/05/09/slnmlb-pitmlb-1,St. Louis Cardinals,2015-05-09,Pittsburgh Pirates,2.0,2.0,1.9,1.83,1.83,2.0,1.48,1.71,2.8,2.2,6:05p,7.5,4.0,2.0,1.83

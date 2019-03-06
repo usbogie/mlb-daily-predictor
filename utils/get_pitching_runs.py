@@ -1,7 +1,7 @@
 from datetime import datetime
 import pandas as pd
 
-avg_reliever_siera = 3.8
+avg_reliever_siera = 3.82
 
 opener_innings = {
     '2018-04-29': {
@@ -37,6 +37,9 @@ opener_innings = {
     '2018-06-01': {
         518397: (1.5, 642701),
         489265: (1, 643493)
+    },
+    '2018-06-05': {
+        458924: (1.5, 642232),
     },
     '2018-06-07': {
         543339: (1, 520980),
@@ -276,7 +279,7 @@ def player_in_fantasy_labs(name, id, manifest):
             player = players.iloc[[ix-1]]
         else:
             player = players.iloc[[0]]
-        print("NEW PLAYER! Matching", name, "to", player['mlb_name'])
+        print("NEW PLAYER! Matching", name, "to", player['mlb_name'].iloc[0])
         manifest.at[manifest.index[manifest['mlb_id'] == player['mlb_id'].iloc[0]],'fantasy_labs'] = id
         print('Matched', id, "to", player['mlb_id'].iloc[0])
         return player
@@ -298,7 +301,10 @@ def get_player(player_id, name, date, manifest, projections):
     dates = player['date'].tolist()
     if date not in dates:
         try:
-            print(date, name, 'date not in projection dates')
+            if date < min(dates):
+                print(name, 'does not have enough batters faced, skipping')
+                return None
+            print(date, name, 'date not in projection dates, getting backup')
             target = nearest([datetime.strptime(d, '%Y-%m-%d') for d in dates], datetime.strptime(date, '%Y-%m-%d'))
             target = target.strftime('%Y-%m-%d')
         except:
@@ -321,13 +327,10 @@ def calculate(lineup, date, manifest, projections):
     if date in opener_innings and pitcher['mlb_id'] in opener_innings[date]:
         innings, reliever_id = opener_innings[date][pitcher['mlb_id']]
         if reliever_id == 'bp':
-            runs_allowed = ((pitcher['siera'] / 9) * innings) + ((avg_reliever_siera / 9) * (9-innings))
+            siera = (pitcher['siera'] * innings + avg_reliever_siera * (5.5-innings)) / 5.5
         else:
             reliever = projections[(projections['date'] == date) & (projections['mlb_id'] == reliever_id)].to_dict('records')[0]
-            runs_allowed = ((pitcher['siera'] / 9) * innings) \
-                            + ((reliever['siera'] / 9) * 4.5) \
-                            + ((avg_reliever_siera / 9) * (9-innings-4.5))
+            siera = (pitcher['siera'] * innings + reliever['siera'] * (5.5-innings)) / 5.5
     else:
-        runs_allowed = (pitcher['siera'] / 9) * 5.5 + (avg_reliever_siera / 9) * 3.5
-    # print(runs_allowed)
-    return runs_allowed * 162
+        siera = pitcher['siera']
+    return siera

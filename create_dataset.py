@@ -3,9 +3,10 @@ import os
 import copy
 from datetime import datetime, timedelta
 from math import floor
-from scrapers.scraper_utils import fangraphs_to_mlb, team_leagues
+from scrapers.scraper_utils import fangraphs_to_mlb, team_leagues, get_days_in_season
+from utils import get_baserunning_runs, get_batting_runs, get_fielding_runs, get_pitching_runs
 
-year = 2017
+year = 2015
 pitcher_logs = pd.read_csv(os.path.join('data','player_logs','pitcher_logs_{}.csv'.format(year)))
 batter_logs = pd.read_csv(os.path.join('data','player_logs','batter_logs_{}.csv'.format(year)))
 steamer_pitchers = pd.read_csv(os.path.join('data','steamer', 'steamer_pitchers_{}.csv'.format(year)))
@@ -13,14 +14,6 @@ steamer_batters_split = pd.read_csv(os.path.join('data','steamer', 'steamer_hitt
 park_factors = pd.read_csv(os.path.join('data','park_factors_{}.csv'.format(year)))
 manifest = pd.read_csv(os.path.join('data','master2.csv'), encoding='latin1')
 manifest2 = pd.read_csv(os.path.join('data','master3.csv'), encoding='latin1')
-
-def get_fangraphs_id_from_mlb(mlb_id):
-    try:
-        row = manifest[manifest['MLBID'] == mlb_id]
-        return int(row['IDFANGRAPHS'].iloc[0])
-    except:
-        row = manifest2[manifest2['mlb_id'] == mlb_id]
-        return int(row['fg_id'].iloc[0])
 
 league_stats = {
     'r_pa': {
@@ -86,16 +79,18 @@ def generate_batter_stats(batters):
         ]
         if steamer.empty:
             print("No steamer for", mlb_id)
-            continue
-        steamer = steamer.iloc[0]
-        if isinstance(steamer['Team'], float):
+            # continue
+        else:
+            steamer = steamer.iloc[0]
+
+        if steamer.empty or isinstance(steamer['Team'], float):
             league_init = 'AL'
         else:
             league_init = team_leagues[steamer['Team'].lower().replace('laa','ana')] if steamer['Team'] != 'FA' else 'AL'
         proj = dict(
             pa = 0,
             wRAA = 0,
-            wrcplus = calc_wrcplus(league_init, 100, 1, steamer['PA'], steamer['wRAA']),
+            wrcplus = 100 if steamer.empty else calc_wrcplus(league_init, 100, 1, steamer['PA'], steamer['wRAA']),
             mlb_id = mlb_id,
         )
         last_date = 0
@@ -106,13 +101,18 @@ def generate_batter_stats(batters):
         teams_list = []
         games_played = 0
         pf = 100
-        thresh = 350
+        thresh = 200
         decay_coeff = 0.999
         for ix, stat_line in logs.iterrows():
             # print(proj_acc['wrcplus'])
             acc = copy.deepcopy(proj_acc)
             acc['date'] = stat_line['date']
-            all_projections.append(acc)
+            if steamer.empty:
+                if acc['pa'] > 25:
+                    all_projections.append(acc)
+            else:
+                all_projections.append(acc)
+
             if stat_line['pa'] == 0:
                 # print('no plate appearances for', stat_line['name'], stat_line['date'])
                 continue
@@ -136,7 +136,10 @@ def generate_batter_stats(batters):
 
             last_date = stat_line['date']
         # print(all_projections)
-        proj_acc['date'] = (datetime.strptime(all_projections[-1]['date'], '%Y-%m-%d') + timedelta(1)).strftime('%Y-%m-%d')
+        try:
+            proj_acc['date'] = (datetime.strptime(all_projections[-1]['date'], '%Y-%m-%d') + timedelta(1)).strftime('%Y-%m-%d')
+        except:
+            continue
         all_projections.append(proj_acc)
         dfs.append(pd.DataFrame(all_projections))
     df = pd.concat(dfs)
@@ -169,8 +172,9 @@ def generate_pitcher_stats(pitchers):
         steamer = steamer_pitchers[steamer_pitchers['mlbamid'] == mlb_id]
         if steamer.empty:
             print("No steamer for", mlb_id)
-            continue
-        steamer = steamer.iloc[0]
+            # continue
+        else:
+            steamer = steamer.iloc[0]
         proj = dict(
             tbf = 0,
             tbfSP = 0,
@@ -179,14 +183,14 @@ def generate_pitcher_stats(pitchers):
             gb = 0,
             fb = 0,
             ld = 0,
-            siera = calc_siera(steamer['GB'], steamer['FB'], steamer['K'], steamer['BB'], steamer['TBF'], steamer['TBF'] * steamer['GS'] / steamer['G']),
+            siera = 4.11 if steamer.empty else calc_siera(steamer['GB'], steamer['FB'], steamer['K'], steamer['BB'], steamer['TBF'], steamer['TBF'] * steamer['GS'] / steamer['G']),
             mlb_id = mlb_id,
         )
         last_date = 0
 
         proj_acc = copy.deepcopy(proj)
         all_projections = []
-        thresh = 150
+        thresh = 75
         decay_coeff = 0.999
         for ix, stat_line in logs.iterrows():
             if stat_line['tbf'] == 0:
@@ -200,9 +204,13 @@ def generate_pitcher_stats(pitchers):
 
             acc = copy.deepcopy(proj_acc)
             acc['date'] = stat_line['date']
-            all_projections.append(acc)
+            if steamer.empty:
+                if acc['tbf'] > 0:
+                    all_projections.append(acc)
+            else:
+                all_projections.append(acc)
 
-            proj_acc['tbfSP'] = proj_acc['tbfSP'] + (stat_line['tbf'] if stat_line['gs'] == 1 else 0)
+            proj_acc['tbfSP'] = proj_acc['tbfSP'] * (decay_coeff**decay) + (stat_line['tbf'] if stat_line['gs'] == 1 else 0)
             proj_acc['tbf'] = proj_acc['tbf']  * (decay_coeff**decay) + stat_line['tbf']
             proj_acc['k'] = proj_acc['k'] * (decay_coeff**decay) + stat_line['k']
             proj_acc['bb'] = proj_acc['bb'] * (decay_coeff**decay) + stat_line['bb']
@@ -217,7 +225,10 @@ def generate_pitcher_stats(pitchers):
 
             last_date = stat_line['date']
 
-        proj_acc['date'] = (datetime.strptime(all_projections[-1]['date'], '%Y-%m-%d') + timedelta(1)).strftime('%Y-%m-%d')
+        try:
+            proj_acc['date'] = (datetime.strptime(all_projections[-1]['date'], '%Y-%m-%d') + timedelta(1)).strftime('%Y-%m-%d')
+        except:
+            continue
         all_projections.append(proj_acc)
         dfs.append(pd.DataFrame(all_projections))
 
@@ -225,6 +236,94 @@ def generate_pitcher_stats(pitchers):
     df = df[['date', 'mlb_id', 'siera', 'tbf', 'tbfSP', 'k', 'bb', 'ld', 'gb', 'fb']]
     print(df)
     return df
+
+def create_team_stats():
+    days = get_days_in_season(year)
+    games = pd.read_csv(os.path.join('data','games','games_{}.csv'.format(year)))
+    lineups = pd.read_csv(os.path.join('data','lineups','lineups_{}.csv'.format(year)))
+    manifest = pd.read_csv(os.path.join('data','master.csv'))
+    batter_projections = pd.read_csv(os.path.join('data','projections','batter_proj_{}.csv'.format(year)))
+    pitcher_projections = pd.read_csv(os.path.join('data','projections','pitcher_proj_{}.csv'.format(year)))
+    steamer_batters = pd.read_csv(os.path.join('data','steamer', 'steamer_hitters_{}_split.csv'.format(year)))
+    steamer_batters['fullname'] = steamer_batters[['firstname', 'lastname']].apply(lambda x: ' '.join(x), axis=1)
+    # steamer_pitchers = pd.read_csv(os.path.join('data','steamer','steamer_pitchers_{}_split.csv'.format(year)))
+    # steamer_pitchers['fullname'] = steamer_pitchers[['firstname', 'lastname']].apply(lambda x: ' '.join(x), axis=1)
+
+    inputs = []
+    for day in days:
+        slate = games[games['date'] == day]
+        day_results = []
+        for index, game in slate.iterrows():
+            try:
+                away_lineup = lineups[(lineups['key'] == game['key']) & (game['away'] == lineups['name'])].to_dict('records')[0]
+                home_lineup = lineups[(lineups['key'] == game['key']) & (game['home'] == lineups['name'])].to_dict('records')[0]
+            except:
+                print('mismatch of game/lineup keys for', game['key'], 'continuing')
+                continue
+
+            # print(day,game['away'],'vs',game['home'])
+
+            away_batting_runs = get_batting_runs.calculate(away_lineup, game['date'], manifest, batter_projections)
+            home_batting_runs = get_batting_runs.calculate(home_lineup, game['date'], manifest, batter_projections)
+            away_pitching_runs = get_pitching_runs.calculate(away_lineup, game['date'], manifest, pitcher_projections)
+            # print('vs', end=" ")
+            home_pitching_runs = get_pitching_runs.calculate(home_lineup, game['date'], manifest, pitcher_projections)
+            # print()
+            # print(game['away_score'], '-', game['home_score'])
+            if not away_batting_runs or not home_batting_runs or not away_pitching_runs or not home_pitching_runs:
+                print("Could not find ^, continue")
+                continue
+
+            # dh = team_leagues[team_codes[game['home']]] == 'AL'
+            # away_player_ids = [manifest[manifest['fantasy_labs'] == away_lineup[str(x)+'_id']].iloc[0]['mlb_id']
+            #                    for x in range(1,10)]
+            # home_player_ids = [manifest[manifest['fantasy_labs'] == home_lineup[str(x)+'_id']].iloc[0]['mlb_id']
+            #                    for x in range(1,10)]
+            # away_pitcher_id = manifest[manifest['fantasy_labs'] == away_lineup['10_id']].iloc[0]['mlb_id']
+            # home_pitcher_id = manifest[manifest['fantasy_labs'] == home_lineup['10_id']].iloc[0]['mlb_id']
+            # away_fielding_runs = get_fielding_runs.calculate(dh, away_pitcher_id, away_player_ids, steamer_batters)
+            # home_fielding_runs = get_fielding_runs.calculate(dh, home_pitcher_id, home_player_ids, steamer_batters)
+
+            # away_baserunning_runs = get_baserunning_runs.calculate(away_lineup, steamer_batters, manifest)
+            # home_baserunning_runs = get_baserunning_runs.calculate(home_lineup, steamer_batters, manifest)
+
+            input_away = dict(
+                key = game['key'],
+                batters_home = 0,
+                b1 = away_batting_runs[0],
+                b2 = away_batting_runs[1],
+                b3 = away_batting_runs[2],
+                b4 = away_batting_runs[3],
+                b5 = away_batting_runs[4],
+                b6 = away_batting_runs[5],
+                b7 = away_batting_runs[6],
+                b8 = away_batting_runs[7],
+                b9 = away_batting_runs[8],
+                pitching = home_pitching_runs,
+                runs_scored = game['away_score'],
+            )
+
+            input_home = dict(
+                key = game['key'],
+                batters_home = 1,
+                b1 = home_batting_runs[0],
+                b2 = home_batting_runs[1],
+                b3 = home_batting_runs[2],
+                b4 = home_batting_runs[3],
+                b5 = home_batting_runs[4],
+                b6 = home_batting_runs[5],
+                b7 = home_batting_runs[6],
+                b8 = home_batting_runs[7],
+                b9 = home_batting_runs[8],
+                pitching = away_pitching_runs,
+                runs_scored = game['home_score'],
+            )
+            inputs.extend([input_away, input_home])
+    inputs_df = pd.DataFrame(inputs)
+    print(inputs_df)
+    inputs_df.to_csv(os.path.join('data','tensor_inputs','{}.csv'.format(year)), index=False)
+    manifest = manifest.loc[:, ~manifest.columns.str.contains('^Unnamed')]
+    manifest.to_csv(os.path.join('data','master.csv'), index=False)
 
 if __name__ == '__main__':
     import random
@@ -242,3 +341,4 @@ if __name__ == '__main__':
     pitcher_stats.to_csv(os.path.join('data','projections',
                                       'pitcher_proj_{}.csv'.format(year)),
                          index=False)
+    create_team_stats()
