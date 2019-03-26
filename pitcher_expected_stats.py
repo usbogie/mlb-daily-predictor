@@ -14,10 +14,10 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score
 from sklearn.preprocessing import MinMaxScaler
 
-statcast_2015 = pd.read_csv(os.path.join('data','projections','batter_statcast_2015.csv'))
-statcast_2016 = pd.read_csv(os.path.join('data','projections','batter_statcast_2016.csv'))
-statcast_2017 = pd.read_csv(os.path.join('data','projections','batter_statcast_2017.csv'))
-statcast_2018 = pd.read_csv(os.path.join('data','projections','batter_statcast_2018.csv'))
+statcast_2015 = pd.read_csv(os.path.join('data','projections','pitcher_statcast_2015.csv'))
+statcast_2016 = pd.read_csv(os.path.join('data','projections','pitcher_statcast_2016.csv'))
+statcast_2017 = pd.read_csv(os.path.join('data','projections','pitcher_statcast_2017.csv'))
+statcast_2018 = pd.read_csv(os.path.join('data','projections','pitcher_statcast_2018.csv'))
 
 def get_dataset(columns, label, year, thresh):
     if year == 2018:
@@ -76,8 +76,9 @@ def get_xk_regression(year):
     label = 'k_pa'
 
     X_train, y_train, X_test, y_test = get_dataset(columns, label, year, 70)
-
-    hi_set = ['Zswing', 'contact', 'SwStr', 'p_pa', 'FlStr', 'LkStr']
+    X_train['k_pa'] = y_train
+    # print(X_train.corr())
+    hi_set = ['Oswing', 'contact', 'SwStr', 'Fstrike', 'FlStr', 'LkStr', 'p_pa']
     scaler, lm = create_model(hi_set, X_train, y_train, X_test, y_test)
 
     # plt.show()
@@ -91,12 +92,13 @@ def get_xbb_regression(year):
     label = 'bb_pa'
 
     X_train, y_train, X_test, y_test = get_dataset(columns, label, year, 120)
-
-    hi_set = ['Oswing', 'Ocontact', 'Zcontact', 'Fstrike', 'SwStr', 'p_pa', 'LkStr', 'FlStr']
+    X_train['k_pa'] = y_train
+    # print(X_train.corr())
+    hi_set = ['swing', 'contact', 'zone', 'Fstrike', 'p_pa', 'LkStr', 'FlStr']
     scaler, lm = create_model(hi_set, X_train, y_train, X_test, y_test)
 
     # plt.show()
     return scaler, lm
 
 if __name__ == '__main__':
-    get_xk_regression(2018)
+    get_xk_regression()

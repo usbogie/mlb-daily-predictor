@@ -6,6 +6,7 @@ import os
 import tensorflow as tf
 from sklearn.preprocessing import MinMaxScaler
 from scrapers.scraper_utils import team_codes, get_days_in_season, team_leagues
+from utils import get_batting_runs, get_pitching_runs, get_fielding_runs
 from utils.converters import winpct_to_ml, over_total_pct, d_to_a, ml_to_winpct, third_kelly_calculator, amount_won
 
 year = 2018
@@ -15,19 +16,26 @@ starters_to_ignore = {2015: [],
                       2017: [],
                       2018: []}
 
+r_g = {
+    2018: 4.45,
+    2017: 4.65,
+    2016: 4.48,
+    2015: 4.25,
+}
+
 def test_year(year):
     bankroll = 1000
     days = get_days_in_season(year)
+    manifest = pd.read_csv(os.path.join('data','master.csv'))
     games = pd.read_csv(os.path.join('data','games','games_{}.csv'.format(year)))
     lines = pd.read_csv(os.path.join('data','lines','lines_{}.csv'.format(year)))
     lineups = pd.read_csv(os.path.join('data','lineups','lineups_{}.csv'.format(year)))
-    # batter_projections = pd.read_csv(os.path.join('data','projections','batter_proj_{}.csv'.format(year)))
-    # pitcher_projections = pd.read_csv(os.path.join('data','projections','pitcher_proj_{}.csv'.format(year)))
-    # steamer_batters = pd.read_csv(os.path.join('data','steamer', 'steamer_hitters_{}_split.csv'.format(year)))
-    input = pd.read_csv(os.path.join('data','tensor_inputs','{}.csv'.format(year)))
-    # steamer_batters['fullname'] = steamer_batters[['firstname', 'lastname']].apply(lambda x: ' '.join(x), axis=1)
-    # steamer_pitchers = pd.read_csv(os.path.join('data','steamer','steamer_pitchers_{}_split.csv'.format(year)))
-    # steamer_pitchers['fullname'] = steamer_pitchers[['firstname', 'lastname']].apply(lambda x: ' '.join(x), axis=1)
+    batter_projections = pd.read_csv(os.path.join('data','projections','batter_statcast_proj_{}.csv'.format(year)))
+    pitcher_projections = pd.read_csv(os.path.join('data','projections','pitcher_statcast_proj_{}.csv'.format(year)))
+    steamer_batters = pd.read_csv(os.path.join('data','steamer','steamer_hitters_{}_split.csv'.format(year)))
+    steamer_batters['fullname'] = steamer_batters[['firstname', 'lastname']].apply(lambda x: ' '.join(x), axis=1)
+    steamer_pitchers = pd.read_csv(os.path.join('data','steamer','steamer_pitchers_{}.csv'.format(year)))
+    bullpen = pd.read_csv(os.path.join('data','lineups','bullpens_{}.csv'.format(year)))
 
     all_results = []
     all_net = []
@@ -39,86 +47,74 @@ def test_year(year):
         slate = games[games['date'] == day]
         day_results = []
         for index, game in slate.iterrows():
-            # print('')
-            # try:
-            #     away_lineup = lineups[(lineups['key'] == game['key']) & (game['away'] == lineups['name'])].to_dict('records')[0]
-            #     home_lineup = lineups[(lineups['key'] == game['key']) & (game['home'] == lineups['name'])].to_dict('records')[0]
-            # except:
-            #     print('mismatch of game/lineup keys for', game['key'], 'continuing')
-            #     continue
-            #
-            # game_obj = Game(game['date'],'12:05p',game['away'],game['home'], 0)
-            #
-            # if away_lineup['10_name'] in starters_to_ignore[year] or home_lineup['10_name'] in starters_to_ignore[year]:
-            #     print('Starter {} has no projections. Continue'.format(away_lineup['10_name']))
-            #     print('Starter {} has no projections. Continue\n'.format(home_lineup['10_name']))
-            #     continue
-
-            print(day,game['away'],'vs',game['home'])
-
-            away_input = tensor_2018[(tensor_2018['key'] == game['key']) & (tensor_2018['batters_home'] == 0)]
-            home_input = tensor_2018[(tensor_2018['key'] == game['key']) & (tensor_2018['batters_home'] == 1)]
-
-            if away_input.empty or home_input.empty:
-                print(game['key'], "not present in tensorflow")
+            print('')
+            try:
+                away_lineup = lineups[(lineups['key'] == game['key']) & (game['away'] == lineups['name'])].to_dict('records')[0]
+                home_lineup = lineups[(lineups['key'] == game['key']) & (game['home'] == lineups['name'])].to_dict('records')[0]
+            except:
+                print('mismatch of game/lineup keys for', game['key'], 'continuing')
                 continue
 
-            away_runs_scored = away_input['']
+            if away_lineup['10_name'] in starters_to_ignore[year] or home_lineup['10_name'] in starters_to_ignore[year]:
+                print('Starter {} has no projections. Continue'.format(away_lineup['10_name']))
+                print('Starter {} has no projections. Continue\n'.format(home_lineup['10_name']))
+                continue
 
-            away_pitcher = lineups[(lineups['key'] == game['key']) & (game['away'] == lineups['name'])].to_dict('records')[0]['10_name']
-            home_pitcher = lineups[(lineups['key'] == game['key']) & (game['home'] == lineups['name'])].to_dict('records')[0]['10_name']
-            print(away_pitcher, 'vs', home_pitcher)
+            print(day,game['away'],'vs',game['home'])
 
             try:
                 game_odds = lines[lines['key'] == game['key']].to_dict('records')[0]
             except:
-                # print(lines[lines['key'] == game['key']])
-                print('something wrong with game odds', game['key'])
+                print('cannot find key in lines', game['key'])
                 continue
 
-            # away_batting_runs = get_batting_runs.calculate(away_lineup, game['date'], manifest, batter_projections)
-            # home_batting_runs = get_batting_runs.calculate(home_lineup, game['date'], manifest, batter_projections)
-            # away_pitching_runs = get_pitching_runs.calculate(away_lineup, game['date'], manifest, pitcher_projections)
-            # print('vs', end=" ")
-            # home_pitching_runs = get_pitching_runs.calculate(home_lineup, game['date'], manifest, pitcher_projections)
-            # print()
+            away_batting_runs = get_batting_runs.calculate(away_lineup, game['date'], manifest, batter_projections)
+            home_batting_runs = get_batting_runs.calculate(home_lineup, game['date'], manifest, batter_projections)
+            print('batting', away_batting_runs, home_batting_runs)
+            bullpen_game = bullpen[bullpen['key'] == game['key']]
+            bp_away = bullpen_game[[x for x in bullpen_game.columns if 'bp_away_' in x]]
+            away_pitching_runs = get_pitching_runs.calculate(away_lineup, game['date'], manifest, pitcher_projections, steamer_pitchers, bp_away)
+            print('vs', end=" ")
+            bp_home = bullpen_game[[x for x in bullpen_game.columns if 'bp_home_' in x]]
+            home_pitching_runs = get_pitching_runs.calculate(home_lineup, game['date'], manifest, pitcher_projections, steamer_pitchers, bp_home)
+            print()
+            print('pitching', away_pitching_runs, home_pitching_runs)
             print(game['away_score'], '-', game['home_score'])
-            # if not away_batting_runs or not home_batting_runs or not away_pitching_runs or not home_pitching_runs:
-            #     print("Could not find ^, continue")
-            #     continue
-            #
+            if not away_batting_runs or not home_batting_runs or not away_pitching_runs or not home_pitching_runs:
+                print("Could not find ^, continue")
+                continue
+
             # dh = team_leagues[team_codes[game['home']]] == 'AL'
-            # away_player_ids = [manifest[manifest['fantasy_labs'] == away_lineup[str(x)+'_id']].iloc[0]['mlb_id']
-            #                    for x in range(1,10)]
-            # home_player_ids = [manifest[manifest['fantasy_labs'] == home_lineup[str(x)+'_id']].iloc[0]['mlb_id']
-            #                    for x in range(1,10)]
+            # away_player_ids = [manifest[manifest['fantasy_labs'] == away_lineup[str(x)+'_id']].iloc[0]['mlb_id'] for x in range(1,10)]
+            # home_player_ids = [manifest[manifest['fantasy_labs'] == home_lineup[str(x)+'_id']].iloc[0]['mlb_id'] for x in range(1,10)]
             # away_pitcher_id = manifest[manifest['fantasy_labs'] == away_lineup['10_id']].iloc[0]['mlb_id']
             # home_pitcher_id = manifest[manifest['fantasy_labs'] == home_lineup['10_id']].iloc[0]['mlb_id']
             # away_fielding_runs = get_fielding_runs.calculate(dh, away_pitcher_id, away_player_ids, steamer_batters)
             # home_fielding_runs = get_fielding_runs.calculate(dh, home_pitcher_id, home_player_ids, steamer_batters)
+            # print(away_fielding_runs, home_fielding_runs)
             #
             # away_baserunning_runs = get_baserunning_runs.calculate(away_lineup, steamer_batters, manifest)
             # home_baserunning_runs = get_baserunning_runs.calculate(home_lineup, steamer_batters, manifest)
             # print("Away")
             # print("Batting: {}; BaseRunning: {};\nPitching: {}; Fielding: {};"
-            #       .format(away_batting_runs, away_baserunning_runs,
-            #               away_pitching_runs, away_fielding_runs))
+            #       .format(away_batting_runs, away_baserunning_runs, away_pitching_runs, away_fielding_runs))
             # print("Home")
             # print("Batting: {}; BaseRunning: {};\nPitching: {}; Fielding: {};"
-            #       .format(home_batting_runs, home_baserunning_runs,
-            #               home_pitching_runs, home_fielding_runs))
-            #
-            # away_RS = away_batting_runs #+ away_baserunning_runs
-            # away_RA = away_pitching_runs #- away_fielding_runs
+            #       .format(home_batting_runs, home_baserunning_runs, home_pitching_runs, home_fielding_runs))
 
-            # home_RS = home_batting_runs #+ home_baserunning_runs
-            # home_RA = home_pitching_runs #- home_fielding_runs
+            away_RS = 162 * away_batting_runs #+ away_baserunning_runs
+            away_RA = 162 * away_pitching_runs #- away_fielding_runs
 
-            x = (away_runs + home_runs) ** 0.287
-            home_win_pct = (home_runs ** x) / (home_runs ** x + away_runs ** x)
+            home_RS = 162 * home_batting_runs #+ home_baserunning_runs
+            home_RA = 162 * home_pitching_runs #- home_fielding_runs
 
-            home_win_pct_HFA = home_win_pct * 1.08
-            # print(home_win_pct_HFA)
+            exp_away_runs = away_RS * home_RA / (r_g[year] * 162)
+            exp_home_runs = home_RS * away_RA / (r_g[year] * 162)
+            print(exp_away_runs, exp_home_runs)
+            x = ((exp_away_runs + exp_home_runs)/162) ** 0.287
+            home_game_win_pct = (exp_home_runs ** x) / (exp_home_runs ** x + exp_away_runs ** x)
+
+            home_win_pct_HFA = home_game_win_pct * 1.08
 
             result = dict(
                 away = game['away'],
@@ -131,13 +127,14 @@ def test_year(year):
 
             value = lambda pct, odds: round(100 * pct - ml_to_winpct(odds),1)
 
-
             value_away = value(1 - home_win_pct_HFA, game_odds['ml_away'])
             value_home = value(home_win_pct_HFA, game_odds['ml_home'])
 
             kelly_away = third_kelly_calculator(game_odds['ml_away'], 1 - home_win_pct_HFA) if value_away >= 0 else 0
             kelly_home = third_kelly_calculator(game_odds['ml_home'], home_win_pct_HFA) if value_home >= 0 else 0
 
+            away_pitcher = away_lineup['10_name']
+            home_pitcher = home_lineup['10_name']
             if kelly_away > 0:
                 result['bet_on'] = result['away']
                 result['bet_against'] = result['home']

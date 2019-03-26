@@ -14,17 +14,24 @@ pa_by_order = {
 }
 
 r_pa = {
-    "2018_proj": .118,
     "2018": 0.117,
-    "2017_proj": 0.114,
     "2017": 0.122,
-    "2016_proj": 0.112,
     "2016": 0.118,
-    "2015_proj": 0.110,
     "2015": 0.113,
-    "2014": 0.108,
-    "2013": 0.110,
-    "2012": 0.114,
+}
+
+r_g = {
+    "2018": 4.45,
+    "2017": 4.65,
+    "2016": 4.48,
+    "2015": 4.25,
+}
+
+woba_year = {
+    "2018": 0.320,
+    "2017": 0.326,
+    "2016": 0.323,
+    "2015": 0.318,
 }
 
 def nearest(items, pivot):
@@ -77,35 +84,20 @@ def get_player(player_id, name, date, manifest, projections):
     return player
 
 def calculate(lineup, date, manifest, projections):
-    total_runs = 0
+    team_woba = 0
     pitcher_fantasylabs_id = int(lineup['10_id'])
     all_batters = []
     for i in range(1,10):
-        try:
-            fantasylabs_id = int(lineup['{}_id'.format(str(i))])
-        except:
-            print(lineup)
-            print(date)
-            sys.exit()
+        fantasylabs_id = int(lineup['{}_id'.format(str(i))])
         batter_name = lineup['{}_name'.format(str(i))]
         if fantasylabs_id == pitcher_fantasylabs_id:
-            all_batters.append(0)
+            team_woba = team_woba + 0.140 * (pa_by_order[i] / sum(pa_by_order.values()))
             continue
         player = get_player(fantasylabs_id, batter_name, date, manifest, projections)
         if player is None:
             return None
         # print(player)
-        all_batters.append(player['wrcplus'])
-        # total_runs = total_runs + ((player['wrcplus'] / 100) * r_pa[date[:4]] * pa_by_order[i])
-    # for i in range(1,10):
-    #     fantasylabs_id = int(lineup['{}_id'.format(str(i))])
-    #     batter_name = lineup['{}_name'.format(str(i))]
-    #     if fantasylabs_id == pitcher_fantasylabs_id:
-    #         total_runs = total_runs + ((-20 / 100) * r_pa[date[:4]] * 4.22)
-    #         continue
-    #     player = get_player(fantasylabs_id, batter_name, date, manifest, projections)
-    #     if player is None:
-    #         return None
-    #     # print(player)
-    #     total_runs = total_runs + ((player['wrcplus'] / 100) * r_pa[date[:4]] * pa_by_order[i])
-    return all_batters
+        # print(player['woba'], player['woba'] * (pa_by_order[i] / sum(pa_by_order.values())) * 9)
+        team_woba = team_woba + player['woba'] * (pa_by_order[i] / sum(pa_by_order.values()))
+    # print(team_woba)
+    return ((team_woba/woba_year[date[:4]]) ** 2) * r_g[date[:4]]
